@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/title_bar_shadow"/>
+    <LinearLayout
+        android:id="@+id/ll_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/item_all_text"
+            app:oui_list_item_title="@string/preferred_details_all"
+            style="@style/SettingSubItemSingleStyle"/>
+    </LinearLayout>
+    <include layout="@layout/item_sub_settings_padding_layout"/>
+    <TextView
+        android:id="@+id/file_type"
+        style="@style/SettingItemTitleStyle"/>
+</LinearLayout>

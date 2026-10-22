@@ -1,0 +1,15 @@
+package com.android.settingslib.volume;
+
+import android.util.Log;
+
+/* JADX INFO: loaded from: classes.dex */
+class D {
+    public static boolean BUG;
+
+    D() {
+    }
+
+    static {
+        BUG = Log.isLoggable("volume", 3);
+    }
+}

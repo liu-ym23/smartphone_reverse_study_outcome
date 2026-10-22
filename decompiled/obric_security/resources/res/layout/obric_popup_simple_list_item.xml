@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="15sp"
+    android:textColor="@color/obric_title_text_color"
+    android:gravity="center_vertical"
+    android:id="@+id/text"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/popup_list_menu_item_height"
+    android:maxLines="1"/>

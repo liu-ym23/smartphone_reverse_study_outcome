@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:id="@+id/ll_popover_container"
+    android:background="@drawable/ext_o_pop_list_item"
+    android:padding="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="240dp"
+    android:maxHeight="@dimen/oui_popover_max_height"
+    android:minWidth="200dp"
+    android:minHeight="@dimen/dimen_56"
+    app:oui_radius="28dp">
+    <com.obric.oui.popover.menu.PopoverMenuLinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/item_disable"
+        android:paddingLeft="12dp"
+        android:paddingTop="@dimen/oui_g_list_item_1"
+        android:paddingBottom="@dimen/oui_g_list_item_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:minHeight="40dp"
+        android:paddingEnd="12dp"
+        app:oui_radius="20dp">
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_functional_red_6"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_popover_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/doubao_assistant_disable"
+            android:maxLines="1"
+            android:lineHeight="22dp"
+            style="@style/Label_L"/>
+    </com.obric.oui.popover.menu.PopoverMenuLinearLayout>
+</com.obric.oui.layout.OUILinearLayout>

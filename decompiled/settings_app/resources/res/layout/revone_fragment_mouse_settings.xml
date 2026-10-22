@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/mouse_pager_header_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <TextView
+                android:text="@string/mouse_scroll_orientation"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/mouse_scroll_orientation_standard"
+                app:itemTitle="@string/mouse_scroll_orientation_standard"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/mouse_scroll_orientation_natural"
+                app:itemTitle="@string/mouse_scroll_orientation_natural"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/mouse_scroll_fling"
+                android:title="@string/mouse_scroll_fling"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <TextView
+                android:text="@string/mouse_main_button"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/mouse_main_button_left"
+                app:itemTitle="@string/mouse_main_button_left"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/mouse_main_button_right"
+                app:itemTitle="@string/mouse_main_button_right"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <TextView
+                android:text="@string/mouse_style"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/mouse_style_circle"
+                app:itemTitle="@string/mouse_circle"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/mouse_style_pointer"
+                app:itemTitle="@string/mouse_pointer"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <TextView
+                android:text="@string/mouse_pointer_speed"
+                style="@style/SettingItemTitleStyle"/>
+            <com.android.settings.widget.TickMarkView
+                android:id="@+id/mouse_pointer_speed"
+                style="@style/TickMarkViewStyle"/>
+            <TextView
+                android:text="@string/mouse_scroll_speed"
+                style="@style/SettingItemTitleStyle"/>
+            <com.android.settings.widget.TickMarkView
+                android:id="@+id/mouse_scroll_speed"
+                style="@style/TickMarkViewStyle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

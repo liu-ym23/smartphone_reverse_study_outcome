@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.OProgressButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/oui_text_1"
+    android:gravity="center"
+    android:id="@+id/neutral_btn"
+    android:background="@color/oui_fill_element_2"
+    android:layout_width="wrap_content"
+    android:minWidth="52dp"
+    android:minHeight="@dimen/dimen_32"
+    android:maxLines="1"
+    android:paddingHorizontal="8dp"
+    style="@style/OButton.M1.Standard.Neutral"/>

@@ -1,0 +1,9 @@
+signature,file,startline,startcol,endline,endcol,properties
+Landroid/hardware/usb/flags/Flags;->enableInputPowerLimitedWarning()Z,out/soong/.intermediates/frameworks/base/android.hardware.usb.flags-aconfig-java/android_common/javac/srcjars/android/hardware/usb/flags/Flags.java,24,5,24,25,
+Landroid/hardware/usb/flags/Flags;->enableInterfaceNameDeviceFilter()Z,out/soong/.intermediates/frameworks/base/android.hardware.usb.flags-aconfig-java/android_common/javac/srcjars/android/hardware/usb/flags/Flags.java,30,5,30,25,
+Landroid/hardware/usb/flags/Flags;->enableIsModeChangeSupportedApi()Z,out/soong/.intermediates/frameworks/base/android.hardware.usb.flags-aconfig-java/android_common/javac/srcjars/android/hardware/usb/flags/Flags.java,36,5,36,25,
+Landroid/hardware/usb/flags/Flags;->enableIsPdCompliantApi()Z,out/soong/.intermediates/frameworks/base/android.hardware.usb.flags-aconfig-java/android_common/javac/srcjars/android/hardware/usb/flags/Flags.java,42,5,42,25,
+Landroid/hardware/usb/flags/Flags;->enableReportUsbDataComplianceWarning()Z,out/soong/.intermediates/frameworks/base/android.hardware.usb.flags-aconfig-java/android_common/javac/srcjars/android/hardware/usb/flags/Flags.java,48,5,48,25,
+Landroid/hardware/usb/flags/Flags;->enableUsbDataComplianceWarning()Z,out/soong/.intermediates/frameworks/base/android.hardware.usb.flags-aconfig-java/android_common/javac/srcjars/android/hardware/usb/flags/Flags.java,54,5,54,25,
+Landroid/hardware/usb/flags/Flags;->enableUsbDataSignalStaking()Z,out/soong/.intermediates/frameworks/base/android.hardware.usb.flags-aconfig-java/android_common/javac/srcjars/android/hardware/usb/flags/Flags.java,60,5,60,25,
+Landroid/hardware/usb/flags/Flags;->enableUsbSysfsMidiIdentification()Z,out/soong/.intermediates/frameworks/base/android.hardware.usb.flags-aconfig-java/android_common/javac/srcjars/android/hardware/usb/flags/Flags.java,66,5,66,25,

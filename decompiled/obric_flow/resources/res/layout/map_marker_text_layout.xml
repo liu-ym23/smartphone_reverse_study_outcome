@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.map.api.view.StrokeTextView
+        android:textSize="14dp"
+        android:textColor="#ff000000"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/marker_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="120dp"
+        android:maxLines="2"
+        app:stroke_color="@android:color/white"
+        app:stroke_width="2dp"/>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/inner_common_btn_row_base_left_padding"
+    android:paddingRight="@dimen/inner_common_btn_row_base_right_padding"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/inner_common_btn_row_base_parent_height">
+    <View
+        android:id="@+id/center_line"
+        android:layout_width="@dimen/inner_common_dimen_10dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+    <com.qihoo360.mobilesafe.common.ui.ripple.CommonRippleButton
+        android:textSize="@dimen/inner_common_btn_row_h_base_first_text_size"
+        android:tag="@string/inner_row_btn_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inner_common_btn_row_base_btn_height"
+        android:text="btn-A4"
+        android:layout_toLeftOf="@+id/center_line"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        style="@style/inner_btn_style_a"/>
+    <com.qihoo360.mobilesafe.common.ui.ripple.CommonRippleButton
+        android:textSize="@dimen/inner_common_btn_row_h_base_second_text_size"
+        android:tag="@string/inner_row_btn_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inner_common_btn_row_base_btn_height"
+        android:text="btn-A4"
+        android:layout_toRightOf="@+id/center_line"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        style="@style/inner_btn_style_b"/>
+</RelativeLayout>

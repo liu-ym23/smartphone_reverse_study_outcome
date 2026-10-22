@@ -1,0 +1,105 @@
+package org.apache.commons.math3.stat.descriptive.summary;
+
+import java.io.Serializable;
+import org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic;
+import org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic;
+import org.apache.commons.math3.stat.descriptive.UnivariateStatistic;
+import org.apache.commons.math3.util.MathUtils;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class Sum extends AbstractStorelessUnivariateStatistic implements Serializable {
+    private static final long serialVersionUID = -8231831954703408316L;
+    private long n;
+    private double value;
+
+    public Sum() {
+        this.n = 0;
+        this.value = 0.0d;
+    }
+
+    public Sum(Sum r1) {
+        copy(r1, this);
+    }
+
+    public static void copy(Sum r2, Sum r3) {
+        MathUtils.checkNotNull(r2);
+        MathUtils.checkNotNull(r3);
+        r3.setData(r2.getDataRef());
+        r3.n = r2.n;
+        r3.value = r2.value;
+    }
+
+    @Override // org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic, org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic
+    public void clear() {
+        this.value = 0.0d;
+        this.n = 0;
+    }
+
+    @Override // org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic, org.apache.commons.math3.stat.descriptive.AbstractUnivariateStatistic, org.apache.commons.math3.stat.descriptive.UnivariateStatistic, org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic
+    public /* bridge */ /* synthetic */ StorelessUnivariateStatistic copy() {
+        return copy();
+    }
+
+    @Override // org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic, org.apache.commons.math3.stat.descriptive.AbstractUnivariateStatistic, org.apache.commons.math3.stat.descriptive.UnivariateStatistic, org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic
+    public /* bridge */ /* synthetic */ UnivariateStatistic copy() {
+        return copy();
+    }
+
+    @Override // org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic, org.apache.commons.math3.stat.descriptive.AbstractUnivariateStatistic, org.apache.commons.math3.stat.descriptive.UnivariateStatistic, org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic
+    public Sum copy() {
+        Sum r0 = new Sum();
+        copy(this, r0);
+        return r0;
+    }
+
+    @Override // org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic, org.apache.commons.math3.stat.descriptive.AbstractUnivariateStatistic, org.apache.commons.math3.stat.descriptive.UnivariateStatistic, org.apache.commons.math3.util.MathArrays.Function
+    public double evaluate(double[] r5, int r6, int r7) {
+        if (test(r5, r6, r7, true) == false) goto L8;
+        double r0 = 0.0d;
+        int r4 = r6;
+    L6:
+        if (r4 >= (r6 + r7)) goto L11;
+        r0 = r0 + r5[r4];
+        r4 = r4 + 1;
+        goto L6
+    L11:
+        return r0;
+    L8:
+        return Double.NaN;
+    }
+
+    public double evaluate(double[] r3, double[] r4) {
+        return evaluate(r3, r4, 0, r3.length);
+    }
+
+    public double evaluate(double[] r7, double[] r8, int r9, int r10) {
+        if (test(r7, r8, r9, r10, true) == false) goto L8;
+        double r0 = 0.0d;
+        int r6 = r9;
+    L6:
+        if (r6 >= (r9 + r10)) goto L11;
+        r0 = r0 + (r7[r6] * r8[r6]);
+        r6 = r6 + 1;
+        goto L6
+    L11:
+        return r0;
+    L8:
+        return Double.NaN;
+    }
+
+    @Override // org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic
+    public long getN() {
+        return this.n;
+    }
+
+    @Override // org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic, org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic
+    public double getResult() {
+        return this.value;
+    }
+
+    @Override // org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic, org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic
+    public void increment(double r3) {
+        this.value += r3;
+        this.n++;
+    }
+}

@@ -1,0 +1,17 @@
+package androidx.lifecycle;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class SavedStateHandlesVM extends ViewModel {
+    private final Map<String, SavedStateHandle> handles;
+
+    public SavedStateHandlesVM() {
+        this.handles = new LinkedHashMap();
+    }
+
+    public final Map<String, SavedStateHandle> getHandles() {
+        return this.handles;
+    }
+}

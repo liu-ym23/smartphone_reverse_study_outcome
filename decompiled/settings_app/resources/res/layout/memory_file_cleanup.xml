@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <obric.widget.SettingItemText
+        android:id="@+id/junk_files_cleanup"
+        android:title="@string/memory_junk_file_cleanup"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemText
+        android:id="@+id/app_management"
+        android:title="@string/advanced_item_application"
+        style="@style/SettingSubItemMidStyle"/>
+    <obric.widget.SettingItemText
+        android:id="@+id/big_files_cleanup"
+        android:title="@string/memory_big_file_cleanup"
+        style="@style/SettingSubItemBottomStyle"/>
+    <TextView
+        android:text="@string/memory_big_file_cleanup_tips"
+        style="@style/SettingItemTipsStyle"/>
+</LinearLayout>

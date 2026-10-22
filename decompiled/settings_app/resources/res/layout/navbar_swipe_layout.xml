@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/navbar_key_back_on_right_side"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.SettingItemCheck
+                android:id="@+id/id_trigger_navbar_tap"
+                app:itemTitle="@string/trigger_navbar_tap"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/id_trigger_navbar_swipe"
+                app:itemTitle="@string/trigger_navbar_swipe"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/id_navbar_image_tap_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/id_img_1"
+                    android:background="@drawable/setting_shortcut_gesture_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"/>
+                <include layout="@layout/item_bottom_shadow_layout"/>
+                <ImageView
+                    android:id="@+id/id_img_2"
+                    android:background="@drawable/setting_shortcut_gesture_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <include layout="@layout/item_bottom_shadow_layout"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/id_navbar_image_swipe"
+                android:background="@drawable/setting_shortcut_gesture_3"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"/>
+            <include layout="@layout/scrollview_bottom_gap_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

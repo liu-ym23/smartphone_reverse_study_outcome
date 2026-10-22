@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/Transparent"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/oic_bg_36"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.oui.titlebar.OFloatingTitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:oFloatingTitleBar_centerTitle="@string/add_to_black_list"
+            app:oFloatingTitleBar_endButtonGroupStyle="@style/OFloatingTitleBar.Action.Primary.Icon"
+            app:oFloatingTitleBar_type="window"/>
+        <com.obric.oui.lisitem.OCardListItem
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+        <com.obric.oui.lisitem.OCardListItem
+            android:id="@+id/number_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

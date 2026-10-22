@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:state_enabled="true"
+        android:state_checked="true"
+        android:id="@+id/state_checked_dark"
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal_dark"/>
+    <item
+        android:state_enabled="true"
+        android:id="@+id/state_indeterminate_dark"
+        android:drawable="@drawable/o_ic_radio_round_indeterminate_dark"
+        app:oui_state_indeterminate="true"/>
+    <item
+        android:state_enabled="true"
+        android:state_checked="false"
+        android:id="@+id/state_unchecked_dark"
+        android:drawable="@drawable/o_ic_radio_round_unchecked_normal_dark"/>
+    <item
+        android:state_enabled="false"
+        android:state_checked="true"
+        android:drawable="@drawable/o_ic_radio_round_checked_disabled_dark"/>
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/o_ic_radio_round_indeterminate_disabled_dark"
+        app:oui_state_indeterminate="true"/>
+    <item
+        android:state_enabled="false"
+        android:state_checked="false"
+        android:drawable="@drawable/o_ic_radio_round_unchecked_disabled_dark"/>
+    <transition
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal_dark"
+        android:toId="@+id/state_checked_dark"
+        android:fromId="@+id/state_unchecked_dark"/>
+    <transition
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal_dark"
+        android:toId="@+id/state_checked_dark"
+        android:fromId="@+id/state_indeterminate_dark"/>
+</animated-selector>

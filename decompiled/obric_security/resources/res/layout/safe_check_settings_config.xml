@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/safe_check_settings_cloud_detection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_subTitle="@string/cloud_detection_desc"
+        app:ocardlistitem_title="@string/cloud_detection"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/safe_check_settings_auto_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:ocardlistitem_title="@string/auto_update_virus_db"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/safe_check_settings_update_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_subTitle="@string/last_update"
+        app:ocardlistitem_title="@string/update_virus_db"/>
+</LinearLayout>

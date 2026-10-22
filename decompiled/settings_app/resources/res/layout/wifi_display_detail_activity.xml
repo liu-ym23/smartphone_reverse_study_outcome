@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:paddingTop="112dp"
+        android:clipToPadding="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <fragment
+            android:name="com.android.settings.wfd.WifiDisplayDetail"
+            android:id="@+id/wifi_display_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/wifi_display_device_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

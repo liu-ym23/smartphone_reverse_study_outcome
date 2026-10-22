@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_centerTitle="@string/data_usage_limit_title"
+        app:oFloatingTitleBar_endButtonGroupStyle="@style/OFloatingTitleBar.Action.Primary.Icon"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oui_widgetFitInsetTop="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:paddingTop="104dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@+id/ll_container"
+            android:paddingTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/limit_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/disable_connectivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:ocardlistitem_defaultCustomEnd="end_switch"
+                app:ocardlistitem_subTitle="@string/data_usage_limit_disable_connectivity_tips"
+                app:ocardlistitem_title="@string/data_usage_limit_disable_connectivity"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+</RelativeLayout>

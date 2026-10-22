@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OCTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oui_title_text="@string/permission_management"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        android:layout_alignParentBottom="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@+id/ll_container"
+            android:padding="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.obric.oui.lisitem.OListItemSettings
+                android:id="@+id/category_app"
+                app:oui_list_item_title="@string/category_app"
+                style="@style/OSettingItemNoIconStyle"/>
+            <com.obric.oui.lisitem.OListItemSettings
+                android:id="@+id/category_permission"
+                app:oui_list_item_title="@string/category_permission"
+                style="@style/OSettingItemNoIconStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+</RelativeLayout>

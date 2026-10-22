@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/security_album_lock"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <include layout="@layout/title_bar_shadow"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/album_lock_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_title">
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <obric.widget.ListContentItemCheck
+            android:id="@+id/item_album_lock"
+            android:title="@string/security_album_lock"
+            style="@style/SettingSubItemTopStyle"/>
+        <obric.widget.ListContentItemCustom
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListContentItemStyle.Bottom">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </obric.widget.ListContentItemCustom>
+        <TextView
+            android:text="@string/security_album_content"
+            style="@style/SettingItemTipsStyle"/>
+    </LinearLayout>
+</RelativeLayout>

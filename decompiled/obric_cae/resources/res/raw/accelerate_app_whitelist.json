@@ -1,0 +1,19 @@
+{
+  "accelerate_app_whitelist": [
+    {
+      "package_name": "cn.damai",
+      "acc_activities": [
+        { "comment": "大麦票的详情界面", "activity": "cn.damai.trade.newtradeorder.ui.projectdetail.ui.activity.ProjectDetailActivity" },
+        { "comment": "大麦选座位等级界面", "activity": "cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuActivity" },
+        { "comment": "大麦付款界面", "activity": "cn.damai.ultron.view.activity.DmOrderActivity" },
+        { "comment": "大麦选座位号界面", "activity": "cn.damai.seat.ui.TSeatActivity" }
+      ]
+    },
+    {
+      "package_name": "com.MobileTicket",
+      "acc_activities": [
+        { "comment": "预订购票界面", "activity": "com.MobileTicket/com.alipay.mobile.nebulacore.ui.H5Activity" }
+      ]
+    }
+  ]
+}

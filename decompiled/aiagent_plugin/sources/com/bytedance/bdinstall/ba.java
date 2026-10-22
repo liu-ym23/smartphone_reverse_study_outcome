@@ -1,0 +1,312 @@
+package com.bytedance.bdinstall;
+
+import android.app.ActivityManager;
+import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Build;
+import android.os.Process;
+import android.text.TextUtils;
+import com.bytedance.security.zenmobile.io.SensitiveType;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.io.BufferedReader;
+import java.io.Closeable;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Method;
+import java.util.Iterator;
+import java.util.Objects;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/* JADX INFO: compiled from: Utils.java */
+/* JADX INFO: loaded from: classes.dex */
+public class ba {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private static String f6195a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private static volatile Boolean f6196b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private static final char[] f6197c = null;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private static boolean f6198d;
+
+    static {
+        f6197c = "0123456789ABCDEF".toCharArray();
+        f6198d = false;
+    }
+
+    static String a(Context r4) {
+        Context r5 = (Context) ZeusTransformUtils.wrapperContextForParams(r4, Context.class, "com.obric.aiagent.plugin");
+        String r0 = f6195a;
+        if (TextUtils.isEmpty(r0) == true) goto L6;
+        return r0;
+    L6:
+        if (Build.VERSION.SDK_INT < 28) goto L11;
+        String r1 = Application.getProcessName();
+        if (TextUtils.isEmpty(r1) == true) goto L11;
+        f6195a = r1;
+        return r1;
+    L11:
+        String r2 = a();
+        if (TextUtils.isEmpty(r2) == true) goto L29;
+        f6195a = r2;
+        return r2;
+    L29:
+        int r3 = Process.myPid();     // Catch: Exception -> L22
+        Iterator<ActivityManager.RunningAppProcessInfo> r6 = ((ActivityManager) ZeusTransformUtils.preCheckCast(r5.getSystemService("activity"), ActivityManager.class, "com.obric.aiagent.plugin")).getRunningAppProcesses().iterator();     // Catch: Exception -> L22
+    L17:
+        if (r6.hasNext() == false) goto L24;
+        ActivityManager.RunningAppProcessInfo r7 = (ActivityManager.RunningAppProcessInfo) ZeusTransformUtils.preCheckCast(r6.next(), ActivityManager.RunningAppProcessInfo.class, "com.obric.aiagent.plugin");     // Catch: Exception -> L22
+        if (r7.pid != r3) goto L17;
+        f6195a = r7.processName;     // Catch: Exception -> L22
+    L24:
+        f6195a = c();
+        if (t.a() == false) goto L28;
+        t.a("getProcessName, " + f6195a);
+    L28:
+        return f6195a;
+    L22:
+        e = move-exception;
+        e.printStackTrace();
+        goto L24
+    }
+
+    public static String a() {
+        Method r2 = ZeusTransformUtils.forName("android.app.ActivityThread", "com.obric.aiagent.plugin").getDeclaredMethod("currentProcessName", (Class[]) ZeusTransformUtils.preCheckCast(new Class[0], Class[].class, "com.obric.aiagent.plugin"));     // Catch: Throwable -> L8
+        r2.setAccessible(true);     // Catch: Throwable -> L8
+        Object r3 = r2.invoke(null, new Object[0]);     // Catch: Throwable -> L8
+        if (ZeusTransformUtils.instanceOf(r3, String.class) == false) goto L11;
+        return (String) ZeusTransformUtils.preCheckCast(r3, String.class, "com.obric.aiagent.plugin");
+    L11:
+        return null;
+    L12:
+        return null;
+    }
+
+    public static boolean b(Context r2) {
+        Context r3 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        if (f6196b != null) goto L6;
+        Objects.requireNonNull(r3, "context is null");
+        f6196b = Boolean.valueOf(TextUtils.equals(a(r3), r3.getPackageName()));
+    L6:
+        return f6196b.booleanValue();
+    }
+
+    public static boolean a(String r5) {
+        if (r5 == null) goto L5;
+        int r1 = r5.length();
+    L7:
+        if (r1 >= 13) goto L9;
+    L31:
+        return false;
+    L9:
+        if (r1 > 128) goto L31;
+        int r2 = 0;
+    L12:
+        if (r2 >= r1) goto L29;
+        char r3 = r5.charAt(r2);
+        if (r3 < '0') goto L18;
+        if (r3 > '9') goto L18;
+    L27:
+        r2 = r2 + 1;
+    L18:
+        if (r3 < 'a') goto L22;
+        if (r3 <= 'f') goto L27;
+    L22:
+        if (r3 < 'A') goto L26;
+        if (r3 <= 'F') goto L27;
+    L26:
+        if (r3 == '-') goto L27;
+        return false;
+    L29:
+        return true;
+    L5:
+        r1 = 0;
+        goto L7
+    }
+
+    private static String c() {
+        BufferedReader r1 = new BufferedReader(new InputStreamReader(new FileInputStream("/proc/" + Process.myPid() + "/cmdline"), "iso-8859-1"));     // Catch: Throwable -> L11
+        StringBuilder r2 = new StringBuilder();     // Catch: Throwable -> L16
+    L5:
+        int r3 = r1.read();     // Catch: Throwable -> L16
+        if (r3 <= 0) goto L8;
+        r2.append((char) r3);     // Catch: Throwable -> L16
+        goto L5
+    L8:
+        String r0 = r2.toString();     // Catch: Throwable -> L16
+        r1.close();     // Catch: Exception -> L15
+    L10:
+        return r0;
+    L12:
+        if (r1 != null) goto L18;
+    L14:
+        return null;
+    L18:
+        r1.close();     // Catch: Exception -> L17
+    L11:
+        r1 = null;
+        goto L12
+    }
+
+    public static void a(JSONObject r5, JSONObject r6) {
+        if (r5 != null) goto L4;
+        return;
+    L4:
+        if (r6 != null) goto L22;
+        return;
+    L22:
+        monitor-enter(com.bytedance.bdinstall.d.m.class);     // Catch: JSONException -> L17
+        Iterator<String> r1 = r6.keys();     // Catch: Throwable -> L14
+    L10:
+        if (r1.hasNext() == false) goto L12;
+        String r2 = (String) ZeusTransformUtils.preCheckCast(r1.next(), String.class, "com.obric.aiagent.plugin");     // Catch: Throwable -> L14
+        r5.put(r2, r6.opt(r2));     // Catch: Throwable -> L14
+        goto L10
+    L12:
+        monitor-exit(com.bytedance.bdinstall.d.m.class);     // Catch: Throwable -> L14
+    L25:
+        return;
+    L14:
+        th = move-exception;
+        throw th;     // Catch: JSONException -> L17
+    L17:
+        e = move-exception;
+        t.a(e);
+    }
+
+    public static boolean a(String r1, String r2) {
+        if (TextUtils.isEmpty(r1) == true) goto L5;
+    L6:
+        if (r1 != null) goto L8;
+    L10:
+        return false;
+    L8:
+        if (r1.equals(r2) == false) goto L10;
+    L9:
+        return true;
+    L5:
+        if (TextUtils.isEmpty(r2) == true) goto L9;
+        goto L6
+    }
+
+    public static void a(JSONObject r1, String r2, String r3) {
+        if (TextUtils.isEmpty(r3) == true) goto L6;
+        r1.put(r2, r3);
+        return;
+    }
+
+    public static boolean b(String r5) {
+        if (TextUtils.isEmpty(r5) == false) goto L6;
+        return true;
+    L6:
+        if (r5.equalsIgnoreCase(SensitiveType.UNKNOWN) == false) goto L9;
+        return true;
+    L9:
+        if (r5.equalsIgnoreCase("None") == false) goto L11;
+        return true;
+    L11:
+        int r2 = 0;
+    L13:
+        if (r2 >= r5.length()) goto L21;
+        if (r5.charAt(r2) != '0') goto L18;
+        r2 = r2 + 1;
+        goto L13
+    L18:
+        return false;
+    L21:
+        return true;
+    }
+
+    public static boolean c(String r5) {
+        boolean r1 = false;
+        if (TextUtils.isEmpty(r5) == false) goto L5;
+    L18:
+        return false;
+    L5:
+        if (SensitiveType.UNKNOWN.equalsIgnoreCase(r5) == true) goto L18;
+        if ("Null".equalsIgnoreCase(r5) == true) goto L18;
+        int r0 = 0;
+    L10:
+        if (r0 >= r5.length()) goto L15;
+        if (r5.charAt(r0) != '0') goto L17;
+        r0 = r0 + 1;
+    L17:
+        return !r1;
+    L15:
+        r1 = true;
+        goto L17
+    }
+
+    public static void a(SharedPreferences r6, String[] r7) {
+        SharedPreferences r8 = (SharedPreferences) ZeusTransformUtils.wrapperContextForParams(r6, SharedPreferences.class, "com.obric.aiagent.plugin");
+        SharedPreferences.Editor r0 = r8.edit();
+        int r1 = r7.length;
+        int r2 = 0;
+        boolean r3 = false;
+    L3:
+        if (r2 >= r1) goto L8;
+        String r4 = r7[r2];
+        if (r8.contains(r4) == false) goto L7;
+        r0.remove(r4);
+        r3 = true;
+    L7:
+        r2 = r2 + 1;
+        goto L3
+    L8:
+        if (r3 == false) goto L14;
+        r0.apply();
+        return;
+    }
+
+    static void a(boolean r0) {
+        f6196b = Boolean.valueOf(r0);
+    }
+
+    public static void a(Closeable r2) {
+        Closeable r3 = (Closeable) ZeusTransformUtils.wrapperContextForParams(r2, Closeable.class, "com.obric.aiagent.plugin");
+        if (r3 == null) goto L11;
+        r3.close();     // Catch: Throwable -> L6
+        return;
+    L6:
+        th = move-exception;
+        th.printStackTrace();
+        return;
+    }
+
+    static Context c(Context r2) {
+        Context r3 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        if (ZeusTransformUtils.instanceOf(r3, Application.class) == true) goto L7;
+        if (r3 != null) goto L6;
+        return r3;
+    L6:
+        return (Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(r3.getApplicationContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin");
+    L7:
+        return r3;
+    }
+
+    public static String a(byte[] r6) {
+        char[] r0 = new char[r6.length * 2];
+        int r1 = 0;
+    L4:
+        if (r1 >= r6.length) goto L7;
+        int r2 = r6[r1] & 255;
+        int r3 = r1 * 2;
+        char[] r4 = f6197c;
+        r0[r3] = r4[r2 >>> 4];
+        r0[r3 + 1] = r4[r2 & 15];
+        r1 = r1 + 1;
+        goto L4
+    L7:
+        return new String(r0);
+    }
+
+    public static boolean b() {
+        return f6198d;
+    }
+}

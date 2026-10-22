@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/settings_homepage_container"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.oui.orecyclerview.widget.RecyclerView
+            android:id="@+id/main_content_scrollable_container"
+            android:scrollbars="none"
+            android:clipChildren="true"
+            style="@style/ListViewGeneralStyle"/>
+    </FrameLayout>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_startTitle="@string/settings_label"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        app:oui_title_pos="left_in_action"/>
+</RelativeLayout>

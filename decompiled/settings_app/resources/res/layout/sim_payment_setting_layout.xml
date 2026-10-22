@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_item_top_bottom_margin"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/nfc_sim_1"
+        app:itemTitle="@string/nfc_sim_card_1"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/nfc_sim_2"
+        app:itemTitle="@string/nfc_sim_card_2"
+        style="@style/SettingSubItemBottomStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

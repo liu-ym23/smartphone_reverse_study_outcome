@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.memorydata.ui.custom.DeviceAdaptiveCardListItem
+        android:id="@+id/screen_observation_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_single"
+        app:ocardlistitem_cardType="type_large"
+        app:ocardlistitem_defaultCustomEnd="end_switch"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showIcon="false"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_showTailIcon="false"
+        app:ocardlistitem_showTitle="true"
+        app:ocardlistitem_subTitle="@string/recommend_settings_switch_subtitle"
+        app:ocardlistitem_title="@string/recommend_settings_switch_title"/>
+    <TextView
+        android:id="@+id/screen_observation_temporarily_disabled_tips"
+        android:visibility="gone"
+        style="@style/SettingItemTipsStyle"/>
+    <com.obric.memorydata.ui.custom.DeviceAdaptiveCardListItem
+        android:id="@+id/new_memory_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/MemoryListGroupGap"
+        app:ocardlistitem_cardPosition="position_single"
+        app:ocardlistitem_cardType="type_normal"
+        app:ocardlistitem_defaultCustomEnd="end_detail"
+        app:ocardlistitem_defaultTailIcon="tail_arrow"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showIcon="false"
+        app:ocardlistitem_showSubTitle="false"
+        app:ocardlistitem_showTailIcon="true"
+        app:ocardlistitem_showTitle="true"
+        app:ocardlistitem_title="@string/screen_observation_new_app_default_setting_title"/>
+</LinearLayout>

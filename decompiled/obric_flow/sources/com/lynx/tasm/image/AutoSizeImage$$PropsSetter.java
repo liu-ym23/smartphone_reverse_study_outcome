@@ -1,0 +1,22 @@
+package com.lynx.tasm.image;
+
+import com.lynx.tasm.behavior.shadow.ShadowNode;
+import com.lynx.tasm.behavior.shadow.ShadowNode$$PropsSetter;
+import com.lynx.tasm.behavior.y0;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class AutoSizeImage$$PropsSetter extends ShadowNode$$PropsSetter {
+    public AutoSizeImage$$PropsSetter() {
+    }
+
+    @Override // com.lynx.tasm.behavior.shadow.ShadowNode$$PropsSetter, com.lynx.tasm.behavior.utils.ShadowNodeSetter
+    public final void b(ShadowNode r5, String r10, y0 r11) {
+        AutoSizeImage r12 = (AutoSizeImage) r5;
+        r10.getClass();
+        if (r10.equals("src") == true) goto L6;
+        super.b(r5, r10, r11);
+        return;
+    L6:
+        r12.setSrc(r11.f10815a.getString(r10));
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.button.OIconButtonFloating xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:visibility="visible"
+    android:clickable="true"
+    android:layout_centerInParent="true"
+    style="@style/OStyleV2.OButtonFloating.S.Standard.Icon"/>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/settings_item_top_bottom_margin"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/enabled_switch"
+        style="@style/SettingSubItemSingleStyle"/>
+    <TextView
+        android:id="@+id/switcher_tips"
+        android:visibility="gone"
+        style="@style/SettingItemTipsStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

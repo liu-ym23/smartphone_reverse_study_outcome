@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/title"
+        style="@style/SettingItemTitleStyle"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/id_container"
+        android:layout_below="@+id/title"
+        style="@style/SettingPreviewStyle">
+        <com.android.settings.PreviewSettingItemView
+            android:id="@+id/item_preview_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <com.android.settings.PreviewSettingItemView
+            android:id="@+id/item_preview_middle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <com.android.settings.PreviewSettingItemView
+            android:id="@+id/item_preview_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <include
+        android:layout_alignParentBottom="true"
+        layout="@layout/item_bottom_shadow_layout"/>
+</merge>

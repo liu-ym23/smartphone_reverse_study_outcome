@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="one">%d 天前</item>
+        <item quantity="other">%d 天前</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="one">%d 分鐘前</item>
+        <item quantity="other">%d 分鐘前</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="one">%d 年前</item>
+        <item quantity="other">%d 年前</item>
+    </plurals>
+    <plurals name="disable_one_step_egg_in_time">
+        <item quantity="one">還需 %1$d 次操作即可關閉一步彩蛋</item>
+        <item quantity="other">還需 %1$d 次操作即可關閉一步彩蛋</item>
+    </plurals>
+    <plurals name="enable_one_step_egg_in_time">
+        <item quantity="one">還需 %1$d 次操作即可啟用一步彩蛋</item>
+        <item quantity="other">還需 %1$d 次操作即可啟用一步彩蛋</item>
+    </plurals>
+    <plurals name="lockpattern_too_many_failed_confirmation_attempts_footer">
+        <item quantity="one">1 秒後重試</item>
+        <item quantity="other">%d 秒後重試</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d 個新通知</item>
+        <item quantity="other">%d 個新通知</item>
+    </plurals>
+    <plurals name="pbap_import_text">
+        <item quantity="one">確認匯入 %1$s 位聯絡人？</item>
+        <item quantity="other">確認匯入 %1$s 位聯絡人？</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="one">僅需 %1$d 步操作即可進入開發者模式</item>
+        <item quantity="other">僅需 %1$d 步操作即可進入開發者模式</item>
+    </plurals>
+    <plurals name="uninstall_app_dialog_title">
+        <item quantity="one">確定解除安裝選取的 %1$d 個應用程式？</item>
+        <item quantity="other">確定解除安裝選取的 %1$d 個應用程式？</item>
+    </plurals>
+</resources>

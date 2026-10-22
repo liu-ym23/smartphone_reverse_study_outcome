@@ -1,0 +1,34 @@
+package kotlin.reflect.jvm.internal.impl.types.checker;
+
+import kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil;
+
+/* JADX INFO: loaded from: classes3.dex */
+public interface NewKotlinTypeChecker extends KotlinTypeChecker {
+    public static final Companion Companion = null;
+
+    public static final class Companion {
+        static final /* synthetic */ Companion $$INSTANCE = null;
+        private static final NewKotlinTypeCheckerImpl Default = null;
+
+        /* JADX WARN: Multi-variable type inference failed */
+        static {
+            $$INSTANCE = new Companion();
+            Default = new NewKotlinTypeCheckerImpl(KotlinTypeRefiner.Default.INSTANCE, null, 2, 0 == true ? 1 : 0);
+        }
+
+        private Companion() {
+        }
+
+        public final NewKotlinTypeCheckerImpl getDefault() {
+            return Default;
+        }
+    }
+
+    static {
+        Companion = Companion.$$INSTANCE;
+    }
+
+    KotlinTypeRefiner getKotlinTypeRefiner();
+
+    OverridingUtil getOverridingUtil();
+}

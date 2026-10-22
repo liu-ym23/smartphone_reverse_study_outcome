@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zte.miboard.cards.travel.TravelItemBottomBindLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/travel_card_item_bottom_bind_layout"
+    android:background="@drawable/travel_card_bottom_bind_layout_bg"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/travel_card_item_bottom_bind_layout_height"
+    android:paddingStart="@dimen/oui_padding_20dp">
+    <com.obric.oui.text.OBaseTextView
+        android:textColor="@color/oui_functional_blue_6"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/travel_flight_card_register_very_zhun_info"
+        android:maxLines="2"
+        android:layout_weight="1"
+        style="@style/Subtitle_2_Regular"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/travel_card_item_bottom_bind_close_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <com.obric.oui.image.OImage
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/oui_icon_oic_xmark_bold"
+            android:tint="@color/oui_functional_blue_6"
+            android:layout_marginStart="@dimen/miboard_card_padding_left_right"
+            android:layout_marginEnd="@dimen/miboard_card_padding_left_right"
+            android:tintMode="src_in"
+            app:oui_imageStrokeEnabled="false"/>
+    </LinearLayout>
+</com.zte.miboard.cards.travel.TravelItemBottomBindLayout>

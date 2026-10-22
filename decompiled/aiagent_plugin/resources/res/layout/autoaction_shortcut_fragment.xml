@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="94dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.orecyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:paddingBottom="@dimen/aa_tl_bottom_padding"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="false"
+        android:paddingHorizontal="@dimen/aa_tl_horizontal_padding"/>
+    <com.obric.oui.status.OPageStatus
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="241dp"
+        app:opagestatus_type="status_content"/>
+</FrameLayout>

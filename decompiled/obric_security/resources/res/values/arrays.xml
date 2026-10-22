@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="app_opimization_config">
+        <item>com.tencent.mm</item>
+        <item>com.tencent.mobileqq</item>
+        <item>com.tencent.mobileqqi</item>
+        <item>com.tencent.qqlite</item>
+        <item>com.immomo.momo</item>
+        <item>com.alibaba.mobileim</item>
+        <item>com.taobao.qianniu</item>
+        <item>com.whatsapp</item>
+        <item>com.sdu.didi.psnger</item>
+        <item>com.sdu.didi.gsui</item>
+        <item>com.funcity.taxi.passenger</item>
+        <item>com.funcity.taxi.driver</item>
+        <item>com.ubercab</item>
+        <item>com.ubercab.driver</item>
+        <item>com.baidu.BaiduMap</item>
+        <item>com.autonavi.xmgd.navigator</item>
+        <item>com.autonavi.minimap</item>
+    </array>
+    <array name="careful_clear_packages">
+        <item>com.tencent.mm</item>
+        <item>com.tencent.mobileqq</item>
+        <item>com.tencent.mobileqqi</item>
+        <item>com.tencent.qq</item>
+        <item>com.tencent.qqlite</item>
+        <item>com.immomo.momo</item>
+        <item>com.alibaba.mobileim</item>
+        <item>com.taobao.qianniu</item>
+        <item>com.whatsapp</item>
+        <item>com.alibaba.android.rimet</item>
+        <item>com.whatsapp</item>
+        <item>com.moji.mjweather</item>
+        <item>sina.mobile.tianqitong</item>
+        <item>com.android.email</item>
+        <item>com.tencent.androidqqmail</item>
+        <item>com.netease.mail</item>
+        <item>com.microsoft.office.outlook</item>
+        <item>com.netease.mobimail</item>
+        <item>com.bytedanceos.clock</item>
+        <item>com.zdworks.android.zdclock</item>
+        <item>cn.etouch.ecalendar</item>
+        <item>com.zdworks.android.zdcalendar</item>
+        <item>com.youloft.calendar</item>
+        <item>com.bytedanceos.smartfolder.aoa</item>
+        <item>com.bytedanceos.smartfolder</item>
+        <item>com.bullet.messenger</item>
+    </array>
+    <array name="clear_packages_white_list">
+        <item>com.bytedance.crashreport</item>
+        <item>com.bytedanceos.tracker</item>
+        <item>com.obric.numberassistant</item>
+        <item>com.obric.smsparser</item>
+        <item>com.bytedanceos.fakecall</item>
+        <item>com.iflytek.speechsuite</item>
+        <item>com.google.android.marvin.talkback</item>
+        <item>com.bytedanceos.payment</item>
+        <item>com.android.providers.contacts</item>
+        <item>com.obric.wallpaper</item>
+        <item>com.android.providers.calendar</item>
+        <item>com.obric.security</item>
+        <item>com.obric.securitycenter</item>
+        <item>com.android.systemui</item>
+        <item>com.android.launcher3</item>
+        <item>com.bytedanceos.launcher</item>
+        <item>com.android.documentsui</item>
+        <item>com.android.cellbroadcastreceiver</item>
+        <item>com.android.defcontainer</item>
+        <item>com.android.providers.applications</item>
+        <item>com.android.printspooler</item>
+        <item>com.redteamobile.roaming</item>
+        <item>com.redteamobile.virtual.softsim</item>
+        <item>com.bytedanceos.updater</item>
+        <item>com.bytedanceos.expandservice</item>
+        <item>com.android.musicfx</item>
+        <item>SmartcardService</item>
+        <item>com.android.managedprovisioning</item>
+        <item>com.android.smspush</item>
+        <item>org.simalliance.openmobileapi.service</item>
+        <item>com.bytedanceos.textboom</item>
+        <item>com.android.exchange</item>
+        <item>com.android.carrierconfig</item>
+        <item>com.android.sharedstroagebackup</item>
+        <item>android.ext.services</item>
+        <item>com.android.providers.media</item>
+        <item>com.android.calllogbackup</item>
+        <item>com.android.incallui</item>
+        <item>com.android.wifiauthorize</item>
+        <item>com.bytedanceos.tpassword</item>
+        <item>com.android.providers.downloads</item>
+        <item>com.svox.pico</item>
+        <item>com.android.statementservice</item>
+        <item>com.bytedanceos.manual</item>
+        <item>com.android.providers.weather</item>
+        <item>com.android.desktop.systemui</item>
+        <item>com.bytedanceos.desktop</item>
+        <item>com.mobiletools.systemhelper</item>
+        <item>com.bytedanceos.bytedancebrain</item>
+        <item>com.bytedanceos.perspective</item>
+        <item>com.bytedanceos.magicflow</item>
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
+        <item>com.google.android.gsf.login</item>
+        <item>com.obric.recorder</item>
+        <item>com.bytedanceos.weather</item>
+        <item>com.bytedanceos.intelligenwords</item>
+        <item>com.redteamobile.global.roaming</item>
+        <item>com.android.traceur</item>
+        <item>com.bytedanceos.gamespeedup</item>
+        <item>com.cootek.smartinputv5.bytedance</item>
+        <item>com.sohu.inputmethod.sogou.chuizi</item>
+        <item>com.iflytek.inputmethod.bytedance</item>
+        <item>com.larus.nova</item>
+    </array>
+    <array name="data_usage_cycle">
+        <item>@string/power_usage_cycle_month</item>
+        <item>@string/power_usage_cycle_week</item>
+        <item>@string/power_usage_cycle_today</item>
+    </array>
+    <array name="data_usage_special_system_apps">
+        <item>com.bytedanceos.payment</item>
+    </array>
+    <array name="doze_system_white_list">
+        <item>com.android.providers.telephony</item>
+        <item>com.android.providers.calendar</item>
+        <item>com.android.providers.media</item>
+        <item>com.qualcomm.shutdownlistner</item>
+        <item>com.android.wallpapercropper</item>
+        <item>com.quicinc.cne.CNEService</item>
+        <item>org.simalliance.openmobileapi.service</item>
+        <item>com.android.documentsui</item>
+        <item>com.android.externalstorage</item>
+        <item>com.android.mms.service</item>
+        <item>com.qualcomm.qti.telephonyservice</item>
+        <item>com.android.defcontainer</item>
+        <item>com.android.pacprocessor</item>
+        <item>com.android.certinstaller</item>
+        <item>com.android.carrierconfig</item>
+        <item>android</item>
+        <item>com.android.contacts</item>
+        <item>com.qualcomm.wfd.service</item>
+        <item>com.android.mms</item>
+        <item>com.android.mtp</item>
+        <item>com.android.nfc</item>
+        <item>com.android.stk</item>
+        <item>com.android.launcher3</item>
+        <item>com.android.backupconfirm</item>
+        <item>org.codeaurora.ims</item>
+        <item>com.android.statementservice</item>
+        <item>com.android.calendar</item>
+        <item>com.qualcomm.qcrilmsgtunnel</item>
+        <item>com.android.providers.settings</item>
+        <item>com.android.sharedstoragebackup</item>
+        <item>com.android.printspooler</item>
+        <item>com.android.dreams.basic</item>
+        <item>com.android.incallui</item>
+        <item>com.android.webview</item>
+        <item>com.android.inputdevices</item>
+        <item>com.qualcomm.qti.CdmaCallOptions</item>
+        <item>com.qti.dpmserviceapp</item>
+        <item>com.android.musicfx</item>
+        <item>com.android.cellbroadcastreceiver</item>
+        <item>android.ext.shared</item>
+        <item>com.qualcomm.qti.simsettings</item>
+        <item>com.android.server.telecom</item>
+        <item>com.android.keychain</item>
+        <item>com.android.printservice.recommendation</item>
+        <item>android.ext.services</item>
+        <item>com.android.calllogbackup</item>
+        <item>com.android.packageinstaller</item>
+        <item>com.svox.pico</item>
+        <item>com.android.proxyhandler</item>
+        <item>com.android.managedprovisioning</item>
+        <item>com.android.dreams.phototable</item>
+        <item>com.android.smspush</item>
+        <item>com.android.wallpaper.livepicker</item>
+        <item>com.android.apps.tag</item>
+        <item>com.qualcomm.qti.telephony.vodafonepack</item>
+        <item>com.android.storagemanager</item>
+        <item>com.android.settings</item>
+        <item>com.qualcomm.location</item>
+        <item>com.qualcomm.qti.tetherservice</item>
+        <item>com.android.vpndialogs</item>
+        <item>com.android.email</item>
+        <item>com.android.phone</item>
+        <item>com.android.providers.blockednumber</item>
+        <item>com.android.providers.userdictionary</item>
+        <item>com.android.emergency</item>
+        <item>com.android.location.fused</item>
+        <item>com.android.systemui</item>
+        <item>com.android.bluetoothmidiservice</item>
+        <item>com.amap.android.location</item>
+        <item>com.qualcomm.qti.gsma.services.nfc</item>
+        <item>com.qualcomm.fastdormancy</item>
+        <item>com.android.bluetooth</item>
+        <item>com.qualcomm.timeservice</item>
+        <item>com.qualcomm.embms</item>
+        <item>com.android.providers.contacts</item>
+        <item>com.android.captiveportallogin</item>
+        <item>com.android.exchange</item>
+        <item>com.bytedanceos.clock</item>
+        <item>com.bytedanceos.updater</item>
+        <item>com.bytedanceos.gamestore</item>
+        <item>bytedanceos</item>
+        <item>com.obric.recorder</item>
+        <item>com.bytedance.crashreport</item>
+        <item>com.bytedanceos.smartfolder.aoa</item>
+        <item>com.bytedanceos.cloudgallery</item>
+        <item>com.bytedanceos.backup</item>
+        <item>com.bytedanceos.screenrecorder</item>
+        <item>com.bytedanceos.tracker</item>
+        <item>com.bytedanceos.ideapills</item>
+        <item>com.bytedanceos.keyguard</item>
+        <item>com.bytedanceos.handinhand</item>
+        <item>com.obric.appstore</item>
+        <item>com.bytedanceos.cloudsync</item>
+        <item>com.mobiletools.systemhelper</item>
+        <item>com.juphoon.service</item>
+        <item>com.bytedanceos.bytedancebrain</item>
+        <item>com.bytedanceos.magicflow</item>
+        <item>com.bytedance.unionpush.proxy</item>
+        <item>com.iflytek.speechsuite</item>
+        <item>com.bytedance.smpush</item>
+        <item>com.bytedanceos.sara</item>
+        <item>com.bytedanceos.cloudagent</item>
+        <item>com.android.providers.weather</item>
+        <item>com.google.android.gms</item>
+    </array>
+    <array name="doze_white_list">
+        <item>com.tencent.mm</item>
+        <item>com.tencent.mobileqq</item>
+        <item>com.tencent.mobileqqi</item>
+        <item>com.tencent.qq</item>
+        <item>com.tencent.qqlite</item>
+        <item>com.immomo.momo</item>
+        <item>com.alibaba.mobileim</item>
+        <item>com.taobao.qianniu</item>
+        <item>com.whatsapp</item>
+        <item>com.alibaba.android.rimet</item>
+        <item>com.tencent.tim</item>
+        <item>com.facebook.katana</item>
+        <item>com.facebook.lite</item>
+        <item>com.tencent.androidqqmail</item>
+        <item>com.microsoft.office.outlook</item>
+        <item>com.netease.mobimail</item>
+        <item>com.netease.mail</item>
+    </array>
+    <array name="eighth_controlPoints">
+        <item>#FFCC3D42</item>
+        <item>294,444</item>
+        <item>348,256</item>
+        <item>348,128</item>
+        <item>348,-87</item>
+        <item>12,-87</item>
+        <item>12,128</item>
+        <item>49,195</item>
+        <item>180,256</item>
+        <item>240,195</item>
+    </array>
+    <array name="fifth_controlPoints">
+        <item>#FFCC3D42</item>
+        <item>42,444</item>
+        <item>348,256</item>
+        <item>348,128</item>
+        <item>348,-87</item>
+        <item>12,-87</item>
+        <item>12,128</item>
+        <item>49,195</item>
+        <item>180,256</item>
+        <item>240,195</item>
+    </array>
+    <array name="first_controlPoints">
+        <item>#FFCC3D42</item>
+        <item>42,380</item>
+        <item>348,256</item>
+        <item>348,128</item>
+        <item>348,-87</item>
+        <item>12,-87</item>
+        <item>12,128</item>
+        <item>49,195</item>
+        <item>197,295</item>
+        <item>251,148</item>
+    </array>
+    <array name="first_controlPoints_ho">
+        <item>#FFCC3D42</item>
+        <item>42,380</item>
+        <item>542,160</item>
+        <item>459,191</item>
+        <item>393,-86</item>
+        <item>115,4</item>
+        <item>72,194</item>
+        <item>527,363</item>
+        <item>373,192</item>
+        <item>356,202</item>
+    </array>
+    <array name="fourth_controlPoints">
+        <item>#FFCC3D42</item>
+        <item>294,380</item>
+        <item>348,256</item>
+        <item>348,128</item>
+        <item>348,-87</item>
+        <item>12,-87</item>
+        <item>12,128</item>
+        <item>49,195</item>
+        <item>180,256</item>
+        <item>240,195</item>
+    </array>
+    <array name="one_wheel_entries">
+        <item>��️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️️</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x4d000000</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_bottom_navbar_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>28</item>
+        <item>0x4df7f7f7</item>
+        <item>18</item>
+        <item>0x4df7f7f7</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_no_gradient_blur_blend_modes">
+        <item>3</item>
+    </array>
+    <array name="oui_no_gradient_blur_colors">
+        <item>0x0</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_dark">
+        <item>0x99292929</item>
+        <item>0x0</item>
+        <item>0x4d292929</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_dark">
+        <item>0x99292929</item>
+        <item>0x0</item>
+        <item>0x99292929</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x99000000</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="recommend_comdoppelganger_app">
+        <item>com.tencent.mm</item>
+        <item>com.tencent.mobileqq</item>
+        <item>com.immomo.momo</item>
+        <item>com.sina.weibo</item>
+        <item>com.whatsapp</item>
+        <item>com.qzone</item>
+        <item>com.duowan.mobile</item>
+        <item>com.taobao.taobao</item>
+        <item>com.alibaba.mobileim</item>
+        <item>com.taobao.qianniu</item>
+        <item>com.alibaba.android.rimet</item>
+        <item>com.amazon.kindle</item>
+        <item>com.amazon.kindlefc</item>
+        <item>cn.amazon.mShop.android</item>
+        <item>com.jingdong.app.mall</item>
+        <item>com.taobao.idlefish</item>
+        <item>com.eg.android.AlipayGphone</item>
+        <item>com.tencent.qqlite</item>
+        <item>com.tencent.mobileqqi</item>
+        <item>com.tencent.tim</item>
+        <item>com.xueqiu.android</item>
+        <item>com.douban.frodo</item>
+        <item>com.skype.rover</item>
+        <item>com.skype.raider</item>
+        <item>org.telegram.messenger</item>
+        <item>com.facebook.katana</item>
+        <item>com.facebook.orca</item>
+        <item>com.twitter.android</item>
+        <item>com.weico.international</item>
+        <item>com.tencent.tmgp.sgame</item>
+        <item>com.bullet.messenger</item>
+    </array>
+    <array name="second_controlPoints">
+        <item>#FFCC3D42</item>
+        <item>126,380</item>
+        <item>290,230</item>
+        <item>348,128</item>
+        <item>345,-44</item>
+        <item>31,-67</item>
+        <item>23,122</item>
+        <item>55,195</item>
+        <item>192,268</item>
+        <item>249,155</item>
+    </array>
+    <array name="second_controlPoints_ho">
+        <item>#FFCC3D42</item>
+        <item>130,380</item>
+        <item>542,160</item>
+        <item>459,191</item>
+        <item>393,-86</item>
+        <item>115,4</item>
+        <item>72,194</item>
+        <item>527,363</item>
+        <item>373,192</item>
+        <item>417,183</item>
+    </array>
+    <array name="security_feature">
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+    </array>
+    <array name="security_settings_premium_sms_values">
+        <item>Ask</item>
+        <item>Never allow</item>
+        <item>Always allow</item>
+    </array>
+    <array name="seventh_controlPoints">
+        <item>#FFCC3D42</item>
+        <item>210,444</item>
+        <item>272,308</item>
+        <item>323,184</item>
+        <item>348,-77</item>
+        <item>32,4</item>
+        <item>113,80</item>
+        <item>89,132</item>
+        <item>95,172</item>
+        <item>159,188</item>
+    </array>
+    <array name="seventh_controlPoints_ho">
+        <item>#FFCC3D42</item>
+        <item>568,380</item>
+        <item>542,160</item>
+        <item>406,53</item>
+        <item>393,-86</item>
+        <item>115,4</item>
+        <item>72,194</item>
+        <item>527,363</item>
+        <item>373,192</item>
+        <item>409,185</item>
+    </array>
+    <array name="single_choice_dialog_options">
+        <item>10%</item>
+        <item>20%</item>
+        <item>30%</item>
+        <item>40%</item>
+        <item>50%</item>
+    </array>
+    <array name="sixth_controlPoints">
+        <item>#FFCC3D42</item>
+        <item>126,444</item>
+        <item>348,256</item>
+        <item>348,128</item>
+        <item>348,-87</item>
+        <item>12,-87</item>
+        <item>12,128</item>
+        <item>49,195</item>
+        <item>180,256</item>
+        <item>240,195</item>
+    </array>
+    <array name="test">
+        <item>测试</item>
+        <item>TAB2</item>
+        <item>TAB3</item>
+    </array>
+    <array name="text_boom_trigger_area">
+        <item>0.31</item>
+        <item>0.36</item>
+        <item>0.40</item>
+        <item>0.46</item>
+        <item>0.50</item>
+    </array>
+    <array name="third_controlPoints">
+        <item>#FFCC3D42</item>
+        <item>210,380</item>
+        <item>348,256</item>
+        <item>348,128</item>
+        <item>348,-87</item>
+        <item>12,-87</item>
+        <item>12,128</item>
+        <item>49,195</item>
+        <item>180,256</item>
+        <item>240,195</item>
+    </array>
+    <array name="week_day_labels">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </array>
+</resources>

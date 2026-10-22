@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/app_snippet"
+        layout="@layout/manage_applications_item"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/itemBackgroundData"
+        android:layout_marginTop="16dp"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_subTitle="@string/gts_data_usage_app_restrict_background_summary"
+        app:ocardlistitem_title="@string/gts_data_usage_app_restrict_background"
+        style="@style/OCardListItemSwitchTop"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/itemUnrestrictedData"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_subTitle="@string/gts_unrestricted_app_summary"
+        app:ocardlistitem_title="@string/gts_unrestricted_app_title"
+        style="@style/OCardListItemSwitchBottom"/>
+</LinearLayout>

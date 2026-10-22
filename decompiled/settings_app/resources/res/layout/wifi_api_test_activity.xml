@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/wifi_api_test"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_title">
+        <obric.widget.SettingItemText
+            android:id="@+id/disable_network"
+            android:background="@drawable/selector_setting_sub_item_bg_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_item_top_bottom_margin"
+            android:title="@string/disableNetwork"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/disconnect"
+            android:background="@drawable/selector_setting_sub_item_bg_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/disconnect"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/enable_network"
+            android:background="@drawable/selector_setting_sub_item_bg_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/enableNetwork"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/getConfiguredNetworks"
+            android:background="@drawable/selector_setting_sub_item_bg_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/getConfiguredNetworks"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/getConnectionInfo"
+            android:background="@drawable/selector_setting_sub_item_bg_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/getConnectionInfo"/>
+    </LinearLayout>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

@@ -1,0 +1,445 @@
+package com.loc;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.text.TextUtils;
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.DPoint;
+import com.bytedance.bdinstall.oaid.OaidModel;
+import com.bytedance.bdlocation.client.LocationInfoConst;
+import com.bytedance.bdlocation.monitor.LocationMonitorConst;
+import com.obric.memorydata.database.entity.MemoryKeyInfoEntity;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class ev {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static String f5514a = "5.3";
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public static final String[] f5515b = null;
+    static String c;
+    static String d;
+    static String e;
+    static String f;
+    public static String g;
+    public static String h;
+    public static int i;
+    public static String j;
+    public static String k;
+    static String l;
+    static HashMap<String, String> m;
+    static boolean n;
+    static boolean o;
+    private static final String[] p = null;
+    private static fw q;
+    private static boolean r;
+    private static boolean s;
+
+    static {
+        f5515b = new String[]{"5.1"};
+        c = "http://apilocate.amap.com/mobile/binary";
+        d = "http://dualstack-a.apilocate.amap.com/mobile/binary";
+        e = "";
+        p = new String[]{"com.amap.api.location", "com.loc", "com.amap.api.fence"};
+        f = "11G;11K;13J;13S;15O;15U;17J;17Y;197;1A6";
+        g = null;
+        h = null;
+        i = LocationInfoConst.HALF_MINUTES;
+        j = null;
+        k = null;
+        q = null;
+        r = false;
+        s = false;
+        n = false;
+        o = false;
+    }
+
+    public static Bundle a(AMapLocationClientOption r3) {
+        Bundle r0 = new Bundle();
+        if (r3 != null) goto L10;
+        r3 = new AMapLocationClientOption();
+    L10:
+        r0.putParcelable("opt", r3);     // Catch: Throwable -> L7
+    L9:
+        return r0;
+    L7:
+        th = move-exception;
+        a(th, "CoreUtil", "getOptionBundle");
+        goto L9
+    }
+
+    public static AMapLocation a(AMapLocation r5, AMapLocation r6) {
+        if (r6 != null) goto L13;
+        return r5;
+    L13:
+        r5.setCountry(r6.getCountry());     // Catch: Throwable -> L11
+        r5.setRoad(r6.getRoad());     // Catch: Throwable -> L11
+        r5.setPoiName(r6.getPoiName());     // Catch: Throwable -> L11
+        r5.setStreet(r6.getStreet());     // Catch: Throwable -> L11
+        r5.setNumber(r6.getStreetNum());     // Catch: Throwable -> L11
+        String r0 = r6.getCityCode();     // Catch: Throwable -> L11
+        String r1 = r6.getAdCode();     // Catch: Throwable -> L11
+        r5.setCityCode(r0);     // Catch: Throwable -> L11
+        r5.setAdCode(r1);     // Catch: Throwable -> L11
+        r5.setCity(r6.getCity());     // Catch: Throwable -> L11
+        r5.setDistrict(r6.getDistrict());     // Catch: Throwable -> L11
+        r5.setProvince(r6.getProvince());     // Catch: Throwable -> L11
+        r5.setAoiName(r6.getAoiName());     // Catch: Throwable -> L11
+        r5.setAddress(r6.getAddress());     // Catch: Throwable -> L11
+        r5.setDescription(r6.getDescription());     // Catch: Throwable -> L11
+        if (r5.getExtras() == null) goto L9;
+        r5.getExtras().putString("citycode", r6.getCityCode());     // Catch: Throwable -> L11
+        r5.getExtras().putString("desc", r6.getExtras().getString("desc"));     // Catch: Throwable -> L11
+        r5.getExtras().putString("adcode", r6.getAdCode());     // Catch: Throwable -> L11
+    L12:
+        goto L10
+    L9:
+        Bundle r2 = new Bundle();     // Catch: Throwable -> L11
+        r2.putString("citycode", r6.getCityCode());     // Catch: Throwable -> L11
+        r2.putString("desc", r6.getExtras().getString("desc"));     // Catch: Throwable -> L11
+        r2.putString("adcode", r6.getAdCode());     // Catch: Throwable -> L11
+        r5.setExtras(r2);     // Catch: Throwable -> L11
+    L10:
+        return r5;
+    }
+
+    public static AMapLocationClientOption a(Bundle r3) {
+        AMapLocationClientOption r0 = new AMapLocationClientOption();
+        if (r3 != null) goto L10;
+        return r0;
+    L10:
+        r3.setClassLoader(AMapLocationClientOption.class.getClassLoader());     // Catch: Throwable -> L7
+        return (AMapLocationClientOption) ZeusTransformUtils.preCheckCast(r3.getParcelable("opt"), AMapLocationClientOption.class, "com.obric.memorydata.plugin");
+    L7:
+        th = move-exception;
+        a(th, "CoreUtil", "getOptionFromBundle");
+        return r0;
+    }
+
+    public static String a() {
+        return c;
+    }
+
+    public static void a(Context r2) {
+        Context r3 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.memorydata.plugin");
+    L9:
+        th = move-exception;
+        a(th, "CoreUtil", "checkUrl");
+        return;
+    L4:
+        if (fx.b(r3) == false) goto L7;
+        c = "http://abroad.apilocate.amap.com/mobile/binary";     // Catch: Throwable -> L9
+        return;
+    L7:
+        f();     // Catch: Throwable -> L9
+        String r4 = eh.a(fm.f(r3));     // Catch: Throwable -> L9
+        l = r4;     // Catch: Throwable -> L9
+        a(r4);     // Catch: Throwable -> L9
+    }
+
+    public static void a(AMapLocation r12, JSONObject r13) {
+        if (r13 == null) goto L40;
+        double r4 = r13.optDouble("lat", r12.getLatitude());     // Catch: Throwable -> L26
+        double r6 = r13.optDouble("lon", r12.getLongitude());     // Catch: Throwable -> L26
+        r12.setProvider(r13.optString("provider", r12.getProvider()));     // Catch: Throwable -> L26
+        r12.setLatitude(r4);     // Catch: Throwable -> L26
+        r12.setLongitude(r6);     // Catch: Throwable -> L26
+        r12.setAltitude(r13.optDouble("altitude", r12.getAltitude()));     // Catch: Throwable -> L26
+        String r8 = r13.optString(LocationMonitorConst.ACCURACY);     // Catch: Throwable -> L29
+        if (TextUtils.isEmpty(r8) == true) goto L34;
+        r12.setAccuracy(Float.parseFloat(r8));     // Catch: Throwable -> L29
+    L34:
+        String r9 = r13.optString("speed");     // Catch: Throwable -> L30
+        if (TextUtils.isEmpty(r9) == true) goto L36;
+        r12.setSpeed(Float.parseFloat(r9));     // Catch: Throwable -> L30
+    L36:
+        String r10 = r13.optString("bearing");     // Catch: Throwable -> L31
+        if (TextUtils.isEmpty(r10) == true) goto L14;
+        r12.setBearing(Float.parseFloat(r10));     // Catch: Throwable -> L31
+    L14:
+        r12.setAdCode(r13.optString("adcode", r12.getAdCode()));     // Catch: Throwable -> L26
+        r12.setCityCode(r13.optString("citycode", r12.getCityCode()));     // Catch: Throwable -> L26
+        r12.setAddress(r13.optString(MemoryKeyInfoEntity.KEY_ADDRESS, r12.getAddress()));     // Catch: Throwable -> L26
+        String r11 = r13.optString("desc", "");     // Catch: Throwable -> L26
+        r12.setCountry(r13.optString("country", r12.getCountry()));     // Catch: Throwable -> L26
+        r12.setProvince(r13.optString("province", r12.getProvince()));     // Catch: Throwable -> L26
+        r12.setCity(r13.optString("city", r12.getCity()));     // Catch: Throwable -> L26
+        r12.setDistrict(r13.optString("district", r12.getDistrict()));     // Catch: Throwable -> L26
+        r12.setRoad(r13.optString("road", r12.getRoad()));     // Catch: Throwable -> L26
+        r12.setStreet(r13.optString("street", r12.getStreet()));     // Catch: Throwable -> L26
+        r12.setNumber(r13.optString("number", r12.getStreetNum()));     // Catch: Throwable -> L26
+        r12.setPoiName(r13.optString("poiname", r12.getPoiName()));     // Catch: Throwable -> L26
+        r12.setAoiName(r13.optString("aoiname", r12.getAoiName()));     // Catch: Throwable -> L26
+        r12.setErrorCode(r13.optInt("errorCode", r12.getErrorCode()));     // Catch: Throwable -> L26
+        r12.setErrorInfo(r13.optString("errorInfo", r12.getErrorInfo()));     // Catch: Throwable -> L26
+        r12.setLocationType(r13.optInt("locationType", r12.getLocationType()));     // Catch: Throwable -> L26
+        r12.setLocationDetail(r13.optString("locationDetail", r12.getLocationDetail()));     // Catch: Throwable -> L26
+        r12.setTime(r13.optLong(OaidModel.KEY_TIME, r12.getTime()));     // Catch: Throwable -> L26
+        boolean r14 = r13.optBoolean("isOffset", r12.isOffset());     // Catch: Throwable -> L26
+        r12.setOffset(r14);     // Catch: Throwable -> L26
+        r12.setBuildingId(r13.optString("poiid", r12.getBuildingId()));     // Catch: Throwable -> L26
+        r12.setFloor(r13.optString("floor", r12.getFloor()));     // Catch: Throwable -> L26
+        r12.setDescription(r13.optString("description", r12.getDescription()));     // Catch: Throwable -> L26
+        if (r13.has("coordType") == false) goto L20;
+        String r15 = r13.optString("coordType", AMapLocation.COORD_TYPE_GCJ02);     // Catch: Throwable -> L26
+    L18:
+        r12.setCoordType(r15);     // Catch: Throwable -> L26
+    L24:
+        Bundle r16 = new Bundle();     // Catch: Throwable -> L26
+        r16.putString("citycode", r12.getCityCode());     // Catch: Throwable -> L26
+        r16.putString("desc", r11.toString());     // Catch: Throwable -> L26
+        r16.putString("adcode", r12.getAdCode());     // Catch: Throwable -> L26
+        r12.setExtras(r16);     // Catch: Throwable -> L26
+        return;
+    L20:
+        if (a(r4, r6) == false) goto L23;
+        if (r14 == false) goto L23;
+        r12.setCoordType(AMapLocation.COORD_TYPE_GCJ02);     // Catch: Throwable -> L26
+    L23:
+        r15 = AMapLocation.COORD_TYPE_WGS84;
+    L26:
+        th = move-exception;
+        a(th, "CoreUtil", "transformLocation");
+        return;
+    }
+
+    private static void a(String r3) {
+        if (r3 == null) goto L32;
+    L24:
+        th = move-exception;
+        a(th, "CoreUtil", "checkUrl");
+        return;
+    L4:
+        if (r3.length() == 0) goto L33;
+        HashMap<String, String> r0 = m;     // Catch: Throwable -> L24
+        if (r0 != null) goto L10;
+        return;
+    L10:
+        if (r0.containsKey(r3) == true) goto L12;
+        return;
+    L12:
+        String r1 = (String) ZeusTransformUtils.preCheckCast(m.get(r3), String.class, "com.obric.memorydata.plugin");     // Catch: Throwable -> L24
+        String r2 = null;
+        if (r1 != null) goto L15;
+    L17:
+        if (r2 != null) goto L19;
+        return;
+    L19:
+        if (r2.length() > 0) goto L21;
+        return;
+    L21:
+        if (r2.contains("http:") == false) goto L31;
+        e = r2;     // Catch: Throwable -> L24
+        c = r2;     // Catch: Throwable -> L24
+        return;
+    L31:
+        return;
+    L15:
+        if (r1.length() <= 0) goto L17;
+        r2 = new String(eh.b(b(r1), r3), "utf-8");     // Catch: Throwable -> L24
+        goto L17
+    L33:
+        return;
+    }
+
+    public static void a(Throwable r1, String r2, String r3) {
+        if ("reportError".equals(r3) == false) goto L6;
+        return;
+    L6:
+        if (ZeusTransformUtils.instanceOf(r1, l.class) == false) goto L11;
+        return;
+    L11:
+        q.b(r1, r2, r3);     // Catch: Throwable -> L10
+        return;
+    }
+
+    public static boolean a(double r4, double r6) {
+        int r7 = (int) ((r6 - 73.0d) / 0.5d);
+        int r5 = (int) ((r4 - 3.5d) / 0.5d);
+        if (r5 >= 0) goto L5;
+    L19:
+        return false;
+    L5:
+        if (r5 >= 101) goto L19;
+        if (r7 < 0) goto L19;
+        if (r7 >= 124) goto L19;
+        if ("00000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000001011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011101010111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111101111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000110111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011010111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110011100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010011100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100110001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111000111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000000010111110100000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000001111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111000000111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111101111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000101111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000011110000000001111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000011000011111100000000111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000001111111100111111111100110111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000101111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111011111000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100100000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100011100000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000111110000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110011111110000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110111111110000000000000000000000111011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000011111111111111111111111111111111111111111111111100001111111111111111111111111111111111111111111111111010000000000000000000000111111111111111111111111111111111111111111110000000000000001111111111111111111111111111111111111111111100000000000000000000011111111111111111111111111111111100000000000000000000000000001111111111111111111111111111111111111111110000000000000000000001111111111111111111111111111111100000000000000000000000000000001111111111111111111111111111111111111111000000000000000000000111111111111111111111111111111110000000000000000000000000000001111111111111111111111111111111111111111100000000000000000000111111111111111111111111111111000000000000000000000000000000000111111111111111111111111111111111111111111000000000000000000001111111111111111111111111110000000000000000000000000000000000001110011111111111111111111111111111111111111100000000000000000000011111111111111111100000000000000000000000000000000000000000000000001111111111111111111111111111111111111000000000000000000001111111111111111111000000000000000000000000000000000000000000000000011111111111111111111111111111111111100000000000000000000011111111111111111100000000000000000000000000000000000000000000000000011111111111111111111111111111111111000000000000000000001111111111111111100000000000000000000000000000000000000000000000000000000111111111111111111111111111111110000000000000000000000000111111111100000000000000000000000000000000000000000000000000111111111111111111111111111111111111111000000000000000000000000011111111100000000000000000000000000000000000000000000000000011111111111111111111111111111110001111100000000000000000000000000111110000000000000000000000000000000000000000000000000000001111111111111111111111111111111000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000011111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110000000000000000000000".charAt((r5 * 124) + r7) != '1') goto L15;
+        return true;
+    L15:
+        return false;
+    L16:
+        th = move-exception;
+        a(th, "CoreUtil", "isChina");
+        return true;
+    }
+
+    private static boolean a(double r4, double r6, double r8, double r10, double r12, double r14) {
+        if (Math.abs(b(r4, r6, r8, r10, r12, r14)) < 1.0E-9d) goto L5;
+    L9:
+        return false;
+    L5:
+        if (((r4 - r8) * (r4 - r12)) > 0.0d) goto L9;
+        if (((r6 - r10) * (r6 - r14)) > 0.0d) goto L9;
+        return true;
+    }
+
+    private static boolean a(double r16, double r18, double r20, double r22, double r24, double r26, double r28) {
+        double r0 = r20 - r16;
+        double r2 = r28 - r26;
+        double r6 = r22 - r18;
+        double r8 = 180.0d - r24;
+        double r4 = (r0 * r2) - (r6 * r8);
+        if (r4 == 0.0d) goto L13;
+        double r12 = r18 - r26;
+        double r14 = r16 - r24;
+        double r9 = ((r8 * r12) - (r2 * r14)) / r4;
+        double r13 = ((r12 * r0) - (r14 * r6)) / r4;
+        if (r9 < 0.0d) goto L13;
+        if (r9 > 1.0d) goto L13;
+        if (r13 < 0.0d) goto L13;
+        if (r13 > 1.0d) goto L13;
+        return true;
+    L13:
+        return false;
+    }
+
+    public static boolean a(DPoint r32, List<DPoint> r33) {
+        List r0 = (List) ZeusTransformUtils.wrapperContextForParams(r33, List.class, "com.obric.memorydata.plugin");
+        double r16 = r32.getLongitude();
+        double r18 = r32.getLatitude();
+        double r20 = r32.getLatitude();
+        boolean r14 = false;
+        if (((DPoint) ZeusTransformUtils.preCheckCast(r0.get(0), DPoint.class, "com.obric.memorydata.plugin")).equals(r0.get(r0.size() - 1)) == true) goto L5;
+        r0.add(r0.get(0));
+    L5:
+        int r2 = 0;
+        int r23 = 0;
+    L7:
+        if (r2 >= (r0.size() - 1)) goto L28;
+        double r24 = ((DPoint) ZeusTransformUtils.preCheckCast(r0.get(r2), DPoint.class, "com.obric.memorydata.plugin")).getLongitude();
+        double r26 = ((DPoint) ZeusTransformUtils.preCheckCast(r0.get(r2), DPoint.class, "com.obric.memorydata.plugin")).getLatitude();
+        int r15 = r2 + 1;
+        double r28 = ((DPoint) ZeusTransformUtils.preCheckCast(r0.get(r15), DPoint.class, "com.obric.memorydata.plugin")).getLongitude();
+        double r30 = ((DPoint) ZeusTransformUtils.preCheckCast(r0.get(r15), DPoint.class, "com.obric.memorydata.plugin")).getLatitude();
+        if (a(r16, r18, r24, r26, r28, r30) == true) goto L10;
+        if (Math.abs(r30 - r26) >= 1.0E-9d) goto L14;
+    L18:
+        boolean r25 = r14;
+        int r27 = r15;
+    L27:
+        r14 = r25;
+        r2 = r27;
+        goto L7
+    L14:
+        if (a(r24, r26, r16, r18, 180.0d, r20) == false) goto L20;
+        if (r26 <= r30) goto L18;
+    L17:
+        r23 = r23 + 1;
+        goto L18
+    L20:
+        if (a(r28, r30, r16, r18, 180.0d, r20) == true) goto L22;
+        r25 = r14;
+        r27 = r15;
+        if (a(r24, r26, r28, r30, r16, r18, r20) == false) goto L27;
+        r23 = r23 + 1;
+        goto L27
+    L22:
+        if (r30 <= r26) goto L18;
+    L10:
+        return true;
+    L28:
+        boolean r29 = r14;
+        if ((r23 % 2) == 0) goto L32;
+        return true;
+    L32:
+        return r29;
+    }
+
+    private static double b(double r0, double r2, double r4, double r6, double r8, double r10) {
+        return ((r4 - r0) * (r10 - r2)) - ((r8 - r0) * (r6 - r2));
+    }
+
+    public static String b() {
+        return d;
+    }
+
+    public static String b(Context r2) {
+        return ft.a(fm.e((Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.memorydata.plugin")));
+    }
+
+    private static byte[] b(String r5) {
+        int r0 = 0;
+        if (r5 == null) goto L12;
+        if (r5.length() < 2) goto L12;
+        String r6 = r5.toLowerCase(Locale.US);
+        int r1 = r6.length() / 2;
+        byte[] r2 = new byte[r1];
+    L8:
+        if (r0 >= r1) goto L10;
+        int r3 = r0 * 2;
+        r2[r0] = (byte) (fd.f(r6.substring(r3, r3 + 2)) & 255);
+        r0 = r0 + 1;
+        goto L8
+    L10:
+        return r2;
+    L12:
+        return new byte[0];
+    }
+
+    public static fw c() {
+    L7:
+        th = move-exception;
+        a(th, "CoreUtil", "getSDKInfo");
+    L10:
+        return q;
+    L4:
+        if (q != null) goto L10;
+        q = new fw.a("loc", "6.4.8", "AMAP_Location_SDK_Android 6.4.8").a(e()).a("6.4.8").a();     // Catch: Throwable -> L7
+        goto L10
+    }
+
+    public static void c(Context r3) {
+    L9:
+        th = move-exception;
+        a(th, "CoreUtil", "changeUrl");
+        return;
+    L4:
+        if (fx.b((Context) ZeusTransformUtils.wrapperContextForParams(r3, Context.class, "com.obric.memorydata.plugin")) == false) goto L7;
+        c = "http://abroad.apilocate.amap.com/mobile/binary";     // Catch: Throwable -> L9
+        d = "http://abroad.apilocate.amap.com/mobile/binary";     // Catch: Throwable -> L9
+        return;
+    L7:
+        c = "http://apilocate.amap.com/mobile/binary";     // Catch: Throwable -> L9
+        d = "http://dualstack-a.apilocate.amap.com/mobile/binary";     // Catch: Throwable -> L9
+    }
+
+    public static String d() {
+        return f;
+    }
+
+    private static String[] e() {
+        return (String[]) ZeusTransformUtils.preCheckCast(p.clone(), String[].class, "com.obric.memorydata.plugin");
+    }
+
+    private static void f() {
+    L7:
+        th = move-exception;
+        a(th, "CoreUtil", "initUrlHash");
+        return;
+    L3:
+        if (m != null) goto L5;
+        m = new HashMap(16);     // Catch: Throwable -> L7
+    L5:
+        m.clear();     // Catch: Throwable -> L7
+        m.put("fe643c382e5c3b3962141f1a2e815a78", "FB923EE67A8B4032DAA517DD8CD7A26FF7C25B0C3663F92A0B61251C4FFFA858DF169D61321C3E7919CB67DF8EFEC827");     // Catch: Throwable -> L7
+        m.put("9a571aa113ad987d626c0457828962e6", "D2FF99A88BEB04683D89470D4FA72B1749DA456AB0D0F1A476477CE5A6874F53A9106423D905F9D808C0FCE8E7F1E04AC642F01FE41D0C7D933971F45CBA72B7");     // Catch: Throwable -> L7
+        m.put("668319f11506def6208d6afe320dfd52", "53E53D46011A6BBAEA4FAE5442E659E0577CDD336F930C28635C322FB3F51C3C63F7FBAC9EAE448DFA2E5E5D716C4807");     // Catch: Throwable -> L7
+    }
+}

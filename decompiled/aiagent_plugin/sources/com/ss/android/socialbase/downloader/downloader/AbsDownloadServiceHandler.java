@@ -1,0 +1,233 @@
+package com.ss.android.socialbase.downloader.downloader;
+
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.Binder;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Looper;
+import android.util.SparseArray;
+import com.ss.android.socialbase.downloader.impls.AbsDownloadEngine;
+import com.ss.android.socialbase.downloader.logger.Logger;
+import com.ss.android.socialbase.downloader.model.DownloadInfo;
+import com.ss.android.socialbase.downloader.model.DownloadTask;
+import com.ss.android.socialbase.downloader.service.DownloadServiceManager;
+import com.ss.android.socialbase.downloader.service.IDownloadGlobalThrottleService;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+/* JADX INFO: loaded from: classes4.dex */
+public abstract class AbsDownloadServiceHandler implements IDownloadServiceHandler {
+    private static final String TAG = "AbsDownloadServiceHandler";
+    private Runnable debounceStartServiceRunnable;
+    private WeakReference<Service> downloadService;
+    private Handler handler;
+    protected AtomicBoolean isInvokeStartService;
+    protected volatile boolean isServiceAlive;
+    protected final SparseArray<List<DownloadTask>> pendingTasks;
+
+    static {
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void onStartCommand(Intent r1, int r2, int r3) {
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void onStartCommandOnMainThread() {
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void setServiceConnectionListener(IDownloadServiceConnectionListener r2) {
+        IDownloadServiceConnectionListener r1 = (IDownloadServiceConnectionListener) ZeusTransformUtils.wrapperContextForParams(r2, IDownloadServiceConnectionListener.class, "com.obric.aiagent.plugin");
+    }
+
+    public void startFakeService() {
+    }
+
+    public void startService(Context r2, ServiceConnection r3) {
+        Context r1 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        ServiceConnection r4 = (ServiceConnection) ZeusTransformUtils.wrapperContextForParams(r3, ServiceConnection.class, "com.obric.aiagent.plugin");
+    }
+
+    public void stopService(Context r2, ServiceConnection r3) {
+        Context r1 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        ServiceConnection r4 = (ServiceConnection) ZeusTransformUtils.wrapperContextForParams(r3, ServiceConnection.class, "com.obric.aiagent.plugin");
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void tryDownloadWithEngine(DownloadTask r1) {
+    }
+
+    public AbsDownloadServiceHandler() {
+        this.pendingTasks = new SparseArray();
+        this.isServiceAlive = false;
+        this.isInvokeStartService = new AtomicBoolean(false);
+        this.handler = new Handler(Looper.getMainLooper());
+        this.debounceStartServiceRunnable = new AnonymousClass2(this);
+    }
+
+    static /* synthetic */ String access$000() {
+        return TAG;
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void setDownloadService(WeakReference r1) {
+        this.downloadService = r1;
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public boolean isServiceAlive() {
+        return this.isServiceAlive;
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public IBinder onBind(Intent r2) {
+        if (Logger.debug() == false) goto L6;
+        Logger.globalDebug(TAG, "onBind", "OnBind Abs");
+    L6:
+        return new Binder();
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void onDestroy() {
+        this.isServiceAlive = false;
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void pendDownloadTask(DownloadTask r8) {
+        if (r8 != null) goto L4;
+        return;
+    L4:
+        int r0 = r8.getDownloadId();
+        DownloadInfo r1 = r8.getDownloadInfo();
+        SparseArray<List<DownloadTask>> r2 = this.pendingTasks;
+        monitor-enter(r2);
+    L20:
+        th = move-exception;
+        throw th;
+    L7:
+        if (Logger.debugScene(r1) == false) goto L9;
+        Logger.taskDebug(TAG, r1, "pendDownloadTask", "PendingTasks.size:" + this.pendingTasks.size());     // Catch: Throwable -> L20
+    L9:
+        List<DownloadTask> r3 = (List) ZeusTransformUtils.preCheckCast(this.pendingTasks.get(r0), List.class, "com.obric.aiagent.plugin");     // Catch: Throwable -> L20
+        if (r3 != null) goto L13;
+        r3 = new ArrayList();     // Catch: Throwable -> L20
+        this.pendingTasks.put(r0, r3);     // Catch: Throwable -> L20
+    L13:
+        if (Logger.debugScene(r1) == false) goto L15;
+        Logger.taskDebug(TAG, r1, "pendDownloadTask", "Before taskArray.size:" + r3.size());     // Catch: Throwable -> L20
+    L15:
+        r3.add(r8);     // Catch: Throwable -> L20
+        if (Logger.debugScene(r1) == false) goto L18;
+        Logger.taskDebug(TAG, r1, "pendDownloadTask", "After pendingTasks.size:" + this.pendingTasks.size());     // Catch: Throwable -> L20
+    L18:
+        monitor-exit(r2);     // Catch: Throwable -> L20
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void tryDownload(DownloadTask r5) {
+        if (r5 != null) goto L4;
+        return;
+    L4:
+        DownloadInfo r0 = r5.getDownloadInfo();
+        if (r0 != null) goto L7;
+        return;
+    L7:
+        ((IDownloadGlobalThrottleService) ZeusTransformUtils.preCheckCast(DownloadServiceManager.getService(IDownloadGlobalThrottleService.class), IDownloadGlobalThrottleService.class, "com.obric.aiagent.plugin")).start(r5);
+        if (this.isServiceAlive == true) goto L25;
+        if (Logger.debugScene(r0) == false) goto L13;
+        Logger.taskDebug(TAG, r0, "tryDownload", "Service is not alive");
+    L13:
+        if (this.isInvokeStartService.compareAndSet(false, true) == true) goto L15;
+        this.handler.removeCallbacks(this.debounceStartServiceRunnable);
+        this.handler.postDelayed(this.debounceStartServiceRunnable, 10);
+        goto L25
+    L15:
+        if (Logger.debugScene(r0) == false) goto L18;
+        Logger.taskDebug(TAG, r0, "tryDownload", "Do StartService");
+    L18:
+        if (r5.getDownloadInfo().isNeedCurrentProcess() == false) goto L22;
+        startFakeService();
+        if (Logger.debugScene(r0) == false) goto L25;
+        Logger.taskDebug(TAG, r0, "tryDownload", "NeedCurrentProcess");
+        goto L25
+    L22:
+        DownloadComponentManager.submitCPUTask(new AnonymousClass1(this));
+    L25:
+        if (this.pendingTasks.get(r5.getDownloadId()) == null) goto L36;
+        SparseArray<List<DownloadTask>> r1 = this.pendingTasks;
+        monitor-enter(r1);
+    L33:
+        th = move-exception;
+        throw th;
+    L29:
+        if (this.pendingTasks.get(r5.getDownloadId()) == null) goto L31;
+        this.pendingTasks.remove(r5.getDownloadId());     // Catch: Throwable -> L33
+    L31:
+        monitor-exit(r1);     // Catch: Throwable -> L33
+    L36:
+        AbsDownloadEngine r2 = DownloadComponentManager.getDownloadEngine();
+        if (r2 == null) goto L39;
+        r2.tryDownload(r5);
+    L39:
+        resumePendingTask();
+    }
+
+    public void resumePendingTask() {
+        SparseArray<List<DownloadTask>> r0 = this.pendingTasks;
+        monitor-enter(r0);
+    L25:
+        th = move-exception;
+        throw th;
+    L5:
+        if (Logger.debug() == false) goto L7;
+        Logger.globalDebug(TAG, "resumePendingTask", "PendingTasks.size:" + this.pendingTasks.size());     // Catch: Throwable -> L25
+    L7:
+        SparseArray<List<DownloadTask>> r1 = this.pendingTasks.clone();     // Catch: Throwable -> L25
+        this.pendingTasks.clear();     // Catch: Throwable -> L25
+        monitor-exit(r0);     // Catch: Throwable -> L25
+        AbsDownloadEngine r8 = DownloadComponentManager.getDownloadEngine();
+        if (r8 == null) goto L24;
+        int r2 = 0;
+    L13:
+        if (r2 >= r1.size()) goto L35;
+        List r3 = (List) ZeusTransformUtils.preCheckCast(r1.get(r1.keyAt(r2)), List.class, "com.obric.aiagent.plugin");
+        if (r3 == null) goto L23;
+        Iterator r4 = r3.iterator();
+    L18:
+        if (r4.hasNext() == false) goto L23;
+        DownloadTask r5 = (DownloadTask) ZeusTransformUtils.preCheckCast(r4.next(), DownloadTask.class, "com.obric.aiagent.plugin");
+        if (Logger.debugScene(r5.getDownloadInfo()) == false) goto L22;
+        Logger.taskDebug(TAG, r5.getDownloadInfo(), "resumePendingTask", "Resume Task");
+    L22:
+        r8.tryDownload(r5);
+    L23:
+        r2 = r2 + 1;
+        goto L13
+    L35:
+        return;
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void setLogLevel(int r1) {
+        Logger.setLogLevel(r1);
+    }
+
+    @Override // com.ss.android.socialbase.downloader.downloader.IDownloadServiceHandler
+    public void startService() {
+        if (this.isServiceAlive == false) goto L5;
+        return;
+    L5:
+        if (Logger.debug() == false) goto L7;
+        Logger.globalDebug(TAG, "startService", "Run StartService");
+    L7:
+        startService((Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(DownloadComponentManager.getAppContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin"), null);
+    }
+}

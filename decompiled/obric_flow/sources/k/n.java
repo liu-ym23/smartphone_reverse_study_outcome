@@ -1,0 +1,8 @@
+package k;
+
+import android.graphics.Path;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface n extends c {
+    Path getPath();
+}

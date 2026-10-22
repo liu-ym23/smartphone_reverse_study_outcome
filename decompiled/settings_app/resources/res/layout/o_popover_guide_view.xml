@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ToastDefault"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/ConstTextInverse"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:oui_textSpec="P2S"/>
+    <View
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/o_bg_popover_guide_view_divider"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/Secondary"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_guide_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/oui_jump_guide"
+        app:oui_textSpec="P2S"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_s_s_arrowforward_outlined_12"
+        android:layout_marginStart="2dp"
+        app:tint="@color/Secondary"/>
+</merge>

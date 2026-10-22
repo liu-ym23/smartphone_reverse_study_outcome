@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/source_text_container"
+        android:paddingBottom="40dp"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/oui_h_title_bar_window"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+            <com.obric.oui.text.OTextView
+                android:textSize="16sp"
+                android:textColor="@color/oui_basic_text_1"
+                android:id="@+id/tv_source_full_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="24sp"
+                android:textFontWeight="400"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <View
+        android:layout_gravity="top"
+        android:id="@+id/cut_off"
+        android:background="@color/oui_basic_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_centerTitle="@string/memory_card_source_content_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</FrameLayout>

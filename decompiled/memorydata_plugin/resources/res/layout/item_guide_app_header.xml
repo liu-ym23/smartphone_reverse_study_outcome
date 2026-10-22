@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/oui_basic_bg_base_1"
+    android:paddingBottom="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="288px"
+        android:layout_height="288px"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_guide_screen_memory_app"/>
+    <TextView
+        android:textSize="96px"
+        android:textColor="@color/oui_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/recommend_item_guide_app_header_text"
+        android:lineHeight="32sp"
+        android:textFontWeight="500"/>
+</LinearLayout>

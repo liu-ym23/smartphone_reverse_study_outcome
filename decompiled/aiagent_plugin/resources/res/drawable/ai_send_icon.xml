@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@color/oui_on_brand_color_default"
+        android:pathData="M0,16C0,7.163 7.163,0 16,0C24.837,0 32,7.163 32,16C32,24.837 24.837,32 16,32C7.163,32 0,24.837 0,16Z"/>
+    <path
+        android:fillColor="@color/oui_fill_icon_as_action"
+        android:pathData="M10.583,14.306L11.787,15.488L15.148,12.189H15.232L15.148,15.757L15.148,22.667H16.851L16.851,15.758L16.765,12.192H16.851L20.212,15.491L21.416,14.309L16.604,9.579C16.271,9.252 15.732,9.252 15.399,9.579L10.583,14.306Z"/>
+</vector>

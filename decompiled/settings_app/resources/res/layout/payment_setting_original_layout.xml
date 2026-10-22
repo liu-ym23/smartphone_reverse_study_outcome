@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.oui.titlebar.OFloatingTitleBar
+            android:id="@+id/view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:oFloatingTitleBar_centerTitle="@string/wifi_settings_title"
+            app:oFloatingTitleBar_maskBlurRadius="8"
+            app:oFloatingTitleBar_statusBarImmersion="true"/>
+        <fragment
+            android:name="com.android.settings.nfc.PaymentSettings"
+            android:id="@+id/fragment_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_title"/>
+        <include layout="@layout/title_bar_shadow"/>
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/seachresultview"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0">
+    <TextView
+        android:id="@+id/searchview_bg"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.6"/>
+    <com.android.settings.widget.HorizontalScrollListView
+        android:id="@+id/search_listview"
+        android:background="@color/oui_bg_base_1"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:overScrollMode="always"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="282dp">
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_basic_text_3"
+            android:gravity="center_horizontal"
+            android:id="@+id/search_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_search_result"
+            style="@style/Title_3_Medium"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+package oj;
+
+/* JADX INFO: loaded from: classes2.dex */
+public interface d {
+    void onFail();
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/default_sim_title"
+        android:layout_marginTop="@dimen/top_gap"
+        style="@style/SettingItemTitleStyle"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/sub_1"
+        app:oui_list_item_title="@string/multi_sim_sub_1_title"
+        style="@style/SettingSubItemNoBottomStyle"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/sub_2"
+        app:oui_list_item_title="@string/multi_sim_sub_2_title"
+        style="@style/SettingSubItemSingleStyle"/>
+    <ImageView
+        android:id="@+id/sim_guide"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tips_for_item_check"
+        android:visibility="gone"
+        style="@style/SettingItemTipsStyle"/>
+    <TextView
+        android:id="@+id/tips_for_choose_data_card"
+        android:visibility="gone"
+        android:layout_marginBottom="0dp"
+        android:text="@string/choose_data_sim_card"
+        style="@style/SettingItemTipsStyle"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/auto_switch"
+        android:layout_marginTop="@dimen/settings_item_top_bottom_margin"
+        app:oui_list_item_title="@string/loading"
+        style="@style/SettingSubItemSingleStyle"/>
+    <TextView
+        android:id="@+id/auto_switch_tips"
+        style="@style/SettingItemTipsStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8dp">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_block_memory_loading_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+        <com.obric.oui.progress.ODownloadProgressView
+            android:id="@+id/block_memory_loading_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:oui_progress_view_size="large"
+            app:oui_progressing_action_color="@color/oui_basic_text_1"/>
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_basic_text_1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_memory_block_dialog_creating_rule"
+            android:maxLines="1"
+            style="@style/Title_1_Bold"/>
+    </LinearLayout>
+</FrameLayout>

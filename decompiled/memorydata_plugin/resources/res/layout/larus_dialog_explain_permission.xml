@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/larus_toast_background"
+    android:paddingTop="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_16"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_16"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16"
+    android:layout_marginStart="@dimen/dp_14"
+    android:layout_marginEnd="@dimen/dp_14"
+    android:elevation="@dimen/dp_5">
+    <TextView
+        android:textSize="@dimen/dp_18"
+        android:textColor="@color/larus_neutral_100"
+        android:id="@+id/dialog_permission_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textFontWeight="700"/>
+    <TextView
+        android:textSize="@dimen/dp_16"
+        android:textColor="@color/larus_neutral_70"
+        android:id="@+id/dialog_permission_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textFontWeight="400"/>
+</LinearLayout>

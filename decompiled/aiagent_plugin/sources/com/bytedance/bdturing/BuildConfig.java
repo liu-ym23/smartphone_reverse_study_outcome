@@ -1,0 +1,17 @@
+package com.bytedance.bdturing;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class BuildConfig {
+
+    @Deprecated
+    public static final String APPLICATION_ID = "com.bytedance.bdturing";
+    public static final String BUILD_TYPE = "release";
+    public static final boolean DEBUG = false;
+    public static final String FLAVOR = "cn";
+    public static final String LIBRARY_PACKAGE_NAME = "com.bytedance.bdturing";
+    public static final int VERSION_CODE = 302011851;
+    public static final String VERSION_NAME = "3.2.0.cn";
+
+    public BuildConfig() {
+    }
+}

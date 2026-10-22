@@ -1,0 +1,73 @@
+package com.obric.security.mainpage.block;
+
+import android.view.View;
+import com.bytedance.blockframework.framework.base.UIBlock;
+import com.bytedance.blockframework.framework.core.BlockGenerator;
+import com.bytedance.blockframework.framework.core.SubBlockCreator;
+import com.bytedance.blockframework.framework.join.IBlockContext;
+import com.obric.security.mainpage.delegate.data.KeyFeatureData;
+import com.obric.security.mainpage.delegate.data.KeyFeatureModel;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: compiled from: KeyFeatureBlock.kt */
+/* JADX INFO: loaded from: classes4.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001B\u0015\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0010\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\fH\u0016J\b\u0010\r\u001a\u00020\u000eH\u0016J\u0012\u0010\u000f\u001a\u00020\u00052\b\u0010\u0010\u001a\u0004\u0018\u00010\u0005H\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0011"}, d2 = {"Lcom/obric/security/mainpage/block/KeyFeatureBlock;", "Lcom/bytedance/blockframework/framework/base/UIBlock;", "Lcom/obric/security/mainpage/delegate/data/KeyFeatureData;", "Lcom/obric/security/mainpage/delegate/data/KeyFeatureModel;", "rootView", "Landroid/view/View;", "blockContext", "Lcom/bytedance/blockframework/framework/join/IBlockContext;", "(Landroid/view/View;Lcom/bytedance/blockframework/framework/join/IBlockContext;)V", "generateSubBlocks", "", "generator", "Lcom/bytedance/blockframework/framework/core/BlockGenerator;", "layoutResource", "", "onCreateView", "parent", "app_neridaCnRelease"}, k = 1, mv = {1, 4, 3})
+public final class KeyFeatureBlock extends UIBlock<KeyFeatureData, KeyFeatureModel> {
+    private final View rootView;
+
+    /* JADX INFO: renamed from: com.obric.security.mainpage.block.KeyFeatureBlock$generateSubBlocks$1, reason: invalid class name */
+    /* JADX INFO: compiled from: KeyFeatureBlock.kt */
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n¢\u0006\u0002\b\u0003"}, d2 = {"<anonymous>", "", "Lcom/bytedance/blockframework/framework/core/SubBlockCreator;", "invoke"}, k = 3, mv = {1, 4, 3})
+    static final class AnonymousClass1 extends Lambda implements Function1<SubBlockCreator, Unit> {
+        final /* synthetic */ KeyFeatureBlock this$0;
+
+        AnonymousClass1(KeyFeatureBlock r1) {
+            this.this$0 = r1;
+            super(1);
+        }
+
+        @Override // kotlin.jvm.functions.Function1
+        public /* bridge */ /* synthetic */ Unit invoke(SubBlockCreator r1) {
+            invoke2(r1);
+            return Unit.INSTANCE;
+        }
+
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(SubBlockCreator r2) {
+            Intrinsics.checkNotNullParameter(r2, "$receiver");
+            r2.addBlock(new C00631(this));
+            r2.addBlock(new AnonymousClass2(this));
+            r2.addBlock(new AnonymousClass3(this));
+            r2.addBlock(new AnonymousClass4(this));
+            r2.addBlock(new AnonymousClass5(this));
+            r2.addBlock(new AnonymousClass6(this));
+        }
+    }
+
+    @Override // com.bytedance.blockframework.framework.base.UIBlock
+    public int layoutResource() {
+        return -1;
+    }
+
+    public KeyFeatureBlock(View r2, IBlockContext r3) {
+        Intrinsics.checkNotNullParameter(r2, "rootView");
+        Intrinsics.checkNotNullParameter(r3, "blockContext");
+        super(r3);
+        this.rootView = r2;
+    }
+
+    @Override // com.bytedance.blockframework.framework.base.UIBlock, com.bytedance.blockframework.framework.base.IUIBlock
+    public View onCreateView(View r1) {
+        return this.rootView;
+    }
+
+    @Override // com.bytedance.blockframework.framework.base.BaseBlock
+    public void generateSubBlocks(BlockGenerator r2) {
+        Intrinsics.checkNotNullParameter(r2, "generator");
+        r2.generate(new AnonymousClass1(this));
+    }
+}

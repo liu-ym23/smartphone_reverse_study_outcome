@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.memorydata.ui.banner.BannerFriendlyFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_basic_bg_base_1"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/screen_content_settings_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/app_memory_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_gravity="top"
+        android:id="@+id/cut_off"
+        android:background="@color/oui_basic_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_centerTitle="@string/recommend_settings_title"
+        app:oFloatingTitleBar_maskBlurRadius="36"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</com.obric.memorydata.ui.banner.BannerFriendlyFrameLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        app:oui_title_text="@string/connection_mode_pager_header_title"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <obric.widget.ListContentItemCheck
+                android:id="@+id/mirror_mode_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/tnt_default_display_mode_mirror"
+                style="@style/ListContentItemStyle.Top"/>
+            <obric.widget.ListContentItemCheck
+                android:id="@+id/tnt_mode_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/tnt_default_display_mode_tnt"
+                style="@style/ListContentItemStyle.Bottom"/>
+            <obric.widget.ListContentItemCheck
+                android:id="@+id/tnt_share_mode_check"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/tnt_default_display_mode_share"
+                style="@style/ListContentItemStyle.Bottom"/>
+            <TextView
+                android:text="@string/tnt_mode_change_mirror_tips"
+                style="@style/SettingItemTipsStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+</RelativeLayout>

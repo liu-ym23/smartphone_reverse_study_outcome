@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:gravity="center_horizontal"
+    android:focusable="false"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content">
+        <com.obric.oui.button.OButton
+            android:id="@+id/search_view"
+            android:clickable="true"
+            android:layout_height="@dimen/oui_h_l2"
+            android:layout_marginBottom="4dp"
+            android:text="@string/bluetooth_search_for_devices"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="16dp"
+            style="@style/OButton.ListItem.Center"/>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/btn_show_hidden_devices"
+            android:visibility="gone"
+            app:oui_list_item_title="@string/bluetooth_show_hidden_devices"
+            style="@style/SettingSubItemSingleStyle"/>
+    </LinearLayout>
+</RelativeLayout>

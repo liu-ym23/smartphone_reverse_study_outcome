@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:name="com.android.settings.accounts.AccountSettings"
+        android:id="@+id/account_settings_fragment"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textColor="@color/link_text_color"
+        android:id="@+id/learn_more_content_description"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="12dp"
+        android:layout_marginHorizontal="@dimen/settings_item_horizontal_padding"
+        style="@style/SettingItemTipsStyle"/>
+    <com.obric.oui.sectiontitlebar.OSectionSupportiveText
+        android:id="@+id/disclosure_with_name"
+        android:layout_above="@+id/learn_more_content_description"
+        android:paddingStart="20dp"
+        android:paddingEnd="12dp"
+        android:layout_marginHorizontal="@dimen/settings_item_horizontal_padding"
+        app:section_des_text="@string/do_disclosure_with_name"
+        style="@style/OSectionTitleBar.S"/>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/advanced_item_account"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

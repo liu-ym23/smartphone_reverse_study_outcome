@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.widget.SettingListItem
+        android:id="@+id/item_text"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="2dp"/>
+    <com.obric.widget.SettingListItem
+        android:id="@+id/item_account"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="2dp"/>
+    <View
+        android:id="@+id/bottom_spacer"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_vertical_gap"/>
+</LinearLayout>

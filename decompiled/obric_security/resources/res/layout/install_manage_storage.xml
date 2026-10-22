@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/install_external_storage_context"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/install_external_storage"
+            android:background="@drawable/selector_setting_sub_item_bg_single"
+            android:text="@string/install_external_storage"
+            style="@style/ButtonGeneralStyle"/>
+        <obric.widget.TipsView
+            android:id="@+id/install_external_storage_tips"
+            android:text="@string/install_external_storage_tips"
+            style="@style/SettingItemTipsStyle"/>
+    </LinearLayout>
+    <include
+        android:id="@+id/sd_manage"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_block_gap"
+        layout="@layout/storage_item_layout"/>
+</LinearLayout>

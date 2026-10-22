@@ -1,0 +1,38 @@
+package com.obric.aikernel.phx.sdk.api;
+
+import com.obric.memorydata.middleware.impl.bdtracker.TrackerImpl;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+import kotlin.Result;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+@DebugMetadata(c = "com.obric.aikernel.phx.sdk.api.AIKernelApi", f = "AIKernelApi.kt", i = {0, 0}, l = {287, 289}, m = "updatePackages-0E7RQCE", n = {"bizs", TrackerImpl.PARAMS}, s = {"L$0", "L$1"})
+final class AIKernelApi$updatePackages$1 extends ContinuationImpl {
+    Object L$0;
+    Object L$1;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ AIKernelApi this$0;
+
+    AIKernelApi$updatePackages$1(AIKernelApi r3, Continuation<? super AIKernelApi$updatePackages$1> r4) {
+        Continuation r5 = (Continuation) ZeusTransformUtils.wrapperContextForParams(r4, Continuation.class, "com.obric.memorydata.plugin");
+        this.this$0 = r3;
+        super(r5);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r3) {
+        this.result = r3;
+        this.label |= Integer.MIN_VALUE;
+        Object r2 = AIKernelApi.m195access$updatePackages0E7RQCE(this.this$0, null, null, (Continuation) ZeusTransformUtils.preCheckCast(this, Continuation.class, "com.obric.memorydata.plugin"));
+        if (r2 != IntrinsicsKt.getCOROUTINE_SUSPENDED()) goto L6;
+        return r2;
+    L6:
+        return Result.m1420boximpl(r2);
+    }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:gravity="center_horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="@dimen/main_settings_first_item_card_gap"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content">
+        <com.obric.oui.lisitem.OCardListItem
+            android:id="@+id/wifi_p2p_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_16"
+            app:ocardlistitem_cardPosition="position_single"
+            app:ocardlistitem_cardType="type_normal"
+            app:ocardlistitem_defaultCustomEnd="end_detail"
+            app:ocardlistitem_defaultTailIcon="tail_arrow"
+            app:ocardlistitem_showCustomEnd="true"
+            app:ocardlistitem_showIcon="false"
+            app:ocardlistitem_showTailIcon="true"
+            app:ocardlistitem_title="@string/wifi_p2p_device_name_title"/>
+        <com.obric.oui.sectiontitlebar.OSectionTitleBar
+            android:id="@+id/wifi_p2p_search_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:sectionTitle_titleText="@string/wifi_p2p_menu_searching"
+            style="@style/OSectionTitleBar.S.SectionTitleBarStyle"/>
+    </LinearLayout>
+</RelativeLayout>

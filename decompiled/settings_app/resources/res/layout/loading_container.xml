@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/oui_loading_container"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.progress.ODownloadProgressView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:oui_progress_view_size="large"
+        app:oui_progressing_action_color="@color/oui_text_3"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3"
+        android:layout_gravity="center"
+        android:id="@+id/textLoading"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oui_p_container_1"
+        android:text="@string/loading_permission"
+        android:layout_marginStart="@dimen/oui_p_container_3"
+        android:layout_marginEnd="@dimen/oui_p_container_3"
+        app:oui_textSpec="H3S"
+        style="@style/Title_1_Regular"/>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:duplicateParentState="true"
+        android:layout_centerVertical="true"
+        style="@style/StandardIconStyle"/>
+    <TextView
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/popup_menu_text_color_selector"
+        android:ellipsize="end"
+        android:id="@+id/menu_title"
+        android:duplicateParentState="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/menu_icon"
+        android:layout_centerVertical="true"/>
+</merge>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:id="@+id/custom_title"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="24dp"
+        app:sectionTitle_titleText="@string/intercept_history_text"
+        style="@style/OSectionTitleBar.S"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/black_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_showCardBg="true"/>
+</LinearLayout>

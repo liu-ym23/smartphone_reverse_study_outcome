@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.forms.OInputView
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="10dp"
+        app:oui_commonTip="@string/device_name_tips"
+        app:oui_inputMode="text"
+        app:oui_inputSingleLine="true"
+        app:oui_showCommonTip="true"
+        app:oui_showLabel="false"
+        app:oui_showLabelIcon="false"/>
+</LinearLayout>

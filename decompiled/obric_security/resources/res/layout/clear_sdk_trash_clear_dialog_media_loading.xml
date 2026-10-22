@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@drawable/checktextview_selector"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:id="@+id/trash_media_loadingbar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminateOnly="true"
+        android:indeterminateDrawable="@drawable/clear_sdk_loading"
+        android:indeterminateDuration="600"
+        android:indeterminateBehavior="repeat"
+        android:layout_centerInParent="true"
+        style="@android:style/Widget.ProgressBar.Inverse"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/clear_sdk_trash_media_loading_text"
+        android:layout_toRightOf="@+id/trash_media_loadingbar"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

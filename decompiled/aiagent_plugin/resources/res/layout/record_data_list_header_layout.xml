@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:gravity="center_vertical"
+        android:id="@+id/query_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:sectionTitle_titleText="@string/donation_header_query_title"
+        style="@style/Subtitle_2_Medium"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_showSubTitle="true"/>
+</com.obric.oui.layout.OUILinearLayout>

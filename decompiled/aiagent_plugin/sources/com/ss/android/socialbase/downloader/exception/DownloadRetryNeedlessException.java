@@ -1,0 +1,8 @@
+package com.ss.android.socialbase.downloader.exception;
+
+/* JADX INFO: loaded from: classes4.dex */
+public class DownloadRetryNeedlessException extends BaseException {
+    public DownloadRetryNeedlessException(int r1, String r2) {
+        super(r1, r2);
+    }
+}

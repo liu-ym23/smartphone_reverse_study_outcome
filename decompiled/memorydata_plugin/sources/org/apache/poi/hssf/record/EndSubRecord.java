@@ -1,0 +1,43 @@
+package org.apache.poi.hssf.record;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.util.Map;
+import java.util.function.Supplier;
+import org.apache.poi.util.LittleEndianInput;
+import org.apache.poi.util.RecordFormatException;
+
+/* JADX INFO: loaded from: classes7.dex */
+public final class EndSubRecord extends SubRecord {
+    EndSubRecord(LittleEndianInput r2, int r3, int r4) {
+        LittleEndianInput r5 = (LittleEndianInput) ZeusTransformUtils.wrapperContextForParams(r2, LittleEndianInput.class, "com.obric.memorydata.plugin");
+        if ((r3 & 255) != 0) goto L6;
+        return;
+    L6:
+        throw new RecordFormatException("Unexpected size (" + r3 + ")");
+    }
+
+    @Override // org.apache.poi.hssf.record.SubRecord
+    public int getDataSize() {
+        return 0;
+    }
+
+    @Override // org.apache.poi.common.usermodel.GenericRecord
+    public Map<String, Supplier<?>> getGenericProperties() {
+        return null;
+    }
+
+    @Override // org.apache.poi.hssf.record.SubRecord, org.apache.poi.common.usermodel.GenericRecord
+    public /* bridge */ /* synthetic */ Enum getGenericRecordType() {
+        return getGenericRecordType();
+    }
+
+    @Override // org.apache.poi.hssf.record.SubRecord, org.apache.poi.common.usermodel.GenericRecord
+    public SubRecord.SubRecordTypes getGenericRecordType() {
+        return SubRecord.SubRecordTypes.END;
+    }
+
+    @Override // org.apache.poi.hssf.record.SubRecord
+    public boolean isTerminating() {
+        return true;
+    }
+}

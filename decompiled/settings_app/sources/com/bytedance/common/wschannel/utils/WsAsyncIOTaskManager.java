@@ -1,0 +1,129 @@
+package com.bytedance.common.wschannel.utils;
+
+import com.bytedance.common.utility.Logger;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class WsAsyncIOTaskManager {
+    private static final String TAG = "WsAsyncIOTaskManager";
+    private static WsAsyncIOTaskManager sInstance;
+    private ConcurrentHashMap<WsAsyncTask, ScheduledFuture> mFutureTasks;
+    private ConcurrentHashMap<WsAsyncTask, Runnable> mRunnableTasks;
+    private ScheduledThreadPoolExecutor mTaskExecutor;
+
+    /* JADX INFO: renamed from: com.bytedance.common.wschannel.utils.WsAsyncIOTaskManager$1, reason: invalid class name */
+    static /* synthetic */ class AnonymousClass1 {
+    }
+
+    private class InnerRunnable implements Runnable {
+        private WsAsyncTask task;
+        final /* synthetic */ WsAsyncIOTaskManager this$0;
+
+        /* synthetic */ InnerRunnable(WsAsyncIOTaskManager r1, WsAsyncTask r2, AnonymousClass1 r3) {
+            this(r1, r2);
+        }
+
+        private InnerRunnable(WsAsyncIOTaskManager r1, WsAsyncTask r2) {
+            this.this$0 = r1;
+            this.task = r2;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            long r2 = System.currentTimeMillis();     // Catch: Throwable -> L9
+            this.task.run();     // Catch: Throwable -> L9
+            if (Logger.debug() == false) goto L7;
+            Logger.d(WsAsyncIOTaskManager.access$100(), "Task execute time: " + (System.currentTimeMillis() - r2));     // Catch: Throwable -> L9
+        L7:
+            if (this.task.isLoop() == true) goto L14;
+        L8:
+            WsAsyncIOTaskManager.access$200(this.this$0).remove(this.task);
+            WsAsyncIOTaskManager.access$300(this.this$0).remove(this.task);
+            return;
+        L14:
+            return;
+        L9:
+            th = move-exception;
+            Logger.e(WsAsyncIOTaskManager.access$100(), "thread " + Thread.currentThread().getName() + " exception", th);     // Catch: Throwable -> L15
+            if (this.task.isLoop() == false) goto L8;
+            return;
+        L15:
+            th = move-exception;
+            if (this.task.isLoop() == true) goto L19;
+            WsAsyncIOTaskManager.access$200(this.this$0).remove(this.task);
+            WsAsyncIOTaskManager.access$300(this.this$0).remove(this.task);
+        L19:
+            throw th;
+        }
+    }
+
+    static {
+    }
+
+    static /* synthetic */ String access$100() {
+        return TAG;
+    }
+
+    static /* synthetic */ ConcurrentHashMap access$200(WsAsyncIOTaskManager r0) {
+        return r0.mFutureTasks;
+    }
+
+    static /* synthetic */ ConcurrentHashMap access$300(WsAsyncIOTaskManager r0) {
+        return r0.mRunnableTasks;
+    }
+
+    private WsAsyncIOTaskManager() {
+        this.mFutureTasks = new ConcurrentHashMap();
+        this.mRunnableTasks = new ConcurrentHashMap();
+        this.mTaskExecutor = new ScheduledThreadPoolExecutor(1, new WsThreadFactory("frontier"));
+    }
+
+    public static WsAsyncIOTaskManager getInstance() {
+        if (sInstance != null) goto L15;
+        monitor-enter(WsAsyncIOTaskManager.class);
+    L11:
+        th = move-exception;
+        throw th;
+    L7:
+        if (sInstance != null) goto L9;
+        sInstance = new WsAsyncIOTaskManager();     // Catch: Throwable -> L11
+    L9:
+        monitor-exit(WsAsyncIOTaskManager.class);     // Catch: Throwable -> L11
+    L15:
+        return sInstance;
+    }
+
+    public void postTask(WsAsyncTask r9) {
+        if (r9 != null) goto L13;
+        return;
+    L13:
+        InnerRunnable r7 = new InnerRunnable(this, r9, null);     // Catch: Throwable -> L10
+        if (r9.isLoop() == false) goto L7;
+        ScheduledFuture<?> r0 = this.mTaskExecutor.scheduleWithFixedDelay(r7, r9.getInitialDelay(), r9.getLoopInterval(), TimeUnit.MILLISECONDS);     // Catch: Throwable -> L10
+    L8:
+        this.mRunnableTasks.put(r9, r7);     // Catch: Throwable -> L10
+        this.mFutureTasks.put(r9, r0);     // Catch: Throwable -> L10
+        return;
+    L7:
+        r0 = this.mTaskExecutor.schedule(r7, r9.getInitialDelay(), TimeUnit.MILLISECONDS);     // Catch: Throwable -> L10
+    L10:
+        th = move-exception;
+        Logger.e(TAG, "sendTask failed.", th);
+    }
+
+    public void removeTask(WsAsyncTask r3) {
+        this.mTaskExecutor.remove(this.mRunnableTasks.remove(r3));     // Catch: Throwable -> L6
+        ScheduledFuture r2 = this.mFutureTasks.remove(r3);     // Catch: Throwable -> L6
+        if (r2 == null) goto L11;
+        r2.cancel(true);     // Catch: Throwable -> L6
+        return;
+    L11:
+        return;
+    L6:
+        th = move-exception;
+        Logger.e(TAG, "removeTask failed", th);
+    }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.layout.OUIFrameLayout
+        android:background="@color/oui_fill_list_item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/list_item_maximum_width"
+        android:layout_marginHorizontal="@dimen/settings_item_horizontal_padding"
+        app:oui_radius="@dimen/oui_panel_corner_radius">
+        <ImageView
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/nfc_usage_diagram"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:maxWidth="@dimen/list_item_maximum_width"/>
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_basic_text_3"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:text="@string/nfc_reader_area_tips"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:lineHeight="12dp"
+            style="@style/Subtitle_2_Regular"/>
+    </com.obric.oui.layout.OUIFrameLayout>
+</LinearLayout>

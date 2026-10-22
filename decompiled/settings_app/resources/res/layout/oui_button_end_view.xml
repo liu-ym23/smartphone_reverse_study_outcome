@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.button.OButton xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="false"
+    android:text="@string/trusted_credential"
+    style="@style/OStyleV2.OButton.S.Standard.Primary_Light"/>

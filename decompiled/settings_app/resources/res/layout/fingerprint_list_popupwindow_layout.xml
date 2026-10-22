@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reminder_frame"
+    android:background="@drawable/menu_item_point_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.android.settings.widget.RoundCornerListView
+        android:id="@+id/reminder_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/fingerprint_list_menu_item_selector"
+        android:divider="#14000000"
+        android:dividerHeight="2px"/>
+</FrameLayout>

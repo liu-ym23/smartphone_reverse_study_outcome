@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/item_text_switch"
+        android:title="@string/obsession_hide_lable"
+        style="@style/SettingSubItemSingleStyle"/>
+    <TextView
+        android:text="@string/quick_phrase_tips"
+        style="@style/SettingItemTipsStyle"/>
+</LinearLayout>

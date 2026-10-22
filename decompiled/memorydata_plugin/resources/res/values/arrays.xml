@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="ai_proactive_requirement_backdrop_blur_blend_modes">
+        <item>3</item>
+    </array>
+    <array name="ai_proactive_requirement_backdrop_blur_colors">
+        <item>0x1f000000</item>
+    </array>
+    <array name="assume_strong_biometrics_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="crypto_fingerprint_fallback_prefixes">
+    </array>
+    <array name="crypto_fingerprint_fallback_vendors">
+        <item>samsung</item>
+    </array>
+    <array name="delay_showing_prompt_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="hide_fingerprint_instantly_prefixes">
+        <item>SM-A50</item>
+        <item>SM-G973</item>
+        <item>SM-G975</item>
+        <item>SM-G977</item>
+        <item>SM-G770</item>
+        <item>SM-N970</item>
+        <item>SM-N971</item>
+        <item>SM-N975</item>
+        <item>SM-N976</item>
+        <item>SM-N770</item>
+        <item>SC-03L</item>
+        <item>SC-04L</item>
+        <item>SC-05L</item>
+        <item>SC-01M</item>
+        <item>SCV41</item>
+        <item>SCV42</item>
+        <item>SCV45</item>
+    </array>
+    <array name="keyguard_biometric_and_credential_exclude_vendors">
+    </array>
+    <array name="one_wheel_entries">
+        <item>��️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️️</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x4d000000</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_variant">
+        <item>0x66f0f1f2</item>
+        <item>0x99f0f1f2</item>
+        <item>0x99f0f1f2</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_variant_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x4d000000</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_variant_light">
+        <item>0x66f0f1f2</item>
+        <item>0x99f0f1f2</item>
+        <item>0x99f0f1f2</item>
+    </array>
+    <array name="oui_bottom_navbar_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>28</item>
+        <item>0x4df7f7f7</item>
+        <item>18</item>
+        <item>0x4df7f7f7</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_colors_variant">
+        <item>0x66f0f1f2</item>
+        <item>0x4df0f1f2</item>
+        <item>0x4df0f1f2</item>
+    </array>
+    <array name="oui_no_gradient_blur_blend_modes">
+        <item>3</item>
+    </array>
+    <array name="oui_no_gradient_blur_colors">
+        <item>0x0</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_dark">
+        <item>0x99292929</item>
+        <item>0x0</item>
+        <item>0x4d292929</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_variant">
+        <item>0x66f0f1f2</item>
+        <item>0x4df0f1f2</item>
+        <item>0x4df0f1f2</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_variant_dark">
+        <item>0x99292929</item>
+        <item>0x0</item>
+        <item>0x4d292929</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_variant_light">
+        <item>0x66f0f1f2</item>
+        <item>0x4df0f1f2</item>
+        <item>0x4df0f1f2</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_dark">
+        <item>0x99292929</item>
+        <item>0x0</item>
+        <item>0x99292929</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_variant">
+        <item>0x66f0f1f2</item>
+        <item>0x99f0f1f2</item>
+        <item>0x99f0f1f2</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_variant_dark">
+        <item>0x99292929</item>
+        <item>0x0</item>
+        <item>0x99292929</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_variant_light">
+        <item>0x66f0f1f2</item>
+        <item>0x99f0f1f2</item>
+        <item>0x99f0f1f2</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x99000000</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_variant">
+        <item>0x66f0f1f2</item>
+        <item>0x99f0f1f2</item>
+        <item>0x99f0f1f2</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_variant_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x99000000</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_variant_light">
+        <item>0x66f0f1f2</item>
+        <item>0x99f0f1f2</item>
+        <item>0x99f0f1f2</item>
+    </array>
+    <array name="scene_correction_options">
+        <item>家</item>
+        <item>公司</item>
+        <item>其他</item>
+    </array>
+    <array name="time_duration_options">
+        <item>2分钟内</item>
+        <item>2-10分钟</item>
+        <item>10分钟以上</item>
+    </array>
+    <array name="week_day_labels">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </array>
+</resources>

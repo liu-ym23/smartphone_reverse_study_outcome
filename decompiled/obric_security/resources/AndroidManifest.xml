@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="200001501"
+    android:versionName="2.0.1"
+    android:compileSdkVersion="33"
+    android:compileSdkVersionCodename="13"
+    package="com.obric.security"
+    platformBuildVersionCode="33"
+    platformBuildVersionName="13">
+    <uses-sdk
+        android:minSdkVersion="30"
+        android:targetSdkVersion="33"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="com.obric.permission.CAPTURE_PASS_BLUR"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="com.picovr.permission.POWER_SCENE_CHANGE"/>
+    <uses-permission android:name="com.bytedanceos.permission.POWER_HIGH_WARNING"/>
+    <uses-permission android:name="com.obric.permission.FIND_DEVICE"/>
+    <uses-permission android:name="android.permission.GET_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC_INTERNAL"/>
+    <uses-permission android:name="android.permission.MANAGE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.ACCESS_KEYGUARD_SECURE_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.bytedanceos.permission.READ_SETTINGS_API"/>
+    <uses-permission android:name="bytedance.permission.MESSAGE_PREFERENCE"/>
+    <permission
+        android:name="bytedance.permission.READ_SECURITYCENTER_PACKAGE"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission
+        android:name="bytedance.permission.WRITE_SECURITYCENTER_PACKAGE"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission
+        android:name="com.obric.matrix.permission.RECEIVE_HIGH_POWER_MANUAL_CHANGE"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="bytedance.permission.READ_SPAM_SMS"/>
+    <uses-permission android:name="bytedance.permission.WRITE_SPAM_SMS"/>
+    <uses-permission android:name="bytedance.nodisturb.permission.InterceptSettingActivity"/>
+    <uses-permission android:name="bytedance.nodisturb.READ_NODISTURB_PROVIDER"/>
+    <uses-permission android:name="bytedance.nodisturb.WRITE_NODISTURB_PROVIDER"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.MANAGE_NETWORK_POLICY"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL"/>
+    <uses-permission android:name="android.permission.MODIFY_NETWORK_ACCOUNTING"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.bytedanceos.permission.NUMBER_SERVICE"/>
+    <uses-permission android:name="com.cleanmaster.permission.sdk.clean"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.MANAGE_APP_OPS_MODES"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="bytedanceos.permission.SEND_KILL_PROCESS"/>
+    <uses-permission android:name="android.permission.COPY_PROTECTED_DATA"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_NETWORK_USAGE_HISTORY"/>
+    <uses-permission android:name="android.permission.REMOVE_TASKS"/>
+    <uses-permission android:name="com.bytedanceos.permission.LAUNCH_OPTIONS_ACTIVITY"/>
+    <uses-permission android:name="com.obric.updater.RECEIVE"/>
+    <uses-permission android:name="com.obric.updater.SETTINGS"/>
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.KILL_UID"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.DELETE_CACHE_FILES"/>
+    <uses-permission android:name="android.permission.INTERNAL_DELETE_CACHE_FILES"/>
+    <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
+    <uses-permission android:name="android.permission.NETWORK_STACK"/>
+    <uses-permission android:name="android.permission.MAINLINE_NETWORK_STACK"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="bytedance.permission.SPAM_COMPOSE_MESSAGE"/>
+    <uses-permission android:name="obric.permission.CLEANER_PERMISSION"/>
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG"/>
+    <uses-permission android:name="android.permission.MANAGE_ONE_TIME_PERMISSION_SESSIONS"/>
+    <uses-permission android:name="android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_PROFILES"/>
+    <uses-permission android:name="com.android.mms.permission.INTERNAL"/>
+    <permission
+        android:name="com.obric.security.permission.TRAFFIC_HIGH_CONSUMPTION_WARNING"
+        android:protectionLevel="system|signature"/>
+    <uses-permission android:name="com.obric.security.permission.TRAFFIC_HIGH_CONSUMPTION_WARNING"/>
+    <permission
+        android:name="com.obric.security.permission.broadcast"
+        android:protectionLevel="system|signature"/>
+    <uses-permission android:name="com.obric.security.permission.broadcast"/>
+    <permission
+        android:name="com.obric.securitycenter.BIND_SECURE_SERVICE"
+        android:protectionLevel="system|signature"/>
+    <uses-permission android:name="com.obric.securitycenter.BIND_SECURE_SERVICE"/>
+    <permission
+        android:name="com.obric.security.CALL_SECURE_PROVIDER"
+        android:protectionLevel="system|signature"/>
+    <uses-permission android:name="com.obric.security.CALL_SECURE_PROVIDER"/>
+    <uses-permission android:name="com.obric.matrix.permission.RECEIVE_HIGH_POWER_MANUAL_CHANGE"/>
+    <queries>
+        <package android:name="com.tencent.mm"/>
+        <package android:name="com.eg.android.AlipayGphone"/>
+        <package android:name="com.example.anotherapp"/>
+        <package android:name="com.obric.smsparser"/>
+        <package android:name="com.obric.matrix"/>
+    </queries>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="com.obric.security.permission.TMF_SHARK"/>
+    <permission
+        android:name="com.obric.security.permission.TMF_SHARK"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="freemme.permission.msa"/>
+    <uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER"/>
+    <uses-permission android:name="bytedance.permission.BIND_NUMBER_ASSISTANT_SERVICE"/>
+    <uses-permission android:name="com.obric.smsparser.permission.BIND_SMS_RISK_SERVICE"/>
+    <uses-permission android:name="com.obric.account.NAVIGATE"/>
+    <uses-permission android:name="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"/>
+    <uses-permission android:name="com.obric.account.permission.ACCOUNT_STATUS"/>
+    <uses-permission android:name="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="com.slardaros.METRIC_EVENT_PERMISSION"/>
+    <uses-permission android:name="android.permission.ACCESS_DEVICE_PROTECTED_STORAGE"/>
+    <permission
+        android:name="com.obric.security.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.obric.security.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <permission
+        android:name="com.obric.olog.ACCESS_LOG_COMPRESSION_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <application
+        android:theme="@style/ActivityTheme"
+        android:label="@string/security_center"
+        android:icon="@mipmap/app_secure"
+        android:name="com.bytedanceos.securitycenter.SecurityCenterApplication"
+        android:persistent="false"
+        android:configChanges="locale"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:extractNativeLibs="false"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true">
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.obric.security.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <meta-data
+            android:name="android.graphics.enable_obric_private_effectfilters"
+            android:value="true"/>
+        <meta-data
+            android:name="windowParams"
+            android:value="19,1,5,-1,720,640,720,640"/>
+        <meta-data
+            android:name="bytedance_tracker_appid"
+            android:value="19"/>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:name="com.bytedanceos.securitycenter.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.obric.security.mainpage.AboutPhoneManagerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.bytedanceos.securitycenter.SafeCheckActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:name="com.obric.security.health.ui.OptimizeCenterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.bytedanceos.securitycenter.SafeCheckSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/ActivityTranslucentStyle"
+            android:name="com.obric.security.mainpage.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.obric.security.networksettings.NetworkPolicyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.debug.DebugSettingActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.debug.SettingsManageActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/ActivityDialogTheme2"
+            android:name="com.obric.ctaverify.SendSmsVerificationActivity"
+            android:permission="android.permission.BROADCAST_SMS"
+            android:exported="true"
+            android:taskAffinity="com.obric.ctaverify"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="obric.intent.action.SEND_SMS_VERIFY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.bytedanceos.securitycenter.dynamicResolution.DynamicResolutionProvider"
+            android:readPermission="bytedance.permission.READ_SECURITYCENTER_PACKAGE"
+            android:writePermission="bytedance.permission.WRITE_SECURITYCENTER_PACKAGE"
+            android:exported="true"
+            android:process="com.bytedanceos.securitycenter.provider"
+            android:authorities="com.bytedanceos.security.dynamicResolution"/>
+        <provider
+            android:name="com.bytedanceos.securitycenter.appBatteryUseOptimization.AppUseBatteryOptimizationProvider"
+            android:readPermission="bytedance.permission.READ_SECURITYCENTER_PACKAGE"
+            android:writePermission="bytedance.permission.WRITE_SECURITYCENTER_PACKAGE"
+            android:exported="true"
+            android:process="com.bytedanceos.securitycenter.provider"
+            android:authorities="com.bytedanceos.security.appUseBatteryOptimization"/>
+        <provider
+            android:name="com.bytedanceos.securitycenter.appBgBatteryControl.AppBgBatteryControlProvider"
+            android:readPermission="bytedance.permission.READ_SECURITYCENTER_PACKAGE"
+            android:writePermission="bytedance.permission.WRITE_SECURITYCENTER_PACKAGE"
+            android:exported="true"
+            android:process="com.bytedanceos.securitycenter.provider"
+            android:authorities="com.bytedanceos.security.appBgBatteryControl"/>
+        <receiver
+            android:name="com.bytedanceos.securitycenter.PackageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.settings.action_DOPPELGANGER_ADDED"/>
+                <action android:name="com.settings.action.DOPPELGANGER_REMOVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.securitycenter.api.settings.SettingsUpdateReceiver"
+            android:permission="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.matrix.systemapp.settings.update.action"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.security.battertpower.powerHigh.HighPowerManualChangeReceiver"
+            android:permission="com.obric.matrix.permission.RECEIVE_HIGH_POWER_MANUAL_CHANGE"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="intent.highpower.manual.change"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.bytedanceos.securitycenter.dynamicResolution.DynamicResolutionDataService"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.securitycenter.networkControl.NetworkRejectDataService"
+            android:exported="false"/>
+        <receiver
+            android:name="com.bytedanceos.datausage.BootCompletedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_UNLOCKED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/SettingTheme"
+            android:label="@string/security_permission_management"
+            android:name="com.bytedanceos.security.permission.NativePermissionsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.bytedanceos.security.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.RadioPermissions"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.bytedanceos.security.action.RADIO_PERMISSIONS"/>
+                <action android:name="com.bytedanceos.security.action.RADIO_PERMISSIONS_NEW"/>
+                <action android:name="com.bytedanceos.security.action.SWITCHED_PERMISSIONS"/>
+                <action android:name="com.bytedanceos.security.action.SWITCHED_PERMISSIONS_NEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.permission.NativeRadioPermissions"
+            android:exported="false"
+            android:taskAffinity=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.permission.ZenPermissionsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.settings.NOTIFICATION_POLICY_ACCESS_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/package_list_entry"
+            android:name="com.bytedanceos.security.PackagesOverview"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.bytedanceos.security.action.PACKAGE_OVERVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.PackageDetail"
+            android:exported="false"
+            android:taskAffinity=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.bytedanceos.security.action.PACKAGE_DETAIL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.NativePackageDetail"
+            android:exported="true"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.bytedanceos.security.action.NATIVE_PACKAGE_DETAIL"/>
+                <action android:name="com.obric.security.action.NATIVE_PACKAGE_DETAIL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <activity
+            android:theme="@style/ActivityDialogTheme"
+            android:name="com.bytedanceos.security.UnKonownAppSourceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <activity
+            android:theme="@style/ActivityDialogTheme2"
+            android:name="com.obric.security.GrantGMSActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.obric.action.GMS_ENABLE_PROMPT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/ActivityDialogTheme"
+            android:name="com.bytedanceos.security.WriteSettingsActivity"
+            android:exported="false"
+            android:taskAffinity=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.AllPermissionDetail"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.security.invokeHistory.InvokeHistoryActivity"
+            android:enabled="false"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="bytedanceos.PACKAGELOCK_PACKAGENAME"
+                android:value="com.bytedanceos.securitycenter"/>
+        </activity>
+        <provider
+            android:name="com.bytedanceos.security.invokeHistory.InvokeHistoryProvider"
+            android:readPermission="bytedance.permission.READ_SECURITYCENTER_PACKAGE"
+            android:writePermission="bytedance.permission.WRITE_SECURITYCENTER_PACKAGE"
+            android:enabled="false"
+            android:exported="true"
+            android:process="com.bytedanceos.securitycenter.provider.invoke"
+            android:authorities="com.bytedanceos.security.invokeHistory"/>
+        <provider
+            android:name="com.bytedanceos.security.PermissionAPIProvider"
+            android:permission="bytedance.permission.READ_SECURITYCENTER_PACKAGE"
+            android:exported="true"
+            android:process="com.bytedanceos.securitycenter.provider"
+            android:multiprocess="false"
+            android:authorities="com.bytedanceos.security.apiprovider"/>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/memory_junk_file_cleanup"
+            android:name="com.bytedanceos.cleaner.CleanerActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/advanced_item_storage"
+            android:name="com.bytedanceos.storage.StorageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.MANAGE_PACKAGE_STORAGE"/>
+                <category android:name="android.intent.category.MONKEY"/>
+                <category android:name="android.intent.category.VOICE_LAUNCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.settings.INTERNAL_STORAGE_SETTINGS"/>
+                <action android:name="android.settings.MEMORY_CARD_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.VOICE_LAUNCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.provider.action.DOCUMENT_ROOT_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:mimeType="vnd.android.document/root"
+                    android:scheme="content"
+                    android:host="com.android.externalstorage.documents"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:name="com.obric.security.StorageActivityAlias"
+            android:permission="com.obric.assistantaiagent.permission.open_page"
+            android:exported="true"
+            android:targetActivity="com.bytedanceos.storage.StorageActivity"/>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.obric.security.cleaner.CleanerDetail2Activity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.cleaner.cleardetail.AdCacheActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.cleaner.cleardetail.SystemTrashActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.cleaner.cleardetail.TrashCacheActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.cleaner.cleardetail.TrashDeleteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.cleaner.cleardetail.UselessApkActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/security_no_disturb"
+            android:name="com.bytedanceos.preventdisturb.DisturbActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/network_background_detail_settings"
+            android:name="com.bytedanceos.securitycenter.NetworkOptimizationSetting"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/action_clean_memory"
+            android:name="com.bytedanceos.clearmemory.ManagerApplicationsRunningActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/action_clean_memory"
+            android:name="com.bytedanceos.powerusage.PowerUsageActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.obric.security.cleaner.bigfile.BigFileListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.obric.security.cleaner.bigfile.BigImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:permission="obric.permission.PREVIEW_FILE"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.obric.security.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/power_optimization"
+            android:name="com.obric.security.battertpower.BatteryPowerActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.POWER_USAGE_SUMMARY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.BATTERY_SAVER_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/battery_health_and_charging"
+            android:name="com.obric.security.battertpower.healthandcharge.HealthAndChargeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/clean_power_high_apps"
+            android:name="com.obric.security.battertpower.powerHigh.clearApp.ClearPowerHighAppsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:label="@string/power_usage_app_battery_use_optimization_title"
+            android:name="com.bytedanceos.powerusage.AppBatteryUseOptimizationActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/power_usage_save_mode"
+            android:name="com.bytedanceos.powerusage.PowerSaveModeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/dynamic_resolution"
+            android:name="com.bytedanceos.powerusage.DynamicResolutionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/power_usage_low_battery_mode"
+            android:name="com.bytedanceos.powerusage.LowBatteryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:name="com.bytedanceos.clearmemory.SpecialProcessesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:label="@string/data_usage_title"
+            android:name="com.bytedanceos.datausage.DataUsageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="bytedance.intent.action.DATA_USAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.DeviceDefault.Light.Panel"
+            android:name="com.obric.security.net.NetworkOverLimitActivity"
+            android:permission="android.permission.MANAGE_NETWORK_POLICY"
+            android:exported="true"
+            android:taskAffinity="com.obric.security.net"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:finishOnCloseSystemDialogs="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/data_usage_title"
+            android:name="com.bytedanceos.datausage.AppNetworkControlActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/data_usage_title"
+            android:name="com.bytedanceos.datausage.DataUsageDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="bytedance.intent.action.DATA_USAGE_LIMIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/tab_title_wlan"
+            android:name="com.bytedanceos.datausage.WifiDataUsageDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/data_usage_limit_title"
+            android:name="com.bytedanceos.datausage.DataUsageLimitActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/manager_application"
+            android:name="com.bytedanceos.appmanager.ApplicationManagerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/ActivityThemeNoBackGround"
+            android:label="@string/manager_application"
+            android:name="com.bytedanceos.appmanager.ApplicationManagerActivitySettings"
+            android:exported="true"
+            android:taskAffinity="com.android.settings.new_task"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            android:label="@string/permission_management"
+            android:name="com.bytedanceos.security.PermissionCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="com.bytedanceos.datausage.DataUsageProvider"
+            android:permission="bytedance.permission.READ_SECURITYCENTER_PACKAGE"
+            android:exported="true"
+            android:authorities="com.bytedanceos.tencent"/>
+        <service
+            android:name="com.bytedanceos.cleaner.FakeService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.bytedanceos.settings.FAKE_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.bytedanceos.security.invokeHistory.InvokeHistoryJob"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.cloud.SecurityPackageWhiteListService"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.clearmemory.ClearProcessService"
+            android:permission="com.bytedanceos.permission.CALL_SETTINGS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="bytedance.intent.action.clearProcess"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.obric.security.SettingsInitialize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_INITIALIZE"/>
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.bytedanceos.security.PermissionTestingBroadcastReceiver"
+            android:permission="com.bytedanceos.permission.CALL_SETTINGS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE"/>
+                <data
+                    android:scheme="android_secret_code"
+                    android:host="4838"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.bytedanceos.security.PermissionTestingSettings"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.bytedanceos.security.appbehaviorrecord.AppBehaviorRecordActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.bytedanceos.security.appbehaviorrecord.AppBehaviorRecordALLActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.bytedanceos.security.appbehaviorrecord.PermissionPrivacyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.security.ACTION_VIEW_PERMISSION_PRIVACY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.bytedanceos.securitycenter.StorageNotificationReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bytedanceos.securitycenter.StorageNotificationReceiver"/>
+                <action android:name="com.bytedanceos.securitycenter.StorageNotificationReceiver.ACTION_IGNORE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.security.battertpower.powerHigh.notice.PowerHighWarningReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bytedanceos.securitycenter.PowerHighWarningReceiver"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.bytedanceos.action.POWER_HIGH_WARNING"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.security.trafficHigh.TrafficHighWarningReceiver"
+            android:permission="com.obric.security.permission.TRAFFIC_HIGH_CONSUMPTION_WARNING"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.security.battertpower.trafficHigh.TrafficHighWarningReceiver"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.security.action.TRAFFIC_HIGH_CONSUMPTION_WARNING"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.security.battertpower.healthandcharge.SmartChargeReceiver"
+            android:permission="com.obric.security.permission.broadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.security.battertpower.healthandcharge.SmartChargeReceiver"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.security.action.SMART_CHARGE_STATE_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.security.action.SMART_NAVIGATION_STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.obric.security.battertpower.powerHigh.notice.PowerHightNoticeService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.obric.security.service.SecurityCenterService"
+            android:permission="com.obric.securitycenter.BIND_SECURE_SERVICE"
+            android:enabled="true"
+            android:exported="true"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name="com.obric.oui.SecurityWebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <provider
+            android:name="com.obric.searchprovider.SecuritySearchProvider"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true"
+            android:multiprocess="false"
+            android:authorities="com.obric.security"
+            android:grantUriPermissions="true">
+            <intent-filter>
+                <action android:name="android.content.action.OBRIC_SEARCH_INDEXABLES_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <activity
+            android:name="com.obric.safecheck.riskcontrol.ui.RiskAppDetailActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.safecheck.action.RISK_APP_DETAIL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obric.safecheck.riskcontrol.ui.RiskAppListActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.obric.safecheck.test.TestSafeCheckActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.obric.safecheck.test.GxbAntiFraudRulesActivity"
+            android:exported="false"/>
+        <service
+            android:name="com.obric.safecheck.service.SafaCheckService"
+            android:permission="com.obric.securitycenter.BIND_SECURE_SERVICE"
+            android:enabled="true"
+            android:exported="true"/>
+        <provider
+            android:name="com.obric.safecheck.provider.SaveCheckProvider"
+            android:permission="com.obric.security.CALL_SECURE_PROVIDER"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.zte.heartyservice.antifraud.provider"/>
+        <provider
+            android:name="com.obric.safecheck.provider.ApkVirusCheckProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.oceanos.security.viruscheck"/>
+        <provider
+            android:name="com.obric.security.devenvcheck.WlanCheckResultProvider"
+            android:permission="com.obric.security.CALL_SECURE_PROVIDER"
+            android:exported="true"
+            android:process=":security_scan"
+            android:authorities="com.obric.security.wlan.provider"/>
+        <activity
+            android:theme="@style/ActivityDialogTheme2"
+            android:name="com.obric.security.devenvcheck.WlanSecurityRiskPromptActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"/>
+        <service
+            android:name="com.obric.security.devenvcheck.WlanSecurityDetectService"
+            android:exported="false"
+            android:process=":security_scan"/>
+        <receiver
+            android:name="com.obric.security.devenvcheck.WlanRiskNotifier.DisconnectReceiver"
+            android:exported="false"
+            android:process=":security_scan"/>
+        <activity
+            android:theme="@style/NavigationBarTheme"
+            android:name="com.obric.securitycenter.nodisturb.sms.keyword.SMSKeywordsFilterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/NavigationBarTheme"
+            android:name="com.obric.securitycenter.nodisturb.black.BlackListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/NavigationBarTheme"
+            android:name="com.obric.securitycenter.nodisturb.InterceptSettingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/NavigationBarTheme"
+            android:name="com.obric.securitycenter.nodisturb.InterceptDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/NavigationBarTheme"
+            android:name="com.obric.securitycenter.nodisturb.BlackDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/ActivityTranslucentStyle"
+            android:name="com.obric.securitycenter.nodisturb.ManuallyAddActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/NavigationBarTheme"
+            android:name="com.obric.securitycenter.nodisturb.white.WhiteListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/NavigationBarTheme"
+            android:name="com.obric.securitycenter.nodisturb.white.ManuallyAddWhiteListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/NavigationBarTheme"
+            android:name="com.obric.securitycenter.nodisturb.ProviderTestActivity"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.obric.securitycenter.nodisturb.service.CallSmsInterceptService"
+            android:permission="com.obric.securitycenter.BIND_SECURE_SERVICE"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="true"/>
+        <receiver
+            android:name="com.obric.securitycenter.nodisturb.NoDisturbBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="intent.restore.heartyservice.data"/>
+                <action android:name="intent.backup.nodisturb.obric"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.obric.pushservice.PushMessageReceiverServiceV2"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.security.action.CROSS_PROCESS"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:name="com.obric.matrix.platform.sdk.ones.safecushion.ui.CushionActivity"
+            android:process=":safecushion"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="com.obric.matrix.platform.sdk.ones.ws.WsMsgProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.obric.matrix.platform.sdk.ones.provider.com.obric.security"/>
+        <provider
+            android:name="com.bytedance.apm.battery.dao.MonitorContentProvider"
+            android:exported="false"
+            android:authorities="com.obric.security.apm"/>
+        <meta-data
+            android:name="OBRIC_PUSH_SDK_VERSION_NAME"
+            android:value="0.1.2"/>
+        <meta-data
+            android:name="OBRIC_PUSH_SDK_VERSION_CODE"
+            android:value="10290"/>
+        <service
+            android:name="com.bytedance.common.wschannel.server.WsChannelService"
+            android:exported="false"
+            android:process=":push"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.bytedance.common.wschannel.client.WsClientService"
+            android:exported="false"
+            android:stopWithTask="true"/>
+        <provider
+            android:name="com.bytedance.common.wschannel.WsChannelMultiProcessSharedProvider"
+            android:exported="false"
+            android:authorities="com.obric.security.WsChannelMultiProcessSharedProvider"/>
+        <activity
+            android:theme="@style/AppTheme.Transparent"
+            android:name="com.obric.oui.window.permission.PrivacyStatementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.oui.window.permission.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.obric.olog.ConfigService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.ologaction"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.olog.OLog"
+            android:exported="false"
+            android:authorities="com.obric.security.contextprovider"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <provider
+            android:name="com.obric.olog.salvage.LogCompressionProvider"
+            android:exported="true"
+            android:authorities="com.obric.security.logcompressionprovider"/>
+    </application>
+</manifest>

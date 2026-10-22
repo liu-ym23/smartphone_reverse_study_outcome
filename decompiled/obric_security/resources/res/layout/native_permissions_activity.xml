@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@+id/ll_container"
+            android:padding="16dp"
+            android:clipChildren="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/permission_group_location"/>
+            <include layout="@layout/empty_view"/>
+            <include layout="@layout/permission_group_call_contact"/>
+            <include layout="@layout/empty_view"/>
+            <include layout="@layout/permission_group_sms"/>
+            <include layout="@layout/empty_view"/>
+            <include layout="@layout/permission_group_calendar"/>
+            <include layout="@layout/empty_view"/>
+            <include layout="@layout/permission_group_media"/>
+            <include layout="@layout/empty_view"/>
+            <include layout="@layout/permission_group_storage"/>
+            <include layout="@layout/empty_view"/>
+            <include layout="@layout/permission_group_net"/>
+            <include layout="@layout/empty_view"/>
+            <include layout="@layout/permission_group_other"/>
+            <include layout="@layout/empty_view"/>
+            <com.bytedanceos.security.widget.BottomExtraView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <com.obric.oui.titlebar.OCTitleBar
+        android:id="@+id/title_bar"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oui_title_text="@string/security_permission_management"/>
+</RelativeLayout>

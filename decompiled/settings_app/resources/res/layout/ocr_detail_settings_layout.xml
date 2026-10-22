@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/ocr_detail_setting_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/view_list"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <obric.widget.SettingItemText
+                android:id="@+id/id_ocr_language"
+                android:title="@string/ocr_recognize_language_title"
+                style="@style/SettingSubItemSingleStyle"/>
+            <TextView
+                android:id="@+id/id_ocr_tips_v2"
+                android:layout_marginBottom="1dp"
+                android:text="@string/ocr_title_v2_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <TextView
+                android:id="@+id/id_ocr_tips"
+                android:layout_marginTop="1dp"
+                style="@style/SettingItemTipsStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/id_audio_language"
+                android:title="@string/ocr_audio_language_title"
+                style="@style/SettingSubItemSingleStyle"/>
+            <TextView
+                android:id="@+id/id_audio_tips"
+                android:layout_marginBottom="1dp"
+                android:text="@string/ocr_audio_tips"
+                style="@style/SettingItemTipsStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

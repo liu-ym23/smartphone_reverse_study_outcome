@@ -1,0 +1,42 @@
+package com.obric.memorydata.database.entity;
+
+import com.obric.memorydata.database.dao.IAppEntityContentTimeDao;
+import com.obric.memorydata.database.dao.IAppEntityRawDbDao;
+import com.obric.memorydata.database.dao.IAppEntityVectorCopilotDao;
+import com.obric.memorydata.database.dao.IHistoryEntityDao;
+import com.obric.memorydata.database.manager.MemoryDbEngine;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes4.dex */
+@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bg\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00040\u0003H\u0016J\u0012\u0010\u0005\u001a\f\u0012\u0006\b\u0001\u0012\u00020\u0007\u0018\u00010\u0006H\u0016J\u0012\u0010\b\u001a\f\u0012\u0006\b\u0001\u0012\u00020\u0007\u0018\u00010\u0006H\u0016J\u0012\u0010\t\u001a\f\u0012\u0006\b\u0001\u0012\u00020\u000b\u0018\u00010\nH\u0016J\u0012\u0010\f\u001a\f\u0012\u0006\b\u0001\u0012\u00020\u000e\u0018\u00010\rH\u0016¨\u0006\u000f"}, d2 = {"Lcom/obric/memorydata/database/entity/RawAuditoryRecordingEntityIndex;", "Lcom/obric/memorydata/database/index/BaseEntityIndex;", "getRawDao", "Lcom/obric/memorydata/database/dao/IAppEntityRawDbDao;", "Lcom/obric/memorydata/database/entity/AbstractRawDbEntity;", "getTextCopilotDao", "Lcom/obric/memorydata/database/dao/IAppEntityVectorCopilotDao;", "Lcom/obric/memorydata/database/entity/AbstractVectorCopilotEntity;", "getImageCopilotDao", "getContentTimeDao", "Lcom/obric/memorydata/database/dao/IAppEntityContentTimeDao;", "Lcom/obric/memorydata/database/entity/AbstractContentTimeEntity;", "getHistoryEntityDao", "Lcom/obric/memorydata/database/dao/IHistoryEntityDao;", "Lcom/obric/memorydata/database/entity/AbstractHistoryEntity;", "database_obricRelease"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public interface fk extends com.obric.memorydata.database.index.e {
+
+    @Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
+    public static final class a {
+        public static IAppEntityRawDbDao<? extends d> a(fk r2) {
+            fk r3 = (fk) ZeusTransformUtils.wrapperContextForParams(r2, fk.class, "com.obric.memorydata.plugin");
+            return (IAppEntityRawDbDao) ZeusTransformUtils.preCheckCast(MemoryDbEngine.INSTANCE.getGlobalDbEngine().getAuditoryRecordingRawDbDao(), IAppEntityRawDbDao.class, "com.obric.memorydata.plugin");
+        }
+
+        public static IAppEntityVectorCopilotDao<? extends i> b(fk r2) {
+            fk r3 = (fk) ZeusTransformUtils.wrapperContextForParams(r2, fk.class, "com.obric.memorydata.plugin");
+            return (IAppEntityVectorCopilotDao) ZeusTransformUtils.preCheckCast(MemoryDbEngine.INSTANCE.getGlobalDbEngine().getAuditoryRecordingTextVectorCopilotDao(), IAppEntityVectorCopilotDao.class, "com.obric.memorydata.plugin");
+        }
+
+        public static IAppEntityVectorCopilotDao<? extends i> c(fk r2) {
+            fk r3 = (fk) ZeusTransformUtils.wrapperContextForParams(r2, fk.class, "com.obric.memorydata.plugin");
+            return null;
+        }
+
+        public static IAppEntityContentTimeDao<? extends b> d(fk r2) {
+            fk r3 = (fk) ZeusTransformUtils.wrapperContextForParams(r2, fk.class, "com.obric.memorydata.plugin");
+            return null;
+        }
+
+        public static IHistoryEntityDao<? extends c> e(fk r2) {
+            fk r3 = (fk) ZeusTransformUtils.wrapperContextForParams(r2, fk.class, "com.obric.memorydata.plugin");
+            return (IHistoryEntityDao) ZeusTransformUtils.preCheckCast(MemoryDbEngine.INSTANCE.getGlobalDbEngine().getAuditoryRecordingHistoryEntityDao(), IHistoryEntityDao.class, "com.obric.memorydata.plugin");
+        }
+    }
+}

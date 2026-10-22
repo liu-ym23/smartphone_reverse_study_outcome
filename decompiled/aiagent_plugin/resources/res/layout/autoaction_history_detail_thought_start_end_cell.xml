@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/detail_thought_end_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/detail_thought_end_icon"
+        android:background="@drawable/history_detail_icon_border"
+        android:layout_width="28dp"
+        android:layout_height="28dp"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="16sp"
+        android:textColor="@color/oui_basic_text_1"
+        android:id="@+id/detail_thought_end_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

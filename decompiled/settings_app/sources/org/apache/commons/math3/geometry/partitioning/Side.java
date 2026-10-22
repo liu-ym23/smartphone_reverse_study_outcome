@@ -1,0 +1,34 @@
+package org.apache.commons.math3.geometry.partitioning;
+
+/* JADX INFO: loaded from: classes6.dex */
+public final enum Side extends Enum<Side> {
+    private static final /* synthetic */ Side[] $VALUES = null;
+    public static final Side BOTH = null;
+    public static final Side HYPER = null;
+    public static final Side MINUS = null;
+    public static final Side PLUS = null;
+
+    private Side(String r1, int r2) {
+        super(r1, r2);
+    }
+
+    public static Side valueOf(String r1) {
+        return (Side) Enum.valueOf(Side.class, r1);
+    }
+
+    public static Side[] values() {
+        return (Side[]) $VALUES.clone();
+    }
+
+    static {
+        Side r0 = new Side("PLUS", 0);
+        PLUS = r0;
+        Side r1 = new Side("MINUS", 1);
+        MINUS = r1;
+        Side r3 = new Side("BOTH", 2);
+        BOTH = r3;
+        Side r5 = new Side("HYPER", 3);
+        HYPER = r5;
+        $VALUES = new Side[]{r0, r1, r3, r5};
+    }
+}

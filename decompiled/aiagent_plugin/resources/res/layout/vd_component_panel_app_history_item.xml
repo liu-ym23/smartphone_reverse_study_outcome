@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/app_check"
+        app:layout_constraintEnd_toStartOf="@+id/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/app_check"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="14sp"
+        android:textColor="@color/oui_basic_text_1"
+        android:ellipsize="end"
+        android:id="@+id/app_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:textFontWeight="500"
+        app:layout_constraintBottom_toBottomOf="@+id/app_check"
+        app:layout_constraintEnd_toStartOf="@+id/app_check"
+        app:layout_constraintStart_toEndOf="@+id/app_icon"
+        app:layout_constraintTop_toTopOf="@+id/app_check"/>
+    <ImageView
+        android:id="@+id/app_check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_vd_checkmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="0x7f03000f"
+        android:background="@drawable/vd_component_app_history_divider"
+        android:layout_width="0.6dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/app_icon"
+        app:layout_constraintStart_toStartOf="@+id/app_icon"
+        app:layout_constraintTop_toBottomOf="@+id/app_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

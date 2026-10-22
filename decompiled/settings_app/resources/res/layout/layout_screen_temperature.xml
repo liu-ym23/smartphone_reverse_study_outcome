@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@drawable/radius_20_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.android.settings.display.color.ScreenColorTemperatureEditView
+        android:id="@+id/color_temperature_edit_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.obric.oui.tab.OTabLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/oui_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:tabGravity="fill"
+        style="@style/OTabTextV2.Background.Gray"/>
+</merge>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OStyleV2.MaterialCalendarView.DayNight" parent="@style/OStyleV2.MaterialCalendarView.Dark">
+    </style>
+    <style name="OStyleV2.MaterialCalendarView.WeekDayLabels.DayNight" parent="@style/OStyleV2.MaterialCalendarView.WeekDayLabels.Dark">
+    </style>
+    <style name="OStyleV2.OButtonFloating.M.OnImage.DayNight" parent="@style/OStyleV2.OButtonFloating.M.OnImage.Dark">
+    </style>
+    <style name="OStyleV2.OButtonFloating.M.Overlay.DayNight" parent="@style/OStyleV2.OButtonFloating.M.Overlay.Dark">
+    </style>
+    <style name="OStyleV2.OButtonFloating.M.PrimaryLight.DayNight" parent="@style/OStyleV2.OButtonFloating.M.PrimaryLight.Dark">
+    </style>
+    <style name="OStyleV2.OButtonFloating.S.OnImage.DayNight" parent="@style/OStyleV2.OButtonFloating.S.OnImage.Dark">
+    </style>
+    <style name="OStyleV2.OButtonFloating.S.Overlay.DayNight" parent="@style/OStyleV2.OButtonFloating.S.Overlay.Dark">
+    </style>
+    <style name="OStyleV2.OButtonFloating.S.PrimaryLight.DayNight" parent="@style/OStyleV2.OButtonFloating.S.PrimaryLight.Dark">
+    </style>
+    <style name="OStyleV2.OButtonFloating.S.Standard.DayNight" parent="@style/OStyleV2.OButtonFloating.S.Standard.Dark">
+    </style>
+    <style name="OStyleV2.OCoachmarkView.DayNight" parent="@style/OStyleV2.OCoachmarkView.Dark">
+    </style>
+    <style name="OStyleV2.ODownloadProgressView.DayNight" parent="@style/OStyleV2.ODownloadProgressView.Dark">
+    </style>
+    <style name="OStyleV2.OMonthPickerView.DayNight" parent="@style/OStyleV2.OMonthPickerView.Dark">
+    </style>
+    <style name="OStyleV2.OSearchBar.Default.DayNight" parent="@style/OStyleV2.OSearchBar.Default.Dark">
+    </style>
+    <style name="OStyleV2.OSearchBar.Float.DayNight" parent="@style/OStyleV2.OSearchBar.Float.Dark">
+    </style>
+    <style name="OStyleV2.OSearchBar.OnImage.DayNight" parent="@style/OStyleV2.OSearchBar.OnImage.Dark">
+    </style>
+    <style name="OStyleV2.OSearchBar.Overlay.DayNight" parent="@style/OStyleV2.OSearchBar.Overlay.Dark">
+    </style>
+    <style name="OStyleV2.OWeekPickerView.DayNight" parent="@style/OStyleV2.OWeekPickerView.Dark">
+    </style>
+    <style name="Theme.AppCompat.DayNight" parent="@style/Theme.AppCompat">
+    </style>
+    <style name="Theme.AppCompat.DayNight.DarkActionBar" parent="@style/Theme.AppCompat">
+    </style>
+    <style name="Theme.AppCompat.DayNight.Dialog" parent="@style/Theme.AppCompat.Dialog">
+    </style>
+    <style name="Theme.AppCompat.DayNight.Dialog.Alert" parent="@style/Theme.AppCompat.Dialog.Alert">
+    </style>
+    <style name="Theme.AppCompat.DayNight.Dialog.MinWidth" parent="@style/Theme.AppCompat.Dialog.MinWidth">
+    </style>
+    <style name="Theme.AppCompat.DayNight.DialogWhenLarge" parent="@style/Theme.AppCompat.DialogWhenLarge">
+    </style>
+    <style name="Theme.AppCompat.DayNight.NoActionBar" parent="@style/Theme.AppCompat.NoActionBar">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight" parent="@style/Theme.MaterialComponents">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.BottomSheetDialog" parent="@style/Theme.MaterialComponents.BottomSheetDialog">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Bridge" parent="@style/Theme.MaterialComponents.Bridge">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.DarkActionBar" parent="@style/Theme.MaterialComponents">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" parent="@style/Theme.MaterialComponents.Bridge">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Dialog" parent="@style/Theme.MaterialComponents.Dialog">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Alert" parent="@style/Theme.MaterialComponents.Dialog.Alert">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Alert.Bridge" parent="@style/Theme.MaterialComponents.Dialog.Alert.Bridge">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Bridge" parent="@style/Theme.MaterialComponents.Dialog.Bridge">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.FixedSize" parent="@style/Theme.MaterialComponents.Dialog.FixedSize">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.FixedSize.Bridge" parent="@style/Theme.MaterialComponents.Dialog.FixedSize.Bridge">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.MinWidth" parent="@style/Theme.MaterialComponents.Dialog.MinWidth">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.MinWidth.Bridge" parent="@style/Theme.MaterialComponents.Dialog.MinWidth.Bridge">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.DialogWhenLarge" parent="@style/Theme.MaterialComponents.DialogWhenLarge">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.NoActionBar" parent="@style/Theme.MaterialComponents.NoActionBar">
+    </style>
+    <style name="Theme.MaterialComponents.DayNight.NoActionBar.Bridge" parent="@style/Theme.MaterialComponents.NoActionBar.Bridge">
+    </style>
+    <style name="Theme.bar" parent="@style/Theme.Material3.Dark.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+    <style name="Widget.MaterialComponents.ActionBar.PrimarySurface" parent="@style/Widget.MaterialComponents.ActionBar.Surface">
+    </style>
+    <style name="Widget.MaterialComponents.AppBarLayout.PrimarySurface" parent="@style/Widget.MaterialComponents.AppBarLayout.Surface">
+    </style>
+    <style name="Widget.MaterialComponents.BottomAppBar.PrimarySurface" parent="@style/Widget.MaterialComponents.BottomAppBar">
+    </style>
+    <style name="Widget.MaterialComponents.BottomNavigationView.PrimarySurface" parent="@style/Widget.MaterialComponents.BottomNavigationView">
+    </style>
+    <style name="Widget.MaterialComponents.NavigationRailView.PrimarySurface" parent="@style/Widget.MaterialComponents.NavigationRailView">
+    </style>
+    <style name="Widget.MaterialComponents.TabLayout.PrimarySurface" parent="@style/Widget.MaterialComponents.TabLayout">
+    </style>
+    <style name="Widget.MaterialComponents.Toolbar.PrimarySurface" parent="@style/Widget.MaterialComponents.Toolbar.Surface">
+    </style>
+</resources>

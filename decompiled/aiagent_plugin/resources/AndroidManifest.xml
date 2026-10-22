@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="150200100"
+    android:versionName="15.2.0.1.0"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.obric.aiagent.plugin"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="31"
+        android:targetSdkVersion="33"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <permission
+        android:name="com.obric.aiagent.permission.ALARM_BROADCAST"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="com.obric.autogui.permission.EVALUATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.UNLIMITED_TOASTS"/>
+    <uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT"/>
+    <uses-permission android:name="android.permission.ADD_TRUSTED_DISPLAY"/>
+    <uses-permission android:name="android.permission.ADD_ALWAYS_UNLOCKED_DISPLAY"/>
+    <permission
+        android:name="com.obric.autoaction.permission.START_VD_PLAYER"
+        android:protectionLevel="normal"/>
+    <permission
+        android:name="com.obric.autoaction.permission.BIND_FLOATING_WINDOW_SERVICE"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.obric.autoaction.permission.START_LAUNCHER_PAGE"
+        android:protectionLevel="normal"/>
+    <uses-permission android:name="com.obric.memorydata.permission.COMMON"/>
+    <uses-permission android:name="com.obric.assistant.permission.ObricAutoAppCommonSettingProvider"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.obric.assistant.permission.ObricAutoAppBlacklistSettingProvider"/>
+    <permission
+        android:name="com.obric.autogui.permission.EVALUATE"
+        android:protectionLevel="normal"/>
+    <permission
+        android:name="com.obric.autogui.permission.GET_AGENT_STATE"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission
+        android:name="com.obric.autoaction.permission.GET_OAUTO_STATE"
+        android:protectionLevel="normal"/>
+    <uses-permission android:name="com.obric.assistant.permission.hybrid_ability"/>
+    <permission
+        android:name="com.obric.assistantaiagent.permission.open_page"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.obric.assistantaiagent.permission.AGENT_OPEN_API"
+        android:protectionLevel="normal"/>
+    <uses-permission android:name="com.obric.assistantaiagent.permission.open_page"/>
+    <uses-permission android:name="com.obric.assistantaiagent.permission.AGENT_OPEN_API"/>
+    <uses-permission android:name="com.obric.updater.RECEIVE"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="com.android.settings.open.route"/>
+    <uses-permission android:name="android.permission.READ_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_TASKS"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO"/>
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+    <uses-permission android:name="android.permission.EXECUTE_APP_FUNCTIONS"/>
+    <permission
+        android:name="com.obric.aiagent.executionengine.QUERY_INTENT_SECURITY_SPECS"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.obric.aiagent.executionengine.DISPATCH_INTENTS"
+        android:protectionLevel="signature"/>
+    <permission android:name="com.obric.aiagent.executionengine.SCHEDULE_INTENTS"/>
+    <uses-permission android:name="com.obric.aiagent.executionengine.DISPATCH_INTENTS"/>
+    <queries>
+        <intent>
+            <action android:name="com.obric.capabilitykit.CapabilityHandleService"/>
+        </intent>
+        <package android:name="com.obric.matrix"/>
+        <intent>
+            <action android:name="com.obric.memorydata.awareness.CONTEXT_AWARENESS_SERVICE"/>
+        </intent>
+        <package android:name="com.obric.aiagent.executionengine"/>
+        <package android:name="com.larus.nova"/>
+        <package android:name="com.obric.assistantaiagent"/>
+        <intent>
+            <action android:name="com.obric.memorydata.action.SEARCH_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.aiagent.executionengine.CAPABILITY_REGISTER_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.memorydata.action.GLOBAL_SEARCH_SERVICE"/>
+        </intent>
+        <package android:name="com.android.systemui"/>
+        <intent>
+            <action android:name="com.obric.capability.schedule.SCHEDULE_SERVICE"/>
+        </intent>
+        <package android:name="com.obric.aikernel"/>
+    </queries>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="com.obric.aikernel.AIKernelService.permission"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <permission
+        android:name="com.obric.assistantaiagent.permission.hybrid_ability"
+        android:protectionLevel="system|signature"/>
+    <permission
+        android:name="com.obric.aiagent.permission.ASSISTANT_IPC"
+        android:protectionLevel="normal"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="com.obric.account.NAVIGATE"/>
+    <uses-permission android:name="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"/>
+    <uses-permission android:name="com.obric.account.permission.ACCOUNT_STATUS"/>
+    <uses-permission android:name="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"/>
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
+    <uses-permission android:name="com.obric.memorydata.permission.PERSONAL_CONTEXT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.obric.permission.CAPTURE_PASS_BLUR"/>
+    <uses-permission android:name="slardaros.intent.permission"/>
+    <uses-permission android:name="com.slardaros.METRIC_EVENT_PERMISSION"/>
+    <uses-permission android:name="com.obric.aiagent.permission.ASSISTANT_IPC"/>
+    <uses-permission android:name="com.obric.aiagent.assistant_card"/>
+    <uses-permission android:name="com.obric.aiagent.executionengine.SCHEDULE_INTENTS"/>
+    <uses-permission
+        android:name="android.permission.MANAGE_ROLE_HOLDERS"
+        android:protectionLevel="system|signature"/>
+    <uses-permission android:name="android.permission.OBSERVE_ROLE_HOLDERS"/>
+    <uses-permission android:name="com.obric.assistant.privacy.PERMISSION_ACCESS_PRIVACY_PROVIDER"/>
+    <uses-permission android:name="com.obric.assist.permission.ENABLE_DISABLE_ASSIST"/>
+    <uses-permission android:name="com.obric.ai.plugin.permission.GET_DIALOG_RESULT"/>
+    <permission
+        android:name="com.obric.aiagent.plugin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.obric.aiagent.plugin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="obric.permission.FEEDBACK_PROVIDER"/>
+    <uses-permission android:name="com.obric.matrixpro.sdk.device.permission.ACCESS_OSDID"/>
+    <uses-permission android:name="os.permission.BIND_TEA_TRACKER_SERVICE"/>
+    <uses-permission android:name="os.permission.appstate.change"/>
+    <permission
+        android:name="com.obric.olog.ACCESS_LOG_COMPRESSION_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.bytedance.securityserver.READ_SECURITY_SETTINGS"/>
+    <application
+        android:theme="@style/Theme.AutoAction"
+        android:label="@string/app_name"
+        android:name="com.obric.aiagent.plugin_impl.PluginApplication"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light"
+            android:name="com.obric.aiagent.plugin_impl.HelloActivity"
+            android:exported="false"
+            android:process=":aiagent"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light"
+            android:name="com.obric.aiagent.plugin_impl.DebugActivity"
+            android:exported="false"
+            android:process=":aiagent"/>
+        <service
+            android:name="com.obric.aiagent.executionengine.eventstaskmanager.TaskManagerServiceImpl"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.aiagent.executionengine.TASK_MANAGER_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.obric.aiagent.executionengine.eventstaskmanager.timertask.alarm.AlarmReceiver"
+            android:permission="com.obric.aiagent.permission.ALARM_BROADCAST"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.task.action.TIMER_TASK_DISPATCH"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.aiagent.executionengine.eventstaskmanager.conditiontask.handler.time.AlarmReceiver"
+            android:permission="com.obric.aiagent.permission.ALARM_BROADCAST"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.task.action.EVENT_TASK_DISPATCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.task.action.CONDITION_TASK_CHECK"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.obric.aiagent.executionengine.eventstaskmanager.migration.MigrationProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.larus.nova.zeus.aiagent.migration"/>
+        <provider
+            android:name="com.obric.aiagent.executionengine.eventstaskmanager.conditiontask.provider.AiAgentAwarenessCallbackProvider"
+            android:permission="com.obric.memorydata.permission.COMMON"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.larus.nova.awareness.provider"/>
+        <service
+            android:name="com.obric.autoaction.presentation.FloatingWindowServiceImpl"
+            android:permission="com.obric.autoaction.permission.BIND_FLOATING_WINDOW_SERVICE"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.android.server.autoaction"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.presentation.SurfaceCardActivity"
+            android:process=":aiagent"
+            android:taskAffinity="com.obric.autoaction.presentation.SurfaceCardActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:theme="@android:style/Theme.NoDisplay"
+            android:name="com.obric.autoaction.presentation.VDPlayerRouterActivity"
+            android:process=":aiagent"
+            android:excludeFromRecents="true"
+            android:noHistory="true"/>
+        <activity-alias
+            android:name="com.obric.autoaction.app.presentation.SurfaceCardStarterActivity"
+            android:permission="com.obric.autoaction.permission.START_VD_PLAYER"
+            android:exported="true"
+            android:process=":aiagent"
+            android:targetActivity="com.obric.autoaction.presentation.VDPlayerRouterActivity"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.DebugActivity"
+            android:exported="false"
+            android:process=":aiagent"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.presentation.WebActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.IslandDebugActivity"
+            android:process=":aiagent"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.PersonalSearchActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.LauncherPageActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity-alias
+            android:name="com.obric.autoaction.app.launcherpage.LauncherPageStarterActivity"
+            android:permission="com.obric.autoaction.permission.START_LAUNCHER_PAGE"
+            android:exported="true"
+            android:process=":aiagent"
+            android:excludeFromRecents="true"
+            android:targetActivity="com.obric.autoaction.app.launcherpage.LauncherPageActivity"/>
+        <activity-alias
+            android:label="指令管理"
+            android:name="com.obric.autoaction.app.launcherpage.LauncherPageActivityForLauncher"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":aiagent"
+            android:excludeFromRecents="true"
+            android:targetActivity="com.obric.autoaction.app.launcherpage.LauncherPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.detail.condition.ConditionEventDetailActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity-alias
+            android:name="com.obric.autoaction.app.launcherpage.ConditionEventDetailStarterActivity"
+            android:exported="true"
+            android:process=":aiagent"
+            android:targetActivity="com.obric.autoaction.app.launcherpage.detail.condition.ConditionEventDetailActivity"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.detail.shortcut.ShortcutDetailActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/TransparentActivityTheme"
+            android:name="com.obric.autoaction.app.launcherpage.detail.shortcut.ShortCutCreateActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:taskAffinity="com.obric.autoaction.app.launcherpage.shortcutdetail.ShortCutCreateActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.knowledge.KnowledgeActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.RepeatTaskHistoryActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.history.historydetail.HistoryDetailActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.donation.DataDonationTaskListActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.donation.DataDonationQuestionDescActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.donation.RecordedImagePreviewActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.donation.RecordDataListActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.donation.UploadRecordActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.app.launcherpage.history.TaskHistoryActivity"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/TransparentActivityTheme"
+            android:name="com.obric.autoaction.app.launcherpage.knowledge.KnowledgeConfirmActivity"
+            android:process=":aiagent"
+            android:taskAffinity="com.obric.autoaction.app.launcherpage.knowledge.KnowledgeConfirmActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true"
+            android:showWhenLocked="true"/>
+        <activity
+            android:theme="@style/TransparentActivityTheme"
+            android:name="com.obric.autoaction.app.launcherpage.PinShortCutActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:excludeFromRecents="true"/>
+        <receiver
+            android:name="com.obric.autogui.evaluation.AutoGUITaskEvaluatingReceiverImpl"
+            android:permission="com.obric.autogui.permission.EVALUATE"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.autogui.evaluation.ACTION_ONLINE"/>
+                <action android:name="com.obric.autogui.evaluation.ACTION_EVAL"/>
+                <action android:name="com.obric.autogui.evaluation.ACTION_TERM"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.autogui.session.state.AADebugSessionStateReceiverImpl"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.autogui.ACTION_CHANGE_STATE_TO"/>
+                <action android:name="com.obric.autogui.ACTION_VD_EVENTS"/>
+                <action android:name="com.obric.autogui.ACTION_QUEUE_EVENTS"/>
+                <action android:name="com.obric.autogui.ACTION_UI_EVENTS"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.obric.autogui.agents.stateprovider.AgentStateProviderImpl"
+            android:permission="com.obric.autogui.permission.GET_AGENT_STATE"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.autoaction.AgentStateProvider"/>
+        <provider
+            android:name="com.obric.autoaction.presentation.provider.OAutoStateProviderImpl"
+            android:permission="com.obric.autoaction.permission.GET_OAUTO_STATE"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.assistantaiagent.OAutoStateProvider"/>
+        <service
+            android:name="com.obric.autogui.userreport.service.ReportUploadService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":aiagent"/>
+        <activity
+            android:theme="@style/TransparentActivityTheme"
+            android:name="com.obric.autoaction.userreport.TransparentReportActivity"
+            android:process=":aiagent"
+            android:taskAffinity="com.obric.autogui.userreport.TransparentReportActivity"
+            android:excludeFromRecents="true"/>
+        <provider
+            android:name="com.obric.autogui.net.push.internal.PushMessageReceiverProvider"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.push.provider"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.agent.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/agent_filepaths"/>
+        </provider>
+        <provider
+            android:name="com.obric.aiagent.agent.provider.AgentOpenApiProviderImpl"
+            android:permission="com.obric.assistantaiagent.permission.AGENT_OPEN_API"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.assistantaiagent.AgentOpenApiProvider"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name="com.obric.agent.intents.findphone.FindPhoneActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="com.obric.aiagent.apm.impl.AlogFileProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.apm.impl.AlogFileProvider"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.obric.autogui.platforms.tools.platstrategy.StandardPermissionAcquiringActivity"
+            android:exported="false"
+            android:process=":aiagent"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.obric.autogui.platforms.tools.platstrategy.ComputerControlApplicationAccessActivity"
+            android:exported="false"
+            android:process=":aiagent"/>
+        <service
+            android:name="com.obric.aiagent.executionengine.scheduler.impl.ScheduleServiceImpl"
+            android:permission="com.obric.aiagent.executionengine.SCHEDULE_INTENTS"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.capability.schedule.SCHEDULE_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.obric.aiagent.executionengine.capabilitymanager.publish.RegistrationServiceImpl"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.aiagent.executionengine.CAPABILITY_REGISTER_SERVICE"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light"
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillShopActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity-alias
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillShopStarterActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:targetActivity="com.obric.aiagent.skill.manager.impl.ui.SkillShopActivity"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light"
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillManagementActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity-alias
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillManagementStarterActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:targetActivity="com.obric.aiagent.skill.manager.impl.ui.SkillManagementActivity"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillSearchActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity-alias
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillSearchStarterActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:targetActivity="com.obric.aiagent.skill.manager.impl.ui.SkillSearchActivity"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillDetailPreviewActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity-alias
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillDetailPreviewStarterActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:targetActivity="com.obric.aiagent.skill.manager.impl.ui.SkillDetailPreviewActivity"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillCollectionDetailActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity-alias
+            android:name="com.obric.aiagent.skill.manager.impl.ui.SkillCollectionDetailStarterActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:targetActivity="com.obric.aiagent.skill.manager.impl.ui.SkillCollectionDetailActivity"/>
+        <meta-data
+            android:name="teatracker_app_id"
+            android:value="@string/bd_app_id"/>
+        <provider
+            android:name="com.obric.aiagent.interaction.provider.HybridAbilityProviderImpl"
+            android:permission="com.obric.assistantaiagent.permission.hybrid_ability"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.assistantaiagent.provider.HybridAbilityProvider"/>
+        <service
+            android:name="com.obric.aiagent.ipc.assistant.AssistantIDLService"
+            android:permission="com.obric.aiagent.permission.ASSISTANT_IPC"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.aiagent.action.BIND_ASSISTANT_IPC"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.obric.aiagent.ipc.assistant.PackageResetReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="app.product"
+            android:value="pacific"/>
+        <meta-data
+            android:name="app.updateversioncode"
+            android:value="15020070"/>
+        <activity
+            android:theme="@style/Theme.AutoAction"
+            android:name="com.obric.autoaction.vdplayer.VDPlayerActivity"
+            android:process=":aiagent"
+            android:taskAffinity="com.obric.autoaction.vdplayer.VDPlayerActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="adjustNothing"/>
+        <provider
+            android:name="com.obric.autogui.effects.VDPlayerEffectProviderImpl"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.assistantaiagent.provider.VDPlayerEffect"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.aiagent.skill.ovirt.impl.ui.ShellManagementActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.aiagent.skill.ovirt.impl.ui.SkillOpenAppManagementActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.aiagent.skill.ovirt.impl.ui.SkillSettingsActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"/>
+        <activity-alias
+            android:name="com.obric.aiagent.skill.ovirt.impl.ui.SkillSettingsStarterActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:targetActivity="com.obric.aiagent.skill.ovirt.impl.ui.SkillSettingsActivity"/>
+        <activity
+            android:name="com.obric.matrix.platform.sdk.ones.safecushion.ui.CushionActivity"
+            android:process=":safecushion"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="com.obric.matrix.platform.sdk.ones.ws.WsMsgProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.matrix.platform.sdk.ones.provider.com.obric.aiagent.plugin"/>
+        <activity
+            android:name="com.ss.android.deviceregister.AActivity"
+            android:process=":aiagent"/>
+        <receiver
+            android:name="com.bytedance.applog.collector.Collector"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":aiagent"/>
+        <activity
+            android:theme="@style/twice_verify.ActivityDialogStyle"
+            android:name="com.bytedance.bdturing.twiceverify.TwiceVerifyWebActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:multiprocess="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize"/>
+        <provider
+            android:name="com.bytedance.bdturing.ttnet.BdTuringInitProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.bdturing.InitProvider"
+            android:initOrder="9"/>
+        <service
+            android:name="com.bytedance.common.wschannel.server.WsChannelService"
+            android:exported="false"
+            android:process=":push"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.bytedance.common.wschannel.client.WsClientService"
+            android:exported="false"
+            android:process=":aiagent"
+            android:stopWithTask="true"/>
+        <provider
+            android:name="com.bytedance.common.wschannel.WsChannelMultiProcessSharedProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.WsChannelMultiProcessSharedProvider"/>
+        <activity
+            android:name="com.bytedance.bdinstall.migrate.MigrateDetectorActivity"
+            android:process=":aiagent"/>
+        <provider
+            android:name="com.bytedance.bdinstall.BDInstallProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.bdinstall.provider"/>
+        <provider
+            android:name="com.bytedance.apm.battery.dao.MonitorContentProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.apm"/>
+        <provider
+            android:name="com.bytedance.reparo.provider.ReparoProvider"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.reparo"/>
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.bytedance.reparo.ReparoInfoActivity"
+            android:process=":aiagent"/>
+        <activity
+            android:theme="@style/SkillCredentialsSidecarAuthTheme"
+            android:name="com.obric.aiagent.skill.credentials.impl.ui.SidecarAuthActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:taskAffinity="com.obric.aiagent.skill.credentials.SidecarAuthActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|navigation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/AppTheme.Transparent"
+            android:name="com.obric.oui.window.permission.PrivacyStatementActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.oui.window.permission.WebViewActivity"
+            android:exported="false"
+            android:process=":aiagent"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <service
+            android:name="com.obric.olog.ConfigService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.ologaction"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.olog.OLog"
+            android:exported="false"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.contextprovider"/>
+        <service
+            android:name="com.obric.aiagent.assistant_card.provider_core.service.CardProviderService"
+            android:permission="com.obric.aiagent.assistant_card"
+            android:exported="true"
+            android:process=":aiagent"/>
+        <meta-data
+            android:name="obric.intent.sdk.version"
+            android:value="2"/>
+        <service
+            android:name="com.obric.capabilitykit.CapabilityHandleService"
+            android:permission="com.obric.aiagent.executionengine.DISPATCH_INTENTS"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aiagent">
+            <intent-filter>
+                <action android:name="com.obric.capabilitykit.CapabilityHandleService"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.capabilitykit.entity.EntityContentProvider"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.EntityContentProvider"/>
+        <meta-data
+            android:name="entity_sdk_version"
+            android:value="1"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:process=":aiagent"
+            android:directBootAware="true"/>
+        <provider
+            android:name="com.obric.feedback.sdk.FeedbackSdkProvider"
+            android:permission="obric.permission.FEEDBACK_PROVIDER"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.FeedbackSdkProvider"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService"
+            android:exported="false"
+            android:process=":downloader"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService"
+            android:exported="false"
+            android:process=":aiagent"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.DownloadService"
+            android:exported="false"
+            android:process=":aiagent"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService"
+            android:exported="false"
+            android:process=":aiagent"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService"
+            android:exported="false"
+            android:process=":aiagent"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.bytedance.safetyguard.lxc.internal.service.SafetyGuardProxyService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":safety_guard_proxy"
+            android:isolatedProcess="false"/>
+        <provider
+            android:name="com.obric.olog.salvage.LogCompressionProvider"
+            android:exported="true"
+            android:process=":aiagent"
+            android:authorities="com.obric.aiagent.plugin.logcompressionprovider"/>
+    </application>
+</manifest>

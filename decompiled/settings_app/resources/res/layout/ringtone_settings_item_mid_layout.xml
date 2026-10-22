@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/ListContentItemMidLayoutStyle">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/item_title"
+            style="@style/ListContentItemTitleStyle"/>
+        <ImageView
+            android:id="@+id/image_sound_play"
+            android:background="@drawable/anim_play_sound_bg"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ring_tone_play_img_margin_left"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/item_summary"
+        style="@style/ListContentItemSummaryStyle"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+package com.obric.memorydata.obric_entity_data_collector;
+
+/* JADX INFO: loaded from: classes5.dex */
+public final class BuildConfig {
+    public static final String BUILD_TYPE = "release";
+    public static final boolean DEBUG = false;
+    public static final String FLAVOR = "obric";
+    public static final String LIBRARY_PACKAGE_NAME = "com.obric.memorydata.obric_entity_data_collector";
+
+    public BuildConfig() {
+    }
+}

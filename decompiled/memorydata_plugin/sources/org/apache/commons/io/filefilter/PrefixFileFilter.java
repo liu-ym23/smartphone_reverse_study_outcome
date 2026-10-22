@@ -1,0 +1,132 @@
+package org.apache.commons.io.filefilter;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.io.File;
+import java.io.Serializable;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Path;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.List;
+import org.apache.commons.io.IOCase;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class PrefixFileFilter extends AbstractFileFilter implements Serializable {
+    private static final long serialVersionUID = 8533897440809599867L;
+    private final IOCase caseSensitivity;
+    private final String[] prefixes;
+
+    public PrefixFileFilter(String r2) {
+        this(r2, IOCase.SENSITIVE);
+    }
+
+    public PrefixFileFilter(String r3, IOCase r4) {
+        if (r3 == null) goto L10;
+        this.prefixes = new String[]{r3};
+        if (r4 != null) goto L7;
+        r4 = IOCase.SENSITIVE;
+    L7:
+        this.caseSensitivity = r4;
+        return;
+    L10:
+        throw new IllegalArgumentException("The prefix must not be null");
+    }
+
+    public PrefixFileFilter(List<String> r3) {
+        this((List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.memorydata.plugin"), IOCase.SENSITIVE);
+    }
+
+    public PrefixFileFilter(List<String> r3, IOCase r4) {
+        List r5 = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.memorydata.plugin");
+        if (r5 == null) goto L10;
+        this.prefixes = (String[]) ZeusTransformUtils.preCheckCast(r5.toArray(EMPTY_STRING_ARRAY), String[].class, "com.obric.memorydata.plugin");
+        if (r4 != null) goto L7;
+        r4 = IOCase.SENSITIVE;
+    L7:
+        this.caseSensitivity = r4;
+        return;
+    L10:
+        throw new IllegalArgumentException("The list of prefixes must not be null");
+    }
+
+    public PrefixFileFilter(String... r2) {
+        this(r2, IOCase.SENSITIVE);
+    }
+
+    public PrefixFileFilter(String[] r4, IOCase r5) {
+        if (r4 == null) goto L10;
+        String[] r0 = new String[r4.length];
+        this.prefixes = r0;
+        System.arraycopy(r4, 0, r0, 0, r4.length);
+        if (r5 != null) goto L7;
+        r5 = IOCase.SENSITIVE;
+    L7:
+        this.caseSensitivity = r5;
+        return;
+    L10:
+        throw new IllegalArgumentException("The array of prefixes must not be null");
+    }
+
+    private boolean accept(String r7) {
+        String[] r0 = this.prefixes;
+        int r1 = r0.length;
+        int r3 = 0;
+    L3:
+        if (r3 >= r1) goto L9;
+        if (this.caseSensitivity.checkStartsWith(r7, r0[r3]) == true) goto L6;
+        r3 = r3 + 1;
+        goto L3
+    L6:
+        return true;
+    L9:
+        return false;
+    }
+
+    @Override // org.apache.commons.io.filefilter.IOFileFilter, org.apache.commons.io.file.PathFilter
+    public FileVisitResult accept(Path r3, BasicFileAttributes r4) {
+        Path r5 = (Path) ZeusTransformUtils.wrapperContextForParams(r3, Path.class, "com.obric.memorydata.plugin");
+        BasicFileAttributes r6 = (BasicFileAttributes) ZeusTransformUtils.wrapperContextForParams(r4, BasicFileAttributes.class, "com.obric.memorydata.plugin");
+        Path r7 = r5.getFileName();
+        if (r7 != null) goto L5;
+        File r8 = null;
+    L7:
+        return toFileVisitResult(accept(r8), r5);
+    L5:
+        r8 = r7.toFile();
+        goto L7
+    }
+
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
+    public boolean accept(File r1) {
+        if (r1 != null) goto L4;
+        String r2 = null;
+    L6:
+        return accept(r2);
+    L4:
+        r2 = r1.getName();
+        goto L6
+    }
+
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FilenameFilter
+    public boolean accept(File r1, String r2) {
+        return accept(r2);
+    }
+
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter
+    public String toString() {
+        StringBuilder r0 = new StringBuilder();
+        r0.append(super.toString());
+        r0.append("(");
+        if (this.prefixes == null) goto L10;
+        int r1 = 0;
+    L6:
+        if (r1 >= this.prefixes.length) goto L10;
+        if (r1 <= 0) goto L9;
+        r0.append(",");
+    L9:
+        r0.append(this.prefixes[r1]);
+        r1 = r1 + 1;
+    L10:
+        r0.append(")");
+        return r0.toString();
+    }
+}

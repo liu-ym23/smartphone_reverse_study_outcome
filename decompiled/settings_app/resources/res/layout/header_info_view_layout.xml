@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="0dp"
+        android:layout_height="24dp"/>
+    <com.obric.oui.image.OImageAppIcon
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/header_info_icon"
+        app:oui_clipToMask="true"
+        style="@style/OStyleV2.OImage.XL"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_basic_text_1"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/header_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="32sp"
+        android:layout_marginHorizontal="32dp"
+        style="@style/Title_4_Bold"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_basic_text_3"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/header_info_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:minHeight="18sp"
+        android:layout_marginHorizontal="32dp"
+        style="@style/Subtitle_3_Regular"/>
+    <FrameLayout
+        android:id="@+id/header_info_custom_content_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</merge>

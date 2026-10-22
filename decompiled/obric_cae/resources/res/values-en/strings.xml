@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bwdl_drop_devices_on_range">Devices in range for high-speed transfer</string>
+    <string name="bwdl_drop_discovered_after_turn_on">The other party must enable \'High-Speed Transfer\' to be discovered</string>
+    <string name="bwdl_drop_in_process">Transfer in progress, please try again later</string>
+    <string name="bwdl_drop_picker_label">High-Speed File Transfer</string>
+    <string name="cancel">Cancel Transfer</string>
+    <string name="device_select">Select Receiving Device</string>
+    <string name="discovering">Searching...</string>
+    <string name="discovery">Search Devices</string>
+    <string name="drop_OK">OK</string>
+    <string name="drop_cancel">Cancel Transfer</string>
+    <string name="drop_confirm">Confirm</string>
+    <string name="drop_confirm_cancel_transfer">Are you sure you want to cancel the transfer?</string>
+    <string name="drop_confirm_interrupt_transfer">Are you sure you want to interrupt the transfer?</string>
+    <string name="drop_continue">Continue Transfer</string>
+    <string name="drop_hide">Hide</string>
+    <string name="drop_incoming_file_info">\"%1$s\" wants to share %2$d files with you, total size %3$s</string>
+    <string name="drop_incoming_transfer_failed_info">Unable to receive %2$d files from \"%1$s\"</string>
+    <string name="drop_incoming_transfer_file_info">Receiving %2$d files from \"%1$s\"</string>
+    <string name="drop_incoming_transfer_success_info">Successfully received %2$d files from \"%1$s\"</string>
+    <string name="drop_incoming_transfering">Transferring</string>
+    <string name="drop_name">High-Speed Transfer</string>
+    <string name="drop_notification_close_button">Close</string>
+    <string name="drop_receive_incoming_file">Receive</string>
+    <string name="drop_receiving" formatted="false">Received %1$d %</string>
+    <string name="drop_refuse_incoming_file">Refuse</string>
+    <string name="drop_storage_insufficient_exit">Insufficient storage space, exiting</string>
+    <string name="drop_transfer_cancel">Cancel Transfer</string>
+    <string name="drop_transfer_continue">Continue Transfer</string>
+    <string name="drop_transfer_failed">Transfer Failed</string>
+    <string name="drop_transfer_failed_message">Transfer was cancelled</string>
+    <string name="drop_transfer_file">Waiting for \"%1$s\" to receive</string>
+    <string name="drop_transfer_file_success_info">Successfully transferred %2$d files to \"%1$s\"</string>
+    <string name="drop_transfer_interrupt">Interrupt Transfer</string>
+    <string name="drop_transfer_success">Transfer Successful</string>
+    <string name="drop_transfering" formatted="false">Transferred %1$d %</string>
+    <string name="drop_transfering_file_info">Transferring %2$d files to \"%1$s\", total size %3$s</string>
+    <string name="drop_transfering_title_info">Transferring</string>
+    <string name="drop_transferring_notification_file_info">Transferring %2$d files to \"%1$s\"</string>
+    <string name="file_count_exceed">File count exceeds limit</string>
+    <string name="file_not_found">File not found</string>
+    <string name="file_size_exceed">File size exceeds 50GB limit</string>
+    <string name="file_type_transmission_not_supported">This file type transfer is not supported</string>
+    <string name="hiding">Hide</string>
+    <string name="open_location">Location switch is turned on</string>
+    <string name="p2p_fail_for_soft_ap">Unable to transfer, please disable the device\'s personal hotspot first</string>
+</resources>

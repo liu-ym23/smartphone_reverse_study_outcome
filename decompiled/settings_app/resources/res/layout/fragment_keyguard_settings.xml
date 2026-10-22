@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/keyguard_settings"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/text_item_title"
+                    style="@style/SettingItemTitleStyle"/>
+                <obric.widget.ListContentItemCustom style="@style/SettingSubItemSingleStyle">
+                    <LinearLayout style="@style/SettingPreviewStyle">
+                        <com.android.settings.PreviewSettingItemView
+                            android:id="@+id/item_preview_left"
+                            setting:previewNormalDrawable="@drawable/keyguard_style_clock"
+                            setting:previewTitle="@string/keyguard_style_clock"
+                            style="@style/SettingPreviewItemStyle"/>
+                        <include layout="@layout/divider_line_vertical"/>
+                        <com.android.settings.PreviewSettingItemView
+                            android:id="@+id/item_preview_right"
+                            setting:previewNormalDrawable="@drawable/keyguard_style_classic"
+                            setting:previewTitle="@string/keyguard_style_classic"
+                            style="@style/SettingPreviewItemStyle"/>
+                    </LinearLayout>
+                </obric.widget.ListContentItemCustom>
+            </LinearLayout>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <com.android.settings.SettingItemTextVertical
+                android:id="@+id/lock_screen_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wallpaper_settings_item_height"
+                setting:arrow="@drawable/secletor_setting_item_arrow"
+                setting:icon="@drawable/wallpaper_setting_icon_frame"
+                setting:iconFrame="@drawable/thumbnail_bg"
+                setting:singleLine="false"
+                setting:subTitle="@string/lockscreen_wallpaper_setting_sub_text"
+                setting:title="@string/lockscreen_wallpaper_setting_text"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/lock_screen_shortcut"
+                android:title="@string/lock_screen_shortcut"
+                style="@style/SettingSubItemSingleStyle"/>
+            <TextView
+                android:id="@+id/lock_screen_shortcut_tips"
+                android:text="@string/lock_screen_shortcut_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/item_id_display_large_battery"
+                android:title="@string/display_large_battery_in_lockscreen"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include
+                android:id="@+id/shadow_above_display_when_screen_off"
+                android:visibility="gone"
+                layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/display_when_screen_off"
+                android:visibility="gone"
+                android:title="@string/display_when_screen_off"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include
+                android:id="@+id/shadow_above_nuts_clock_theme"
+                android:visibility="gone"
+                layout="@layout/group_list_item_vertical_gap_layout"/>
+            <obric.widget.ListContentItemText
+                android:id="@+id/nuts_clock_theme"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/nuts_clock_theme"
+                style="@style/ListContentItemStyle.Single"/>
+            <include layout="@layout/scrollview_bottom_gap_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+</RelativeLayout>

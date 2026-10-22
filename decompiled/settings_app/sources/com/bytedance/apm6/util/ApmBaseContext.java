@@ -1,0 +1,58 @@
+package com.bytedance.apm6.util;
+
+import android.app.Application;
+import android.content.Context;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class ApmBaseContext {
+    private static Application context = null;
+    private static boolean debugMode = false;
+    private static boolean systraceMode = false;
+
+    static {
+    }
+
+    public ApmBaseContext() {
+    }
+
+    public static void setDebugMode(boolean r0) {
+        debugMode = r0;
+    }
+
+    public static boolean isDebugMode() {
+        if (debugMode == true) goto L5;
+    L7:
+        return false;
+    L5:
+        if (systraceMode == true) goto L7;
+        return true;
+    }
+
+    public static void setSystraceMode(boolean r0) {
+        systraceMode = r0;
+    }
+
+    public static boolean isSystraceMode() {
+        return systraceMode;
+    }
+
+    public static Application getContext() {
+        return context;
+    }
+
+    public static void setContext(Context r0) {
+        if (r0 == null) goto L5;
+        context = getApplication(r0);
+        return;
+    }
+
+    private static Application getApplication(Context r1) {
+        if (r1 != null) goto L6;
+        return null;
+    L6:
+        if ((r1 instanceof Application) == true) goto L10;
+        r1 = r1.getApplicationContext();
+    L10:
+        return (Application) r1;
+    }
+}

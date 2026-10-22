@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.lisitem.OCardListItem xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ocardlistitem_cardPosition="position_single"
+    app:ocardlistitem_cardType="type_large"
+    app:ocardlistitem_icon="@drawable/ic_auto_memory_task_guide_custom"
+    app:ocardlistitem_showCardBg="true"
+    app:ocardlistitem_showCustomEnd="false"
+    app:ocardlistitem_showDivider="false"
+    app:ocardlistitem_showIcon="true"
+    app:ocardlistitem_showSubTitle="true"
+    app:ocardlistitem_showTailIcon="false"
+    app:ocardlistitem_showTitle="true"/>

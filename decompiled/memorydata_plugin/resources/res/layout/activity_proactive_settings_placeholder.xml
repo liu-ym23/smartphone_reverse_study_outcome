@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_basic_bg_base_1"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/content_host"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.oui.status.OPageStatus
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:opagestatus_message="@string/proactive_settings_placeholder_message"
+            app:opagestatus_title="@string/proactive_settings_placeholder_title"
+            app:opagestatus_type="status_content"/>
+    </FrameLayout>
+    <View
+        android:layout_gravity="top"
+        android:id="@+id/cut_off"
+        android:background="@color/oui_basic_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</FrameLayout>

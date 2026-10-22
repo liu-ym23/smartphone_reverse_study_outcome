@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/oui_r_capsule"/>
+                    <solid android:color="@color/oui_on_dark_fill_element_2"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/oui_r_capsule"/>
+                    <solid android:color="@color/oui_state_overlay_pressed"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/oui_r_capsule"/>
+            <solid android:color="@color/oui_on_dark_fill_element_2"/>
+        </shape>
+    </item>
+</selector>

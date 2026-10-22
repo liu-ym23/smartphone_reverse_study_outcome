@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.tab.OTabLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cycle_view"
+    android:layout_height="@dimen/inner_common_dimen_40dp"
+    app:tabGravity="center"
+    app:tabMode="scrollable"
+    style="@style/OTabTextV2.Background.Light">
+    <com.obric.oui.tab.OTabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_title_data_usage"/>
+    <com.obric.oui.tab.OTabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_title_wlan"/>
+</com.obric.oui.tab.OTabLayout>

@@ -1,0 +1,108 @@
+package androidx.core.graphics;
+
+import android.graphics.Point;
+import android.graphics.PointF;
+import androidx.room.jarjarred.org.antlr.v4.analysis.LeftRecursiveRuleTransformer;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000\u0016\n\u0000\n\u0002\u0010\b\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0002\u0018\u0002\n\u0002\b\f\u001a\r\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u0086\n\u001a\r\u0010\u0000\u001a\u00020\u0003*\u00020\u0004H\u0086\n\u001a\r\u0010\u0005\u001a\u00020\u0001*\u00020\u0002H\u0086\n\u001a\r\u0010\u0005\u001a\u00020\u0003*\u00020\u0004H\u0086\n\u001a\u0015\u0010\u0006\u001a\u00020\u0002*\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u0003H\u0086\n\u001a\u0015\u0010\u0006\u001a\u00020\u0004*\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0003H\u0086\n\u001a\u0015\u0010\b\u001a\u00020\u0002*\u00020\u00022\u0006\u0010\t\u001a\u00020\u0002H\u0086\n\u001a\u0015\u0010\b\u001a\u00020\u0002*\u00020\u00022\u0006\u0010\n\u001a\u00020\u0001H\u0086\n\u001a\u0015\u0010\b\u001a\u00020\u0004*\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H\u0086\n\u001a\u0015\u0010\b\u001a\u00020\u0004*\u00020\u00042\u0006\u0010\n\u001a\u00020\u0003H\u0086\n\u001a\u0015\u0010\u000b\u001a\u00020\u0002*\u00020\u00022\u0006\u0010\t\u001a\u00020\u0002H\u0086\n\u001a\u0015\u0010\u000b\u001a\u00020\u0002*\u00020\u00022\u0006\u0010\n\u001a\u00020\u0001H\u0086\n\u001a\u0015\u0010\u000b\u001a\u00020\u0004*\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H\u0086\n\u001a\u0015\u0010\u000b\u001a\u00020\u0004*\u00020\u00042\u0006\u0010\n\u001a\u00020\u0003H\u0086\n\u001a\u0015\u0010\f\u001a\u00020\u0002*\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u0003H\u0086\n\u001a\u0015\u0010\f\u001a\u00020\u0004*\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0003H\u0086\n\u001a\r\u0010\r\u001a\u00020\u0002*\u00020\u0004H\u0086\b\u001a\r\u0010\u000e\u001a\u00020\u0004*\u00020\u0002H\u0086\b\u001a\r\u0010\u000f\u001a\u00020\u0002*\u00020\u0002H\u0086\n\u001a\r\u0010\u000f\u001a\u00020\u0004*\u00020\u0004H\u0086\n¨\u0006\u0010"}, d2 = {"component1", "", "Landroid/graphics/Point;", "", "Landroid/graphics/PointF;", "component2", "div", "scalar", "minus", LeftRecursiveRuleTransformer.PRECEDENCE_OPTION_NAME, "xy", "plus", "times", "toPoint", "toPointF", "unaryMinus", "core-ktx_release"}, k = 2, mv = {1, 8, 0}, xi = 48)
+public final class PointKt {
+    public static final int component1(Point r5) {
+        return r5.x;
+    }
+
+    public static final int component2(Point r5) {
+        return r5.y;
+    }
+
+    public static final Point div(Point r5, float r10) {
+        return new Point(Math.round(r5.x / r10), Math.round(r5.y / r10));
+    }
+
+    public static final Point minus(Point r5, Point r10) {
+        Point r11 = new Point(r5.x, r5.y);
+        r11.offset(-r10.x, -r10.y);
+        return r11;
+    }
+
+    public static final Point plus(Point r5, Point r10) {
+        Point r11 = new Point(r5.x, r5.y);
+        r11.offset(r10.x, r10.y);
+        return r11;
+    }
+
+    public static final Point times(Point r5, float r10) {
+        return new Point(Math.round(r5.x * r10), Math.round(r5.y * r10));
+    }
+
+    public static final Point toPoint(PointF r5) {
+        return new Point((int) r5.x, (int) r5.y);
+    }
+
+    public static final PointF toPointF(Point r5) {
+        return new PointF(r5);
+    }
+
+    public static final Point unaryMinus(Point r5) {
+        return new Point(-r5.x, -r5.y);
+    }
+
+    public static final float component1(PointF r5) {
+        return r5.x;
+    }
+
+    public static final float component2(PointF r5) {
+        return r5.y;
+    }
+
+    public static final PointF div(PointF r5, float r10) {
+        return new PointF(r5.x / r10, r5.y / r10);
+    }
+
+    public static final PointF times(PointF r5, float r10) {
+        return new PointF(r5.x * r10, r5.y * r10);
+    }
+
+    public static final PointF unaryMinus(PointF r5) {
+        return new PointF(-r5.x, -r5.y);
+    }
+
+    public static final PointF minus(PointF r5, PointF r10) {
+        PointF r11 = new PointF(r5.x, r5.y);
+        r11.offset(-r10.x, -r10.y);
+        return r11;
+    }
+
+    public static final PointF plus(PointF r5, PointF r10) {
+        PointF r11 = new PointF(r5.x, r5.y);
+        r11.offset(r10.x, r10.y);
+        return r11;
+    }
+
+    public static final Point minus(Point r5, int r10) {
+        Point r11 = new Point(r5.x, r5.y);
+        int r12 = -r10;
+        r11.offset(r12, r12);
+        return r11;
+    }
+
+    public static final Point plus(Point r5, int r10) {
+        Point r11 = new Point(r5.x, r5.y);
+        r11.offset(r10, r10);
+        return r11;
+    }
+
+    public static final PointF minus(PointF r5, float r10) {
+        PointF r11 = new PointF(r5.x, r5.y);
+        float r12 = -r10;
+        r11.offset(r12, r12);
+        return r11;
+    }
+
+    public static final PointF plus(PointF r5, float r10) {
+        PointF r11 = new PointF(r5.x, r5.y);
+        r11.offset(r10, r10);
+        return r11;
+    }
+}

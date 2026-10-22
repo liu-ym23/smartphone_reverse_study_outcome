@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:id="@+id/wifi_display_settings_footer_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wifi_display_settings_header"
+        style="@style/ListContentItemStyle.Top"/>
+    <obric.widget.ListContentItemText
+        android:id="@+id/incall_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/wifi_display_incall_settings_title"
+        style="@style/ListContentItemStyle.Top"/>
+    <obric.widget.ListContentItemText
+        android:id="@+id/received_sms_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/wifi_display_receive_sms_settings_title"
+        style="@style/ListContentItemStyle.Bottom"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wifi_display_settings_tips"
+        style="@style/GroupListTipsViewStyle"/>
+</LinearLayout>

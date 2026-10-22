@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/settings_item_top_bottom_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/sw_allow_notch"
+        android:title="@string/notch_landscape_setting_title"
+        style="@style/SettingSubItemSingleStyle"/>
+    <TextView
+        android:id="@+id/tv_allow_notch_tips"
+        android:text="@string/notch_landscape_setting_tips"
+        style="@style/SettingItemTipsStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

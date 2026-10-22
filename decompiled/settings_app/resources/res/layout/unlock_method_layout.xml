@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/security_unlock_method_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/unlock_by_fingerprint"
+                android:title="@string/security_unlock_by_fingerprint"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/unlock_by_face"
+                android:title="@string/security_unlock_by_face"
+                style="@style/SettingSubItemSingleStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+</RelativeLayout>

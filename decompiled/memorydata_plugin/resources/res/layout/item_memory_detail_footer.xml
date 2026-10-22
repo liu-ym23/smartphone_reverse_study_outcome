@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/card_wrapper"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/oui_basic_text_3b"
+        android:id="@+id/memory_detail_footer_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/memory_detail_footer_text"
+        android:lineHeight="16sp"
+        android:textFontWeight="400"/>
+</LinearLayout>

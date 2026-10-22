@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="36dp"
+    android:width="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <path
+        android:fillColor="@drawable/_ic_notification_event_todo__0_res_0x7e080026"
+        android:pathData="M0,18C0,8.059 8.059,0 18,0C27.941,0 36,8.059 36,18C36,27.941 27.941,36 18,36C8.059,36 0,27.941 0,18Z"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M23,10.5C24.381,10.5 25.5,11.619 25.5,13V23C25.5,24.381 24.381,25.5 23,25.5H13C11.619,25.5 10.5,24.381 10.5,23V13C10.5,11.619 11.619,10.5 13,10.5H23ZM17.167,19.199L15.525,17.558L15.083,17.116L14.199,18L16.725,20.525C16.842,20.643 17.001,20.708 17.167,20.708C17.333,20.708 17.491,20.642 17.608,20.525L21.801,16.333L20.917,15.449L17.167,19.199Z"/>
+</vector>

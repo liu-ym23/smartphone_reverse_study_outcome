@@ -1,0 +1,29 @@
+package com.obric.aiagent.executionengine.scheduler.impl.appfunction.registry;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.util.List;
+
+/* JADX INFO: compiled from: AppFunctionDataTypeMetadata.kt */
+/* JADX INFO: loaded from: classes2.dex */
+public final class t extends i {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private final List<i> f18304a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private final String f18305b;
+
+    public final List<i> a() {
+        return this.f18304a;
+    }
+
+    public t(List<? extends i> r3, String r4, boolean r5, String r6) {
+        List<i> r7 = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.aiagent.plugin");
+        d.h.b.o.e(r7, "matchOneOf");
+        d.h.b.o.e(r4, "qualifiedName");
+        d.h.b.o.e(r6, "description");
+        super(r5, r6);
+        this.f18304a = r7;
+        this.f18305b = r4;
+    }
+}

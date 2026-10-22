@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/express_more_aty_left_right_padding"
+        android:paddingEnd="@dimen/express_more_aty_left_right_padding">
+        <com.obric.oui.text.OBaseTextView
+            android:textColor="@color/oui_basic_text_3"
+            android:gravity="center_horizontal"
+            android:id="@+id/express_phone_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/express_tips_margin_top"
+            android:layout_marginBottom="@dimen/oui_padding_16dp"
+            android:text="@string/express_tips"
+            android:layout_alignParentBottom="true"
+            style="@style/Subtitle_2_Regular"/>
+    </LinearLayout>
+</LinearLayout>

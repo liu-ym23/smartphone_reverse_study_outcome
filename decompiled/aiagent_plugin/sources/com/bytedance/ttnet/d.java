@@ -1,0 +1,43 @@
+package com.bytedance.ttnet;
+
+import android.content.Context;
+import java.util.ArrayList;
+import java.util.Map;
+import org.json.JSONObject;
+
+/* JADX INFO: compiled from: ITTNetDepend.java */
+/* JADX INFO: loaded from: classes.dex */
+public interface d {
+    int a(Context r1, String r2, int r3);
+
+    String a(Context r1, String r2, String r3);
+
+    void a(Context r1, String r2, String r3, JSONObject r4);
+
+    void a(Context r1, Map<String, ?> r2);
+
+    @Deprecated
+    void a(Context r1, JSONObject r2);
+
+    void a(String r1);
+
+    void a(String r1, JSONObject r2);
+
+    boolean a();
+
+    String[] b();
+
+    String c();
+
+    String d();
+
+    void e();
+
+    ArrayList<String> f();
+
+    int g();
+
+    Context getContext();
+
+    Map<String, String> h();
+}

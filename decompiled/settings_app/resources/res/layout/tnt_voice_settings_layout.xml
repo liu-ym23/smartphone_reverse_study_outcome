@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/voice_search_and_input_label"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:clipChildren="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/voice_input"
+                android:title="@string/voice_input_global_switch"
+                style="@style/SettingSubItemSingleStyle"/>
+            <TextView
+                android:text="@string/voice_input_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/voice_input_all"
+                app:itemTitle="@string/voice_input_all"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/voice_input_current"
+                app:itemTitle="@string/voice_input_current"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

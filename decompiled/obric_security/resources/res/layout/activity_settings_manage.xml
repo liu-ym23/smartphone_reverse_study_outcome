@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:background="@color/oui_bg_base_1"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/title_bar"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:oFloatingTitleBar_centerTitle="Settings"/>
+    <com.obric.oui.searchbar.v2.OSearchBar
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:hint="搜索Settings Key"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
+        style="@style/OStyleV2.OSearchBar.Float.S"/>
+    <LinearLayout
+        android:clipChildren="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar">
+        <com.obric.oui.orecyclerview.widget.RecyclerView
+            android:orientation="vertical"
+            android:id="@+id/rv_settings_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="com.obric.oui.orecyclerview.widget.LinearLayoutManager"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

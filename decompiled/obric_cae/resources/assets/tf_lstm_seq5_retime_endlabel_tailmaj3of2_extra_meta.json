@@ -1,0 +1,94 @@
+{
+  "framework": "tensorflow",
+  "saved_model_dir": "/Users/bytedance/Documents/trae_projects/bluetooth_jitter_module/data/0324/tf_lstm_seq5_retime_endlabel_tailmaj3of2_extra_savedmodel",
+  "tflite_path": "/Users/bytedance/Documents/trae_projects/bluetooth_jitter_module/data/0324/tf_lstm_seq5_retime_endlabel_tailmaj3of2_extra.tflite",
+  "train_data": "/Users/bytedance/Documents/trae_projects/bluetooth_jitter_module/data/0324/params_top7_plus4_label_window1000ms_retime_endlabel_merged_0311_0324_all_devices.json",
+  "val_data": "/Users/bytedance/Documents/trae_projects/bluetooth_jitter_module/data/0324/extra_verify/params_top7_plus4_label_window1000ms_retime_endlabel.json",
+  "feature_keys": [
+    "Delta_Retrans_Sum",
+    "NoRx_Ratio",
+    "Silence_Duration",
+    "host_buffer_margin",
+    "mAclTxQueueLength",
+    "mGlitchCount",
+    "mNakCount",
+    "mNoRxCount",
+    "mOverflowCount",
+    "mPacketType",
+    "mTxPowerLevel"
+  ],
+  "seq_len": 5,
+  "standardize": {
+    "mean": [
+      124.49621725078093,
+      0.2447855890360265,
+      283.5209360273008,
+      90.25997372840041,
+      1.7565678998970804,
+      4.984020367260712,
+      1.9140711048516692,
+      147.01636964411463,
+      266.27271906541716,
+      22.971832511781592,
+      14.711662423487352
+    ],
+    "std": [
+      238.0471632208169,
+      0.2617075568585259,
+      1827.053057276023,
+      419.9856724968285,
+      3.5244100137269823,
+      9.919050924418583,
+      2.510893387188187,
+      143.17226258127747,
+      1506.9335635415866,
+      2.343396183646834,
+      3.715275309966361
+    ]
+  },
+  "hparams": {
+    "hidden_size": 64,
+    "dropout": 0.1
+  },
+  "label_rule": {
+    "mode": "tail_majority",
+    "tail_len": 3,
+    "tail_k": 2
+  },
+  "decision": {
+    "threshold": 0.5,
+    "best_f1_threshold": 0.4301975965499878
+  },
+  "metrics": {
+    "train@thr": {
+      "accuracy": 0.8846216347976816,
+      "precision": 0.8387755953125652,
+      "recall": 0.8885011264743562,
+      "f1": 0.8629226016818261,
+      "tp": 20113,
+      "fp": 3866,
+      "tn": 28880,
+      "fn": 2524
+    },
+    "val@thr": {
+      "accuracy": 0.940207739088316,
+      "precision": 0.9125544267053701,
+      "recall": 0.9510903819488213,
+      "f1": 0.931423986173693,
+      "tp": 7545,
+      "fp": 723,
+      "tn": 9925,
+      "fn": 388
+    },
+    "val_best_f1": {
+      "accuracy": 0.9403153759216404,
+      "precision": 0.9069656488549618,
+      "recall": 0.9585276692297996,
+      "f1": 0.9320340748912176,
+      "tp": 7604,
+      "fp": 780,
+      "tn": 9868,
+      "fn": 329
+    }
+  }
+}

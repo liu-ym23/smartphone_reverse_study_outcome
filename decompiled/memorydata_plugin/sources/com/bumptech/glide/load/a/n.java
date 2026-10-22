@@ -1,0 +1,102 @@
+package com.bumptech.glide.load.a;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.util.Queue;
+
+/* JADX INFO: loaded from: classes.dex */
+public class n<A, B> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private final com.bumptech.glide.util.g<a<A>, B> f618a;
+
+    static final class a<A> {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        private static final Queue<a<?>> f620a = null;
+
+        /* JADX INFO: renamed from: b, reason: collision with root package name */
+        private int f621b;
+        private int c;
+        private A d;
+
+        static {
+            f620a = com.bumptech.glide.util.k.b(0);
+        }
+
+        private a() {
+        }
+
+        static <A> a<A> a(A r4, int r5, int r6) {
+            Queue<a<?>> r0 = f620a;
+            monitor-enter(r0);
+            a<A> r1 = (a) ZeusTransformUtils.preCheckCast(r0.poll(), a.class, "com.obric.memorydata.plugin");     // Catch: Throwable -> L10
+            monitor-exit(r0);     // Catch: Throwable -> L10
+            if (r1 != null) goto L8;
+            r1 = new a();
+        L8:
+            r1.b(r4, r5, r6);
+            return r1;
+        L10:
+            th = move-exception;
+            throw th;
+        }
+
+        private void b(A r1, int r2, int r3) {
+            this.d = r1;
+            this.c = r2;
+            this.f621b = r3;
+        }
+
+        public void a() {
+            Queue<a<?>> r0 = f620a;
+            monitor-enter(r0);
+            r0.offer(this);     // Catch: Throwable -> L7
+            monitor-exit(r0);     // Catch: Throwable -> L7
+            return;
+        L7:
+            th = move-exception;
+            throw th;
+        }
+
+        public boolean equals(Object r4) {
+            if (ZeusTransformUtils.instanceOf(r4, a.class) == false) goto L12;
+            a r5 = (a) ZeusTransformUtils.preCheckCast(r4, a.class, "com.obric.memorydata.plugin");
+            if (this.c == r5.c) goto L7;
+            return false;
+        L7:
+            if (this.f621b == r5.f621b) goto L9;
+            return false;
+        L9:
+            if (this.d.equals(r5.d) == false) goto L15;
+            return true;
+        L15:
+            return false;
+        L12:
+            return false;
+        }
+
+        public int hashCode() {
+            return (((this.f621b * 31) + this.c) * 31) + this.d.hashCode();
+        }
+    }
+
+    public n() {
+        this(250);
+    }
+
+    public n(final long r2) {
+        this.f618a = new AnonymousClass1(this, r2);
+    }
+
+    public B a(A r1, int r2, int r3) {
+        a<A> r4 = a.a(r1, r2, r3);
+        B r0 = this.f618a.b(r4);
+        r4.a();
+        return r0;
+    }
+
+    public void a(A r1, int r2, int r3, B r4) {
+        a<A> r5 = a.a(r1, r2, r3);
+        this.f618a.b(r5, r4);
+    }
+}

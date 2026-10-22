@@ -1,0 +1,229 @@
+package com.obric.capabilitykit.common.intent;
+
+import android.icu.text.PluralRules;
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.android.launcher3.icons.cache.BaseIconCache;
+import com.obric.versionedparcelable.ParcelUtils;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: compiled from: CameraSetAuxiliaryLineParams.kt */
+/* JADX INFO: loaded from: classes4.dex */
+@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u000f\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B\u001d\u0012\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u0004\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0006¢\u0006\u0002\u0010\u0007J\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0004HÆ\u0003¢\u0006\u0002\u0010\tJ\u000b\u0010\u0012\u001a\u0004\u0018\u00010\u0006HÆ\u0003J&\u0010\u0013\u001a\u00020\u00002\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u00042\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0006HÆ\u0001¢\u0006\u0002\u0010\u0014J\t\u0010\u0015\u001a\u00020\u0016HÖ\u0001J\u0013\u0010\u0017\u001a\u00020\u00042\b\u0010\u0018\u001a\u0004\u0018\u00010\u0019HÖ\u0003J\t\u0010\u001a\u001a\u00020\u0016HÖ\u0001J\u0012\u0010\u001b\u001a\u00020\u00012\b\u0010\u001c\u001a\u0004\u0018\u00010\u0019H\u0016J\t\u0010\u001d\u001a\u00020\u0006HÖ\u0001J\u0019\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020\u0016HÖ\u0001R\u001e\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0086\u000e¢\u0006\u0010\n\u0002\u0010\f\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000bR\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u000e\"\u0004\b\u000f\u0010\u0010¨\u0006#"}, d2 = {"Lcom/obric/capabilitykit/common/intent/CameraSetAuxiliaryLineParams;", "Lcom/obric/capabilitykit/common/intent/IntentParams;", "Landroid/os/Parcelable;", "enable", "", "mode", "", "(Ljava/lang/Boolean;Ljava/lang/String;)V", "getEnable", "()Ljava/lang/Boolean;", "setEnable", "(Ljava/lang/Boolean;)V", "Ljava/lang/Boolean;", "getMode", "()Ljava/lang/String;", "setMode", "(Ljava/lang/String;)V", "component1", "component2", "copy", "(Ljava/lang/Boolean;Ljava/lang/String;)Lcom/obric/capabilitykit/common/intent/CameraSetAuxiliaryLineParams;", "describeContents", "", "equals", PluralRules.KEYWORD_OTHER, "", "hashCode", "mergeParams", "params", "toString", "writeToParcel", "", "parcel", "Landroid/os/Parcel;", BaseIconCache.IconDB.COLUMN_FLAGS, "intentcommon_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+public final class CameraSetAuxiliaryLineParams implements IntentParams, Parcelable {
+    public static final Parcelable.Creator<CameraSetAuxiliaryLineParams> CREATOR = null;
+    private Boolean enable;
+    private String mode;
+
+    /* JADX INFO: compiled from: CameraSetAuxiliaryLineParams.kt */
+    @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+    public static final class Creator implements Parcelable.Creator<CameraSetAuxiliaryLineParams> {
+        public Creator() {
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final CameraSetAuxiliaryLineParams createFromParcel(Parcel r7) {
+            int r0 = r7.readInt();
+            Intrinsics.checkNotNullParameter(r7, "parcel");
+            int r4 = 1;
+            if (r7.readInt() != 0) goto L6;
+            Boolean r2 = null;
+        L10:
+            CameraSetAuxiliaryLineParams r1 = new CameraSetAuxiliaryLineParams(r2, r7.readString());
+            int r3 = Math.min(r0, 0);
+            ClassLoader r6 = getClass().getClassLoader();
+        L11:
+            if (r4 > r3) goto L13;
+            r4 = r4 + 1;
+        L13:
+            if (r4 > r0) goto L15;
+            ParcelUtils.skipValueSafely(r7, r6);
+            r4 = r4 + 1;
+            goto L13
+        L15:
+            return r1;
+        L6:
+            if (r7.readInt() == 0) goto L8;
+            boolean r5 = true;
+        L9:
+            r2 = Boolean.valueOf(r5);
+            goto L10
+        L8:
+            r5 = false;
+            goto L9
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ CameraSetAuxiliaryLineParams createFromParcel(Parcel r1) {
+            return createFromParcel(r1);
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final CameraSetAuxiliaryLineParams[] newArray(int r1) {
+            return new CameraSetAuxiliaryLineParams[r1];
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ CameraSetAuxiliaryLineParams[] newArray(int r1) {
+            return newArray(r1);
+        }
+    }
+
+    static {
+        CREATOR = new Creator();
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public CameraSetAuxiliaryLineParams() {
+        Object[] r0 = 0 == true ? 1 : 0;
+        this(null, r0, 3, 0 == true ? 1 : 0);
+    }
+
+    public static /* synthetic */ CameraSetAuxiliaryLineParams copy$default(CameraSetAuxiliaryLineParams r0, Boolean r1, String r2, int r3, Object r4) {
+        if ((r3 & 1) == 0) goto L6;
+        r1 = r0.enable;
+    L6:
+        if ((r3 & 2) == 0) goto L9;
+        r2 = r0.mode;
+    L9:
+        return r0.copy(r1, r2);
+    }
+
+    public final Boolean component1() {
+        return this.enable;
+    }
+
+    public final String component2() {
+        return this.mode;
+    }
+
+    public final CameraSetAuxiliaryLineParams copy(Boolean r1, String r2) {
+        return new CameraSetAuxiliaryLineParams(r1, r2);
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object r5) {
+        if (this != r5) goto L6;
+        return true;
+    L6:
+        if ((r5 instanceof CameraSetAuxiliaryLineParams) == true) goto L8;
+        return false;
+    L8:
+        CameraSetAuxiliaryLineParams r6 = (CameraSetAuxiliaryLineParams) r5;
+        if (Intrinsics.areEqual(this.enable, r6.enable) == true) goto L12;
+        return false;
+    L12:
+        if (Intrinsics.areEqual(this.mode, r6.mode) == true) goto L14;
+        return false;
+    L14:
+        return true;
+    }
+
+    public int hashCode() {
+        Boolean r0 = this.enable;
+        int r1 = 0;
+        if (r0 != null) goto L5;
+        int r2 = 0;
+    L6:
+        int r3 = r2 * 31;
+        String r4 = this.mode;
+        if (r4 == null) goto L11;
+        r1 = r4.hashCode();
+    L11:
+        return r3 + r1;
+    L5:
+        r2 = r0.hashCode();
+        goto L6
+    }
+
+    public String toString() {
+        return "CameraSetAuxiliaryLineParams(enable=" + this.enable + ", mode=" + this.mode + ')';
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v0, types: [android.os.Parcel, java.lang.Object] */
+    /* JADX WARN: Type inference failed for: r3v1 */
+    /* JADX WARN: Type inference failed for: r3v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v5 */
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel r2, int r3) {
+        ?? r4 = 0;
+        r2.writeInt(0);
+        Intrinsics.checkNotNullParameter(r2, "out");
+        Boolean r0 = this.enable;
+        if (r0 != null) goto L5;
+    L4:
+        r2.writeInt(r4);
+        r2.writeString(this.mode);
+        return;
+    L5:
+        r2.writeInt(1);
+        r4 = r0.booleanValue();
+        goto L4
+    }
+
+    public CameraSetAuxiliaryLineParams(Boolean r1, String r2) {
+        this.enable = r1;
+        this.mode = r2;
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public String getSubActionValue() {
+        return IntentParams.DefaultImpls.getSubActionValue(this);
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public boolean isParamsCompleted() {
+        return IntentParams.DefaultImpls.isParamsCompleted(this);
+    }
+
+    public /* synthetic */ CameraSetAuxiliaryLineParams(Boolean r2, String r3, int r4, DefaultConstructorMarker r5) {
+        if ((r4 & 1) == 0) goto L6;
+        r2 = null;
+    L6:
+        if ((r4 & 2) == 0) goto L8;
+        r3 = null;
+    L8:
+        this(r2, r3);
+    }
+
+    public final Boolean getEnable() {
+        return this.enable;
+    }
+
+    public final void setEnable(Boolean r1) {
+        this.enable = r1;
+    }
+
+    public final String getMode() {
+        return this.mode;
+    }
+
+    public final void setMode(String r1) {
+        this.mode = r1;
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public IntentParams mergeParams(Object r2) {
+        if ((r2 instanceof CameraSetAuxiliaryLineParams) == false) goto L5;
+        Boolean r0 = this.enable;
+        if (r0 != null) goto L9;
+        r0 = ((CameraSetAuxiliaryLineParams) r2).enable;
+    L9:
+        String r1 = this.mode;
+        if (r1 != null) goto L13;
+        r1 = ((CameraSetAuxiliaryLineParams) r2).mode;
+    L13:
+        return new CameraSetAuxiliaryLineParams(r0, r1);
+    L5:
+        return this;
+    }
+}

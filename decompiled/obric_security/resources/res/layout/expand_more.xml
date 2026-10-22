@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/ll"
+    android:padding="8dp"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_32">
+    <com.obric.oui.text.OTextView
+        android:textSize="@dimen/inner_common_dimen_12dp"
+        android:textColor="@color/oui_text_3"
+        android:ellipsize="end"
+        android:id="@+id/show_all_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inner_common_dimen_16dp"
+        android:text="@string/common_expand_more"
+        android:maxLines="1"
+        android:lineHeight="@dimen/inner_common_dimen_16dp"/>
+    <ImageView
+        android:id="@+id/dropdown"
+        android:visibility="visible"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:src="@drawable/oui_dropdown_default_off"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

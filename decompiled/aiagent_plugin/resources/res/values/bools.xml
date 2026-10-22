@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="config_enable_vlm_max_page_not_change_detect">false</bool>
+    <bool name="config_vlm_loading_judge_enabled">true</bool>
+    <bool name="config_vlm_using_memory_search">false</bool>
+    <bool name="config_vlm_using_streaming_reply">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="privacy_using_privacy_sdk">true</bool>
+    <bool name="privacy_using_rpdid">true</bool>
+</resources>

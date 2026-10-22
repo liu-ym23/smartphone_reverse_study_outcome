@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/markdown_action_mode_group">
+        <item
+            android:id="@+id/action_mode_copy"
+            android:title="@android:string/copy"/>
+        <item
+            android:id="@+id/action_mode_select_all"
+            android:title="@android:string/selectAll"/>
+    </group>
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedance="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedanceos.security.widget.SlideListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        bytedance:slider_checkbox_id="@+id/processes_item_cb"
+        bytedance:slider_enabled="true"
+        style="@style/OScrollbar.Vertical"/>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:layout_width="@dimen/list_item_maximum_width"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/list_item_land_container_width"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView1"
+            android:visibility="gone"
+            style="@style/SettingItemTipsStyle"/>
+        <com.android.settings.widget.SettingItemButton
+            android:id="@+id/textView2"
+            android:text="@string/clear_preferred_settings"
+            style="@style/SettingSubItemSingleStyle"/>
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/SettingItemTipsStyle"/>
+    </LinearLayout>
+</RelativeLayout>

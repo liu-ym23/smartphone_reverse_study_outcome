@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.flow.cardlistpage.ui.popup.WidgetLayer xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/widget_layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/container_view"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.flow.cardlistpage.ui.drag.DragInsertRecyclerView
+            android:id="@+id/recycler_view"
+            android:paddingBottom="56dp"
+            android:fadingEdgeLength="138dp"
+            android:clipChildren="false"
+            android:clipToPadding="true"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:requiresFadingEdge="vertical"/>
+        <FrameLayout
+            android:layout_gravity="top"
+            android:id="@+id/header_real_density_container"
+            android:clipChildren="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <com.obric.flow.cardlistpage.ui.popup.ScrimView
+        android:id="@+id/scrim_view"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.obric.flow.cardlistpage.ui.popup.WidgetLayer>

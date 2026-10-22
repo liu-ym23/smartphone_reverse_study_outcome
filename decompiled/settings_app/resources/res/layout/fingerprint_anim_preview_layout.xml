@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@drawable/preview_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/fingerprint_animation"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/bottom_layout"
+        android:background="@drawable/preview_slider_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fingerprint_bottom_height"
+        android:layout_alignParentBottom="true">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fingerprint_recyclerView_margin_top"
+            android:overScrollMode="never"/>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true">
+        <com.android.settings.widget.FingerprintAnimView
+            android:id="@+id/anim_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

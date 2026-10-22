@@ -1,0 +1,258 @@
+package com.obric.memorydata.sdk.memory;
+
+import android.os.Binder;
+import android.os.Bundle;
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Parcel;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+
+/* JADX INFO: loaded from: classes4.dex */
+public interface IMemoryService extends IInterface {
+
+    public static class Default implements IMemoryService {
+        @Override // android.os.IInterface
+        public IBinder asBinder() {
+            return null;
+        }
+
+        @Override // com.obric.memorydata.sdk.memory.IMemoryService
+        public boolean getDialogueMemoryEnableState() {
+            return false;
+        }
+
+        @Override // com.obric.memorydata.sdk.memory.IMemoryService
+        public void registerMemoryCallback(IMemoryCallback r2) {
+            IMemoryCallback r1 = (IMemoryCallback) ZeusTransformUtils.wrapperContextForParams(r2, IMemoryCallback.class, "com.obric.aiagent.plugin");
+        }
+
+        @Override // com.obric.memorydata.sdk.memory.IMemoryService
+        public void saveAssistantChatMemory(String r1, String r2, Bundle r3) {
+        }
+
+        @Override // com.obric.memorydata.sdk.memory.IMemoryService
+        public void syncAssistantChat(String r1) {
+        }
+
+        public Default() {
+        }
+    }
+
+    public static abstract class Stub extends Binder implements IMemoryService {
+        private static final String DESCRIPTOR = "com.obric.memorydata.sdk.memory.IMemoryService";
+        static final int TRANSACTION_getDialogueMemoryEnableState = 3;
+        static final int TRANSACTION_registerMemoryCallback = 1;
+        static final int TRANSACTION_saveAssistantChatMemory = 2;
+        static final int TRANSACTION_syncAssistantChat = 4;
+
+        private static class Proxy implements IMemoryService {
+            public static IMemoryService sDefaultImpl;
+            private IBinder mRemote;
+
+            public String getInterfaceDescriptor() {
+                return Stub.DESCRIPTOR;
+            }
+
+            Proxy(IBinder r3) {
+                this.mRemote = (IBinder) ZeusTransformUtils.wrapperContextForParams(r3, IBinder.class, "com.obric.aiagent.plugin");
+            }
+
+            @Override // android.os.IInterface
+            public IBinder asBinder() {
+                return this.mRemote;
+            }
+
+            @Override // com.obric.memorydata.sdk.memory.IMemoryService
+            public void registerMemoryCallback(IMemoryCallback r5) {
+                IMemoryCallback r6 = (IMemoryCallback) ZeusTransformUtils.wrapperContextForParams(r5, IMemoryCallback.class, "com.obric.aiagent.plugin");
+                Parcel r0 = Parcel.obtain();
+                Parcel r1 = Parcel.obtain();
+                r0.writeInterfaceToken(Stub.DESCRIPTOR);     // Catch: Throwable -> L17
+                if (r6 == null) goto L6;
+                IBinder r2 = r6.asBinder();     // Catch: Throwable -> L17
+            L7:
+                r0.writeStrongBinder(r2);     // Catch: Throwable -> L17
+                if (this.mRemote.transact(1, r0, r1, 0) == false) goto L10;
+            L14:
+                r1.readException();     // Catch: Throwable -> L17
+                r1.recycle();
+                r0.recycle();
+                return;
+            L10:
+                if (Stub.getDefaultImpl() == null) goto L14;
+                Stub.getDefaultImpl().registerMemoryCallback(r6);     // Catch: Throwable -> L17
+                r1.recycle();
+                r0.recycle();
+                return;
+            L6:
+                r2 = null;
+            L17:
+                th = move-exception;
+                r1.recycle();
+                r0.recycle();
+                throw th;
+            }
+
+            @Override // com.obric.memorydata.sdk.memory.IMemoryService
+            public void saveAssistantChatMemory(String r5, String r6, Bundle r7) {
+                Parcel r0 = Parcel.obtain();
+                r0.writeInterfaceToken(Stub.DESCRIPTOR);     // Catch: Throwable -> L16
+                r0.writeString(r5);     // Catch: Throwable -> L16
+                r0.writeString(r6);     // Catch: Throwable -> L16
+                if (r7 == null) goto L6;
+                r0.writeInt(1);     // Catch: Throwable -> L16
+                r7.writeToParcel(r0, 0);     // Catch: Throwable -> L16
+            L8:
+                if (this.mRemote.transact(2, r0, null, 1) == false) goto L10;
+            L14:
+                r0.recycle();
+                return;
+            L10:
+                if (Stub.getDefaultImpl() == null) goto L14;
+                Stub.getDefaultImpl().saveAssistantChatMemory(r5, r6, r7);     // Catch: Throwable -> L16
+                r0.recycle();
+                return;
+            L6:
+                r0.writeInt(0);     // Catch: Throwable -> L16
+            L16:
+                th = move-exception;
+                r0.recycle();
+                throw th;
+            }
+
+            @Override // com.obric.memorydata.sdk.memory.IMemoryService
+            public boolean getDialogueMemoryEnableState() {
+                Parcel r0 = Parcel.obtain();
+                Parcel r1 = Parcel.obtain();
+                r0.writeInterfaceToken(Stub.DESCRIPTOR);     // Catch: Throwable -> L15
+                boolean r3 = false;
+                if (this.mRemote.transact(3, r0, r1, 0) == false) goto L6;
+            L10:
+                r1.readException();     // Catch: Throwable -> L15
+                if (r1.readInt() == 0) goto L13;
+                r3 = true;
+            L13:
+                r1.recycle();
+                r0.recycle();
+                return r3;
+            L6:
+                if (Stub.getDefaultImpl() == null) goto L10;
+                boolean r4 = Stub.getDefaultImpl().getDialogueMemoryEnableState();     // Catch: Throwable -> L15
+                r1.recycle();
+                r0.recycle();
+                return r4;
+            L15:
+                th = move-exception;
+                r1.recycle();
+                r0.recycle();
+                throw th;
+            }
+
+            @Override // com.obric.memorydata.sdk.memory.IMemoryService
+            public void syncAssistantChat(String r5) {
+                Parcel r0 = Parcel.obtain();
+                r0.writeInterfaceToken(Stub.DESCRIPTOR);     // Catch: Throwable -> L12
+                r0.writeString(r5);     // Catch: Throwable -> L12
+                if (this.mRemote.transact(4, r0, null, 1) == false) goto L6;
+            L10:
+                r0.recycle();
+                return;
+            L6:
+                if (Stub.getDefaultImpl() == null) goto L10;
+                Stub.getDefaultImpl().syncAssistantChat(r5);     // Catch: Throwable -> L12
+                r0.recycle();
+                return;
+            L12:
+                th = move-exception;
+                r0.recycle();
+                throw th;
+            }
+        }
+
+        @Override // android.os.IInterface
+        public IBinder asBinder() {
+            return this;
+        }
+
+        public Stub() {
+            attachInterface(this, DESCRIPTOR);
+        }
+
+        public static IMemoryService asInterface(IBinder r3) {
+            IBinder r4 = (IBinder) ZeusTransformUtils.wrapperContextForParams(r3, IBinder.class, "com.obric.aiagent.plugin");
+            if (r4 != null) goto L6;
+            return null;
+        L6:
+            IInterface r0 = r4.queryLocalInterface(DESCRIPTOR);
+            if (r0 == null) goto L13;
+            if (ZeusTransformUtils.instanceOf(r0, IMemoryService.class) == false) goto L13;
+            return (IMemoryService) ZeusTransformUtils.preCheckCast(r0, IMemoryService.class, "com.obric.aiagent.plugin");
+        L13:
+            return new Proxy(r4);
+        }
+
+        @Override // android.os.Binder
+        public boolean onTransact(int r4, Parcel r5, Parcel r6, int r7) {
+            if (r4 != 1) goto L5;
+            r5.enforceInterface(DESCRIPTOR);
+            registerMemoryCallback(IMemoryCallback.Stub.asInterface(r5.readStrongBinder()));
+            r6.writeNoException();
+            return true;
+        L5:
+            if (r4 != 2) goto L7;
+            r5.enforceInterface(DESCRIPTOR);
+            String r8 = r5.readString();
+            String r9 = r5.readString();
+            if (r5.readInt() == 0) goto L23;
+            Bundle r10 = (Bundle) ZeusTransformUtils.preCheckCast(Bundle.CREATOR.createFromParcel(r5), Bundle.class, "com.obric.aiagent.plugin");
+        L24:
+            saveAssistantChatMemory(r8, r9, r10);
+            return true;
+        L23:
+            r10 = null;
+            goto L24
+        L7:
+            if (r4 != 3) goto L9;
+            r5.enforceInterface(DESCRIPTOR);
+            boolean r3 = getDialogueMemoryEnableState();
+            r6.writeNoException();
+            r6.writeInt(r3 ? 1 : 0);
+            return true;
+        L9:
+            if (r4 != 4) goto L11;
+            r5.enforceInterface(DESCRIPTOR);
+            syncAssistantChat(r5.readString());
+            return true;
+        L11:
+            if (r4 != 1598968902) goto L13;
+            r6.writeString(DESCRIPTOR);
+            return true;
+        L13:
+            return super.onTransact(r4, r5, r6, r7);
+        }
+
+        public static boolean setDefaultImpl(IMemoryService r2) {
+            IMemoryService r3 = (IMemoryService) ZeusTransformUtils.wrapperContextForParams(r2, IMemoryService.class, "com.obric.aiagent.plugin");
+            if (Proxy.sDefaultImpl != null) goto L7;
+            if (r3 == null) goto L9;
+            Proxy.sDefaultImpl = r3;
+            return true;
+        L9:
+            return false;
+        L7:
+            return false;
+        }
+
+        public static IMemoryService getDefaultImpl() {
+            return Proxy.sDefaultImpl;
+        }
+    }
+
+    boolean getDialogueMemoryEnableState();
+
+    void registerMemoryCallback(IMemoryCallback r1);
+
+    void saveAssistantChatMemory(String r1, String r2, Bundle r3);
+
+    void syncAssistantChat(String r1);
+}

@@ -1,0 +1,939 @@
+package com.ttnet.org.chromium.net.impl;
+
+import android.net.TrafficStats;
+import android.os.Build;
+import android.util.Log;
+import com.bytedance.apm6.util.constant.NetConst;
+import com.bytedance.retrofit2.HttpMethodContrants;
+import com.bytedance.security.dbcipher.utils.CipherConst;
+import com.ttnet.org.chromium.net.CronetException;
+import com.ttnet.org.chromium.net.InlineExecutionProhibitedException;
+import com.ttnet.org.chromium.net.UploadDataProvider;
+import com.ttnet.org.chromium.net.UrlRequest;
+import com.ttnet.org.chromium.net.UrlResponseInfo;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.nio.ByteBuffer;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+import java.nio.channels.WritableByteChannel;
+import java.time.Duration;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.TreeMap;
+import java.util.concurrent.Executor;
+import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+
+/* JADX INFO: loaded from: classes6.dex */
+final class JavaUrlRequest extends UrlRequestBase {
+    private static final int DEFAULT_CHUNK_LENGTH = 8192;
+    private static final String TAG = "JavaUrlRequest";
+    private static final String USER_AGENT = "User-Agent";
+    private static final String X_ANDROID = "X-Android";
+    private static final String X_ANDROID_SELECTED_TRANSPORT = "X-Android-Selected-Transport";
+    private volatile int mAdditionalStatusDetails;
+    private final boolean mAllowDirectExecutor;
+    private final AsyncUrlRequestCallback mCallbackAsync;
+    private final int mCronetEngineId;
+    private String mCurrentUrl;
+    private HttpURLConnection mCurrentUrlConnection;
+    private final Executor mExecutor;
+    private String mInitialMethod;
+    private final CronetLogger mLogger;
+    private OutputStreamDataSink mOutputStreamDataSink;
+    private String mPendingRedirectUrl;
+    private final Map<String, String> mRequestHeaders;
+    private ReadableByteChannel mResponseChannel;
+    private final AtomicInteger mState;
+    private VersionSafeCallbacks.UploadDataProviderWrapper mUploadDataProvider;
+    private Executor mUploadExecutor;
+    private final AtomicBoolean mUploadProviderClosed;
+    private final List<String> mUrlChain;
+    private UrlResponseInfoImpl mUrlResponseInfo;
+    private final String mUserAgent;
+
+    private final class AsyncUrlRequestCallback {
+        static final /* synthetic */ boolean $assertionsDisabled = false;
+        final VersionSafeCallbacks.UrlRequestCallback mCallback;
+        final Executor mFallbackExecutor;
+        final Executor mUserExecutor;
+        final /* synthetic */ JavaUrlRequest this$0;
+
+        static {
+        }
+
+        AsyncUrlRequestCallback(JavaUrlRequest r3, UrlRequest.Callback r4, Executor r5) {
+            Executor r6 = (Executor) ZeusTransformUtils.wrapperContextForParams(r5, Executor.class, "com.obric.memorydata.plugin");
+            this.this$0 = r3;
+            this.mCallback = new VersionSafeCallbacks.UrlRequestCallback(r4);
+            if (JavaUrlRequest.access$3200(r3) == false) goto L5;
+            this.mUserExecutor = r6;
+            this.mFallbackExecutor = null;
+            return;
+        L5:
+            this.mUserExecutor = new JavaUrlRequestUtils.DirectPreventingExecutor(r6);
+            this.mFallbackExecutor = r6;
+        }
+
+        static /* synthetic */ void access$3900(AsyncUrlRequestCallback r0) {
+            r0.maybeReportMetrics();
+        }
+
+        private CronetLogger.CronetTrafficInfo buildCronetTrafficInfo() {
+            if (JavaUrlRequest.access$1400(this.this$0) == null) goto L5;
+            Map<String, List<String>> r1 = JavaUrlRequest.access$1400(this.this$0).getAllHeaders();
+            String r3 = JavaUrlRequest.access$1400(this.this$0).getNegotiatedProtocol();
+            int r4 = JavaUrlRequest.access$1400(this.this$0).getHttpStatusCode();
+            boolean r5 = JavaUrlRequest.access$1400(this.this$0).wasCached();
+            String r15 = r3;
+            int r12 = r4;
+        L7:
+            if (r5 == false) goto L9;
+            long r8 = 0;
+            long r10 = 0;
+        L10:
+            if (r5 == false) goto L12;
+            long r0 = 0;
+            long r13 = 0;
+        L17:
+            return new CronetLogger.CronetTrafficInfo(r8, r10, r13, r0, r12, Duration.ofSeconds(0), Duration.ofSeconds(0), r15, false, false);
+        L12:
+            r13 = JavaUrlRequest.estimateHeadersSizeInBytesList(r1);
+            if (r1.containsKey("Content-Length") == false) goto L15;
+            r0 = JavaUrlRequest.access$3500((String) ZeusTransformUtils.preCheckCast(((List) ZeusTransformUtils.preCheckCast(r1.get("Content-Length"), List.class, "com.obric.memorydata.plugin")).get(0), String.class, "com.obric.memorydata.plugin"));
+            goto L17
+        L15:
+            r0 = -1;
+            goto L17
+        L9:
+            r8 = JavaUrlRequest.estimateHeadersSizeInBytes(JavaUrlRequest.access$2200(this.this$0));
+            r10 = -1;
+            goto L10
+        L5:
+            r1 = Collections.emptyMap();
+            r5 = false;
+            r12 = 0;
+            r15 = "";
+            goto L7
+        }
+
+        private void maybeReportMetrics() {
+            if (Build.VERSION.SDK_INT < 26) goto L11;
+            JavaUrlRequest.access$3700(this.this$0).logCronetTrafficInfo(JavaUrlRequest.access$3600(this.this$0), buildCronetTrafficInfo());     // Catch: RuntimeException -> L6
+            return;
+        L6:
+            e = move-exception;
+            Log.e(JavaUrlRequest.access$3100(), "Error while trying to log CronetTrafficInfo: ", e);
+            return;
+        }
+
+        void execute(JavaUrlRequestUtils.CheckedRunnable r3) {
+            JavaUrlRequestUtils.CheckedRunnable r4 = (JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin");
+            this.mUserExecutor.execute(JavaUrlRequest.access$3300(this.this$0, r4));     // Catch: RejectedExecutionException -> L5
+            return;
+        L5:
+            e = move-exception;
+            JavaUrlRequest.access$3400(this.this$0, new CronetExceptionImpl("Exception posting task to executor", e));
+        }
+
+        void onCanceled(final UrlResponseInfo r3) {
+            JavaUrlRequest.access$3800(this.this$0);
+            this.mUserExecutor.execute(new AnonymousClass5(this, r3));
+        }
+
+        void onFailed(final UrlResponseInfo r2, final CronetException r3) {
+            JavaUrlRequest.access$3800(this.this$0);
+            Runnable r0 = new AnonymousClass7(this, r2, r3);
+            this.mUserExecutor.execute(r0);     // Catch: InlineExecutionProhibitedException -> L5
+            return;
+        L5:
+            Executor r1 = this.mFallbackExecutor;
+            if (r1 == null) goto L11;
+            r1.execute(r0);
+            return;
+        }
+
+        void onReadCompleted(final UrlResponseInfo r2, final ByteBuffer r3) {
+            execute(new AnonymousClass4(this, r2, r3));
+        }
+
+        void onRedirectReceived(final UrlResponseInfo r2, final String r3) {
+            execute(new AnonymousClass2(this, r2, r3));
+        }
+
+        void onResponseStarted(UrlResponseInfo r1) {
+            execute(new AnonymousClass3(this));
+        }
+
+        void onSucceeded(final UrlResponseInfo r3) {
+            this.mUserExecutor.execute(new AnonymousClass6(this, r3));
+        }
+
+        void sendStatus(final VersionSafeCallbacks.UrlRequestStatusListener r3, final int r4) {
+            this.mUserExecutor.execute(new AnonymousClass1(this, r3, r4));
+        }
+    }
+
+    private final class OutputStreamDataSink extends JavaUploadDataSinkBase {
+        private WritableByteChannel mOutputChannel;
+        private final AtomicBoolean mOutputChannelClosed;
+        private final HttpURLConnection mUrlConnection;
+        private OutputStream mUrlConnectionOutputStream;
+        final /* synthetic */ JavaUrlRequest this$0;
+
+        OutputStreamDataSink(JavaUrlRequest r3, Executor r4, Executor r5, HttpURLConnection r6, VersionSafeCallbacks.UploadDataProviderWrapper r7) {
+            Executor r8 = (Executor) ZeusTransformUtils.wrapperContextForParams(r4, Executor.class, "com.obric.memorydata.plugin");
+            Executor r9 = (Executor) ZeusTransformUtils.wrapperContextForParams(r5, Executor.class, "com.obric.memorydata.plugin");
+            this.this$0 = r3;
+            super(r8, r9, r7);
+            this.mOutputChannelClosed = new AtomicBoolean(false);
+            this.mUrlConnection = r6;
+        }
+
+        void closeOutputChannel() {
+            if (this.mOutputChannel != null) goto L5;
+            return;
+        L5:
+            if (this.mOutputChannelClosed.compareAndSet(false, true) == false) goto L9;
+            this.mOutputChannel.close();
+            return;
+        }
+
+        @Override // com.ttnet.org.chromium.net.impl.JavaUploadDataSinkBase
+        public void finish() {
+            closeOutputChannel();
+            JavaUrlRequest.access$500(this.this$0);
+        }
+
+        @Override // com.ttnet.org.chromium.net.impl.JavaUploadDataSinkBase
+        public Runnable getErrorSettingRunnable(JavaUrlRequestUtils.CheckedRunnable r3) {
+            JavaUrlRequestUtils.CheckedRunnable r4 = (JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin");
+            return JavaUrlRequest.access$600(this.this$0, r4);
+        }
+
+        @Override // com.ttnet.org.chromium.net.impl.JavaUploadDataSinkBase
+        public Runnable getUploadErrorSettingRunnable(JavaUrlRequestUtils.CheckedRunnable r3) {
+            JavaUrlRequestUtils.CheckedRunnable r4 = (JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin");
+            return JavaUrlRequest.access$700(this.this$0, r4);
+        }
+
+        @Override // com.ttnet.org.chromium.net.impl.JavaUploadDataSinkBase
+        public void initializeRead() {
+            if (this.mOutputChannel != null) goto L6;
+            JavaUrlRequest.access$402(this.this$0, 10);
+            this.mUrlConnection.setDoOutput(true);
+            this.mUrlConnection.connect();
+            JavaUrlRequest.access$402(this.this$0, 12);
+            OutputStream r0 = this.mUrlConnection.getOutputStream();
+            this.mUrlConnectionOutputStream = r0;
+            this.mOutputChannel = Channels.newChannel(r0);
+            return;
+        }
+
+        @Override // com.ttnet.org.chromium.net.impl.JavaUploadDataSinkBase
+        public void initializeStart(long r3) {
+            HttpURLConnection r2 = this.mUrlConnection;
+            if (r3 <= 0) goto L5;
+            r2.setFixedLengthStreamingMode(r3);
+            return;
+        L5:
+            r2.setChunkedStreamingMode(8192);
+        }
+
+        @Override // com.ttnet.org.chromium.net.impl.JavaUploadDataSinkBase
+        public int processSuccessfulRead(ByteBuffer r3) {
+            int r0 = 0;
+        L4:
+            if (r3.hasRemaining() == false) goto L6;
+            r0 = r0 + this.mOutputChannel.write(r3);
+            goto L4
+        L6:
+            this.mUrlConnectionOutputStream.flush();
+            return r0;
+        }
+
+        @Override // com.ttnet.org.chromium.net.impl.JavaUploadDataSinkBase
+        public void processUploadError(Throwable r1) {
+            JavaUrlRequest.access$800(this.this$0, r1);
+        }
+    }
+
+    private static final class SerializingExecutor implements Executor {
+        private final Runnable mRunTasks;
+        private boolean mRunning;
+        private final ArrayDeque<Runnable> mTaskQueue;
+        private final Executor mUnderlyingExecutor;
+
+        SerializingExecutor(Executor r3) {
+            Executor r4 = (Executor) ZeusTransformUtils.wrapperContextForParams(r3, Executor.class, "com.obric.memorydata.plugin");
+            this.mRunTasks = new AnonymousClass1(this);
+            this.mTaskQueue = new ArrayDeque();
+            this.mUnderlyingExecutor = r4;
+        }
+
+        static /* synthetic */ ArrayDeque access$000(SerializingExecutor r0) {
+            return r0.mTaskQueue;
+        }
+
+        static /* synthetic */ boolean access$100(SerializingExecutor r0) {
+            return r0.mRunning;
+        }
+
+        static /* synthetic */ boolean access$102(SerializingExecutor r0, boolean r1) {
+            r0.mRunning = r1;
+            return r1;
+        }
+
+        static /* synthetic */ Runnable access$200(SerializingExecutor r0) {
+            return r0.mRunTasks;
+        }
+
+        static /* synthetic */ Executor access$300(SerializingExecutor r0) {
+            return r0.mUnderlyingExecutor;
+        }
+
+        @Override // java.util.concurrent.Executor
+        public void execute(Runnable r3) {
+            Runnable r4 = (Runnable) ZeusTransformUtils.wrapperContextForParams(r3, Runnable.class, "com.obric.memorydata.plugin");
+            ArrayDeque<Runnable> r0 = this.mTaskQueue;
+            monitor-enter(r0);
+            this.mTaskQueue.addLast(r4);     // Catch: Throwable -> L10
+            this.mUnderlyingExecutor.execute(this.mRunTasks);     // Catch: RejectedExecutionException -> L7 Throwable -> L10
+        L8:
+            monitor-exit(r0);     // Catch: Throwable -> L10
+            return;
+        L7:
+            this.mTaskQueue.removeLast();     // Catch: Throwable -> L10
+        L10:
+            th = move-exception;
+            throw th;
+        }
+    }
+
+    static {
+    }
+
+    JavaUrlRequest(JavaCronetEngine r11, UrlRequest.Callback r12, Executor r13, Executor r14, String r15, String r16, boolean r17, boolean r18, int r19, final boolean r20, final int r21) {
+        final Executor r3 = (Executor) ZeusTransformUtils.wrapperContextForParams(r13, Executor.class, "com.obric.memorydata.plugin");
+        Executor r1 = (Executor) ZeusTransformUtils.wrapperContextForParams(r14, Executor.class, "com.obric.memorydata.plugin");
+        this.mRequestHeaders = new TreeMap(String.CASE_INSENSITIVE_ORDER);
+        this.mUrlChain = new ArrayList();
+        this.mState = new AtomicInteger(0);
+        this.mUploadProviderClosed = new AtomicBoolean(false);
+        this.mAdditionalStatusDetails = -1;
+        Objects.requireNonNull(r15, "URL is required");
+        Objects.requireNonNull(r12, "Listener is required");
+        Objects.requireNonNull(r3, "Executor is required");
+        Objects.requireNonNull(r1, "userExecutor is required");
+        this.mAllowDirectExecutor = r17;
+        this.mCallbackAsync = new AsyncUrlRequestCallback(this, r12, r1);
+        if (r18 == false) goto L5;
+        int r4 = r19;
+    L6:
+        final int r5 = r4;
+        this.mExecutor = new SerializingExecutor(new AnonymousClass1(this, r3, r5, r20, r21));
+        this.mCronetEngineId = r11.getCronetEngineId();
+        this.mLogger = r11.getCronetLogger();
+        this.mCurrentUrl = r15;
+        this.mUserAgent = r16;
+        return;
+    L5:
+        r4 = TrafficStats.getThreadStatsTag();
+        goto L6
+    }
+
+    static /* synthetic */ List access$1000(JavaUrlRequest r0) {
+        return r0.mUrlChain;
+    }
+
+    static /* synthetic */ void access$1100(JavaUrlRequest r0) {
+        r0.fireOpenConnection();
+    }
+
+    static /* synthetic */ String access$1200(JavaUrlRequest r0) {
+        return r0.mPendingRedirectUrl;
+    }
+
+    static /* synthetic */ String access$1202(JavaUrlRequest r0, String r1) {
+        r0.mPendingRedirectUrl = r1;
+        return r1;
+    }
+
+    static /* synthetic */ HttpURLConnection access$1300(JavaUrlRequest r0) {
+        return r0.mCurrentUrlConnection;
+    }
+
+    static /* synthetic */ HttpURLConnection access$1302(JavaUrlRequest r0, HttpURLConnection r1) {
+        r0.mCurrentUrlConnection = r1;
+        return r1;
+    }
+
+    static /* synthetic */ UrlResponseInfoImpl access$1400(JavaUrlRequest r0) {
+        return r0.mUrlResponseInfo;
+    }
+
+    static /* synthetic */ UrlResponseInfoImpl access$1402(JavaUrlRequest r0, UrlResponseInfoImpl r1) {
+        r0.mUrlResponseInfo = r1;
+        return r1;
+    }
+
+    static /* synthetic */ void access$1500(JavaUrlRequest r0, String r1) {
+        r0.fireRedirectReceived(r1);
+    }
+
+    static /* synthetic */ void access$1600(JavaUrlRequest r0) {
+        r0.fireCloseUploadDataProvider();
+    }
+
+    static /* synthetic */ ReadableByteChannel access$1700(JavaUrlRequest r0) {
+        return r0.mResponseChannel;
+    }
+
+    static /* synthetic */ ReadableByteChannel access$1702(JavaUrlRequest r2, ReadableByteChannel r3) {
+        ReadableByteChannel r4 = (ReadableByteChannel) ZeusTransformUtils.wrapperContextForParams(r3, ReadableByteChannel.class, "com.obric.memorydata.plugin");
+        r2.mResponseChannel = r4;
+        return r4;
+    }
+
+    static /* synthetic */ AsyncUrlRequestCallback access$1800(JavaUrlRequest r0) {
+        return r0.mCallbackAsync;
+    }
+
+    static /* synthetic */ VersionSafeCallbacks.UploadDataProviderWrapper access$1900(JavaUrlRequest r0) {
+        return r0.mUploadDataProvider;
+    }
+
+    static /* synthetic */ void access$2000(JavaUrlRequest r2, int r3, int r4, Runnable r5) {
+        r2.transitionStates(r3, r4, (Runnable) ZeusTransformUtils.wrapperContextForParams(r5, Runnable.class, "com.obric.memorydata.plugin"));
+    }
+
+    static /* synthetic */ AtomicInteger access$2100(JavaUrlRequest r0) {
+        return r0.mState;
+    }
+
+    static /* synthetic */ Map access$2200(JavaUrlRequest r0) {
+        return r0.mRequestHeaders;
+    }
+
+    static /* synthetic */ String access$2300(JavaUrlRequest r0) {
+        return r0.mUserAgent;
+    }
+
+    static /* synthetic */ String access$2400(JavaUrlRequest r0) {
+        return r0.mInitialMethod;
+    }
+
+    static /* synthetic */ String access$2402(JavaUrlRequest r0, String r1) {
+        r0.mInitialMethod = r1;
+        return r1;
+    }
+
+    static /* synthetic */ OutputStreamDataSink access$2500(JavaUrlRequest r0) {
+        return r0.mOutputStreamDataSink;
+    }
+
+    static /* synthetic */ OutputStreamDataSink access$2502(JavaUrlRequest r0, OutputStreamDataSink r1) {
+        r0.mOutputStreamDataSink = r1;
+        return r1;
+    }
+
+    static /* synthetic */ Executor access$2600(JavaUrlRequest r0) {
+        return r0.mUploadExecutor;
+    }
+
+    static /* synthetic */ Executor access$2700(JavaUrlRequest r0) {
+        return r0.mExecutor;
+    }
+
+    static /* synthetic */ void access$2800(JavaUrlRequest r0, Throwable r1) {
+        r0.enterCronetErrorState(r1);
+    }
+
+    static /* synthetic */ void access$2900(JavaUrlRequest r0, Throwable r1) {
+        r0.enterUserErrorState(r1);
+    }
+
+    static /* synthetic */ void access$3000(JavaUrlRequest r0, int r1, ByteBuffer r2) {
+        r0.processReadResult(r1, r2);
+    }
+
+    static /* synthetic */ String access$3100() {
+        return TAG;
+    }
+
+    static /* synthetic */ boolean access$3200(JavaUrlRequest r0) {
+        return r0.mAllowDirectExecutor;
+    }
+
+    static /* synthetic */ Runnable access$3300(JavaUrlRequest r2, JavaUrlRequestUtils.CheckedRunnable r3) {
+        return r2.userErrorSetting((JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin"));
+    }
+
+    static /* synthetic */ void access$3400(JavaUrlRequest r0, CronetException r1) {
+        r0.enterErrorState(r1);
+    }
+
+    static /* synthetic */ long access$3500(String r2) {
+        return parseContentLengthString(r2);
+    }
+
+    static /* synthetic */ int access$3600(JavaUrlRequest r0) {
+        return r0.mCronetEngineId;
+    }
+
+    static /* synthetic */ CronetLogger access$3700(JavaUrlRequest r0) {
+        return r0.mLogger;
+    }
+
+    static /* synthetic */ void access$3800(JavaUrlRequest r0) {
+        r0.closeResponseChannel();
+    }
+
+    static /* synthetic */ int access$402(JavaUrlRequest r0, int r1) {
+        r0.mAdditionalStatusDetails = r1;
+        return r1;
+    }
+
+    static /* synthetic */ void access$500(JavaUrlRequest r0) {
+        r0.fireGetHeaders();
+    }
+
+    static /* synthetic */ Runnable access$600(JavaUrlRequest r2, JavaUrlRequestUtils.CheckedRunnable r3) {
+        return r2.errorSetting((JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin"));
+    }
+
+    static /* synthetic */ Runnable access$700(JavaUrlRequest r2, JavaUrlRequestUtils.CheckedRunnable r3) {
+        return r2.uploadErrorSetting((JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin"));
+    }
+
+    static /* synthetic */ void access$800(JavaUrlRequest r0, Throwable r1) {
+        r0.enterUploadErrorState(r1);
+    }
+
+    static /* synthetic */ String access$900(JavaUrlRequest r0) {
+        return r0.mCurrentUrl;
+    }
+
+    static /* synthetic */ String access$902(JavaUrlRequest r0, String r1) {
+        r0.mCurrentUrl = r1;
+        return r1;
+    }
+
+    private void checkNotStarted() {
+        int r3 = this.mState.get();
+        if (r3 != 0) goto L6;
+        return;
+    L6:
+        throw new IllegalStateException("Request is already started. State is: " + r3);
+    }
+
+    private void closeResponseChannel() {
+        this.mExecutor.execute(new AnonymousClass13(this));
+    }
+
+    private void enterCronetErrorState(Throwable r3) {
+        enterErrorState(new CronetExceptionImpl("System error", r3));
+    }
+
+    private void enterErrorState(CronetException r2) {
+        if (setTerminalState(6) == false) goto L6;
+        fireDisconnect();
+        fireCloseUploadDataProvider();
+        this.mCallbackAsync.onFailed(this.mUrlResponseInfo, r2);
+        return;
+    }
+
+    private void enterUploadErrorState(Throwable r3) {
+        enterErrorState(new CallbackExceptionImpl("Exception received from UploadDataProvider", r3));
+    }
+
+    private void enterUserErrorState(Throwable r3) {
+        enterErrorState(new CallbackExceptionImpl("Exception received from UrlRequest.Callback", r3));
+    }
+
+    private Runnable errorSetting(JavaUrlRequestUtils.CheckedRunnable r3) {
+        final JavaUrlRequestUtils.CheckedRunnable r4 = (JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin");
+        return new AnonymousClass8(this, r4);
+    }
+
+    static long estimateHeadersSizeInBytes(Map<String, String> r6) {
+        Map r7 = (Map) ZeusTransformUtils.wrapperContextForParams(r6, Map.class, "com.obric.memorydata.plugin");
+        long r2 = 0;
+        if (r7 != null) goto L5;
+        return 0;
+    L5:
+        Iterator r8 = r7.entrySet().iterator();
+    L7:
+        if (r8.hasNext() == false) goto L14;
+        Map.Entry r0 = (Map.Entry) ZeusTransformUtils.preCheckCast(r8.next(), Map.Entry.class, "com.obric.memorydata.plugin");
+        String r4 = (String) ZeusTransformUtils.preCheckCast(r0.getKey(), String.class, "com.obric.memorydata.plugin");
+        if (r4 == null) goto L11;
+        r2 = r2 + ((long) r4.length());
+    L11:
+        String r1 = (String) ZeusTransformUtils.preCheckCast(r0.getValue(), String.class, "com.obric.memorydata.plugin");
+        if (r1 == null) goto L7;
+        r2 = r2 + ((long) r1.length());
+        goto L7
+    L14:
+        return r2;
+    }
+
+    static long estimateHeadersSizeInBytesList(Map<String, List<String>> r6) {
+        Map r7 = (Map) ZeusTransformUtils.wrapperContextForParams(r6, Map.class, "com.obric.memorydata.plugin");
+        long r2 = 0;
+        if (r7 != null) goto L5;
+        return 0;
+    L5:
+        Iterator r8 = r7.entrySet().iterator();
+    L7:
+        if (r8.hasNext() == false) goto L20;
+        Map.Entry r0 = (Map.Entry) ZeusTransformUtils.preCheckCast(r8.next(), Map.Entry.class, "com.obric.memorydata.plugin");
+        String r4 = (String) ZeusTransformUtils.preCheckCast(r0.getKey(), String.class, "com.obric.memorydata.plugin");
+        if (r4 == null) goto L12;
+        r2 = r2 + ((long) r4.length());
+    L12:
+        if (r0.getValue() == null) goto L7;
+        Iterator r1 = ((List) ZeusTransformUtils.preCheckCast(r0.getValue(), List.class, "com.obric.memorydata.plugin")).iterator();
+    L16:
+        if (r1.hasNext() == false) goto L7;
+        String r5 = (String) ZeusTransformUtils.preCheckCast(r1.next(), String.class, "com.obric.memorydata.plugin");
+        if (r5 == null) goto L16;
+        r2 = r2 + ((long) r5.length());
+        goto L16
+    L20:
+        return r2;
+    }
+
+    private void fireCloseUploadDataProvider() {
+        if (this.mUploadDataProvider != null) goto L5;
+        return;
+    L5:
+        if (this.mUploadProviderClosed.compareAndSet(false, true) == false) goto L14;
+        this.mUploadExecutor.execute(uploadErrorSetting(new AnonymousClass5(this)));     // Catch: RejectedExecutionException -> L8
+        return;
+    L8:
+        e = move-exception;
+        Log.e(TAG, "Exception when closing uploadDataProvider", e);
+        return;
+    }
+
+    private void fireDisconnect() {
+        this.mExecutor.execute(new AnonymousClass12(this));
+    }
+
+    private void fireGetHeaders() {
+        this.mAdditionalStatusDetails = 13;
+        this.mExecutor.execute(errorSetting(new AnonymousClass4(this)));
+    }
+
+    private void fireOpenConnection() {
+        this.mExecutor.execute(errorSetting(new AnonymousClass7(this)));
+    }
+
+    private void fireRedirectReceived(final String r3) {
+        transitionStates(1, 2, new AnonymousClass6(this, r3));
+    }
+
+    private boolean isValidHeaderName(String r4) {
+        int r0 = 0;
+    L4:
+        if (r0 >= r4.length()) goto L23;
+        char r1 = r4.charAt(r0);
+        if (r1 == ',') goto L22;
+        if (r1 == '/') goto L22;
+        if (r1 == '{') goto L22;
+        if (r1 == '}') goto L22;
+        switch(r1) {
+            case 39: goto L22;
+            case 40: goto L22;
+            case 41: goto L22;
+            default: goto L14;
+        };
+    L14:
+        switch(r1) {
+            case 58: goto L22;
+            case 59: goto L22;
+            case 60: goto L22;
+            case 61: goto L22;
+            case 62: goto L22;
+            case 63: goto L22;
+            case 64: goto L22;
+            default: goto L15;
+        };
+    L15:
+        switch(r1) {
+            case 91: goto L22;
+            case 92: goto L22;
+            case 93: goto L22;
+            default: goto L17;
+        };
+    L17:
+        if (Character.isISOControl(r1) == true) goto L22;
+        if (Character.isWhitespace(r1) == true) goto L22;
+        r0 = r0 + 1;
+    L22:
+        return false;
+    L23:
+        return true;
+    }
+
+    private static long parseContentLengthString(String r2) {
+        return Long.parseLong(r2);
+    L4:
+        return 0;
+    }
+
+    private void processReadResult(int r2, ByteBuffer r3) {
+        if (r2 == (-1)) goto L5;
+        this.mCallbackAsync.onReadCompleted(this.mUrlResponseInfo, r3);
+        return;
+    L5:
+        ReadableByteChannel r4 = this.mResponseChannel;
+        if (r4 == null) goto L9;
+        r4.close();
+    L9:
+        if (this.mState.compareAndSet(5, 7) == false) goto L13;
+        fireDisconnect();
+        this.mCallbackAsync.onSucceeded(this.mUrlResponseInfo);
+        return;
+    }
+
+    private boolean setTerminalState(int r3) {
+    L2:
+        int r0 = this.mState.get();
+        if (r0 == 0) goto L17;
+        if (r0 == 6) goto L14;
+        if (r0 == 7) goto L24;
+        if (r0 == 8) goto L25;
+        if (this.mState.compareAndSet(r0, r3) == false) goto L2;
+        return true;
+    L25:
+        return false;
+    L24:
+        return false;
+    L14:
+        return false;
+    L17:
+        throw new IllegalStateException("Can't enter error state before start");
+    }
+
+    private void transitionStates(int r3, int r4, Runnable r5) {
+        Runnable r6 = (Runnable) ZeusTransformUtils.wrapperContextForParams(r5, Runnable.class, "com.obric.memorydata.plugin");
+        if (this.mState.compareAndSet(r3, r4) == true) goto L11;
+        int r2 = this.mState.get();
+        if (r2 != 8) goto L7;
+        return;
+    L7:
+        if (r2 != 6) goto L10;
+        return;
+    L10:
+        throw new IllegalStateException("Invalid state transition - expected " + r3 + " but was " + r2);
+    L11:
+        r6.run();
+    }
+
+    private Runnable uploadErrorSetting(JavaUrlRequestUtils.CheckedRunnable r3) {
+        final JavaUrlRequestUtils.CheckedRunnable r4 = (JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin");
+        return new AnonymousClass10(this, r4);
+    }
+
+    private Runnable userErrorSetting(JavaUrlRequestUtils.CheckedRunnable r3) {
+        final JavaUrlRequestUtils.CheckedRunnable r4 = (JavaUrlRequestUtils.CheckedRunnable) ZeusTransformUtils.wrapperContextForParams(r3, JavaUrlRequestUtils.CheckedRunnable.class, "com.obric.memorydata.plugin");
+        return new AnonymousClass9(this, r4);
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void AddRequestCookieHeader(String r1, String r2) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void RemoveRequestCookieHeader() {
+    }
+
+    @Override // com.ttnet.org.chromium.net.impl.UrlRequestBase
+    public void addHeader(String r3, String r4) {
+        checkNotStarted();
+        if (isValidHeaderName(r3) == false) goto L12;
+        if (r4.contains("\r\n") == true) goto L12;
+        if (this.mRequestHeaders.containsKey(r3) == false) goto L9;
+        this.mRequestHeaders.remove(r3);
+    L9:
+        this.mRequestHeaders.put(r3, r4);
+        return;
+    L12:
+        throw new IllegalArgumentException("Invalid header " + r3 + "=" + r4);
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void cancel() {
+        int r0 = this.mState.getAndSet(8);
+        if (r0 != 1) goto L5;
+    L13:
+        fireDisconnect();
+        fireCloseUploadDataProvider();
+        this.mCallbackAsync.onCanceled(this.mUrlResponseInfo);
+        return;
+    L5:
+        if (r0 == 2) goto L13;
+        if (r0 == 3) goto L13;
+        if (r0 == 4) goto L13;
+        if (r0 == 5) goto L13;
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void followRedirect() {
+        transitionStates(3, 1, new AnonymousClass3(this));
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public String getFinalUrl() {
+        return "";
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void getStatus(UrlRequest.StatusListener r3) {
+        int r0 = this.mState.get();
+        int r1 = this.mAdditionalStatusDetails;
+        switch(r0) {
+            case 0: goto L8;
+            case 1: goto L9;
+            case 2: goto L7;
+            case 3: goto L7;
+            case 4: goto L7;
+            case 5: goto L6;
+            case 6: goto L8;
+            case 7: goto L8;
+            case 8: goto L8;
+            default: goto L5;
+        };
+    L6:
+        r1 = 14;
+        goto L9
+    L7:
+        r1 = 0;
+        goto L9
+    L8:
+        r1 = -1;
+    L9:
+        this.mCallbackAsync.sendStatus(new VersionSafeCallbacks.UrlRequestStatusListener(r3), r1);
+        return;
+    L5:
+        throw new IllegalStateException("Switch is exhaustive: " + r0);
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public boolean isDone() {
+        int r1 = this.mState.get();
+        if (r1 != 7) goto L5;
+    L10:
+        return true;
+    L5:
+        if (r1 == 6) goto L10;
+        if (r1 == 8) goto L10;
+        return false;
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void read(final ByteBuffer r3) {
+        Preconditions.checkDirect(r3);
+        Preconditions.checkHasRemaining(r3);
+        transitionStates(4, 5, new AnonymousClass11(this, r3));
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void setAddCookieCostUs(long r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void setAuthCredentials(String r1, String r2) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void setCookieRelMetric(String r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.impl.UrlRequestBase
+    public void setHttpMethod(String r3) {
+        checkNotStarted();
+        Objects.requireNonNull(r3, "Method is required.");
+        if (HttpMethodContrants.OPTIONS.equalsIgnoreCase(r3) == false) goto L5;
+    L21:
+        this.mInitialMethod = r3;
+        return;
+    L5:
+        if (HttpMethodContrants.GET.equalsIgnoreCase(r3) == true) goto L21;
+        if (HttpMethodContrants.HEAD.equalsIgnoreCase(r3) == true) goto L21;
+        if ("POST".equalsIgnoreCase(r3) == true) goto L21;
+        if (HttpMethodContrants.PUT.equalsIgnoreCase(r3) == true) goto L21;
+        if (HttpMethodContrants.DELETE.equalsIgnoreCase(r3) == true) goto L21;
+        if (CipherConst.LEVEL_TRACE.equalsIgnoreCase(r3) == true) goto L21;
+        if (HttpMethodContrants.PATCH.equalsIgnoreCase(r3) == true) goto L21;
+        throw new IllegalArgumentException("Invalid http method " + r3);
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void setRequestCookieSource(int r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.impl.UrlRequestBase
+    public void setRequestTimeout(int r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void setRequestTypeFlags(int r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void setSaveCookieCostUs(long r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.impl.UrlRequestBase
+    public void setSocketConnectTimeout(int r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.impl.UrlRequestBase
+    public void setSocketReadTimeout(int r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.impl.UrlRequestBase
+    public void setSocketWriteTimeout(int r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void setThrottleNetSpeed(long r1) {
+    }
+
+    @Override // com.ttnet.org.chromium.net.impl.UrlRequestBase
+    public void setUploadDataProvider(UploadDataProvider r3, Executor r4) {
+        Executor r5 = (Executor) ZeusTransformUtils.wrapperContextForParams(r4, Executor.class, "com.obric.memorydata.plugin");
+        Objects.requireNonNull(r3, "Invalid UploadDataProvider.");
+        if (this.mRequestHeaders.containsKey(NetConst.KEY_CONTENT_TYPE) == false) goto L13;
+        checkNotStarted();
+        if (this.mInitialMethod != null) goto L7;
+        this.mInitialMethod = "POST";
+    L7:
+        this.mUploadDataProvider = new VersionSafeCallbacks.UploadDataProviderWrapper(r3);
+        if (this.mAllowDirectExecutor == false) goto L10;
+        this.mUploadExecutor = r5;
+        return;
+    L10:
+        this.mUploadExecutor = new JavaUrlRequestUtils.DirectPreventingExecutor(r5);
+        return;
+    L13:
+        throw new IllegalArgumentException("Requests with upload data must have a Content-Type.");
+    }
+
+    @Override // com.ttnet.org.chromium.net.UrlRequest
+    public void start() {
+        this.mAdditionalStatusDetails = 10;
+        transitionStates(0, 1, new AnonymousClass2(this));
+    }
+}

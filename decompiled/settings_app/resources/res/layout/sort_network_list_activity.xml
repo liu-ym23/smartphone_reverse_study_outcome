@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:dslv="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/wifi_connection_sort_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/switch_sort_mode"
+        android:background="@drawable/selector_setting_sub_item_bg_single"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/view_title"
+        android:title="@string/wifi_connection_sort_switch"/>
+    <TextView
+        android:id="@+id/sort_tips"
+        android:visibility="gone"
+        android:text="@string/wifi_connection_sort_summary"
+        android:layout_below="@+id/switch_sort_mode"
+        style="@style/SettingItemTipsStyle"/>
+    <TextView
+        android:textSize="23sp"
+        android:textColor="#646972"
+        android:gravity="center"
+        android:id="@+id/empty_network_tip_title"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600px"
+        android:text="@string/trusted_network_list_empty_tips_1"
+        android:layout_below="@+id/sort_tips"/>
+    <TextView
+        android:textSize="15sp"
+        android:textColor="#646972"
+        android:gravity="center"
+        android:id="@+id/empty_network_tip_summary"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29px"
+        android:text="@string/trusted_network_list_empty_tips_2"
+        android:layout_below="@+id/empty_network_tip_title"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

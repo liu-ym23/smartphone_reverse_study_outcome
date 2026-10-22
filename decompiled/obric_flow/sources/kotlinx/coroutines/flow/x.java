@@ -1,0 +1,48 @@
+package kotlinx.coroutines.flow;
+
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class x implements h {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ kotlinx.coroutines.channels.u f18912a;
+
+    public x(kotlinx.coroutines.channels.u r5) {
+        this.f18912a = r5;
+    }
+
+    @Override // kotlinx.coroutines.flow.h
+    public final Object emit(Object r5, Continuation r10) {
+        if ((r10 instanceof FlowKt__DelayKt$debounceInternal$1$values$1$1$emit$1) == false) goto L7;
+        FlowKt__DelayKt$debounceInternal$1$values$1$1$emit$1 r11 = (FlowKt__DelayKt$debounceInternal$1$values$1$1$emit$1) r10;
+        int r12 = r11.label;
+        if ((r12 & Integer.MIN_VALUE) == 0) goto L7;
+        r11.label = r12 - Integer.MIN_VALUE;
+    L8:
+        Object r13 = r11.result;
+        Object r14 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int r15 = r11.label;
+        if (r15 == 0) goto L14;
+        if (r15 != 1) goto L13;
+        ResultKt.throwOnFailure(r13);
+    L21:
+        return Unit.INSTANCE;
+    L13:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    L14:
+        ResultKt.throwOnFailure(r13);
+        if (r5 != null) goto L17;
+        r5 = kotlinx.coroutines.flow.internal.b.f18863b;
+    L17:
+        r11.label = 1;
+        if (((kotlinx.coroutines.channels.j) this.f18912a).d.r(r5, r11) != r14) goto L21;
+        return r14;
+    L7:
+        r11 = new FlowKt__DelayKt$debounceInternal$1$values$1$1$emit$1(this, r10);
+        goto L8
+    }
+}

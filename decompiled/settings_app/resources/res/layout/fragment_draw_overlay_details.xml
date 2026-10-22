@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/permit_draw_overlay"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.obric.oui.simplified.ORoundedListItemImage
+                android:id="@+id/item_text_app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+            <com.obric.oui.simplified.ORoundedListItemSwitch
+                android:id="@+id/item_switch_permit_draw_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                app:smtTitle="@string/permit_draw_overlay"/>
+            <TextView
+                android:paddingTop="0dp"
+                android:layout_margin="0dp"
+                android:text="@string/allow_overlay_description"
+                style="@style/SettingItemTipsStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

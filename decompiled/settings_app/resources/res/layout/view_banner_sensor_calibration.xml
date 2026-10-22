@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUIFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_advanced_fill_list_item_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:oui_radius="@dimen/oui_panel_corner_radius">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sensor_calibration"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:maxWidth="@dimen/list_item_maximum_width"/>
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_basic_text_3"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/calibration_tip"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:lineHeight="12dp"
+            style="@style/Subtitle_2_Regular"/>
+    </LinearLayout>
+</com.obric.oui.layout.OUIFrameLayout>

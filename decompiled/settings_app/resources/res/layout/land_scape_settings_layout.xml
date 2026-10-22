@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<obric.tablet.TabletLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_root_view_container"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.button.OIconButton
+        android:id="@+id/btn_add"
+        android:background="@color/oui_fill_element_2"
+        android:src="@drawable/oic_plus_small"
+        style="@style/OStyleV2.OIconButton.S.Standard.Neutral"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/btn_added"
+        android:visibility="gone"
+        android:text="@string/discovery_added_txt"
+        android:drawableStart="@drawable/ic_checkmark"
+        style="@style/OStyleV2.OButton.S.Standard.Neutral"/> &gt;
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/multi_sim_sim_name_setting"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textSize="@dimen/settings_item_title_size"
+                android:textColorHint="@color/edit_text_hint_color"
+                android:id="@+id/sim_name"
+                android:background="@drawable/text_field_single"
+                android:paddingLeft="@dimen/settings_item_title_left_margin"
+                android:paddingRight="@dimen/settings_item_title_left_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_item_top_bottom_margin"
+                android:hint="@string/multi_sim_sim_name_edit"
+                android:singleLine="true"
+                android:inputType="textNoSuggestions"
+                android:imeOptions="actionDone"/>
+            <TextView
+                android:text="@string/sim_rename_tips"
+                style="@style/SettingItemTipsStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

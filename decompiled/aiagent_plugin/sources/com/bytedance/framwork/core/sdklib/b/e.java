@@ -1,0 +1,55 @@
+package com.bytedance.framwork.core.sdklib.b;
+
+import android.content.Context;
+import android.os.Process;
+import android.text.TextUtils;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+
+/* JADX INFO: compiled from: ProcessUtils.java */
+/* JADX INFO: loaded from: classes.dex */
+public class e {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private static String f8652a;
+
+    static {
+    }
+
+    public static String a(Context r2) {
+        Context r3 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        String r4 = f8652a;
+        if (TextUtils.isEmpty(r4) == true) goto L5;
+        return r4;
+    L5:
+        String r5 = a();
+        f8652a = r5;
+        return r5;
+    }
+
+    private static String a() {
+        BufferedReader r1 = new BufferedReader(new InputStreamReader(new FileInputStream("/proc/" + Process.myPid() + "/cmdline"), "iso-8859-1"));     // Catch: Throwable -> L11
+        StringBuilder r2 = new StringBuilder();     // Catch: Throwable -> L16
+    L5:
+        int r3 = r1.read();     // Catch: Throwable -> L16
+        if (r3 <= 0) goto L8;
+        r2.append((char) r3);     // Catch: Throwable -> L16
+        goto L5
+    L8:
+        String r0 = r2.toString();     // Catch: Throwable -> L16
+        r1.close();     // Catch: Exception -> L15
+    L10:
+        return r0;
+    L12:
+        if (r1 != null) goto L18;
+    L14:
+        return null;
+    L18:
+        r1.close();     // Catch: Exception -> L17
+    L11:
+        r1 = null;
+        goto L12
+    }
+}

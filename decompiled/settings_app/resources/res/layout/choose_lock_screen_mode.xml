@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/page_container"
+        android:paddingTop="6dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/pattern"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp"
+            app:oui_list_item_title="@string/lockscreen_mode_item_title_pattern"
+            style="@style/SettingSubItemSingleStyle"/>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/four_pin"
+            android:layout_marginBottom="4dp"
+            app:oui_list_item_title="@string/lockscreen_mode_pin_four"
+            style="@style/SettingSubItemSingleStyle"/>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/six_pin"
+            android:layout_marginBottom="4dp"
+            app:oui_list_item_title="@string/lockscreen_mode_pin_six"
+            style="@style/SettingSubItemSingleStyle"/>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/password"
+            android:layout_marginBottom="16dp"
+            app:oui_list_item_title="@string/lockscreen_mode_item_title_hard"
+            style="@style/SettingSubItemSingleStyle"/>
+    </LinearLayout>
+</RelativeLayout>

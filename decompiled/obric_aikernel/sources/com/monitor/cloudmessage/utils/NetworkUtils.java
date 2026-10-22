@@ -1,0 +1,398 @@
+package com.monitor.cloudmessage.utils;
+
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkInfo;
+import android.net.RouteInfo;
+import android.net.TrafficStats;
+import android.os.Build;
+import android.telephony.TelephonyManager;
+import android.text.TextUtils;
+import com.bytedance.apm.util.m;
+import java.net.HttpURLConnection;
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.List;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class NetworkUtils {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private static long f4299a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private static long f4300b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private static long f4301c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private static long f4302d;
+
+    static final enum NetworkType extends Enum<NetworkType> {
+        private static final /* synthetic */ NetworkType[] $VALUES = null;
+        public static final NetworkType MOBILE = null;
+        public static final NetworkType MOBILE_2G = null;
+        public static final NetworkType MOBILE_3G = null;
+        public static final NetworkType MOBILE_4G = null;
+        public static final NetworkType NONE = null;
+        public static final NetworkType WIFI = null;
+        final int nativeInt;
+
+        static {
+            NetworkType r10 = new NetworkType("NONE", 0, 0);
+            NONE = r10;
+            NetworkType r11 = new NetworkType("MOBILE", 1, 1);
+            MOBILE = r11;
+            NetworkType r12 = new NetworkType("MOBILE_2G", 2, 2);
+            MOBILE_2G = r12;
+            NetworkType r13 = new NetworkType("MOBILE_3G", 3, 3);
+            MOBILE_3G = r13;
+            NetworkType r14 = new NetworkType("WIFI", 4, 4);
+            WIFI = r14;
+            NetworkType r15 = new NetworkType("MOBILE_4G", 5, 5);
+            MOBILE_4G = r15;
+            $VALUES = new NetworkType[]{r10, r11, r12, r13, r14, r15};
+        }
+
+        private NetworkType(String r10, int r11, int r12) {
+            super(r10, r11);
+            this.nativeInt = r12;
+        }
+
+        public static NetworkType valueOf(String r10) {
+            return (NetworkType) Enum.valueOf(NetworkType.class, r10);
+        }
+
+        public static NetworkType[] values() {
+            return (NetworkType[]) $VALUES.clone();
+        }
+
+        public int getValue() {
+            return this.nativeInt;
+        }
+    }
+
+    static /* synthetic */ class a {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        static final /* synthetic */ int[] f4303a = null;
+
+        static {
+            int[] r10 = new int[NetworkType.values().length];
+            f4303a = r10;
+            r10[NetworkType.WIFI.ordinal()] = 1;     // Catch: NoSuchFieldError -> L9
+        L14:
+            f4303a[NetworkType.MOBILE_2G.ordinal()] = 2;     // Catch: NoSuchFieldError -> L10
+        L18:
+            f4303a[NetworkType.MOBILE_3G.ordinal()] = 3;     // Catch: NoSuchFieldError -> L11
+        L22:
+            f4303a[NetworkType.MOBILE_4G.ordinal()] = 4;     // Catch: NoSuchFieldError -> L12
+        L16:
+            f4303a[NetworkType.MOBILE.ordinal()] = 5;     // Catch: NoSuchFieldError -> L13
+            return;
+        }
+    }
+
+    static {
+    }
+
+    public static String a(Context r10) {
+        long r11 = h(r10.getApplicationInfo().uid);
+        if (r11 != (-1)) goto L6;
+        return "UNSUPPORTED";
+    L6:
+        long r12 = System.currentTimeMillis();
+        long r13 = ((r11 - f4299a) * 1000) / (r12 - f4301c);
+        f4301c = r12;
+        f4299a = r11;
+        return String.valueOf(r13) + " KB/s";
+    }
+
+    public static List<String> b(Context r10) {
+        ArrayList r11 = new ArrayList();
+        if (r10 != null) goto L5;
+    L20:
+        return r11;
+    L5:
+        if (Build.VERSION.SDK_INT < 21) goto L20;
+        ConnectivityManager r12 = (ConnectivityManager) r10.getSystemService("connectivity");     // Catch: Exception -> L18
+        NetworkInfo r13 = r12.getActiveNetworkInfo();     // Catch: Exception -> L18
+        Network[] r14 = r12.getAllNetworks();     // Catch: Exception -> L18
+        int r15 = r14.length;     // Catch: Exception -> L18
+        int r16 = 0;
+    L7:
+        if (r16 >= r15) goto L20;
+        Network r17 = r14[r16];     // Catch: Exception -> L18
+        if (r12.getNetworkInfo(r17).getType() != r13.getType()) goto L17;
+        Iterator<RouteInfo> r18 = r12.getLinkProperties(r17).getRoutes().iterator();     // Catch: Exception -> L18
+    L12:
+        if (r18.hasNext() == false) goto L17;
+        InetAddress r19 = r18.next().getGateway();     // Catch: Exception -> L18
+        if (r19 == null) goto L12;
+        r11.add(r19.getHostAddress());     // Catch: Exception -> L18
+    L17:
+        r16 = r16 + 1;
+    L18:
+        e = move-exception;
+        e.printStackTrace();
+        goto L20
+    }
+
+    public static List<String> c(Context r10) {
+        ArrayList r11 = new ArrayList();
+        if (r10 != null) goto L5;
+    L18:
+        return r11;
+    L5:
+        if (Build.VERSION.SDK_INT < 21) goto L18;
+        ConnectivityManager r12 = (ConnectivityManager) r10.getSystemService("connectivity");     // Catch: Exception -> L16
+        NetworkInfo r13 = r12.getActiveNetworkInfo();     // Catch: Exception -> L16
+        Network[] r14 = r12.getAllNetworks();     // Catch: Exception -> L16
+        int r15 = r14.length;     // Catch: Exception -> L16
+        int r16 = 0;
+    L7:
+        if (r16 >= r15) goto L18;
+        Network r17 = r14[r16];     // Catch: Exception -> L16
+        if (r12.getNetworkInfo(r17).getType() != r13.getType()) goto L15;
+        Iterator<InetAddress> r18 = r12.getLinkProperties(r17).getDnsServers().iterator();     // Catch: Exception -> L16
+    L12:
+        if (r18.hasNext() == false) goto L15;
+        r11.add(r18.next().getHostAddress());     // Catch: Exception -> L16
+    L15:
+        r16 = r16 + 1;
+    L16:
+        e = move-exception;
+        e.printStackTrace();
+        goto L18
+    }
+
+    public static String d() {
+        String r10 = "none";
+        Enumeration<NetworkInterface> r11 = NetworkInterface.getNetworkInterfaces();     // Catch: SocketException -> L21
+    L4:
+        if (r11.hasMoreElements() == false) goto L23;
+        NetworkInterface r12 = r11.nextElement();     // Catch: SocketException -> L21
+        String r13 = r12.getName();     // Catch: SocketException -> L21
+        if (r13 == null) goto L4;
+        if (TextUtils.equals(r13.toLowerCase(), "eth0") == true) goto L12;
+        if (TextUtils.equals(r13.toLowerCase(), "wlan0") == false) goto L4;
+    L12:
+        Enumeration<InetAddress> r14 = r12.getInetAddresses();     // Catch: SocketException -> L21
+    L14:
+        if (r14.hasMoreElements() == false) goto L4;
+        InetAddress r15 = r14.nextElement();     // Catch: SocketException -> L21
+        if ((r15 instanceof Inet4Address) == false) goto L14;
+        if (r15.isLoopbackAddress() == true) goto L14;
+        r10 = r15.getHostAddress();     // Catch: SocketException -> L21
+    L23:
+        return r10;
+    L21:
+        e = move-exception;
+        e.printStackTrace();
+        goto L23
+    }
+
+    public static String e(Context r10) {
+        return f(g(r10));
+    }
+
+    private static String f(NetworkType r10) {
+        int r11 = a.f4303a[r10.ordinal()];     // Catch: Exception -> L21
+        if (r11 != 1) goto L6;
+        String r12 = "wifi";
+    L20:
+        return r12;
+    L6:
+        if (r11 != 2) goto L8;
+        r12 = "2g";
+        goto L20
+    L8:
+        if (r11 != 3) goto L10;
+        r12 = "3g";
+        goto L20
+    L10:
+        if (r11 != 4) goto L12;
+        r12 = "4g";
+        goto L20
+    L12:
+        if (r11 != 5) goto L24;
+        r12 = "mobile";
+        goto L20
+    L24:
+        return "";
+    L25:
+        return "";
+    }
+
+    private static NetworkType g(Context r10) {
+        NetworkInfo r11 = ((ConnectivityManager) r10.getSystemService("connectivity")).getActiveNetworkInfo();     // Catch: Throwable -> L25
+        if (r11 == null) goto L24;
+        if (r11.isAvailable() == false) goto L24;
+        int r12 = r11.getType();     // Catch: Throwable -> L25
+        if (1 == r12) goto L10;
+        if (r12 != 0) goto L22;
+        switch(((TelephonyManager) r10.getSystemService("phone")).getNetworkType()) {
+            case 1: goto L20;
+            case 2: goto L20;
+            case 3: goto L18;
+            case 4: goto L20;
+            case 5: goto L18;
+            case 6: goto L18;
+            case 7: goto L20;
+            case 8: goto L18;
+            case 9: goto L18;
+            case 10: goto L18;
+            case 11: goto L20;
+            case 12: goto L18;
+            case 13: goto L16;
+            case 14: goto L18;
+            case 15: goto L18;
+            default: goto L28;
+        };     // Catch: Throwable -> L25
+    L28:
+        return NetworkType.MOBILE;
+    L16:
+        return NetworkType.MOBILE_4G;
+    L18:
+        return NetworkType.MOBILE_3G;
+    L20:
+        return NetworkType.MOBILE_2G;
+    L22:
+        return NetworkType.MOBILE;
+    L10:
+        return NetworkType.WIFI;
+    L24:
+        return NetworkType.NONE;
+    L26:
+        return NetworkType.MOBILE;
+    }
+
+    private static long h(int r10) {
+        return TrafficStats.getTotalRxBytes() / 1024;
+    }
+
+    private static long i(int r10) {
+        return TrafficStats.getTotalTxBytes() / 1024;
+    }
+
+    public static String j(Context r10) {
+        long r11 = i(r10.getApplicationInfo().uid);
+        if (r11 != (-1)) goto L6;
+        return "UNSUPPORTED";
+    L6:
+        long r12 = System.currentTimeMillis();
+        long r13 = ((r11 - f4300b) * 1000) / (r12 - f4302d);
+        f4302d = r12;
+        f4300b = r11;
+        return String.valueOf(r13) + " KB/s";
+    }
+
+    public static boolean k(Context r10) {
+        if (r10 != null) goto L14;
+        return false;
+    L14:
+        NetworkInfo r11 = ((ConnectivityManager) r10.getSystemService("connectivity")).getActiveNetworkInfo();     // Catch: Exception -> L11
+        if (r11 == null) goto L16;
+        if (r11.isConnected() == false) goto L17;
+        return true;
+    L17:
+        return false;
+    L16:
+        return false;
+    L11:
+        e = move-exception;
+        e.printStackTrace();
+        return false;
+    }
+
+    public static boolean l(Context r10) {
+        NetworkInfo r11 = ((ConnectivityManager) r10.getSystemService("connectivity")).getActiveNetworkInfo();     // Catch: Exception -> L13
+        if (r11 != null) goto L6;
+        return false;
+    L6:
+        if (r11.isAvailable() == false) goto L17;
+        if (1 == r11.getType()) goto L12;
+        return false;
+    L12:
+        return true;
+    L17:
+        return false;
+    L19:
+        return false;
+    }
+
+    public static List<String> m(String r10) {
+        ArrayList r11 = new ArrayList();
+        InetAddress[] r12 = InetAddress.getAllByName(r10);     // Catch: UnknownHostException -> L11
+        if (r12 != null) goto L6;
+    L13:
+        return r11;
+    L6:
+        if (r12.length <= 0) goto L13;
+        int r13 = r12.length;     // Catch: UnknownHostException -> L11
+        int r14 = 0;
+    L8:
+        if (r14 >= r13) goto L13;
+        r11.add(r12[r14].getHostAddress());     // Catch: UnknownHostException -> L11
+        r14 = r14 + 1;
+    L11:
+        e = move-exception;
+        e.printStackTrace();
+        goto L13
+    }
+
+    public static boolean n(String r10, JSONObject r11) {
+        JSONObject r12 = new JSONObject();
+        boolean r13 = false;
+        HttpURLConnection r14 = null;
+        r14 = m.a(r10);     // Catch: Throwable -> L9 Exception -> L11
+        r14.setRequestMethod("GET");     // Catch: Throwable -> L9 Exception -> L11
+        r14.setReadTimeout(30000);     // Catch: Throwable -> L9 Exception -> L11
+        r14.setConnectTimeout(30000);     // Catch: Throwable -> L9 Exception -> L11
+        r14.setDoInput(true);     // Catch: Throwable -> L9 Exception -> L11
+        r14.setDoOutput(true);     // Catch: Throwable -> L9 Exception -> L11
+        r14.setUseCaches(false);     // Catch: Throwable -> L9 Exception -> L11
+        r14.setRequestProperty("Charset", x6.a.f13565b);     // Catch: Throwable -> L9 Exception -> L11
+        int r15 = r14.getResponseCode();     // Catch: Throwable -> L9 Exception -> L11
+        r12.put("statusCode", r15);     // Catch: Throwable -> L9 Exception -> L11
+        r12.put("header", d.a(r14.getHeaderFields()));     // Catch: Throwable -> L9 Exception -> L11
+        r11.put(r10, r12);     // Catch: Throwable -> L9 Exception -> L11
+    L5:
+        if (r15 != 200) goto L7;
+        r13 = true;
+    L7:
+        r14.disconnect();
+        return r13;
+    L11:
+        e = move-exception;
+        e.printStackTrace();     // Catch: Throwable -> L9
+        r11.put(r10, e.getMessage());     // Catch: Throwable -> L9 JSONException -> L17
+        if (r14 == null) goto L16;
+        r14.disconnect();
+    L16:
+        return false;
+    L17:
+        e = move-exception;
+        e.printStackTrace();     // Catch: Throwable -> L9
+        if (r14 == null) goto L21;
+        r14.disconnect();
+    L21:
+        return false;
+    L9:
+        th = move-exception;
+        if (r14 == null) goto L24;
+        r14.disconnect();
+    L24:
+        throw th;
+    }
+}

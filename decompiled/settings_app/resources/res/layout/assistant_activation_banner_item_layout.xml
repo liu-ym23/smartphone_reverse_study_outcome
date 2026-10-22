@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUIConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_banner_item_root_view"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/view_pager_iv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintDimensionRatio="H,336:256"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_1"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:id="@+id/view_pager_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_pager_iv"
+        style="@style/Title_1_Regular"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:id="@+id/view_pager_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_pager_title"
+        style="@style/Subtitle_2_Regular"/>
+</com.obric.oui.layout.OUIConstraintLayout>

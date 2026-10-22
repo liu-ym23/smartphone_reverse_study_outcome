@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/launcher_grids"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_ok"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/launcher_mode_summary"
+                style="@style/SettingItemTitleStyle"/>
+            <com.android.settings.widget.LauncherPreview
+                android:id="@+id/launcher_preview"
+                android:paddingBottom="@dimen/item_block_gap"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <com.obric.oui.button.OButton
+        android:id="@+id/btn_ok"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nextbutton_top_margin"
+        android:layout_marginBottom="@dimen/nextbutton_bottom_margin"
+        android:text="@string/ok"
+        android:layout_alignParentBottom="true"
+        style="@style/LongButton.Highlight"/>
+    <ImageView
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_line"
+        android:background="@drawable/bottom_line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_ok"
+        android:importantForAccessibility="no"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/package_installer_settings_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <TextView
+                android:id="@+id/id_text_input_method"
+                android:layout_marginTop="@dimen/settings_item_title_margin_top"
+                android:text="@string/package_source_settings_header"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/source_bytedance"
+                app:itemTitle="@string/package_source_bytedance_store"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/source_google_play"
+                android:visibility="gone"
+                app:itemTitle="@string/package_source_google_play"
+                style="@style/SettingSubItemMidStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/source_unknown"
+                app:itemTitle="@string/package_source_unknown"
+                style="@style/SettingSubItemBottomStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

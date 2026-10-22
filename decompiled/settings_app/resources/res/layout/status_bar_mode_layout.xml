@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/status_bar_style_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OListView
+        android:id="@+id/listView"
+        android:layout_below="@+id/view_title"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        android:importantForAccessibility="no"
+        style="@style/ListViewGeneralStyle"/>
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/setting_item_tips_color"
+        android:gravity="center"
+        android:id="@+id/view_empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/application_manager_empty_view_text"
+        style="@style/SettingItemTextShadowStyle"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

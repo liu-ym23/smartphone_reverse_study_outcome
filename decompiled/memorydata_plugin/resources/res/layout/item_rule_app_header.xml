@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.lisitem.OListItemSettings xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/new_app_setting"
+    android:layout_height="64dp"
+    android:layout_marginTop="10dp"
+    app:oui_list_item_title="@string/recommend_item_rule_app_header_oui_list_item_title"
+    app:oui_list_item_trailing_text="@string/recommend_item_rule_app_header_oui_list_item_trailing_text"
+    style="@style/OListItemSettingsStyle"/>

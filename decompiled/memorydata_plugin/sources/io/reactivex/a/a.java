@@ -1,0 +1,8 @@
+package io.reactivex.a;
+
+import io.reactivex.g;
+
+/* JADX INFO: loaded from: classes6.dex */
+public abstract class a<T> extends g<T> {
+    public abstract void a(io.reactivex.b.g<? super io.reactivex.disposables.b> r1);
+}

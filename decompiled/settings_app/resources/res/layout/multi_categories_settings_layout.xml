@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/phone_case_shortcut_keys"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/trigger_phone_case_keys"
+                android:title="@string/phone_case_shortcut_keys"
+                style="@style/SettingSubItemSingleStyle"/>
+            <TextView
+                android:id="@+id/id_phone_case_tips"
+                android:text="@string/phone_case_shortcut_key_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/id_phone_case_video_intro"
+                android:background="@drawable/sub_item_back_ground_single"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stickers"
+                android:contentDescription="@string/usage_video_title"/>
+            <TextView
+                android:id="@+id/id_phone_case_video_intro_tips"
+                android:text="@string/phone_case_shortcut_key_video_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <ViewStub
+                android:id="@+id/id_phone_case_show_stub"
+                android:layout="@layout/phone_case_keys_settings_layout_stub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include layout="@layout/scrollview_bottom_gap_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

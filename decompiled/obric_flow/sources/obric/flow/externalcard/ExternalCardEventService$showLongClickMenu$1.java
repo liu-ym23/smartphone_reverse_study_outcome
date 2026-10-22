@@ -1,0 +1,65 @@
+package obric.flow.externalcard;
+
+import android.os.Bundle;
+import android.view.View;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.flow.i2;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u008a@"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {1, 9, 0}, xi = 48)
+@DebugMetadata(c = "obric.flow.externalcard.ExternalCardEventService$showLongClickMenu$1", f = "ExternalCardEventService.kt", i = {}, l = {61}, m = "invokeSuspend", n = {}, s = {})
+final class ExternalCardEventService$showLongClickMenu$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ Bundle $bundle;
+    final /* synthetic */ View $contentView;
+    int label;
+
+    public ExternalCardEventService$showLongClickMenu$1(View r5, Bundle r10, Continuation<? super ExternalCardEventService$showLongClickMenu$1> r11) {
+        this.$contentView = r5;
+        this.$bundle = r10;
+        super(2, r11);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object r5, Continuation<?> r10) {
+        return new ExternalCardEventService$showLongClickMenu$1(this.$contentView, this.$bundle, r10);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    /* JADX INFO: renamed from: invoke */
+    public /* bridge */ /* synthetic */ Object mo2invoke(CoroutineScope r5, Continuation<? super Unit> r10) {
+        return invoke2(r5, r10);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r10) {
+        Object r5 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int r11 = this.label;
+        if (r11 == 0) goto L8;
+        if (r11 != 1) goto L7;
+        ResultKt.throwOnFailure(r10);
+    L12:
+        return Unit.INSTANCE;
+    L7:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    L8:
+        ResultKt.throwOnFailure(r10);
+        i2 r12 = a.f20437a;
+        g r13 = new g(this.$contentView, this.$bundle);
+        this.label = 1;
+        if (r12.emit(r13, this) != r5) goto L12;
+        return r5;
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Object invoke2(CoroutineScope r5, Continuation<? super Unit> r10) {
+        return ((ExternalCardEventService$showLongClickMenu$1) create(r5, r10)).invokeSuspend(Unit.INSTANCE);
+    }
+}

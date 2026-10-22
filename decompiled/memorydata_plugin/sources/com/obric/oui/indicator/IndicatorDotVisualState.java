@@ -1,0 +1,38 @@
+package com.obric.oui.indicator;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes5.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0006\b\u0080\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002j\u0002\b\u0003j\u0002\b\u0004j\u0002\b\u0005j\u0002\b\u0006¨\u0006\u0007"}, d2 = {"Lcom/obric/oui/indicator/IndicatorDotVisualState;", "", "(Ljava/lang/String;I)V", "ACTIVE", "NORMAL", "EDGE", "HIDDEN", "OUI_standardRelease"}, k = 1, mv = {1, 6, 0}, xi = 48)
+public final enum IndicatorDotVisualState extends Enum<IndicatorDotVisualState> {
+    private static final /* synthetic */ IndicatorDotVisualState[] $VALUES = null;
+    public static final IndicatorDotVisualState ACTIVE = null;
+    public static final IndicatorDotVisualState EDGE = null;
+    public static final IndicatorDotVisualState HIDDEN = null;
+    public static final IndicatorDotVisualState NORMAL = null;
+
+    private static final /* synthetic */ IndicatorDotVisualState[] $values() {
+        return new IndicatorDotVisualState[]{ACTIVE, NORMAL, EDGE, HIDDEN};
+    }
+
+    static {
+        ACTIVE = new IndicatorDotVisualState("ACTIVE", 0);
+        NORMAL = new IndicatorDotVisualState("NORMAL", 1);
+        EDGE = new IndicatorDotVisualState("EDGE", 2);
+        HIDDEN = new IndicatorDotVisualState("HIDDEN", 3);
+        $VALUES = $values();
+    }
+
+    private IndicatorDotVisualState(String r1, int r2) {
+        super(r1, r2);
+    }
+
+    public static IndicatorDotVisualState valueOf(String r2) {
+        return (IndicatorDotVisualState) ZeusTransformUtils.preCheckCast(Enum.valueOf(IndicatorDotVisualState.class, r2), IndicatorDotVisualState.class, "com.obric.memorydata.plugin");
+    }
+
+    public static IndicatorDotVisualState[] values() {
+        return (IndicatorDotVisualState[]) ZeusTransformUtils.preCheckCast($VALUES.clone(), IndicatorDotVisualState[].class, "com.obric.memorydata.plugin");
+    }
+}

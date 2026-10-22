@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/eldership_mode_settings_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_ok"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_container"
+            android:paddingTop="@dimen/top_gap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/include_eldership_mode_settings"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <com.obric.oui.button.OButton
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nextbutton_top_margin"
+        android:layout_marginBottom="@dimen/nextbutton_bottom_margin"
+        android:layout_alignParentBottom="true"
+        style="@style/LongButton.Highlight"/>
+    <ImageView
+        android:id="@+id/bottom_line"
+        android:background="@drawable/bottom_line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_ok"
+        android:importantForAccessibility="no"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

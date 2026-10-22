@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="14sp"
+    android:textColor="@drawable/spinner_textview_selector"
+    android:ellipsize="marquee"
+    android:id="@android:id/text1"
+    android:background="@drawable/o_background_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:checkMark="@drawable/ic_check"
+    android:singleLine="true"
+    android:lineHeight="20dp"
+    android:textFontWeight="400"
+    style="?android:attr/spinnerDropDownItemStyle"/>

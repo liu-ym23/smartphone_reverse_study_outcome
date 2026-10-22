@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_centerTitle="@string/data_usage_limit_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.editor.LabelEditor
+                android:id="@+id/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_item_top_bottom_margin"
+                android:hint="@string/data_usage_limit_edit_text_hint"
+                app:rightIcon="@drawable/selector_editor_spinner_icon"
+                app:rightLabel="@string/megabyteShort"
+                style="@style/EditorStyle.Single"/>
+            <TextView
+                android:text="@string/data_usage_limit_edit_text_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/disable_connectivity"
+                android:title="@string/data_usage_limit_disable_connectivity"
+                style="@style/SettingSubItemSingleStyle"/>
+            <TextView
+                android:text="@string/data_usage_limit_disable_connectivity_tips"
+                style="@style/SettingItemTipsStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

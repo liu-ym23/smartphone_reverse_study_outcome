@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/tablet_list_footer_width"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/image_view"
+        android:background="@drawable/selector_item_language"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tablet_list_item_language_height"
+        android:src="@drawable/flag_language"
+        android:scaleType="centerCrop"/>
+</LinearLayout>

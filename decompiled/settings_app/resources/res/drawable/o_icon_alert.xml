@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="44dp"
+    android:width="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <path
+        android:fillColor="@color/oui_fill_element_3"
+        android:pathData="M22,0L22,0A22,22 0,0 1,44 22L44,22A22,22 0,0 1,22 44L22,44A22,22 0,0 1,0 22L0,22A22,22 0,0 1,22 0z"
+        android:fillAlpha="1"/>
+    <path
+        android:fillColor="@color/oui_text_3"
+        android:pathData="M22,12C27.523,12 32,16.477 32,22C32,27.523 27.523,32 22,32C16.477,32 12,27.523 12,22C12,16.477 16.477,12 22,12ZM22,14C17.582,14 14,17.582 14,22C14,26.418 17.582,30 22,30C26.418,30 30,26.418 30,22C30,17.582 26.418,14 22,14ZM22,24.75C22.552,24.75 23,25.198 23,25.75C23,26.302 22.552,26.75 22,26.75C21.448,26.75 21,26.302 21,25.75C21,25.198 21.448,24.75 22,24.75ZM22.884,17C23,17 23.093,17.099 23.084,17.215L22.613,23.407C22.609,23.459 22.566,23.5 22.514,23.5H21.453C21.401,23.5 21.357,23.459 21.354,23.407L20.915,17.214C20.907,17.098 20.999,17 21.114,17H22.884Z"
+        android:fillAlpha="1"/>
+</vector>

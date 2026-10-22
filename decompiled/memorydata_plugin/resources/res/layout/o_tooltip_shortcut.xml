@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="10.5dp"
+    android:paddingBottom="10.5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxWidth="248dp"
+    android:minHeight="48dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <TextView
+        android:textColor="@color/oui_basic_text_3"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/o_tooltip_shortcut_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="240dp"
+        android:maxLines="1"
+        style="@style/Subtitle_2_Regular"/>
+    <TextView
+        android:textColor="@color/oui_basic_text_1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/o_tooltip_shortcut_keyboard_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="240dp"
+        android:maxLines="1"
+        style="@style/Subtitle_3_Regular"/>
+</LinearLayout>

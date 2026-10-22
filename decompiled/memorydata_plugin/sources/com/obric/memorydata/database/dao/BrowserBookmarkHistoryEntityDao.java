@@ -1,0 +1,111 @@
+package com.obric.memorydata.database.dao;
+
+import com.bytedance.bdinstall.Api;
+import com.obric.aiagent.product.platform.api.memory.ObricMemoryConstants;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes4.dex */
+@Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\bg\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001J\b\u0010\u0003\u001a\u00020\u0004H\u0016J\b\u0010\u0005\u001a\u00020\u0004H\u0016¨\u0006\u0006"}, d2 = {"Lcom/obric/memorydata/database/dao/BrowserBookmarkHistoryEntityDao;", "Lcom/obric/memorydata/database/dao/IHistoryEntityDao;", "Lcom/obric/memorydata/database/dao/BrowserBookmarkHistoryEntity;", "getTableName", "", "getPrefix", "database_obricRelease"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public interface BrowserBookmarkHistoryEntityDao extends IHistoryEntityDao<BrowserBookmarkHistoryEntity> {
+
+    @Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
+    public static final class DefaultImpls {
+        public static int deleteAll(BrowserBookmarkHistoryEntityDao r2) {
+            return IHistoryEntityDao.DefaultImpls.deleteAll((IHistoryEntityDao) ZeusTransformUtils.preCheckCast((BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin"), IHistoryEntityDao.class, "com.obric.memorydata.plugin"));
+        }
+
+        public static int deleteByEntityId(BrowserBookmarkHistoryEntityDao r2, String r3, String r4) {
+            BrowserBookmarkHistoryEntityDao r5 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            Intrinsics.checkNotNullParameter(r3, "entityId");
+            Intrinsics.checkNotNullParameter(r4, ObricMemoryConstants.KEY_PACKAGE_NAME);
+            return IHistoryEntityDao.DefaultImpls.deleteByEntityId((IHistoryEntityDao) ZeusTransformUtils.preCheckCast(r5, IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r3, r4);
+        }
+
+        public static int deleteByEntityIdList(BrowserBookmarkHistoryEntityDao r2, List<String> r3, String r4) {
+            BrowserBookmarkHistoryEntityDao r5 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            List r6 = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.memorydata.plugin");
+            Intrinsics.checkNotNullParameter(r6, "entityIds");
+            Intrinsics.checkNotNullParameter(r4, ObricMemoryConstants.KEY_PACKAGE_NAME);
+            return IHistoryEntityDao.DefaultImpls.deleteByEntityIdList((IHistoryEntityDao) ZeusTransformUtils.preCheckCast(r5, IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r6, r4);
+        }
+
+        public static int deleteByEntityIdListAndPackageName(BrowserBookmarkHistoryEntityDao r2, List<String> r3, String r4) {
+            BrowserBookmarkHistoryEntityDao r5 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            List r6 = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.memorydata.plugin");
+            Intrinsics.checkNotNullParameter(r6, "entityIds");
+            Intrinsics.checkNotNullParameter(r4, ObricMemoryConstants.KEY_PACKAGE_NAME);
+            return IHistoryEntityDao.DefaultImpls.deleteByEntityIdListAndPackageName((IHistoryEntityDao) ZeusTransformUtils.preCheckCast(r5, IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r6, r4);
+        }
+
+        public static int deleteById(BrowserBookmarkHistoryEntityDao r2, long r3) {
+            return IHistoryEntityDao.DefaultImpls.deleteById((IHistoryEntityDao) ZeusTransformUtils.preCheckCast((BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin"), IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r3);
+        }
+
+        public static String getPrefix(BrowserBookmarkHistoryEntityDao r2) {
+            BrowserBookmarkHistoryEntityDao r3 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            return BrowserBookmarkHistoryEntity.PREFIX_TAG;
+        }
+
+        public static String getTableName(BrowserBookmarkHistoryEntityDao r2) {
+            BrowserBookmarkHistoryEntityDao r3 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            return "RawBrowserBookmarkHistoryEntity";
+        }
+
+        public static List<BrowserBookmarkHistoryEntity> queryAll(BrowserBookmarkHistoryEntityDao r2) {
+            return IHistoryEntityDao.DefaultImpls.queryAll((IHistoryEntityDao) ZeusTransformUtils.preCheckCast((BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin"), IHistoryEntityDao.class, "com.obric.memorydata.plugin"));
+        }
+
+        public static int queryAllCount(BrowserBookmarkHistoryEntityDao r2) {
+            return IHistoryEntityDao.DefaultImpls.queryAllCount((IHistoryEntityDao) ZeusTransformUtils.preCheckCast((BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin"), IHistoryEntityDao.class, "com.obric.memorydata.plugin"));
+        }
+
+        public static List<BrowserBookmarkHistoryEntity> queryByEntityId(BrowserBookmarkHistoryEntityDao r2, String r3, String r4) {
+            BrowserBookmarkHistoryEntityDao r5 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            Intrinsics.checkNotNullParameter(r3, "entityId");
+            Intrinsics.checkNotNullParameter(r4, ObricMemoryConstants.KEY_PACKAGE_NAME);
+            return IHistoryEntityDao.DefaultImpls.queryByEntityId((IHistoryEntityDao) ZeusTransformUtils.preCheckCast(r5, IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r3, r4);
+        }
+
+        public static List<BrowserBookmarkHistoryEntity> queryByEntityIdListAndPackageName(BrowserBookmarkHistoryEntityDao r2, List<String> r3, String r4) {
+            BrowserBookmarkHistoryEntityDao r5 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            List r6 = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.memorydata.plugin");
+            Intrinsics.checkNotNullParameter(r6, "entityIds");
+            Intrinsics.checkNotNullParameter(r4, ObricMemoryConstants.KEY_PACKAGE_NAME);
+            return IHistoryEntityDao.DefaultImpls.queryByEntityIdListAndPackageName((IHistoryEntityDao) ZeusTransformUtils.preCheckCast(r5, IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r6, r4);
+        }
+
+        public static BrowserBookmarkHistoryEntity queryById(BrowserBookmarkHistoryEntityDao r2, long r3) {
+            return (BrowserBookmarkHistoryEntity) ZeusTransformUtils.preCheckCast(IHistoryEntityDao.DefaultImpls.queryById((IHistoryEntityDao) ZeusTransformUtils.preCheckCast((BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin"), IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r3), BrowserBookmarkHistoryEntity.class, "com.obric.memorydata.plugin");
+        }
+
+        public static List<BrowserBookmarkHistoryEntity> queryByIds(BrowserBookmarkHistoryEntityDao r2, List<Long> r3) {
+            BrowserBookmarkHistoryEntityDao r4 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            List r5 = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.memorydata.plugin");
+            Intrinsics.checkNotNullParameter(r5, "ids");
+            return IHistoryEntityDao.DefaultImpls.queryByIds((IHistoryEntityDao) ZeusTransformUtils.preCheckCast(r4, IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r5);
+        }
+
+        public static BrowserBookmarkHistoryEntity queryByUUID(BrowserBookmarkHistoryEntityDao r2, String r3) {
+            BrowserBookmarkHistoryEntityDao r4 = (BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin");
+            Intrinsics.checkNotNullParameter(r3, Api.KEY_UUID);
+            return (BrowserBookmarkHistoryEntity) ZeusTransformUtils.preCheckCast(IHistoryEntityDao.DefaultImpls.queryByUUID((IHistoryEntityDao) ZeusTransformUtils.preCheckCast(r4, IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r3), BrowserBookmarkHistoryEntity.class, "com.obric.memorydata.plugin");
+        }
+
+        public static BrowserBookmarkHistoryEntity queryOne(BrowserBookmarkHistoryEntityDao r2) {
+            return (BrowserBookmarkHistoryEntity) ZeusTransformUtils.preCheckCast(IHistoryEntityDao.DefaultImpls.queryOne((IHistoryEntityDao) ZeusTransformUtils.preCheckCast((BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin"), IHistoryEntityDao.class, "com.obric.memorydata.plugin")), BrowserBookmarkHistoryEntity.class, "com.obric.memorydata.plugin");
+        }
+
+        public static List<BrowserBookmarkHistoryEntity> queryWithLimitAndOffset(BrowserBookmarkHistoryEntityDao r2, int r3, int r4) {
+            return IHistoryEntityDao.DefaultImpls.queryWithLimitAndOffset((IHistoryEntityDao) ZeusTransformUtils.preCheckCast((BrowserBookmarkHistoryEntityDao) ZeusTransformUtils.wrapperContextForParams(r2, BrowserBookmarkHistoryEntityDao.class, "com.obric.memorydata.plugin"), IHistoryEntityDao.class, "com.obric.memorydata.plugin"), r3, r4);
+        }
+    }
+
+    @Override // com.obric.memorydata.database.dao.IHistoryEntityDao
+    String getPrefix();
+
+    @Override // com.obric.memorydata.database.dao.BaseDao
+    String getTableName();
+}

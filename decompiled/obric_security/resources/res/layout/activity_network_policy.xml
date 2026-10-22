@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <com.obric.oui.titlebar.optimize.OCTitleBar
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_title_bar_height"
+        app:oui_title_text="抖音"/>
+    <com.obric.oui.lisitem.OListItemCheck
+        android:id="@+id/background_network_allow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        app:oui_list_item_title="@string/background_network_allow"/>
+    <com.obric.oui.lisitem.OListItemCheck
+        android:id="@+id/background_network_reject_screen_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        app:oui_list_item_title="@string/background_network_reject_screen_off"/>
+</LinearLayout>

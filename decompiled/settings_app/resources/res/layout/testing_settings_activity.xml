@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/testing"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_title">
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <obric.widget.ListContentItemText
+            android:id="@+id/item_radio_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/testing_phone_info"
+            style="@style/ListContentItemStyle.Top"/>
+        <obric.widget.ListContentItemText
+            android:id="@+id/item_battery_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/power_usage_summary"
+            style="@style/ListContentItemStyle.Mid"/>
+        <obric.widget.ListContentItemText
+            android:id="@+id/item_usage_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/testing_usage_stats"
+            style="@style/ListContentItemStyle.Mid"/>
+        <obric.widget.ListContentItemText
+            android:id="@+id/item_wifi_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/testing_wifi_info"
+            style="@style/ListContentItemStyle.Mid"/>
+        <obric.widget.ListContentItemText
+            android:id="@+id/item_app_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/system_app_manager_title"
+            style="@style/ListContentItemStyle.Bottom"/>
+    </LinearLayout>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

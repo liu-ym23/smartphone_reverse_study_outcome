@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="18dp"/>
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:textSize="12sp"
+        android:textColor="@color/oui_text_3"
+        android:id="@+id/optimize_todo_title"
+        android:layout_marginHorizontal="12dp"
+        android:paddingHorizontal="20dp"
+        app:sectionTitle_titleText="@string/optimize_result_todo_title"
+        style="@style/OSectionTitleBar"/>
+    <com.obric.oui.layout.OUILinearLayout
+        android:orientation="vertical"
+        android:id="@+id/optimize_todo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="20dp"/>
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:textSize="12sp"
+        android:textColor="@color/oui_text_3"
+        android:id="@+id/optimize_completed_title"
+        android:layout_marginHorizontal="12dp"
+        android:paddingHorizontal="20dp"
+        app:sectionTitle_titleText="@string/optimize_result_completed_title"
+        style="@style/OSectionTitleBar"/>
+    <com.obric.oui.layout.OUILinearLayout
+        android:orientation="vertical"
+        android:id="@+id/optimize_completed_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.obric.oui.layout.OUILinearLayout>

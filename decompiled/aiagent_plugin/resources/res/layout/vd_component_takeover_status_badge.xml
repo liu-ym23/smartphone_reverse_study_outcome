@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_horizontal"
+    android:focusable="false"
+    android:visibility="gone"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OTextView
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/takeoverStatusBadgeText"
+        android:background="@drawable/vd_takeover_status_badge_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vd_takeover_status_badge"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        style="@style/Subtitle_2_Bold"/>
+</FrameLayout>

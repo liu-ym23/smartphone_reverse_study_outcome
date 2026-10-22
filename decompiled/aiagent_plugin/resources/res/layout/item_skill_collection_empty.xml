@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.text.OTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/oui_basic_text_3"
+    android:gravity="center"
+    android:id="@+id/collection_empty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    style="@style/Body_1_Regular"/>

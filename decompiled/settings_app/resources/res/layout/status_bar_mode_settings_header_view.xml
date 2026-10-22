@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/settings_item_top_bottom_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <obric.widget.SettingItemCheck
+        android:id="@+id/status_bar_style_classic"
+        app:itemTitle="@string/status_bar_title_classic"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/status_bar_style_adaptive"
+        app:itemTitle="@string/status_bar_title_adaptive"
+        style="@style/SettingSubItemBottomStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/switch_statusbar_mode_system_apps_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.android.settings.widget.SettingsBottomExtraView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

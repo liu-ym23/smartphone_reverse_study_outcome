@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/print_service_item"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showSubTitle="false"
+        app:ocardlistitem_title="@string/bytedance_desktop_enable"
+        style="@style/OCardListItemTextTop"/>
+</LinearLayout>

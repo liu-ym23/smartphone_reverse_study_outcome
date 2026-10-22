@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/dock_pager_header_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/id_window_title_bar_style"
+                android:title="@string/window_title_bar_style"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <TextView
+                android:id="@+id/id_status_bar_tools"
+                android:text="@string/status_bar_tools"
+                style="@style/SettingItemTitleStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_status_bar_tools_local_search"
+                setting:title="@string/status_bar_tools_local_search"
+                style="@style/SettingSubItemTopStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_status_bar_tools_network_search"
+                setting:title="@string/status_bar_tools_network_search"
+                style="@style/SettingSubItemMidStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_status_bar_tools_screen_record"
+                setting:title="@string/status_bar_tools_screen_record"
+                style="@style/SettingSubItemMidStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_status_bar_tools_search_word"
+                setting:title="@string/status_bar_tools_search_word"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <TextView
+                android:id="@+id/id_dock_bar_tools"
+                android:text="@string/dock_bar_tools"
+                style="@style/SettingItemTitleStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_dock_bar_tools_all_apps"
+                setting:title="@string/dock_bar_tools_all_apps"
+                style="@style/SettingSubItemTopStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_dock_bar_tools_multi_tasks"
+                setting:title="@string/dock_bar_tools_multi_tasks"
+                style="@style/SettingSubItemMidStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_dock_bar_tools_show_launcher"
+                setting:title="@string/dock_bar_tools_show_launcher"
+                style="@style/SettingSubItemMidStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_dock_bar_tools_bing_bang"
+                setting:title="@string/dock_bar_tools_bing_bang"
+                style="@style/SettingSubItemMidStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_dock_bar_tools_word_choose_pattern"
+                android:visibility="gone"
+                setting:title="@string/dock_bar_tools_word_choose_pattern"
+                style="@style/SettingSubItemMidStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_dock_bar_tools_window_tidy"
+                setting:title="@string/dock_bar_tools_window_tidy"
+                style="@style/SettingSubItemBottomStyle"/>
+            <com.android.settings.widget.SettingItemCheckbox
+                android:id="@+id/id_dock_bar_tools_function_key"
+                android:visibility="gone"
+                setting:title="@string/dock_bar_tools_function_key"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

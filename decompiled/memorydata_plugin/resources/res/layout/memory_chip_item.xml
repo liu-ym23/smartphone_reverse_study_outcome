@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.chip.OChip xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chip"
+    android:layout_width="wrap_content"
+    app:oui_chip_style="rect"
+    app:oui_text="标签"
+    style="@style/OChip.Removable.Default"/>

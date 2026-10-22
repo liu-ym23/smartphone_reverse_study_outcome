@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/app_info"
+        style="@style/OSettingItemNoIconStyle"/>
+    <View
+        android:id="@+id/empty_view"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:layout_below="@+id/app_info"/>
+</RelativeLayout>

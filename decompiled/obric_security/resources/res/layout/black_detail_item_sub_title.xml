@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/black_detail_sub_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp">
+    <ImageView
+        android:id="@+id/ic_card"
+        android:layout_width="14dp"
+        android:layout_height="14dp"/>
+    <ImageView
+        android:id="@+id/ic_call"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/oic_telephone_arrow_down_left"
+        android:layout_marginStart="4dp"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_basic_text_3"
+        android:ellipsize="end"
+        android:id="@+id/sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:layout_marginStart="6dp"
+        style="@style/Subtitle_2_Regular"/>
+</LinearLayout>

@@ -1,0 +1,347 @@
+package com.obric.capabilitykit.entity.app;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.obric.capabilitykit.entity.utils.ParcelUtils;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import d.h.b.h;
+import d.h.b.o;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final class VideoFrame implements Parcelable {
+    public static final CREATOR CREATOR = null;
+    private static final int FIELD_VERSION = 0;
+    private static final int RELATED_VERSION = 0;
+    private String caption;
+    private long endTime;
+    private List<PhotoFaceEntity> faces;
+    private long frameTime;
+    private String ocr;
+    private long startTime;
+    private List<String> tags;
+
+    public static final class CREATOR implements Parcelable.Creator<VideoFrame> {
+        private CREATOR() {
+        }
+
+        public /* synthetic */ CREATOR(h r1) {
+            this();
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public VideoFrame createFromParcel(Parcel r1) {
+            o.e(r1, "parcel");
+            return new VideoFrame(r1);
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ VideoFrame createFromParcel(Parcel r1) {
+            return createFromParcel(r1);
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public VideoFrame[] newArray(int r1) {
+            return new VideoFrame[r1];
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ VideoFrame[] newArray(int r1) {
+            return newArray(r1);
+        }
+    }
+
+    static {
+        CREATOR = new CREATOR(null);
+    }
+
+    public VideoFrame(long r3, long r5, long r7, List<String> r9, List<PhotoFaceEntity> r10, String r11, String r12) {
+        List<String> r13 = (List) ZeusTransformUtils.wrapperContextForParams(r9, List.class, "com.obric.aiagent.plugin");
+        List<PhotoFaceEntity> r14 = (List) ZeusTransformUtils.wrapperContextForParams(r10, List.class, "com.obric.aiagent.plugin");
+        this.startTime = r3;
+        this.endTime = r5;
+        this.frameTime = r7;
+        this.tags = r13;
+        this.faces = r14;
+        this.caption = r11;
+        this.ocr = r12;
+    }
+
+    public /* synthetic */ VideoFrame(long r16, long r18, long r20, List r22, List r23, String r24, String r25, int r26, h r27) {
+        List r0 = (List) ZeusTransformUtils.wrapperContextForParams(r22, List.class, "com.obric.aiagent.plugin");
+        List r1 = (List) ZeusTransformUtils.wrapperContextForParams(r23, List.class, "com.obric.aiagent.plugin");
+        if ((r26 & 8) == 0) goto L5;
+        List r11 = null;
+    L7:
+        if ((r26 & 16) == 0) goto L9;
+        List r12 = null;
+    L11:
+        if ((r26 & 32) == 0) goto L13;
+        String r13 = null;
+    L15:
+        if ((r26 & 64) == 0) goto L17;
+        String r14 = null;
+    L18:
+        this(r16, r18, r20, r11, r12, r13, r14);
+        return;
+    L17:
+        r14 = r25;
+        goto L18
+    L13:
+        r13 = r24;
+        goto L15
+    L9:
+        r12 = r1;
+        goto L11
+    L5:
+        r11 = r0;
+        goto L7
+    }
+
+    public VideoFrame(Parcel r13) {
+        o.e(r13, "parcel");
+        this(r13.readLong(), r13.readLong(), r13.readLong(), r13.createStringArrayList(), r13.createTypedArrayList(PhotoFaceEntity.CREATOR), r13.readString(), r13.readString());
+        readExtensionField(r13, r13.readInt());
+    }
+
+    public static /* synthetic */ VideoFrame copy$default(VideoFrame r11, long r12, long r14, long r16, List r18, List r19, String r20, String r21, int r22, Object r23) {
+        List<String> r1 = (List) ZeusTransformUtils.wrapperContextForParams(r18, List.class, "com.obric.aiagent.plugin");
+        List<PhotoFaceEntity> r2 = (List) ZeusTransformUtils.wrapperContextForParams(r19, List.class, "com.obric.aiagent.plugin");
+        if ((r22 & 1) == 0) goto L5;
+        long r3 = r11.startTime;
+    L7:
+        if ((r22 & 2) == 0) goto L9;
+        long r5 = r11.endTime;
+    L11:
+        if ((r22 & 4) == 0) goto L13;
+        long r7 = r11.frameTime;
+    L15:
+        if ((r22 & 8) == 0) goto L18;
+        r1 = r11.tags;
+    L18:
+        if ((r22 & 16) == 0) goto L21;
+        r2 = r11.faces;
+    L21:
+        if ((r22 & 32) == 0) goto L23;
+        String r9 = r11.caption;
+    L25:
+        if ((r22 & 64) == 0) goto L27;
+        String r10 = r11.ocr;
+    L29:
+        return r11.copy(r3, r5, r7, r1, r2, r9, r10);
+    L27:
+        r10 = r21;
+        goto L29
+    L23:
+        r9 = r20;
+        goto L25
+    L13:
+        r7 = r16;
+        goto L15
+    L9:
+        r5 = r14;
+        goto L11
+    L5:
+        r3 = r12;
+        goto L7
+    }
+
+    private final void readExtensionField(Parcel r3, int r4) {
+        if (r4 <= 0) goto L4;
+        int r2 = 0;
+    L5:
+        ClassLoader r0 = AppEntity.class.getClassLoader();
+        int r1 = 1;
+    L6:
+        if (r1 > r2) goto L8;
+        r1 = r1 + 1;
+    L8:
+        if (r1 > r4) goto L10;
+        ParcelUtils.INSTANCE.skipValueSafely(r3, r0);
+        r1 = r1 + 1;
+        goto L8
+    L10:
+        return;
+    L4:
+        r2 = r4;
+        goto L5
+    }
+
+    public final long component1() {
+        return this.startTime;
+    }
+
+    public final long component2() {
+        return this.endTime;
+    }
+
+    public final long component3() {
+        return this.frameTime;
+    }
+
+    public final List<String> component4() {
+        return this.tags;
+    }
+
+    public final List<PhotoFaceEntity> component5() {
+        return this.faces;
+    }
+
+    public final String component6() {
+        return this.caption;
+    }
+
+    public final String component7() {
+        return this.ocr;
+    }
+
+    public final VideoFrame copy(long r14, long r16, long r18, List<String> r20, List<PhotoFaceEntity> r21, String r22, String r23) {
+        return new VideoFrame(r14, r16, r18, (List) ZeusTransformUtils.wrapperContextForParams(r20, List.class, "com.obric.aiagent.plugin"), (List) ZeusTransformUtils.wrapperContextForParams(r21, List.class, "com.obric.aiagent.plugin"), r22, r23);
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object r9) {
+        if (this != r9) goto L6;
+        return true;
+    L6:
+        if (ZeusTransformUtils.instanceOf(r9, VideoFrame.class) == true) goto L8;
+        return false;
+    L8:
+        VideoFrame r10 = (VideoFrame) ZeusTransformUtils.preCheckCast(r9, VideoFrame.class, "com.obric.aiagent.plugin");
+        if (this.startTime == r10.startTime) goto L12;
+        return false;
+    L12:
+        if (this.endTime == r10.endTime) goto L15;
+        return false;
+    L15:
+        if (this.frameTime == r10.frameTime) goto L18;
+        return false;
+    L18:
+        if (o.a(this.tags, r10.tags) == true) goto L21;
+        return false;
+    L21:
+        if (o.a(this.faces, r10.faces) == true) goto L24;
+        return false;
+    L24:
+        if (o.a(this.caption, r10.caption) == true) goto L27;
+        return false;
+    L27:
+        if (o.a(this.ocr, r10.ocr) == true) goto L29;
+        return false;
+    L29:
+        return true;
+    }
+
+    public final String getCaption() {
+        return this.caption;
+    }
+
+    public final long getEndTime() {
+        return this.endTime;
+    }
+
+    public final List<PhotoFaceEntity> getFaces() {
+        return this.faces;
+    }
+
+    public final long getFrameTime() {
+        return this.frameTime;
+    }
+
+    public final String getOcr() {
+        return this.ocr;
+    }
+
+    public final long getStartTime() {
+        return this.startTime;
+    }
+
+    public final List<String> getTags() {
+        return this.tags;
+    }
+
+    public int hashCode() {
+        int r0 = ((((Long.hashCode(this.startTime) * 31) + Long.hashCode(this.endTime)) * 31) + Long.hashCode(this.frameTime)) * 31;
+        List<String> r1 = this.tags;
+        int r2 = 0;
+        if (r1 != null) goto L5;
+        int r3 = 0;
+    L6:
+        int r4 = (r0 + r3) * 31;
+        List<PhotoFaceEntity> r5 = this.faces;
+        if (r5 != null) goto L9;
+        int r6 = 0;
+    L10:
+        int r7 = (r4 + r6) * 31;
+        String r8 = this.caption;
+        if (r8 != null) goto L13;
+        int r9 = 0;
+    L14:
+        int r10 = (r7 + r9) * 31;
+        String r11 = this.ocr;
+        if (r11 == null) goto L19;
+        r2 = r11.hashCode();
+    L19:
+        return r10 + r2;
+    L13:
+        r9 = r8.hashCode();
+        goto L14
+    L9:
+        r6 = r5.hashCode();
+        goto L10
+    L5:
+        r3 = r1.hashCode();
+        goto L6
+    }
+
+    public final void setCaption(String r1) {
+        this.caption = r1;
+    }
+
+    public final void setEndTime(long r1) {
+        this.endTime = r1;
+    }
+
+    public final void setFaces(List<PhotoFaceEntity> r3) {
+        this.faces = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.aiagent.plugin");
+    }
+
+    public final void setFrameTime(long r1) {
+        this.frameTime = r1;
+    }
+
+    public final void setOcr(String r1) {
+        this.ocr = r1;
+    }
+
+    public final void setStartTime(long r1) {
+        this.startTime = r1;
+    }
+
+    public final void setTags(List<String> r3) {
+        this.tags = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.aiagent.plugin");
+    }
+
+    public String toString() {
+        return "VideoFrame(startTime=" + this.startTime + ", endTime=" + this.endTime + ", frameTime=" + this.frameTime + ", tags=" + this.tags + ", faces=" + this.faces + ", caption=" + this.caption + ", ocr=" + this.ocr + ')';
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel r3, int r4) {
+        o.e(r3, "dest");
+        r3.writeLong(this.startTime);
+        r3.writeLong(this.endTime);
+        r3.writeLong(this.frameTime);
+        r3.writeStringList(this.tags);
+        r3.writeTypedList(this.faces);
+        r3.writeString(this.caption);
+        r3.writeString(this.ocr);
+        r3.writeInt(0);
+    }
+}

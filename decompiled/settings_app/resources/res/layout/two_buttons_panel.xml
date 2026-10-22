@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.button.OButton
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/left_button"
+        android:clickable="true"
+        android:layout_height="@dimen/oui_h_l2"
+        android:layout_marginTop="4dp"
+        android:text="@string/cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="16dp"
+        style="@style/OButton.ListItem.Center"/>
+    <com.obric.oui.button.OButton
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/right_button"
+        android:clickable="true"
+        android:layout_height="@dimen/oui_h_l2"
+        android:layout_marginTop="4dp"
+        android:text="@string/cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="16dp"
+        style="@style/OButton.ListItem.Center"/>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:clipChildren="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/main_settings_first_item_card_gap"
+            android:paddingBottom="@dimen/settings_container_bottom_padding"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/accessibility_color_correction_enable"
+                app:ocardlistitem_showSubTitle="true"
+                app:ocardlistitem_subTitle="@string/accessibility_color_correction_tips"
+                app:ocardlistitem_title="@string/accessibility_color_correction"
+                style="@style/OCardListItemSwitchSingle"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/accessibility_color_correction_mode"
+                android:layout_marginTop="@dimen/settings_container_item_gap"
+                app:ocardlistitem_defaultTailIcon="tail_chevron"
+                app:ocardlistitem_showTailIcon="true"
+                app:ocardlistitem_title="@string/daltonizer_type"
+                style="@style/OCardListItemCheckSingle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/accessibility_color_correction"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

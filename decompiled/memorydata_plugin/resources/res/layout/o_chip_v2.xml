@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/chip_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/chip_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.obric.oui.text.OBaseTextView
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/chip_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:layout_weight="1"
+        style="@style/Subtitle_3_Medium"/>
+    <ImageView
+        android:id="@+id/arrow_icon"
+        android:visibility="gone"
+        android:layout_width="8dp"
+        android:layout_height="16dp"/>
+    <ImageView
+        android:id="@+id/close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.obric.oui.layout.OUILinearLayout>

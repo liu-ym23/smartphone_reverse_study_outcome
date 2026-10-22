@@ -1,0 +1,24 @@
+package com.obric.matrix.sdk.network;
+
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: compiled from: HttpRequestManager.kt */
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0003\n\u0000*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H\u0016¨\u0006\u0006"}, d2 = {"com/obric/matrix/sdk/network/HttpRequestManager$request$5$1", "Lcom/obric/matrix/sdk/network/HttpRequestManager$HttpErrorCallback;", "onError", "", "e", "", "sdk_network_release"}, k = 1, mv = {1, 6, 0}, xi = 176)
+public final class HttpRequestManager$request$5$1 implements HttpRequestManager.HttpErrorCallback {
+    final /* synthetic */ Function1<Throwable, Unit> $callback;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public HttpRequestManager$request$5$1(Function1<? super Throwable, Unit> r1) {
+        this.$callback = r1;
+    }
+
+    @Override // com.obric.matrix.sdk.network.HttpRequestManager.HttpErrorCallback
+    public void onError(Throwable r2) {
+        Intrinsics.checkNotNullParameter(r2, "e");
+        this.$callback.invoke(r2);
+    }
+}

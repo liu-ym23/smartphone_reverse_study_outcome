@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/bluetooth_device_advanced_title">
+    <com.android.settings.bluetooth.DeviceProfileRenamePreference
+        android:persistent="false"
+        android:title="@string/bluetooth_rename_device"
+        android:key="rename_device"
+        android:order="20"
+        setting:prefBg="@drawable/selector_setting_sub_item_bg_single"/>
+    <PreferenceCategory
+        android:title="@string/bluetooth_device_advanced_profile_header_title"
+        android:key="profile_container"
+        android:order="100"/>
+    <com.android.settings.bluetooth.SingleButtonPreference
+        android:persistent="false"
+        android:title="@string/bluetooth_device_context_unpair"
+        android:key="unpair"
+        android:order="400"/>
+</PreferenceScreen>

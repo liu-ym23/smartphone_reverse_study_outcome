@@ -1,0 +1,42 @@
+package com.obric.flow.cardlistpage.ui.component.popupdialog;
+
+import com.obric.flow.cardlistpage.ui.view.WidgetBox;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class s extends w {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final WidgetBox f11743a;
+
+    public s(WidgetBox r5) {
+        Intrinsics.checkNotNullParameter(r5, "widgetBox");
+        this.f11743a = r5;
+    }
+
+    @Override // com.obric.flow.cardlistpage.mvi.j
+    public final String a() {
+        return "NotifyWidgetDragStarted";
+    }
+
+    public final boolean equals(Object r5) {
+        if (this != r5) goto L6;
+        return true;
+    L6:
+        if ((r5 instanceof s) == true) goto L9;
+        return false;
+    L9:
+        if (Intrinsics.areEqual(this.f11743a, ((s) r5).f11743a) == true) goto L11;
+        return false;
+    L11:
+        return true;
+    }
+
+    public final int hashCode() {
+        return this.f11743a.hashCode();
+    }
+
+    public final String toString() {
+        return "NotifyWidgetDragStarted(widgetBox=" + this.f11743a + ")";
+    }
+}

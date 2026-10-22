@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/tablet_settings"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.ListContentItemCustom
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingSubItemTopStyle">
+                <obric.widget.SliderWithIcons
+                    android:id="@+id/brightness_seekbar"
+                    android:paddingLeft="@dimen/brightness_icon_left_margin"
+                    android:paddingRight="@dimen/brightness_icon_right_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:left_icon_src="@drawable/brightness_min"
+                    app:right_icon_src="@drawable/brightness_max"/>
+            </obric.widget.ListContentItemCustom>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/switch_auto_brightness"
+                android:background="@drawable/selector_setting_sub_item_bg_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/brightness_auto_switch"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/item_auto_lock_screen_time"
+                android:title="@string/security_auto_lock_time"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/item_protect_eyes"
+                android:title="@string/protect_eyes_title"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/display_settings"
+                android:title="@string/more_display_settings"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <TextView
+                android:text="@string/desktop"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/wallpaper_settings"
+                android:title="@string/launcher_wallpaper_setting_text"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/shortcut_btn"
+                android:title="@string/ten_shortcut_btn"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <TextView
+                android:text="@string/voice_input_and_command"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/id_recognize_lang"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/voice_water_drop"
+                android:title="@string/voice_water_drop"
+                style="@style/SettingSubItemMidStyle"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/cursor_water_drop"
+                android:title="@string/cursor_water_drop"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <TextView
+                android:text="@string/mouse_key_label"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/mouse_key_mode"
+                android:title="@string/mouse_key_mode"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/custom_keyboard"
+                android:title="@string/custom_keyboard_settings"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <TextView
+                android:text="@string/sight_tracking"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/sight_tracking"
+                android:title="@string/sight_tracking_settings"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/scrollview_bottom_gap_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

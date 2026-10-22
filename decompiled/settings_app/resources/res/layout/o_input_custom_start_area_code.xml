@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/o_input_area_code_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_basic_text_1"
+        android:id="@+id/o_input_area_code_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+86"
+        android:maxLines="1"
+        style="@style/BtnLabel_M2_Thin"/>
+    <ImageView
+        android:id="@+id/o_input_area_code_arrow"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/o_input_layout_area_code_arrow"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="2dp"/>
+</LinearLayout>

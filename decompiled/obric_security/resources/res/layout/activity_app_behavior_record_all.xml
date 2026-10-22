@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.optimize.OCTitleBar
+        android:id="@+id/new_titlebar"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_title_bar_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:oui_title_text="应用行为记录"/>
+    <com.obric.oui.orecyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_titlebar"/>
+    <ViewStub
+        android:id="@+id/stub_behavior_record_disabled"
+        android:layout="@layout/layout_behavior_record_disabled"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_titlebar"/>
+    <ViewStub
+        android:id="@+id/stub_no_behavior_record_data"
+        android:layout="@layout/layout_no_behavior_record_data"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_titlebar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

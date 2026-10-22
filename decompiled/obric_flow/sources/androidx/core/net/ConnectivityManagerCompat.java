@@ -1,0 +1,60 @@
+package androidx.core.net;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import androidx.annotation.DoNotInline;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.annotation.RequiresPermission;
+import androidx.annotation.RestrictTo;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class ConnectivityManagerCompat {
+    public static final int RESTRICT_BACKGROUND_STATUS_DISABLED = 1;
+    public static final int RESTRICT_BACKGROUND_STATUS_ENABLED = 3;
+    public static final int RESTRICT_BACKGROUND_STATUS_WHITELISTED = 2;
+
+    @RequiresApi(24)
+    public static class Api24Impl {
+        private Api24Impl() {
+        }
+
+        @DoNotInline
+        public static int getRestrictBackgroundStatus(ConnectivityManager r5) {
+            return r5.getRestrictBackgroundStatus();
+        }
+    }
+
+    @Retention(RetentionPolicy.SOURCE)
+    @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
+    public @interface RestrictBackgroundStatus {
+    }
+
+    private ConnectivityManagerCompat() {
+    }
+
+    @Nullable
+    @RequiresPermission("android.permission.ACCESS_NETWORK_STATE")
+    @SuppressLint({"ReferencesDeprecated"})
+    public static NetworkInfo getNetworkInfoFromBroadcast(@NonNull ConnectivityManager r5, @NonNull Intent r10) {
+        NetworkInfo r11 = (NetworkInfo) r10.getParcelableExtra("networkInfo");
+        if (r11 != null) goto L5;
+        return null;
+    L5:
+        return r5.getNetworkInfo(r11.getType());
+    }
+
+    public static int getRestrictBackgroundStatus(@NonNull ConnectivityManager r5) {
+        return Api24Impl.getRestrictBackgroundStatus(r5);
+    }
+
+    @RequiresPermission("android.permission.ACCESS_NETWORK_STATE")
+    public static boolean isActiveNetworkMetered(@NonNull ConnectivityManager r5) {
+        return r5.isActiveNetworkMetered();
+    }
+}

@@ -1,0 +1,196 @@
+package com.google.android.material.behavior;
+
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
+import androidx.customview.widget.ViewDragHelper;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.Behavior<V> {
+    private static final float DEFAULT_ALPHA_END_DISTANCE = 0.5f;
+    private static final float DEFAULT_ALPHA_START_DISTANCE = 0.0f;
+    private static final float DEFAULT_DRAG_DISMISS_THRESHOLD = 0.5f;
+    public static final int STATE_DRAGGING = 1;
+    public static final int STATE_IDLE = 0;
+    public static final int STATE_SETTLING = 2;
+    public static final int SWIPE_DIRECTION_ANY = 2;
+    public static final int SWIPE_DIRECTION_END_TO_START = 1;
+    public static final int SWIPE_DIRECTION_START_TO_END = 0;
+    float alphaEndSwipeDistance;
+    float alphaStartSwipeDistance;
+    private final ViewDragHelper.Callback dragCallback;
+    float dragDismissThreshold;
+    private boolean interceptingEvents;
+    a listener;
+    private float sensitivity;
+    private boolean sensitivitySet;
+    int swipeDirection;
+    ViewDragHelper viewDragHelper;
+
+    public interface a {
+        void a(int r1);
+
+        void a(View r1);
+    }
+
+    private class b implements Runnable {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        final /* synthetic */ SwipeDismissBehavior f3783a;
+
+        /* JADX INFO: renamed from: b, reason: collision with root package name */
+        private final View f3784b;
+        private final boolean c;
+
+        b(SwipeDismissBehavior r1, View r2, boolean r3) {
+            this.f3783a = r1;
+            this.f3784b = r2;
+            this.c = r3;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            if (this.f3783a.viewDragHelper == null) goto L8;
+            if (this.f3783a.viewDragHelper.continueSettling(true) == false) goto L8;
+            ViewCompat.postOnAnimation(this.f3784b, this);
+            return;
+        L8:
+            if (this.c == true) goto L10;
+            return;
+        L10:
+            if (this.f3783a.listener == null) goto L15;
+            this.f3783a.listener.a(this.f3784b);
+            return;
+        }
+    }
+
+    public SwipeDismissBehavior() {
+        this.sensitivity = 0.0f;
+        this.swipeDirection = 2;
+        this.dragDismissThreshold = 0.5f;
+        this.alphaStartSwipeDistance = 0.0f;
+        this.alphaEndSwipeDistance = 0.5f;
+        this.dragCallback = new AnonymousClass1(this);
+    }
+
+    static float clamp(float r0, float r1, float r2) {
+        return Math.min(Math.max(r0, r1), r2);
+    }
+
+    static int clamp(int r0, int r1, int r2) {
+        return Math.min(Math.max(r0, r1), r2);
+    }
+
+    private void ensureViewDragHelper(ViewGroup r3) {
+        if (this.viewDragHelper == null) goto L5;
+        return;
+    L5:
+        if (this.sensitivitySet == false) goto L7;
+        ViewDragHelper r4 = ViewDragHelper.create(r3, this.sensitivity, this.dragCallback);
+    L8:
+        this.viewDragHelper = r4;
+        return;
+    L7:
+        r4 = ViewDragHelper.create(r3, this.dragCallback);
+        goto L8
+    }
+
+    static float fraction(float r0, float r1, float r2) {
+        return (r2 - r0) / (r1 - r0);
+    }
+
+    private void updateAccessibilityActions(View r4) {
+        ViewCompat.removeAccessibilityAction(r4, 1048576);
+        if (canSwipeDismissView(r4) == false) goto L6;
+        ViewCompat.replaceAccessibilityAction(r4, AccessibilityNodeInfoCompat.AccessibilityActionCompat.ACTION_DISMISS, null, new AnonymousClass2(this));
+        return;
+    }
+
+    public boolean canSwipeDismissView(View r1) {
+        return true;
+    }
+
+    public int getDragState() {
+        ViewDragHelper r0 = this.viewDragHelper;
+        if (r0 != null) goto L7;
+        return 0;
+    L7:
+        return r0.getViewDragState();
+    }
+
+    public a getListener() {
+        return this.listener;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
+    public boolean onInterceptTouchEvent(CoordinatorLayout r4, V r5, MotionEvent r6) {
+        boolean r0 = this.interceptingEvents;
+        int r1 = r6.getActionMasked();
+        if (r1 != 0) goto L5;
+        r0 = r4.isPointInChildBounds(r5, (int) r6.getX(), (int) r6.getY());
+        this.interceptingEvents = r0;
+    L11:
+        if (r0 == false) goto L14;
+        ensureViewDragHelper(r4);
+        return this.viewDragHelper.shouldInterceptTouchEvent(r6);
+    L14:
+        return false;
+    L5:
+        if (r1 != 1) goto L7;
+    L9:
+        this.interceptingEvents = false;
+        goto L11
+    L7:
+        if (r1 == 3) goto L9;
+        goto L9
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
+    public boolean onLayoutChild(CoordinatorLayout r1, V r2, int r3) {
+        boolean r4 = super.onLayoutChild(r1, r2, r3);
+        if (ViewCompat.getImportantForAccessibility(r2) != 0) goto L5;
+        ViewCompat.setImportantForAccessibility(r2, 1);
+        updateAccessibilityActions(r2);
+    L5:
+        return r4;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
+    public boolean onTouchEvent(CoordinatorLayout r1, V r2, MotionEvent r3) {
+        ViewDragHelper r0 = this.viewDragHelper;
+        if (r0 == null) goto L6;
+        r0.processTouchEvent(r3);
+        return true;
+    L6:
+        return false;
+    }
+
+    public void setDragDismissDistance(float r3) {
+        this.dragDismissThreshold = clamp(0.0f, r3, 1.0f);
+    }
+
+    public void setEndAlphaSwipeDistance(float r3) {
+        this.alphaEndSwipeDistance = clamp(0.0f, r3, 1.0f);
+    }
+
+    public void setListener(a r3) {
+        this.listener = (a) ZeusTransformUtils.wrapperContextForParams(r3, a.class, "com.obric.memorydata.plugin");
+    }
+
+    public void setSensitivity(float r1) {
+        this.sensitivity = r1;
+        this.sensitivitySet = true;
+    }
+
+    public void setStartAlphaSwipeDistance(float r3) {
+        this.alphaStartSwipeDistance = clamp(0.0f, r3, 1.0f);
+    }
+
+    public void setSwipeDirection(int r1) {
+        this.swipeDirection = r1;
+    }
+}

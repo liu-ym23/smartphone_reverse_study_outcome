@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/setting_item_text_colorlist"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/item_title"
+        android:paddingLeft="@dimen/settings_item_title_left_margin"
+        android:paddingRight="@dimen/settings_item_title_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
+    <TextView
+        android:textSize="13.5sp"
+        android:textColor="@color/icon_settings_summary_colorlist"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:id="@+id/storage_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/memory_manage_total_margin_right"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/sd_storage_arrow"
+        android:paddingRight="@dimen/lock_screen_mode_item_check_right_margin"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/secletor_setting_item_arrow"/>
+</LinearLayout>

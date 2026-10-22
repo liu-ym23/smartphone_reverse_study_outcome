@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="one">%d 天前</item>
+        <item quantity="other">%d 天前</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="one">%d 分钟前</item>
+        <item quantity="other">%d 分钟前</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="one">%d 年前</item>
+        <item quantity="other">%d 年前</item>
+    </plurals>
+    <plurals name="accessibilty_autoclick_preference_subtitle_extremely_short_delay">
+        <item quantity="one">延迟时间极短（%1$d 毫秒）</item>
+        <item quantity="other">延迟时间极短（%1$d 毫秒）</item>
+    </plurals>
+    <plurals name="accessibilty_autoclick_preference_subtitle_long_delay">
+        <item quantity="one">延迟时间长（%1$d 毫秒）</item>
+        <item quantity="other">延迟时间长（%1$d 毫秒）</item>
+    </plurals>
+    <plurals name="accessibilty_autoclick_preference_subtitle_short_delay">
+        <item quantity="one">延迟时间短（%1$d 毫秒）</item>
+        <item quantity="other">延迟时间短（%1$d 毫秒）</item>
+    </plurals>
+    <plurals name="accessibilty_autoclick_preference_subtitle_very_long_delay">
+        <item quantity="one">延迟时间很长（%1$d 毫秒）</item>
+        <item quantity="other">延迟时间很长（%1$d 毫秒）</item>
+    </plurals>
+    <plurals name="accessibilty_autoclick_preference_subtitle_very_short_delay">
+        <item quantity="one">延迟时间很短（%1$d 毫秒）</item>
+        <item quantity="other">延迟时间很短（%1$d 毫秒）</item>
+    </plurals>
+    <plurals name="data_saver_unrestricted_summary">
+        <item quantity="one">已允许 1 个应用在流量节省程序开启时无限量使用数据流量。</item>
+        <item quantity="other">已允许 %1$d 个应用在流量节省程序开启时无限量使用数据流量。</item>
+    </plurals>
+    <plurals name="disable_one_step_egg_in_time">
+        <item quantity="one">还需 %1$d 次操作即可关闭一步彩蛋</item>
+        <item quantity="other">还需 %1$d 次操作即可关闭一步彩蛋</item>
+    </plurals>
+    <plurals name="dlg_remove_locales_title">
+        <item quantity="one">要移除所选语言吗？</item>
+        <item quantity="other">要移除所选语言吗？</item>
+    </plurals>
+    <plurals name="domain_urls_apps_summary">
+        <item quantity="one">1 个应用可以打开支持的链接</item>
+        <item quantity="other">%d 个应用可以打开支持的链接</item>
+    </plurals>
+    <plurals name="enable_one_step_egg_in_time">
+        <item quantity="one">还需 %1$d 次操作即可激活一步彩蛋</item>
+        <item quantity="other">还需 %1$d 次操作即可激活一步彩蛋</item>
+    </plurals>
+    <plurals name="high_power_count">
+        <item quantity="one">已允许 1 个应用忽略电池优化</item>
+        <item quantity="other">已允许 %d 个应用忽略电池优化</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="one">密码应至少包含 1 个字母。</item>
+        <item quantity="other">密码应至少包含 %d 个字母。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="one">密码应至少包含 1 个小写字母。</item>
+        <item quantity="other">密码应至少包含 %d 个小写字母。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="one">密码应至少包含 1 个非字母字符。</item>
+        <item quantity="other">密码应至少包含 %d 个非字母字符。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="one">密码应至少包含 1 个数字。</item>
+        <item quantity="other">密码应至少包含 %d 个数字。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="one">密码应至少包含 1 个特殊符号。</item>
+        <item quantity="other">密码应至少包含 %d 个特殊符号。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="one">密码应至少包含 1 个大写字母。</item>
+        <item quantity="other">密码应至少包含 %d 个大写字母。</item>
+    </plurals>
+    <plurals name="lockpattern_too_many_failed_confirmation_attempts_footer">
+        <item quantity="one">1 秒后重试</item>
+        <item quantity="other">%d 秒后重试</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="one">%d 个应用可以读取通知</item>
+        <item quantity="other">%d 个应用可以读取通知</item>
+    </plurals>
+    <plurals name="memory_usage_apps_summary">
+        <item quantity="one">过去 %2$s内有 1 个应用使用了内存</item>
+        <item quantity="other">过去 %2$s内有 %1$d 个应用使用了内存</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d 条新通知</item>
+        <item quantity="other">%d 条新通知</item>
+    </plurals>
+    <plurals name="notification_summary">
+        <item quantity="one">已禁止 %d 个应用发送通知</item>
+        <item quantity="other">已禁止 %d 个应用发送通知</item>
+    </plurals>
+    <plurals name="pbap_import_text">
+        <item quantity="one">是否确认导入 %1$s 位联系人？</item>
+        <item quantity="other">是否确认导入 %1$s 位联系人？</item>
+    </plurals>
+    <plurals name="permissions_summary">
+        <item quantity="one">已授予 %d 项权限</item>
+        <item quantity="other">已授予 %d 项权限</item>
+    </plurals>
+    <plurals name="print_settings_title">
+        <item quantity="one">1 项打印任务</item>
+        <item quantity="other">%d 项打印任务</item>
+    </plurals>
+    <plurals name="runtime_permissions_additional_count">
+        <item quantity="one">%d 项其他权限</item>
+        <item quantity="other">%d 项其他权限</item>
+    </plurals>
+    <plurals name="runtime_permissions_summary">
+        <item quantity="one">已授予 %d 项权限（共 %d 项）</item>
+        <item quantity="other">已授予 %d 项权限（共 %d 项）</item>
+    </plurals>
+    <plurals name="security_settings_fingerprint_preference_summary">
+        <item quantity="one">已设置 %1$d 个指纹</item>
+        <item quantity="other">已设置 %1$d 个指纹</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="one">只需 %1$d 步操作即可进入开发者模式</item>
+        <item quantity="other">只需 %1$d 步操作即可进入开发者模式</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_dialog_title">
+        <item quantity="one">信任或移除证书</item>
+        <item quantity="other">信任或移除证书</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message">
+        <item quantity="one">%s 已为您的工作资料安装一个证书授权中心，它可用于监控您的工作网络活动（包括使用电子邮件、应用和安全网站）。\n\n如需详细了解此证书，请与您的管理员联系。</item>
+        <item quantity="other">%s 已为您的工作资料安装多个证书授权中心，它们可用于监控您的工作网络活动（包括使用电子邮件、应用和安全网站）。\n\n如需详细了解这些证书，请与您的管理员联系。</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_info_message_device_owner">
+        <item quantity="one">%s 已在您的设备上安装一个证书授权中心，它可用于监控您的设备网络活动（包括使用电子邮件、应用和安全网站）。\n\n如需详细了解此证书，请与您的管理员联系。</item>
+        <item quantity="other">%s 已在您的设备上安装多个证书授权中心，它们可用于监控您的设备网络活动（包括使用电子邮件、应用和安全网站）。\n\n如需详细了解这些证书，请与您的管理员联系。</item>
+    </plurals>
+    <plurals name="ssl_ca_cert_settings_button">
+        <item quantity="one">检查证书</item>
+        <item quantity="other">检查证书</item>
+    </plurals>
+    <plurals name="uninstall_app_dialog_title">
+        <item quantity="one">确定卸载选中的 %1$d 个应用吗?</item>
+        <item quantity="other">确定卸载选中的 %1$d 个应用吗?</item>
+    </plurals>
+    <plurals name="uri_permissions_text">
+        <item quantity="one">1 项</item>
+        <item quantity="other">%d 项</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="one">SIM 卡 PIN 码不正确，您还可尝试 %d 次。如果仍不正确，则需要联系运营商帮您解锁设备。</item>
+        <item quantity="other">SIM 卡 PIN 码不正确，您还可尝试 %d 次。</item>
+    </plurals>
+    <plurals name="zen_mode_summary_alarms_only_by_hour">
+        <item quantity="one">更改为仅限闹钟，持续 1 小时（到%2$s）</item>
+        <item quantity="other">更改为仅限闹钟，持续 %1$d 小时（到%2$s）</item>
+    </plurals>
+    <plurals name="zen_mode_summary_alarms_only_by_minute">
+        <item quantity="one">更改为仅限闹钟，持续 1 分钟（到%2$s）</item>
+        <item quantity="other">更改为仅限闹钟，持续 %1$d 分钟（到%2$s）</item>
+    </plurals>
+</resources>

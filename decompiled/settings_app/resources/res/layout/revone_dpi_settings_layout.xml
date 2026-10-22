@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/dpi_settings_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OListView
+        android:id="@+id/options_list"
+        android:scrollbars="none"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        style="@style/ListViewGeneralStyle"/>
+    <obric.widget.ListContentItemText
+        android:id="@+id/view_dpi_custom"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/options_list"
+        android:title="@string/dpi_item1_custom"
+        style="@style/ListContentItemStyle.Single"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

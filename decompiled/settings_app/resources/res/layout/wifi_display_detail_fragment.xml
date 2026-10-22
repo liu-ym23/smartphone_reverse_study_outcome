@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/wifi_display_rename"
+        android:layout_height="56dp"
+        app:oui_list_item_title="@string/device_lable"
+        style="@style/OListItemSettingsStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <com.obric.oui.button.OButton
+        android:textColor="@color/oui_red_6"
+        android:id="@+id/forget_btn"
+        android:visibility="visible"
+        android:clickable="true"
+        android:layout_height="@dimen/oui_h_l2"
+        android:text="@string/forget_device"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="16dp"
+        style="@style/OButton.ListItem.Center"/>
+</LinearLayout>

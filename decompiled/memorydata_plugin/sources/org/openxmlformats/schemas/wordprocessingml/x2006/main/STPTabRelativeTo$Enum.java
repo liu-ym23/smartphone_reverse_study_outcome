@@ -1,0 +1,32 @@
+package org.openxmlformats.schemas.wordprocessingml.x2006.main;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import org.apache.xmlbeans.StringEnumAbstractBase;
+
+/* JADX INFO: loaded from: classes8.dex */
+public final class STPTabRelativeTo$Enum extends StringEnumAbstractBase {
+    static final int INT_INDENT = 2;
+    static final int INT_MARGIN = 1;
+    private static final long serialVersionUID = 1;
+    public static final StringEnumAbstractBase.Table table = null;
+
+    static {
+        table = new StringEnumAbstractBase.Table(new STPTabRelativeTo$Enum[]{new STPTabRelativeTo$Enum("margin", 1), new STPTabRelativeTo$Enum("indent", 2)});
+    }
+
+    private STPTabRelativeTo$Enum(String r1, int r2) {
+        super(r1, r2);
+    }
+
+    public static STPTabRelativeTo$Enum forInt(int r2) {
+        return (STPTabRelativeTo$Enum) ZeusTransformUtils.preCheckCast(table.forInt(r2), STPTabRelativeTo$Enum.class, "com.obric.memorydata.plugin");
+    }
+
+    public static STPTabRelativeTo$Enum forString(String r2) {
+        return (STPTabRelativeTo$Enum) ZeusTransformUtils.preCheckCast(table.forString(r2), STPTabRelativeTo$Enum.class, "com.obric.memorydata.plugin");
+    }
+
+    private Object readResolve() {
+        return forInt(intValue());
+    }
+}

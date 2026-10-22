@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seekbar_brightness"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/brightness_icon_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/brightness_icon_left_margin"
+        android:src="@drawable/brightness_min"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/brightness_icon_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/brightness_icon_right_margin"
+        android:src="@drawable/brightness_max"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    <SeekBar
+        android:id="@+id/brightness_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/brightness_icon_max"
+        android:layout_toRightOf="@+id/brightness_icon_min"
+        android:layout_centerVertical="true"/>
+</merge>

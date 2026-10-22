@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/settings_item_top_bottom_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <obric.widget.PreviewOptionsCheckView
+        android:id="@+id/volume_key_chooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.android.settings.widget.VerticalOptionsCheckView
+        android:id="@+id/volume_chooser_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <TextView
+        android:id="@+id/header_text"
+        android:text="@string/headset_category_title"
+        style="@style/SettingItemTitleStyle"/>
+</LinearLayout>

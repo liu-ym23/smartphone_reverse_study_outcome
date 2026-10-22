@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/tv_navbar_mode_setting_title"
+        android:text="@string/phone_case_shortcut_keys_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        style="@style/SettingItemTitleStyle"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ll_default_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_navbar_mode_setting_title"/>
+    <com.android.settings.widget.InnerExpandableLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_expand_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/ll_default_item_container"/>
+    <TextView
+        android:textSize="18sp"
+        android:gravity="center"
+        android:id="@+id/tv_phone_case_category_expandable"
+        android:background="@drawable/selector_setting_sub_item_bg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_case_view_more_short_item"
+        android:layout_below="@+id/ll_expand_layout_container"
+        android:layout_alignParentBottom="true"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</merge>

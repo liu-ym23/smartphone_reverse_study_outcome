@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/file_info"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File Info"/>
+    <com.obric.cae.location.zpp.ui.ZppChart
+        android:id="@+id/zpp_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/zoom_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Zoom In"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/show_features_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Features"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

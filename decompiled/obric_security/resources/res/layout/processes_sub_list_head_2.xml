@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/head_area"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/head_container"
+        android:background="@drawable/oic_bg_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_text_1"
+            android:gravity="center_vertical"
+            android:id="@+id/selected_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="44dp"
+            android:text="--"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Title_Display_S"/>
+        <com.obric.oui.text.OTextView
+            android:textColor="@color/oui_text_3"
+            android:gravity="center_vertical"
+            android:id="@+id/selected_size_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:minHeight="16dp"
+            android:text="@string/running_process_has_selected"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selected_size"
+            style="@style/Label_M_Thin"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

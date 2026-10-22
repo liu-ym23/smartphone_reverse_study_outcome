@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/never_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_top"
+        app:ocardlistitem_showCustomEnd="false"
+        app:ocardlistitem_showCustomStart="true"
+        app:ocardlistitem_showDivider="false"
+        app:ocardlistitem_showIcon="false"
+        app:ocardlistitem_showSubTitle="false"
+        app:ocardlistitem_showTailIcon="false"
+        app:ocardlistitem_showTitle="true"
+        app:ocardlistitem_title="@string/background_network_allow"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/screen_off_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_bottom"
+        app:ocardlistitem_showCustomEnd="false"
+        app:ocardlistitem_showCustomStart="true"
+        app:ocardlistitem_showDivider="false"
+        app:ocardlistitem_showIcon="false"
+        app:ocardlistitem_showSubTitle="false"
+        app:ocardlistitem_showTailIcon="false"
+        app:ocardlistitem_showTitle="true"
+        app:ocardlistitem_title="@string/background_network_reject_screen_off"/>
+</LinearLayout>

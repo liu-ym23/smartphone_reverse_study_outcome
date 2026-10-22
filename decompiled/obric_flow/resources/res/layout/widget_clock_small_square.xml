@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/widget_real_content"
+        android:background="@drawable/widget_real_content_bg"
+        android:padding="10.5dp"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.clockwidgets.ui.SquareClockView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/widget_tip_view"
+        style="@style/widget_tip_text"/>
+</FrameLayout>

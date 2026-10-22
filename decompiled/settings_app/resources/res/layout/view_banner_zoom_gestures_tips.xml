@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="@dimen/list_item_maximum_width">
+    <ImageView
+        android:background="@drawable/screen_magnification_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/screen_magnification"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:maxWidth="@dimen/list_item_maximum_width"
+        android:layout_marginHorizontal="@dimen/settings_container_item_horizontal_padding"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:layout_gravity="bottom"
+        android:id="@+id/accessibility_screen_magnification_enable"
+        android:background="@drawable/screen_magnification_bg_bottom"
+        app:ocardlistitem_bgColor="@color/transparent"
+        app:ocardlistitem_cardPosition="position_bottom"
+        app:ocardlistitem_showSubTitle="false"
+        app:ocardlistitem_title="@string/accessibility_screen_magnification_enable"
+        style="@style/OCardListItemSwitchSingle"/>
+</LinearLayout>

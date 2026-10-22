@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <TextView
+        android:id="@+id/items_title"
+        android:text="@string/eye_protection_cycle_title"
+        style="@style/SettingItemTitleStyle"/>
+    <obric.widget.SettingItemText
+        android:id="@+id/item_enable"
+        android:title="@string/eye_protection_cycle_enable"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemText
+        android:id="@+id/item_disable"
+        android:title="@string/eye_protection_cycle_disable"
+        style="@style/SettingSubItemBottomStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

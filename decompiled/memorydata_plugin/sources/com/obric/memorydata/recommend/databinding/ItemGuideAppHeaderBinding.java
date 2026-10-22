@@ -1,0 +1,46 @@
+package com.obric.memorydata.recommend.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import androidx.viewbinding.ViewBinding;
+import com.obric.memorydata.plugin.R;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.util.Objects;
+
+/* JADX INFO: loaded from: classes5.dex */
+public final class ItemGuideAppHeaderBinding implements ViewBinding {
+    private final LinearLayout rootView;
+
+    private ItemGuideAppHeaderBinding(LinearLayout r1) {
+        this.rootView = r1;
+    }
+
+    public static ItemGuideAppHeaderBinding bind(View r3) {
+        Objects.requireNonNull(r3, "rootView");
+        return new ItemGuideAppHeaderBinding((LinearLayout) ZeusTransformUtils.preCheckCast(r3, LinearLayout.class, "com.obric.memorydata.plugin"));
+    }
+
+    public static ItemGuideAppHeaderBinding inflate(LayoutInflater r2) {
+        return inflate(r2, null, false);
+    }
+
+    public static ItemGuideAppHeaderBinding inflate(LayoutInflater r3, ViewGroup r4, boolean r5) {
+        View r6 = ZeusTransformUtils.inflate(r3, ZeusTransformUtils.mapRes(R.layout.item_guide_app_header, "layout", "item_guide_app_header"), r4, false, "com.obric.memorydata.plugin");
+        if (r5 == false) goto L6;
+        r4.addView(r6);
+    L6:
+        return bind(r6);
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    public /* bridge */ /* synthetic */ View getRoot() {
+        return getRoot();
+    }
+
+    @Override // androidx.viewbinding.ViewBinding
+    public LinearLayout getRoot() {
+        return this.rootView;
+    }
+}

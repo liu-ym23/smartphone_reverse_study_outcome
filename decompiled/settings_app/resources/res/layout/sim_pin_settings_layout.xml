@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/security_item_sim_pin"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/item_enable_pin"
+        android:background="@drawable/selector_setting_sub_item_bg_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_item_top_bottom_margin"
+        android:layout_below="@+id/view_title"
+        android:title="@string/sim_pin_item_enable_pin"/>
+    <obric.widget.SettingItemText
+        android:id="@+id/item_modify_pin"
+        android:background="@drawable/selector_setting_sub_item_bg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_enable_pin"
+        android:title="@string/sim_pin_item_modify_pin"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_modify_pin"
+        layout="@layout/item_bottom_shadow_layout"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

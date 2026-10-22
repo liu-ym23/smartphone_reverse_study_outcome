@@ -1,0 +1,225 @@
+package com.obric.capabilitykit.common.intent;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import androidx.constraintlayout.core.motion.utils.TypedValues;
+import com.obric.b.a;
+import com.obric.capabilitykit.entity.app.AlarmEntity;
+import com.obric.memorydata.middleware.impl.bdtracker.TrackerImpl;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u000f\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B\u001d\u0012\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u0004\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0006¢\u0006\u0002\u0010\u0007J\u000b\u0010\u0011\u001a\u0004\u0018\u00010\u0004HÆ\u0003J\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0006HÆ\u0003¢\u0006\u0002\u0010\tJ&\u0010\u0013\u001a\u00020\u00002\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u00042\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0006HÆ\u0001¢\u0006\u0002\u0010\u0014J\t\u0010\u0015\u001a\u00020\u0016HÖ\u0001J\u0013\u0010\u0017\u001a\u00020\u00062\b\u0010\u0018\u001a\u0004\u0018\u00010\u0019HÖ\u0003J\t\u0010\u001a\u001a\u00020\u0016HÖ\u0001J\u0012\u0010\u001b\u001a\u00020\u00012\b\u0010\u001c\u001a\u0004\u0018\u00010\u0019H\u0016J\t\u0010\u001d\u001a\u00020\u001eHÖ\u0001J\u0019\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\u0016HÖ\u0001R\u001e\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0086\u000e¢\u0006\u0010\n\u0002\u0010\f\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000bR\u001c\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u000e\"\u0004\b\u000f\u0010\u0010¨\u0006$"}, d2 = {"Lcom/obric/capabilitykit/common/intent/ClockDeleteAlarmParams;", "Lcom/obric/capabilitykit/common/intent/IntentParams;", "Landroid/os/Parcelable;", TypedValues.AttributesType.S_TARGET, "Lcom/obric/capabilitykit/entity/app/AlarmEntity;", "deleteAll", "", "(Lcom/obric/capabilitykit/entity/app/AlarmEntity;Ljava/lang/Boolean;)V", "getDeleteAll", "()Ljava/lang/Boolean;", "setDeleteAll", "(Ljava/lang/Boolean;)V", "Ljava/lang/Boolean;", "getTarget", "()Lcom/obric/capabilitykit/entity/app/AlarmEntity;", "setTarget", "(Lcom/obric/capabilitykit/entity/app/AlarmEntity;)V", "component1", "component2", "copy", "(Lcom/obric/capabilitykit/entity/app/AlarmEntity;Ljava/lang/Boolean;)Lcom/obric/capabilitykit/common/intent/ClockDeleteAlarmParams;", "describeContents", "", "equals", "other", "", "hashCode", "mergeParams", TrackerImpl.PARAMS, "toString", "", "writeToParcel", "", "parcel", "Landroid/os/Parcel;", "flags", "intentcommon_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+public final class ClockDeleteAlarmParams implements Parcelable, IntentParams {
+    public static final Parcelable.Creator<ClockDeleteAlarmParams> CREATOR = null;
+    private Boolean deleteAll;
+    private AlarmEntity target;
+
+    @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+    public static final class Creator implements Parcelable.Creator<ClockDeleteAlarmParams> {
+        public Creator() {
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final ClockDeleteAlarmParams createFromParcel(Parcel r7) {
+            int r0 = r7.readInt();
+            Intrinsics.checkNotNullParameter(r7, "parcel");
+            AlarmEntity r2 = (AlarmEntity) ZeusTransformUtils.preCheckCast(r7.readParcelable(ClockDeleteAlarmParams.class.getClassLoader()), AlarmEntity.class, "com.obric.memorydata.plugin");
+            int r5 = 1;
+            if (r7.readInt() != 0) goto L6;
+            Boolean r3 = null;
+        L10:
+            ClockDeleteAlarmParams r1 = new ClockDeleteAlarmParams(r2, r3);
+            int r4 = Math.min(r0, 0);
+            ClassLoader r6 = getClass().getClassLoader();
+        L11:
+            if (r5 > r4) goto L13;
+            r5 = r5 + 1;
+        L13:
+            if (r5 > r0) goto L15;
+            a.a(r7, r6);
+            r5 = r5 + 1;
+            goto L13
+        L15:
+            return r1;
+        L6:
+            if (r7.readInt() == 0) goto L8;
+            boolean r8 = true;
+        L9:
+            r3 = Boolean.valueOf(r8);
+            goto L10
+        L8:
+            r8 = false;
+            goto L9
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ ClockDeleteAlarmParams createFromParcel(Parcel r1) {
+            return createFromParcel(r1);
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final ClockDeleteAlarmParams[] newArray(int r1) {
+            return new ClockDeleteAlarmParams[r1];
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ ClockDeleteAlarmParams[] newArray(int r1) {
+            return newArray(r1);
+        }
+    }
+
+    static {
+        CREATOR = (Parcelable.Creator) ZeusTransformUtils.preCheckCast(new Creator(), Parcelable.Creator.class, "com.obric.memorydata.plugin");
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public ClockDeleteAlarmParams() {
+        Object[] r0 = 0 == true ? 1 : 0;
+        this(null, r0, 3, 0 == true ? 1 : 0);
+    }
+
+    public ClockDeleteAlarmParams(AlarmEntity r1, Boolean r2) {
+        this.target = r1;
+        this.deleteAll = r2;
+    }
+
+    public /* synthetic */ ClockDeleteAlarmParams(AlarmEntity r2, Boolean r3, int r4, DefaultConstructorMarker r5) {
+        if ((r4 & 1) == 0) goto L6;
+        r2 = null;
+    L6:
+        if ((r4 & 2) == 0) goto L8;
+        r3 = null;
+    L8:
+        this(r2, r3);
+    }
+
+    public static /* synthetic */ ClockDeleteAlarmParams copy$default(ClockDeleteAlarmParams r0, AlarmEntity r1, Boolean r2, int r3, Object r4) {
+        if ((r3 & 1) == 0) goto L6;
+        r1 = r0.target;
+    L6:
+        if ((r3 & 2) == 0) goto L9;
+        r2 = r0.deleteAll;
+    L9:
+        return r0.copy(r1, r2);
+    }
+
+    public final AlarmEntity component1() {
+        return this.target;
+    }
+
+    public final Boolean component2() {
+        return this.deleteAll;
+    }
+
+    public final ClockDeleteAlarmParams copy(AlarmEntity r1, Boolean r2) {
+        return new ClockDeleteAlarmParams(r1, r2);
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object r5) {
+        if (this != r5) goto L6;
+        return true;
+    L6:
+        if (ZeusTransformUtils.instanceOf(r5, ClockDeleteAlarmParams.class) == true) goto L8;
+        return false;
+    L8:
+        ClockDeleteAlarmParams r6 = (ClockDeleteAlarmParams) ZeusTransformUtils.preCheckCast(r5, ClockDeleteAlarmParams.class, "com.obric.memorydata.plugin");
+        if (Intrinsics.areEqual(this.target, r6.target) == true) goto L12;
+        return false;
+    L12:
+        if (Intrinsics.areEqual(this.deleteAll, r6.deleteAll) == true) goto L14;
+        return false;
+    L14:
+        return true;
+    }
+
+    public final Boolean getDeleteAll() {
+        return this.deleteAll;
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public String getSubActionValue() {
+        return IntentParams.DefaultImpls.getSubActionValue(this);
+    }
+
+    public final AlarmEntity getTarget() {
+        return this.target;
+    }
+
+    public int hashCode() {
+        AlarmEntity r0 = this.target;
+        int r1 = 0;
+        if (r0 != null) goto L5;
+        int r2 = 0;
+    L6:
+        int r3 = r2 * 31;
+        Boolean r4 = this.deleteAll;
+        if (r4 == null) goto L11;
+        r1 = r4.hashCode();
+    L11:
+        return r3 + r1;
+    L5:
+        r2 = r0.hashCode();
+        goto L6
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public boolean isParamsCompleted() {
+        return IntentParams.DefaultImpls.isParamsCompleted(this);
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public IntentParams mergeParams(Object r4) {
+        if (ZeusTransformUtils.instanceOf(r4, ClockDeleteAlarmParams.class) == true) goto L7;
+        Object r3 = ZeusTransformUtils.preCheckCast(this, IntentParams.class, "com.obric.memorydata.plugin");
+    L6:
+        return (IntentParams) r3;
+    L7:
+        AlarmEntity r1 = this.target;
+        if (r1 != null) goto L10;
+        r1 = ((ClockDeleteAlarmParams) ZeusTransformUtils.preCheckCast(r4, ClockDeleteAlarmParams.class, "com.obric.memorydata.plugin")).target;
+    L10:
+        Boolean r5 = this.deleteAll;
+        if (r5 != null) goto L13;
+        r5 = ((ClockDeleteAlarmParams) ZeusTransformUtils.preCheckCast(r4, ClockDeleteAlarmParams.class, "com.obric.memorydata.plugin")).deleteAll;
+    L13:
+        r3 = ZeusTransformUtils.preCheckCast(new ClockDeleteAlarmParams(r1, r5), IntentParams.class, "com.obric.memorydata.plugin");
+        goto L6
+    }
+
+    public final void setDeleteAll(Boolean r1) {
+        this.deleteAll = r1;
+    }
+
+    public final void setTarget(AlarmEntity r1) {
+        this.target = r1;
+    }
+
+    public String toString() {
+        return "ClockDeleteAlarmParams(target=" + this.target + ", deleteAll=" + this.deleteAll + ')';
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel r5, int r6) {
+        r5.writeInt(0);
+        Intrinsics.checkNotNullParameter(r5, "out");
+        r5.writeParcelable((Parcelable) ZeusTransformUtils.preCheckCast(this.target, Parcelable.class, "com.obric.memorydata.plugin"), r6);
+        Boolean r4 = this.deleteAll;
+        if (r4 != null) goto L5;
+        r5.writeInt(0);
+        return;
+    L5:
+        r5.writeInt(1);
+        r5.writeInt(r4.booleanValue() ? 1 : 0);
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+    <com.obric.oui.text.OTextView
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/request_ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:maxWidth="358dp"
+        android:maxLines="1"
+        android:paddingHorizontal="20dp"
+        style="@style/Body_M_Thick"/>
+</LinearLayout>

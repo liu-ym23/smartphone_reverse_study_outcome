@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/item_view"
+        app:ocardlistitem_defaultCustomEnd="end_mark"
+        app:ocardlistitem_showIcon="true"
+        app:ocardlistitem_showTailIcon="false"
+        style="@style/OCardListItemTextSingle"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/item_no_payment"
+        android:visibility="gone"
+        app:ocardlistitem_cardPosition="position_bottom"
+        app:ocardlistitem_defaultCustomEnd="end_mark"
+        app:ocardlistitem_showIcon="false"
+        app:ocardlistitem_showTailIcon="false"
+        style="@style/OCardListItemTextSingle"/>
+</FrameLayout>

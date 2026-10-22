@@ -1,0 +1,10 @@
+package kotlin.ranges;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"kotlin/ranges/URangesKt___URangesKt"}, k = 4, mv = {1, 9, 0}, xi = 49)
+public final class URangesKt extends URangesKt___URangesKt {
+    private URangesKt() {
+    }
+}

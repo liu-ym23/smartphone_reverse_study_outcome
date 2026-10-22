@@ -1,0 +1,29 @@
+package kotlinx.coroutines.selects;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function3;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+
+/* JADX INFO: loaded from: classes3.dex */
+/* synthetic */ class OnTimeout$selectClause$1 extends FunctionReferenceImpl implements Function3<OnTimeout, k<?>, Object, Unit> {
+    public static final OnTimeout$selectClause$1 INSTANCE = null;
+
+    static {
+        INSTANCE = new OnTimeout$selectClause$1();
+    }
+
+    OnTimeout$selectClause$1() {
+        super(3, OnTimeout.class, "register", "register(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V", 0);
+    }
+
+    @Override // kotlin.jvm.functions.Function3
+    public /* bridge */ /* synthetic */ Unit invoke(OnTimeout r10, k<?> r11, Object r12) {
+        invoke2(r10, r11, r12);
+        return Unit.INSTANCE;
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final void invoke2(OnTimeout r10, k<?> r11, Object r12) {
+        OnTimeout.a(r10, r11, r12);
+    }
+}

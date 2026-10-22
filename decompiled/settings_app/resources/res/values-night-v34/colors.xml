@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="settingslib_state_off_color">@android:color/system_accent1_700</color>
+    <color name="settingslib_state_on_color">@android:color/system_accent1_700</color>
+    <color name="settingslib_thumb_disabled_color">@color/settingslib_thumb_off_color</color>
+    <color name="settingslib_thumb_off_color">@android:color/system_neutral2_400</color>
+    <color name="settingslib_thumb_on_color">@android:color/system_accent1_800</color>
+    <color name="settingslib_track_on_color">@android:color/system_accent1_200</color>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="config_support_reverse_wireless_charging">true</bool>
+    <bool name="disturb_has_sms_tab">true</bool>
+    <bool name="enable_system_alarm_service_default">false</bool>
+    <bool name="enable_system_foreground_service_default">true</bool>
+    <bool name="enable_system_job_service_default">true</bool>
+    <bool name="feature_cdma_b">false</bool>
+    <bool name="feature_china_telecom">false</bool>
+    <bool name="feature_china_unicom">false</bool>
+    <bool name="feature_cmcc">false</bool>
+    <bool name="feature_domestic">true</bool>
+    <bool name="feature_dsds">false</bool>
+    <bool name="feature_oversea_url">false</bool>
+    <bool name="feature_rndis_enable">false</bool>
+    <bool name="feature_small_mem">false</bool>
+    <bool name="feature_softsim">false</bool>
+    <bool name="feature_ultrasonic_sensor">false</bool>
+    <bool name="feature_virtual_key">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="workmanager_test_configuration">false</bool>
+</resources>

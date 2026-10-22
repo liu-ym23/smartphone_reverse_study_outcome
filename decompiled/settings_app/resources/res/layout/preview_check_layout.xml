@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/preview_title"
+        style="@style/SettingItemTitleStyle"/>
+    <LinearLayout
+        android:id="@+id/preview_container"
+        android:background="@drawable/one_hand_preview_bg_2"
+        style="@style/SettingPreviewStyle">
+        <com.android.settings.PreviewSettingItemView
+            android:id="@+id/item_preview_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <com.android.settings.PreviewSettingItemView
+            android:id="@+id/item_preview_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

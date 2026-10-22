@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/oui_p_list_item_1"
+    android:paddingTop="8dp"
+    android:paddingRight="@dimen/oui_p_list_item_1"
+    android:paddingBottom="8dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.tab.OTabLayout
+        android:id="@+id/cycle_view"
+        android:tag="new"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_h_m2"
+        android:layout_marginBottom="@dimen/dimen_16"
+        app:bar_color="@color/oui_fill_element_2"
+        app:indicator_anim_enable="true"
+        app:indicator_color="@color/oui_advanced_fill_seg_selected"
+        app:indicator_corner_radius="@dimen/oui_r_m1"
+        app:indicator_height="@dimen/oui_h_m1"
+        app:indicator_spacing="4dp"
+        app:indicator_unselected_color="@color/oui_basic_fill_element_2"
+        app:oui_tabSelectedTextSize="14dp"
+        app:oui_tabTextSize="14dp"
+        app:tabGravity="fill"
+        style="@style/OTabTextV2.Background.Gray">
+        <com.obric.oui.tab.OTabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/power_usage_cycle_today"/>
+        <com.obric.oui.tab.OTabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/power_usage_cycle_week"/>
+        <com.obric.oui.tab.OTabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/power_usage_cycle_month"/>
+    </com.obric.oui.tab.OTabLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+package kotlinx.coroutines.internal;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class ExceptionSuccessfullyProcessed extends Exception {
+    public static final ExceptionSuccessfullyProcessed INSTANCE = null;
+
+    static {
+        INSTANCE = new ExceptionSuccessfullyProcessed();
+    }
+
+    private ExceptionSuccessfullyProcessed() {
+    }
+}

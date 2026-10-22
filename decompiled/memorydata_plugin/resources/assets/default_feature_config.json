@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "feature_configs": {
+    "obric_feature_audio_xxx": {
+      "description": "这是个例子，用来展示如何配置项目白名单（项目下所有机型版本都支持）、黑名单（项目下所有机型版本都不支持）及特殊名单（分机型、版本等配置）",
+      "enabled": true,
+      "default_state": "enabled",
+      "dependency_os_feature_list": ["os_feature_xxx", "os_feature_yyy"],
+      "product_black_list": [
+        "aaa",
+        "bbb"
+      ],
+      "product_white_list": [
+        "ccc",
+        "ddd"
+      ],
+      "product_special_list": {
+        "pacific": {
+          "P0110": {
+            "min_rom_version": "1.1.5.0",
+            "min_rom_release_date": 20251106,
+            "max_rom_version": "",
+            "max_rom_release_date": 0,
+            "rom_version_black_list": [
+              "1.1.6.0"
+            ]
+          },
+          "xxx": {
+            "min_rom_version": ""
+          }
+        },
+        "nerida": {
+          "NX888J": {
+            "min_rom_version": "0"
+          }
+        }
+      }
+    },
+    "obric_memory_feature_vlm_embedding": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "pacific",
+        "nerida",
+        "genesis",
+        "pike",
+        "nerida-lite"
+      ]
+    },
+    "obric_memory_feature_global_memory": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "pacific",
+        "nerida",
+        "genesis",
+        "Genesis-M",
+        "Genesis-R",
+        "pike",
+        "nerida-lite"
+      ]
+    },
+    "obric_feature_gaze_keep_display": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "pacific",
+        "nerida"
+      ]
+    },
+    "obric_feature_check_device_locked": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "nerida",
+        "pike",
+        "nerida-lite"
+      ]
+    },
+    "obric_feature_user_guide_sys_res": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "nerida",
+        "pike",
+        "nerida-lite"
+      ]
+    },
+    "obric_feature_genesis_feedback_support": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "Genesis-M",
+        "Genesis-R"
+      ]
+    },
+    "obric_feature_audio_os_mic_ref_sync": {
+      "enabled": true,
+      "default_state": "enabled",
+      "product_special_list": {
+        "pacific": {
+          "P0110": {
+            "min_rom_version": "2.2.0.0",
+            "min_rom_release_date": 20260527
+          }
+        },
+        "nerida": {
+          "P0210": {
+            "min_rom_version": "2.2.0.0",
+            "min_rom_release_date": 20260527
+          },
+          "NX888J": {
+            "min_rom_version": "2.2.0.0",
+            "min_rom_release_date": 20260527
+          }
+        }
+      }
+    },
+    "obric_feature_window_mode": {
+      "enabled": true,
+      "default_state": "enabled",
+      "product_special_list": {
+        "pacific": {
+          "P0110": {
+            "min_rom_version": "2.3.0.0"
+          }
+        },
+        "nerida": {
+          "P0210": {
+            "min_rom_version": "2.3.0.0"
+          },
+          "NX888J": {
+            "min_rom_version": "2.3.0.0"
+          }
+        }
+      }
+    },
+    "obric_feature_global_effect_stop_layer_effective": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "nerida-lite"
+      ],
+      "product_special_list": {
+        "pacific": {
+          "P0110": {
+            "min_rom_version": "2.4.2.0"
+          }
+        },
+        "nerida": {
+          "P0210": {
+            "min_rom_version": "2.4.2.0"
+          },
+          "NX888J": {
+            "min_rom_version": "2.4.2.0"
+          }
+        }
+      }
+    },
+    "obric_feature_download_certificate": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "pike",
+        "genesis",
+        "Genesis-M",
+        "Genesis-R"
+      ]
+    },
+    "obric_feature_keep_alive_high_level": {
+      "enabled": true,
+      "default_state": "enabled",
+      "product_white_list": [
+        "Genesis-Test"
+      ]
+    },
+    "obric_feature_keep_alive_mid_level": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "Genesis-Test"
+      ]
+    },
+    "obric_feature_keep_alive_low_level": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_white_list": [
+        "Genesis-Test"
+      ]
+    },
+    "obric_feature_exit_aiagent_when_nova_died": {
+      "enabled": true,
+      "default_state": "enabled",
+      "product_white_list": [
+        "Genesis-Test"
+      ]
+    },
+    "obric_feature_matrix_secure_listener": {
+      "enabled": true,
+      "default_state": "enabled",
+      "product_special_list": {
+        "pacific": {
+          "P0110": {
+            "min_rom_version": "2.5.0.0"
+          }
+        },
+        "nerida": {
+          "P0210": {
+            "min_rom_version": "2.5.0.0"
+          },
+          "NX888J": {
+            "min_rom_version": "2.5.0.0"
+          }
+        }
+      }
+    },
+    "obric_feature_enterprise_login": {
+      "enabled": true,
+      "default_state": "disabled",
+      "product_special_list": {
+        "pacific": {
+          "P0110": {
+            "min_rom_version": "2.5.0.0"
+          }
+        },
+        "nerida": {
+          "P0210": {
+            "min_rom_version": "2.5.0.0"
+          },
+          "NX888J": {
+            "min_rom_version": "2.5.0.0"
+          }
+        }
+      }
+    }
+  }
+}

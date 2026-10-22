@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="@dimen/list_item_maximum_width"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/empty_head"
+        layout="@layout/group_list_item_vertical_gap_layout"/>
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:text="@string/protect_eyes_cycle_title"
+        style="@style/SettingItemTitleStyle"/>
+    <com.android.settings.widget.SettingsBottomExtraView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

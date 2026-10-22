@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="@dimen/list_item_maximum_width"
+    android:layout_height="match_parent">
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    <TextView
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        android:text="@string/touchpad_switch"
+        style="@style/SettingItemTitleStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/touchpad_always_on"
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        app:itemTitle="@string/touchpad_always_on"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/touchpad_disable_when_mouse_connected"
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        app:itemTitle="@string/touchpad_disable_when_mouse_connected"
+        style="@style/SettingSubItemBottomStyle"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    <TextView
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        android:text="@string/touchpad_scrolling_direction"
+        style="@style/SettingItemTitleStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/scroll_direction_forward"
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        app:itemTitle="@string/touchpad_scroll_direction_forward"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/scroll_direction_reverse"
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        app:itemTitle="@string/touchpad_scroll_direction_reverse"
+        style="@style/SettingSubItemBottomStyle"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    <TextView
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        android:text="@string/click_title"
+        style="@style/SettingItemTitleStyle"/>
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/touch_to_click"
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        android:title="@string/touch_to_click"
+        style="@style/SettingSubItemSingleStyle"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    <TextView
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        android:text="@string/mouse_pointer_speed"
+        style="@style/SettingItemTitleStyle"/>
+    <com.android.settings.widget.TickMarkView
+        android:id="@+id/pointer_speed"
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        style="@style/TickMarkViewStyle"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+</LinearLayout>

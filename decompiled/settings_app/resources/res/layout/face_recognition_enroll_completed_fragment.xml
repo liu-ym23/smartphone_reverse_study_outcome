@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/face_recognition_enroll_completed"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_above="@+id/btn_done"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/item_switch_stay_in_lock_screen"
+                android:title="@string/face_data_manage_switch_3"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <ImageView
+                android:id="@+id/iv_fr_preview_suc"
+                android:background="@drawable/setting_fr_preview_suc"
+                android:layout_marginTop="0dp"
+                android:importantForAccessibility="no"
+                style="@style/IntroImageStyle"/>
+            <TextView
+                android:id="@+id/tips_face_preview_suc"
+                android:text="@string/face_recognition_success_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <ImageView
+                android:background="@drawable/setting_fr_preview_fai"
+                android:layout_marginTop="0dp"
+                android:importantForAccessibility="no"
+                style="@style/IntroImageStyle"/>
+            <TextView
+                android:text="@string/face_recognition_failed_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <obric.widget.ShadowFrameLayout
+        android:id="@+id/next_step_btn_group"
+        android:background="#ffffffff"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:bottom_type="true">
+        <com.obric.oui.button.OButton
+            android:layout_gravity="center"
+            android:id="@+id/btn_done"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:text="@string/done"
+            style="@style/LongButton.Shrink.Highlight"/>
+    </obric.widget.ShadowFrameLayout>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

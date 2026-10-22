@@ -1,0 +1,61 @@
+package com.bytedance.iesgurd.model;
+
+import androidx.annotation.Keep;
+import androidx.core.app.NotificationCompat;
+import androidx.exifinterface.media.ExifInterface;
+import com.bytedance.iesgurd.settings.SettingsExtra;
+import com.google.gson.annotations.SerializedName;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Keep
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0005\b\u0001\u0018\u0000*\u0004\b\u0000\u0010\u00012\u00020\u0002B\u0005¢\u0006\u0002\u0010\u0003R\"\u0010\u0004\u001a\u0004\u0018\u00018\u00008\u0006@\u0006X\u0087\u000e¢\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR \u0010\n\u001a\u0004\u0018\u00010\u000b8\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR \u0010\u0010\u001a\u0004\u0018\u00010\u00118\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015R\u001e\u0010\u0016\u001a\u00020\u00178\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0018\u0010\u0019\"\u0004\b\u001a\u0010\u001b¨\u0006\u001c"}, d2 = {"Lcom/bytedance/iesgurd/model/ApiResponse;", ExifInterface.GPS_DIRECTION_TRUE, "", "()V", "data", "getData", "()Ljava/lang/Object;", "setData", "(Ljava/lang/Object;)V", "Ljava/lang/Object;", "extra", "Lcom/bytedance/iesgurd/settings/SettingsExtra;", "getExtra", "()Lcom/bytedance/iesgurd/settings/SettingsExtra;", "setExtra", "(Lcom/bytedance/iesgurd/settings/SettingsExtra;)V", "msg", "", "getMsg", "()Ljava/lang/String;", "setMsg", "(Ljava/lang/String;)V", NotificationCompat.CATEGORY_STATUS, "", "getStatus", "()I", "setStatus", "(I)V", "geckox_noasanRelease"}, k = 1, mv = {1, 1, 16})
+public final class ApiResponse<T> {
+
+    @SerializedName("data")
+    private T data;
+
+    @SerializedName("extra")
+    private SettingsExtra extra;
+
+    @SerializedName("message")
+    private String msg;
+
+    @SerializedName(NotificationCompat.CATEGORY_STATUS)
+    private int status;
+
+    public ApiResponse() {
+    }
+
+    public final T getData() {
+        return this.data;
+    }
+
+    public final SettingsExtra getExtra() {
+        return this.extra;
+    }
+
+    public final String getMsg() {
+        return this.msg;
+    }
+
+    public final int getStatus() {
+        return this.status;
+    }
+
+    public final void setData(T r5) {
+        this.data = r5;
+    }
+
+    public final void setExtra(SettingsExtra r5) {
+        this.extra = r5;
+    }
+
+    public final void setMsg(String r5) {
+        this.msg = r5;
+    }
+
+    public final void setStatus(int r5) {
+        this.status = r5;
+    }
+}

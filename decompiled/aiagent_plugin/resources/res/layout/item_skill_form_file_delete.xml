@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.button.OIconButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/skill_form_file_delete"
+    android:padding="7dp"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:src="@drawable/skill_ic_delete"
+    android:scaleType="center"
+    android:contentDescription="@string/obric_skill_file_delete_description"
+    style="@style/OStyleV2.OIconButton.S.Trans.Neutral"/>

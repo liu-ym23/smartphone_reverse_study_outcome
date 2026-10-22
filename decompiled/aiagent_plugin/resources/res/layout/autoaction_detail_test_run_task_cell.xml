@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/detail_pilot_run_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_top"
+        app:ocardlistitem_cardType="type_container"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/detail_delete_item_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_bottom"
+        app:ocardlistitem_cardType="type_container"/>
+</LinearLayout>

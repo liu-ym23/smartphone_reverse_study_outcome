@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/default_payment_service"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <LinearLayout
+        android:id="@+id/gap_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_title">
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    </LinearLayout>
+    <com.obric.oui.bouncelayout.OListView
+        android:id="@+id/listView"
+        android:layout_marginLeft="@dimen/list_item_left_right_margin"
+        android:layout_marginRight="@dimen/list_item_left_right_margin"
+        android:layout_below="@+id/gap_top"
+        style="@style/ListViewGeneralStyle"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

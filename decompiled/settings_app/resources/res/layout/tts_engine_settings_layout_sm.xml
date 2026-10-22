@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/tts_settings_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.ListContentItemText
+                android:id="@+id/id_engine_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/tts_default_lang_title"
+                style="@style/ListContentItemStyle.Single"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.ListContentItemText
+                android:id="@+id/id_engine_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ListContentItemStyle.Single"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.ListContentItemText
+                android:id="@+id/id_engine_voicedata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ListContentItemStyle.Single"/>
+            <TextView
+                android:text="@string/tts_install_data_summary"
+                style="@style/SettingItemTipsStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

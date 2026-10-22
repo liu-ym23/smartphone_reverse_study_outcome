@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OListView
+        android:id="@+id/listView"
+        android:paddingTop="@dimen/main_settings_first_item_card_gap"
+        android:paddingBottom="@dimen/settings_container_bottom_padding"
+        style="@style/ListViewGeneralStyle"/>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:text="@string/debug_app"
+        android:layout_alignParentTop="false"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+</RelativeLayout>

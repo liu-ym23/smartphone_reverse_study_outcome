@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="8dp">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/oui_basic_text_1"
+        android:id="@+id/tv_guide_app_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineHeight="22sp"
+        android:textFontWeight="500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/oui_functional_blue_6"
+        android:id="@+id/tv_guide_app_open_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recommend_item_guide_category_header_text"
+        android:lineHeight="16sp"
+        android:textFontWeight="500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

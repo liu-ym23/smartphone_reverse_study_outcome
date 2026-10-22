@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingVertical="20dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/circle_view"
+        android:layout_width="@dimen/screen_temperature_edit_view_circle_diameter"
+        android:layout_height="@dimen/screen_temperature_edit_view_circle_diameter"
+        android:src="@drawable/screen_color_temperature_bg"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/point_view"
+        android:layout_width="@dimen/screen_temperature_edit_view_point_diameter"
+        android:layout_height="@dimen/screen_temperature_edit_view_point_diameter"
+        android:src="@drawable/screen_temperature_edit_point_new"
+        android:scaleType="centerCrop"/>
+</merge>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_basic_text_3"
+        android:id="@+id/condition_event_date_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/detail_repeat_date_title"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_detail_title_bar"
+        style="@style/Subtitle_2_Medium"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/condition_event_repeat_mode_start_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_top"
+        app:ocardlistitem_defaultCustomEnd="end_detail"
+        app:ocardlistitem_defaultTailIcon="tail_chevron"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showTailIcon="true"
+        app:ocardlistitem_title="@string/detail_repeat_mode_start_date"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/condition_event_repeat_mode_expire_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_bottom"
+        app:ocardlistitem_defaultCustomEnd="end_detail"
+        app:ocardlistitem_defaultTailIcon="tail_chevron"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showTailIcon="true"
+        app:ocardlistitem_title="@string/detail_repeat_mode_deadline"/>
+</LinearLayout>

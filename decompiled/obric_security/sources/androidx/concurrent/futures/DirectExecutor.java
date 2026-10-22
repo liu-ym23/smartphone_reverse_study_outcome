@@ -1,0 +1,37 @@
+package androidx.concurrent.futures;
+
+import java.util.concurrent.Executor;
+
+/* JADX INFO: loaded from: classes.dex */
+final enum DirectExecutor extends Enum<DirectExecutor> implements Executor {
+    private static final /* synthetic */ DirectExecutor[] $VALUES = null;
+    public static final DirectExecutor INSTANCE = null;
+
+    @Override // java.lang.Enum
+    public String toString() {
+        return "DirectExecutor";
+    }
+
+    private DirectExecutor(String r1, int r2) {
+        super(r1, r2);
+    }
+
+    public static DirectExecutor valueOf(String r1) {
+        return (DirectExecutor) Enum.valueOf(DirectExecutor.class, r1);
+    }
+
+    public static DirectExecutor[] values() {
+        return (DirectExecutor[]) $VALUES.clone();
+    }
+
+    static {
+        DirectExecutor r0 = new DirectExecutor("INSTANCE", 0);
+        INSTANCE = r0;
+        $VALUES = new DirectExecutor[]{r0};
+    }
+
+    @Override // java.util.concurrent.Executor
+    public void execute(Runnable r1) {
+        r1.run();
+    }
+}

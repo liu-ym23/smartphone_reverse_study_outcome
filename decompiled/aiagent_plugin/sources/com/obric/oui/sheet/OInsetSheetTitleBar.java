@@ -1,0 +1,641 @@
+package com.obric.oui.sheet;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import com.bytedance.bdturing.localstorage.DbHelper;
+import com.obric.aiagent.plugin.R;
+import com.obric.oui.button.OButton;
+import com.obric.oui.text.OTextView;
+import com.ss.android.socialbase.downloader.constants.DBDefinition;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import d.h.b.h;
+import d.h.b.o;
+import d.k;
+
+/* JADX INFO: compiled from: OInsetSheetTitleBar.kt */
+/* JADX INFO: loaded from: classes4.dex */
+public class OInsetSheetTitleBar extends FrameLayout {
+    public static final a Companion = null;
+    public static final int STYLE_AREA_ONLY_ICON = 7;
+    public static final int STYLE_BACK = 1;
+    public static final int STYLE_CUSTOM_BACKGROUND = 9;
+    public static final int STYLE_DELETE = 3;
+    public static final int STYLE_HIGHLIGHT_BLUE = 4;
+    public static final int STYLE_HIGHLIGHT_RED = 5;
+    public static final int STYLE_MIX = 10;
+    public static final int STYLE_NORMAL = 0;
+    public static final int STYLE_NORMAL_WITH_ICON = 6;
+    public static final int STYLE_SEARCH = 8;
+    public static final int STYLE_SETTING = 2;
+    public static final int STYLE_TNT_3_BLUE = 11;
+    private String desText;
+    public FrameLayout mCenterContainer;
+    private TextView mCenterTitleView;
+    private FrameLayout mDesContainerView;
+    private OTextView mDesTextView;
+    public FrameLayout mFixedCenterContainer;
+    private TextView mFixedCenterSubTitleView;
+    private TextView mFixedCenterTitleView;
+    public OButton mLeftActionBack;
+    public LinearLayout mLeftContainer;
+    private TextView mLeftTitleView;
+    public LinearLayout mRightContainer;
+    private b mTitlePosition;
+    private boolean showLeftBack;
+    private String subTitleText;
+    private String titleText;
+
+    /* JADX INFO: compiled from: OInsetSheetTitleBar.kt */
+    public static final class a {
+        public /* synthetic */ a(h r1) {
+            this();
+        }
+
+        private a() {
+        }
+    }
+
+    /* JADX INFO: compiled from: OInsetSheetTitleBar.kt */
+    public static final enum b extends Enum<b> {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final b f36204a = null;
+
+        /* JADX INFO: renamed from: b, reason: collision with root package name */
+        public static final b f36205b = null;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public static final b f36206c = null;
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        private static final /* synthetic */ b[] f36207e = null;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        private final int f36208d;
+
+        private static final /* synthetic */ b[] b() {
+            return new b[]{f36204a, f36205b, f36206c};
+        }
+
+        public static b valueOf(String r2) {
+            return (b) ZeusTransformUtils.preCheckCast(Enum.valueOf(b.class, r2), b.class, "com.obric.aiagent.plugin");
+        }
+
+        public static b[] values() {
+            return (b[]) ZeusTransformUtils.preCheckCast(f36207e.clone(), b[].class, "com.obric.aiagent.plugin");
+        }
+
+        private b(String r1, int r2, int r3) {
+            super(r1, r2);
+            this.f36208d = r3;
+        }
+
+        public final int a() {
+            return this.f36208d;
+        }
+
+        static {
+            f36204a = new b("FIXED_CENTER", 0, 0);
+            f36205b = new b("FLOW_WITH_ACTION", 1, 1);
+            f36206c = new b("LEFT_IN_ACTION", 2, 2);
+            f36207e = b();
+        }
+    }
+
+    /* JADX INFO: compiled from: OInsetSheetTitleBar.kt */
+    public /* synthetic */ class c {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f36209a = null;
+
+        static {
+            int[] r0 = new int[b.values().length];
+            r0[b.f36204a.ordinal()] = 1;
+            r0[b.f36205b.ordinal()] = 2;
+            r0[b.f36206c.ordinal()] = 3;
+            f36209a = r0;
+        }
+    }
+
+    static {
+        Companion = new a(null);
+    }
+
+    public OInsetSheetTitleBar(Context r7) {
+        Context r1 = (Context) ZeusTransformUtils.wrapperContextForParams(r7, Context.class, "com.obric.aiagent.plugin");
+        o.e(r1, "context");
+        this(r1, null, 0, 6, null);
+    }
+
+    public OInsetSheetTitleBar(Context r9, AttributeSet r10) {
+        Context r3 = (Context) ZeusTransformUtils.wrapperContextForParams(r9, Context.class, "com.obric.aiagent.plugin");
+        AttributeSet r4 = (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r10, AttributeSet.class, "com.obric.aiagent.plugin");
+        o.e(r3, "context");
+        this(r3, r4, 0, 4, null);
+    }
+
+    public /* synthetic */ OInsetSheetTitleBar(Context r2, AttributeSet r3, int r4, int r5, h r6) {
+        Context r7 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        AttributeSet r8 = (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r3, AttributeSet.class, "com.obric.aiagent.plugin");
+        if ((r5 & 2) == 0) goto L6;
+        r8 = null;
+    L6:
+        if ((r5 & 4) == 0) goto L8;
+        r4 = 0;
+    L8:
+        this(r7, r8, r4);
+    }
+
+    public OInsetSheetTitleBar(Context r3, AttributeSet r4, int r5) {
+        Context r6 = (Context) ZeusTransformUtils.wrapperContextForParams(r3, Context.class, "com.obric.aiagent.plugin");
+        AttributeSet r7 = (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r4, AttributeSet.class, "com.obric.aiagent.plugin");
+        o.e(r6, "context");
+        super(r6, r7, r5);
+        this.showLeftBack = true;
+        this.mTitlePosition = b.f36204a;
+        init(r6);
+        if (r7 == null) goto L6;
+        initAttrs(r7);
+        return;
+    }
+
+    public final LinearLayout getMLeftContainer() {
+        LinearLayout r0 = this.mLeftContainer;
+        if (r0 == null) goto L5;
+        return r0;
+    L5:
+        o.c("mLeftContainer");
+        return null;
+    }
+
+    public final void setMLeftContainer(LinearLayout r2) {
+        o.e(r2, "<set-?>");
+        this.mLeftContainer = r2;
+    }
+
+    public final LinearLayout getMRightContainer() {
+        LinearLayout r0 = this.mRightContainer;
+        if (r0 == null) goto L5;
+        return r0;
+    L5:
+        o.c("mRightContainer");
+        return null;
+    }
+
+    public final void setMRightContainer(LinearLayout r2) {
+        o.e(r2, "<set-?>");
+        this.mRightContainer = r2;
+    }
+
+    public final FrameLayout getMCenterContainer() {
+        FrameLayout r0 = this.mCenterContainer;
+        if (r0 == null) goto L5;
+        return r0;
+    L5:
+        o.c("mCenterContainer");
+        return null;
+    }
+
+    public final void setMCenterContainer(FrameLayout r2) {
+        o.e(r2, "<set-?>");
+        this.mCenterContainer = r2;
+    }
+
+    public final FrameLayout getMFixedCenterContainer() {
+        FrameLayout r0 = this.mFixedCenterContainer;
+        if (r0 == null) goto L5;
+        return r0;
+    L5:
+        o.c("mFixedCenterContainer");
+        return null;
+    }
+
+    public final void setMFixedCenterContainer(FrameLayout r2) {
+        o.e(r2, "<set-?>");
+        this.mFixedCenterContainer = r2;
+    }
+
+    public final OButton getMLeftActionBack() {
+        OButton r0 = this.mLeftActionBack;
+        if (r0 == null) goto L5;
+        return r0;
+    L5:
+        o.c("mLeftActionBack");
+        return null;
+    }
+
+    public final void setMLeftActionBack(OButton r2) {
+        o.e(r2, "<set-?>");
+        this.mLeftActionBack = r2;
+    }
+
+    public final boolean getShowLeftBack() {
+        return this.showLeftBack;
+    }
+
+    public final void setShowLeftBack(boolean r3) {
+        this.showLeftBack = r3;
+        OButton r0 = getMLeftActionBack();
+        if (r3 == false) goto L5;
+        int r4 = 0;
+    L6:
+        r0.setVisibility(r4);
+        if (this.mTitlePosition != b.f36206c) goto L10;
+        getMLeftActionBack().setVisibility(8);
+        return;
+    L10:
+        return;
+    L5:
+        r4 = 8;
+        goto L6
+    }
+
+    public final String getSubTitleText() {
+        return this.subTitleText;
+    }
+
+    public final void setSubTitleText(String r5) {
+        this.subTitleText = r5;
+        TextView r0 = null;
+        if (r5 != null) goto L9;
+        TextView r4 = this.mFixedCenterSubTitleView;
+        if (r4 != null) goto L7;
+        o.c("mFixedCenterSubTitleView");
+    L8:
+        r0.setVisibility(8);
+        return;
+    L7:
+        r0 = r4;
+        goto L8
+    L9:
+        TextView r2 = this.mFixedCenterSubTitleView;
+        if (r2 != null) goto L12;
+        o.c("mFixedCenterSubTitleView");
+        r2 = null;
+    L12:
+        r2.setVisibility(0);
+        TextView r6 = this.mFixedCenterSubTitleView;
+        if (r6 != null) goto L15;
+        o.c("mFixedCenterSubTitleView");
+    L16:
+        r0.setText((CharSequence) ZeusTransformUtils.preCheckCast(r5, CharSequence.class, "com.obric.aiagent.plugin"));
+        return;
+    L15:
+        r0 = r6;
+        goto L16
+    }
+
+    public final String getTitleText() {
+        return this.titleText;
+    }
+
+    public final void setTitleText(String r3) {
+        this.titleText = r3;
+        if (r3 != null) goto L5;
+        getMTitleView().setVisibility(4);
+        return;
+    L5:
+        getMTitleView().setVisibility(0);
+        getMTitleView().setText((CharSequence) ZeusTransformUtils.preCheckCast(r3, CharSequence.class, "com.obric.aiagent.plugin"));
+    }
+
+    public final String getDesText() {
+        return this.desText;
+    }
+
+    public final void setDesText(String r6) {
+        this.desText = r6;
+        CharSequence r0 = (CharSequence) ZeusTransformUtils.preCheckCast(r6, CharSequence.class, "com.obric.aiagent.plugin");
+        if (r0 != null) goto L5;
+    L8:
+        boolean r1 = true;
+    L9:
+        OTextView r4 = null;
+        FrameLayout r5 = null;
+        if (r1 == false) goto L16;
+        FrameLayout r7 = this.mDesContainerView;
+        if (r7 != null) goto L14;
+        o.c("mDesContainerView");
+    L15:
+        r5.setVisibility(8);
+        return;
+    L14:
+        r5 = r7;
+        goto L15
+    L16:
+        FrameLayout r2 = this.mDesContainerView;
+        if (r2 != null) goto L19;
+        o.c("mDesContainerView");
+        r2 = null;
+    L19:
+        r2.setVisibility(0);
+        OTextView r8 = this.mDesTextView;
+        if (r8 != null) goto L22;
+        o.c("mDesTextView");
+    L23:
+        r4.setText((CharSequence) ZeusTransformUtils.preCheckCast(r6, CharSequence.class, "com.obric.aiagent.plugin"));
+        return;
+    L22:
+        r4 = r8;
+        goto L23
+    L5:
+        if (r0.length() == 0) goto L8;
+        r1 = false;
+        goto L9
+    }
+
+    public final TextView getMTitleView() {
+        b r0 = this.mTitlePosition;
+        int r1 = c.f36209a[r0.ordinal()];
+        if (r1 != 1) goto L5;
+        TextView r3 = this.mFixedCenterTitleView;
+        if (r3 != null) goto L20;
+        o.c("mFixedCenterTitleView");
+        return null;
+    L20:
+        return r3;
+    L5:
+        if (r1 != 2) goto L7;
+        r3 = this.mCenterTitleView;
+        if (r3 != null) goto L20;
+        o.c("mCenterTitleView");
+        return null;
+    L7:
+        if (r1 != 3) goto L12;
+        r3 = this.mLeftTitleView;
+        if (r3 != null) goto L20;
+        o.c("mLeftTitleView");
+        return null;
+    L12:
+        throw new k();
+    }
+
+    public final b getMTitlePosition() {
+        return this.mTitlePosition;
+    }
+
+    public final void setMTitlePosition(b r8) {
+        o.e(r8, "value");
+        this.mTitlePosition = r8;
+        int r9 = c.f36209a[r8.ordinal()];
+        TextView r6 = null;
+        if (r9 != 1) goto L5;
+        TextView r10 = this.mFixedCenterTitleView;
+        if (r10 != null) goto L34;
+        o.c("mFixedCenterTitleView");
+        r10 = null;
+    L34:
+        r10.setVisibility(0);
+        TextView r11 = this.mCenterTitleView;
+        if (r11 != null) goto L37;
+        o.c("mCenterTitleView");
+        r11 = null;
+    L37:
+        r11.setVisibility(8);
+        TextView r12 = this.mLeftTitleView;
+        if (r12 != null) goto L40;
+        o.c("mLeftTitleView");
+    L41:
+        r6.setVisibility(8);
+    L42:
+        getMTitleView().setText((CharSequence) ZeusTransformUtils.preCheckCast(this.titleText, CharSequence.class, "com.obric.aiagent.plugin"));
+        return;
+    L40:
+        r6 = r12;
+        goto L41
+    L5:
+        if (r9 != 2) goto L7;
+        TextView r13 = this.mFixedCenterTitleView;
+        if (r13 != null) goto L23;
+        o.c("mFixedCenterTitleView");
+        r13 = null;
+    L23:
+        r13.setVisibility(8);
+        TextView r14 = this.mCenterTitleView;
+        if (r14 != null) goto L26;
+        o.c("mCenterTitleView");
+        r14 = null;
+    L26:
+        r14.setVisibility(0);
+        TextView r15 = this.mLeftTitleView;
+        if (r15 != null) goto L29;
+        o.c("mLeftTitleView");
+    L30:
+        r6.setVisibility(8);
+        goto L42
+    L29:
+        r6 = r15;
+        goto L30
+    L7:
+        if (r9 != 3) goto L42;
+        TextView r16 = this.mFixedCenterTitleView;
+        if (r16 != null) goto L12;
+        o.c("mFixedCenterTitleView");
+        r16 = null;
+    L12:
+        r16.setVisibility(8);
+        TextView r17 = this.mCenterTitleView;
+        if (r17 != null) goto L15;
+        o.c("mCenterTitleView");
+        r17 = null;
+    L15:
+        r17.setVisibility(8);
+        TextView r18 = this.mLeftTitleView;
+        if (r18 != null) goto L18;
+        o.c("mLeftTitleView");
+    L19:
+        r6.setVisibility(0);
+        setShowLeftBack(false);
+        goto L42
+    L18:
+        r6 = r18;
+        goto L19
+    }
+
+    private final void init(Context r5) {
+        FrameLayout.inflate((Context) ZeusTransformUtils.wrapperContextForParams(r5, Context.class, "com.obric.aiagent.plugin"), ZeusTransformUtils.mapRes(R.layout.o_sheet_title_bar_container, "layout", "o_sheet_title_bar_container"), (ViewGroup) ZeusTransformUtils.preCheckCast(this, ViewGroup.class, "com.obric.aiagent.plugin"));
+        View r6 = findViewById(ZeusTransformUtils.mapRes(R.id.center_title, DbHelper.COL_ID, "center_title"));
+        o.c(r6, "findViewById(R.id.center_title)");
+        this.mCenterTitleView = (TextView) ZeusTransformUtils.preCheckCast(r6, TextView.class, "com.obric.aiagent.plugin");
+        View r7 = findViewById(ZeusTransformUtils.mapRes(R.id.left_title, DbHelper.COL_ID, "left_title"));
+        o.c(r7, "findViewById(R.id.left_title)");
+        this.mLeftTitleView = (TextView) ZeusTransformUtils.preCheckCast(r7, TextView.class, "com.obric.aiagent.plugin");
+        View r8 = findViewById(ZeusTransformUtils.mapRes(R.id.ll_left_action_container, DbHelper.COL_ID, "ll_left_action_container"));
+        o.c(r8, "findViewById(R.id.ll_left_action_container)");
+        setMLeftContainer((LinearLayout) ZeusTransformUtils.preCheckCast(r8, LinearLayout.class, "com.obric.aiagent.plugin"));
+        View r9 = findViewById(ZeusTransformUtils.mapRes(R.id.ll_right_action_container, DbHelper.COL_ID, "ll_right_action_container"));
+        o.c(r9, "findViewById(R.id.ll_right_action_container)");
+        setMRightContainer((LinearLayout) ZeusTransformUtils.preCheckCast(r9, LinearLayout.class, "com.obric.aiagent.plugin"));
+        View r10 = findViewById(ZeusTransformUtils.mapRes(R.id.fl_center_action_container, DbHelper.COL_ID, "fl_center_action_container"));
+        o.c(r10, "findViewById(R.id.fl_center_action_container)");
+        setMCenterContainer((FrameLayout) ZeusTransformUtils.preCheckCast(r10, FrameLayout.class, "com.obric.aiagent.plugin"));
+        View r11 = findViewById(ZeusTransformUtils.mapRes(R.id.fl_fixed_center_action_container, DbHelper.COL_ID, "fl_fixed_center_action_container"));
+        o.c(r11, "findViewById(R.id.fl_fix…_center_action_container)");
+        setMFixedCenterContainer((FrameLayout) ZeusTransformUtils.preCheckCast(r11, FrameLayout.class, "com.obric.aiagent.plugin"));
+        View r12 = findViewById(ZeusTransformUtils.mapRes(R.id.fixed_center_title, DbHelper.COL_ID, "fixed_center_title"));
+        o.c(r12, "findViewById(R.id.fixed_center_title)");
+        this.mFixedCenterTitleView = (TextView) ZeusTransformUtils.preCheckCast(r12, TextView.class, "com.obric.aiagent.plugin");
+        View r13 = findViewById(ZeusTransformUtils.mapRes(R.id.left_action_back, DbHelper.COL_ID, "left_action_back"));
+        o.c(r13, "findViewById(R.id.left_action_back)");
+        setMLeftActionBack((OButton) ZeusTransformUtils.preCheckCast(r13, OButton.class, "com.obric.aiagent.plugin"));
+        View r14 = findViewById(ZeusTransformUtils.mapRes(R.id.fixed_center_sub_title, DbHelper.COL_ID, "fixed_center_sub_title"));
+        o.c(r14, "findViewById(R.id.fixed_center_sub_title)");
+        this.mFixedCenterSubTitleView = (TextView) ZeusTransformUtils.preCheckCast(r14, TextView.class, "com.obric.aiagent.plugin");
+        View r15 = findViewById(ZeusTransformUtils.mapRes(R.id.sheet_title_bar_des, DbHelper.COL_ID, "sheet_title_bar_des"));
+        o.c(r15, "findViewById(R.id.sheet_title_bar_des)");
+        this.mDesContainerView = (FrameLayout) ZeusTransformUtils.preCheckCast(r15, FrameLayout.class, "com.obric.aiagent.plugin");
+        View r16 = findViewById(ZeusTransformUtils.mapRes(R.id.sheet_title_bar_des_text, DbHelper.COL_ID, "sheet_title_bar_des_text"));
+        o.c(r16, "findViewById(R.id.sheet_title_bar_des_text)");
+        OTextView r17 = (OTextView) ZeusTransformUtils.preCheckCast(r16, OTextView.class, "com.obric.aiagent.plugin");
+        this.mDesTextView = r17;
+        if (r17 != null) goto L5;
+        o.c("mDesTextView");
+        r17 = null;
+    L5:
+        r17.setEnableAutoAlignLeft(true);
+    }
+
+    private final void initAttrs(AttributeSet r5) {
+        AttributeSet r6 = (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r5, AttributeSet.class, "com.obric.aiagent.plugin");
+        TypedArray r7 = ((Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin")).getTheme().obtainStyledAttributes(r6, R.styleable.OCTitleBar, 0, 0);
+        int r1 = r7.getInt(ZeusTransformUtils.mapRes(R.styleable.OCTitleBar_oui_title_pos, "styleable", "OCTitleBar_oui_title_pos"), b.f36204a.a());     // Catch: Throwable -> L6
+        setMTitlePosition(b.values()[r1]);     // Catch: Throwable -> L6
+        setTitleText(r7.getString(ZeusTransformUtils.mapRes(R.styleable.OCTitleBar_oui_title_text, "styleable", "OCTitleBar_oui_title_text")));     // Catch: Throwable -> L6
+        setDesText(r7.getString(ZeusTransformUtils.mapRes(R.styleable.OCTitleBar_oui_title_des_text, "styleable", "OCTitleBar_oui_title_des_text")));     // Catch: Throwable -> L6
+        setShowLeftBack(r7.getBoolean(ZeusTransformUtils.mapRes(R.styleable.OCTitleBar_oui_useBackIcon, "styleable", "OCTitleBar_oui_useBackIcon"), true));     // Catch: Throwable -> L6
+        setSubTitleText(r7.getString(ZeusTransformUtils.mapRes(R.styleable.OCTitleBar_oui_sub_title_text, "styleable", "OCTitleBar_oui_sub_title_text")));     // Catch: Throwable -> L6
+        r7.recycle();
+        return;
+    L6:
+        th = move-exception;
+        r7.recycle();
+        throw th;
+    }
+
+    public final OButton createNeutralButton(Context r2, ViewGroup r3) {
+        Context r1 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        o.e(r1, "context");
+        o.e(r3, "root");
+        return OButton.Companion.a(r1, r3);
+    }
+
+    public final OButton createPrimaryLightButton(Context r2, ViewGroup r3) {
+        Context r1 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        o.e(r1, "context");
+        o.e(r3, "root");
+        return OButton.Companion.c(r1, r3);
+    }
+
+    public final OButton createTransButton(Context r2, ViewGroup r3) {
+        Context r1 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        o.e(r1, "context");
+        o.e(r3, "root");
+        return OButton.Companion.d(r1, r3);
+    }
+
+    public final OButton createUnderstatedButton(Context r2, ViewGroup r3) {
+        Context r1 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        o.e(r1, "context");
+        o.e(r3, "root");
+        return OButton.Companion.e(r1, r3);
+    }
+
+    public final OButton createButton(Context r2, ViewGroup r3, int r4) {
+        Context r1 = (Context) ZeusTransformUtils.wrapperContextForParams(r2, Context.class, "com.obric.aiagent.plugin");
+        o.e(r1, "context");
+        o.e(r3, "root");
+        return OButton.Companion.a(r1, r3, r4);
+    }
+
+    public final ImageView addLeftImageView(int r5) {
+        ImageView r0 = new ImageView((Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin"));
+        r0.setImageResource(r5);
+        getMLeftContainer().addView((View) ZeusTransformUtils.preCheckCast(r0, View.class, "com.obric.aiagent.plugin"));
+        return r0;
+    }
+
+    public final ImageView addRightImageView(int r5) {
+        ImageView r0 = new ImageView((Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin"));
+        r0.setImageResource(r5);
+        getMRightContainer().addView((View) ZeusTransformUtils.preCheckCast(r0, View.class, "com.obric.aiagent.plugin"));
+        return r0;
+    }
+
+    public final OButton addRightButton(int r4, int r5) {
+        if (r4 != 0) goto L5;
+        Context r6 = (Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin");
+        o.c(r6, "context");
+        OButton r3 = createNeutralButton(r6, (ViewGroup) ZeusTransformUtils.preCheckCast(getMRightContainer(), ViewGroup.class, "com.obric.aiagent.plugin"));
+    L9:
+        r3.setText(r5);
+        return r3;
+    L5:
+        if (r4 == 4) goto L7;
+        Context r7 = (Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin");
+        o.c(r7, "context");
+        r3 = createPrimaryLightButton(r7, (ViewGroup) ZeusTransformUtils.preCheckCast(getMRightContainer(), ViewGroup.class, "com.obric.aiagent.plugin"));
+        goto L9
+    L7:
+        Context r8 = (Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin");
+        o.c(r8, "context");
+        r3 = createPrimaryLightButton(r8, (ViewGroup) ZeusTransformUtils.preCheckCast(getMRightContainer(), ViewGroup.class, "com.obric.aiagent.plugin"));
+        goto L9
+    }
+
+    public final OButton addRightTransButton(int r5) {
+        Context r0 = (Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin");
+        o.c(r0, "context");
+        OButton r4 = createTransButton(r0, (ViewGroup) ZeusTransformUtils.preCheckCast(getMRightContainer(), ViewGroup.class, "com.obric.aiagent.plugin"));
+        r4.setButtonSourceBitmap(r5);
+        return r4;
+    }
+
+    public final void setCenterText(int r2) {
+        String r3 = ZeusTransformUtils.getResources(this, "com.obric.aiagent.plugin").getString(r2);
+        o.c(r3, "resources.getString(resId)");
+        setTitleText(r3);
+    }
+
+    public final void setCenterText(String r2) {
+        o.e(r2, DBDefinition.TITLE);
+        setTitleText(r2);
+    }
+
+    public final TextView getTitleView() {
+        return getMTitleView();
+    }
+
+    public final void removeAllLeftViews() {
+        getMLeftContainer().removeAllViews();
+    }
+
+    public final void addRightView(View r2) {
+        o.e(r2, "view");
+        getMRightContainer().addView(r2);
+    }
+
+    public final void removeAllRightViews() {
+        getMRightContainer().removeAllViews();
+    }
+
+    public final void sheetTitleBarStyle() {
+        getMTitleView().setTextSize(16.0f);
+    }
+
+    @Override // android.widget.FrameLayout, android.view.View
+    public void onMeasure(int r1, int r2) {
+        super.onMeasure(r1, r2);
+    }
+
+    @Override // android.widget.FrameLayout, android.view.ViewGroup, android.view.View
+    public void onLayout(boolean r1, int r2, int r3, int r4, int r5) {
+        super.onLayout(r1, r2, r3, r4, r5);
+    }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/o_background_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_marginBottom="4dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="12dp">
+    <com.obric.oui.text.OTextView
+        android:textSize="16sp"
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="14sp"
+        android:textColor="#73000000"
+        android:gravity="end"
+        android:id="@+id/value_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"/>
+    <ImageView
+        android:id="@+id/end_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+</LinearLayout>

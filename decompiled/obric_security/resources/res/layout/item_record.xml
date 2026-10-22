@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OListItemGeneral
+        android:id="@+id/olistitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        app:oui_list_item_show_background="false"
+        app:oui_list_item_show_divider="true"
+        app:oui_list_item_subtitle="与通用列表项仅最小高度不同，其余 API 一致"
+        app:oui_list_item_title="ListItemSettings"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/item_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_middle"
+        app:ocardlistitem_cardType="type_normal"
+        app:ocardlistitem_showIcon="false"
+        app:ocardlistitem_showTitle="true"
+        app:ocardlistitem_title="@string/security_auto_lock_time"/>
+</RelativeLayout>

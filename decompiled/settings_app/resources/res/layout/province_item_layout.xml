@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/app_list_item_slide_shadowlist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/scroll_handle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/app_layout"
+            android:background="@color/oui_bg_base_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-2dp">
+            <TextView
+                android:textSize="@dimen/settings_item_title_size"
+                android:textColor="@color/setting_item_text_colorlist"
+                android:id="@+id/item_title"
+                android:duplicateParentState="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/manager_app_list_item_margin_left"
+                android:singleLine="true"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/item_check"
+                android:background="@drawable/icon_check_confirm_rounded"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

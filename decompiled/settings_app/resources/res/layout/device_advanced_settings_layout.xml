@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/fake_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:paddingTop="112dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/settings_container_bottom_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/auto_disconnect_container"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.obric.oui.lisitem.OCardListItem
+                    android:id="@+id/auto_disconnect_timer"
+                    app:ocardlistitem_defaultCustomEnd="end_detail"
+                    app:ocardlistitem_defaultTailIcon="tail_chevron"
+                    app:ocardlistitem_showCustomEnd="true"
+                    app:ocardlistitem_title="@string/bluetooth_connection_timer"
+                    style="@style/OCardListItemTextSingle"/>
+                <include layout="@layout/item_sub_settings_padding_layout2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/codec_container"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.obric.oui.lisitem.OCardListItem
+                    android:id="@+id/quality_check"
+                    app:ocardlistitem_title="@string/bluetooth_quality_priority"
+                    style="@style/OCardListItemCheckTop"/>
+                <com.obric.oui.lisitem.OCardListItem
+                    android:id="@+id/stable_check"
+                    app:ocardlistitem_title="@string/bluetooth_stable_priority"
+                    style="@style/OCardListItemCheckBottom"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bluetooth_codec_tips"
+                    style="@style/OCardListShows"/>
+                <include layout="@layout/item_sub_settings_padding_layout2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/abs_container"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.obric.oui.lisitem.OCardListItem
+                    android:id="@+id/abs_switch"
+                    app:ocardlistitem_showSubTitle="true"
+                    app:ocardlistitem_subTitle="@string/bluetooth_volume_abs_tips"
+                    app:ocardlistitem_title="@string/bluetooth_volume_abs"
+                    style="@style/OCardListItemSwitchSingle"/>
+                <include layout="@layout/item_sub_settings_padding_layout2"/>
+            </LinearLayout>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/dev_address"
+                app:ocardlistitem_showTailIcon="false"
+                app:ocardlistitem_title="@string/bluetooth_device_address_2"
+                style="@style/OCardListItemTextSingle"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_centerTitle="@string/bluetooth_advanced_settings"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

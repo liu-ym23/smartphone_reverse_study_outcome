@@ -1,0 +1,31 @@
+package androidx.core.app;
+
+import android.content.res.Configuration;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class PictureInPictureModeChangedInfo {
+    private final boolean mIsInPictureInPictureMode;
+    private final Configuration mNewConfig;
+
+    public PictureInPictureModeChangedInfo(boolean r1) {
+        this.mIsInPictureInPictureMode = r1;
+        this.mNewConfig = null;
+    }
+
+    public PictureInPictureModeChangedInfo(boolean r1, Configuration r2) {
+        this.mIsInPictureInPictureMode = r1;
+        this.mNewConfig = r2;
+    }
+
+    public boolean isInPictureInPictureMode() {
+        return this.mIsInPictureInPictureMode;
+    }
+
+    public Configuration getNewConfig() {
+        Configuration r1 = this.mNewConfig;
+        if (r1 == null) goto L6;
+        return r1;
+    L6:
+        throw new IllegalStateException("PictureInPictureModeChangedInfo must be constructed with the constructor that takes a Configuration to call getNewConfig(). Are you running on an API 26 or higher device that makes this information available?");
+    }
+}

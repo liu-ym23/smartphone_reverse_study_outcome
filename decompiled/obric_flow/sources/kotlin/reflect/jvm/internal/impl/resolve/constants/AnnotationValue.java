@@ -1,0 +1,20 @@
+package kotlin.reflect.jvm.internal.impl.resolve.constants;
+
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
+import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
+import kotlin.reflect.jvm.internal.impl.types.KotlinType;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class AnnotationValue extends ConstantValue<AnnotationDescriptor> {
+    public AnnotationValue(AnnotationDescriptor r5) {
+        Intrinsics.checkNotNullParameter(r5, "value");
+        super(r5);
+    }
+
+    @Override // kotlin.reflect.jvm.internal.impl.resolve.constants.ConstantValue
+    public KotlinType getType(ModuleDescriptor r5) {
+        Intrinsics.checkNotNullParameter(r5, "module");
+        return getValue().getType();
+    }
+}

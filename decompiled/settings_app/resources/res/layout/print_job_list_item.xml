@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/print_job_item"
+        app:ocardlistitem_customStart="@layout/loading_view_layout"
+        app:ocardlistitem_showIcon="true"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_showTailIcon="false"
+        style="@style/OCardListItemTextTop"/>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/settings_item_top_bottom_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no">
+    <obric.widget.SettingItemText
+        android:id="@+id/led_brightness_settings"
+        android:layout_marginBottom="@dimen/item_block_gap"
+        android:title="@string/led_brightness_settings"
+        style="@style/SettingSubItemSingleStyle"/>
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/led_phone"
+        android:title="@string/notification_led_phone"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/led_mms"
+        android:title="@string/notification_led_mms"
+        style="@style/SettingSubItemBottomStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <TextView
+        android:text="@string/notification_led_title"
+        style="@style/SettingItemTitleStyle"/>
+</LinearLayout>

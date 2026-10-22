@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.android.settings.SettingItemTextVertical
+        android:id="@+id/item_id_launcher_wallpaper"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallpaper_settings_item_height"
+        setting:arrow="@drawable/secletor_setting_item_arrow"
+        setting:icon="@drawable/wallpaper_setting_icon_frame"
+        setting:iconFrame="@drawable/thumbnail_bg"
+        setting:singleLine="false"
+        setting:subTitle="@string/launcher_wallpaper_setting_sub_text"
+        setting:title="@string/launcher_wallpaper_setting_text"
+        style="@style/SettingSubItemSingleStyle"/>
+    <com.android.settings.SettingItemTextVertical
+        android:id="@+id/item_id_launcher_theme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallpaper_settings_item_height"
+        setting:arrow="@drawable/secletor_setting_item_arrow"
+        setting:icon="@drawable/wallpaper_setting_icon_frame"
+        setting:iconFrame="@drawable/thumbnail_bg"
+        setting:subTitle="@string/launcher_theme_sub_text"
+        setting:title="@string/launcher_theme_text"
+        style="@style/SettingSubItemTopStyle"/>
+    <com.android.settings.SettingItemTextVertical
+        android:id="@+id/item_id_launcher_anim"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallpaper_settings_item_height"
+        setting:arrow="@drawable/secletor_setting_item_arrow"
+        setting:icon="@drawable/wallpaper_setting_icon_frame"
+        setting:iconFrame="@drawable/thumbnail_bg"
+        setting:subTitle="@string/flip_anim_subtitle"
+        setting:title="@string/flip_anim_title"
+        style="@style/SettingSubItemBottomStyle"/>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/oui_bg_base_1"
+    android:paddingTop="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/list_company_scene_collect"
+        android:background="@drawable/o_background_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginHorizontal="15dp"
+        app:oui_list_item_title="@string/debug_company_scene_title"
+        app:oui_list_item_trailing_text="@string/debug_common_click_to_enter"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/list_har_collect"
+        android:background="@drawable/o_background_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginHorizontal="15dp"
+        app:oui_list_item_title="@string/debug_har_collect_title"
+        app:oui_list_item_trailing_text="@string/debug_common_click_to_enter"/>
+</LinearLayout>

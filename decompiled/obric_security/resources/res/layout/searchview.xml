@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seachresultview"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/searchview_bg"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
+    <com.obric.oui.bouncelayout.OListView
+        android:id="@+id/search_listview"
+        android:background="@color/oui_bg_base_1"
+        android:paddingTop="@dimen/inner_common_dimen_120dp"
+        android:paddingBottom="@dimen/dimen_32"
+        android:visibility="gone"
+        android:clipToPadding="false"
+        style="@style/ListViewGeneralStyle"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3b"
+        android:gravity="center_horizontal"
+        android:id="@+id/search_empty_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="194dp"
+        android:text="@string/no_search_result"
+        style="@style/Title_Title_L_Alt"/>
+</RelativeLayout>

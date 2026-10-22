@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/motion_delay_settings_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingSubItemSingleStyle">
+                <include layout="@layout/group_list_item_vertical_gap_layout"/>
+                <TextView
+                    android:textColor="#cc000000"
+                    android:text="@string/motion_delay_settings_main_tip_title"
+                    style="@style/SettingItemTitleStyle"/>
+                <TextView
+                    android:text="@string/motion_delay_settings_main_tip"
+                    android:lineSpacingExtra="6sp"
+                    style="@style/SettingItemTipsStyle"/>
+            </LinearLayout>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <com.obric.oui.button.OButton
+                android:id="@+id/btn_start_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/motion_delay_btn_start_test"
+                style="@style/LongButton.Highlight"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/main_content_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.android.settings.widget.SettingsBottomExtraView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+</RelativeLayout>

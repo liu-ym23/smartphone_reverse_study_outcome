@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/trust_network_list_first_line_textsize"
+        android:textColor="#4c000000"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/emptyview_margin_left_right"
+        android:layout_marginTop="@dimen/emptyview_first_line_margin_top"
+        android:layout_marginRight="@dimen/emptyview_margin_left_right"
+        android:text="@string/trusted_network_list_empty_tips_1"/>
+    <TextView
+        android:textSize="@dimen/trust_network_list_second_line_textsize"
+        android:textColor="#4c000000"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/emptyview_margin_left_right"
+        android:layout_marginTop="@dimen/emptyview_second_line_margin_top"
+        android:layout_marginRight="@dimen/emptyview_margin_left_right"
+        android:text="@string/trusted_network_list_empty_tips_2"/>
+</LinearLayout>

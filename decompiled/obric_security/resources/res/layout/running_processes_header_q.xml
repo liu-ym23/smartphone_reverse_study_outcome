@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedance="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/head_area"
+    android:background="@drawable/oic_bg_top"
+    android:padding="@dimen/inner_common_dimen_8dp"
+    android:paddingTop="22dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/inner_common_dimen_12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="@dimen/inner_common_dimen_12dp">
+    <TextView
+        android:textSize="@dimen/inner_common_dimen_40dp"
+        android:textStyle="bold"
+        android:textColor="#1a1a1a"
+        android:id="@+id/tv_left_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="36.4"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#1a1a1a"
+        android:id="@+id/tv_left_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:text="GB"
+        android:layout_toRightOf="@+id/tv_left_big"
+        android:layout_alignBaseline="@+id/tv_left_big"
+        android:layout_toEndOf="@+id/tv_left_big"/>
+    <TextView
+        android:textSize="@dimen/dimen_14"
+        android:textColor="#999999"
+        android:id="@+id/tv_right_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="已用 120.5 GB / 共 512 GB"
+        android:layout_alignBottom="@+id/tv_left_big"
+        android:layout_alignParentRight="true"/>
+    <com.bytedanceos.oui.MultiSegmentProgressBar
+        android:id="@+id/storage_progress"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_left_big"/>
+</RelativeLayout>

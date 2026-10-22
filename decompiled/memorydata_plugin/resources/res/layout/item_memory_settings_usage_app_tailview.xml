@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.button.OButton
+        android:layout_gravity="center"
+        android:id="@+id/trail_usage_app_install_button"
+        android:text="@string/memory_settings_download_app"
+        style="@style/OStyleV2.OButton.S.Standard.Neutral"/>
+    <FrameLayout
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.obric.oui.oswitch.OSwitch
+            android:layout_gravity="center"
+            android:id="@+id/trail_usage_app_install_switch"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</FrameLayout>

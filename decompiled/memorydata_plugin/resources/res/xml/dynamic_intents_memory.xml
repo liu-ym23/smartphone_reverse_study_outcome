@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<intents>
+    <intent
+        impl="com.obric.memorydata.memory.intent.ProduceMemoryIntent"
+        name="Memory_Produce"/>
+    <intent
+        impl="com.obric.memorydata.memory.MemoryViewEntitiesIntent"
+        name="Common_ViewEntities"/>
+    <intent
+        impl="com.obric.memorydata.memory.intent.DeleteMemoryIntent"
+        name="Memory_Delete"/>
+    <intent
+        impl="com.obric.memorydata.memory.intent.OperateMemoryIntent"
+        name="Memory_Operate"/>
+    <intent
+        impl="com.obric.memorydata.memory.intent.SearchMemoryIntent"
+        name="Memory_Search"/>
+    <intent
+        impl="com.obric.memorydata.memory.intent.OperateMemoryNewIntent"
+        name="Memory_OperateNew"/>
+    <intent
+        impl="com.obric.memorydata.personalcontext.poison.EntityPoisonLabelIntent"
+        name="PC_EntityPoisonLabel"/>
+</intents>

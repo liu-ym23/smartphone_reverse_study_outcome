@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUIFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <com.obric.oui.progress.ODownloadProgressView
+        android:layout_gravity="center"
+        android:id="@+id/skill_store_load_more_progress"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:oui_progress_view_size="small"
+        style="@style/OStyleV2.ODownloadProgressView"/>
+</com.obric.oui.layout.OUIFrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="10dp">
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:oui_list_item_title="@string/choose_from_contacts"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
+        app:oui_list_item_title="@string/choose_from_call_log"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
+        app:oui_list_item_title="@string/input_by_hand"/>
+</LinearLayout>

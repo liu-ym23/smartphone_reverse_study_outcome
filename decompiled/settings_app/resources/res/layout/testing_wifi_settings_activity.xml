@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/testing_wifi_info"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_title">
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <obric.widget.ListContentItemText
+            android:id="@+id/wifi_api_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/wifi_api_test"
+            style="@style/ListContentItemStyle.Top"/>
+        <obric.widget.ListContentItemText
+            android:id="@+id/wifi_config_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/wifi_config_info"
+            style="@style/ListContentItemStyle.Mid"/>
+        <obric.widget.ListContentItemText
+            android:id="@+id/wifi_status_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/wifi_status_test"
+            style="@style/ListContentItemStyle.Bottom"/>
+    </LinearLayout>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

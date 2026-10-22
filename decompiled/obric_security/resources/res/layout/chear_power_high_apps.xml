@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/battery_power_root"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/clear_action"
+        android:layout_below="@+id/title_bar">
+        <com.obric.oui.orecyclerview.widget.RecyclerView
+            android:id="@+id/list_view"
+            android:paddingTop="16dp"
+            android:visibility="gone"
+            android:scrollbars="none"
+            style="@style/ListViewGeneralStyle"/>
+    </LinearLayout>
+    <com.obric.oui.actionbar.v2.OBottomActionBarFloating
+        android:id="@+id/clear_action"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_text"
+        android:layout_alignParentBottom="true"
+        app:oui_hasDivider="false"
+        app:oui_widgetBlurRadius="0"
+        style="@style/OStyleV2.OBottomActionBar.Floating"/>
+    <com.obric.oui.status.OPageStatus
+        android:id="@+id/empty"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:opagestatus_type="status_content"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/clean_power_high_apps"
+        app:oui_widgetBlurRadius="8"
+        app:oui_widgetFitInsetTop="true"/>
+</RelativeLayout>

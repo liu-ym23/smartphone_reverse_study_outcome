@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.flow.cardlistpage.ui.view.WidgetBox xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/iv_remote_container"
+    android:clickable="true"
+    android:longClickable="true"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constrainedHeight="true">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/widget_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/widget_loading_indicator"
+            android:visibility="gone"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"/>
+        <TextView
+            android:textColor="@color/error_color"
+            android:layout_gravity="center"
+            android:id="@+id/widget_error_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/widget_load_failed"/>
+    </FrameLayout>
+</com.obric.flow.cardlistpage.ui.view.WidgetBox>

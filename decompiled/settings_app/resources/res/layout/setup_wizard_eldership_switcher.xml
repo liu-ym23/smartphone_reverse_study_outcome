@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <obric.widget.SettingItemCheck
+        android:id="@+id/item_usage_for_myself"
+        app:itemTitle="@string/usage_for_myself"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/item_usage_for_eldership"
+        app:itemTitle="@string/usage_for_eldership"
+        style="@style/SettingSubItemBottomStyle"/>
+</LinearLayout>

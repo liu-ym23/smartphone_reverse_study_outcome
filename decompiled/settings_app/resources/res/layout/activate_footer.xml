@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activate_via_other_method"
+        style="@style/GroupListSectionTitleStyle"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/activate_cellular"
+        android:clickable="true"
+        android:layout_height="@dimen/oui_h_l2"
+        android:layout_marginBottom="4dp"
+        android:text="@string/activate_cellular"
+        android:layout_marginHorizontal="16dp"
+        style="@style/OButton.ListItem.Center"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/activate_sms"
+        android:clickable="true"
+        android:layout_height="@dimen/oui_h_l2"
+        android:layout_marginBottom="4dp"
+        android:text="@string/activate_sms"
+        android:layout_marginHorizontal="16dp"
+        style="@style/OButton.ListItem.Center"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/no_sim_tips_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/no_sim_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sim_not_found"
+            style="@style/GroupListTipsViewStyle"/>
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/sms_tips_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sms_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activate_sms_tips"
+            style="@style/GroupListTipsViewStyle"/>
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activate_device_license_tips"
+        style="@style/GroupListTipsViewStyle"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+</LinearLayout>

@@ -1,0 +1,81 @@
+package f3;
+
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+/* JADX INFO: loaded from: classes.dex */
+public class a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private static HashMap<String, HandlerThread> f8840a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private static List<String> f8841b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private static List<String> f8842c;
+
+    /* JADX INFO: renamed from: f3.a$a, reason: collision with other inner class name */
+    public static class HandlerThreadC0166a extends HandlerThread {
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        private volatile boolean f8843c;
+
+        public HandlerThreadC0166a(String r10, int r11) {
+            super(r10, r11);
+            this.f8843c = false;
+        }
+
+        @Override // java.lang.Thread
+        public synchronized void start() {
+            monitor-enter(this);
+        L11:
+            th = move-exception;
+            throw th;
+        L4:
+            if (this.f8843c == false) goto L8;
+            monitor-exit(this);
+            return;
+        L8:
+            this.f8843c = true;     // Catch: Throwable -> L11
+            super.start();     // Catch: Throwable -> L11
+            monitor-exit(this);
+        }
+    }
+
+    static {
+        new Handler(Looper.getMainLooper());
+        f8840a = new HashMap();
+        f8841b = Arrays.asList(new String[]{"NpthHandlerThread", "NewVideo-HandlerThread", "trace_time_update_thread"});
+        f8842c = Arrays.asList(new String[]{"DBHelper-AsyncOp-New"});
+        new HashMap();
+    }
+
+    public static HandlerThread a(String r10) {
+        return b(r10, 0, "");
+    }
+
+    public static HandlerThread b(String r10, int r11, String r12) {
+        Iterator<Map.Entry<String, HandlerThread>> r13 = f8840a.entrySet().iterator();
+    L4:
+        if (r13.hasNext() == false) goto L8;
+        if (r13.next().getValue().isAlive() == true) goto L4;
+        r13.remove();
+        goto L4
+    L8:
+        HandlerThread r14 = f8840a.get(r10);
+        if (r14 != null) goto L17;
+        HandlerThreadC0166a r15 = new HandlerThreadC0166a(r10, r11);
+        r15.start();
+        f8840a.put(r10, r15);
+        return r15;
+    L17:
+        return r14;
+    }
+}

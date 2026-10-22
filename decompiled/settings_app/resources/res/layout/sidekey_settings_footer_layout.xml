@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/boot_phone_tips"
+        android:layout_marginBottom="8dp"
+        android:text="@string/boot_phone_via_home_tips"
+        style="@style/SettingItemTipsStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/switching_songs_with_brightness_keys"
+        android:title="@string/switching_songs_with_brightness_keys"
+        style="@style/SettingSubItemSingleStyle"/>
+    <TextView
+        android:id="@+id/switching_songs_tips"
+        style="@style/SettingItemTipsStyle"/>
+    <obric.widget.PreviewOptionsCheckView
+        android:id="@+id/id_shortcut_key_chooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/enable_idea_pills_tips"
+        style="@style/SettingItemTipsStyle"/>
+    <obric.widget.PreviewOptionsCheckView
+        android:id="@+id/double_click_home_chooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

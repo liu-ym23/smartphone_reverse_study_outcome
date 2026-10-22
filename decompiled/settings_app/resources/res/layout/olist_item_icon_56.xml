@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:duplicateParentState="true"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentStart="true">
+    <FrameLayout
+        android:id="@+id/icon_container"
+        android:duplicateParentState="true"
+        android:layout_width="56dp"
+        android:layout_height="56dp">
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_content_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/setting_application_system_layer_icon"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"/>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</FrameLayout>

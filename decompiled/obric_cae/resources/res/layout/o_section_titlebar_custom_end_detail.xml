@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.text.OTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/oui_basic_text_3"
+    android:ellipsize="end"
+    android:id="@+id/custom_end_detail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:layout_marginVertical="2dp"
+    style="@style/Subtitle_2_Medium"/>

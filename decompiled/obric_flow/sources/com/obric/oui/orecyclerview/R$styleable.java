@@ -1,0 +1,92 @@
+package com.obric.oui.orecyclerview;
+
+import android.R;
+
+/* JADX INFO: loaded from: classes3.dex */
+public abstract class R$styleable {
+    public static int[] ColorStateListItem = null;
+    public static int ColorStateListItem_alpha = 3;
+    public static int ColorStateListItem_android_alpha = 1;
+    public static int ColorStateListItem_android_color = 0;
+    public static int ColorStateListItem_android_lStar = 2;
+    public static int ColorStateListItem_lStar = 4;
+    public static int[] CoordinatorLayout = null;
+    public static int[] CoordinatorLayout_Layout = null;
+    public static int CoordinatorLayout_Layout_android_layout_gravity = 0;
+    public static int CoordinatorLayout_Layout_layout_anchor = 1;
+    public static int CoordinatorLayout_Layout_layout_anchorGravity = 2;
+    public static int CoordinatorLayout_Layout_layout_behavior = 3;
+    public static int CoordinatorLayout_Layout_layout_dodgeInsetEdges = 4;
+    public static int CoordinatorLayout_Layout_layout_insetEdge = 5;
+    public static int CoordinatorLayout_Layout_layout_keyline = 6;
+    public static int CoordinatorLayout_keylines = 0;
+    public static int CoordinatorLayout_statusBarBackground = 1;
+    public static int[] FontFamily = null;
+    public static int[] FontFamilyFont = null;
+    public static int FontFamilyFont_android_font = 0;
+    public static int FontFamilyFont_android_fontStyle = 2;
+    public static int FontFamilyFont_android_fontVariationSettings = 4;
+    public static int FontFamilyFont_android_fontWeight = 1;
+    public static int FontFamilyFont_android_ttcIndex = 3;
+    public static int FontFamilyFont_font = 5;
+    public static int FontFamilyFont_fontStyle = 6;
+    public static int FontFamilyFont_fontVariationSettings = 7;
+    public static int FontFamilyFont_fontWeight = 8;
+    public static int FontFamilyFont_ttcIndex = 9;
+    public static int FontFamily_fontProviderAuthority = 0;
+    public static int FontFamily_fontProviderCerts = 1;
+    public static int FontFamily_fontProviderFetchStrategy = 2;
+    public static int FontFamily_fontProviderFetchTimeout = 3;
+    public static int FontFamily_fontProviderPackage = 4;
+    public static int FontFamily_fontProviderQuery = 5;
+    public static int FontFamily_fontProviderSystemFontFamily = 6;
+    public static int[] Fragment = null;
+    public static int[] FragmentContainerView = null;
+    public static int FragmentContainerView_android_name = 0;
+    public static int FragmentContainerView_android_tag = 1;
+    public static int Fragment_android_id = 1;
+    public static int Fragment_android_name = 0;
+    public static int Fragment_android_tag = 2;
+    public static int[] GradientColor = null;
+    public static int[] GradientColorItem = null;
+    public static int GradientColorItem_android_color = 0;
+    public static int GradientColorItem_android_offset = 1;
+    public static int GradientColor_android_centerColor = 7;
+    public static int GradientColor_android_centerX = 3;
+    public static int GradientColor_android_centerY = 4;
+    public static int GradientColor_android_endColor = 1;
+    public static int GradientColor_android_endX = 10;
+    public static int GradientColor_android_endY = 11;
+    public static int GradientColor_android_gradientRadius = 5;
+    public static int GradientColor_android_startColor = 0;
+    public static int GradientColor_android_startX = 8;
+    public static int GradientColor_android_startY = 9;
+    public static int GradientColor_android_tileMode = 6;
+    public static int GradientColor_android_type = 2;
+    public static int[] RecyclerView = null;
+    public static int RecyclerView_android_clipToPadding = 1;
+    public static int RecyclerView_android_descendantFocusability = 2;
+    public static int RecyclerView_android_orientation = 0;
+    public static int RecyclerView_fastScrollEnabled = 3;
+    public static int RecyclerView_fastScrollHorizontalThumbDrawable = 4;
+    public static int RecyclerView_fastScrollHorizontalTrackDrawable = 5;
+    public static int RecyclerView_fastScrollVerticalThumbDrawable = 6;
+    public static int RecyclerView_fastScrollVerticalTrackDrawable = 7;
+    public static int RecyclerView_layoutManager = 8;
+    public static int RecyclerView_reverseLayout = 9;
+    public static int RecyclerView_spanCount = 10;
+    public static int RecyclerView_stackFromEnd = 11;
+
+    static {
+        ColorStateListItem = new int[]{R.attr.color, R.attr.alpha, R.attr.lStar, obric.home.flow.R.attr.alpha, obric.home.flow.R.attr.lStar};
+        CoordinatorLayout = new int[]{obric.home.flow.R.attr.keylines, obric.home.flow.R.attr.statusBarBackground};
+        CoordinatorLayout_Layout = new int[]{R.attr.layout_gravity, obric.home.flow.R.attr.layout_anchor, obric.home.flow.R.attr.layout_anchorGravity, obric.home.flow.R.attr.layout_behavior, obric.home.flow.R.attr.layout_dodgeInsetEdges, obric.home.flow.R.attr.layout_insetEdge, obric.home.flow.R.attr.layout_keyline};
+        FontFamily = new int[]{obric.home.flow.R.attr.fontProviderAuthority, obric.home.flow.R.attr.fontProviderCerts, obric.home.flow.R.attr.fontProviderFetchStrategy, obric.home.flow.R.attr.fontProviderFetchTimeout, obric.home.flow.R.attr.fontProviderPackage, obric.home.flow.R.attr.fontProviderQuery, obric.home.flow.R.attr.fontProviderSystemFontFamily};
+        FontFamilyFont = new int[]{R.attr.font, R.attr.fontWeight, R.attr.fontStyle, R.attr.ttcIndex, R.attr.fontVariationSettings, obric.home.flow.R.attr.font, obric.home.flow.R.attr.fontStyle, obric.home.flow.R.attr.fontVariationSettings, obric.home.flow.R.attr.fontWeight, obric.home.flow.R.attr.ttcIndex};
+        Fragment = new int[]{R.attr.name, R.attr.id, R.attr.tag};
+        FragmentContainerView = new int[]{R.attr.name, R.attr.tag};
+        GradientColor = new int[]{R.attr.startColor, R.attr.endColor, R.attr.type, R.attr.centerX, R.attr.centerY, R.attr.gradientRadius, R.attr.tileMode, R.attr.centerColor, R.attr.startX, R.attr.startY, R.attr.endX, R.attr.endY};
+        GradientColorItem = new int[]{R.attr.color, R.attr.offset};
+        RecyclerView = new int[]{R.attr.orientation, R.attr.clipToPadding, R.attr.descendantFocusability, obric.home.flow.R.attr.fastScrollEnabled, obric.home.flow.R.attr.fastScrollHorizontalThumbDrawable, obric.home.flow.R.attr.fastScrollHorizontalTrackDrawable, obric.home.flow.R.attr.fastScrollVerticalThumbDrawable, obric.home.flow.R.attr.fastScrollVerticalTrackDrawable, obric.home.flow.R.attr.layoutManager, obric.home.flow.R.attr.reverseLayout, obric.home.flow.R.attr.spanCount, obric.home.flow.R.attr.stackFromEnd};
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_basic_bg_base_1"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.orecyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:paddingTop="40dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/title_bar"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_centerTitle="@string/card_feed_settings_title"
+        app:oFloatingTitleBar_maskBackground="@color/oui_basic_bg_base_1"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oui_widgetFitInsetTop="true"/>
+</FrameLayout>

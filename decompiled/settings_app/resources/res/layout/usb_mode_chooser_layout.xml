@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/power_source"
+                app:ocardlistitem_showSubTitle="true"
+                app:ocardlistitem_subTitle="@string/sm_usb_use_power_only_tips"
+                app:ocardlistitem_title="@string/sm_usb_use_power_only"
+                style="@style/OCardListItemSwitchMid"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/item_layout"
+                android:paddingBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+</RelativeLayout>

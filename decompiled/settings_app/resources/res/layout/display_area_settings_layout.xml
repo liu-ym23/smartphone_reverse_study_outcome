@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/screen_zoom_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_alignParentBottom="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.SettingItemCheck
+                android:id="@+id/status_bar_title_adaptive"
+                app:itemTitle="@string/status_bar_title_adaptive"
+                style="@style/SettingSubItemTopStyle"/>
+            <com.android.settings.widget.SettingItemImage
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/status_bar_title_adaptive_image"
+                android:paddingTop="12dp"
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/setting_display_area_full"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/status_bar_title_adaptive"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/show_content_below_status_bar"
+                app:itemTitle="@string/show_content_below_status_bar"
+                style="@style/SettingSubItemTopStyle"/>
+            <com.android.settings.widget.SettingItemImage
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/show_content_below_status_bar_image"
+                android:paddingTop="12dp"
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/setting_display_area_safe"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/show_content_below_status_bar"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

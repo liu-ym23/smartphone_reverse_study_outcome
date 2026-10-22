@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/ll_group_button_container"
+        android:background="@drawable/secondary_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/secondary_bar_height"/>
+    <ImageView
+        android:id="@+id/obric_iv_btn_group_shadow"
+        android:background="@drawable/obric_secondary_bar_shadow"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</merge>

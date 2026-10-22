@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.memorydata.ui.custom.DeviceAdaptiveCardListItem xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/address_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ocardlistitem_cardType="type_normal"
+    app:ocardlistitem_showCustomEnd="false"
+    app:ocardlistitem_showIcon="false"
+    app:ocardlistitem_showSubTitle="true"
+    app:ocardlistitem_showTailIcon="false"
+    app:ocardlistitem_showTitle="true"/>

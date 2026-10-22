@@ -1,0 +1,38 @@
+package org.apache.commons.io.filefilter;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.io.File;
+import java.io.Serializable;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.Path;
+import java.nio.file.attribute.BasicFileAttributes;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class DirectoryFileFilter extends AbstractFileFilter implements Serializable {
+    public static final IOFileFilter DIRECTORY = null;
+    public static final IOFileFilter INSTANCE = null;
+    private static final long serialVersionUID = -5148237843784525732L;
+
+    static {
+        DirectoryFileFilter r0 = new DirectoryFileFilter();
+        DIRECTORY = r0;
+        INSTANCE = r0;
+    }
+
+    public DirectoryFileFilter() {
+    }
+
+    @Override // org.apache.commons.io.filefilter.IOFileFilter, org.apache.commons.io.file.PathFilter
+    public FileVisitResult accept(Path r2, BasicFileAttributes r3) {
+        Path r1 = (Path) ZeusTransformUtils.wrapperContextForParams(r2, Path.class, "com.obric.memorydata.plugin");
+        BasicFileAttributes r4 = (BasicFileAttributes) ZeusTransformUtils.wrapperContextForParams(r3, BasicFileAttributes.class, "com.obric.memorydata.plugin");
+        return toFileVisitResult(Files.isDirectory(r1, new LinkOption[0]), r1);
+    }
+
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
+    public boolean accept(File r1) {
+        return r1.isDirectory();
+    }
+}

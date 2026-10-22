@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_widget">Add widgets</string>
+    <string name="app_description">Quick access to shortcuts and information</string>
+    <string name="app_market_install_confirm">Go to App Store</string>
+    <string name="app_market_install_message">Go to the app store to install \"%s\"</string>
+    <string name="app_market_install_title">Install \"%s\" to continue</string>
+    <string name="app_name">Quick View</string>
+    <string name="card_feed_delete_travel_service">Ignore reminder</string>
+    <string name="card_feed_settings_title">Settings</string>
+    <string name="card_top_search_hint">Search</string>
+    <string name="delete_widget">Remove widgets</string>
+    <string name="delete_widget_cancel">Cancel</string>
+    <string name="delete_widget_confirm">Removing this widget won\'t delete any apps or data</string>
+    <string name="delete_widget_confirm_title">Remove %s</string>
+    <string name="delete_widget_confirm_yes">Remove</string>
+    <string name="edit_widget">Edit widgets</string>
+    <string name="external_express_widget_name">Packages</string>
+    <string name="failed_to_jump_to_the_appstore">Failed to open app store</string>
+    <string name="home_app_name">Google Feed</string>
+    <string name="overheat_warning_message">Your phone is overheating. Cannot open the app right now.</string>
+    <string name="permission_push_access">Send notifications</string>
+    <string name="permission_read_installed_apps">Read the installed app list</string>
+    <string name="privacy_policy">Please read and agree to the Quick View Privacy Policy</string>
+    <string name="privacy_policy_description">Welcome to Quick View. This app requires internet access and will request the following permissions:</string>
+    <string name="privacy_policy_link">Quick View Privacy Policy</string>
+    <string name="privacy_policy_link_url">https://os.obriccloud.com/agreement/Obricflow_privacy_en</string>
+    <string name="privacy_policy_network_confirm_message">Viewing the Quick View Privacy Policy requires a network connection. Continue?</string>
+    <string name="privacy_policy_network_confirm_negative">Disagree</string>
+    <string name="privacy_policy_network_confirm_positive">Agree</string>
+    <string name="privacy_policy_network_confirm_title">Notice</string>
+    <string name="travel_service_subtitle">Smart reminders for flights, trains, and hotels</string>
+    <string name="travel_service_title">Travel</string>
+    <string name="widget_load_failed">Unable to load widget</string>
+</resources>

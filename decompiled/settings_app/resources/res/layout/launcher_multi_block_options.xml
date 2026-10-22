@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/launcher_multi_block_mode_summary"
+        style="@style/SettingItemTitleStyle"/>
+    <LinearLayout
+        android:background="@drawable/bg_preview_2"
+        style="@style/SettingPreviewStyle">
+        <com.android.settings.PreviewSettingItemView
+            android:id="@+id/multi_block_36_grids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            setting:previewNormalDrawable="@drawable/grids_36_preview_normal"
+            setting:previewTitle="@string/multi_block_36_grids"/>
+        <com.android.settings.PreviewSettingItemView
+            android:id="@+id/multi_block_81_grids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            setting:previewNormalDrawable="@drawable/grids_81_preview_normal"
+            setting:previewTitle="@string/multi_block_81_grids"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/multi_block_tips"
+        android:text="@string/launcher_multi_block_mode_tips_36"
+        style="@style/SettingItemTipsStyle"/>
+</LinearLayout>

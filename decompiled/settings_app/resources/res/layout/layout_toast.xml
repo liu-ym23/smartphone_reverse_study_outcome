@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/ToastTextColor"
+        android:ellipsize="end"
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="288dp"
+        android:maxLines="3"
+        android:layout_marginHorizontal="12dp"
+        android:paddingVertical="12dp"
+        style="@style/Label_M_Thin"/>
+</FrameLayout>

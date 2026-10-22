@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="4"
+    android:versionName="1.0.3"
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="15"
+    package="obric.home.flow"
+    platformBuildVersionCode="35"
+    platformBuildVersionName="15">
+    <uses-sdk
+        android:minSdkVersion="31"
+        android:targetSdkVersion="35"/>
+    <queries>
+        <package android:name="com.android.launcher3"/>
+        <package android:name="com.obric.quicksearch"/>
+        <package android:name="com.obric.matrix"/>
+        <package android:name="com.zte.dbneopush"/>
+        <package android:name="com.zte.neopush"/>
+        <package android:name="com.cainiao.wireless"/>
+        <package android:name="com.taobao.taobao"/>
+        <package android:name="com.eg.android.AlipayGphone"/>
+        <package android:name="com.sf.activity"/>
+        <package android:name="com.jingdong.app.mall"/>
+        <package android:name="com.tencent.mm"/>
+        <package android:name="vz.com"/>
+    </queries>
+    <uses-permission android:name="com.obric.quicksearch.permission.LAUNCHER_CALL"/>
+    <uses-permission android:name="android.permission.REMOVE_TASKS"/>
+    <uses-permission android:name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS"/>
+    <uses-permission android:name="android.permission.START_ANY_ACTIVITY"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.GET_INTENT_SENDER_INTENT"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="com.android.launcher3.permission.START_WIDGET_PICKER_ACTIVITY"/>
+    <uses-permission android:name="com.bytedance.ai.process.PRIVATE_FILE_ACCESS"/>
+    <uses-permission android:name="com.bytedance.ai.process.INIT_BROADCAST_ACCESS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.THERMAL_STATUS"/>
+    <uses-permission android:name="com.obric.health.permission.ACCESS_STEP_COUNTER"/>
+    <uses-permission android:name="com.obric.permission.CAPTURE_PASS_BLUR"/>
+    <permission
+        android:name="obric.flow.assistant.flow.ACCESS_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+    <uses-permission android:name="com.obric.appletapp.permission.FLOW_BRIDGE"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.obric.account.NAVIGATE"/>
+    <uses-permission android:name="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"/>
+    <uses-permission android:name="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.slardaros.METRIC_EVENT_PERMISSION"/>
+    <uses-permission android:name="android.permission.ACCESS_DEVICE_PROTECTED_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.obric.appletapp.ACTION_LAUNCH"/>
+    <uses-permission android:name="com.obric.appletapp.ACTION_UPDATE_COMPLETED"/>
+    <permission
+        android:name="obric.home.flow.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="obric.home.flow.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <permission
+        android:name="com.obric.olog.ACCESS_LOG_COMPRESSION_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.zte.miboard.recommend.permission"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <permission
+        android:name="com.zte.miboard.recommend.permission"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="com.android.internal.telephony.permission.RECEIVE_VERIFY_CODE_SMS"/>
+    <application
+        android:theme="@style/Theme.ObricFlow"
+        android:label="@string/home_app_name"
+        android:icon="@mipmap/ic_obric_flow"
+        android:name="obric.flow.app.FlowApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_obric_flow"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:allowNativeHeapPointerTagging="false"
+        android:dataExtractionRules="@xml/data_extraction_rules">
+        <service
+            android:name="obric.flow.overlay.AssistantOverlayService"
+            android:permission="obric.flow.assistant.flow.ACCESS_PROVIDER"
+            android:exported="true"
+            android:directBootAware="true"
+            android:foregroundServiceType="dataSync">
+            <intent-filter>
+                <action android:name="com.android.launcher3.WINDOW_OVERLAY"/>
+                <data android:scheme="app"/>
+            </intent-filter>
+            <meta-data
+                android:name="service.api.version"
+                android:value="1"/>
+        </service>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.oui.window.permission.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <meta-data
+            android:name="teatracker_app_id"
+            android:value="@string/app_id"/>
+        <meta-data
+            android:name="android.graphics.enable_obric_private_effectfilters"
+            android:value="true"/>
+        <activity
+            android:theme="@style/TransparentDialogTheme"
+            android:name="com.obric.flow.cardlistpage.ui.TransparentDialogActivity"
+            android:exported="false"
+            android:taskAffinity="obric.home.flow.transparent"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/Theme.CardFeedSettings"
+            android:name="com.obric.flow.cardlistpage.ui.settings.CardFeedSettingsActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.CardFeedSettings"
+            android:name="com.obric.flow.cardlistpage.ui.webview.CardFeedWebViewActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.clockwidgets.ClockWidgetConfigActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.obric.clockwidgets.receivers.SystemClockPackageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.obric.matrix.platform.sdk.ones.ws.WsMsgProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.obric.matrix.platform.sdk.ones.provider.obric.home.flow"/>
+        <activity
+            android:theme="@style/AppTheme.Transparent"
+            android:name="com.obric.oui.window.permission.PrivacyStatementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <service
+            android:name="com.obric.olog.ConfigService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.ologaction"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.olog.OLog"
+            android:exported="false"
+            android:authorities="obric.home.flow.contextprovider"/>
+        <provider
+            android:name="com.bytedance.apm.battery.dao.MonitorContentProvider"
+            android:exported="false"
+            android:authorities="obric.home.flow.apm"/>
+        <provider
+            android:name="com.bytedance.ai.multiprocess.MultiprocessInitializer"
+            android:exported="false"
+            android:authorities="obric.home.flow.aisdk.multiprocessinitializer"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.bytedance.ai.applet.components.page.AppletPageActivity"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:configChanges="screenSize|orientation"
+            android:windowIsTranslucent="true"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.ivy.ivykit.plugin.impl.utils.DefaultBulletActivity"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.bytedance.android.anniex.container.ui.AnnieXDefaultActivity"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:configChanges="screenSize|orientation"
+            android:windowIsTranslucent="true"/>
+        <activity
+            android:name="com.bytedance.ies.bullet.base.ui.SimpleBulletContainerActivity"
+            android:exported="false"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService"
+            android:exported="false"
+            android:process=":downloader"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService"
+            android:exported="false"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.DownloadService"
+            android:exported="false"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService"
+            android:exported="false"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService"
+            android:exported="false"
+            android:stopWithTask="true"/>
+        <activity android:name="com.ss.android.deviceregister.AActivity"/>
+        <activity android:name="com.bytedance.bdinstall.migrate.MigrateDetectorActivity"/>
+        <provider
+            android:name="com.bytedance.bdinstall.BDInstallProvider"
+            android:exported="false"
+            android:authorities="obric.home.flow.bdinstall.provider"/>
+        <service
+            android:name="com.bytedance.common.wschannel.server.WsChannelService"
+            android:exported="false"
+            android:process=":push"/>
+        <service
+            android:name="com.bytedance.common.wschannel.client.WsClientService"
+            android:exported="false"/>
+        <provider
+            android:name="com.bytedance.common.wschannel.WsChannelMultiProcessSharedProvider"
+            android:exported="false"
+            android:authorities="obric.home.flow.WsChannelMultiProcessSharedProvider"/>
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule"/>
+        <receiver
+            android:label="@string/external_express_widget_name"
+            android:name="obric.flow.externalcard.express.ExpressAppWidgetProvider"
+            android:permission="android.permission.BIND_APPWIDGET"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.CONFIGURATION_CHANGED"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/external_express_appwidget_info"/>
+        </receiver>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="obric.home.flow.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.obric.olog.salvage.LogCompressionProvider"
+            android:exported="true"
+            android:authorities="obric.home.flow.logcompressionprovider"/>
+        <receiver
+            android:name="com.zte.miboard.recommend.nubiapush.NubiaPushReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.nubia.neopush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="cn.nubia.neopush.sdk.MessageHandleService"
+            android:exported="true"/>
+        <service
+            android:name="cn.nubia.neopush.sdk.PushMessageHandler"
+            android:permission="cn.nubia.neopush.permission.BIND_PUSH_MESSAGE_HANDLER"
+            android:exported="true"/>
+        <provider
+            android:name="com.zte.miboard.recommend.RecommendProvider"
+            android:permission="com.zte.miboard.recommend.permission"
+            android:exported="true"
+            android:authorities="com.zte.miboard.recommend.RecommendProvider"/>
+        <service
+            android:name="com.zte.miboard.recommend.agent.HandleService"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/TransparentDialogTheme"
+            android:name="com.zte.miboard.cards.common.MiddleJumpAty"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/TransparentDialogTheme"
+            android:name="com.zte.miboard.cards.common.DialogAty"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/MiBoardActivityTheme"
+            android:label="@string/express_track"
+            android:name="com.zte.miboard.cards.express.more.ExpressMoreActivty"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/MiBoardActivityTheme"
+            android:label="@string/express_bind_phone"
+            android:name="com.zte.miboard.cards.express.login.LoginActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/MiBoardActivityTheme"
+            android:label="@string/express_bind_phone"
+            android:name="com.zte.miboard.cards.express.login.LoginNumberActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"/>
+        <provider
+            android:name="com.zte.miboard.cards.common.CustomProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.zte.miboard.cards.customprovider"/>
+        <activity
+            android:theme="@style/MiBoardActivityTheme"
+            android:label="@string/travel_card"
+            android:name="com.zte.miboard.cards.travel.TravelSettingsAty"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/MiBoardActivityTheme"
+            android:label="@string/travel_card_all_travel"
+            android:name="com.zte.miboard.cards.travel.TravelListAty"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

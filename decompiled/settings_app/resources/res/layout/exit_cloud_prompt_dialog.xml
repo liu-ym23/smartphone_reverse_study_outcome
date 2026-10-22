@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/exit_notice_text_size"
+        android:gravity="center"
+        android:id="@+id/exit_notice_for_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/exit_notice_margin_left"
+        android:layout_marginTop="@dimen/exit_notice_margin_top"
+        android:layout_marginRight="@dimen/exit_notice_margin_right"
+        android:layout_marginBottom="@dimen/exit_notice_margin_bottom"
+        android:text="@string/exit_notice_for_dialog_tips"/>
+</LinearLayout>

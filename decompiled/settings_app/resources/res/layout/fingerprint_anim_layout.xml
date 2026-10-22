@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/preview_image"
+        android:background="@drawable/fingerprint_anim_wallpaper"
+        android:layout_width="@dimen/fingerprint_anim_wallpaper_width"
+        android:layout_height="@dimen/fingerprint_anim_wallpaper_height"/>
+    <ImageView
+        android:id="@+id/phone_frame"
+        android:layout_width="@dimen/fingerprint_anim_frame_width"
+        android:layout_height="@dimen/fingerprint_anim_frame_height"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/fingerprint_anim_view"
+        android:layout_width="@dimen/fingerprint_anim_size"
+        android:layout_height="@dimen/fingerprint_anim_size"
+        android:translationY="@dimen/fingerprint_anim_margin_top"/>
+</merge>

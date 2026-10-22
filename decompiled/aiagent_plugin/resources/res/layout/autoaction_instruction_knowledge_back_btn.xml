@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.button.OButton xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/btn_titlebar"
+    app:icon="@drawable/oui_ic_title_bar_back"
+    app:layout_constraintEnd_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    style="@style/OIconButton.M1.Trans.Neutral"/>

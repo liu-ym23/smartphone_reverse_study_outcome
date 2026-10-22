@@ -1,0 +1,132 @@
+package kotlin.jvm.internal;
+
+import kotlin.SinceKotlin;
+import kotlin.reflect.KCallable;
+import kotlin.reflect.KFunction;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class FunctionReference extends CallableReference implements FunctionBase, KFunction {
+    private final int arity;
+
+    @SinceKotlin(version = "1.4")
+    private final int flags;
+
+    public FunctionReference(int r10) {
+        this(r10, CallableReference.NO_RECEIVER, null, null, null, 0);
+    }
+
+    @SinceKotlin(version = "1.1")
+    public FunctionReference(int r10, Object r11) {
+        this(r10, r11, null, null, null, 0);
+    }
+
+    @SinceKotlin(version = "1.4")
+    public FunctionReference(int r10, Object r11, Class r12, String r13, String r14, int r15) {
+        if ((r15 & 1) != 1) goto L5;
+        boolean r16 = true;
+    L6:
+        super(r11, r12, r13, r14, r16);
+        this.arity = r10;
+        this.flags = r15 >> 1;
+        return;
+    L5:
+        r16 = false;
+        goto L6
+    }
+
+    @Override // kotlin.jvm.internal.CallableReference
+    @SinceKotlin(version = "1.1")
+    protected KCallable computeReflected() {
+        return Reflection.function(this);
+    }
+
+    public boolean equals(Object r10) {
+        if (r10 != this) goto L6;
+        return true;
+    L6:
+        if ((r10 instanceof FunctionReference) == false) goto L23;
+        FunctionReference r11 = (FunctionReference) r10;
+        if (getName().equals(r11.getName()) == false) goto L21;
+        if (getSignature().equals(r11.getSignature()) == false) goto L21;
+        if (this.flags != r11.flags) goto L21;
+        if (this.arity != r11.arity) goto L21;
+        if (Intrinsics.areEqual(getBoundReceiver(), r11.getBoundReceiver()) == false) goto L21;
+        if (Intrinsics.areEqual(getOwner(), r11.getOwner()) == false) goto L21;
+        return true;
+    L21:
+        return false;
+    L23:
+        if ((r10 instanceof KFunction) == true) goto L25;
+        return false;
+    L25:
+        return r10.equals(compute());
+    }
+
+    @Override // kotlin.jvm.internal.FunctionBase
+    public int getArity() {
+        return this.arity;
+    }
+
+    @Override // kotlin.jvm.internal.CallableReference
+    @SinceKotlin(version = "1.1")
+    protected /* bridge */ /* synthetic */ KCallable getReflected() {
+        return getReflected();
+    }
+
+    @Override // kotlin.jvm.internal.CallableReference
+    @SinceKotlin(version = "1.1")
+    protected KFunction getReflected() {
+        return (KFunction) super.getReflected();
+    }
+
+    public int hashCode() {
+        if (getOwner() != null) goto L5;
+        int r10 = 0;
+    L7:
+        return ((r10 + getName().hashCode()) * 31) + getSignature().hashCode();
+    L5:
+        r10 = getOwner().hashCode() * 31;
+        goto L7
+    }
+
+    @Override // kotlin.reflect.KFunction
+    @SinceKotlin(version = "1.1")
+    public boolean isExternal() {
+        return getReflected().isExternal();
+    }
+
+    @Override // kotlin.reflect.KFunction
+    @SinceKotlin(version = "1.1")
+    public boolean isInfix() {
+        return getReflected().isInfix();
+    }
+
+    @Override // kotlin.reflect.KFunction
+    @SinceKotlin(version = "1.1")
+    public boolean isInline() {
+        return getReflected().isInline();
+    }
+
+    @Override // kotlin.reflect.KFunction
+    @SinceKotlin(version = "1.1")
+    public boolean isOperator() {
+        return getReflected().isOperator();
+    }
+
+    @Override // kotlin.jvm.internal.CallableReference, kotlin.reflect.KCallable
+    @SinceKotlin(version = "1.1")
+    public boolean isSuspend() {
+        return getReflected().isSuspend();
+    }
+
+    public String toString() {
+        KCallable r10 = compute();
+        if (r10 == this) goto L7;
+        return r10.toString();
+    L7:
+        if ("<init>".equals(getName()) == false) goto L10;
+        return "constructor (Kotlin reflection is not available)";
+    L10:
+        return "function " + getName() + " (Kotlin reflection is not available)";
+    }
+}

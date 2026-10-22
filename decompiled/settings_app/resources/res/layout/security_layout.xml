@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/security_center"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_alignParentBottom="true">
+            <obric.widget.SettingItemText
+                android:id="@+id/item_permission_manager"
+                android:title="@string/security_permission_management"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/item_data_usage"
+                android:title="@string/data_usage_title"
+                style="@style/SettingSubItemMidStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/item_memory"
+                android:title="@string/advanced_item_storate"
+                style="@style/SettingSubItemMidStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/junk_files_cleanup"
+                android:title="@string/memory_junk_file_cleanup"
+                style="@style/SettingSubItemMidStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/battery"
+                android:title="@string/battery_management"
+                style="@style/SettingSubItemMidStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/trusted_environment"
+                android:title="@string/trusted_network_list_title"
+                style="@style/SettingSubItemMidStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/item_package_installer_settings"
+                android:title="@string/package_installer_settings_title"
+                style="@style/SettingSubItemBottomStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/item_advanced"
+                android:title="@string/security_advanced_options"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

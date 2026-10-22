@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <obric.widget.SettingItemText
+        android:id="@+id/item_menu_down"
+        android:layout_marginBottom="@dimen/item_block_gap"
+        android:title="@string/menu_move_down_nc"
+        style="@style/SettingSubItemSingleStyle"/>
+    <TextView
+        android:text="@string/one_hand_mode_options"
+        style="@style/SettingItemTitleStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/item_id_prefer_left"
+        app:itemTitle="@string/prefer_left_hand"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.SettingItemCheck
+        android:id="@+id/item_id_prefer_right"
+        app:itemTitle="@string/prefer_right_hand"
+        style="@style/SettingSubItemBottomStyle"/>
+    <TextView
+        android:text="@string/hand_switch_tips"
+        style="@style/SettingItemTipsStyle"/>
+</LinearLayout>

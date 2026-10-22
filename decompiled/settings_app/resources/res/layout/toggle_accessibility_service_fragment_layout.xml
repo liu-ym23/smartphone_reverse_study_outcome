@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/main_settings_first_item_card_gap"
+            android:paddingBottom="@dimen/settings_container_bottom_padding"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/toggle_accessibility"
+                app:ocardlistitem_title="@string/loading"
+                style="@style/OCardListItemSwitchSingle"/>
+            <com.obric.oui.sectiontitlebar.OSectionSupportiveText
+                android:id="@+id/toggle_tips"
+                android:layout_marginHorizontal="32dp"
+                style="@style/OSectionTitleBar.S"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/settings_btn"
+                android:visibility="gone"
+                app:ocardlistitem_title="@string/sync_menu_sync_now"
+                style="@style/OCardListItemTextSingle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

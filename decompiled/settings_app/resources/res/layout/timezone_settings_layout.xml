@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/show_timezone_time"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/enable_show_timezone"
+                android:title="@string/show_timezone_time"
+                style="@style/SettingSubItemTopStyle"/>
+            <ImageView
+                android:background="@drawable/preview_time_zone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/show_time_with_timezone_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <TextView
+                android:text="@string/resident_timezone_header"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/item_zone_set"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/resident_timezone"
+                app:subTitleFontSize="@dimen/settings_item_title_size"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

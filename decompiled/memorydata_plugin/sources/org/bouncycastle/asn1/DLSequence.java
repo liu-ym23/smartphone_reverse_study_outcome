@@ -1,0 +1,111 @@
+package org.bouncycastle.asn1;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+
+/* JADX INFO: loaded from: classes7.dex */
+public class DLSequence extends ASN1Sequence {
+    private int contentsLength;
+
+    public DLSequence() {
+        this.contentsLength = -1;
+    }
+
+    public DLSequence(ASN1Encodable r3) {
+        super((ASN1Encodable) ZeusTransformUtils.wrapperContextForParams(r3, ASN1Encodable.class, "com.obric.memorydata.plugin"));
+        this.contentsLength = -1;
+    }
+
+    public DLSequence(ASN1EncodableVector r1) {
+        super(r1);
+        this.contentsLength = -1;
+    }
+
+    DLSequence(ASN1Encodable[] r1, boolean r2) {
+        super(r1, r2);
+        this.contentsLength = -1;
+    }
+
+    private int getContentsLength() {
+        if (this.contentsLength >= 0) goto L9;
+        int r0 = this.elements.length;
+        int r1 = 0;
+        int r2 = 0;
+    L5:
+        if (r1 >= r0) goto L7;
+        r2 = r2 + this.elements[r1].toASN1Primitive().toDLObject().encodedLength(true);
+        r1 = r1 + 1;
+        goto L5
+    L7:
+        this.contentsLength = r2;
+    L9:
+        return this.contentsLength;
+    }
+
+    @Override // org.bouncycastle.asn1.ASN1Primitive
+    void encode(ASN1OutputStream r8, boolean r9) {
+        r8.writeIdentifier(r9, 48);
+        DLOutputStream r10 = r8.getDLSubStream();
+        int r0 = this.elements.length;
+        int r2 = 0;
+        if (this.contentsLength < 0) goto L5;
+    L13:
+        r8.writeDL(getContentsLength());
+    L14:
+        if (r2 >= r0) goto L20;
+        r10.writePrimitive(this.elements[r2].toASN1Primitive(), true);
+        r2 = r2 + 1;
+        goto L14
+    L20:
+        return;
+    L5:
+        if (r0 > 16) goto L13;
+        ASN1Primitive[] r1 = new ASN1Primitive[r0];
+        int r4 = 0;
+        int r5 = 0;
+    L8:
+        if (r4 >= r0) goto L10;
+        ASN1Primitive r6 = this.elements[r4].toASN1Primitive().toDLObject();
+        r1[r4] = r6;
+        r5 = r5 + r6.encodedLength(true);
+        r4 = r4 + 1;
+        goto L8
+    L10:
+        this.contentsLength = r5;
+        r8.writeDL(r5);
+    L11:
+        if (r2 >= r0) goto L16;
+        r10.writePrimitive(r1[r2], true);
+        r2 = r2 + 1;
+        goto L11
+    }
+
+    @Override // org.bouncycastle.asn1.ASN1Primitive
+    int encodedLength(boolean r1) {
+        return ASN1OutputStream.getLengthOfEncodingDL(r1, getContentsLength());
+    }
+
+    @Override // org.bouncycastle.asn1.ASN1Sequence
+    ASN1BitString toASN1BitString() {
+        return new DLBitString(BERBitString.flattenBitStrings(getConstructedBitStrings()), false);
+    }
+
+    @Override // org.bouncycastle.asn1.ASN1Sequence
+    ASN1External toASN1External() {
+        return new DLExternal(this);
+    }
+
+    @Override // org.bouncycastle.asn1.ASN1Sequence
+    ASN1OctetString toASN1OctetString() {
+        return new DEROctetString(BEROctetString.flattenOctetStrings(getConstructedOctetStrings()));
+    }
+
+    @Override // org.bouncycastle.asn1.ASN1Sequence
+    ASN1Set toASN1Set() {
+        return new DLSet(false, toArrayInternal());
+    }
+
+    @Override // org.bouncycastle.asn1.ASN1Sequence, org.bouncycastle.asn1.ASN1Primitive
+    ASN1Primitive toDLObject() {
+        return this;
+    }
+}

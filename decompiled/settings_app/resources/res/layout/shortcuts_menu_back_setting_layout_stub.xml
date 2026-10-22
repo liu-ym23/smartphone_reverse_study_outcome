@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/bottom_key_header_view"
+        android:text="@string/bottom_phone_key"
+        style="@style/SettingItemTitleStyle"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/voice_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <obric.widget.SettingItemSwitch
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/menu_mode"
+            style="@style/SettingSubItemSingleStyle"/>
+        <include layout="@layout/item_bottom_shadow_layout"/>
+    </LinearLayout>
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/torch_settings"
+        android:title="@string/open_torch_via_back_key"
+        style="@style/SettingSubItemSingleStyle"/>
+    <TextView
+        android:id="@+id/multi_block_tips"
+        android:text="@string/open_torch_via_back_key_tips"
+        style="@style/SettingItemTipsStyle"/>
+    <obric.widget.SettingItemText
+        android:id="@+id/item_menu_down"
+        android:title="@string/menu_move_down_nc"
+        style="@style/SettingSubItemSingleStyle"/>
+</LinearLayout>

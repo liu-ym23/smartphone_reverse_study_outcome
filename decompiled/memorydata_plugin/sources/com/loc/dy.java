@@ -1,0 +1,51 @@
+package com.loc;
+
+import java.io.Serializable;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class dy extends dv implements Serializable {
+    public int j;
+    public int k;
+    public int l;
+    public int m;
+    public int n;
+
+    public dy() {
+        this.j = 0;
+        this.k = 0;
+        this.l = Integer.MAX_VALUE;
+        this.m = Integer.MAX_VALUE;
+        this.n = Integer.MAX_VALUE;
+    }
+
+    public dy(boolean r2) {
+        super(r2, true);
+        this.j = 0;
+        this.k = 0;
+        this.l = Integer.MAX_VALUE;
+        this.m = Integer.MAX_VALUE;
+        this.n = Integer.MAX_VALUE;
+    }
+
+    @Override // com.loc.dv
+    public final dv a() {
+        dy r0 = new dy(this.h);
+        r0.a(this);
+        r0.j = this.j;
+        r0.k = this.k;
+        r0.l = this.l;
+        r0.m = this.m;
+        r0.n = this.n;
+        return r0;
+    }
+
+    @Override // com.loc.dv
+    public final /* synthetic */ Object clone() {
+        return a();
+    }
+
+    @Override // com.loc.dv
+    public final String toString() {
+        return "AmapCellLte{tac=" + this.j + ", ci=" + this.k + ", pci=" + this.l + ", earfcn=" + this.m + ", timingAdvance=" + this.n + ", mcc='" + this.f5472a + "', mnc='" + this.f5473b + "', signalStrength=" + this.c + ", asuLevel=" + this.d + ", lastUpdateSystemMills=" + this.e + ", lastUpdateUtcMills=" + this.f + ", age=" + this.g + ", main=" + this.h + ", newApi=" + this.i + '}';
+    }
+}

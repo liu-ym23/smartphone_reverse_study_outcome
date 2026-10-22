@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/loading_background"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content">
+    <com.obric.oui.progress.ODownloadProgressView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:oui_progress_view_size="large"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_1"
+        android:layout_gravity="center"
+        android:id="@+id/textTitle"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oui_p_container_2"
+        android:text="@string/loading"
+        android:layout_marginStart="@dimen/oui_p_container_3"
+        android:layout_marginEnd="@dimen/oui_p_container_3"
+        app:oui_textSpec="H3S"
+        style="@style/Title_Title_M"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_2"
+        android:layout_gravity="center"
+        android:id="@+id/textBody"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:layout_marginStart="@dimen/oui_p_container_3"
+        android:layout_marginEnd="@dimen/oui_p_container_3"
+        app:oui_textSpec="H3S"
+        style="@style/Body_M"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+</LinearLayout>

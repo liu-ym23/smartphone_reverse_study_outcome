@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:id="@+id/smart_key_settings"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <obric.widget.SettingItemText
+        android:id="@+id/side_key"
+        android:title="@string/side_dial_title"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.ListContentItemCustom
+        android:id="@+id/side_key_img_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ListContentItemStyle.Bottom">
+        <ImageView
+            android:background="@drawable/smart_key_and_side_dial_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </obric.widget.ListContentItemCustom>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <obric.widget.SettingItemText
+        android:id="@+id/function_key"
+        android:title="@string/smart_key_title"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.ListContentItemCustom
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ListContentItemStyle.Bottom">
+        <ImageView
+            android:background="@drawable/function_key_instro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </obric.widget.ListContentItemCustom>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <obric.widget.SettingItemText
+        android:id="@+id/smart_key_with_power"
+        android:title="@string/smart_key_and_power_title"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.ListContentItemCustom
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ListContentItemStyle.Bottom">
+        <ImageView
+            android:background="@drawable/smart_key_and_power_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </obric.widget.ListContentItemCustom>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/smart_key_with_volume_up_container"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <obric.widget.SettingItemText
+            android:id="@+id/smart_key_with_volume_up"
+            android:title="@string/smart_key_with_volume_up_title"
+            style="@style/SettingSubItemTopStyle"/>
+        <obric.widget.ListContentItemCustom
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListContentItemStyle.Bottom">
+            <ImageView
+                android:background="@drawable/smart_key_and_volumeup_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </obric.widget.ListContentItemCustom>
+        <include layout="@layout/item_bottom_shadow_layout"/>
+    </LinearLayout>
+    <obric.widget.SettingItemText
+        android:id="@+id/smart_key_with_volume_down"
+        android:title="@string/smart_key_with_volume_down_title"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.ListContentItemCustom
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ListContentItemStyle.Bottom">
+        <ImageView
+            android:background="@drawable/smart_key_and_volume_down_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </obric.widget.ListContentItemCustom>
+</LinearLayout>

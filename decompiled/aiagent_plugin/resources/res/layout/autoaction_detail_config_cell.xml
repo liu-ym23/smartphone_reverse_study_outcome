@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/condition_event_trigger_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_subTitle="@string/condition_event_go_add_condition"
+        app:ocardlistitem_title="@string/condition_event_trigger_condition"/>
+    <com.obric.oui.sectiontitlebar.OSectionSupportiveText
+        android:id="@+id/bottom_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:section_des_text="@string/auto_event_task_tips"/>
+</LinearLayout>

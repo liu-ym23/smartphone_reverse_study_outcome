@@ -1,0 +1,55 @@
+package com.obric.aiagent.assistant.idl;
+
+import android.os.IBinder;
+import android.os.SystemClock;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+
+/* JADX INFO: loaded from: classes2.dex */
+class RecordingDeleteCallbackIDLIpcWrapper implements IRecordingDeleteCallbackIDL {
+    boolean log;
+    final IRecordingDeleteCallbackIDL origin;
+
+    RecordingDeleteCallbackIDLIpcWrapper(IRecordingDeleteCallbackIDL r3) {
+        this((IRecordingDeleteCallbackIDL) ZeusTransformUtils.wrapperContextForParams(r3, IRecordingDeleteCallbackIDL.class, "com.obric.aiagent.plugin"), true);
+    }
+
+    RecordingDeleteCallbackIDLIpcWrapper(IRecordingDeleteCallbackIDL r3, boolean r4) {
+        this.origin = (IRecordingDeleteCallbackIDL) ZeusTransformUtils.wrapperContextForParams(r3, IRecordingDeleteCallbackIDL.class, "com.obric.aiagent.plugin");
+        this.log = r4;
+    }
+
+    @Override // com.obric.aiagent.assistant.idl.IRecordingDeleteCallbackIDL
+    public void onResult(int r22, String r23) {
+        long r7 = SystemClock.elapsedRealtimeNanos();
+    L14:
+        e = move-exception;
+        com.obric.aiagent.ipc.utils.j.f18676a.a("IRecordingDeleteCallbackIDLIPC", "onResult(" + r22 + ", " + r23 + ")", e);     // Catch: Throwable -> L17
+        com.obric.aiagent.ipc.utils.g r3 = new com.obric.aiagent.ipc.utils.g(e);     // Catch: Throwable -> L17
+        long r19 = SystemClock.elapsedRealtimeNanos();     // Catch: Throwable -> L17
+        long r6 = Math.max(0, r19 - r7) / 1000;     // Catch: Throwable -> L17
+        com.obric.aiagent.ipc.utils.k.f18677a.a("IRecordingDeleteCallbackIDLIPC", "onResult(" + r22 + ", " + r23 + ") = fail", r3, r6);     // Catch: Throwable -> L17
+        com.obric.aiagent.ipc.utils.d.f18654a.a("IRecordingDeleteCallbackIDLIPC", "onResult", r3, r6, r19);     // Catch: Throwable -> L17
+        return;
+    L4:
+        if (this.log == false) goto L7;
+        com.obric.aiagent.ipc.utils.j.f18676a.a("IRecordingDeleteCallbackIDLIPC", "onResult(" + r22 + ", " + r23 + ")");     // Catch: Exception -> L14 Throwable -> L17
+    L7:
+        if (this.log == false) goto L9;
+        com.obric.aiagent.ipc.utils.j.f18676a.a("IRecordingDeleteCallbackIDLIPC", "onResult(" + r22 + ", " + r23 + ")");     // Catch: Exception -> L14 Throwable -> L17
+    L9:
+        this.origin.onResult(r22, r23);     // Catch: Exception -> L14 Throwable -> L17
+        if (this.log == false) goto L12;
+        com.obric.aiagent.ipc.utils.j.f18676a.c("IRecordingDeleteCallbackIDLIPC", "onResult = void");     // Catch: Exception -> L14 Throwable -> L17
+    L12:
+        long r110 = SystemClock.elapsedRealtimeNanos();     // Catch: Exception -> L14 Throwable -> L17
+        long r13 = Math.max(0, r110 - r7) / 1000;     // Catch: Exception -> L14 Throwable -> L17
+        com.obric.aiagent.ipc.utils.k.f18677a.a("IRecordingDeleteCallbackIDLIPC", "onResult(" + r22 + ", " + r23 + ") = void", r13);     // Catch: Exception -> L14 Throwable -> L17
+        com.obric.aiagent.ipc.utils.d.f18654a.a("IRecordingDeleteCallbackIDLIPC", "onResult", r13, r110);     // Catch: Exception -> L14 Throwable -> L17
+        return;
+    }
+
+    @Override // android.os.IInterface
+    public IBinder asBinder() {
+        return this.origin.asBinder();
+    }
+}

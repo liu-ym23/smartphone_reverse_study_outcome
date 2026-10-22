@@ -1,0 +1,20 @@
+package w2;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.bytedance.ai.model.objects.MainInitData;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class i implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final Object createFromParcel(Parcel r5) {
+        Intrinsics.checkNotNullParameter(r5, "parcel");
+        return new MainInitData(r5);
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final Object[] newArray(int r5) {
+        return new MainInitData[r5];
+    }
+}

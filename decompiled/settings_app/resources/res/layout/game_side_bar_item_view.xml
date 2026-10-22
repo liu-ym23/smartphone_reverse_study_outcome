@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:paddingBottom="@dimen/settings_dragitem_divider_height"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <obric.widget.ListContentItemText
+        android:id="@+id/drop_content_view"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:customMidView="@layout/list_content_item_custom_image_layout"
+        isPressable="false"
+        style="@style/SettingSubItemSingleStyle">
+        <ImageView
+            android:id="@+id/drag_handle"
+            android:background="@drawable/drag_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </obric.widget.ListContentItemText>
+</LinearLayout>

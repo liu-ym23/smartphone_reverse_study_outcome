@@ -1,0 +1,40 @@
+package com.obric.dejavu.library;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\b\n\u0002\b\u0006\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\u000f\b\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006j\u0002\b\u0007j\u0002\b\b¨\u0006\t"}, d2 = {"Lcom/obric/dejavu/library/IndexMetricType;", "", "data", "", "(Ljava/lang/String;II)V", "getData", "()I", "InnerProduct", "L2", "library_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+public final enum IndexMetricType extends Enum<IndexMetricType> {
+    private static final /* synthetic */ IndexMetricType[] $VALUES = null;
+    public static final IndexMetricType InnerProduct = null;
+    public static final IndexMetricType L2 = null;
+    private final int data;
+
+    private static final /* synthetic */ IndexMetricType[] $values() {
+        return new IndexMetricType[]{InnerProduct, L2};
+    }
+
+    static {
+        InnerProduct = new IndexMetricType("InnerProduct", 0, 0);
+        L2 = new IndexMetricType("L2", 1, 1);
+        $VALUES = $values();
+    }
+
+    private IndexMetricType(String r1, int r2, int r3) {
+        super(r1, r2);
+        this.data = r3;
+    }
+
+    public static IndexMetricType valueOf(String r2) {
+        return (IndexMetricType) ZeusTransformUtils.preCheckCast(Enum.valueOf(IndexMetricType.class, r2), IndexMetricType.class, "com.obric.memorydata.plugin");
+    }
+
+    public static IndexMetricType[] values() {
+        return (IndexMetricType[]) ZeusTransformUtils.preCheckCast($VALUES.clone(), IndexMetricType[].class, "com.obric.memorydata.plugin");
+    }
+
+    public final int getData() {
+        return this.data;
+    }
+}

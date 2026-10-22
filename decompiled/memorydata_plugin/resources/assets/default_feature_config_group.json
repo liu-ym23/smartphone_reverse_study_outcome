@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "feature_config_warps": {
+    "obric_feature_audio_xxx": {
+      "description": "This is an example used to demonstrate how to configure the whitelist (supported by all device models and versions under the project) and the special list (configured by device model, version, etc.).",
+      "enabled": true,
+      "default_state_list":  ["x1","x2","x3","x5"],
+      "feature_state_config_list": [
+        {
+          "state_list": ["x1","x2","x3"],
+          "product_list": [
+            "ccc",
+            "ddd"
+          ],
+          "product_special_list": {
+            "pacific": {
+              "P0110": {
+                "min_rom_version": "1.1.5.0",
+                "min_rom_release_date": 20251106,
+                "max_rom_version": "",
+                "max_rom_release_date": 0,
+                "rom_version_black_list": [
+                  "1.1.6.0"
+                ]
+              },
+              "Ashe": {
+                "min_rom_version": ""
+              }
+            },
+            "nerida": {
+              "NX888J": {
+                "min_rom_version": "0"
+              }
+            }
+          }
+        },
+        {
+          "state_list": ["x1","x2","x3","x2"],
+          "product_list": [
+            "ccc",
+            "ddd",
+            "pacific"
+          ],
+          "product_special_list": {
+            "pacific": {
+              "P0110": {
+                "min_rom_version": "1.1.5.0",
+                "min_rom_release_date": 20251106,
+                "max_rom_version": "",
+                "max_rom_release_date": 0,
+                "rom_version_black_list": [
+                  "1.1.6.0"
+                ]
+              },
+              "xxx": {
+                "min_rom_version": ""
+              }
+            },
+            "nerida": {
+              "NX888J": {
+                "min_rom_version": "0"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "obric_memory_feature_support_toggle_list": {
+      "description": "memory support toggle name list，对应「本地数据检索」展示的list",
+      "enabled": true,
+      "default_state_list": [
+        "call_logs",
+        "contacts",
+        "message",
+        "clock",
+        "notes",
+        "album",
+        "record",
+        "file_management",
+        "calendar",
+        "ai_diary",
+        "global_memory"
+      ],
+      "feature_state_config_list": [
+        {
+          "state_list": [
+            "call_logs",
+            "contacts",
+            "message",
+            "clock",
+            "notes",
+            "album",
+            "record",
+            "file_management",
+            "calendar",
+            "ai_diary",
+            "global_memory"
+          ],
+          "product_list": [
+            "pacific",
+            "nerida"
+          ]
+        }
+      ]
+    },
+    "obric_memory_self_collection_partial_entity_types": {
+      "description": "memory self collection supported entity types when type is partial",
+      "enabled": true,
+      "default_state_list": ["101", "201", "202", "301", "801"]
+    }
+  }
+}

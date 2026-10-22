@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="false"
+        android:state_selected="false"
+        android:drawable="@drawable/inner_common_row_switch5_unselected"/>
+    <item
+        android:state_enabled="false"
+        android:state_selected="true"
+        android:drawable="@drawable/inner_common_row_switch5_selected_disenable"/>
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/inner_common_row_switch5_selected"/>
+    <item android:drawable="@drawable/inner_common_row_switch5_unselected"/>
+</selector>

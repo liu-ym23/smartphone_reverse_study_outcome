@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_container_rl"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/main_settings_first_item_card_gap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/sim_enable_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ocardlistitem_cardPosition="position_top"
+                app:ocardlistitem_cardType="type_normal"
+                app:ocardlistitem_defaultCustomEnd="end_switch"
+                app:ocardlistitem_showCustomEnd="true"
+                app:ocardlistitem_showIcon="false"
+                app:ocardlistitem_showTitle="true"
+                app:ocardlistitem_title="@string/using_dual_sim_mostly"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/sim_name_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ocardlistitem_cardPosition="position_bottom"
+                app:ocardlistitem_cardType="type_normal"
+                app:ocardlistitem_defaultTailIcon="tail_arrow"
+                app:ocardlistitem_showIcon="false"
+                app:ocardlistitem_showTailIcon="true"
+                app:ocardlistitem_showTitle="true"
+                app:ocardlistitem_title="@string/multi_sim_sim_name_setting"/>
+            <ImageView
+                android:id="@+id/sim_guide"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_centerTitle="@string/about_settings"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

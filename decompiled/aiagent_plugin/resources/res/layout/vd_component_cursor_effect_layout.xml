@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bg"
+    android:background="@color/Transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_gravity="center"
+        android:id="@+id/cursor"
+        android:background="@drawable/cursor_bg"
+        android:visibility="invisible"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.obric.autoaction.vdplayer.components.cursor.CursorThoughtTextView
+        android:textSize="10sp"
+        android:textColor="#b2808080"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/cursor_text"
+        android:background="@drawable/cursor_text_bg"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:maxEms="20"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp"
+        app:layout_constraintEnd_toEndOf="@+id/cursor"
+        app:layout_constraintStart_toStartOf="@+id/cursor"
+        app:layout_constraintTop_toBottomOf="@+id/cursor"/>
+    <com.obric.autoaction.vdplayer.components.cursor.CursorPressDownEffectView
+        android:id="@+id/iv_press_effect"
+        android:visibility="invisible"
+        android:layout_width="180dp"
+        android:layout_height="180dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

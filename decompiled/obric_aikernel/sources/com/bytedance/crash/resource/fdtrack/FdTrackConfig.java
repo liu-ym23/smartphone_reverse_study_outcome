@@ -1,0 +1,48 @@
+package com.bytedance.crash.resource.fdtrack;
+
+import com.bytedance.crash.config.RuntimeConfig;
+import com.bytedance.crash.resource.ResourceMonitorConfig;
+import com.bytedance.crash.resource.vmmonitor.VmMonitorConfig;
+
+/* JADX INFO: loaded from: classes.dex */
+public class FdTrackConfig extends ResourceMonitorConfig {
+    protected int mBacktraceLimit;
+    protected boolean mDebug;
+    protected int mDumpLine;
+    protected boolean mFdTrackEnable;
+    protected boolean mLoopMonitorEnable;
+    protected long mSleepTime;
+    protected int mWaterLine;
+
+    public FdTrackConfig(boolean r10, boolean r11, int r12, int r13, long r14, int r15) {
+        super(21, 35, 2);
+        this.mFdTrackEnable = false;
+        this.mLoopMonitorEnable = false;
+        this.mDebug = false;
+        this.mWaterLine = 500;
+        this.mDumpLine = 1000;
+        this.mBacktraceLimit = 10;
+        this.mSleepTime = VmMonitorConfig.SLEEP_TIME_BEFORE_RECOVER;
+        if (RuntimeConfig.isLocalTest() == false) goto L5;
+        this.mFdTrackEnable = true;
+        this.mLoopMonitorEnable = true;
+        this.mWaterLine = 200;
+        this.mDumpLine = 400;
+        this.mSleepTime = 1000;
+        this.mBacktraceLimit = 10;
+        this.mDebug = true;
+        return;
+    L5:
+        this.mFdTrackEnable = r10;
+        this.mLoopMonitorEnable = r11;
+        this.mWaterLine = r12;
+        this.mDumpLine = r13;
+        this.mSleepTime = Math.max(1000, r14);
+        this.mBacktraceLimit = r15;
+    }
+
+    @Override // com.bytedance.crash.resource.ResourceMonitorConfig
+    public String toString() {
+        return "fdTrackEnable=" + this.mFdTrackEnable + "\nwaterLine=" + this.mWaterLine + "\ndumpLine=" + this.mDumpLine + "\nloopMonitorEnable=" + this.mLoopMonitorEnable + "\nmSleepTime=" + this.mSleepTime + "\nmBacktraceLimit=" + this.mBacktraceLimit + "\ndebug=" + this.mDebug + "\n";
+    }
+}

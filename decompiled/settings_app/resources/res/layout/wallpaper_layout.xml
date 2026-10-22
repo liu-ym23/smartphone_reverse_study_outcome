@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/wall_paper_header_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.android.settings.SettingItemTextVertical
+                android:id="@+id/item_id_lockscreen_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wallpaper_settings_item_height"
+                setting:arrow="@drawable/secletor_setting_item_arrow"
+                setting:icon="@drawable/wallpaper_setting_icon_frame"
+                setting:iconFrame="@drawable/thumbnail_bg"
+                setting:singleLine="false"
+                setting:subTitle="@string/lockscreen_wallpaper_setting_sub_text"
+                setting:title="@string/lockscreen_wallpaper_setting_text"
+                style="@style/SettingItemGeneralStyle"/>
+            <include
+                android:id="@+id/laucher_theme_viewstub"
+                layout="@layout/launcher_settings_theme"/>
+            <com.android.settings.SettingItemTextVertical
+                android:id="@+id/item_id_device_theme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wallpaper_settings_item_height"
+                setting:arrow="@drawable/secletor_setting_item_arrow"
+                setting:icon="@drawable/theme_default_small"
+                setting:singleLine="false"
+                setting:subTitle="@string/theme_settings_summary"
+                setting:title="@string/theme_settings_header_title"
+                style="@style/SettingItemGeneralStyle"/>
+            <com.android.settings.SettingItemTextVertical
+                android:id="@+id/item_id_icons"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wallpaper_settings_item_height"
+                setting:arrow="@drawable/secletor_setting_item_arrow"
+                setting:singleLine="false"
+                setting:subTitle="@string/icon_setting_sub_text"
+                setting:title="@string/icon_setting_text"
+                style="@style/SettingItemGeneralStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

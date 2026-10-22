@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zte.miboard.cards.common.views.CardPagerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/card_pager_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.zte.miboard.cards.common.views.CardPagerContainer
+        android:orientation="horizontal"
+        android:id="@+id/card_pager_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/card_pager_layout_page_indicator_layout"
+        android:paddingTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.obric.oui.indicator.OCarouselIndicator
+            android:id="@+id/card_pager_layout_page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:oui_dotsClickable="false"
+            app:oui_dotsColor="@color/miboard_card_indicator_dots_color"
+            app:oui_dotsStrokeWidth="0dp"
+            app:oui_maxVisibleDots="10"
+            app:oui_selectedDotColor="@color/miboard_card_indicator_selected_dots_color"
+            app:oui_sizeStyle="small"
+            app:oui_type="normal"/>
+    </LinearLayout>
+</com.zte.miboard.cards.common.views.CardPagerLayout>

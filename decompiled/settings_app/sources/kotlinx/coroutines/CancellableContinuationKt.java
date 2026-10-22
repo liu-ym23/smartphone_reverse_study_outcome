@@ -1,0 +1,89 @@
+package kotlinx.coroutines;
+
+import androidx.exifinterface.media.ExifInterface;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugProbesKt;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.InlineMarker;
+import kotlinx.coroutines.internal.DispatchedContinuation;
+
+/* JADX INFO: compiled from: CancellableContinuation.kt */
+/* JADX INFO: loaded from: classes5.dex */
+@Metadata(d1 = {"\u0000(\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\u001a\"\u0010\u0000\u001a\b\u0012\u0004\u0012\u0002H\u00020\u0001\"\u0004\b\u0000\u0010\u00022\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u0002H\u00020\u0004H\u0000\u001a3\u0010\u0005\u001a\u0002H\u0002\"\u0004\b\u0000\u0010\u00022\u001a\b\u0004\u0010\u0006\u001a\u0014\u0012\n\u0012\b\u0012\u0004\u0012\u0002H\u00020\b\u0012\u0004\u0012\u00020\t0\u0007H\u0086Hø\u0001\u0000¢\u0006\u0002\u0010\n\u001a3\u0010\u000b\u001a\u0002H\u0002\"\u0004\b\u0000\u0010\u00022\u001a\b\u0004\u0010\u0006\u001a\u0014\u0012\n\u0012\b\u0012\u0004\u0012\u0002H\u00020\u0001\u0012\u0004\u0012\u00020\t0\u0007H\u0080Hø\u0001\u0000¢\u0006\u0002\u0010\n\u001a\u0018\u0010\f\u001a\u00020\t*\u0006\u0012\u0002\b\u00030\b2\u0006\u0010\r\u001a\u00020\u000eH\u0007\u0082\u0002\u0004\n\u0002\b\u0019¨\u0006\u000f"}, d2 = {"getOrCreateCancellableContinuation", "Lkotlinx/coroutines/CancellableContinuationImpl;", ExifInterface.GPS_DIRECTION_TRUE, "delegate", "Lkotlin/coroutines/Continuation;", "suspendCancellableCoroutine", "block", "Lkotlin/Function1;", "Lkotlinx/coroutines/CancellableContinuation;", "", "(Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "suspendCancellableCoroutineReusable", "disposeOnCancellation", "handle", "Lkotlinx/coroutines/DisposableHandle;", "kotlinx-coroutines-core"}, k = 2, mv = {1, 8, 0}, xi = 48)
+public final class CancellableContinuationKt {
+    private static final <T> Object suspendCancellableCoroutine$$forInline(Function1<? super CancellableContinuation<? super T>, Unit> r3, Continuation<? super T> r4) {
+        InlineMarker.mark(0);
+        CancellableContinuationImpl r0 = new CancellableContinuationImpl(IntrinsicsKt.intercepted(r4), 1);
+        r0.initCancellability();
+        r3.invoke(r0);
+        Object r5 = r0.getResult();
+        if (r5 != IntrinsicsKt.getCOROUTINE_SUSPENDED()) goto L5;
+        DebugProbesKt.probeCoroutineSuspended(r4);
+    L5:
+        InlineMarker.mark(1);
+        return r5;
+    }
+
+    public static final <T> Object suspendCancellableCoroutine(Function1<? super CancellableContinuation<? super T>, Unit> r3, Continuation<? super T> r4) {
+        CancellableContinuationImpl r0 = new CancellableContinuationImpl(IntrinsicsKt.intercepted(r4), 1);
+        r0.initCancellability();
+        r3.invoke(r0);
+        Object r5 = r0.getResult();
+        if (r5 != IntrinsicsKt.getCOROUTINE_SUSPENDED()) goto L5;
+        DebugProbesKt.probeCoroutineSuspended(r4);
+    L5:
+        return r5;
+    }
+
+    private static final <T> Object suspendCancellableCoroutineReusable$$forInline(Function1<? super CancellableContinuationImpl<? super T>, Unit> r1, Continuation<? super T> r2) {
+        InlineMarker.mark(0);
+        CancellableContinuationImpl r0 = getOrCreateCancellableContinuation(IntrinsicsKt.intercepted(r2));
+        r1.invoke(r0);     // Catch: Throwable -> L9
+        Object r3 = r0.getResult();
+        if (r3 != IntrinsicsKt.getCOROUTINE_SUSPENDED()) goto L7;
+        DebugProbesKt.probeCoroutineSuspended(r2);
+    L7:
+        InlineMarker.mark(1);
+        return r3;
+    L9:
+        th = move-exception;
+        r0.releaseClaimedReusableContinuation$kotlinx_coroutines_core();
+        throw th;
+    }
+
+    public static final <T> Object suspendCancellableCoroutineReusable(Function1<? super CancellableContinuationImpl<? super T>, Unit> r1, Continuation<? super T> r2) {
+        CancellableContinuationImpl r0 = getOrCreateCancellableContinuation(IntrinsicsKt.intercepted(r2));
+        r1.invoke(r0);     // Catch: Throwable -> L8
+        Object r3 = r0.getResult();
+        if (r3 != IntrinsicsKt.getCOROUTINE_SUSPENDED()) goto L7;
+        DebugProbesKt.probeCoroutineSuspended(r2);
+    L7:
+        return r3;
+    L8:
+        th = move-exception;
+        r0.releaseClaimedReusableContinuation$kotlinx_coroutines_core();
+        throw th;
+    }
+
+    public static final <T> CancellableContinuationImpl<T> getOrCreateCancellableContinuation(Continuation<? super T> r2) {
+        if ((r2 instanceof DispatchedContinuation) == false) goto L5;
+        CancellableContinuationImpl<T> r0 = ((DispatchedContinuation) r2).claimReusableCancellableContinuation();
+        if (r0 == null) goto L16;
+        if (r0.resetStateReusable() == true) goto L12;
+        r0 = null;
+    L12:
+        if (r0 == null) goto L16;
+        return r0;
+    L16:
+        return new CancellableContinuationImpl(r2, 2);
+    L5:
+        return new CancellableContinuationImpl(r2, 1);
+    }
+
+    public static final void disposeOnCancellation(CancellableContinuation<?> r1, DisposableHandle r2) {
+        r1.invokeOnCancellation(new DisposeOnCancel(r2));
+    }
+}

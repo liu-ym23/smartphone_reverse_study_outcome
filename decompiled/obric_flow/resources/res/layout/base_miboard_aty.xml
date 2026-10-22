@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/miboard_aty_root_layout"
+    android:background="@color/oui_basic_bg_base_1"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.orecyclerview.widget.RecyclerView
+        android:id="@+id/miboard_aty_container_recycler_view"
+        android:paddingTop="@dimen/aty_title_bar_padding_top"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/miboard_aty_container_linear_layout"
+        android:paddingTop="@dimen/aty_title_bar_padding_top"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/miboard_aty_title_bar"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_maskBackground="@color/oui_basic_bg_base_1"
+        app:oFloatingTitleBar_maskBlurRadius="@dimen/aty_title_bar_mask_blur_radius"
+        app:oui_widgetFitInsetTop="true"/>
+</FrameLayout>

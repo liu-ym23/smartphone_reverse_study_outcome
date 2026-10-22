@@ -1,0 +1,98 @@
+package com.bytedance.ies.bullet.service.monitor.task;
+
+import androidx.annotation.Keep;
+import io.reactivex.internal.observers.h;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Keep
+@Metadata(bv = {1, 0, 3}, d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\b\n\u0002\u0010%\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\b\u0007\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u001c\u001a\u000e\u0012\u0004\u0012\u00020\u0014\u0012\u0004\u0012\u00020\u00010\u001dJ\u0016\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u00142\u0006\u0010\u0003\u001a\u00020\u0004J\u0016\u0010!\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u00142\u0006\u0010\"\u001a\u00020\nR\u001a\u0010\u0003\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001e\u0010\t\u001a\u0004\u0018\u00010\nX\u0086\u000e¢\u0006\u0010\n\u0002\u0010\u000e\u001a\u0004\b\t\u0010\u000b\"\u0004\b\f\u0010\rR\u001e\u0010\u000f\u001a\u0004\u0018\u00010\nX\u0086\u000e¢\u0006\u0010\n\u0002\u0010\u000e\u001a\u0004\b\u0010\u0010\u000b\"\u0004\b\u0011\u0010\rR(\u0010\u0012\u001a\u0010\u0012\u0004\u0012\u00020\u0014\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0013X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R(\u0010\u0019\u001a\u0010\u0012\u0004\u0012\u00020\u0014\u0012\u0004\u0012\u00020\n\u0018\u00010\u0013X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u0016\"\u0004\b\u001b\u0010\u0018¨\u0006#"}, d2 = {"Lcom/bytedance/ies/bullet/service/monitor/task/LoaderTasksPerfMetric;", "", "()V", "duration", "", "getDuration", "()J", "setDuration", "(J)V", "isLoaderTasksReady", "", "()Ljava/lang/Boolean;", "setLoaderTasksReady", "(Ljava/lang/Boolean;)V", "Ljava/lang/Boolean;", "loaderResult", "getLoaderResult", "setLoaderResult", "loaderTaskDurationsCollection", "Ljava/util/concurrent/ConcurrentHashMap;", "", "getLoaderTaskDurationsCollection", "()Ljava/util/concurrent/ConcurrentHashMap;", "setLoaderTaskDurationsCollection", "(Ljava/util/concurrent/ConcurrentHashMap;)V", "loaderTaskReadyCollection", "getLoaderTaskReadyCollection", "setLoaderTaskReadyCollection", "getLoaderPerfMetric", "", "recordTaskDuration", "", "taskName", "recordTaskIsReady", "isReady", "anniex_release"}, k = 1, mv = {1, 4, 3}, xi = 48)
+public final class LoaderTasksPerfMetric {
+    private long duration;
+    private Boolean isLoaderTasksReady;
+    private Boolean loaderResult;
+    private ConcurrentHashMap<String, Long> loaderTaskDurationsCollection;
+    private ConcurrentHashMap<String, Boolean> loaderTaskReadyCollection;
+
+    public LoaderTasksPerfMetric() {
+    }
+
+    public final long getDuration() {
+        return this.duration;
+    }
+
+    public final Map<String, Object> getLoaderPerfMetric() {
+        LinkedHashMap r5 = new LinkedHashMap();
+        ConcurrentHashMap<String, Boolean> r10 = this.loaderTaskReadyCollection;
+        if (r10 == null) goto L5;
+        r5.putAll(r10);
+    L5:
+        ConcurrentHashMap<String, Long> r11 = this.loaderTaskDurationsCollection;
+        if (r11 == null) goto L8;
+        r5.putAll(r11);
+    L8:
+        return r5;
+    }
+
+    public final Boolean getLoaderResult() {
+        return this.loaderResult;
+    }
+
+    public final ConcurrentHashMap<String, Long> getLoaderTaskDurationsCollection() {
+        return this.loaderTaskDurationsCollection;
+    }
+
+    public final ConcurrentHashMap<String, Boolean> getLoaderTaskReadyCollection() {
+        return this.loaderTaskReadyCollection;
+    }
+
+    public final Boolean isLoaderTasksReady() {
+        return this.isLoaderTasksReady;
+    }
+
+    public final void recordTaskDuration(String r5, long r10) {
+        Intrinsics.checkNotNullParameter(r5, "taskName");
+        if (this.loaderTaskDurationsCollection != null) goto L5;
+        this.loaderTaskDurationsCollection = new ConcurrentHashMap();
+    L5:
+        ConcurrentHashMap<String, Long> r11 = this.loaderTaskDurationsCollection;
+        if (r11 == null) goto L9;
+        Long r12 = r11.put(h.b(r5, "_duration"), Long.valueOf(r10));
+        return;
+    }
+
+    public final void recordTaskIsReady(String r5, boolean r10) {
+        Intrinsics.checkNotNullParameter(r5, "taskName");
+        if (this.loaderTaskReadyCollection != null) goto L5;
+        this.loaderTaskReadyCollection = new ConcurrentHashMap();
+    L5:
+        ConcurrentHashMap<String, Boolean> r11 = this.loaderTaskReadyCollection;
+        if (r11 == null) goto L9;
+        Boolean r12 = r11.put(h.b(r5, "_is_ready"), Boolean.valueOf(r10));
+        return;
+    }
+
+    public final void setDuration(long r5) {
+        this.duration = r5;
+    }
+
+    public final void setLoaderResult(Boolean r5) {
+        this.loaderResult = r5;
+    }
+
+    public final void setLoaderTaskDurationsCollection(ConcurrentHashMap<String, Long> r5) {
+        this.loaderTaskDurationsCollection = r5;
+    }
+
+    public final void setLoaderTaskReadyCollection(ConcurrentHashMap<String, Boolean> r5) {
+        this.loaderTaskReadyCollection = r5;
+    }
+
+    public final void setLoaderTasksReady(Boolean r5) {
+        this.isLoaderTasksReady = r5;
+    }
+}

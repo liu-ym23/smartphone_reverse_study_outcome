@@ -1,0 +1,24 @@
+package com.ttnet.org.chromium.base;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class WrappedClassLoader extends ClassLoader {
+    private ClassLoader mPrimaryClassLoader;
+    private ClassLoader mSecondaryClassLoader;
+
+    public WrappedClassLoader(ClassLoader r1, ClassLoader r2) {
+        this.mPrimaryClassLoader = r1;
+        this.mSecondaryClassLoader = r2;
+    }
+
+    @Override // java.lang.ClassLoader
+    public Class<?> findClass(String r2) {
+        return this.mPrimaryClassLoader.loadClass(r2);
+    L5:
+        return this.mSecondaryClassLoader.loadClass(r2);
+    }
+
+    @Override // java.lang.ClassLoader
+    public String findLibrary(String r1) {
+        return null;
+    }
+}

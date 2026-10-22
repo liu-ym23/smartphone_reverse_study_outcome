@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <obric.widget.TipsView
+        android:textColor="@color/oui_text_3"
+        android:id="@+id/head_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginBottom="0dp"
+        android:text="@string/background_network_tips"
+        style="@style/Subtitle_2_Regular"/>
+</LinearLayout>

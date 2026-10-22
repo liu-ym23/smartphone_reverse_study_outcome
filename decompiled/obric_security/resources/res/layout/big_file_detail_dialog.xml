@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/file_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_56"
+        android:layout_marginTop="6dp"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        app:oui_list_item_show_background="false"
+        app:oui_list_item_show_divider="true"
+        app:oui_list_item_title="名称"
+        app:oui_list_item_trailing_text="dddd"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/file_size"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_56"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        app:oui_list_item_show_background="false"
+        app:oui_list_item_show_divider="true"
+        app:oui_list_item_title="大小"
+        app:oui_list_item_trailing_text="dddd"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/file_path"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_56"
+        android:layout_marginBottom="6dp"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        app:oui_list_item_show_background="false"
+        app:oui_list_item_title="位置"
+        app:oui_list_item_trailing_text="dddd"/>
+</LinearLayout>

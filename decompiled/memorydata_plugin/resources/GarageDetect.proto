@@ -1,0 +1,117 @@
+/*
+ * Copyright [2026] - [2026] PICO. All rights reserved.
+ * NOTICE: All information contained herein is, and remains the property of PICO.
+ * The intellectual and technical concepts contained herein are proprietary to PICO.
+ * and may be covered by patents, patents in process, and are protected by trade
+ * secret or copyright law. Dissemination of this information or reproduction of
+ * this material is strictly forbidden unless prior written permission is obtained
+ * from PICO.
+ */
+
+syntax = "proto2";
+
+package com.obric.cae.userAware.Garage.proto;
+
+option java_multiple_files = true;
+option java_package = "com.obric.cae.userAware.Garage.proto";
+option java_outer_classname = "GarageDetectProto";
+
+enum GarageReportReason {
+    GARAGE_REPORT_REASON_UNKNOWN = 0;
+    GARAGE_REPORT_REASON_TRIGGERED = 1;
+    GARAGE_REPORT_REASON_WIFI_DONE = 2;
+    GARAGE_REPORT_REASON_AP_DONE = 3;
+    GARAGE_REPORT_REASON_ERROR = 4;
+    GARAGE_REPORT_REASON_RUNTIME_STATE_CHANGED = 5;
+}
+
+enum GarageApScanStatus {
+    GARAGE_AP_SCAN_STATUS_SUCCESS = 0;
+    GARAGE_AP_SCAN_STATUS_SCANNER_UNAVAILABLE = 1;
+    GARAGE_AP_SCAN_STATUS_SCAN_FAILED = 2;
+    GARAGE_AP_SCAN_STATUS_PERMISSION_DENIED = 3;
+    GARAGE_AP_SCAN_STATUS_TIMEOUT = 4;
+    GARAGE_AP_SCAN_STATUS_CANCELLED = 5;
+}
+
+// AP -> ADSP BLE/GNSS feature report (msgid 602).
+message GarageApScanResultRequest {
+    required uint32 scan_id = 1;
+    required GarageApScanStatus ble_status = 2;
+    required float bt_density_bucket = 3;
+    required float bt_rssi_mean = 4;
+    required float bt_rssi_std = 5;
+    required float bt_strong_m80_fraction = 6;
+    required float bt_has_uuid_fraction = 7;
+    required float bt_devicetype_2_fraction = 8;
+    required float bt_devicetype_3_fraction = 9;
+    required float bt_devclass_major_0_fraction = 10;
+    required float bt_devclass_major_5_fraction = 11;
+    // Counts only satellites with positive finite C/N0, not raw satelliteCount().
+    required GarageApScanStatus gnss_status = 12;
+    required float gnss_sv_count = 13;
+    required float gnss_mean_cn0 = 14;
+    required float gnss_top4_cn0 = 15;
+    required float gnss_used_sv_count = 16;
+    required float gnss_used_fraction = 17;
+    required uint32 ble_valid_unique_count = 18;
+}
+
+// AP -> ADSP runtime capability gate (msgid 604).
+message GarageRuntimeStateRequest {
+    required uint32 version = 1;
+    required bool enabled = 2;
+    required uint32 capability_mask = 3;
+    required uint32 request_id = 4;
+}
+
+// ADSP -> AP scan control notification (msgid 1024).
+message GarageDetectEvent {
+    reserved 1, 3 to 40, 46 to 71;
+
+    required GarageReportReason reason = 2;
+    required uint32 requested_scan_mask = 41;
+    required uint32 completed_scan_mask = 42;
+    required uint32 scan_id = 43;
+    optional bool runtime_enabled = 44;
+    optional uint32 runtime_request_id = 45;
+}
+
+enum GarageTelemetryType {
+    GARAGE_TELEMETRY_TYPE_UNKNOWN = 0;
+    GARAGE_TELEMETRY_TYPE_RAW_WINDOW = 1;
+    GARAGE_TELEMETRY_TYPE_SCAN_FEATURE = 2;
+}
+
+// Wire-compatible with sns_garage_detect_telemetry_chunk (msgid 1026).
+message GarageTelemetryChunk {
+    required uint32 version = 1;
+    required GarageTelemetryType type = 2;
+    required uint32 snapshot_id = 3;
+    required uint32 chunk_index = 4;
+    required uint32 chunk_count = 5;
+    required uint32 total_size = 6;
+    required fixed32 crc32 = 7;
+    required uint64 window_start_ms = 8;
+    required uint64 window_end_ms = 9;
+    required uint32 quality_flags = 10;
+    required uint32 pressure_sample_count = 11;
+    required uint32 accel_sample_count = 12;
+    required uint32 linacc_sample_count = 13;
+    required uint32 gyro_sample_count = 14;
+    required uint32 feature_count = 15;
+    // RAW v2 sets this to 0 and encodes 17-byte motion records plus
+    // 13-byte pressure records.
+    required uint32 record_size = 16;
+    optional sint32 event_direction = 17;
+    optional float event_confidence = 18;
+    optional uint32 scan_purpose = 19;
+    optional uint32 scan_result = 20;
+    optional uint32 requested_scan_mask = 21;
+    optional uint32 completed_scan_mask = 22;
+    optional bool scene_valid = 23;
+    optional bool scene_is_ug = 24;
+    optional float scene_confidence = 25;
+    required bytes payload = 26;
+    optional uint32 scan_id = 27;
+}

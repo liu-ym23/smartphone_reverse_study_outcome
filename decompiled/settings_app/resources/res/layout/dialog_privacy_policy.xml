@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/contentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/scrollView"
+        android:paddingTop="12dp"
+        android:paddingBottom="7.33dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="ifContentScrolls"
+        android:paddingStart="14dp"
+        android:paddingEnd="10dp">
+        <TextView
+            android:textColor="@color/dialog_item_text_color"
+            android:id="@+id/message"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.1"
+            style="?android:attr/textAppearanceMedium"/>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <CheckBox
+        android:textStyle="bold"
+        android:textColor="@color/dialog_item_text_color"
+        android:id="@+id/next_show"
+        android:paddingLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/no_more_show"
+        style="?android:attr/textAppearanceMedium"/>
+</LinearLayout>

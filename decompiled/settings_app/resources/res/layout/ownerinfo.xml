@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/security_item_user_info"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:paddingBottom="13dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.editor.SimpleEditor
+                android:id="@+id/owner_info_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/owner_info_settings_edit_text_hint"
+                android:maxLength="50"
+                android:inputType="textNoSuggestions"
+                style="@style/EditorStyle.Single"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/show_owner_info_on_lockscreen_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/show_owner_info_on_lockscreen_label"
+                style="@style/ListContentItemStyle.Top"/>
+            <obric.widget.ListContentItemText
+                android:paddingBottom="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ListContentItemStyle.Bottom">
+                <ImageView
+                    android:background="@drawable/owner_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-12dp"
+                    android:layout_marginRight="-12dp"
+                    android:layout_marginBottom="-12dp"/>
+            </obric.widget.ListContentItemText>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

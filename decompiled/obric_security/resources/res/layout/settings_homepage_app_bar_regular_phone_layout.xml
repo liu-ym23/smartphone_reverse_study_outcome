@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/oui_bg_base_2_1_low_elevation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+        <ImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_image_icon"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:textColor="@color/oui_text_1"
+            android:id="@+id/tv_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="应用行为记录"
+            android:layout_centerInParent="true"
+            style="@style/Title_Title_L"/>
+    </RelativeLayout>
+</LinearLayout>

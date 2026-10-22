@@ -1,0 +1,81 @@
+package com.ttnet.org.chromium.base;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class UnguessableToken implements Parcelable {
+    public static final Parcelable.Creator<UnguessableToken> CREATOR = null;
+    private final long mHigh;
+    private final long mLow;
+
+    static {
+        CREATOR = new AnonymousClass1();
+    }
+
+    private UnguessableToken(long r1, long r3) {
+        this.mHigh = r1;
+        this.mLow = r3;
+    }
+
+    /* synthetic */ UnguessableToken(long r1, long r3, AnonymousClass1 r5) {
+        this(r1, r3);
+    }
+
+    private static UnguessableToken create(long r1, long r3) {
+        return new UnguessableToken(r1, r3);
+    }
+
+    private UnguessableToken parcelAndUnparcelForTesting() {
+        Parcel r0 = Parcel.obtain();
+        writeToParcel(r0, 0);
+        r0.setDataPosition(0);
+        UnguessableToken r3 = (UnguessableToken) ZeusTransformUtils.preCheckCast(CREATOR.createFromParcel(r0), UnguessableToken.class, "com.obric.memorydata.plugin");
+        r0.recycle();
+        return r3;
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object r8) {
+        if (r8 != null) goto L5;
+        return false;
+    L5:
+        if (getClass() == r8.getClass()) goto L8;
+        return false;
+    L8:
+        if (((UnguessableToken) ZeusTransformUtils.preCheckCast(r8, UnguessableToken.class, "com.obric.memorydata.plugin")).mHigh == this.mHigh) goto L10;
+        return false;
+    L10:
+        if (((UnguessableToken) ZeusTransformUtils.preCheckCast(r8, UnguessableToken.class, "com.obric.memorydata.plugin")).mLow != this.mLow) goto L15;
+        return true;
+    L15:
+        return false;
+    }
+
+    public long getHighForSerialization() {
+        return this.mHigh;
+    }
+
+    public long getLowForSerialization() {
+        return this.mLow;
+    }
+
+    public int hashCode() {
+        long r0 = this.mLow;
+        int r1 = (int) (r0 ^ (r0 >>> 32));
+        long r3 = this.mHigh;
+        int r2 = r1 * 31;
+        return r2 + ((int) ((r3 >>> 32) ^ r3));
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel r3, int r4) {
+        r3.writeLong(this.mHigh);
+        r3.writeLong(this.mLow);
+    }
+}

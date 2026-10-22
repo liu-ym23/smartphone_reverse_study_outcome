@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="6dp">
+    <com.obric.oui.button.OIconButton
+        android:id="@+id/btn_swipe_1"
+        android:clickable="true"
+        android:src="@drawable/oic_trashcan_red"
+        style="@style/OStyleV2.OIconButton.M.Standard.Red_Light"/>
+</FrameLayout>

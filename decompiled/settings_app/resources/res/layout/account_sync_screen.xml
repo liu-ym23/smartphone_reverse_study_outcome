@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/list_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OListView
+        android:id="@+id/view_list"
+        android:paddingTop="@dimen/main_settings_first_item_card_gap"
+        android:paddingBottom="@dimen/settings_container_bottom_padding"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/ListViewGeneralStyle"/>
+    <com.obric.oui.actionbar.v2.OBottomActionBarNormalVertical
+        android:id="@+id/bottom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/sync_settings_error_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/sync_is_failing"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/ic_sync_red_holo"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

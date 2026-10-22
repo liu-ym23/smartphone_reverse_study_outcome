@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/wifi_config_info"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/settings_item_right_widget_margin"
+        android:layout_marginRight="@dimen/settings_item_right_widget_margin"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout style="@style/info_layout">
+            <LinearLayout style="@style/entry_layout">
+                <TextView
+                    android:text="@string/config_list_label"
+                    style="@style/info_label"/>
+            </LinearLayout>
+            <LinearLayout style="@style/entry_layout">
+                <TextView
+                    android:id="@+id/config_list"
+                    style="@style/info_value"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

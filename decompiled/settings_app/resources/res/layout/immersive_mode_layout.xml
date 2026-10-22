@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/status_bar_style_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/status_bar_notch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <obric.widget.SettingItemCheck
+                    android:id="@+id/status_bar_notch_title_show_camera"
+                    app:itemTitle="@string/status_bar_notch_title_show_camera"
+                    style="@style/SettingSubItemTopStyle"/>
+                <com.android.settings.widget.SettingItemImage
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/status_bar_notch_title_show_camera_image"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/setting_status_bar_display"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/status_bar_notch_title_show_camera"
+                    style="@style/SettingSubItemBottomStyle"/>
+                <include layout="@layout/item_bottom_shadow_layout"/>
+                <obric.widget.SettingItemCheck
+                    android:id="@+id/status_bar_notch_title_hide_camera"
+                    app:itemTitle="@string/status_bar_notch_title_hide_camera"
+                    style="@style/SettingSubItemTopStyle"/>
+                <com.android.settings.widget.SettingItemImage
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/status_bar_notch_title_hide_camera_image"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/setting_status_bar_hide"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/status_bar_notch_title_hide_camera"
+                    style="@style/SettingSubItemBottomStyle"/>
+                <include layout="@layout/item_bottom_shadow_layout"/>
+            </LinearLayout>
+            <obric.widget.SettingItemText
+                android:id="@+id/application_status_bar_display_mode"
+                android:visibility="gone"
+                app:smtTitle="@string/application_status_bar_display_mode"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include
+                android:id="@+id/application_status_bar_display_mode_shadow"
+                layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/switch_color_status_bar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:smtTitle="@string/color_status_bar"
+                style="@style/SettingSubItemSingleStyle"/>
+            <include layout="@layout/scrollview_bottom_gap_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

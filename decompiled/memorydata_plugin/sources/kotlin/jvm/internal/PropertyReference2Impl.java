@@ -1,0 +1,22 @@
+package kotlin.jvm.internal;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.reflect.KClass;
+import kotlin.reflect.KDeclarationContainer;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class PropertyReference2Impl extends PropertyReference2 {
+    public PropertyReference2Impl(Class r1, String r2, String r3, int r4) {
+        super(r1, r2, r3, r4);
+    }
+
+    public PropertyReference2Impl(KDeclarationContainer r3, String r4, String r5) {
+        KDeclarationContainer r6 = (KDeclarationContainer) ZeusTransformUtils.wrapperContextForParams(r3, KDeclarationContainer.class, "com.obric.memorydata.plugin");
+        super(((ClassBasedDeclarationContainer) ZeusTransformUtils.preCheckCast(r6, ClassBasedDeclarationContainer.class, "com.obric.memorydata.plugin")).getJClass(), r4, r5, !ZeusTransformUtils.instanceOf(r6, KClass.class) ? 1 : 0);
+    }
+
+    @Override // kotlin.reflect.KProperty2
+    public Object get(Object r3, Object r4) {
+        return getGetter().call(new Object[]{r3, r4});
+    }
+}

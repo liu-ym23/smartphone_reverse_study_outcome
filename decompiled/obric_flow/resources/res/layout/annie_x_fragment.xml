@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/annie_x_root_view"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.anniex.container.view.RiskHintView
+        android:id="@+id/annie_x_risk_hint_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <FrameLayout
+        android:id="@+id/anniex_title_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.anniex.container.view.RadiusFrameLayout
+            android:id="@+id/annie_x_container_view"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:id="@+id/annie_x_custom_view"
+            android:background="#000000"
+            android:focusable="true"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+        <include
+            android:visibility="visible"
+            layout="@layout/annie_x_base_title_bar_layout"/>
+    </FrameLayout>
+</LinearLayout>

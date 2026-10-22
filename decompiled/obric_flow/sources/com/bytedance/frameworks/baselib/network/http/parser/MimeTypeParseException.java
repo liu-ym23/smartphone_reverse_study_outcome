@@ -1,0 +1,11 @@
+package com.bytedance.frameworks.baselib.network.http.parser;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class MimeTypeParseException extends Exception {
+    public MimeTypeParseException() {
+    }
+
+    public MimeTypeParseException(String r5) {
+        super(r5);
+    }
+}

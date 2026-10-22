@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="6dp">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="起始时间"
+        android:layout_marginStart="@dimen/oui_p_list_item_2"
+        style="@style/Label_M"/>
+    <FrameLayout
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="结束时间"
+        android:layout_marginStart="@dimen/oui_p_list_item_2"
+        style="@style/Label_M"/>
+    <FrameLayout
+        android:id="@+id/container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="56dp"
+    android:width="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+    <path
+        android:fillColor="#7f8a9e"
+        android:pathData="M20,0L36,0A20,20 0,0 1,56 20L56,36A20,20 0,0 1,36 56L20,56A20,20 0,0 1,0 36L0,20A20,20 0,0 1,20 0z"/>
+    <path
+        android:fillColor="@drawable/_oui_dialog_demo_icon__0_res_0x7e08004b"
+        android:pathData="M20,0L36,0A20,20 0,0 1,56 20L56,36A20,20 0,0 1,36 56L20,56A20,20 0,0 1,0 36L0,20A20,20 0,0 1,20 0z"
+        android:fillAlpha="0.3"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M28.645,15.516C35.248,15.851 40.5,21.313 40.5,28L40.484,28.644C40.149,35.247 34.688,40.498 28.001,40.499L27.358,40.483C20.967,40.16 15.842,35.035 15.518,28.644L15.5,28C15.5,21.097 21.098,15.5 28.001,15.5L28.645,15.516ZM28.001,17.5C22.202,17.5 17.501,22.201 17.501,28C17.501,33.798 22.202,38.499 28.001,38.499C33.799,38.498 38.501,33.798 38.501,28C38.501,22.202 33.799,17.501 28.001,17.5Z"/>
+</vector>

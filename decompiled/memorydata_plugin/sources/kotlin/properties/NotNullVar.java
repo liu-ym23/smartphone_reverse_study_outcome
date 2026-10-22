@@ -1,0 +1,46 @@
+package kotlin.properties;
+
+import androidx.exifinterface.media.ExifInterface;
+import com.bytedance.crash.entity.EventBody;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.reflect.KProperty;
+
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\b\u0002\u0018\u0000*\b\b\u0000\u0010\u0001*\u00020\u00022\u0010\u0012\u0006\u0012\u0004\u0018\u00010\u0002\u0012\u0004\u0012\u0002H\u00010\u0003B\u0005¢\u0006\u0002\u0010\u0004J$\u0010\u0007\u001a\u00028\u00002\b\u0010\b\u001a\u0004\u0018\u00010\u00022\n\u0010\t\u001a\u0006\u0012\u0002\b\u00030\nH\u0096\u0002¢\u0006\u0002\u0010\u000bJ,\u0010\f\u001a\u00020\r2\b\u0010\b\u001a\u0004\u0018\u00010\u00022\n\u0010\t\u001a\u0006\u0012\u0002\b\u00030\n2\u0006\u0010\u0005\u001a\u00028\u0000H\u0096\u0002¢\u0006\u0002\u0010\u000eJ\b\u0010\u000f\u001a\u00020\u0010H\u0016R\u0012\u0010\u0005\u001a\u0004\u0018\u00018\u0000X\u0082\u000e¢\u0006\u0004\n\u0002\u0010\u0006¨\u0006\u0011"}, d2 = {"Lkotlin/properties/NotNullVar;", ExifInterface.GPS_DIRECTION_TRUE, "", "Lkotlin/properties/ReadWriteProperty;", "()V", EventBody.KEY_VALUE, "Ljava/lang/Object;", "getValue", "thisRef", "property", "Lkotlin/reflect/KProperty;", "(Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/Object;", "setValue", "", "(Ljava/lang/Object;Lkotlin/reflect/KProperty;Ljava/lang/Object;)V", "toString", "", "kotlin-stdlib"}, k = 1, mv = {1, 9, 0}, xi = 48)
+final class NotNullVar<T> implements ReadWriteProperty<Object, T> {
+    private T value;
+
+    public NotNullVar() {
+    }
+
+    @Override // kotlin.properties.ReadWriteProperty, kotlin.properties.ReadOnlyProperty
+    public T getValue(Object r2, KProperty<?> r3) {
+        KProperty r4 = (KProperty) ZeusTransformUtils.wrapperContextForParams(r3, KProperty.class, "com.obric.memorydata.plugin");
+        Intrinsics.checkNotNullParameter(r4, "property");
+        T r1 = this.value;
+        if (r1 == null) goto L6;
+        return r1;
+    L6:
+        throw new IllegalStateException("Property " + r4.getName() + " should be initialized before get.");
+    }
+
+    @Override // kotlin.properties.ReadWriteProperty
+    public void setValue(Object r2, KProperty<?> r3, T r4) {
+        Intrinsics.checkNotNullParameter((KProperty) ZeusTransformUtils.wrapperContextForParams(r3, KProperty.class, "com.obric.memorydata.plugin"), "property");
+        Intrinsics.checkNotNullParameter(r4, EventBody.KEY_VALUE);
+        this.value = r4;
+    }
+
+    public String toString() {
+        StringBuilder r0 = new StringBuilder().append("NotNullProperty(");
+        if (this.value == null) goto L5;
+        String r3 = "value=" + this.value;
+    L7:
+        return r0.append(r3).append(')').toString();
+    L5:
+        r3 = "value not initialized yet";
+        goto L7
+    }
+}

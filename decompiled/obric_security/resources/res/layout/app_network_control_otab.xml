@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedance="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.tab.OTabLayout
+        android:id="@+id/cycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inner_common_dimen_40dp"
+        bytedance:tabGravity="fill"
+        bytedance:tabMode="scrollable"
+        style="@style/OTabTextV2.Background.Light">
+        <com.obric.oui.tab.OTabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_title_data_usage"/>
+        <com.obric.oui.tab.OTabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_title_wlan"/>
+    </com.obric.oui.tab.OTabLayout>
+</FrameLayout>

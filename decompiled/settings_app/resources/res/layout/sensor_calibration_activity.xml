@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/page_container"
+        android:paddingTop="@dimen/main_settings_first_item_card_gap"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/list_item_maximum_width"
+            android:layout_marginHorizontal="@dimen/settings_item_horizontal_padding"/>
+        <include layout="@layout/item_sub_settings_padding_layout2"/>
+        <com.obric.oui.button.OButton
+            android:id="@+id/btn_start_calibration"
+            android:text="@string/calibration_start"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            style="@style/OCardListItemCenterItem"/>
+    </LinearLayout>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle=""
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

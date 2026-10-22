@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedanceos.preventdisturb.widget.BlackCallListItem xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/conversation_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/convertion_list_item_oswipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_showCardBg="false"
+        app:ocardlistitem_showDivider="true"
+        app:ocardlistitem_title="左滑展示"/>
+</com.bytedanceos.preventdisturb.widget.BlackCallListItem>

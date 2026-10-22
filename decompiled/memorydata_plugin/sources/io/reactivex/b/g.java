@@ -1,0 +1,6 @@
+package io.reactivex.b;
+
+/* JADX INFO: loaded from: classes6.dex */
+public interface g<T> {
+    void accept(T r1);
+}

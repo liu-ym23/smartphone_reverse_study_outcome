@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="end|center_vertical"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/bottom_wrapper"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8dp">
+    <com.obric.oui.button.OIconButton
+        android:id="@+id/btn_swipe_delete"
+        android:clickable="true"
+        android:src="@drawable/ic_address_delete"
+        style="@style/OStyleV2.OIconButton.M.Standard.Red_Light"/>
+</LinearLayout>

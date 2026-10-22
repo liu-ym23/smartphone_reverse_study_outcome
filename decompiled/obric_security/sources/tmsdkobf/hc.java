@@ -1,0 +1,34 @@
+package tmsdkobf;
+
+import com.qq.taf.jce.JceInputStream;
+import com.qq.taf.jce.JceOutputStream;
+import com.qq.taf.jce.JceStruct;
+
+/* JADX INFO: loaded from: classes5.dex */
+public final class hc extends JceStruct {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public int f245a;
+
+    public hc() {
+        this.f245a = 0;
+    }
+
+    @Override // com.qq.taf.jce.JceStruct
+    public JceStruct newInit() {
+        return new hc();
+    }
+
+    @Override // com.qq.taf.jce.JceStruct
+    public void readFrom(JceInputStream r3) {
+        this.f245a = r3.read(this.f245a, 0, false);
+    }
+
+    @Override // com.qq.taf.jce.JceStruct
+    public void writeTo(JceOutputStream r2) {
+        int r1 = this.f245a;
+        if (r1 == 0) goto L6;
+        r2.write(r1, 0);
+        return;
+    }
+}

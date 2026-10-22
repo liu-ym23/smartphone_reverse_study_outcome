@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<smart_bluetooth>
+    <policy
+        detail_message="ad2dp or music is still active, play status paused or stopped should not be updated"
+        error_code="AVRCP_PLAYSTATUS_UPDATE_ABNORMAL"
+        solution="INTEROP_NOT_UPDATE_AVRCP_PAUSED_TO_REMOTE"/>
+    <policy
+        detail_message="SCO close during codec negotiation"
+        error_code="HFP_SCO_CLOSE_DURING_CODEC_NEGOTIATION"
+        solution="INTEROP_DISABLE_CODEC_NEGOTIATION"/>
+    <policy
+        detail_message="Role Switch failed more than one time"
+        error_code="GAP_ROLE_SWITCH_RETRY_FAILED"
+        solution="INTEROP_DISABLE_ROLE_SWITCH"/>
+    <policy
+        detail_message="Ag connection timeout"
+        error_code="HFP_AG_CONNECTION_TIMEOUT"
+        solution="INTEROP_INCREASE_AG_CONN_TIMEOUT"/>
+</smart_bluetooth>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/clear_bt_contain"
+        android:background="@drawable/process_delete_background"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true">
+        <com.obric.oui.button.OButton
+            android:id="@+id/clear_process_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_clean"
+            style="@style/LongButton.Highlight"/>
+    </LinearLayout>
+</RelativeLayout>

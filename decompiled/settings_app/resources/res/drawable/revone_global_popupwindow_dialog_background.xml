@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/revone_popup_window_shadow_radius"/>
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <item
+        android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/revone_popup_window_shadow_radius"/>
+            <solid android:color="#fff6f6f6"/>
+            <stroke
+                android:width="2px"
+                android:color="#ffe8e8e8"/>
+        </shape>
+    </item>
+</layer-list>

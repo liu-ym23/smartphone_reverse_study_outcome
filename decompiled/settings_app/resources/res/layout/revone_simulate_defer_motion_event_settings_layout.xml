@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/defer_motion_time_settings_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/delay_value_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true">
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/min_delay"
+            android:hint="最小值0，不要超过最大值"
+            android:title="初始延迟(单位：ms)"
+            app:show_arrow="true"
+            app:smtTitle="@string/key_none"
+            style="@style/SettingSubItemSwitchTopStyle"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/max_delay"
+            android:hint="数值范围[0, 200]"
+            android:title="跳变后延迟(单位：ms)"
+            app:show_arrow="true"
+            app:smtTitle="@string/key_none"
+            style="@style/SettingSubItemSwitchMidStyle"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/delay_duration"
+            android:hint="最小值0"
+            android:title="跳变时间间隔(单位：min)"
+            app:show_arrow="true"
+            app:smtTitle="@string/key_none"
+            style="@style/SettingSubItemSwitchBottomStyle"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/delay_tips"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content"
+        android:text="@string/simulate_defer_motion_tips"
+        android:layout_below="@+id/delay_value_container"
+        android:layout_centerHorizontal="true"
+        style="@style/SettingItemTipsStyle"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/confirmed2"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content"
+        android:text="@string/simulate_defer_motion_confirm"
+        android:layout_below="@+id/delay_tips"
+        android:layout_centerHorizontal="true"
+        style="@style/LongButton.Highlight"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

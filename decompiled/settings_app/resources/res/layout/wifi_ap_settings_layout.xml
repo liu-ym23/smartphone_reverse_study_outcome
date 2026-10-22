@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:scrollbars="none"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/main_settings_first_item_card_gap"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/switch_wifi_ap"
+                app:ocardlistitem_title="@string/wifi_ap_switch"
+                style="@style/OCardListItemSwitchTop"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/item_wifi_ap_setting"
+                app:ocardlistitem_title="@string/wifi_tether_configure_ap_text"
+                style="@style/OCardListItemTextBottom"/>
+            <com.obric.oui.sectiontitlebar.OSectionSupportiveText
+                android:id="@+id/wifi_ap_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                app:section_des_text="@string/wifi_ap_tips"/>
+            <include layout="@layout/item_sub_settings_padding_layout2"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/item_wifi_tether_connected_stations"
+                app:ocardlistitem_showSubTitle="true"
+                app:ocardlistitem_subTitle="@string/wifi_tether_connected_stations_tips"
+                app:ocardlistitem_title="@string/wifi_tether_connected_stations_text"
+                style="@style/OCardListItemTextSingle"/>
+            <include layout="@layout/item_sub_settings_padding_layout2"/>
+            <com.obric.oui.layout.OUILinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ap_network_sharing"
+                android:background="@color/oui_fill_list_item_card"
+                android:paddingLeft="@dimen/oui_p_list_item_3"
+                android:paddingTop="20dp"
+                android:paddingRight="@dimen/oui_p_list_item_3"
+                android:paddingBottom="@dimen/oui_p_list_item_3"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/oui_h_list_item_settings"
+                android:layout_marginHorizontal="@dimen/settings_container_item_horizontal_padding"
+                app:oui_radius="20dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/network_sharing_qrcode"
+                    android:layout_width="111dp"
+                    android:layout_height="111dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/wifi_ap_network_sharing_tips"
+                    style="@style/OCardListTips"/>
+            </com.obric.oui.layout.OUILinearLayout>
+            <include layout="@layout/item_bottom_shadow_layout2"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/mobile_network_ap"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/special_access_app_item"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_defaultCustomEnd="end_switch"
+        app:ocardlistitem_defaultTailIcon="tail_arrow"
+        app:ocardlistitem_showCustomEnd="false"
+        app:ocardlistitem_showDivider="false"
+        app:ocardlistitem_showIcon="false"
+        app:ocardlistitem_showTailIcon="false"
+        app:ocardlistitem_showTitle="true"/>
+</FrameLayout>

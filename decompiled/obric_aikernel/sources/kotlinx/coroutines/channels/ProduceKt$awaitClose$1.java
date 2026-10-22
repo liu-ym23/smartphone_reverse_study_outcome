@@ -1,0 +1,25 @@
+package kotlinx.coroutines.channels;
+
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes3.dex */
+@DebugMetadata(c = "kotlinx.coroutines.channels.ProduceKt", f = "Produce.kt", i = {0, 0}, l = {153}, m = "awaitClose", n = {"$this$awaitClose", "block"}, s = {"L$0", "L$1"})
+final class ProduceKt$awaitClose$1 extends ContinuationImpl {
+    Object L$0;
+    Object L$1;
+    int label;
+    /* synthetic */ Object result;
+
+    ProduceKt$awaitClose$1(Continuation<? super ProduceKt$awaitClose$1> r10) {
+        super(r10);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r10) {
+        this.result = r10;
+        this.label |= Integer.MIN_VALUE;
+        return ProduceKt.a(null, null, this);
+    }
+}

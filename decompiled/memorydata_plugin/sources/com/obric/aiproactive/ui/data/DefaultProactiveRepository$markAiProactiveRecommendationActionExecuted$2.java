@@ -1,0 +1,68 @@
+package com.obric.aiproactive.ui.data;
+
+import com.obric.aiproactive.api.AiProactiveCardStatus;
+import com.obric.aiproactive.api.IProactiveService;
+import com.obric.memorydata.middleware.api.log.IRunLog;
+import com.obric.memorydata.middleware.api.log.RunLog;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.al;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u0004\u0018\u00010\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 0, 0}, xi = 48)
+@DebugMetadata(c = "com.obric.aiproactive.ui.data.DefaultProactiveRepository$markAiProactiveRecommendationActionExecuted$2", f = "ProactiveRepository.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+final class DefaultProactiveRepository$markAiProactiveRecommendationActionExecuted$2 extends SuspendLambda implements Function2<al, Continuation<? super Unit>, Object> {
+    final /* synthetic */ int $actionIndex;
+    final /* synthetic */ AiProactiveCardStatus $cardStatus;
+    final /* synthetic */ long $recommendationId;
+    int label;
+    final /* synthetic */ a this$0;
+
+    DefaultProactiveRepository$markAiProactiveRecommendationActionExecuted$2(long r3, int r5, AiProactiveCardStatus r6, a r7, Continuation<? super DefaultProactiveRepository$markAiProactiveRecommendationActionExecuted$2> r8) {
+        Continuation r9 = (Continuation) ZeusTransformUtils.wrapperContextForParams(r8, Continuation.class, "com.obric.memorydata.plugin");
+        this.$recommendationId = r3;
+        this.$actionIndex = r5;
+        this.$cardStatus = r6;
+        this.this$0 = r7;
+        super(2, r9);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object r9, Continuation<?> r10) {
+        Continuation r7 = (Continuation) ZeusTransformUtils.wrapperContextForParams(r10, Continuation.class, "com.obric.memorydata.plugin");
+        return (Continuation) ZeusTransformUtils.preCheckCast(new DefaultProactiveRepository$markAiProactiveRecommendationActionExecuted$2(this.$recommendationId, this.$actionIndex, this.$cardStatus, this.this$0, r7), Continuation.class, "com.obric.memorydata.plugin");
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public /* synthetic */ Object invoke(al r3, Continuation<? super Unit> r4) {
+        return invoke2((al) ZeusTransformUtils.preCheckCast(r3, al.class, "com.obric.memorydata.plugin"), (Continuation) ZeusTransformUtils.preCheckCast(r4, Continuation.class, "com.obric.memorydata.plugin"));
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Object invoke2(al r3, Continuation<? super Unit> r4) {
+        return ((DefaultProactiveRepository$markAiProactiveRecommendationActionExecuted$2) ZeusTransformUtils.preCheckCast(create((al) ZeusTransformUtils.wrapperContextForParams(r3, al.class, "com.obric.memorydata.plugin"), (Continuation) ZeusTransformUtils.wrapperContextForParams(r4, Continuation.class, "com.obric.memorydata.plugin")), DefaultProactiveRepository$markAiProactiveRecommendationActionExecuted$2.class, "com.obric.memorydata.plugin")).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r7) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) goto L10;
+        ResultKt.throwOnFailure(r7);
+        IRunLog.a.a((IRunLog) ZeusTransformUtils.preCheckCast(RunLog.INSTANCE, IRunLog.class, "com.obric.memorydata.plugin"), "ProactiveUI", "[Repo] markAiProactiveRecommendationActionExecuted id=" + this.$recommendationId + " actionIndex=" + this.$actionIndex + " cardStatus=" + this.$cardStatus, false, 4, null);
+        IProactiveService r8 = a.a(this.this$0);
+        if (r8 == null) goto L7;
+        r8.markAiProactiveRecommendationActionExecuted(this.$recommendationId, this.$actionIndex, this.$cardStatus);
+        return Unit.INSTANCE;
+    L7:
+        return null;
+    L10:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/authenticator_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/settings_container_item_horizontal_padding">
+        <com.obric.oui.button.OButton
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/sync_btn"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:text="@string/sync_menu_sync_now"
+            style="@style/OStyleV2.OButton.L.Trans.Primary"/>
+    </FrameLayout>
+</LinearLayout>

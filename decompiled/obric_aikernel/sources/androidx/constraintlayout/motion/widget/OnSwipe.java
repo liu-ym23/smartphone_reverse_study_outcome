@@ -1,0 +1,247 @@
+package androidx.constraintlayout.motion.widget;
+
+/* JADX INFO: loaded from: classes.dex */
+public class OnSwipe {
+    public static final int COMPLETE_MODE_CONTINUOUS_VELOCITY = 0;
+    public static final int COMPLETE_MODE_SPRING = 1;
+    public static final int DRAG_ANTICLOCKWISE = 7;
+    public static final int DRAG_CLOCKWISE = 6;
+    public static final int DRAG_DOWN = 1;
+    public static final int DRAG_END = 5;
+    public static final int DRAG_LEFT = 2;
+    public static final int DRAG_RIGHT = 3;
+    public static final int DRAG_START = 4;
+    public static final int DRAG_UP = 0;
+    public static final int FLAG_DISABLE_POST_SCROLL = 1;
+    public static final int FLAG_DISABLE_SCROLL = 2;
+    public static final int ON_UP_AUTOCOMPLETE = 0;
+    public static final int ON_UP_AUTOCOMPLETE_TO_END = 2;
+    public static final int ON_UP_AUTOCOMPLETE_TO_START = 1;
+    public static final int ON_UP_DECELERATE = 4;
+    public static final int ON_UP_DECELERATE_AND_COMPLETE = 5;
+    public static final int ON_UP_NEVER_TO_END = 7;
+    public static final int ON_UP_NEVER_TO_START = 6;
+    public static final int ON_UP_STOP = 3;
+    public static final int SIDE_BOTTOM = 3;
+    public static final int SIDE_END = 6;
+    public static final int SIDE_LEFT = 1;
+    public static final int SIDE_MIDDLE = 4;
+    public static final int SIDE_RIGHT = 2;
+    public static final int SIDE_START = 5;
+    public static final int SIDE_TOP = 0;
+    public static final int SPRING_BOUNDARY_BOUNCEBOTH = 3;
+    public static final int SPRING_BOUNDARY_BOUNCEEND = 2;
+    public static final int SPRING_BOUNDARY_BOUNCESTART = 1;
+    public static final int SPRING_BOUNDARY_OVERSHOOT = 0;
+    private int mAutoCompleteMode;
+    private int mDragDirection;
+    private float mDragScale;
+    private float mDragThreshold;
+    private int mFlags;
+    private int mLimitBoundsTo;
+    private float mMaxAcceleration;
+    private float mMaxVelocity;
+    private boolean mMoveWhenScrollAtTop;
+    private int mOnTouchUp;
+    private int mRotationCenterId;
+    private int mSpringBoundary;
+    private float mSpringDamping;
+    private float mSpringMass;
+    private float mSpringStiffness;
+    private float mSpringStopThreshold;
+    private int mTouchAnchorId;
+    private int mTouchAnchorSide;
+    private int mTouchRegionId;
+
+    public OnSwipe() {
+        this.mDragDirection = 0;
+        this.mTouchAnchorSide = 0;
+        this.mTouchAnchorId = -1;
+        this.mTouchRegionId = -1;
+        this.mLimitBoundsTo = -1;
+        this.mOnTouchUp = 0;
+        this.mRotationCenterId = -1;
+        this.mMaxVelocity = 4.0f;
+        this.mMaxAcceleration = 1.2f;
+        this.mMoveWhenScrollAtTop = true;
+        this.mDragScale = 1.0f;
+        this.mFlags = 0;
+        this.mDragThreshold = 10.0f;
+        this.mSpringDamping = Float.NaN;
+        this.mSpringMass = 1.0f;
+        this.mSpringStiffness = Float.NaN;
+        this.mSpringStopThreshold = Float.NaN;
+        this.mSpringBoundary = 0;
+        this.mAutoCompleteMode = 0;
+    }
+
+    public int getAutoCompleteMode() {
+        return this.mAutoCompleteMode;
+    }
+
+    public int getDragDirection() {
+        return this.mDragDirection;
+    }
+
+    public float getDragScale() {
+        return this.mDragScale;
+    }
+
+    public float getDragThreshold() {
+        return this.mDragThreshold;
+    }
+
+    public int getLimitBoundsTo() {
+        return this.mLimitBoundsTo;
+    }
+
+    public float getMaxAcceleration() {
+        return this.mMaxAcceleration;
+    }
+
+    public float getMaxVelocity() {
+        return this.mMaxVelocity;
+    }
+
+    public boolean getMoveWhenScrollAtTop() {
+        return this.mMoveWhenScrollAtTop;
+    }
+
+    public int getNestedScrollFlags() {
+        return this.mFlags;
+    }
+
+    public int getOnTouchUp() {
+        return this.mOnTouchUp;
+    }
+
+    public int getRotationCenterId() {
+        return this.mRotationCenterId;
+    }
+
+    public int getSpringBoundary() {
+        return this.mSpringBoundary;
+    }
+
+    public float getSpringDamping() {
+        return this.mSpringDamping;
+    }
+
+    public float getSpringMass() {
+        return this.mSpringMass;
+    }
+
+    public float getSpringStiffness() {
+        return this.mSpringStiffness;
+    }
+
+    public float getSpringStopThreshold() {
+        return this.mSpringStopThreshold;
+    }
+
+    public int getTouchAnchorId() {
+        return this.mTouchAnchorId;
+    }
+
+    public int getTouchAnchorSide() {
+        return this.mTouchAnchorSide;
+    }
+
+    public int getTouchRegionId() {
+        return this.mTouchRegionId;
+    }
+
+    public void setAutoCompleteMode(int r10) {
+        this.mAutoCompleteMode = r10;
+    }
+
+    public OnSwipe setDragDirection(int r10) {
+        this.mDragDirection = r10;
+        return this;
+    }
+
+    public OnSwipe setDragScale(int r10) {
+        this.mDragScale = r10;
+        return this;
+    }
+
+    public OnSwipe setDragThreshold(int r10) {
+        this.mDragThreshold = r10;
+        return this;
+    }
+
+    public OnSwipe setLimitBoundsTo(int r10) {
+        this.mLimitBoundsTo = r10;
+        return this;
+    }
+
+    public OnSwipe setMaxAcceleration(int r10) {
+        this.mMaxAcceleration = r10;
+        return this;
+    }
+
+    public OnSwipe setMaxVelocity(int r10) {
+        this.mMaxVelocity = r10;
+        return this;
+    }
+
+    public OnSwipe setMoveWhenScrollAtTop(boolean r10) {
+        this.mMoveWhenScrollAtTop = r10;
+        return this;
+    }
+
+    public OnSwipe setNestedScrollFlags(int r10) {
+        this.mFlags = r10;
+        return this;
+    }
+
+    public OnSwipe setOnTouchUp(int r10) {
+        this.mOnTouchUp = r10;
+        return this;
+    }
+
+    public OnSwipe setRotateCenter(int r10) {
+        this.mRotationCenterId = r10;
+        return this;
+    }
+
+    public OnSwipe setSpringBoundary(int r10) {
+        this.mSpringBoundary = r10;
+        return this;
+    }
+
+    public OnSwipe setSpringDamping(float r10) {
+        this.mSpringDamping = r10;
+        return this;
+    }
+
+    public OnSwipe setSpringMass(float r10) {
+        this.mSpringMass = r10;
+        return this;
+    }
+
+    public OnSwipe setSpringStiffness(float r10) {
+        this.mSpringStiffness = r10;
+        return this;
+    }
+
+    public OnSwipe setSpringStopThreshold(float r10) {
+        this.mSpringStopThreshold = r10;
+        return this;
+    }
+
+    public OnSwipe setTouchAnchorId(int r10) {
+        this.mTouchAnchorId = r10;
+        return this;
+    }
+
+    public OnSwipe setTouchAnchorSide(int r10) {
+        this.mTouchAnchorSide = r10;
+        return this;
+    }
+
+    public OnSwipe setTouchRegionId(int r10) {
+        this.mTouchRegionId = r10;
+        return this;
+    }
+}

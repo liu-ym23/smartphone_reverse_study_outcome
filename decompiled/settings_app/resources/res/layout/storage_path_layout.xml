@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/default_storage_path_settings"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        app:okText="@string/batch_edit"
+        style="@style/TitleStyle"/>
+    <include
+        android:id="@+id/id_bottom_bar"
+        android:visibility="gone"
+        layout="@layout/bottom_bar"/>
+    <com.android.settings.widget.SlideListView
+        android:id="@+id/listView"
+        android:layout_marginBottom="-3dp"
+        android:layout_above="@+id/id_bottom_bar"
+        android:layout_below="@+id/view_title"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        settings:slider_checkbox_id="@+id/item_checkbox"
+        settings:slider_enabled="true"
+        style="@style/ListViewGeneralStyle"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

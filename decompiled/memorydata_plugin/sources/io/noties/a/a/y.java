@@ -1,0 +1,12 @@
+package io.noties.a.a;
+
+import androidx.constraintlayout.core.motion.utils.TypedValues;
+import com.bytedance.bdlocation.monitor.LocationMonitorConst;
+import java.util.regex.Pattern;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class y {
+    public static io.noties.a.h.a a(io.noties.a.h r9) {
+        return io.noties.a.h.a("yaml", new io.noties.a.h.f[]{io.noties.a.h.a("scalar", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("([\\-:]\\s*(?:![^\\s]+)?[ \\t]*[|>])[ \\t]*(?:((?:\\r?\\n|\\r)[ \\t]+)[^\\r\\n]+(?:\\2[^\\r\\n]+)*)"), true, false, TypedValues.Custom.S_STRING)}), io.noties.a.h.a("comment", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("#.*"))}), io.noties.a.h.a("key", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("(\\s*(?:^|[:\\-,\\[{\\r\\n?])[ \\t]*(?:![^\\s]+)?[ \\t]*)[^\\r\\n{\\[\\]},#\\s]+?(?=\\s*:\\s)"), true, false, "atrule")}), io.noties.a.h.a("directive", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("(^[ \\t]*)%.+", 8), true, false, "important")}), io.noties.a.h.a("datetime", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)(?:\\d{4}-\\d\\d?-\\d\\d?(?:[tT]|[ \\t]+)\\d\\d?:\\d{2}:\\d{2}(?:\\.\\d*)?[ \\t]*(?:Z|[-+]\\d\\d?(?::\\d{2})?)?|\\d{4}-\\d{2}-\\d{2}|\\d\\d?:\\d{2}(?::\\d{2}(?:\\.\\d*)?)?)(?=[ \\t]*(?:$|,|]|\\}))", 8), true, false, "number")}), io.noties.a.h.a(TypedValues.Custom.S_BOOLEAN, new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)(?:true|false)[ \\t]*(?=$|,|]|\\})", 10), true, false, "important")}), io.noties.a.h.a("null", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)(?:null|~)[ \\t]*(?=$|,|]|\\})", 10), true, false, "important")}), io.noties.a.h.a(TypedValues.Custom.S_STRING, new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)(\"|')(?:(?!\\2)[^\\\\\\r\\n]|\\\\.)*\\2(?=[ \\t]*(?:$|,|]|\\}))", 8), true, true)}), io.noties.a.h.a("number", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)[+-]?(?:0x[\\da-f]+|0o[0-7]+|(?:\\d+\\.?\\d*|\\.?\\d+)(?:e[+-]?\\d+)?|\\.inf|\\.nan)[ \\t]*(?=$|,|]|\\})", 10), true)}), io.noties.a.h.a(LocationMonitorConst.TAG, new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("![^\\s]+"))}), io.noties.a.h.a("important", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("[&*][\\w]+"))}), io.noties.a.h.a("punctuation", new io.noties.a.h.c[]{io.noties.a.h.a(Pattern.compile("---|[:\\[\\]{}\\-,|>?]|\\.\\.\\."))})});
+    }
+}

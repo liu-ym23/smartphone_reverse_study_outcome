@@ -1,0 +1,36 @@
+package com.bytedance.ai.resource.core.operations;
+
+import com.lynx.serval.svg.SVGRenderEngine;
+import java.util.Iterator;
+import kotlin.Metadata;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
+@DebugMetadata(c = "com.bytedance.ai.resource.core.operations.AbsAIPackageOperation", f = "AbsAIPackageOperation.kt", i = {0}, l = {145}, m = "download", n = {SVGRenderEngine.PATH}, s = {"L$0"})
+final class AbsAIPackageOperation$download$1 extends ContinuationImpl {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public String f2693a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public Iterator f2694b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public /* synthetic */ Object f2695c;
+    public final /* synthetic */ AbsAIPackageOperation d;
+    public int e;
+
+    public AbsAIPackageOperation$download$1(AbsAIPackageOperation r5, ContinuationImpl r10) {
+        this.d = r5;
+        super(r10);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r5) {
+        this.f2695c = r5;
+        this.e |= Integer.MIN_VALUE;
+        return this.d.a(this);
+    }
+}

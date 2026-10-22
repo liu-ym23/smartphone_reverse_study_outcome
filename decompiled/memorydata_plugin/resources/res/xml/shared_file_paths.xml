@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="shared_pictures"
+        path="Screenshots/"/>
+    <files-path
+        name="index_tmp"
+        path="Pictures/ImageIndexTemp/"/>
+    <files-path
+        name="memory_image"
+        path="MemoryImage/"/>
+    <files-path
+        name="document_images"
+        path="DocumentImages/"/>
+    <files-path
+        name="export_share"
+        path="export_share/"/>
+    <external-files-path
+        name="external_export_share"
+        path="export_share/"/>
+    <cache-path
+        name="auditory_debug_exports"
+        path="auditory_debug_exports/"/>
+</paths>

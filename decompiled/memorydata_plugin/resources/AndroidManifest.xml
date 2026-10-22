@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="150200101"
+    android:versionName="15.2.0.1.1"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.obric.memorydata.plugin"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="31"
+        android:targetSdkVersion="34"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="obric.contacts.permission.READ_OBRIC_CALL_LOG"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_ROUTING"/>
+    <permission
+        android:name="com.obric.memorydata.permission.COMMON"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.obric.memorydata.permission.COMMON"/>
+    <permission
+        android:name="com.obric.memorydata.permission.COMMON"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+    <uses-permission android:name="android.permission.MONITOR_INPUT"/>
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
+    <uses-permission android:name="com.bytedance.obric.airecordassistant.permission.UPDATE_AIRECORDER_WIDGET"/>
+    <protected-broadcast android:name="com.obric.memorydata.business.commutingcard.showcard"/>
+    <protected-broadcast android:name="com.obric.memorydata.business.commutingcard.hidecard"/>
+    <protected-broadcast android:name="com.obric.memorydata.business.geofence"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.START_ANY_ACTIVITY"/>
+    <uses-permission android:name="com.obric.memorydata.permission.MEMORY_MANAGER"/>
+    <uses-permission android:name="com.obric.assistantaiagent.permission.hybrid_ability"/>
+    <uses-permission android:name="com.obric.assistant.permission.hybrid_ability"/>
+    <uses-permission android:name="com.obric.appletapp.permission.FLOW_BRIDGE"/>
+    <uses-permission android:name="bytedanceos.recorder.READ_RECORDED_PROVIDER"/>
+    <uses-permission android:name="bytedanceos.recorder.WRITE_RECORDED_PROVIDER"/>
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+    <permission
+        android:name="com.obric.memorydata.memory.READ_AI_LAB_SETTINGS"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+    <uses-permission android:name="com.obric.aiagent.executionengine.QUERY_INTENT_SECURITY_SPECS"/>
+    <uses-permission android:name="com.larus.nova.permission.PRIVACY_AUTHORITY_STATUS"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="com.GR.aicr.permission.AI_TASK_AVAILABILITY"/>
+    <queries>
+        <package android:name="com.obric.assistant"/>
+        <package android:name="com.larus.nova"/>
+        <package android:name="com.obric.autoaction"/>
+        <package android:name="com.android.mms"/>
+        <package android:name="com.android.contacts"/>
+        <package android:name="com.android.gallery3d"/>
+        <package android:name="com.obric.notes"/>
+        <package android:name="com.obric.clock"/>
+        <package android:name="com.obric.recorder"/>
+        <package android:name="com.obric.browser"/>
+        <package android:name="com.obric.calendar"/>
+        <package android:name="com.obric.appletapp"/>
+        <intent>
+            <action android:name="com.obric.cae.libs.location.IStarLocationService"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.memorydata.awareness.CONTEXT_AWARENESS_SERVICE"/>
+        </intent>
+        <package android:name="com.obric.aiagent.executionengine"/>
+        <package android:name="com.obric.assistantaiagent"/>
+        <intent>
+            <action android:name="com.obric.memorydata.action.SEARCH_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.aiagent.executionengine.CAPABILITY_REGISTER_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.memorydata.action.GLOBAL_SEARCH_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.capability.schedule.SCHEDULE_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.cae.libs.useraware.ICaeUserAware"/>
+        </intent>
+        <package android:name="com.obric.aikernel"/>
+        <package android:name="com.android.systemui"/>
+        <package android:name="com.ss.android.ugc.aweme"/>
+        <package android:name="com.ss.android.ugc.aweme.lite"/>
+        <package android:name="com.ss.android.ugc.live"/>
+        <package android:name="com.obric.matrix"/>
+        <package android:name="com.bytedance.securityserver"/>
+    </queries>
+    <permission
+        android:name="com.obric.memorydata.permission.PERSONAL_CONTEXT"
+        android:protectionLevel="normal"/>
+    <uses-permission android:name="com.obric.agentskills.permission.PROACTIVE_QUERY"/>
+    <uses-permission android:name="com.android.calendar.adapt.READ_PERMISSION"/>
+    <uses-permission android:name="com.obric.complexTask.DISPATCH_INTENTS"/>
+    <uses-permission android:name="com.obric.autogui.permission.GET_AGENT_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="com.bytedance.permission.ACCESS_AIMEDIA_EVENTS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="com.obric.cae.permission.USER_AWARE_ACCESS"/>
+    <uses-permission android:name="com.obric.cae.permission.STAR_LOCATION_ACCESS"/>
+    <uses-permission android:name="com.obric.cae.permission.ACCESS_STAR_GEOFENCE_CALLBACK"/>
+    <uses-permission android:name="com.obric.assistant.permission.ObricAutoAppBlacklistSettingProvider"/>
+    <uses-permission android:name="com.obric.permission.POWER_MEMORY"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="com.obric.autoaction.permission.BIND_FLOATING_WINDOW_SERVICE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="com.obric.service.permission.provider"/>
+    <uses-permission android:name="com.obric.aivoice.AIVoiceService.permission"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="com.obric.aikernel.AIKernelService.permission"/>
+    <uses-permission android:name="android.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
+    <uses-permission android:name="com.android.systemui.permission.OBRIC_TRIGGER_BACK"/>
+    <uses-permission android:name="com.obric.applet.CALL_LUNAR"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission
+        android:name="android.permission.MANAGE_ROLE_HOLDERS"
+        android:protectionLevel="system|signature"/>
+    <uses-permission android:name="android.permission.OBSERVE_ROLE_HOLDERS"/>
+    <uses-permission android:name="com.obric.assistant.privacy.PERMISSION_ACCESS_PRIVACY_PROVIDER"/>
+    <uses-permission android:name="com.obric.assist.permission.ENABLE_DISABLE_ASSIST"/>
+    <uses-permission android:name="com.obric.ai.plugin.permission.GET_DIALOG_RESULT"/>
+    <uses-permission android:name="com.obric.memorydata.permission.PERSONAL_CONTEXT"/>
+    <uses-permission android:name="com.obric.aiagent.executionengine.SCHEDULE_INTENTS"/>
+    <permission
+        android:name="com.obric.cae.permission.STAR_LOCATION_ACCESS"
+        android:protectionLevel="system|signature"/>
+    <permission
+        android:name="com.obric.cae.permission.ACCESS_STAR_GEOFENCE_CALLBACK"
+        android:protectionLevel="system|signature"/>
+    <permission
+        android:name="com.obric.cae.permission.USER_AWARE_ACCESS"
+        android:protectionLevel="system|signature"/>
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.NETWORK_STACK"/>
+    <uses-permission android:name="android.permission.MANAGE_WIFI_NETWORK_SELECTION"/>
+    <uses-permission android:name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"/>
+    <uses-permission android:name="android.permission.DUMP"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.obric.account.NAVIGATE"/>
+    <uses-permission android:name="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"/>
+    <uses-permission android:name="com.obric.account.permission.ACCOUNT_STATUS"/>
+    <uses-permission android:name="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"/>
+    <uses-permission android:name="com.obric.permission.CAPTURE_PASS_BLUR"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="slardaros.intent.permission"/>
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <permission
+        android:name="com.obric.memorydata.plugin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.obric.memorydata.plugin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.obric.matrixpro.sdk.device.permission.ACCESS_OSDID"/>
+    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-permission android:name="obric.permission.FEEDBACK_PROVIDER"/>
+    <uses-permission android:name="obric.permission.FEEDBACK_PROVIDER_SDK"/>
+    <uses-permission android:name="obric.permission.PERSONAL_CONTEXT_DATA_CHANGED"/>
+    <uses-permission android:name="obric.permission.READ_OBRIC_CALL_LOG"/>
+    <uses-permission android:name="com.bytedance.securityserver.ACCESS_UDID"/>
+    <uses-permission android:name="com.bytedance.securityserver.ACCESS_OAID"/>
+    <uses-permission android:name="com.bytedance.securityserver.READ_SECURITY_SETTINGS"/>
+    <application
+        android:theme="@style/Theme.Settings"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.obric.memorydata.plugin_impl.PluginApplication"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:networkSecurityConfig="@xml/network_security_config_release"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data
+            android:name="SS_CHANNEL"
+            android:value="update"/>
+        <activity
+            android:name="com.obric.memorydata.ui.settingpage.view.SettingPageActivity"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.plugin.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.fileprovider"
+            android:grantUriPermissions="true"
+            android:directBootAware="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/shared_file_paths"/>
+        </provider>
+        <provider
+            android:name="com.obric.memorydata.provider.MemoryCommonProvider"
+            android:exported="false"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.provider.MemoryCommonProvider"/>
+        <service
+            android:name="com.obric.memorydata.debug.ReleaseAdbService"
+            android:permission="com.obric.memorydata.permission.COMMON"
+            android:exported="false"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.action.ReleaseAdbService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.lifelog.data.LifelogContentProvider"
+            android:exported="true"
+            android:process=":memorydata"
+            android:authorities="com.obric.lifelog.data.LifelogContentProvider"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.memorydata.datatransport.activity.DataExportActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.datatransport.EXPORT_DATA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.obric.memorydata.datatransport.transfer.buildmemory.MemoryBuildDataPackageActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.obric.memorydata.sdk.server.MemoryDataService"
+            android:exported="false"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.sdk"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:label="@string/memory_settings_title"
+            android:name="com.obric.memorydata.memory.ui.settings.MemorySettingsActivity"
+            android:permission="com.obric.memorydata.permission.COMMON"
+            android:exported="true"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obric.memorydata.ACTION_MEMORY_SETTINGS"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.settings.SmartMemorySettingsActivity"
+            android:permission="com.obric.memorydata.permission.COMMON"
+            android:exported="true"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obric.memorydata.action.SMART_MEMORY_SETTINGS"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.settings.ActiveMemorySettingsActivity"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.settings.contextawareness.ContextAwarenessSettingsActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.settings.contextawareness.SystemAppDataSettingsActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Transparent.NoActionBar"
+            android:name="com.obric.memorydata.memory.ui.settings.AiVolumeShortcutGuideDialogActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/Theme.Transparent.NoActionBar"
+            android:name="com.obric.memorydata.memory.ui.share.ActiveMemoryConfirmDialogActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory.Mask"
+            android:name="com.obric.memorydata.memory.ui.list.WearableMemoryListActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity=""
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory.Mask"
+            android:label="@string/memory_settings_title"
+            android:name="com.obric.memorydata.memory.ui.list.MemoryListActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:label="@string/memory_task"
+            android:name="com.obric.memorydata.memory.ui.automemory.AutoMemoryActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.auto"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.automemory.create.CreateMemoryTaskActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.auto"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.automemory.memorylist.AutoMemoryCollectionListActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.auto"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.automemory.AutoMemoryDetailActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.auto"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.automemory.settings.MemoryTaskSettingsActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.automemory.settings.MemoryInfoSectionEditActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.automemory.settings.MemoryCustomRuleEditActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.list.MemorySearchActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.detail.MemoryDetailActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.detail.SourceTextActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.detail.ChatActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.address.setting.AddressSettingActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.address.edit.AddressEditActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.ImageViewer"
+            android:name="com.obric.memorydata.memory.ui.detail.ImageViewerActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|uiMode|orientation"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.lab.AILabActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:screenOrientation="portrait"/>
+        <receiver
+            android:name="com.obric.memorydata.memory.island.gr.IslandActionReceiver"
+            android:exported="false"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.ACTION_ISLAND_CARD_CLICK"/>
+                <action android:name="com.obric.memorydata.ACTION_CALENDAR_CANCEL"/>
+                <action android:name="com.obric.memorydata.ACTION_CALENDAR_CONFIRM"/>
+                <action android:name="com.obric.memorydata.ACTION_OPEN_CALENDAR"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.obric.memorydata.memory.permission.PermissionActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory.Scanner"
+            android:name="com.xiphias.browser.scanner.ScannerActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:icon="0x7f030009"
+            android:name="com.obric.memorydata.memory.ui.migration.DataMigrationActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.migration.DataTransferActivity"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.memory.ui.migration.DataImportSuccessActivity"
+            android:process=":importsuccess"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Transparent.NoActionBar"
+            android:label="@string/memory_settings_title"
+            android:name="com.obric.memorydata.memory.ui.share.MemoryShareActivity"
+            android:exported="true"
+            android:process=":memorydata"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:noHistory="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.obric.memorydata.memory.provider.MemoryProvider"
+            android:exported="true"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.memory.provider"/>
+        <receiver
+            android:name="com.obric.memorydata.memory.lab.AILabPackageInstallReceiver"
+            android:exported="true"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.obric.memorydata.memory.provider.AILabProvider"
+            android:exported="true"
+            android:process=":memorydata"
+            android:multiprocess="false"
+            android:authorities="com.obric.memorydata.memory.ailabprovider"/>
+        <service
+            android:name="com.obric.memorydata.personalcontext.InAppSearchService"
+            android:exported="true"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.action.SEARCH_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.obric.memorydata.personalcontext.GlobalSearchService"
+            android:permission="com.obric.memorydata.permission.COMMON"
+            android:exported="true"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.action.GLOBAL_SEARCH_SERVICE"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.memorydata.personalcontext.EntityProvider"
+            android:exported="true"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.personalcontext.EntityProvider"/>
+        <receiver
+            android:name="com.obric.memorydata.DoubaoEnableStateReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.obric.aiproactive.impl.spell.SpellProactiveProvider"
+            android:exported="true"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.assistant.proactive"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.recommend.ui.list.RecommendMemoryListActivity"
+            android:exported="true"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.recommend.settings.ScreenObservationSettingsActivity"
+            android:exported="true"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obric.memorydata.action.SCREEN_OBSERVATION_MEMORY_SETTINGS"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.recommend.guide.ScreenObservationGuideFeatureActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.recommend.guide.ScreenObservationGuidePrivacyActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.recommend.guide.ScreenObservationGuideAppActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Transparent.NoActionBar"
+            android:name="com.obric.memorydata.recommend.ui.ScreenObservationDisableDialogActivity"
+            android:exported="true"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:configChanges="screenSize|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obric.memorydata.action.DISABLE_SCREEN_OBSERVATION"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.recommend.ui.rule.BlockMemoryContentActivity"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.recommend.ui.rule.RuleMemoryActivity"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.Settings.Memory"
+            android:name="com.obric.memorydata.recommend.ui.rule.RuleMemorySettingActivity"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.obric.memorydata.awareness.ContextAwarenessService"
+            android:exported="true"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.awareness.CONTEXT_AWARENESS_SERVICE"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.memorydata.awareness.persistent.MemoryDataAwarenessProvider"
+            android:exported="true"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.awareness.provider"/>
+        <receiver
+            android:name="com.obric.aiproactive.ui.ipc.ProactiveUiSyncReceiver"
+            android:exported="true"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.proactive.action.RECOMMENDATION_ADOPTED"/>
+                <action android:name="com.obric.proactive.action.RECOMMENDATION_DISMISSED"/>
+                <action android:name="com.obric.proactive.action.FEEDBACK_REPORT_RESULT"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:label="@string/app_name"
+            android:name="com.obric.aiproactive.ui.entry.ProactiveV2Activity"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity-alias
+            android:name="com.obric.aiproactive.ui.ProactiveLockscreenStartupActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":memorydata"
+            android:targetActivity="com.obric.aiproactive.ui.entry.ProactiveV2Activity"/>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:label="@string/app_name"
+            android:name="com.obric.aiproactive.ui.entry.ProactiveNowActivity"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity-alias
+            android:name="com.obric.aiproactive.ui.ProactiveStartupActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":memorydata"
+            android:targetActivity="com.obric.aiproactive.ui.entry.ProactiveNowActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:label="主动历史"
+            android:name="com.obric.aiproactive.ui.entry.ProactiveHistoryActivity"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:label="@string/ai_proactive_sensing_events_title"
+            android:name="com.obric.aiproactive.ui.entry.SensingEventsActivity"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:label="@string/ai_proactive_agent_activity_title"
+            android:name="com.obric.aiproactive.ui.progress.ProactiveAgentRunActivity"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:name="com.obric.aiproactive.ui.detail.RecommendationDetailActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:name="com.obric.aiproactive.ui.artifact.DocumentPreviewActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:name="com.obric.aiproactive.ui.preference.AiRuleActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":memorydata"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.ProactiveUi"
+            android:name="com.obric.aiproactive.ui.preference.GuidedPreferenceInterviewActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:screenOrientation="portrait"/>
+        <receiver
+            android:name="com.obric.memorydata.task.scheduler.TaskAlarmReceiver"
+            android:exported="false"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.task.action.TASK_ALARM"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.Transparent.NoActionBar"
+            android:label="@string/memory_app_title"
+            android:name="com.obric.memorydata.ui.impl.AuthProxyActivity"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.auth"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.memorydata.ui.custom.DeviceAdaptiveWebViewActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:taskAffinity="com.obric.memorydata.memory.settings"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <service
+            android:name="com.obric.memorydata.screencapture.service.ScreenCaptureService"
+            android:permission="com.obric.memorydata.permission.COMMON"
+            android:exported="true"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.action.SCREEN_CAPTURE_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.obric.memorydata.utils.notification.UniversalNotificationUtils.NotificationReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.memorydata.util.NOTIFICATION_CLICK"/>
+                <action android:name="com.obric.memorydata.util.NOTIFICATION_DELETE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="obric.intent.sdk.version"
+            android:value="2"/>
+        <service
+            android:name="com.obric.capabilitykit.CapabilityHandleService"
+            android:permission="com.obric.aiagent.executionengine.DISPATCH_INTENTS"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.capabilitykit.CapabilityHandleService"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.capabilitykit.entity.EntityContentProvider"
+            android:exported="true"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.plugin.EntityContentProvider"/>
+        <uses-library
+            android:name="com.qti.location.sdk"
+            android:required="false"/>
+        <service
+            android:name="com.obric.cae.location.StarLocationService"
+            android:permission="com.obric.cae.permission.STAR_LOCATION_ACCESS"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":memorydata"
+            android:singleUser="true">
+            <intent-filter>
+                <action android:name="com.obric.cae.libs.location.IStarLocationService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.obric.cae.userAware.UserAwareService"
+            android:permission="com.obric.cae.permission.USER_AWARE_ACCESS"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":memorydata">
+            <intent-filter>
+                <action android:name="com.obric.cae.libs.useraware.ICaeUserAware"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.obric.cae.location.geofence.vendor.VendorGeoCallbackBroadcast"
+            android:permission="com.obric.cae.permission.ACCESS_STAR_GEOFENCE_CALLBACK"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":memorydata"/>
+        <meta-data
+            android:name="entity_sdk_version"
+            android:value="1"/>
+        <activity
+            android:name="com.obric.matrix.platform.sdk.ones.safecushion.ui.CushionActivity"
+            android:process=":safecushion"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="com.obric.matrix.platform.sdk.ones.ws.WsMsgProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":memorydata"
+            android:authorities="com.obric.matrix.platform.sdk.ones.provider.com.obric.memorydata.plugin"/>
+        <activity
+            android:theme="@style/AppTheme.Transparent"
+            android:name="com.obric.oui.window.permission.PrivacyStatementActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.oui.window.permission.WebViewActivity"
+            android:exported="false"
+            android:process=":memorydata"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <provider
+            android:name="com.bytedance.apm.battery.dao.MonitorContentProvider"
+            android:exported="false"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.plugin.apm"/>
+        <activity
+            android:name="com.ss.android.deviceregister.AActivity"
+            android:process=":memorydata"/>
+        <receiver
+            android:name="com.bytedance.applog.collector.Collector"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":memorydata"/>
+        <activity
+            android:name="com.bytedance.bdinstall.migrate.MigrateDetectorActivity"
+            android:process=":memorydata"/>
+        <provider
+            android:name="com.bytedance.bdinstall.BDInstallProvider"
+            android:exported="false"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.plugin.bdinstall.provider"/>
+        <service
+            android:name="com.bytedance.common.wschannel.server.WsChannelService"
+            android:exported="false"
+            android:process=":push"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.bytedance.common.wschannel.client.WsClientService"
+            android:exported="false"
+            android:process=":memorydata"
+            android:stopWithTask="true"/>
+        <provider
+            android:name="com.bytedance.common.wschannel.WsChannelMultiProcessSharedProvider"
+            android:exported="false"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.plugin.WsChannelMultiProcessSharedProvider"/>
+        <provider
+            android:name="com.ss.android.token.AuthTokenMultiProcessSharedProvider"
+            android:exported="false"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.plugin.auth_token.SHARE_PROVIDER_AUTHORITY"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:process=":memorydata"
+            android:directBootAware="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService"
+            android:exported="false"
+            android:process=":downloader"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService"
+            android:exported="false"
+            android:process=":memorydata"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.DownloadService"
+            android:exported="false"
+            android:process=":memorydata"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService"
+            android:exported="false"
+            android:process=":memorydata"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService"
+            android:exported="false"
+            android:process=":memorydata"
+            android:stopWithTask="true"/>
+        <provider
+            android:name="com.obric.feedback.sdk.FeedbackSdkProvider"
+            android:permission="obric.permission.FEEDBACK_PROVIDER_SDK"
+            android:exported="true"
+            android:process=":memorydata"
+            android:authorities="com.obric.memorydata.plugin.FeedbackSdkProvider"/>
+    </application>
+</manifest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OTextView
+        android:textSize="14sp"
+        android:textColor="@color/oui_basic_text_3"
+        android:id="@+id/collection_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:minHeight="64dp"
+        android:lineSpacingMultiplier="1.6"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        style="@style/Body_1_Regular"/>
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:id="@+id/collection_skill_section_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="12dp"
+        app:sectionTitle_titleText="@string/obric_skill_collection_featured_title"
+        style="@style/OSectionTitleBar.M"/>
+</com.obric.oui.layout.OUILinearLayout>

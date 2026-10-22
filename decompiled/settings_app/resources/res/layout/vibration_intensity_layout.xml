@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/vibration_intensity_tab_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.obric.oui.tab.OTabLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/vibration_intensity_tab_layout"
+            android:layout_height="@dimen/dimen_32"
+            android:minWidth="175dp"
+            app:tabGravity="fill"
+            style="@style/OTabTextV2.Background.Gray.Inline">
+            <com.obric.oui.tab.OTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vibration_intensity_low"/>
+            <com.obric.oui.tab.OTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vibration_intensity_mid"/>
+            <com.obric.oui.tab.OTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vibration_intensity_high"/>
+        </com.obric.oui.tab.OTabLayout>
+    </LinearLayout>
+</RelativeLayout>

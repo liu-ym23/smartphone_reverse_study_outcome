@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/type_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+    <com.bytedanceos.security.widget.SecurityItemText2
+        android:id="@+id/battery_status_low"
+        app:oui_list_item_content_image="@drawable/oic_low_battery"
+        app:oui_list_item_subtitle="@string/power_summary"
+        app:oui_list_item_title="@string/power_usage_save_mode"
+        style="@style/SettingItemSingleStyle2"/>
+</LinearLayout>

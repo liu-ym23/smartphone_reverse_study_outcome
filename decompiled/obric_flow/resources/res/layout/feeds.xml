@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.flow.cardlistpage.ui.CardFeedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_layout"
+    android:background="@color/Transparent"
+    android:fitsSystemWindows="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>

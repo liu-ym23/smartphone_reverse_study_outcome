@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:paddingTop="13dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:importantForAccessibility="no">
+    <obric.widget.ListContentItemSwitch
+        android:id="@+id/optimzation_header_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smtTitle="@string/power_usage_app_battery_use_optimization_title"
+        style="@style/ListContentItemStyle.Single"/>
+    <TextView
+        android:text="@string/power_usage_control_app_background_tips"
+        style="@style/SettingItemTipsStyle"/>
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:id="@+id/dynamic_resolution_game_list_title"
+        android:layout_marginHorizontal="16dp"
+        app:sectionTitle_showCustomEnd="false"
+        app:sectionTitle_titleText="@string/optimization_app_tip"
+        style="@style/OSectionTitleBar.S"/>
+</LinearLayout>

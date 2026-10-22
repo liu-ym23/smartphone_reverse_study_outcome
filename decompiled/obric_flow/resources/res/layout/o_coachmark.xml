@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.obric.oui.layout.OUIFrameLayout
+        android:layout_gravity="top|center_horizontal"
+        android:id="@+id/coachmark_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:oui_shadow_style="@style/OUIShadow.3">
+        <include layout="@layout/o_coachmark_view"/>
+    </com.obric.oui.layout.OUIFrameLayout>
+    <ImageView
+        android:layout_gravity="top|center_horizontal"
+        android:id="@+id/iv_coachmark_arrow"
+        android:layout_width="20dp"
+        android:layout_height="8dp"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"/>
+</merge>

@@ -1,0 +1,980 @@
+package androidx.appcompat.widget;
+
+import android.R;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.database.DataSetObserver;
+import android.graphics.PorterDuff;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.view.ContextThemeWrapper;
+import androidx.core.view.ViewCompat;
+import com.obric.aiagent.apm.impl.BuildConfig;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import me.ele.lancet.base.annotations.Skip;
+
+/* JADX INFO: loaded from: classes.dex */
+public class AppCompatSpinner extends Spinner implements androidx.core.view.y {
+    private static final int[] ATTRS_ANDROID_SPINNERMODE = null;
+    private static final int MAX_ITEMS_MEASURED = 15;
+    private static final int MODE_DIALOG = 0;
+    private static final int MODE_DROPDOWN = 1;
+    private static final int MODE_THEME = -1;
+    private static final String TAG = "AppCompatSpinner";
+    private final androidx.appcompat.widget.a mBackgroundTintHelper;
+    int mDropDownWidth;
+    private ForwardingListener mForwardingListener;
+    private e mPopup;
+    private final Context mPopupContext;
+    private final boolean mPopupSet;
+    private SpinnerAdapter mTempAdapter;
+    final Rect mTempRect;
+
+    class DialogPopup implements DialogInterface.OnClickListener, e {
+        private ListAdapter mListAdapter;
+        AlertDialog mPopup;
+        private CharSequence mPrompt;
+        final /* synthetic */ AppCompatSpinner this$0;
+
+        public static /* synthetic */ int access$000(String r0, String r1) {
+            return Log.e(r0, r1);
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public Drawable getBackground() {
+            return null;
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public int getHorizontalOffset() {
+            return 0;
+        }
+
+        public int getHorizontalOriginalOffset() {
+            return 0;
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public int getVerticalOffset() {
+            return 0;
+        }
+
+        DialogPopup(AppCompatSpinner r1) {
+            this.this$0 = r1;
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void dismiss() {
+            AlertDialog r0 = this.mPopup;
+            if (r0 == null) goto L6;
+            r0.dismiss();
+            this.mPopup = null;
+            return;
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public boolean isShowing() {
+            AlertDialog r0 = this.mPopup;
+            if (r0 != null) goto L7;
+            return false;
+        L7:
+            return r0.isShowing();
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void setAdapter(ListAdapter r3) {
+            this.mListAdapter = (ListAdapter) ZeusTransformUtils.wrapperContextForParams(r3, ListAdapter.class, "com.obric.aiagent.plugin");
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void setPromptText(CharSequence r3) {
+            this.mPrompt = (CharSequence) ZeusTransformUtils.wrapperContextForParams(r3, CharSequence.class, "com.obric.aiagent.plugin");
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public CharSequence getHintText() {
+            return this.mPrompt;
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void show(int r5, int r6) {
+            if (this.mListAdapter != null) goto L5;
+            return;
+        L5:
+            AlertDialog.a r0 = new AlertDialog.a((Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(this.this$0.getPopupContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin"));
+            CharSequence r1 = this.mPrompt;
+            if (r1 == null) goto L8;
+            r0.a(r1);
+        L8:
+            AlertDialog r2 = r0.a(this.mListAdapter, this.this$0.getSelectedItemPosition(), this).a();
+            this.mPopup = r2;
+            ListView r3 = r2.getListView();
+            if (Build.VERSION.SDK_INT < 17) goto L11;
+            b.b(r3, r5);
+            b.a(r3, r6);
+        L11:
+            this.mPopup.show();
+        }
+
+        @Override // android.content.DialogInterface.OnClickListener
+        public void onClick(DialogInterface r4, int r5) {
+            DialogInterface r6 = (DialogInterface) ZeusTransformUtils.wrapperContextForParams(r4, DialogInterface.class, "com.obric.aiagent.plugin");
+            this.this$0.setSelection(r5);
+            if (this.this$0.getOnItemClickListener() == null) goto L5;
+            this.this$0.performItemClick(null, r5, this.mListAdapter.getItemId(r5));
+        L5:
+            dismiss();
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void setBackgroundDrawable(Drawable r1) {
+            INVOKESTATIC_androidx_appcompat_widget_AppCompatSpinner$DialogPopup_com_obric_aiagent_apm_impl_AiAgentReleaseLogLancet_e(AppCompatSpinner.TAG, "Cannot set popup background for MODE_DIALOG, ignoring");
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void setVerticalOffset(int r1) {
+            INVOKESTATIC_androidx_appcompat_widget_AppCompatSpinner$DialogPopup_com_obric_aiagent_apm_impl_AiAgentReleaseLogLancet_e(AppCompatSpinner.TAG, "Cannot set vertical offset for MODE_DIALOG, ignoring");
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void setHorizontalOffset(int r1) {
+            INVOKESTATIC_androidx_appcompat_widget_AppCompatSpinner$DialogPopup_com_obric_aiagent_apm_impl_AiAgentReleaseLogLancet_e(AppCompatSpinner.TAG, "Cannot set horizontal offset for MODE_DIALOG, ignoring");
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void setHorizontalOriginalOffset(int r1) {
+            INVOKESTATIC_androidx_appcompat_widget_AppCompatSpinner$DialogPopup_com_obric_aiagent_apm_impl_AiAgentReleaseLogLancet_e(AppCompatSpinner.TAG, "Cannot set horizontal (original) offset for MODE_DIALOG, ignoring");
+        }
+
+        @Skip({BuildConfig.LIBRARY_PACKAGE_NAME})
+        public static int INVOKESTATIC_androidx_appcompat_widget_AppCompatSpinner$DialogPopup_com_obric_aiagent_apm_impl_AiAgentReleaseLogLancet_e(String r0, String r1) {
+            return Log.e(r0, r1);
+        }
+    }
+
+    private static class DropDownAdapter implements ListAdapter, SpinnerAdapter {
+        private SpinnerAdapter mAdapter;
+        private ListAdapter mListAdapter;
+
+        @Override // android.widget.Adapter
+        public int getItemViewType(int r1) {
+            return 0;
+        }
+
+        @Override // android.widget.Adapter
+        public int getViewTypeCount() {
+            return 1;
+        }
+
+        public DropDownAdapter(SpinnerAdapter r3, Resources.Theme r4) {
+            SpinnerAdapter r5 = (SpinnerAdapter) ZeusTransformUtils.wrapperContextForParams(r3, SpinnerAdapter.class, "com.obric.aiagent.plugin");
+            this.mAdapter = r5;
+            if (ZeusTransformUtils.instanceOf(r5, ListAdapter.class) == false) goto L5;
+            this.mListAdapter = (ListAdapter) ZeusTransformUtils.preCheckCast(r5, ListAdapter.class, "com.obric.aiagent.plugin");
+        L5:
+            if (r4 != null) goto L7;
+            return;
+        L7:
+            if (Build.VERSION.SDK_INT < 23) goto L12;
+            if (ZeusTransformUtils.instanceOf(r5, android.widget.ThemedSpinnerAdapter.class) == false) goto L12;
+            c.a((android.widget.ThemedSpinnerAdapter) ZeusTransformUtils.preCheckCast(r5, android.widget.ThemedSpinnerAdapter.class, "com.obric.aiagent.plugin"), r4);
+            return;
+        L12:
+            if (ZeusTransformUtils.instanceOf(r5, ThemedSpinnerAdapter.class) == false) goto L19;
+            ThemedSpinnerAdapter r2 = (ThemedSpinnerAdapter) ZeusTransformUtils.preCheckCast(r5, ThemedSpinnerAdapter.class, "com.obric.aiagent.plugin");
+            if (r2.getDropDownViewTheme() != null) goto L20;
+            r2.setDropDownViewTheme(r4);
+            return;
+        L20:
+            return;
+        }
+
+        @Override // android.widget.Adapter
+        public int getCount() {
+            SpinnerAdapter r0 = this.mAdapter;
+            if (r0 != null) goto L6;
+            return 0;
+        L6:
+            return r0.getCount();
+        }
+
+        @Override // android.widget.Adapter
+        public Object getItem(int r1) {
+            SpinnerAdapter r0 = this.mAdapter;
+            if (r0 != null) goto L6;
+            return null;
+        L6:
+            return r0.getItem(r1);
+        }
+
+        @Override // android.widget.Adapter
+        public long getItemId(int r1) {
+            SpinnerAdapter r0 = this.mAdapter;
+            if (r0 != null) goto L6;
+            return -1;
+        L6:
+            return r0.getItemId(r1);
+        }
+
+        @Override // android.widget.Adapter
+        public View getView(int r1, View r2, ViewGroup r3) {
+            return getDropDownView(r1, r2, r3);
+        }
+
+        @Override // android.widget.SpinnerAdapter
+        public View getDropDownView(int r1, View r2, ViewGroup r3) {
+            SpinnerAdapter r0 = this.mAdapter;
+            if (r0 != null) goto L6;
+            return null;
+        L6:
+            return r0.getDropDownView(r1, r2, r3);
+        }
+
+        @Override // android.widget.Adapter
+        public boolean hasStableIds() {
+            SpinnerAdapter r0 = this.mAdapter;
+            if (r0 != null) goto L5;
+        L7:
+            return false;
+        L5:
+            if (r0.hasStableIds() == false) goto L7;
+            return true;
+        }
+
+        @Override // android.widget.Adapter
+        public void registerDataSetObserver(DataSetObserver r1) {
+            SpinnerAdapter r0 = this.mAdapter;
+            if (r0 == null) goto L6;
+            r0.registerDataSetObserver(r1);
+            return;
+        }
+
+        @Override // android.widget.Adapter
+        public void unregisterDataSetObserver(DataSetObserver r1) {
+            SpinnerAdapter r0 = this.mAdapter;
+            if (r0 == null) goto L6;
+            r0.unregisterDataSetObserver(r1);
+            return;
+        }
+
+        @Override // android.widget.ListAdapter
+        public boolean areAllItemsEnabled() {
+            ListAdapter r0 = this.mListAdapter;
+            if (r0 != null) goto L5;
+            return true;
+        L5:
+            return r0.areAllItemsEnabled();
+        }
+
+        @Override // android.widget.ListAdapter
+        public boolean isEnabled(int r1) {
+            ListAdapter r0 = this.mListAdapter;
+            if (r0 != null) goto L5;
+            return true;
+        L5:
+            return r0.isEnabled(r1);
+        }
+
+        @Override // android.widget.Adapter
+        public boolean isEmpty() {
+            if (getCount() != 0) goto L5;
+            return true;
+        L5:
+            return false;
+        }
+    }
+
+    static class SavedState extends View.BaseSavedState {
+        public static final Parcelable.Creator<SavedState> CREATOR = null;
+        boolean mShowDropdown;
+
+        SavedState(Parcelable r3) {
+            super((Parcelable) ZeusTransformUtils.wrapperContextForParams(r3, Parcelable.class, "com.obric.aiagent.plugin"));
+        }
+
+        SavedState(Parcel r1) {
+            super(r1);
+            if (r1.readByte() == 0) goto L5;
+            boolean r2 = true;
+        L6:
+            this.mShowDropdown = r2;
+            return;
+        L5:
+            r2 = false;
+            goto L6
+        }
+
+        @Override // android.view.View.BaseSavedState, android.view.AbsSavedState, android.os.Parcelable
+        public void writeToParcel(Parcel r1, int r2) {
+            super.writeToParcel(r1, r2);
+            r1.writeByte(this.mShowDropdown ? 1 : 0);
+        }
+
+        static {
+            CREATOR = new AnonymousClass1();
+        }
+    }
+
+    private static final class a {
+        static void a(ViewTreeObserver r2, ViewTreeObserver.OnGlobalLayoutListener r3) {
+            r2.removeOnGlobalLayoutListener((ViewTreeObserver.OnGlobalLayoutListener) ZeusTransformUtils.wrapperContextForParams(r3, ViewTreeObserver.OnGlobalLayoutListener.class, "com.obric.aiagent.plugin"));
+        }
+    }
+
+    private static final class b {
+        static int a(View r0) {
+            return r0.getTextAlignment();
+        }
+
+        static void a(View r0, int r1) {
+            r0.setTextAlignment(r1);
+        }
+
+        static int b(View r0) {
+            return r0.getTextDirection();
+        }
+
+        static void b(View r0, int r1) {
+            r0.setTextDirection(r1);
+        }
+    }
+
+    private static final class c {
+        static void a(android.widget.ThemedSpinnerAdapter r2, Resources.Theme r3) {
+            android.widget.ThemedSpinnerAdapter r4 = (android.widget.ThemedSpinnerAdapter) ZeusTransformUtils.wrapperContextForParams(r2, android.widget.ThemedSpinnerAdapter.class, "com.obric.aiagent.plugin");
+            if (androidx.core.util.d.a(r4.getDropDownViewTheme(), r3) == true) goto L6;
+            r4.setDropDownViewTheme(r3);
+            return;
+        }
+    }
+
+    class d extends ListPopupWindow implements e {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        ListAdapter f355a;
+
+        /* JADX INFO: renamed from: b, reason: collision with root package name */
+        final /* synthetic */ AppCompatSpinner f356b;
+        private CharSequence h;
+        private final Rect i;
+        private int j;
+
+        static /* synthetic */ void a(d r0) {
+            super.show();
+        }
+
+        public d(final AppCompatSpinner r3, Context r4, AttributeSet r5, int r6) {
+            Context r7 = (Context) ZeusTransformUtils.wrapperContextForParams(r4, Context.class, "com.obric.aiagent.plugin");
+            AttributeSet r8 = (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r5, AttributeSet.class, "com.obric.aiagent.plugin");
+            this.f356b = r3;
+            super(r7, r8, r6);
+            this.i = new Rect();
+            b(r3);
+            a(true);
+            a(0);
+            a(new AppCompatSpinner$DropdownPopup$1(this, r3));
+        }
+
+        @Override // androidx.appcompat.widget.ListPopupWindow, androidx.appcompat.widget.AppCompatSpinner.e
+        public void setAdapter(ListAdapter r3) {
+            ListAdapter r4 = (ListAdapter) ZeusTransformUtils.wrapperContextForParams(r3, ListAdapter.class, "com.obric.aiagent.plugin");
+            super.setAdapter(r4);
+            this.f355a = r4;
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public CharSequence getHintText() {
+            return this.h;
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void setPromptText(CharSequence r3) {
+            this.h = (CharSequence) ZeusTransformUtils.wrapperContextForParams(r3, CharSequence.class, "com.obric.aiagent.plugin");
+        }
+
+        void a() {
+            Drawable r0 = getBackground();
+            int r1 = 0;
+            if (r0 == null) goto L9;
+            r0.getPadding(this.f356b.mTempRect);
+            if (ac.a(this.f356b) == false) goto L7;
+            int r2 = this.f356b.mTempRect.right;
+        L8:
+            r1 = r2;
+        L10:
+            int r3 = this.f356b.getPaddingLeft();
+            int r4 = this.f356b.getPaddingRight();
+            int r5 = this.f356b.getWidth();
+            if (this.f356b.mDropDownWidth != (-2)) goto L17;
+            int r6 = this.f356b.compatMeasureContentWidth((SpinnerAdapter) ZeusTransformUtils.preCheckCast(this.f355a, SpinnerAdapter.class, "com.obric.aiagent.plugin"), getBackground());
+            int r7 = (ZeusTransformUtils.getResources((Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(this.f356b.getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin"), "com.obric.aiagent.plugin").getDisplayMetrics().widthPixels - this.f356b.mTempRect.left) - this.f356b.mTempRect.right;
+            if (r6 <= r7) goto L15;
+            r6 = r7;
+        L15:
+            e(Math.max(r6, (r5 - r3) - r4));
+        L21:
+            if (ac.a(this.f356b) == false) goto L23;
+            int r8 = r1 + (((r5 - r4) - e()) - b());
+        L24:
+            setHorizontalOffset(r8);
+            return;
+        L23:
+            r8 = r1 + (r3 + b());
+            goto L24
+        L17:
+            if (this.f356b.mDropDownWidth != (-1)) goto L19;
+            e((r5 - r3) - r4);
+            goto L21
+        L19:
+            e(this.f356b.mDropDownWidth);
+            goto L21
+        L7:
+            r2 = -this.f356b.mTempRect.left;
+            goto L8
+        L9:
+            Rect r9 = this.f356b.mTempRect;
+            this.f356b.mTempRect.right = 0;
+            r9.left = 0;
+            goto L10
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void show(int r5, int r6) {
+            boolean r0 = isShowing();
+            a();
+            f(2);
+            super.show();
+            ListView r1 = getListView();
+            r1.setChoiceMode(1);
+            if (Build.VERSION.SDK_INT < 17) goto L5;
+            b.b(r1, r5);
+            b.a(r1, r6);
+        L5:
+            g(this.f356b.getSelectedItemPosition());
+            if (r0 == false) goto L8;
+            return;
+        L8:
+            ViewTreeObserver r7 = this.f356b.getViewTreeObserver();
+            if (r7 == null) goto L12;
+            final ViewTreeObserver.OnGlobalLayoutListener r8 = new AppCompatSpinner$DropdownPopup$2(this);
+            r7.addOnGlobalLayoutListener(r8);
+            a(new AppCompatSpinner$DropdownPopup$3(this, r8));
+            return;
+        }
+
+        boolean a(View r2) {
+            if (ViewCompat.I(r2) == true) goto L5;
+        L7:
+            return false;
+        L5:
+            if (r2.getGlobalVisibleRect(this.i) == false) goto L7;
+            return true;
+        }
+
+        @Override // androidx.appcompat.widget.AppCompatSpinner.e
+        public void setHorizontalOriginalOffset(int r1) {
+            this.j = r1;
+        }
+
+        public int b() {
+            return this.j;
+        }
+    }
+
+    interface e {
+        void dismiss();
+
+        Drawable getBackground();
+
+        CharSequence getHintText();
+
+        int getHorizontalOffset();
+
+        int getVerticalOffset();
+
+        boolean isShowing();
+
+        void setAdapter(ListAdapter r1);
+
+        void setBackgroundDrawable(Drawable r1);
+
+        void setHorizontalOffset(int r1);
+
+        void setHorizontalOriginalOffset(int r1);
+
+        void setPromptText(CharSequence r1);
+
+        void setVerticalOffset(int r1);
+
+        void show(int r1, int r2);
+    }
+
+    public static /* synthetic */ int access$000(String r0, String r1, Throwable r2) {
+        return Log.i(r0, r1, r2);
+    }
+
+    @Override // android.widget.AdapterView
+    public /* synthetic */ void setAdapter(Adapter r3) {
+        setAdapter((SpinnerAdapter) ZeusTransformUtils.preCheckCast((Adapter) ZeusTransformUtils.wrapperContextForParams(r3, Adapter.class, "com.obric.aiagent.plugin"), SpinnerAdapter.class, "com.obric.aiagent.plugin"));
+    }
+
+    static {
+        ATTRS_ANDROID_SPINNERMODE = new int[]{R.attr.spinnerMode};
+    }
+
+    public AppCompatSpinner(Context r3) {
+        this((Context) ZeusTransformUtils.wrapperContextForParams(r3, Context.class, "com.obric.aiagent.plugin"), null);
+    }
+
+    public AppCompatSpinner(Context r4, int r5) {
+        this((Context) ZeusTransformUtils.wrapperContextForParams(r4, Context.class, "com.obric.aiagent.plugin"), null, ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.attr.spinnerStyle, "attr", "spinnerStyle"), r5);
+    }
+
+    public AppCompatSpinner(Context r4, AttributeSet r5) {
+        this((Context) ZeusTransformUtils.wrapperContextForParams(r4, Context.class, "com.obric.aiagent.plugin"), (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r5, AttributeSet.class, "com.obric.aiagent.plugin"), ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.attr.spinnerStyle, "attr", "spinnerStyle"));
+    }
+
+    public AppCompatSpinner(Context r3, AttributeSet r4, int r5) {
+        this((Context) ZeusTransformUtils.wrapperContextForParams(r3, Context.class, "com.obric.aiagent.plugin"), (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r4, AttributeSet.class, "com.obric.aiagent.plugin"), r5, -1);
+    }
+
+    public AppCompatSpinner(Context r9, AttributeSet r10, int r11, int r12) {
+        this((Context) ZeusTransformUtils.wrapperContextForParams(r9, Context.class, "com.obric.aiagent.plugin"), (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r10, AttributeSet.class, "com.obric.aiagent.plugin"), r11, r12, null);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public AppCompatSpinner(Context r8, AttributeSet r9, int r10, int r11, Resources.Theme r12) {
+        Context r13 = (Context) ZeusTransformUtils.wrapperContextForParams(r8, Context.class, "com.obric.aiagent.plugin");
+        AttributeSet r14 = (AttributeSet) ZeusTransformUtils.wrapperContextForParams(r9, AttributeSet.class, "com.obric.aiagent.plugin");
+        super(r13, r14, r10);
+        this.mTempRect = new Rect();
+        w.a(this, (Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin"));
+        y r0 = y.a(r13, r14, com.obric.aiagent.plugin.R.styleable.Spinner, r10, 0);
+        this.mBackgroundTintHelper = new androidx.appcompat.widget.a(this);
+        if (r12 == null) goto L5;
+        this.mPopupContext = ZeusTransformUtils.wrapperContext(new ContextThemeWrapper(r13, r12), "com.obric.aiagent.plugin");
+    L9:
+        TypedArray r1 = 0;
+        if (r11 != (-1)) goto L32;
+        TypedArray r15 = r13.obtainStyledAttributes(r14, ATTRS_ANDROID_SPINNERMODE, r10, 0);     // Catch: Throwable -> L19 Exception -> L21
+    L17:
+        e = e;
+    L23:
+        INVOKESTATIC_androidx_appcompat_widget_AppCompatSpinner_com_obric_aiagent_apm_impl_AiAgentReleaseLogLancet_i(TAG, "Could not read android:spinnerMode", e);     // Catch: Throwable -> L26
+        if (r15 == null) goto L32;
+    L16:
+        r15.recycle();
+        goto L32
+    L13:
+        if (r15.hasValue(0) == false) goto L15;
+        r11 = r15.getInt(0, 0);     // Catch: Exception -> L17 Throwable -> L26
+    L15:
+        if (r15 == null) goto L32;
+    L21:
+        e = e;
+        r15 = null;
+    L19:
+        th = th;
+    L28:
+        if (r1 == 0) goto L30;
+        r1.recycle();
+    L30:
+        throw th;
+    L32:
+        if (r11 == 0) goto L36;
+        if (r11 != 1) goto L37;
+        final d r16 = new d(this, this.mPopupContext, r14, r10);
+        y r2 = y.a(this.mPopupContext, r14, com.obric.aiagent.plugin.R.styleable.Spinner, r10, 0);
+        this.mDropDownWidth = r2.f(ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.styleable.Spinner_android_dropDownWidth, "styleable", "Spinner_android_dropDownWidth"), -2);
+        r16.setBackgroundDrawable(r2.a(ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.styleable.Spinner_android_popupBackground, "styleable", "Spinner_android_popupBackground")));
+        r16.setPromptText(r0.d(ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.styleable.Spinner_android_prompt, "styleable", "Spinner_android_prompt")));
+        r2.b();
+        this.mPopup = r16;
+        this.mForwardingListener = new AnonymousClass1(this, this, r16);
+    L37:
+        CharSequence[] r17 = r0.f(ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.styleable.Spinner_android_entries, "styleable", "Spinner_android_entries"));
+        if (r17 == null) goto L40;
+        ArrayAdapter r18 = new ArrayAdapter(r13, R.layout.simple_spinner_item, r17);
+        r18.setDropDownViewResource(ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.layout.support_simple_spinner_dropdown_item, "layout", "support_simple_spinner_dropdown_item"));
+        setAdapter(r18);
+    L40:
+        r0.b();
+        this.mPopupSet = true;
+        SpinnerAdapter r19 = this.mTempAdapter;
+        if (r19 == null) goto L43;
+        setAdapter(r19);
+        this.mTempAdapter = null;
+    L43:
+        this.mBackgroundTintHelper.a(r14, r10);
+        return;
+    L36:
+        DialogPopup r110 = new DialogPopup(this);
+        this.mPopup = r110;
+        r110.setPromptText(r0.d(ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.styleable.Spinner_android_prompt, "styleable", "Spinner_android_prompt")));
+    L26:
+        th = th;
+        r1 = -1;
+        goto L28
+    L5:
+        int r111 = r0.g(ZeusTransformUtils.mapRes(com.obric.aiagent.plugin.R.styleable.Spinner_popupTheme, "styleable", "Spinner_popupTheme"), 0);
+        if (r111 == 0) goto L8;
+        this.mPopupContext = ZeusTransformUtils.wrapperContext(new ContextThemeWrapper(r13, r111), "com.obric.aiagent.plugin");
+        goto L9
+    L8:
+        this.mPopupContext = ZeusTransformUtils.wrapperContext(r13, "com.obric.aiagent.plugin");
+        goto L9
+    }
+
+    @Override // android.widget.Spinner
+    public Context getPopupContext() {
+        return this.mPopupContext;
+    }
+
+    @Override // android.widget.Spinner
+    public void setPopupBackgroundDrawable(Drawable r3) {
+        e r0 = this.mPopup;
+        if (r0 == null) goto L6;
+        r0.setBackgroundDrawable(r3);
+        return;
+    L6:
+        if (Build.VERSION.SDK_INT < 16) goto L10;
+        super.setPopupBackgroundDrawable(r3);
+        return;
+    }
+
+    @Override // android.widget.Spinner
+    public void setPopupBackgroundResource(int r4) {
+        setPopupBackgroundDrawable(androidx.appcompat.a.a.a.b((Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getPopupContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin"), r4));
+    }
+
+    @Override // android.widget.Spinner
+    public Drawable getPopupBackground() {
+        e r0 = this.mPopup;
+        if (r0 == null) goto L7;
+        return r0.getBackground();
+    L7:
+        if (Build.VERSION.SDK_INT >= 16) goto L9;
+        return null;
+    L9:
+        return super.getPopupBackground();
+    }
+
+    @Override // android.widget.Spinner
+    public void setDropDownVerticalOffset(int r3) {
+        e r0 = this.mPopup;
+        if (r0 == null) goto L6;
+        r0.setVerticalOffset(r3);
+        return;
+    L6:
+        if (Build.VERSION.SDK_INT < 16) goto L10;
+        super.setDropDownVerticalOffset(r3);
+        return;
+    }
+
+    @Override // android.widget.Spinner
+    public int getDropDownVerticalOffset() {
+        e r0 = this.mPopup;
+        if (r0 == null) goto L7;
+        return r0.getVerticalOffset();
+    L7:
+        if (Build.VERSION.SDK_INT >= 16) goto L9;
+        return 0;
+    L9:
+        return super.getDropDownVerticalOffset();
+    }
+
+    @Override // android.widget.Spinner
+    public void setDropDownHorizontalOffset(int r3) {
+        e r0 = this.mPopup;
+        if (r0 == null) goto L6;
+        r0.setHorizontalOriginalOffset(r3);
+        this.mPopup.setHorizontalOffset(r3);
+        return;
+    L6:
+        if (Build.VERSION.SDK_INT < 16) goto L10;
+        super.setDropDownHorizontalOffset(r3);
+        return;
+    }
+
+    @Override // android.widget.Spinner
+    public int getDropDownHorizontalOffset() {
+        e r0 = this.mPopup;
+        if (r0 == null) goto L7;
+        return r0.getHorizontalOffset();
+    L7:
+        if (Build.VERSION.SDK_INT >= 16) goto L9;
+        return 0;
+    L9:
+        return super.getDropDownHorizontalOffset();
+    }
+
+    @Override // android.widget.Spinner
+    public void setDropDownWidth(int r3) {
+        if (this.mPopup == null) goto L6;
+        this.mDropDownWidth = r3;
+        return;
+    L6:
+        if (Build.VERSION.SDK_INT < 16) goto L10;
+        super.setDropDownWidth(r3);
+        return;
+    }
+
+    @Override // android.widget.Spinner
+    public int getDropDownWidth() {
+        if (this.mPopup == null) goto L7;
+        return this.mDropDownWidth;
+    L7:
+        if (Build.VERSION.SDK_INT >= 16) goto L9;
+        return 0;
+    L9:
+        return super.getDropDownWidth();
+    }
+
+    @Override // android.widget.Spinner, android.widget.AbsSpinner
+    public void setAdapter(SpinnerAdapter r4) {
+        SpinnerAdapter r5 = (SpinnerAdapter) ZeusTransformUtils.wrapperContextForParams(r4, SpinnerAdapter.class, "com.obric.aiagent.plugin");
+        if (this.mPopupSet == true) goto L6;
+        this.mTempAdapter = r5;
+        return;
+    L6:
+        super.setAdapter(r5);
+        if (this.mPopup == null) goto L13;
+        Context r0 = this.mPopupContext;
+        if (r0 != null) goto L11;
+        r0 = (Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin");
+    L11:
+        this.mPopup.setAdapter(new DropDownAdapter(r5, r0.getTheme()));
+        return;
+    }
+
+    @Override // android.widget.Spinner, android.widget.AdapterView, android.view.ViewGroup, android.view.View
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        e r0 = this.mPopup;
+        if (r0 != null) goto L5;
+        return;
+    L5:
+        if (r0.isShowing() == false) goto L9;
+        this.mPopup.dismiss();
+        return;
+    }
+
+    @Override // android.widget.Spinner, android.view.View
+    public boolean onTouchEvent(MotionEvent r2) {
+        ForwardingListener r0 = this.mForwardingListener;
+        if (r0 == null) goto L9;
+        if (r0.onTouch(this, r2) == false) goto L9;
+        return true;
+    L9:
+        return super.onTouchEvent(r2);
+    }
+
+    @Override // android.widget.Spinner, android.widget.AbsSpinner, android.view.View
+    public void onMeasure(int r3, int r4) {
+        super.onMeasure(r3, r4);
+        if (this.mPopup != null) goto L5;
+        return;
+    L5:
+        if (View.MeasureSpec.getMode(r3) != Integer.MIN_VALUE) goto L9;
+        setMeasuredDimension(Math.min(Math.max(getMeasuredWidth(), compatMeasureContentWidth(getAdapter(), getBackground())), View.MeasureSpec.getSize(r3)), getMeasuredHeight());
+        return;
+    }
+
+    @Override // android.widget.Spinner, android.view.View
+    public boolean performClick() {
+        e r0 = this.mPopup;
+        if (r0 == null) goto L10;
+        if (r0.isShowing() == true) goto L11;
+        showPopup();
+        return true;
+    L11:
+        return true;
+    L10:
+        return super.performClick();
+    }
+
+    @Override // android.widget.Spinner
+    public void setPrompt(CharSequence r3) {
+        CharSequence r4 = (CharSequence) ZeusTransformUtils.wrapperContextForParams(r3, CharSequence.class, "com.obric.aiagent.plugin");
+        e r0 = this.mPopup;
+        if (r0 == null) goto L5;
+        r0.setPromptText(r4);
+        return;
+    L5:
+        super.setPrompt(r4);
+    }
+
+    @Override // android.widget.Spinner
+    public CharSequence getPrompt() {
+        e r0 = this.mPopup;
+        if (r0 == null) goto L6;
+        return r0.getHintText();
+    L6:
+        return super.getPrompt();
+    }
+
+    @Override // android.view.View
+    public void setBackgroundResource(int r1) {
+        super.setBackgroundResource(r1);
+        androidx.appcompat.widget.a r0 = this.mBackgroundTintHelper;
+        if (r0 == null) goto L6;
+        r0.a(r1);
+        return;
+    }
+
+    @Override // android.view.View
+    public void setBackgroundDrawable(Drawable r1) {
+        super.setBackgroundDrawable(r1);
+        androidx.appcompat.widget.a r0 = this.mBackgroundTintHelper;
+        if (r0 == null) goto L6;
+        r0.a(r1);
+        return;
+    }
+
+    @Override // androidx.core.view.y
+    public void setSupportBackgroundTintList(ColorStateList r1) {
+        androidx.appcompat.widget.a r0 = this.mBackgroundTintHelper;
+        if (r0 == null) goto L6;
+        r0.a(r1);
+        return;
+    }
+
+    @Override // androidx.core.view.y
+    public ColorStateList getSupportBackgroundTintList() {
+        androidx.appcompat.widget.a r0 = this.mBackgroundTintHelper;
+        if (r0 != null) goto L7;
+        return null;
+    L7:
+        return r0.a();
+    }
+
+    @Override // androidx.core.view.y
+    public void setSupportBackgroundTintMode(PorterDuff.Mode r1) {
+        androidx.appcompat.widget.a r0 = this.mBackgroundTintHelper;
+        if (r0 == null) goto L6;
+        r0.a(r1);
+        return;
+    }
+
+    @Override // androidx.core.view.y
+    public PorterDuff.Mode getSupportBackgroundTintMode() {
+        androidx.appcompat.widget.a r0 = this.mBackgroundTintHelper;
+        if (r0 != null) goto L7;
+        return null;
+    L7:
+        return r0.b();
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public void drawableStateChanged() {
+        super.drawableStateChanged();
+        androidx.appcompat.widget.a r0 = this.mBackgroundTintHelper;
+        if (r0 == null) goto L6;
+        r0.c();
+        return;
+    }
+
+    int compatMeasureContentWidth(SpinnerAdapter r11, Drawable r12) {
+        SpinnerAdapter r13 = (SpinnerAdapter) ZeusTransformUtils.wrapperContextForParams(r11, SpinnerAdapter.class, "com.obric.aiagent.plugin");
+        int r0 = 0;
+        if (r13 != null) goto L5;
+        return 0;
+    L5:
+        int r1 = View.MeasureSpec.makeMeasureSpec(getMeasuredWidth(), 0);
+        int r2 = View.MeasureSpec.makeMeasureSpec(getMeasuredHeight(), 0);
+        int r3 = Math.max(0, getSelectedItemPosition());
+        int r4 = Math.min(r13.getCount(), r3 + 15);
+        int r6 = Math.max(0, r3 - (15 - (r4 - r3)));
+        View r7 = null;
+        int r5 = 0;
+    L6:
+        if (r6 >= r4) goto L14;
+        int r8 = r13.getItemViewType(r6);
+        if (r8 == r0) goto L10;
+        r7 = null;
+        r0 = r8;
+    L10:
+        r7 = r13.getView(r6, r7, this);
+        if (r7.getLayoutParams() != null) goto L13;
+        r7.setLayoutParams(new ViewGroup.LayoutParams(-2, -2));
+    L13:
+        r7.measure(r1, r2);
+        r5 = Math.max(r5, r7.getMeasuredWidth());
+        r6 = r6 + 1;
+        goto L6
+    L14:
+        if (r12 == null) goto L20;
+        r12.getPadding(this.mTempRect);
+        return r5 + (this.mTempRect.left + this.mTempRect.right);
+    L20:
+        return r5;
+    }
+
+    final e getInternalPopup() {
+        return this.mPopup;
+    }
+
+    void showPopup() {
+        if (Build.VERSION.SDK_INT < 17) goto L5;
+        this.mPopup.show(b.b(this), b.a(this));
+        return;
+    L5:
+        this.mPopup.show(-1, -1);
+    }
+
+    @Override // android.widget.Spinner, android.widget.AbsSpinner, android.view.View
+    public Parcelable onSaveInstanceState() {
+        SavedState r0 = new SavedState(super.onSaveInstanceState());
+        e r2 = this.mPopup;
+        if (r2 != null) goto L5;
+    L7:
+        boolean r3 = false;
+    L8:
+        r0.mShowDropdown = r3;
+        return r0;
+    L5:
+        if (r2.isShowing() == false) goto L7;
+        r3 = true;
+        goto L8
+    }
+
+    @Override // android.widget.Spinner, android.widget.AbsSpinner, android.view.View
+    public void onRestoreInstanceState(Parcelable r3) {
+        SavedState r4 = (SavedState) ZeusTransformUtils.preCheckCast((Parcelable) ZeusTransformUtils.wrapperContextForParams(r3, Parcelable.class, "com.obric.aiagent.plugin"), SavedState.class, "com.obric.aiagent.plugin");
+        super.onRestoreInstanceState(r4.getSuperState());
+        if (r4.mShowDropdown == false) goto L8;
+        ViewTreeObserver r5 = getViewTreeObserver();
+        if (r5 == null) goto L9;
+        r5.addOnGlobalLayoutListener(new AnonymousClass2(this));
+        return;
+    L9:
+        return;
+    }
+
+    @Skip({BuildConfig.LIBRARY_PACKAGE_NAME})
+    public static int INVOKESTATIC_androidx_appcompat_widget_AppCompatSpinner_com_obric_aiagent_apm_impl_AiAgentReleaseLogLancet_i(String r1, String r2, Throwable r3) {
+        if (com.obric.aiagent.apm.impl.a.a() == false) goto L5;
+        return 0;
+    L5:
+        return Log.i(r1, r2, r3);
+    }
+}

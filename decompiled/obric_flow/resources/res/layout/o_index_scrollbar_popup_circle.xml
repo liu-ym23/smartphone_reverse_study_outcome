@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.layout.OUILinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/popup_container"
+        android:background="@drawable/o_index_popup_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:oui_shadowCornerRadius="24dp"
+        app:oui_shadow_style="@style/OUIShadow.Oui_Shadow_Regular">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/popup_img"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.obric.oui.text.OBaseTextView
+            android:textSize="20dp"
+            android:textColor="@color/oui_basic_text_1"
+            android:layout_gravity="center"
+            android:id="@+id/popup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Title_3_Medium"/>
+    </com.obric.oui.layout.OUILinearLayout>
+</FrameLayout>

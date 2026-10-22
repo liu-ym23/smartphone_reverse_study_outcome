@@ -1,0 +1,53 @@
+package com.obric.launcher.widget;
+
+/* JADX INFO: loaded from: classes3.dex */
+public abstract class R$style {
+    public static int AppTheme = 2131951677;
+    public static int AppletPopupDialog = 2131951679;
+    public static int Clickable = 2131951984;
+    public static int Clickable_OnlyRippleEffect = 2131951985;
+    public static int Dialog_Immersive_NoAnim = 2131951986;
+    public static int NotificationText = 2131952024;
+    public static int NotificationTitle = 2131952025;
+    public static int OverlayTheme = 2131952840;
+    public static int SSTheme_Dialog_Alert = 2131952873;
+    public static int SSTheme_Dialog_Alert_Night = 2131952874;
+    public static int Theme_Spark = 2131953188;
+    public static int Theme_SparkNoActionBar = 2131953189;
+    public static int Theme_Transparent = 2131953190;
+    public static int Theme_XBridgeTransparent = 2131953191;
+    public static int WidgetSdkAppletTheme = 2131953720;
+    public static int annie_x_floating_dialog = 2131953721;
+    public static int annie_x_full_screen_dialog = 2131953722;
+    public static int annie_x_full_screen_dialog_animation_bottom = 2131953723;
+    public static int annie_x_full_screen_dialog_animation_none = 2131953724;
+    public static int annie_x_full_screen_dialog_animation_right = 2131953725;
+    public static int annie_x_full_screen_dialog_animation_right_fix = 2131953726;
+    public static int annie_x_no_floating_dialog = 2131953727;
+    public static int annie_x_popup_anim_horizontal = 2131953728;
+    public static int annie_x_popup_anim_vertical = 2131953729;
+    public static int annie_x_popup_no_anim = 2131953730;
+    public static int annie_x_popup_no_enter_anim_horizontal = 2131953731;
+    public static int annie_x_popup_no_enter_anim_vertical = 2131953732;
+    public static int annie_x_standard_dialog_bottom_anim = 2131953733;
+    public static int annie_x_standard_dialog_bottom_theme_appcompat = 2131953734;
+    public static int annie_x_standard_dialog_fragment_bottom_anim = 2131953735;
+    public static int annie_x_standard_dialog_fragment_right_anim = 2131953736;
+    public static int annie_x_standard_dialog_fragment_right_anim_fix = 2131953737;
+    public static int annie_x_standard_dialog_hd_theme_appcompat = 2131953738;
+    public static int annie_x_standard_dialog_right_anim = 2131953739;
+    public static int annie_x_standard_dialog_right_theme_appcompat = 2131953740;
+    public static int bg_custom_toast = 2131953741;
+    public static int bg_custom_toast_elevation = 2131953742;
+    public static int popuptoast_dialog = 2131953747;
+    public static int ss_alert_dialog_button = 2131953752;
+    public static int ss_popup_toast_anim = 2131953753;
+    public static int ss_popup_toast_layout = 2131953754;
+    public static int ss_popup_toast_text = 2131953755;
+    public static int ss_popup_toast_text_deep = 2131953756;
+    public static int ss_popup_toast_text_light = 2131953757;
+    public static int tab_activity = 2131953758;
+    public static int tab_indicator_style = 2131953759;
+    public static int tab_widget_style = 2131953760;
+    public static int tab_widget_text = 2131953761;
+}

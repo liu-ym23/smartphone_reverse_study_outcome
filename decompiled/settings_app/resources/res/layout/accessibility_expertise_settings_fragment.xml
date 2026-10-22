@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:paddingTop="@dimen/main_settings_first_item_card_gap"
+            android:paddingBottom="@dimen/settings_container_bottom_padding"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/id_accessibility_visual_access"
+                app:ocardlistitem_title="@string/accessibility_blind_mode"
+                style="@style/OCardListItemTextSingle"/>
+            <include layout="@layout/item_sub_settings_padding_layout2"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/id_accessibility_hearing_access"
+                app:ocardlistitem_title="@string/accessibility_hearing_mode"
+                style="@style/OCardListItemTextSingle"/>
+            <include
+                android:id="@+id/id_accessibility_hearing_shadow"
+                layout="@layout/item_sub_settings_padding_layout2"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/master_mono"
+                app:ocardlistitem_title="@string/accessibility_toggle_master_mono_title"
+                style="@style/OCardListItemSwitchSingle"/>
+            <include layout="@layout/item_sub_settings_padding_layout2"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/auto_click"
+                app:ocardlistitem_title="@string/accessibility_autoclick_preference_title"
+                style="@style/OCardListItemTextSingle"/>
+            <include layout="@layout/item_sub_settings_padding_layout2"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/select_long_press_timeout_preference"
+                app:ocardlistitem_defaultTailIcon="tail_chevron"
+                app:ocardlistitem_title="@string/accessibility_long_press_timeout_title"
+                style="@style/OCardListItemTextSingle"/>
+            <include layout="@layout/item_sub_settings_padding_layout2"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/power_button_ends_call"
+                app:ocardlistitem_title="@string/accessibility_power_button_ends_call_prerefence_title"
+                style="@style/OCardListItemSwitchSingle"/>
+            <include
+                android:id="@+id/shadow_below_power_button_ends_call"
+                layout="@layout/item_sub_settings_padding_layout2"/>
+            <com.obric.oui.lisitem.OCardListItem
+                android:id="@+id/accessibility_global_gesture"
+                app:ocardlistitem_title="@string/accessibility_global_gesture"
+                style="@style/OCardListItemTextSingle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/accessibility_expertise_settings_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</RelativeLayout>

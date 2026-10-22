@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/seachresultview"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0">
+    <TextView
+        android:id="@+id/searchview_bg"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.6"/>
+    <com.android.settings.widget.HorizontalScrollListView
+        android:id="@+id/search_listview"
+        android:background="@color/oui_bg_base_1"
+        android:visibility="gone"
+        android:scrollbars="none"
+        settings:left_btns_id="@+id/scroll_del_btn"
+        settings:scroll_enabled="true"
+        settings:scroll_handle_id="@+id/scroll_handle_layout"
+        style="@style/ListViewGeneralStyle"/>
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18sp"
+        android:textColor="#4c000000"
+        android:gravity="center_horizontal"
+        android:id="@+id/search_empty_view"
+        android:background="@color/oui_bg_base_1"
+        android:paddingTop="@dimen/empty_search_result_padding_top"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_search_result"/>
+</RelativeLayout>

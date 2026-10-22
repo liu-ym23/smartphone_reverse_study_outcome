@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Transparent"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.layout.OUIConstraintLayout
+        android:background="@color/oui_basic_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oui_layout_borderColor="@color/white_4"
+        app:oui_layout_borderWidth="1dp"
+        app:oui_radius="32dp">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.obric.oui.button.OIconButton
+                android:id="0x7f03002b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ai_input_icon"/>
+            <TextView
+                android:textSize="20sp"
+                android:textColor="@color/oui_basic_text_1"
+                android:gravity="center"
+                android:id="0x7f0300ea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/obric_input_window_title"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:textFontWeight="600"/>
+        </LinearLayout>
+        <include
+            android:id="@+id/input_content"
+            layout="@layout/edittext_with_send_button"/>
+    </com.obric.oui.layout.OUIConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.button.OButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_item_small_btn"
+    android:clickable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/OStyleV2.OButton.S.Standard.Neutral"/>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/ai_proactive_demo_text_tertiary"
+        android:gravity="start"
+        android:id="@+id/mobile_child_ordinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mobile_child_title"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Body_1_Regular"/>
+    <com.obric.aiproactive.ui.widget.GradientTextView
+        android:textColor="@color/ai_proactive_demo_text_secondary"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/mobile_child_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/ai_proactive_agent_secondary_list_marker_gap"
+        android:layout_marginEnd="8dp"
+        android:paddingVertical="@dimen/ai_proactive_agent_secondary_list_item_half_gap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mobile_child_ordinal"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Body_1_Regular"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

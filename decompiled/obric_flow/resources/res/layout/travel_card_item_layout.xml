@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zte.miboard.cards.travel.TravelItemLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/travel_card_item_layout"
+    android:paddingTop="@dimen/miboard_card_padding_left_right"
+    android:paddingBottom="@dimen/miboard_card_padding_left_right"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/miboard_card_padding_left_right"
+    android:paddingEnd="@dimen/miboard_card_padding_left_right">
+    <include layout="@layout/travel_card_item_header"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/travel_card_item_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/travel_card_item_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/travel_card_item_info_layout_margin_top"
+        android:layout_marginBottom="3dp">
+        <com.obric.oui.image.OImage
+            android:id="@+id/travel_card_item_info_icon"
+            android:visibility="gone"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/travel_flight_very_zhun_icon"
+            android:layout_marginEnd="2dp"
+            app:oui_imageStrokeEnabled="false"/>
+        <com.obric.oui.text.OBaseTextView
+            android:textSize="8sp"
+            android:textColor="@color/oui_basic_text_3b"
+            android:id="@+id/travel_card_item_info_source_and_update_time"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineHeight="8sp"
+            style="@style/Subtitle_1_Regular"/>
+    </LinearLayout>
+    <include layout="@layout/card_footer"/>
+    <include layout="@layout/travel_card_item_bottom_bind_layout"/>
+</com.zte.miboard.cards.travel.TravelItemLayout>

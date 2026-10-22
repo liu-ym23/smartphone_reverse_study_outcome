@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/item_block_gap">
+    <TextView
+        android:id="@+id/preview_title"
+        android:visibility="gone"
+        style="@style/SettingItemTitleStyle"/>
+    <LinearLayout
+        android:id="@+id/preview_container"
+        android:background="@drawable/preview_options_two"
+        style="@style/SettingPreviewStyle">
+        <obric.widget.PreviewOptionView
+            android:id="@+id/item_preview_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <obric.widget.PreviewOptionView
+            android:id="@+id/item_preview_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

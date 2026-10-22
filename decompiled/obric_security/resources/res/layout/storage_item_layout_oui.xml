@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/storage_item"
+        android:layout_marginHorizontal="16dp"
+        app:oui_list_item_title="@string/advanced_item_application"
+        style="@style/OSettingItemNoIconStyle"/>
+</LinearLayout>

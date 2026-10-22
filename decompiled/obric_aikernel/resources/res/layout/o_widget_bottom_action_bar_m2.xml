@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_layout_M2"
+    android:padding="12dp"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+    <com.obric.oui.button.OButton
+        android:id="@+id/action_button_m20"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:text="@string/oui_bab_button_default"
+        android:layout_weight="1"
+        android:layout_marginEnd="12dp"
+        app:oui_radius="@dimen/oui_r_l1_rect"
+        style="@style/OButton.M2.Standard.Neutral"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/action_button_m21"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:text="@string/oui_bab_button_default"
+        android:layout_weight="1"
+        android:layout_marginEnd="12dp"
+        app:oui_radius="@dimen/oui_r_l1_rect"
+        style="@style/OButton.M2.Standard.Neutral"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/action_button_m22"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:text="@string/oui_bab_button_default"
+        android:layout_weight="1"
+        app:oui_radius="@dimen/oui_r_l1_rect"
+        style="@style/OButton.M2.Standard.Neutral"/>
+</LinearLayout>

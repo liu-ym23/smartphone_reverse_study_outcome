@@ -1,0 +1,264 @@
+package com.bytedance.crash;
+
+import androidx.annotation.Nullable;
+import com.bytedance.crash.crash.CrashManager;
+import com.bytedance.crash.crash.CustomJavaHandler;
+import com.bytedance.crash.event.SLIExceptionManager;
+import com.bytedance.crash.monitor.EventMonitor;
+import com.bytedance.crash.monitor.MonitorManager;
+import com.bytedance.crash.util.NpthLog;
+import java.io.File;
+import java.net.BindException;
+import java.net.ConnectException;
+import java.net.NoRouteToHostException;
+import java.net.PortUnreachableException;
+import java.net.ProtocolException;
+import java.net.SocketException;
+import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
+import java.util.Collection;
+import java.util.Map;
+import javax.net.ssl.SSLException;
+import org.apache.http.conn.ConnectTimeoutException;
+
+/* JADX INFO: loaded from: classes.dex */
+public class Ensure {
+    public static final String ENSURE_NOT_NULL = "EnsureNotNull";
+    private static final int JAVA_CRASH_MAX_SIZE = 3;
+    private static final int STACKTRACE_NORMAL_DEPTH = 4;
+    private static int customJavaCrashCount;
+    public static boolean isEnableUploadCustomJavaCrash;
+    private static EventMonitor sAppMonitor;
+
+    @Deprecated
+    private static final EnsureImpl sInstance = null;
+
+    static {
+        sInstance = new EnsureImpl();
+        customJavaCrashCount = 0;
+    }
+
+    public Ensure() {
+    }
+
+    @Deprecated
+    public static boolean ensureFalse(boolean r10) {
+        return false;
+    }
+
+    @Deprecated
+    public static boolean ensureFalse(boolean r10, String r11) {
+        return false;
+    }
+
+    @Deprecated
+    public static boolean ensureFalse(boolean r10, String r11, Map<String, String> r12) {
+        return false;
+    }
+
+    public static void ensureNativeNotReachHere(String r10, String r11, String r12, String r13, String r14) {
+        MonitorManager.getAppEnsureManager().reportNativeEnsure(r10, r11, r12, r13, null, r14);
+    }
+
+    public static void ensureNativeStack(String r10, String r11, String r12, String r13, Map<String, String> r14) {
+        MonitorManager.getAppEnsureManager().reportNativeEnsure(r10, r11, r12, r13, r14, null);
+    }
+
+    public static void ensureNativeStack(String r10, String r11, String r12, String r13, Map<String, String> r14, String r15) {
+        MonitorManager.getAppEnsureManager().reportNativeEnsure(r10, r11, r12, r13, r14, r15);
+    }
+
+    public static void ensureNativeStackWithLogTypeDirect(String r10, String r11, String r12, String r13, String r14, Map<String, String> r15) {
+        MonitorManager.getAppEnsureManager().reportNativeEnsure(r11, r12, r13, r14, r15, r10);
+    }
+
+    @Deprecated
+    public static boolean ensureNotEmpty(Collection r10) {
+        return false;
+    }
+
+    @Deprecated
+    public static boolean ensureNotNull(Object r10) {
+        return false;
+    }
+
+    @Deprecated
+    public static boolean ensureNotNull(Object r10, String r11) {
+        return false;
+    }
+
+    public static void ensureNotReachHere() {
+        MonitorManager.getAppEnsureManager().reportMessage(4);
+    }
+
+    public static void ensureNotReachHere(String r10) {
+        MonitorManager.getAppEnsureManager().reportMessage(r10, 4);
+    }
+
+    public static void ensureNotReachHere(String r10, Throwable r11, String r12, Map<String, String> r13) {
+        if (filterException(r11) == false) goto L5;
+        return;
+    L5:
+        MonitorManager.getAppEnsureManager().reportJavaEnsure(r11, null, r12, r13, Thread.currentThread().getName(), r10, r10, true);
+    }
+
+    public static void ensureNotReachHere(String r10, Map<String, String> r11) {
+        MonitorManager.getAppEnsureManager().reportMessage(r10, r11, 4);
+    }
+
+    public static void ensureNotReachHere(Throwable r10) {
+        if (filterException(r10) == false) goto L5;
+        return;
+    L5:
+        MonitorManager.getAppEnsureManager().reportThrowable(r10);
+    }
+
+    public static void ensureNotReachHere(Throwable r10, String r11) {
+        if (filterException(r10) == false) goto L5;
+        return;
+    L5:
+        MonitorManager.getAppEnsureManager().reportThrowable(r10, r11);
+    }
+
+    public static void ensureNotReachHere(Throwable r10, String r11, String r12, String r13) {
+        if (filterException(r10) == false) goto L5;
+        return;
+    L5:
+        MonitorManager.getAppEnsureManager().reportJavaEnsure(r10, null, r12, null, r11, r13, r13, true);
+    }
+
+    public static void ensureNotReachHere(Throwable r10, String r11, Map<String, String> r12) {
+        if (filterException(r10) == false) goto L5;
+        return;
+    L5:
+        MonitorManager.getAppEnsureManager().reportThrowable(r10, r11, r12);
+    }
+
+    public static void ensureNotReachHereWithLogType(String r10, Throwable r11, String r12) {
+        if (filterException(r11) == false) goto L5;
+        return;
+    L5:
+        MonitorManager.getAppEnsureManager().reportThrowable(r11, r12, r10);
+    }
+
+    public static void ensureNotReachHereWithLogTypeDirect(String r10, Throwable r11, String r12) {
+        if (filterException(r11) == false) goto L5;
+        return;
+    L5:
+        MonitorManager.getAppEnsureManager().reportThrowable(r11, r12, r10);
+    }
+
+    @Deprecated
+    public static boolean ensureTrue(boolean r10) {
+        return false;
+    }
+
+    @Deprecated
+    public static boolean ensureTrue(boolean r10, String r11) {
+        return false;
+    }
+
+    @Deprecated
+    public static boolean ensureTrue(boolean r10, String r11, Map<String, String> r12) {
+        return false;
+    }
+
+    public static boolean filterException(Throwable r10) {
+        if (r10 != null) goto L39;
+        return true;
+    L39:
+    L35:
+        th = move-exception;
+        th.printStackTrace();
+        return false;
+    L6:
+        if ((r10 instanceof ConnectTimeoutException) == false) goto L9;
+        return true;
+    L9:
+        if ((r10 instanceof SocketTimeoutException) == false) goto L12;
+        return true;
+    L12:
+        if ((r10 instanceof BindException) == false) goto L15;
+        return true;
+    L15:
+        if ((r10 instanceof ConnectException) == false) goto L18;
+        return true;
+    L18:
+        if ((r10 instanceof NoRouteToHostException) == false) goto L21;
+        return true;
+    L21:
+        if ((r10 instanceof PortUnreachableException) == false) goto L24;
+        return true;
+    L24:
+        if ((r10 instanceof SocketException) == false) goto L27;
+        return true;
+    L27:
+        if ((r10 instanceof UnknownHostException) == false) goto L30;
+        return true;
+    L30:
+        if ((r10 instanceof ProtocolException) == false) goto L32;
+        return true;
+    L32:
+        if ((r10 instanceof SSLException) == false) goto L41;
+        return true;
+    L41:
+        return false;
+    }
+
+    @Deprecated
+    public static EnsureImpl getInstance() {
+        return sInstance;
+    }
+
+    private static EventMonitor getMonitor() {
+        if (sAppMonitor != null) goto L6;
+        sAppMonitor = MonitorManager.getAppMonitor();
+    L6:
+        return sAppMonitor;
+    }
+
+    public static void reportCustomExceptionReasonDirect(String r10, Throwable r11, String r12, String r13, Map<String, String> r14, @Nullable String r15, @Nullable File r16) {
+        if (filterException(r11) == false) goto L5;
+        return;
+    L5:
+        if (r15 == null) goto L9;
+        if (r16 == null) goto L10;
+        SLIExceptionManager.getInstance().reportException(r11, r12, r13, true, r14, r15, r10, r16);
+        return;
+    L10:
+        return;
+    }
+
+    public static void reportCustomJavaCrash(Thread r10, Throwable r11) {
+        CrashManager.getCustomJavaHandler().handleCustomException(r10, r11);
+    }
+
+    public static void reportJavaCrash(Thread r10, Throwable r11) {
+        if (NpthCore.isInit() == true) goto L7;
+        NpthLog.d("reportJavaCrash: npth is not init, dispose");
+        return;
+    L7:
+        if (NpthCore.isStopUpload() == false) goto L11;
+        NpthLog.d("reportJavaCrash: stop upload, dispose");
+        return;
+    L11:
+        if (customJavaCrashCount < 3) goto L15;
+        NpthLog.d("reportJavaCrash: > 3 times, dispose");
+        return;
+    L15:
+        if (isEnableUploadCustomJavaCrash == true) goto L18;
+        NpthLog.d("reportJavaCrash: discard because config");
+        return;
+    L18:
+        CustomJavaHandler r12 = CrashManager.getCustomJavaHandler();
+        if (r12 != null) goto L21;
+        return;
+    L21:
+        customJavaCrashCount++;
+        r12.handleCustomException(r10, r11);
+    }
+
+    public static void setUploadCustomJavaCrashEnable(boolean r10) {
+        isEnableUploadCustomJavaCrash = r10;
+    }
+}

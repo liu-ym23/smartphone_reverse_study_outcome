@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.bouncelayout.OScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/scrollView"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="17dp"
+        android:paddingBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="17dp"
+        android:paddingEnd="17dp">
+        <TextView
+            android:textSize="12.5sp"
+            android:textColor="#aaaaaa"
+            android:gravity="center"
+            android:id="@+id/message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_zone_changed_notif_title"
+            android:lineSpacingMultiplier="1.1"
+            style="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:textSize="15sp"
+            android:gravity="center"
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.1"
+            style="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+</com.obric.oui.bouncelayout.OScrollView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/choose_lock_pwd_header_text_margin_top">
+    <TextView
+        android:textSize="@dimen/choose_lock_pwd_header_text_text_size"
+        android:textColor="@color/lock_screen_header_normal_text_color"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="72dp"
+        android:text="@string/enter_password"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+</LinearLayout>

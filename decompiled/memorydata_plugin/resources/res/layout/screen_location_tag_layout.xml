@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="12.5sp"
+        android:textColor="@color/oui_basic_text_3"
+        android:id="@+id/tag_text"
+        android:background="@drawable/article_tag_bg"
+        android:paddingTop="3dp"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:layout_alignParentStart="true"
+        android:lineHeight="16dp"
+        android:textFontWeight="480"/>
+</FrameLayout>

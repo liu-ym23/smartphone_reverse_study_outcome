@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:id="@+id/title_with_gap"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        app:sectionTitle_titleText="@string/search_intelligent_recommendations"
+        style="@style/OSectionTitleBar.S.SectionTitleBarStyle"/>
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:id="@+id/title"
+        android:visibility="gone"
+        app:sectionTitle_titleText="@string/search_intelligent_recommendations"
+        style="@style/OSectionTitleBar.S.SectionTitleBarStyle"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/item"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_showTailIcon="true"
+        app:ocardlistitem_subTitle="@string/loading"
+        app:ocardlistitem_title="@string/loading"
+        style="@style/OCardListItemTextSingle"/>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+package com.tom_roush.pdfbox.contentstream.operator.a;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes6.dex */
+public class b extends com.tom_roush.pdfbox.contentstream.operator.c {
+    public b() {
+    }
+
+    @Override // com.tom_roush.pdfbox.contentstream.operator.c
+    public String a() {
+        return "ET";
+    }
+
+    @Override // com.tom_roush.pdfbox.contentstream.operator.c
+    public void a(com.tom_roush.pdfbox.contentstream.operator.b r2, List<com.tom_roush.pdfbox.a.b> r3) {
+        List r4 = (List) ZeusTransformUtils.wrapperContextForParams(r3, List.class, "com.obric.memorydata.plugin");
+        this.f16096a.b(null);
+        this.f16096a.a(null);
+        this.f16096a.b();
+    }
+}

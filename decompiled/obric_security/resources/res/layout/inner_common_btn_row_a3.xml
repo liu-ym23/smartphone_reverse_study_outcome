@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/inner_common_btn_row_base_left_padding"
+    android:paddingRight="@dimen/inner_common_btn_row_base_right_padding"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/inner_common_btn_row_base_parent_height">
+    <com.qihoo360.mobilesafe.common.ui.ripple.CommonRippleButton
+        android:textSize="@dimen/inner_common_btn_row_h_base_first_text_size"
+        android:tag="@string/inner_row_btn_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inner_common_btn_row_base_btn_height"
+        android:text="btn-A3"
+        android:layout_weight="1"
+        style="@style/inner_btn_style_b"/>
+    <ImageView
+        android:id="@+id/right_selected"
+        android:tag="@string/inner_row_btn_select_view"
+        android:paddingLeft="@dimen/inner_common_btn_row_base_text_margin_right"
+        android:paddingRight="@dimen/inner_common_btn_row_base_right_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/inner_common_btn_row_base_right_padding_minus"
+        android:src="@drawable/inner_row_checkbox1_selector"/>
+</LinearLayout>

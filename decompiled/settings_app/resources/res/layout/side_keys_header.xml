@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/settings_item_top_bottom_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <obric.widget.SettingItemSwitch
+        android:textSize="@dimen/settings_item_title_size"
+        android:textColor="@color/setting_item_text_colorlist"
+        android:id="@+id/enabled_switch"
+        android:background="@drawable/selector_setting_sub_item_bg_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/side_keys_enabled"/>
+    <TextView
+        android:id="@+id/when_screen_off_title"
+        android:text="@string/side_keys_screen_off"
+        style="@style/SettingItemTitleStyle"/>
+</LinearLayout>

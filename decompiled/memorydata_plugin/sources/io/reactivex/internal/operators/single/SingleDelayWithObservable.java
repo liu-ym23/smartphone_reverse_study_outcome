@@ -1,0 +1,84 @@
+package io.reactivex.internal.operators.single;
+
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import io.reactivex.disposables.b;
+import io.reactivex.internal.disposables.DisposableHelper;
+import io.reactivex.internal.observers.c;
+import io.reactivex.s;
+import io.reactivex.t;
+import io.reactivex.v;
+import io.reactivex.x;
+import io.reactivex.z;
+import java.util.concurrent.atomic.AtomicReference;
+
+/* JADX INFO: loaded from: classes6.dex */
+public final class SingleDelayWithObservable<T, U> extends v<T> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    final z<T> f17056a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    final s<U> f17057b;
+
+    static final class OtherSubscriber<T, U> extends AtomicReference<b> implements b, t<U> {
+        private static final long serialVersionUID = -8565274649390031272L;
+        boolean done;
+        final x<? super T> downstream;
+        final z<T> source;
+
+        OtherSubscriber(x<? super T> r3, z<T> r4) {
+            x<? super T> r5 = (x) ZeusTransformUtils.wrapperContextForParams(r3, x.class, "com.obric.memorydata.plugin");
+            z<T> r6 = (z) ZeusTransformUtils.wrapperContextForParams(r4, z.class, "com.obric.memorydata.plugin");
+            this.downstream = r5;
+            this.source = r6;
+        }
+
+        @Override // io.reactivex.disposables.b
+        public void dispose() {
+            DisposableHelper.dispose(this);
+        }
+
+        @Override // io.reactivex.disposables.b
+        public boolean isDisposed() {
+            return DisposableHelper.isDisposed((b) ZeusTransformUtils.preCheckCast(get(), b.class, "com.obric.memorydata.plugin"));
+        }
+
+        @Override // io.reactivex.t
+        public void onComplete() {
+            if (this.done == false) goto L5;
+            return;
+        L5:
+            this.done = true;
+            this.source.a(new c(this, this.downstream));
+        }
+
+        @Override // io.reactivex.t
+        public void onError(Throwable r2) {
+            if (this.done == false) goto L6;
+            io.reactivex.d.a.a(r2);
+            return;
+        L6:
+            this.done = true;
+            this.downstream.onError(r2);
+        }
+
+        @Override // io.reactivex.t
+        public void onNext(U r3) {
+            ((b) ZeusTransformUtils.preCheckCast(get(), b.class, "com.obric.memorydata.plugin")).dispose();
+            onComplete();
+        }
+
+        @Override // io.reactivex.t
+        public void onSubscribe(b r3) {
+            if (DisposableHelper.set(this, (b) ZeusTransformUtils.wrapperContextForParams(r3, b.class, "com.obric.memorydata.plugin")) == false) goto L6;
+            this.downstream.onSubscribe(this);
+            return;
+        }
+    }
+
+    @Override // io.reactivex.v
+    public void b(x<? super T> r3) {
+        x r4 = (x) ZeusTransformUtils.wrapperContextForParams(r3, x.class, "com.obric.memorydata.plugin");
+        this.f17057b.subscribe(new OtherSubscriber(r4, this.f17056a));
+    }
+}

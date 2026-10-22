@@ -1,0 +1,15 @@
+package com.bytedance.platform.godzilla.sysopt;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class UbsanOpt {
+    public static native void end();
+
+    public static native void start();
+
+    static {
+        System.loadLibrary("godzilla-sysopt");
+    }
+
+    private UbsanOpt() {
+    }
+}

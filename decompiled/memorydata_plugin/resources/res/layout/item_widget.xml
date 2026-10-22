@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/widget_item"
+    android:background="@drawable/widget_item_background_order"
+    android:layout_width="match_parent"
+    android:layout_height="26dp">
+    <ImageView
+        android:id="@+id/widget_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/ic_widget_order_flight"
+        android:layout_marginStart="3dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#722e2e"
+        android:ellipsize="end"
+        android:id="@+id/widget_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:fontFamily="Olasans-sc-compact"
+        android:layout_marginStart="8dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/container_small_margin"
+        android:visibility="visible"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:textSize="10sp"
+        android:id="@+id/widget_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4/20 16:00-18:00"
+        android:fontFamily="Olasans-sc-compact"
+        android:layout_marginEnd="8dp"/>
+</LinearLayout>

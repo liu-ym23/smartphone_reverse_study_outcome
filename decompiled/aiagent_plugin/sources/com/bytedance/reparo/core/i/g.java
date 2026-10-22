@@ -1,0 +1,7 @@
+package com.bytedance.reparo.core.i;
+
+/* JADX INFO: compiled from: Predicate.java */
+/* JADX INFO: loaded from: classes.dex */
+public interface g<T> {
+    boolean a(T r1);
+}

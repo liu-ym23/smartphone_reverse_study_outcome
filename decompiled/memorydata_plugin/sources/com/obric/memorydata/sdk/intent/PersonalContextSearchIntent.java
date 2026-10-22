@@ -1,0 +1,48 @@
+package com.obric.memorydata.sdk.intent;
+
+import android.os.Parcelable;
+import com.obric.capabilitykit.common.DispatchContext;
+import com.obric.capabilitykit.common.intent.AppIntentImplInfo;
+import com.obric.capabilitykit.common.intent.BasePCPersonalContextSearchIntent;
+import com.obric.capabilitykit.common.intent.Empty;
+import com.obric.capabilitykit.common.intent.IntentResult;
+import com.obric.capabilitykit.common.intent.PCPersonalContextSearchParams;
+import com.obric.memorydata.middleware.impl.bdtracker.TrackerImpl;
+import com.obric.memorydata.sdk.MemoryResponse;
+import com.obric.memorydata.sdk.b;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+
+/* JADX INFO: loaded from: classes5.dex */
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J$\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u00052\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH\u0096@¢\u0006\u0002\u0010\u000bJ\n\u0010\f\u001a\u0004\u0018\u00010\rH\u0002¨\u0006\u000e"}, d2 = {"Lcom/obric/memorydata/sdk/intent/PersonalContextSearchIntent;", "Lcom/obric/capabilitykit/common/intent/BasePCPersonalContextSearchIntent;", "<init>", "()V", "doAction", "Lcom/obric/capabilitykit/common/intent/IntentResult;", "Lcom/obric/capabilitykit/common/intent/Empty;", TrackerImpl.PARAMS, "Lcom/obric/capabilitykit/common/intent/PCPersonalContextSearchParams;", "dispatchContext", "Lcom/obric/capabilitykit/common/DispatchContext;", "(Lcom/obric/capabilitykit/common/intent/PCPersonalContextSearchParams;Lcom/obric/capabilitykit/common/DispatchContext;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "getDispatchIntentImplInfo", "Lcom/obric/capabilitykit/common/intent/AppIntentImplInfo;", "memoryDataSDK_obricRelease"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public final class PersonalContextSearchIntent extends BasePCPersonalContextSearchIntent {
+    public PersonalContextSearchIntent() {
+    }
+
+    private final AppIntentImplInfo getDispatchIntentImplInfo() {
+        return null;
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.BasePCPersonalContextSearchIntent, com.obric.capabilitykit.common.intent.IntentFunction
+    public /* synthetic */ Object doAction(Parcelable r3, DispatchContext r4, Continuation<? super IntentResult<Empty>> r5) {
+        Parcelable r6 = (Parcelable) ZeusTransformUtils.wrapperContextForParams(r3, Parcelable.class, "com.obric.memorydata.plugin");
+        Continuation<? super IntentResult<Empty>> r7 = (Continuation) ZeusTransformUtils.wrapperContextForParams(r5, Continuation.class, "com.obric.memorydata.plugin");
+        return doAction((PCPersonalContextSearchParams) ZeusTransformUtils.preCheckCast(r6, PCPersonalContextSearchParams.class, "com.obric.memorydata.plugin"), r4, r7);
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.BasePCPersonalContextSearchIntent
+    public Object doAction(PCPersonalContextSearchParams r16, DispatchContext r17, Continuation<? super IntentResult<Empty>> r18) {
+        Continuation r0 = (Continuation) ZeusTransformUtils.wrapperContextForParams(r18, Continuation.class, "com.obric.memorydata.plugin");
+        if (getDispatchIntentImplInfo() != null) goto L11;
+        MemoryResponse<IntentResult<Empty>> r1 = b.f12829a.a(r16, r17);
+        IntentResult r2 = (IntentResult) ZeusTransformUtils.preCheckCast(r1.getData(), IntentResult.class, "com.obric.memorydata.plugin");
+        if (r1.getCode() != 0) goto L9;
+        if (r2 == null) goto L9;
+        return r2;
+    L9:
+        return new IntentResult(-2002, null, null, "executePersonalContextSearchIntent error", false, false, 256, null, null, null, 950, null);
+    L11:
+        throw new UnsupportedOperationException("not support dispatch intent");
+    }
+}

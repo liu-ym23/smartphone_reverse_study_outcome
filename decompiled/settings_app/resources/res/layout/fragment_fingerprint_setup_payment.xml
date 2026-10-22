@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/quick_pay_via_fingerprint"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nextbutton_top_margin"
+        android:layout_marginBottom="@dimen/nextbutton_bottom_margin"
+        android:text="@string/done"
+        android:layout_alignParentBottom="true"
+        style="@style/LongButton.Highlight"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_done"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/fingerprint_setup_for_payment_tips"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/payment_undefined"
+                app:smtTitle="@string/undefined"
+                style="@style/SettingSubItemTopStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/payment_alipay"
+                app:smtTitle="@string/pay_via_alipay"
+                style="@style/SettingSubItemMidStyle"/>
+            <obric.widget.SettingItemCheck
+                android:id="@+id/payment_wechat"
+                app:smtTitle="@string/pay_via_wechat"
+                style="@style/SettingSubItemBottomStyle"/>
+            <TextView
+                android:text="@string/quick_payment_via_fingerprint_tips"
+                style="@style/SettingItemTipsStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

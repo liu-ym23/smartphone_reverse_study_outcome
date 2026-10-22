@@ -1,0 +1,16 @@
+package androidx.startup;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class StartupException extends RuntimeException {
+    public StartupException(String r1) {
+        super(r1);
+    }
+
+    public StartupException(String r1, Throwable r2) {
+        super(r1, r2);
+    }
+
+    public StartupException(Throwable r1) {
+        super(r1);
+    }
+}

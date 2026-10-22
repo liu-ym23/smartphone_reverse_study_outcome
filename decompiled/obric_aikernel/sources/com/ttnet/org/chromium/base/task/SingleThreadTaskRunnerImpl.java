@@ -1,0 +1,80 @@
+package com.ttnet.org.chromium.base.task;
+
+import android.annotation.SuppressLint;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
+import androidx.annotation.Nullable;
+import com.ttnet.org.chromium.base.annotations.JNINamespace;
+import com.ttnet.org.chromium.base.metrics.RecordHistogram;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* JADX INFO: loaded from: classes2.dex */
+@JNINamespace("base")
+public class SingleThreadTaskRunnerImpl extends TaskRunnerImpl implements SingleThreadTaskRunner {
+    static final /* synthetic */ boolean $assertionsDisabled = false;
+
+    @Nullable
+    private final Handler mHandler;
+    private final boolean mPostPreNativeTasksAtFrontOfQueue;
+
+    @Retention(RetentionPolicy.SOURCE)
+    private @interface PreNativeTaskPostType {
+        public static final int DEFERRED_TO_NATIVE_INIT = 2;
+        public static final int NUM_ENTRIES = 3;
+        public static final int POSTED_AT_BACK_OF_QUEUE = 0;
+        public static final int POSTED_AT_FRONT_OF_QUEUE = 1;
+    }
+
+    static {
+    }
+
+    public SingleThreadTaskRunnerImpl(Handler r10, TaskTraits r11) {
+        this(r10, r11, false);
+    }
+
+    public SingleThreadTaskRunnerImpl(Handler r10, TaskTraits r11, boolean r12) {
+        super(r11, "SingleThreadTaskRunnerImpl", 2);
+        this.mHandler = r10;
+        this.mPostPreNativeTasksAtFrontOfQueue = r12;
+    }
+
+    @SuppressLint({"NewApi"})
+    private void postAtFrontOfQueue() {
+        if (Build.VERSION.SDK_INT < 21) goto L5;
+        Message r10 = Message.obtain(this.mHandler, this.mRunPreNativeTaskClosure);
+        r10.setAsynchronous(true);
+        this.mHandler.sendMessageAtFrontOfQueue(r10);
+        return;
+    L5:
+        this.mHandler.postAtFrontOfQueue(this.mRunPreNativeTaskClosure);
+    }
+
+    @Override // com.ttnet.org.chromium.base.task.SingleThreadTaskRunner
+    public boolean belongsToCurrentThread() {
+        Boolean r10 = belongsToCurrentThreadInternal();
+        if (r10 == null) goto L7;
+        return r10.booleanValue();
+    L7:
+        if (this.mHandler.getLooper().getThread() != Thread.currentThread()) goto L9;
+        return true;
+    L9:
+        return false;
+    }
+
+    @Override // com.ttnet.org.chromium.base.task.TaskRunnerImpl
+    protected void schedulePreNativeTask() {
+        if (this.mHandler != null) goto L7;
+        RecordHistogram.recordEnumeratedHistogram("Android.TaskScheduling.PreNativeTaskPostType", 2, 3);
+        return;
+    L7:
+        if (this.mPostPreNativeTasksAtFrontOfQueue == false) goto L9;
+        RecordHistogram.recordEnumeratedHistogram("Android.TaskScheduling.PreNativeTaskPostType", 1, 3);
+        postAtFrontOfQueue();
+        return;
+    L9:
+        RecordHistogram.recordEnumeratedHistogram("Android.TaskScheduling.PreNativeTaskPostType", 0, 3);
+        this.mHandler.post(this.mRunPreNativeTaskClosure);
+    }
+}

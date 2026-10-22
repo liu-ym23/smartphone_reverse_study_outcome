@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="4dp"
+    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <EditText
+        android:textSize="14sp"
+        android:textColor="@color/proactive_text_primary"
+        android:textColorHint="@color/proactive_text_secondary"
+        android:gravity="start|top"
+        android:id="@+id/et_content"
+        android:background="@drawable/bg_proactive_detail_card"
+        android:padding="16dp"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="16dp"
+        android:hint="这里是具体的预先生成好的详细的指令，要发给豆包操作手机去执行的，AI 生成的越详细越好，有利于整个任务顺利的完成。"
+        android:maxLength="500"
+        android:lineSpacingExtra="3dp"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/proactive_text_secondary"
+        android:id="@+id/tv_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0/500"
+        app:layout_constraintEnd_toEndOf="@+id/et_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

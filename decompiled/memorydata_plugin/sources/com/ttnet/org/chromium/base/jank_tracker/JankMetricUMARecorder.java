@@ -1,0 +1,54 @@
+package com.ttnet.org.chromium.base.jank_tracker;
+
+import com.ttnet.org.chromium.base.annotations.JNINamespace;
+
+/* JADX INFO: loaded from: classes6.dex */
+@JNINamespace("base::android")
+public class JankMetricUMARecorder {
+
+    public interface Natives {
+        void recordJankMetrics(String r1, long[] r2, long[] r3, long[] r4, int r5);
+    }
+
+    public JankMetricUMARecorder() {
+    }
+
+    public static void recordJankMetricsToUMA(JankMetrics r6, int r7) {
+        if (r6 != null) goto L4;
+        return;
+    L4:
+        JankMetricUMARecorderJni.get().recordJankMetrics(scenarioToString(r7), r6.timestampsNs, r6.durationsNs, r6.jankBurstsNs, r6.skippedFrames);
+    }
+
+    public static String scenarioToString(int r1) {
+        switch(r1) {
+            case 1: goto L19;
+            case 2: goto L17;
+            case 3: goto L15;
+            case 4: goto L13;
+            case 5: goto L11;
+            case 6: goto L9;
+            case 7: goto L7;
+            case 8: goto L5;
+            default: goto L4;
+        };
+    L5:
+        return "StartSurfaceTabSwitcher";
+    L7:
+        return "StartSurfaceHomepage";
+    L9:
+        return "OpenLinkInNewTab";
+    L11:
+        return "TabSwitcher";
+    L13:
+        return "Startup";
+    L15:
+        return "NewTabPage";
+    L17:
+        return "OmniboxFocus";
+    L19:
+        return "Total";
+    L4:
+        throw new IllegalArgumentException("Invalid scenario value");
+    }
+}

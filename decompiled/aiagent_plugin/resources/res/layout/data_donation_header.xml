@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.coachmark.OCoachmarkTipView
+        android:textColor="@color/oui_basic_text_1"
+        android:id="@+id/desc"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/oic_coachmark_tip"
+        android:text="@string/donation_task_desc"
+        android:layout_marginHorizontal="15dp"
+        app:oui_cmTipBackgroundColor="@color/oui_basic_bg_base_3"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3"
+        android:id="@+id/sub_title"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/pick_a_question"
+        android:layout_marginStart="32dp"
+        style="@style/Label_M"/>
+</LinearLayout>

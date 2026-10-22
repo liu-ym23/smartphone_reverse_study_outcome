@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:obric="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="18dp"
+    android:paddingBottom="@dimen/popup_grid_menu_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/PopupMenuStyle">
+    <obric.widget.support.WrapContentViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <obric.app.IndicatorView
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        obric:radius="@dimen/large_circle_indicator_radius"/>
+</LinearLayout>

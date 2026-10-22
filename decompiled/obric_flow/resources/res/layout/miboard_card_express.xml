@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zte.miboard.cards.express.ExpressCard xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/miboard_card_express"
+    android:background="@drawable/miboard_card_bg"
+    android:padding="@dimen/miboard_card_padding_left_right"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/miboard_express_card_height">
+    <include layout="@layout/card_header"/>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@+id/express_card_no_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <com.obric.oui.text.OBaseTextView
+            android:textColor="@color/oui_basic_text_3"
+            android:gravity="start|center_vertical"
+            android:id="@+id/express_card_no_data_layout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/express_card_no_data_layout_title_margin_end"
+            android:layout_toStartOf="@+id/express_card_no_data_layout_img"
+            android:layout_alignParentStart="true"
+            style="@style/Body_1_Regular"/>
+        <com.obric.oui.image.OImage
+            android:id="@+id/express_card_no_data_layout_img"
+            android:background="@drawable/express_empty_data_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:oui_imageStrokeEnabled="false"/>
+    </RelativeLayout>
+    <com.zte.miboard.cards.express.ExpressCardListContainer
+        android:orientation="vertical"
+        android:id="@+id/express_card_list_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"/>
+</com.zte.miboard.cards.express.ExpressCard>

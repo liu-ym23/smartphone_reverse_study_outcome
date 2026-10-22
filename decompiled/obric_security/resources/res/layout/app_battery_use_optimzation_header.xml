@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no">
+        <com.obric.oui.lisitem.OListItemSwitch
+            android:id="@+id/optimzation_header_switch"
+            android:layout_marginBottom="0dp"
+            app:oui_list_item_title="@string/app_optimization"
+            style="@style/OSettingItemNoIconStyle"/>
+        <obric.widget.TipsView
+            android:text="@string/power_usage_control_app_background_tips"
+            android:paddingHorizontal="16dp"
+            style="@style/SettingItemTipsStyle"/>
+        <com.obric.oui.text.OTextView
+            android:textSize="12.5sp"
+            android:textColor="@color/oui_text_3"
+            android:id="@+id/dynamic_resolution_game_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/power_usage_battery_use_optimization"
+            android:layout_marginHorizontal="16dp"
+            style="@style/Label_M"/>
+    </LinearLayout>
+</LinearLayout>

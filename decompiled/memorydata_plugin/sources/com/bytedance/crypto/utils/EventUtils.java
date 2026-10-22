@@ -1,0 +1,24 @@
+package com.bytedance.crypto.utils;
+
+import com.bytedance.crypto.bridge.IEventBridge;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class EventUtils {
+    private static IEventBridge mEventBridge;
+
+    public EventUtils() {
+    }
+
+    public static void init(IEventBridge r2) {
+        mEventBridge = (IEventBridge) ZeusTransformUtils.wrapperContextForParams(r2, IEventBridge.class, "com.obric.memorydata.plugin");
+    }
+
+    public static void onEvent(String r1, JSONObject r2) {
+        IEventBridge r0 = mEventBridge;
+        if (r0 == null) goto L6;
+        r0.onEvent(r1, r2);
+        return;
+    }
+}

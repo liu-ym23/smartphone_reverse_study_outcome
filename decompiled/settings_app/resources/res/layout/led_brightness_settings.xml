@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/led_brightness_settings"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/view_list"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="@string/led_brightness_settings_left"
+                style="@style/SettingItemTitleStyle"/>
+            <com.android.settings.BrightnessSeekBar
+                android:id="@+id/seekbar_left"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/led_brightness_settings_middle"
+                style="@style/SettingItemTitleStyle"/>
+            <com.android.settings.BrightnessSeekBar
+                android:id="@+id/seekbar_middle"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/led_brightness_settings_right"
+                style="@style/SettingItemTitleStyle"/>
+            <com.android.settings.BrightnessSeekBar
+                android:id="@+id/seekbar_right"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/reset_btn"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:text="@string/led_brightness_settings_reset"
+                style="@style/ButtonGeneralStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

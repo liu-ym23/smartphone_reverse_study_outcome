@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.obric.oui.layout.OUIFrameLayout
+        android:id="@+id/glass_layer"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.obric.autoaction.app.launcherpage.widget.OAutoPermissionCheckView
+            android:id="@+id/permission_check_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.obric.autoaction.app.launcherpage.widget.OAutoAddIconGuideView
+            android:id="@+id/add_icon_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.obric.oui.layout.OUIFrameLayout>
+</merge>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/advanced_settings"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_item_top_bottom_margin">
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/auto_connect"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/wifi_auto_connect_titile"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+            <obric.widget.SettingItemSwitch
+                android:id="@+id/network_handover_switch"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/network_handover_switch"/>
+            <TextView
+                android:text="@string/network_handover_switch_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <TextView
+                android:layout_marginTop="@dimen/settings_item_top_bottom_margin"
+                android:text="@string/mobile_to_wlan_policy_title"
+                style="@style/SettingItemTitleStyle"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/mobile_to_wlan_policy"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:title="@string/mobile_to_wlan_policy"
+                style="@style/wifi_setup_settingItemText"/>
+            <obric.widget.SettingItemText
+                android:id="@+id/mac_address"
+                android:background="@drawable/selector_setting_sub_item_bg_single"
+                android:title="@string/wifi_advanced_mac_address_title"
+                style="@style/wifi_setup_settingItemText"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

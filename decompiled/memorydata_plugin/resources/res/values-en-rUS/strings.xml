@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="barcode_scan_hint">Place the QR code/barcode inside the frame</string>
+    <string name="browser_cancel">Cancel</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="not_scanned_barcode">Unable to recognize QR code or barcode</string>
+    <string name="request_camera_permission_hint">Enable the camera permission in Browser &gt; Permission Management.</string>
+    <string name="same_network_hint">Make sure both devices are connected to the same network</string>
+    <string name="scanner_mode_barcode">Scan</string>
+    <string name="scanner_mode_extract_text">Text</string>
+    <string name="scanner_mode_general">Identify</string>
+    <string name="scanner_mode_goods">Products</string>
+    <string name="scanner_mode_question">Question</string>
+    <string name="scanner_mode_translate">Translate</string>
+    <string name="vision_back_to_scanner">Back to scanner</string>
+    <string name="vision_capture">Capture for visual search</string>
+    <string name="vision_search_capture_failed">Unable to capture image</string>
+    <string name="vision_search_error_format">%1$s\n%2$s</string>
+    <string name="vision_search_hint">Tap the shutter or choose a photo</string>
+    <string name="vision_search_processing">Processing image…</string>
+    <string name="wake_up_screen">Tap to wake the screen</string>
+    <string name="web_permission_dialog_title">Permission request</string>
+</resources>

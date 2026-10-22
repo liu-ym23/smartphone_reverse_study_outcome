@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:id="@+id/sb_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/sb_btn_top_divider"
+            android:background="@drawable/switch_bar_title_bar_upper_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <obric.widget.MenuDialogTitleBar
+            android:id="@+id/sb_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sb_btn_top_divider"/>
+        <RadioGroup
+            android:orientation="horizontal"
+            android:id="@+id/sb_editableTabContainer"
+            android:background="@color/tab_bar_top_background"
+            android:paddingTop="@dimen/obric_switch_bar_top_rg_padding"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:weightSum="5"
+            android:layout_below="@+id/sb_title_bar"/>
+        <ImageView
+            android:background="@drawable/switch_bar_title_bar_lower_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sb_title_bar"/>
+    </RelativeLayout>
+</merge>

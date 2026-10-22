@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/keyboarddialog_default_location"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:scrollbars="none"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <obric.widget.ListContentItemCheck
+                android:id="@+id/default_location_setting_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/keyboarddialog_default_location_setting_default"
+                style="@style/ListContentItemStyle.Top"/>
+            <obric.widget.ListContentItemCheck
+                android:id="@+id/default_location_setting_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/keyboarddialog_default_location_setting_left"
+                style="@style/ListContentItemStyle.Mid"/>
+            <obric.widget.ListContentItemCheck
+                android:id="@+id/default_location_setting_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="@string/keyboarddialog_default_location_setting_right"
+                style="@style/ListContentItemStyle.Bottom"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+</RelativeLayout>

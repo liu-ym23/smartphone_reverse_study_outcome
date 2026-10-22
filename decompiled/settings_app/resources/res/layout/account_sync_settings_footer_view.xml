@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/sync_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/item_bottom_shadow_layout"/>
+        <com.obric.oui.button.OButton
+            android:textStyle="bold"
+            android:textColor="@color/oui_accent_fg"
+            android:id="@+id/button_sync"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/sync_menu_sync_now"
+            android:layout_marginHorizontal="16dp"
+            style="@style/OButton.ListItem.Center"/>
+        <include layout="@layout/item_bottom_shadow_layout"/>
+    </LinearLayout>
+    <com.obric.oui.button.OButton
+        android:textColor="@color/oui_red_6"
+        android:id="@+id/button_delete"
+        android:visibility="visible"
+        android:clickable="true"
+        android:layout_height="@dimen/oui_h_l2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/account_settings_button_delete_account"
+        android:layout_centerInParent="true"
+        style="@style/OButton.ListItem.Center"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

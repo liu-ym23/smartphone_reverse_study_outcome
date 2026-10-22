@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    <com.android.settings.widget.SettingItemButton
+        android:id="@+id/setting_item_btn_clear_history"
+        android:layout_width="@dimen/list_item_land_adapte_width"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_search_history"/>
+    <include layout="@layout/group_list_item_vertical_gap_layout"/>
+</LinearLayout>

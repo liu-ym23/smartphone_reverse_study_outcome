@@ -1,0 +1,223 @@
+package com.bytedance.bdinstall.h;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Environment;
+import android.text.TextUtils;
+import com.bytedance.bdinstall.ba;
+import com.bytedance.bdinstall.j.q;
+import com.bytedance.bdinstall.j.s;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.math.BigInteger;
+import java.security.SecureRandom;
+import java.util.Arrays;
+import java.util.UUID;
+import org.json.JSONArray;
+
+/* JADX INFO: compiled from: CNDeviceParamsProvider.java */
+/* JADX INFO: loaded from: classes.dex */
+public final class c extends a {
+    private volatile String h;
+    private volatile String[] i;
+    private volatile String j;
+    private volatile JSONArray k;
+
+    c(Context r3, k r4) {
+        super((Context) ZeusTransformUtils.wrapperContextForParams(r3, Context.class, "com.obric.aiagent.plugin"), r4);
+    }
+
+    @Override // com.bytedance.bdinstall.h.a, com.bytedance.bdinstall.g.a
+    public String a(boolean r9) {
+        if (TextUtils.isEmpty(this.f6262e) == false) goto L5;
+        String r0 = com.bytedance.bdinstall.j.g.a(this.f6258a);
+        SharedPreferences r1 = com.bytedance.bdinstall.j.j.a(this.f6258a, this.f6259b.h());
+        String r3 = null;
+        String r4 = r1.getString("openudid", null);
+        if (ba.a(r0) == false) goto L18;
+        if ("9774d56d682e549c".equals(r0) == true) goto L18;
+        if (ba.a(r4) == false) goto L15;
+        String r10 = this.f6260c.b(r0, r4);     // Catch: Exception -> L47
+    L16:
+        r0 = r10;
+        goto L41
+    L15:
+        r10 = this.f6260c.b(null, r0);     // Catch: Exception -> L47
+    L18:
+        if (ba.a(r4) == true) goto L37;
+        r4 = new BigInteger(80, new SecureRandom()).toString(16);     // Catch: Exception -> L47
+        if (r4.charAt(0) != '-') goto L22;
+        r4 = r4.substring(1);     // Catch: Exception -> L47
+    L22:
+        int r5 = 13 - r4.length();     // Catch: Exception -> L47
+        if (r5 <= 0) goto L28;
+        StringBuilder r6 = new StringBuilder();     // Catch: Exception -> L47
+    L25:
+        if (r5 <= 0) goto L27;
+        r6.append('F');     // Catch: Exception -> L47
+        r5 = r5 - 1;     // Catch: Exception -> L47
+        goto L25
+    L27:
+        r6.append(r4);     // Catch: Exception -> L47
+        r4 = r6.toString();     // Catch: Exception -> L47
+    L28:
+        if (r9 == true) goto L30;
+    L35:
+        SharedPreferences.Editor r11 = r1.edit();     // Catch: Exception -> L47
+        r11.putString("openudid", r4);     // Catch: Exception -> L47
+        r11.apply();     // Catch: Exception -> L47
+    L39:
+        r0 = r4;
+        goto L41
+    L30:
+        if (this.f6261d == null) goto L33;
+        r3 = this.f6261d.b(null, r4);     // Catch: Exception -> L47
+    L33:
+        if (ba.a(r3) == false) goto L35;
+        r4 = r3;
+        goto L35
+    L37:
+        if (this.f6261d == null) goto L39;
+        this.f6261d.b(r4, null);     // Catch: Exception -> L47
+    L41:
+        if (TextUtils.isEmpty(r0) == true) goto L44;
+        r0 = r0 + this.g;
+    L44:
+        if (TextUtils.isEmpty(r0) == true) goto L46;
+        this.f6262e = r0;
+    L46:
+        return r0;
+    L5:
+        return this.f6262e;
+    }
+
+    @Override // com.bytedance.bdinstall.h.a, com.bytedance.bdinstall.g.a
+    public String a() {
+        if (TextUtils.isEmpty(this.f) == false) goto L5;
+        SharedPreferences r1 = com.bytedance.bdinstall.j.j.a(this.f6258a, this.f6259b.h());     // Catch: Exception -> L23
+        String r2 = null;
+        String r3 = r1.getString("clientudid", null);     // Catch: Exception -> L23
+        if (ba.a(r3) == true) goto L16;
+        r3 = UUID.randomUUID().toString();     // Catch: Exception -> L23
+        if (this.f6261d == null) goto L12;
+        r2 = this.f6261d.c(null, r3);     // Catch: Exception -> L23
+    L12:
+        if (ba.a(r2) == false) goto L14;
+        r3 = r2;
+    L14:
+        SharedPreferences.Editor r4 = r1.edit();     // Catch: Exception -> L23
+        r4.putString("clientudid", r3);     // Catch: Exception -> L23
+        r4.apply();     // Catch: Exception -> L23
+    L19:
+        if (TextUtils.isEmpty(r3) == true) goto L21;
+        r3 = r3 + this.g;     // Catch: Exception -> L23
+    L21:
+        this.f = r3;     // Catch: Exception -> L23
+        return r3;
+    L16:
+        if (this.f6261d == null) goto L19;
+        this.f6261d.c(r3, null);     // Catch: Exception -> L23
+    L23:
+        e = move-exception;
+        e.printStackTrace();
+        return "";
+    L5:
+        return this.f;
+    }
+
+    @Override // com.bytedance.bdinstall.g.a
+    public void c() {
+        this.f6260c.a(Arrays.asList(new String[]{"openudid", "clientudid", "serial_number", "sim_serial_number", "udid", "device_id", "install_id"}));
+    }
+
+    public String d() {
+        if (TextUtils.isEmpty(this.h) == true) goto L15;
+        return this.h;
+    L15:
+        String r1 = this.f6260c.d(null, q.g(this.f6258a, this.f6259b.h()));     // Catch: Exception -> L12
+        if (TextUtils.isEmpty(r1) == true) goto L10;
+        r1 = r1 + this.g;     // Catch: Exception -> L12
+    L10:
+        this.h = r1;     // Catch: Exception -> L12
+        return r1;
+    L12:
+        e = move-exception;
+        e.printStackTrace();
+        return null;
+    }
+
+    public String[] e() {
+        if (this.i == null) goto L20;
+        if (this.i.length <= 0) goto L20;
+        return this.i;
+    L20:
+        String[] r1 = this.f6260c.a(null, q.c(this.f6258a, this.f6259b.h()));     // Catch: Exception -> L17
+        int r2 = 0;
+        if (r1 != null) goto L13;
+        r1 = new String[0];     // Catch: Exception -> L17
+    L13:
+        if (r2 >= r1.length) goto L15;
+        r1[r2] = r1[r2] + this.g;     // Catch: Exception -> L17
+        r2 = r2 + 1;     // Catch: Exception -> L17
+        goto L13
+    L15:
+        this.i = r1;     // Catch: Exception -> L17
+        return r1;
+    L17:
+        e = move-exception;
+        e.printStackTrace();
+        return null;
+    }
+
+    public String f() {
+        if (TextUtils.isEmpty(this.j) == true) goto L15;
+        return this.j;
+    L15:
+        String r1 = this.f6260c.e(null, q.a(this.f6258a, this.f6259b.h()));     // Catch: Exception -> L12
+        if (TextUtils.isEmpty(r1) == true) goto L10;
+        r1 = r1 + this.g;     // Catch: Exception -> L12
+    L10:
+        this.j = r1;     // Catch: Exception -> L12
+        return r1;
+    L12:
+        e = move-exception;
+        e.printStackTrace();
+        return null;
+    }
+
+    public JSONArray g() {
+        if (this.k != null) goto L5;
+        this.k = q.d(this.f6258a, this.f6259b.h());     // Catch: Exception -> L8
+        return this.k;
+    L8:
+        e = move-exception;
+        e.printStackTrace();
+        return null;
+    L5:
+        return this.k;
+    }
+
+    @Override // com.bytedance.bdinstall.h.a
+    public void a(k r11, d r12) {
+        String r7 = h();
+        boolean r8 = !r11.d();
+        h r9 = new h(this.f6258a, r8, Environment.getExternalStorageDirectory().getPath() + s.a("L0FuZHJvaWQvZGF0YS9jb20uc25zc2RrLmFwaS9ieXRlZGFuY2U=") + this.g, r11.a(), r7, r11.h().b());     // Catch: Exception -> L5
+        r12.a(r9);     // Catch: Exception -> L5
+        r12 = r9;
+    L14:
+        r12.a(new h(this.f6258a, r8, Environment.getExternalStorageDirectory().getPath() + "/" + s.a() + this.g, r11.a(), r7, r11.h().b()));     // Catch: Exception -> L9
+        return;
+    L9:
+        e = move-exception;
+        e.printStackTrace();
+        return;
+    L5:
+        e = move-exception;
+        e.printStackTrace();
+        goto L14
+    }
+
+    private static String h() {
+        String r1 = "ZQLiNFJR+CWEI4px" + s.a();
+        return new String(new char[]{r1.charAt(1), r1.charAt(3), r1.charAt(1), r1.charAt(11), r1.charAt(15), r1.charAt(10), r1.charAt(8), r1.charAt(17), r1.charAt(9), r1.charAt(9), r1.charAt(12), r1.charAt(13), r1.charAt(13), r1.charAt(5), r1.charAt(18), r1.charAt(13), r1.charAt(14), r1.charAt(11), r1.charAt(4), r1.charAt(19), r1.charAt(7)}).substring(2, 18);
+    }
+}

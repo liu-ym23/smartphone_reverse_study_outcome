@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/icon_behavior_record_disabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:src="@drawable/oic_shield"
+        app:layout_constraintBottom_toTopOf="@+id/text_behavior_record_disabled1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textColor="@color/oui_text_3b"
+        android:id="@+id/text_behavior_record_disabled1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="未开启"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_behavior_record_disabled"
+        style="@style/Title_Title_L"/>
+    <TextView
+        android:textColor="@color/oui_text_3b"
+        android:id="@+id/text_behavior_record_disabled2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="开启应用行为记录，避免隐私风险"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_behavior_record_disabled1"
+        style="@style/Label_L_Thin"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/btn_enable_app_behavior_record"
+        android:visibility="visible"
+        android:clickable="true"
+        android:layout_marginTop="24dp"
+        android:text="开启应用行为记录"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_behavior_record_disabled2"
+        style="@style/OButton.M1.Standard.Neutral"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="256dp"
+    android:width="256dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M32,32m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M128,32m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M224,32m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M32,128m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M128,128m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M224,128m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M32,224m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M128,224m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M224,224m-30.25,0a30.25,30.25 0,1 1,60.5 0a30.25,30.25 0,1 1,-60.5 0"
+        android:strokeColor="@color/oui_text_4"
+        android:strokeWidth="3.5"/>
+</vector>

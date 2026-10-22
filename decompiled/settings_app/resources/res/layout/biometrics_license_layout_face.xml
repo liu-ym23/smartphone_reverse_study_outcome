@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="20dp"
+    style="@style/Biometrics">
+    <com.obric.oui.text.OTextView
+        android:text="@string/biometrics_face_welcome"
+        style="@style/Biometrics.Text"/>
+    <com.obric.oui.text.OTextView
+        android:text="@string/biometrics_face_about_title"
+        style="@style/Biometrics.Text.Title"/>
+    <LinearLayout style="@style/Biometrics.Horizontal">
+        <com.obric.oui.text.OTextView style="@style/Biometrics.Text.Index"/>
+        <com.obric.oui.text.OTextView
+            android:text="@string/biometrics_face_about_content"
+            style="@style/Biometrics.Text.Content.Bottom"/>
+    </LinearLayout>
+    <com.obric.oui.text.OTextView
+        android:text="@string/biometrics_face_notice_title"
+        style="@style/Biometrics.Text.Title"/>
+    <LinearLayout style="@style/Biometrics.Horizontal">
+        <com.obric.oui.text.OTextView style="@style/Biometrics.Text.Index"/>
+        <com.obric.oui.text.OTextView
+            android:text="@string/biometrics_face_notice_1_content"
+            style="@style/Biometrics.Text.Content"/>
+    </LinearLayout>
+    <LinearLayout style="@style/Biometrics.Horizontal">
+        <com.obric.oui.text.OTextView style="@style/Biometrics.Text.Index"/>
+        <com.obric.oui.text.OTextView
+            android:text="@string/biometrics_face_notice_2_content"
+            style="@style/Biometrics.Text.Content"/>
+    </LinearLayout>
+    <LinearLayout style="@style/Biometrics.Horizontal">
+        <com.obric.oui.text.OTextView style="@style/Biometrics.Text.Index"/>
+        <com.obric.oui.text.OTextView
+            android:text="@string/biometrics_face_notice_3_content"
+            style="@style/Biometrics.Text.Content"/>
+    </LinearLayout>
+    <LinearLayout style="@style/Biometrics.Horizontal">
+        <com.obric.oui.text.OTextView style="@style/Biometrics.Text.Index"/>
+        <com.obric.oui.text.OTextView
+            android:text="@string/biometrics_face_notice_4_content"
+            style="@style/Biometrics.Text.Content.Bottom"/>
+    </LinearLayout>
+    <com.obric.oui.text.OTextView
+        android:text="@string/biometrics_face_privacy_title"
+        style="@style/Biometrics.Text.Title"/>
+    <LinearLayout style="@style/Biometrics.Horizontal">
+        <com.obric.oui.text.OTextView style="@style/Biometrics.Text.Index"/>
+        <com.obric.oui.text.OTextView
+            android:text="@string/biometrics_face_privacy_1_content"
+            style="@style/Biometrics.Text.Content"/>
+    </LinearLayout>
+    <LinearLayout style="@style/Biometrics.Horizontal">
+        <com.obric.oui.text.OTextView style="@style/Biometrics.Text.Index"/>
+        <com.obric.oui.text.OTextView
+            android:text="@string/biometrics_face_privacy_2_content"
+            style="@style/Biometrics.Text.Content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="4dp"
+        style="@style/Biometrics.Horizontal">
+        <com.obric.oui.text.OTextView style="@style/Biometrics.Text.Index"/>
+        <com.obric.oui.text.OTextView
+            android:text="@string/biometrics_face_privacy_3_content"
+            style="@style/Biometrics.Text.Content.Bottom"/>
+    </LinearLayout>
+</LinearLayout>

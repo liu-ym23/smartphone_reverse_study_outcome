@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="@dimen/list_item_maximum_width"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/list_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_single"
+        app:ocardlistitem_cardType="type_normal"
+        app:ocardlistitem_showIcon="true"
+        app:ocardlistitem_title="@string/wifi_add_network"/>
+    <include
+        android:id="@+id/list_bottom_view"
+        android:visibility="gone"
+        layout="@layout/group_list_item_vertical_gap_layout"/>
+</LinearLayout>

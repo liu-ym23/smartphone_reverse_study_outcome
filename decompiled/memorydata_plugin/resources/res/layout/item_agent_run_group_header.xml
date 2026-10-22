@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.sectiontitlebar.OSectionTitleBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/section_title"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    style="@style/OSectionTitleBar.S"/>

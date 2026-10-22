@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedance="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/junk_files_cleanup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bytedance:ocardlistitem_title="@string/memory_junk_file_cleanup"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/app_management"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bytedance:ocardlistitem_title="@string/advanced_item_application"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/big_files_cleanup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bytedance:ocardlistitem_subTitle="@string/memory_big_file_cleanup_tips"
+        bytedance:ocardlistitem_title="@string/memory_big_file_cleanup"/>
+</LinearLayout>

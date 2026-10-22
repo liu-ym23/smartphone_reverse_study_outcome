@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/autoaction_task_list_future_simple_item_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+    <com.obric.autoaction.app.launcherpage.module.view.ExpandableTextLayout
+        android:textColor="@color/oui_text_2"
+        android:id="@+id/txt_tli_task_query"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="6dp"
+        style="@style/Label_L"/>
+</com.obric.oui.layout.OUILinearLayout>

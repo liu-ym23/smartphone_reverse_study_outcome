@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<obric.widget.ListContentItemCustom xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="188dp"
+    style="@style/SettingSubItemSingleStyle">
+    <TextView
+        android:textSize="@dimen/settings_item_sub_title_size"
+        android:textColor="@color/setting_item_text_color"
+        android:id="@+id/test_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/touch_area_test_tips"
+        android:layout_centerInParent="true"/>
+    <com.android.settings.widget.TouchAreaAnimView
+        android:id="@+id/anim_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</obric.widget.ListContentItemCustom>

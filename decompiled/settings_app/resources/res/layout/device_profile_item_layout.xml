@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/profile_item_container"
+        android:layout_marginBottom="4dp"
+        android:minHeight="64dp"
+        app:oui_list_item_content_image="@drawable/loading"
+        app:oui_list_item_title="@string/device_name_new"
+        style="@style/SettingSubItemSingleStyle"/>
+</RelativeLayout>

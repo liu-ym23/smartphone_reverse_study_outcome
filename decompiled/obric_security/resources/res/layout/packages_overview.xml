@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedance="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/whole_view"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OCTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bytedance:oui_title_text="@string/package_list_entry"/>
+    <include layout="@layout/loading_view"/>
+    <FrameLayout
+        android:id="@+id/search_or_edit_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar">
+        <com.obric.oui.titlebar.OCTitleBar
+            android:id="@+id/oc_searchbar_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_or_edit_bar">
+        <com.bytedanceos.security.widget.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/listView"
+            android:headerDividersEnabled="false"
+            android:footerDividersEnabled="false"
+            slider_checkbox_id="@+id/checkBox"
+            style="@style/ListViewGeneralStyle"/>
+        <com.bytedanceos.security.widget.QuickBarEx
+            android:id="@+id/quickbar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_or_edit_bar"
+        layout="@layout/searchview"/>
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/list_empty_view"/>
+    <include
+        android:id="@+id/title_secondary_bar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/search_or_edit_bar"
+        layout="@layout/title_secondary_bar_shadow"/>
+</RelativeLayout>

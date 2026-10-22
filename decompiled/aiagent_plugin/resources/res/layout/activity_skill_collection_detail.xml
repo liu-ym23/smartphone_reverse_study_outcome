@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUIFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/skill_collection_detail_root"
+    android:background="@color/oui_basic_bg_base_1"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.orecyclerview.widget.RecyclerView
+        android:id="@+id/collection_list"
+        android:paddingTop="56dp"
+        android:paddingBottom="32dp"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.obric.oui.blur.OBlurMaskView
+        android:id="@+id/collection_top_mask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oBlurMask_blurRadius="8"
+        app:oBlurMask_defaultMaskBackground="true"
+        app:oui_widgetBlurType="1"
+        app:oui_widgetFitInsetTop="true">
+        <com.obric.oui.titlebar.OFloatingTitleBar
+            android:id="@+id/collection_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:oFloatingTitleBar_centerTitle=""
+            app:oFloatingTitleBar_maskBlurRadius="0"/>
+    </com.obric.oui.blur.OBlurMaskView>
+    <View
+        android:layout_gravity="bottom"
+        android:id="@+id/skill_navigation_bar_surface"
+        android:background="@color/oui_basic_bg_base_1"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"/>
+</com.obric.oui.layout.OUIFrameLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="end|center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/travel_card_item_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="@dimen/oui_padding_8dp">
+        <com.obric.oui.image.OImage
+            android:id="@+id/travel_card_item_header_icon"
+            android:layout_width="@dimen/travel_icon_size"
+            android:layout_height="@dimen/travel_icon_size"
+            android:layout_marginEnd="8dp"
+            app:oui_imageStrokeEnabled="false"/>
+        <com.obric.oui.text.OBaseTextView
+            android:textColor="@color/oui_basic_text_1"
+            android:ellipsize="end"
+            android:id="@+id/travel_card_item_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            style="@style/Subtitle_3_Medium"/>
+    </LinearLayout>
+    <com.obric.oui.text.OBaseTextView
+        android:textColor="@color/oui_basic_text_3"
+        android:id="@+id/travel_card_item_header_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        style="@style/Subtitle_3_Regular"/>
+</LinearLayout>

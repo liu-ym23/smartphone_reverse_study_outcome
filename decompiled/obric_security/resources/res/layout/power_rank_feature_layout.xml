@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/power_rank_root"
+    android:background="@drawable/oic_bg_single"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="16dp">
+    <com.bytedanceos.security.widget.SecurityItemTextNeutral
+        android:id="@+id/power_rank_head_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inner_common_dimen_64dp"
+        app:oui_list_item_show_background="false"/>
+    <com.obric.oui.NonScrollableRecyclerView
+        android:id="@+id/recyclerView"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <ViewStub
+            android:id="@+id/preview_wizard"
+            android:layout="@layout/wifi_wizard_previvew_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.obric.oui.lisitem.OCardListItem
+            android:id="@+id/switch_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ocardlistitem_cardPosition="position_single"
+            app:ocardlistitem_cardType="type_normal"
+            app:ocardlistitem_defaultCustomEnd="end_switch"
+            app:ocardlistitem_showCustomEnd="true"
+            app:ocardlistitem_showIcon="false"
+            app:ocardlistitem_title="@string/wifi_settings_title"/>
+        <TextView
+            android:id="@+id/wifi_state_tips"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/GroupListTipsViewStyle"/>
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <com.obric.oui.lisitem.OCardListItem
+            android:id="@+id/assistant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ocardlistitem_cardPosition="position_single"
+            app:ocardlistitem_cardType="type_normal"
+            app:ocardlistitem_defaultTailIcon="tail_arrow"
+            app:ocardlistitem_showSubTitle="true"
+            app:ocardlistitem_showTailIcon="true"
+            app:ocardlistitem_subTitle="@string/network_assistant_tips"
+            app:ocardlistitem_title="@string/network_assistant"/>
+    </LinearLayout>
+</RelativeLayout>

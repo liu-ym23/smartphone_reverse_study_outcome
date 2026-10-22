@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/item_bottom_shadow_layout"/>
+    <TextView
+        android:text="@string/big_bang_touch_area_test_title"
+        style="@style/SettingItemTitleStyle"/>
+    <com.android.settings.widget.TouchAreaTestView
+        android:id="@+id/touch_area_view"
+        android:paddingBottom="@dimen/settings_item_top_bottom_margin"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

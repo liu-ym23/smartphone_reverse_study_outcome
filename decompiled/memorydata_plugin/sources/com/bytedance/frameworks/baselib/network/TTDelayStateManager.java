@@ -1,0 +1,153 @@
+package com.bytedance.frameworks.baselib.network;
+
+import com.bytedance.common.utility.Logger;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicLong;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class TTDelayStateManager {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private static final String f2267a = "TTDelayStateManager";
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private static volatile AppStartState f2268b;
+    private static final AtomicBoolean c = null;
+    private static final AtomicLong d = null;
+    private static final AtomicLong e = null;
+    private static final AtomicLong f = null;
+    private static final AtomicLong g = null;
+
+    /* JADX INFO: renamed from: com.bytedance.frameworks.baselib.network.TTDelayStateManager$1, reason: invalid class name */
+    static /* synthetic */ class AnonymousClass1 {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        static final /* synthetic */ int[] f2269a = null;
+
+        static {
+            int[] r0 = new int[AppStartState.values().length];
+            f2269a = r0;
+            r0[AppStartState.ColdStart.ordinal()] = 1;     // Catch: NoSuchFieldError -> L7
+        L10:
+            f2269a[AppStartState.HotStart.ordinal()] = 2;     // Catch: NoSuchFieldError -> L8
+        L12:
+            f2269a[AppStartState.WarmStart.ordinal()] = 3;     // Catch: NoSuchFieldError -> L9
+            return;
+        }
+    }
+
+    public static final enum AppStartState extends Enum<AppStartState> {
+        private static final /* synthetic */ AppStartState[] $VALUES = null;
+        public static final AppStartState ColdStart = null;
+        public static final AppStartState HotStart = null;
+        public static final AppStartState NormalStart = null;
+        public static final AppStartState WarmStart = null;
+        final int state;
+
+        static {
+            AppStartState r0 = new AppStartState("NormalStart", 0, -1);
+            NormalStart = r0;
+            AppStartState r1 = new AppStartState("ColdStart", 1, 0);
+            ColdStart = r1;
+            AppStartState r3 = new AppStartState("HotStart", 2, 1);
+            HotStart = r3;
+            AppStartState r5 = new AppStartState("WarmStart", 3, 2);
+            WarmStart = r5;
+            $VALUES = new AppStartState[]{r0, r1, r3, r5};
+        }
+
+        private AppStartState(String r1, int r2, int r3) {
+            super(r1, r2);
+            this.state = r3;
+        }
+
+        public static AppStartState valueOf(String r2) {
+            return (AppStartState) ZeusTransformUtils.preCheckCast(Enum.valueOf(AppStartState.class, r2), AppStartState.class, "com.obric.memorydata.plugin");
+        }
+
+        public static AppStartState[] values() {
+            return (AppStartState[]) ZeusTransformUtils.preCheckCast($VALUES.clone(), AppStartState[].class, "com.obric.memorydata.plugin");
+        }
+
+        public int getValue() {
+            return this.state;
+        }
+    }
+
+    static {
+        f2268b = AppStartState.NormalStart;
+        c = new AtomicBoolean(false);
+        d = new AtomicLong(0);
+        e = new AtomicLong(0);
+        f = new AtomicLong(0);
+        g = new AtomicLong(0);
+    }
+
+    public TTDelayStateManager() {
+    }
+
+    public static AppStartState a() {
+        if (Logger.debug() == false) goto L5;
+        Logger.d(f2267a, "get coldDuration hostDuration warmDuration " + e.get() + f.get() + g.get());
+    L5:
+        int r0 = AnonymousClass1.f2269a[f2268b.ordinal()];
+        if (r0 == 1) goto L24;
+        if (r0 == 2) goto L19;
+        if (r0 == 3) goto L14;
+        return f2268b;
+    L14:
+        if (a(d.get(), g.get()) == false) goto L17;
+        f2268b = AppStartState.NormalStart;
+    L17:
+        return f2268b;
+    L19:
+        if (a(d.get(), f.get()) == false) goto L22;
+        f2268b = AppStartState.NormalStart;
+    L22:
+        return f2268b;
+    L24:
+        if (a(d.get(), e.get()) == false) goto L27;
+        f2268b = AppStartState.NormalStart;
+    L27:
+        return f2268b;
+    }
+
+    public static void a(JSONObject r6) {
+        AtomicBoolean r0 = c;
+        if (r6.optInt("request_tag_enabled") <= 0) goto L5;
+        boolean r1 = true;
+    L6:
+        r0.set(r1);
+        AtomicLong r2 = e;
+        r2.set(r6.optInt("cold_start_seconds"));
+        AtomicLong r3 = f;
+        r3.set(r6.optInt("hot_start_seconds"));
+        AtomicLong r4 = g;
+        r4.set(r6.optInt("warm_start_seconds"));
+        if (Logger.debug() == false) goto L10;
+        Logger.d(f2267a, "set coldDuration hostDuration warmDuration " + r2.get() + r3.get() + r4.get());
+        return;
+    L10:
+        return;
+    L5:
+        r1 = false;
+        goto L6
+    }
+
+    private static boolean a(long r4, long r6) {
+        if (((System.currentTimeMillis() / 1000) - r4) <= r6) goto L5;
+        return true;
+    L5:
+        return false;
+    }
+
+    public static AppStartState b() {
+        return f2268b;
+    }
+
+    public static boolean c() {
+        return c.get();
+    }
+}

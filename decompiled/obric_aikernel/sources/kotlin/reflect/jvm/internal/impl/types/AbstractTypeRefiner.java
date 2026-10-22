@@ -1,0 +1,11 @@
+package kotlin.reflect.jvm.internal.impl.types;
+
+import kotlin.reflect.jvm.internal.impl.types.model.KotlinTypeMarker;
+
+/* JADX INFO: loaded from: classes3.dex */
+public abstract class AbstractTypeRefiner {
+    public AbstractTypeRefiner() {
+    }
+
+    public abstract KotlinTypeMarker refineType(KotlinTypeMarker r10);
+}

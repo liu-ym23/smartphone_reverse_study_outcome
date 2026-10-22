@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/oui_basic_bg_base_2_2_low_elevation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_app_automated_operation"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="24sp"
+        android:textColor="@color/oui_basic_text_1"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/obric_vd_cover_title"
+        android:textFontWeight="500"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="14sp"
+        android:textColor="@color/oui_basic_text_3"
+        android:gravity="center"
+        android:id="@+id/tv_description"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:text="@string/obric_vd_cover_description"
+        android:lineSpacingMultiplier="1.3"/>
+</LinearLayout>

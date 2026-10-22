@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/memory_bottom_tab_icon"
+        android:layout_width="56dp"
+        android:layout_height="32dp"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="@color/oui_basic_text_3b"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/memory_bottom_tab_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="Olasans-sc-compact"
+        android:fontVariationSettings="&apos;wght&apos; 480, &apos;wdth&apos; 100"/>
+</LinearLayout>

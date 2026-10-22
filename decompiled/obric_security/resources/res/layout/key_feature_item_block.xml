@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/oic_bg_single"
+    android:paddingBottom="10dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/trash_clean"
+        android:scaleType="center"/>
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:minHeight="18dp"
+        android:text="@string/clean_trash"
+        android:maxLines="2"
+        android:layout_marginStart="@dimen/dimen_12"
+        android:layout_marginEnd="@dimen/dimen_12"
+        style="@style/Body_1_Medium"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="@dimen/inner_common_dimen_13dp"
+        android:textColor="@color/oui_text_3"
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:minHeight="20dp"
+        android:maxLines="2"
+        android:layout_marginStart="@dimen/dimen_12"
+        android:layout_marginEnd="@dimen/dimen_12"
+        style="@style/Body_1_Regular"/>
+</com.obric.oui.layout.OUILinearLayout>

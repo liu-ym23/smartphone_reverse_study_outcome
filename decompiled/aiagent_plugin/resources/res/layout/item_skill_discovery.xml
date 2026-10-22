@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.lisitem.OCardListItem xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/skill_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ocardlistitem_cardPosition="position_single"
+    app:ocardlistitem_cardType="type_container"
+    app:ocardlistitem_customStart="@layout/skill_card_content_discovery"
+    app:ocardlistitem_showCardBg="false"
+    app:ocardlistitem_showCustomStart="true"/>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_basic_text_3"
+        android:id="@+id/detail_event_trigger_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_expand"
+        android:layout_marginStart="32dp"
+        android:layout_marginVertical="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_detail_title_bar"
+        style="@style/Subtitle_2_Medium"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/detail_shortcut_instruct_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_defaultCustomEnd="end_switch"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showDivider="true"
+        app:ocardlistitem_title="@string/detail_use_short_instruct"/>
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/detail_shortcut_instruct_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_cardPosition="position_bottom"
+        app:ocardlistitem_cardType="type_container"/>
+</LinearLayout>

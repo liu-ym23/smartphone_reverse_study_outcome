@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/question_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ocardlistitem_defaultCustomEnd="end_detail"
+        app:ocardlistitem_defaultTailIcon="tail_arrow"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showTailIcon="true"/>
+</FrameLayout>

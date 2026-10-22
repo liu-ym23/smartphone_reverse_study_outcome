@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:id="@+id/approve_button_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.button.OButton
+        android:id="@+id/approve_button"
+        android:visibility="visible"
+        android:clickable="true"
+        android:layout_centerInParent="true"
+        style="@style/OButton.M1.Standard.Neutral"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/sb_tab_zone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:background="@drawable/tab_bar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/sb_rg_tabwidget"
+        android:background="@drawable/sb_repeat_tabbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/obric_tabswitch_tabbar_height"/>
+</LinearLayout>

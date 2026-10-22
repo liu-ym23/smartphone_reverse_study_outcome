@@ -1,0 +1,204 @@
+package androidx.appcompat.widget;
+
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.accessibility.AccessibilityManager;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.ViewConfigurationCompat;
+
+/* JADX INFO: loaded from: classes.dex */
+class TooltipCompatHandler implements View.OnLongClickListener, View.OnHoverListener, View.OnAttachStateChangeListener {
+    private static final long HOVER_HIDE_TIMEOUT_MS = 15000;
+    private static final long HOVER_HIDE_TIMEOUT_SHORT_MS = 3000;
+    private static final long LONG_CLICK_HIDE_TIMEOUT_MS = 2500;
+    private static final String TAG = "TooltipCompatHandler";
+    private static TooltipCompatHandler sActiveHandler;
+    private static TooltipCompatHandler sPendingHandler;
+    private final View mAnchor;
+    private int mAnchorX;
+    private int mAnchorY;
+    private boolean mForceNextChangeSignificant;
+    private boolean mFromTouch;
+    private final Runnable mHideRunnable;
+    private final int mHoverSlop;
+    private TooltipPopup mPopup;
+    private final Runnable mShowRunnable;
+    private final CharSequence mTooltipText;
+
+    @Override // android.view.View.OnAttachStateChangeListener
+    public void onViewAttachedToWindow(View r1) {
+    }
+
+    /* JADX INFO: renamed from: lambda$new$0$androidx-appcompat-widget-TooltipCompatHandler, reason: not valid java name */
+    /* synthetic */ void m7lambda$new$0$androidxappcompatwidgetTooltipCompatHandler() {
+        show(false);
+    }
+
+    public static void setTooltipText(View r2, CharSequence r3) {
+        TooltipCompatHandler r0 = sPendingHandler;
+        if (r0 == null) goto L8;
+        if (r0.mAnchor != r2) goto L8;
+        setPendingHandler(null);
+    L8:
+        if (TextUtils.isEmpty(r3) == false) goto L15;
+        TooltipCompatHandler r4 = sActiveHandler;
+        if (r4 != null) goto L12;
+    L14:
+        r2.setOnLongClickListener(null);
+        r2.setLongClickable(false);
+        r2.setOnHoverListener(null);
+        return;
+    L12:
+        if (r4.mAnchor != r2) goto L14;
+        r4.hide();
+        goto L14
+    L15:
+        new TooltipCompatHandler(r2, r3);
+    }
+
+    private TooltipCompatHandler(View r2, CharSequence r3) {
+        this.mShowRunnable = new TooltipCompatHandler$$ExternalSyntheticLambda0(this);
+        this.mHideRunnable = new TooltipCompatHandler$$ExternalSyntheticLambda1(this);
+        this.mAnchor = r2;
+        this.mTooltipText = r3;
+        this.mHoverSlop = ViewConfigurationCompat.getScaledHoverSlop(ViewConfiguration.get(r2.getContext()));
+        forceNextChangeSignificant();
+        r2.setOnLongClickListener(this);
+        r2.setOnHoverListener(this);
+    }
+
+    @Override // android.view.View.OnLongClickListener
+    public boolean onLongClick(View r2) {
+        this.mAnchorX = r2.getWidth() / 2;
+        this.mAnchorY = r2.getHeight() / 2;
+        show(true);
+        return true;
+    }
+
+    @Override // android.view.View.OnHoverListener
+    public boolean onHover(View r3, MotionEvent r4) {
+        if (this.mPopup != null) goto L5;
+    L7:
+        AccessibilityManager r5 = (AccessibilityManager) this.mAnchor.getContext().getSystemService("accessibility");
+        if (r5.isEnabled() == true) goto L10;
+    L12:
+        int r6 = r4.getAction();
+        if (r6 == 7) goto L19;
+        if (r6 != 10) goto L25;
+        forceNextChangeSignificant();
+        hide();
+    L25:
+        return false;
+    L19:
+        if (this.mAnchor.isEnabled() == false) goto L25;
+        if (this.mPopup != null) goto L25;
+        if (updateAnchorPos(r4) == false) goto L25;
+        setPendingHandler(this);
+        goto L25
+    L10:
+        if (r5.isTouchExplorationEnabled() == false) goto L12;
+        return false;
+    L5:
+        if (this.mFromTouch == false) goto L7;
+        return false;
+    }
+
+    @Override // android.view.View.OnAttachStateChangeListener
+    public void onViewDetachedFromWindow(View r1) {
+        hide();
+    }
+
+    void show(boolean r8) {
+        if (ViewCompat.isAttachedToWindow(this.mAnchor) == true) goto L5;
+        return;
+    L5:
+        setPendingHandler(null);
+        TooltipCompatHandler r0 = sActiveHandler;
+        if (r0 == null) goto L8;
+        r0.hide();
+    L8:
+        sActiveHandler = this;
+        this.mFromTouch = r8;
+        TooltipPopup r1 = new TooltipPopup(this.mAnchor.getContext());
+        this.mPopup = r1;
+        r1.show(this.mAnchor, this.mAnchorX, this.mAnchorY, this.mFromTouch, this.mTooltipText);
+        this.mAnchor.addOnAttachStateChangeListener(this);
+        if (this.mFromTouch == false) goto L12;
+        long r2 = 2500;
+    L16:
+        this.mAnchor.removeCallbacks(this.mHideRunnable);
+        this.mAnchor.postDelayed(this.mHideRunnable, r2);
+        return;
+    L12:
+        if ((ViewCompat.getWindowSystemUiVisibility(this.mAnchor) & 1) != 1) goto L14;
+        long r3 = ViewConfiguration.getLongPressTimeout();
+        long r4 = 3000;
+    L15:
+        r2 = r4 - r3;
+        goto L16
+    L14:
+        r3 = ViewConfiguration.getLongPressTimeout();
+        r4 = 15000;
+        goto L15
+    }
+
+    void hide() {
+        if (sActiveHandler != this) goto L9;
+        sActiveHandler = null;
+        TooltipPopup r0 = this.mPopup;
+        if (r0 == null) goto L7;
+        r0.hide();
+        this.mPopup = null;
+        forceNextChangeSignificant();
+        this.mAnchor.removeOnAttachStateChangeListener(this);
+        goto L9
+    L7:
+        Log.e(TAG, "sActiveHandler.mPopup == null");
+    L9:
+        if (sPendingHandler != this) goto L11;
+        setPendingHandler(null);
+    L11:
+        this.mAnchor.removeCallbacks(this.mHideRunnable);
+    }
+
+    private static void setPendingHandler(TooltipCompatHandler r1) {
+        TooltipCompatHandler r0 = sPendingHandler;
+        if (r0 == null) goto L5;
+        r0.cancelPendingShow();
+    L5:
+        sPendingHandler = r1;
+        if (r1 == null) goto L9;
+        r1.scheduleShow();
+        return;
+    }
+
+    private void scheduleShow() {
+        this.mAnchor.postDelayed(this.mShowRunnable, ViewConfiguration.getLongPressTimeout());
+    }
+
+    private void cancelPendingShow() {
+        this.mAnchor.removeCallbacks(this.mShowRunnable);
+    }
+
+    private boolean updateAnchorPos(MotionEvent r5) {
+        int r0 = (int) r5.getX();
+        int r6 = (int) r5.getY();
+        if (this.mForceNextChangeSignificant == false) goto L5;
+    L10:
+        this.mAnchorX = r0;
+        this.mAnchorY = r6;
+        this.mForceNextChangeSignificant = false;
+        return true;
+    L5:
+        if (Math.abs(r0 - this.mAnchorX) > this.mHoverSlop) goto L10;
+        if (Math.abs(r6 - this.mAnchorY) > this.mHoverSlop) goto L10;
+        return false;
+    }
+
+    private void forceNextChangeSignificant() {
+        this.mForceNextChangeSignificant = true;
+    }
+}

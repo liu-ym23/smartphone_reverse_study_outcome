@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/revone_global_popupwindow_width"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+    <ImageView
+        android:id="@+id/revone_popupwindow_dialog_arrow_up"
+        android:visibility="gone"
+        android:layout_width="@dimen/revone_arrow_width"
+        android:layout_height="@dimen/revone_arrow_height"
+        android:src="@drawable/revone_arrow_up"/>
+    <FrameLayout
+        android:id="@+id/revone_popupwindow_content"
+        android:background="@drawable/revone_global_popupwindow_dialog_background"
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/revone_popupwindow_dialog_arrow_up"/>
+    <ImageView
+        android:id="@+id/revone_popupwindow_dialog_arrow_down"
+        android:visibility="gone"
+        android:layout_width="@dimen/revone_arrow_width"
+        android:layout_height="@dimen/revone_arrow_height"
+        android:src="@drawable/revone_arrow_down"
+        android:layout_below="@+id/revone_popupwindow_content"/>
+</RelativeLayout>

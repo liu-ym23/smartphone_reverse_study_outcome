@@ -1,0 +1,188 @@
+package kotlin.jvm.internal;
+
+import java.io.ObjectStreamException;
+import java.io.Serializable;
+import java.lang.annotation.Annotation;
+import java.util.List;
+import java.util.Map;
+import kotlin.SinceKotlin;
+import kotlin.jvm.KotlinReflectionNotSupportedError;
+import kotlin.reflect.KCallable;
+import kotlin.reflect.KDeclarationContainer;
+import kotlin.reflect.KParameter;
+import kotlin.reflect.KType;
+import kotlin.reflect.KTypeParameter;
+import kotlin.reflect.KVisibility;
+
+/* JADX INFO: loaded from: classes3.dex */
+public abstract class CallableReference implements KCallable, Serializable {
+
+    @SinceKotlin(version = "1.1")
+    public static final Object NO_RECEIVER = null;
+
+    @SinceKotlin(version = "1.4")
+    private final boolean isTopLevel;
+
+    @SinceKotlin(version = "1.4")
+    private final String name;
+
+    @SinceKotlin(version = "1.4")
+    private final Class owner;
+
+    @SinceKotlin(version = "1.1")
+    protected final Object receiver;
+    private transient KCallable reflected;
+
+    @SinceKotlin(version = "1.4")
+    private final String signature;
+
+    @SinceKotlin(version = "1.2")
+    public static class NoReceiver implements Serializable {
+        private static final NoReceiver INSTANCE = null;
+
+        static {
+            INSTANCE = new NoReceiver();
+        }
+
+        private NoReceiver() {
+        }
+
+        public static /* synthetic */ NoReceiver access$000() {
+            return INSTANCE;
+        }
+
+        private Object readResolve() throws ObjectStreamException {
+            return INSTANCE;
+        }
+    }
+
+    static {
+        NO_RECEIVER = NoReceiver.access$000();
+    }
+
+    public CallableReference() {
+        this(NO_RECEIVER);
+    }
+
+    @Override // kotlin.reflect.KCallable
+    public Object call(Object... r5) {
+        return getReflected().call(r5);
+    }
+
+    @Override // kotlin.reflect.KCallable
+    public Object callBy(Map r5) {
+        return getReflected().callBy(r5);
+    }
+
+    @SinceKotlin(version = "1.1")
+    public KCallable compute() {
+        KCallable r5 = this.reflected;
+        if (r5 != null) goto L6;
+        KCallable r10 = computeReflected();
+        this.reflected = r10;
+        return r10;
+    L6:
+        return r5;
+    }
+
+    public abstract KCallable computeReflected();
+
+    @Override // kotlin.reflect.KAnnotatedElement
+    public List<Annotation> getAnnotations() {
+        return getReflected().getAnnotations();
+    }
+
+    @SinceKotlin(version = "1.1")
+    public Object getBoundReceiver() {
+        return this.receiver;
+    }
+
+    @Override // kotlin.reflect.KCallable
+    public String getName() {
+        return this.name;
+    }
+
+    public KDeclarationContainer getOwner() {
+        Class r5 = this.owner;
+        if (r5 != null) goto L6;
+        return null;
+    L6:
+        if (this.isTopLevel == false) goto L9;
+        return Reflection.getOrCreateKotlinPackage(r5);
+    L9:
+        return Reflection.getOrCreateKotlinClass(r5);
+    }
+
+    @Override // kotlin.reflect.KCallable
+    public List<KParameter> getParameters() {
+        return getReflected().getParameters();
+    }
+
+    @SinceKotlin(version = "1.1")
+    public KCallable getReflected() {
+        KCallable r5 = compute();
+        if (r5 == this) goto L6;
+        return r5;
+    L6:
+        throw new KotlinReflectionNotSupportedError();
+    }
+
+    @Override // kotlin.reflect.KCallable
+    public KType getReturnType() {
+        return getReflected().getReturnType();
+    }
+
+    public String getSignature() {
+        return this.signature;
+    }
+
+    @Override // kotlin.reflect.KCallable
+    @SinceKotlin(version = "1.1")
+    public List<KTypeParameter> getTypeParameters() {
+        return getReflected().getTypeParameters();
+    }
+
+    @Override // kotlin.reflect.KCallable
+    @SinceKotlin(version = "1.1")
+    public KVisibility getVisibility() {
+        return getReflected().getVisibility();
+    }
+
+    @Override // kotlin.reflect.KCallable
+    @SinceKotlin(version = "1.1")
+    public boolean isAbstract() {
+        return getReflected().isAbstract();
+    }
+
+    @Override // kotlin.reflect.KCallable
+    @SinceKotlin(version = "1.1")
+    public boolean isFinal() {
+        return getReflected().isFinal();
+    }
+
+    @Override // kotlin.reflect.KCallable
+    @SinceKotlin(version = "1.1")
+    public boolean isOpen() {
+        return getReflected().isOpen();
+    }
+
+    @Override // kotlin.reflect.KCallable
+    @SinceKotlin(version = "1.3")
+    public boolean isSuspend() {
+        return getReflected().isSuspend();
+    }
+
+    @SinceKotlin(version = "1.1")
+    public CallableReference(Object r10) {
+        this(r10, null, null, null, false);
+    }
+
+    @SinceKotlin(version = "1.4")
+    public CallableReference(Object r5, Class r10, String r11, String r12, boolean r13) {
+        this.receiver = r5;
+        this.owner = r10;
+        this.name = r11;
+        this.signature = r12;
+        this.isTopLevel = r13;
+    }
+}

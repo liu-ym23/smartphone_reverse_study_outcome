@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content">
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <obric.widget.SettingItemText
+            android:icon="@drawable/icn_caveat"
+            android:id="@+id/gesture_header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/screen_gesture_desc"/>
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+    </LinearLayout>
+</RelativeLayout>

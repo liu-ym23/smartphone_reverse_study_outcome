@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bg_memory_privacy_a11y"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="22dp"
+    android:paddingEnd="22dp">
+    <com.obric.oui.text.OTextView
+        android:textSize="16sp"
+        android:textColor="@color/oui_basic_text_1"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/memory_settings_smart_memory_notice_a11y_title"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="12sp"
+        android:textColor="@color/oui_basic_text_3"
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/memory_settings_smart_memory_notice_a11y_message"/>
+</LinearLayout>

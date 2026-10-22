@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/item_id_tiktok_on_keyguard"
+        android:title="@string/tiktok_on_keyguard"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.ListContentItemText
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/ListContentItemStyle.Bottom">
+        <ImageView
+            android:background="@drawable/lockscreen_aweme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </obric.widget.ListContentItemText>
+    <TextView
+        android:id="@+id/item_id_tiktok_on_keyguard_tips"
+        android:text="@string/tiktok_on_keyguard_tips"
+        style="@style/SettingItemTipsStyle"/>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

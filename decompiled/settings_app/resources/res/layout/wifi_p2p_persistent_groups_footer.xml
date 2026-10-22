@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:gravity="center_horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content">
+        <com.obric.oui.sectiontitlebar.OSectionTitleBar
+            android:id="@+id/wifi_p2p_persistent_groups_title"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            app:sectionTitle_titleText="@string/wifi_p2p_remembered_groups"
+            style="@style/OSectionTitleBar.S"/>
+        <obric.widget.ExtendListView
+            android:id="@+id/wifi_p2p_persistent_groups_list"
+            android:visibility="gone"
+            android:scrollbars="none"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@color/lock_pattern_background"
+            android:divider="@null"
+            android:overScrollMode="always"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:gravity="center_horizontal"
+    android:id="@+id/switches"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content">
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/wifi_keep_connection_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <obric.widget.ListContentItemSwitch
+                android:id="@+id/switch_keep_connection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:smtTitle="@string/wifi_keep_connection"
+                style="@style/ListContentItemStyle.Single"/>
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        </LinearLayout>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/wifi_cellular_data_fallback"
+            app:oui_list_item_title="@string/wifi_cellular_data_fallback_title"
+            style="@style/SettingSubItemSingleStyle"/>
+        <TextView
+            android:id="@+id/wifi_cellular_data_fallback_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi_cellular_data_fallback_tips"
+            style="@style/GroupListTipsViewStyle"/>
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/wifi_assistant_location_position"
+            app:oui_list_item_title="@string/wifi_assistant_location_position_title"
+            style="@style/SettingSubItemSingleStyle"/>
+        <TextView
+            android:id="@+id/wifi_assistant_location_position_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi_assistant_location_position_tips"
+            style="@style/GroupListTipsViewStyle"/>
+        <include layout="@layout/group_list_item_vertical_gap_layout"/>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/item_id_wifi_p2p"
+            android:layout_marginBottom="4dp"
+            app:oui_list_item_title="@string/wifi_p2p_settings_title"
+            style="@style/SettingSubItemSingleStyle"/>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/item_id_wifi_display"
+            app:oui_list_item_title="@string/wifi_display_settings_title"
+            style="@style/SettingSubItemSingleStyle"/>
+        <TextView
+            android:id="@+id/wifi_display_tips"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi_display_tips"
+            style="@style/GroupListTipsViewStyle"/>
+        <include
+            android:visibility="gone"
+            layout="@layout/group_list_item_vertical_gap_layout"/>
+        <ViewStub
+            android:id="@+id/advance_wifi_vs"
+            android:layout="@layout/common_settings_item_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_block_gap"/>
+        <com.obric.oui.lisitem.OListItemSettings
+            android:id="@+id/item_saved_wifi_settings"
+            android:visibility="gone"
+            app:oui_list_item_title="@string/trusted_network_list_title"
+            style="@style/SettingSubItemSingleStyle"/>
+    </LinearLayout>
+</RelativeLayout>

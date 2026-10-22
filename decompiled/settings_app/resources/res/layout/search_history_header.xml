@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:id="@+id/search_history"
+        android:paddingTop="104dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="24dp"
+        app:sectionTitle_titleText="@string/search_history"
+        style="@style/OSectionTitleBar.S"/>
+</LinearLayout>

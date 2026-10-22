@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:obric="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <obric.widget.MenuDialogTitleBar
+        android:id="@+id/menu_dialog_title_bar_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        obric:show_divider="false"/>
+    <obric.widget.DateTimePicker
+        android:id="@+id/date_time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_dialog_title_bar_parent"/>
+</RelativeLayout>

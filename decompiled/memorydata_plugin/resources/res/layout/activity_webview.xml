@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:forceDarkAllowed="false">
+    <FrameLayout
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.oui.text.OBaseTextView
+            android:textColor="@color/oui_basic_text_3b"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/errorView"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_load_fail"
+            style="@style/Title_Title_L"/>
+        <WebView
+            android:scrollbarThumbVertical="@drawable/o_scrollbar"
+            android:id="@+id/webView"
+            android:paddingTop="120dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/web_activity_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_defaultMaskBackground="true"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</FrameLayout>

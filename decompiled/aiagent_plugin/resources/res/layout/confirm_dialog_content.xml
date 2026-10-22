@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.text.OTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/oui_basic_text_2"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@+id/content_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Body_M"/>

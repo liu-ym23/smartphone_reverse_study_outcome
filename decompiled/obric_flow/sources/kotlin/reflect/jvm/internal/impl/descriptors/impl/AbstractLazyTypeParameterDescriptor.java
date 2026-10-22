@@ -1,0 +1,89 @@
+package kotlin.reflect.jvm.internal.impl.descriptors.impl;
+
+import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
+import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
+import kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker;
+import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
+import kotlin.reflect.jvm.internal.impl.name.Name;
+import kotlin.reflect.jvm.internal.impl.storage.StorageManager;
+import kotlin.reflect.jvm.internal.impl.types.Variance;
+
+/* JADX INFO: loaded from: classes3.dex */
+public abstract class AbstractLazyTypeParameterDescriptor extends AbstractTypeParameterDescriptor {
+    private static /* synthetic */ void $$$reportNull$$$0(int r5) {
+        Object[] r10 = new Object[3];
+        switch(r5) {
+            case 1: goto L10;
+            case 2: goto L9;
+            case 3: goto L8;
+            case 4: goto L7;
+            case 5: goto L6;
+            case 6: goto L5;
+            default: goto L4;
+        };
+    L4:
+        r10[0] = "storageManager";
+    L11:
+        r10[1] = "kotlin/reflect/jvm/internal/impl/descriptors/impl/AbstractLazyTypeParameterDescriptor";
+        r10[2] = "<init>";
+        throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", r10));
+    L5:
+        r10[0] = "supertypeLoopChecker";
+        goto L11
+    L6:
+        r10[0] = "source";
+        goto L11
+    L7:
+        r10[0] = "variance";
+        goto L11
+    L8:
+        r10[0] = "name";
+        goto L11
+    L9:
+        r10[0] = "annotations";
+        goto L11
+    L10:
+        r10[0] = "containingDeclaration";
+        goto L11
+    }
+
+    public AbstractLazyTypeParameterDescriptor(StorageManager r5, DeclarationDescriptor r10, Annotations r11, Name r12, Variance r13, boolean r14, int r15, SourceElement r16, SupertypeLoopChecker r17) {
+        if (r5 != null) goto L4;
+        $$$reportNull$$$0(0);
+    L4:
+        if (r10 != null) goto L6;
+        $$$reportNull$$$0(1);
+    L6:
+        if (r11 != null) goto L8;
+        $$$reportNull$$$0(2);
+    L8:
+        if (r12 != null) goto L10;
+        $$$reportNull$$$0(3);
+    L10:
+        if (r13 != null) goto L12;
+        $$$reportNull$$$0(4);
+    L12:
+        if (r16 != null) goto L14;
+        $$$reportNull$$$0(5);
+    L14:
+        if (r17 != null) goto L16;
+        $$$reportNull$$$0(6);
+    L16:
+        super(r5, r10, r11, r12, r13, r14, r15, r16, r17);
+    }
+
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.DeclarationDescriptorImpl
+    public String toString() {
+        String r5 = "";
+        if (isReified() == false) goto L5;
+        String r10 = "reified ";
+    L7:
+        if (getVariance() == Variance.INVARIANT) goto L11;
+        r5 = getVariance() + " ";
+    L11:
+        return r10 + r5 + getName();
+    L5:
+        r10 = "";
+        goto L7
+    }
+}

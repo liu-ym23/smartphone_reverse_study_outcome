@@ -1,0 +1,92 @@
+package org.bouncycastle.asn1.nsri;
+
+import com.bytedance.bdlocation.exception.BDLocationException;
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+
+/* JADX INFO: loaded from: classes7.dex */
+public interface NSRIObjectIdentifiers {
+    public static final ASN1ObjectIdentifier id_algorithm = null;
+    public static final ASN1ObjectIdentifier id_aria128_cbc = null;
+    public static final ASN1ObjectIdentifier id_aria128_ccm = null;
+    public static final ASN1ObjectIdentifier id_aria128_cfb = null;
+    public static final ASN1ObjectIdentifier id_aria128_cmac = null;
+    public static final ASN1ObjectIdentifier id_aria128_ctr = null;
+    public static final ASN1ObjectIdentifier id_aria128_ecb = null;
+    public static final ASN1ObjectIdentifier id_aria128_gcm = null;
+    public static final ASN1ObjectIdentifier id_aria128_kw = null;
+    public static final ASN1ObjectIdentifier id_aria128_kwp = null;
+    public static final ASN1ObjectIdentifier id_aria128_ocb2 = null;
+    public static final ASN1ObjectIdentifier id_aria128_ofb = null;
+    public static final ASN1ObjectIdentifier id_aria192_cbc = null;
+    public static final ASN1ObjectIdentifier id_aria192_ccm = null;
+    public static final ASN1ObjectIdentifier id_aria192_cfb = null;
+    public static final ASN1ObjectIdentifier id_aria192_cmac = null;
+    public static final ASN1ObjectIdentifier id_aria192_ctr = null;
+    public static final ASN1ObjectIdentifier id_aria192_ecb = null;
+    public static final ASN1ObjectIdentifier id_aria192_gcm = null;
+    public static final ASN1ObjectIdentifier id_aria192_kw = null;
+    public static final ASN1ObjectIdentifier id_aria192_kwp = null;
+    public static final ASN1ObjectIdentifier id_aria192_ocb2 = null;
+    public static final ASN1ObjectIdentifier id_aria192_ofb = null;
+    public static final ASN1ObjectIdentifier id_aria256_cbc = null;
+    public static final ASN1ObjectIdentifier id_aria256_ccm = null;
+    public static final ASN1ObjectIdentifier id_aria256_cfb = null;
+    public static final ASN1ObjectIdentifier id_aria256_cmac = null;
+    public static final ASN1ObjectIdentifier id_aria256_ctr = null;
+    public static final ASN1ObjectIdentifier id_aria256_ecb = null;
+    public static final ASN1ObjectIdentifier id_aria256_gcm = null;
+    public static final ASN1ObjectIdentifier id_aria256_kw = null;
+    public static final ASN1ObjectIdentifier id_aria256_kwp = null;
+    public static final ASN1ObjectIdentifier id_aria256_ocb2 = null;
+    public static final ASN1ObjectIdentifier id_aria256_ofb = null;
+    public static final ASN1ObjectIdentifier id_pad = null;
+    public static final ASN1ObjectIdentifier id_pad_1 = null;
+    public static final ASN1ObjectIdentifier id_pad_null = null;
+    public static final ASN1ObjectIdentifier id_sea = null;
+    public static final ASN1ObjectIdentifier nsri = null;
+
+    static {
+        ASN1ObjectIdentifier r0 = new ASN1ObjectIdentifier("1.2.410.200046");
+        nsri = r0;
+        ASN1ObjectIdentifier r1 = r0.branch("1");
+        id_algorithm = r1;
+        ASN1ObjectIdentifier r2 = r1.branch("1");
+        id_sea = r2;
+        id_pad = r1.branch("2");
+        id_pad_null = r1.branch("0");
+        id_pad_1 = r1.branch("1");
+        id_aria128_ecb = r2.branch("1");
+        id_aria128_cbc = r2.branch("2");
+        id_aria128_cfb = r2.branch("3");
+        id_aria128_ofb = r2.branch("4");
+        id_aria128_ctr = r2.branch("5");
+        id_aria192_ecb = r2.branch("6");
+        id_aria192_cbc = r2.branch("7");
+        id_aria192_cfb = r2.branch("8");
+        id_aria192_ofb = r2.branch("9");
+        id_aria192_ctr = r2.branch("10");
+        id_aria256_ecb = r2.branch("11");
+        id_aria256_cbc = r2.branch("12");
+        id_aria256_cfb = r2.branch("13");
+        id_aria256_ofb = r2.branch("14");
+        id_aria256_ctr = r2.branch("15");
+        id_aria128_cmac = r2.branch("21");
+        id_aria192_cmac = r2.branch(BDLocationException.ERROR_AMAP_FAIL);
+        id_aria256_cmac = r2.branch("23");
+        id_aria128_ocb2 = r2.branch("31");
+        id_aria192_ocb2 = r2.branch(BDLocationException.ERROR_CONNECT_GOOGLE_FAIL);
+        id_aria256_ocb2 = r2.branch("33");
+        id_aria128_gcm = r2.branch(BDLocationException.ERROR_ABNORMAL_NETWORK);
+        id_aria192_gcm = r2.branch("35");
+        id_aria256_gcm = r2.branch(BDLocationException.ERROR_BACKGROUND_LOCATE);
+        id_aria128_ccm = r2.branch("37");
+        id_aria192_ccm = r2.branch(BDLocationException.ERROR_DISPUTED_AREA);
+        id_aria256_ccm = r2.branch("39");
+        id_aria128_kw = r2.branch(BDLocationException.ERROR_MULTI_THREAD_LOCATE);
+        id_aria192_kw = r2.branch("41");
+        id_aria256_kw = r2.branch("42");
+        id_aria128_kwp = r2.branch("43");
+        id_aria192_kwp = r2.branch(BDLocationException.ERROR_BYTE_DISABLE_USE_WIFI);
+        id_aria256_kwp = r2.branch("45");
+    }
+}

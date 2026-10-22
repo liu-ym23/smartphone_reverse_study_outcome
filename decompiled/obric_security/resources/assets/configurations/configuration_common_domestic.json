@@ -1,0 +1,22 @@
+{
+  "ipConfig": {
+    "tcpHost": "rcpc-sdk-access-v4.m.qq.com:8002",
+    "tcpDefaultIpPortCm": "120.232.24.122:8002",
+    "tcpDefaultIpPortCu": "157.255.5.122:8002",
+    "tcpDefaultIpPortCt": "14.18.251.115:8002",
+    "httpUrl": "https://rcpc-sdk-access.m.qq.com",
+    "tcpHostV6": "rcpc-sdk-access-v6.m.qq.com:8002",
+    "tcpDefaultIpPortCmV6": "2409:8c54:871:4::49:8002",
+    "tcpDefaultIpPortCuV6": "2408:8756:f50:1::92:8002",
+    "tcpDefaultIpPortCtV6": "240e:97c:2f:4::5e:8002",
+    "httpUrlV6": "https://rcpc-sdk-access.m.qq.com",
+    "ipv4list": [],
+    "ipv6list": []
+  },
+  "wifiDetect": {
+    "urlApprove": "https://api.wifisafe.tencentsecsdk.com/wifi/cw.html",
+    "detectSSLStripTestUrl": "http://api.wifisafe.tencentsecsdk.com/j/sslstrip",
+    "safeRedirectDomain": "http://m.qq.com",
+    "miwifiDiagnosisUrl": "http://miwifi.com/diagnosis/index.html"
+  }
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/lock_screen_mode_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/mode_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_alignParentBottom="true">
+        <obric.widget.SettingItemText
+            android:id="@+id/item_mode_none"
+            android:background="@drawable/selector_setting_sub_item_bg_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_item_top_bottom_margin"
+            android:title="@string/lock_screen_mode_none"
+            app:subTitleFontSize="@dimen/settings_item_title_size"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/item_mode_password_easy"
+            android:background="@drawable/selector_setting_sub_item_bg_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/lock_screen_mode_password_easy"
+            app:subTitleFontSize="@dimen/settings_item_title_size"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/item_mode_password_hard"
+            android:background="@drawable/selector_setting_sub_item_bg_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/lock_screen_mode_password_hard"
+            app:subTitleFontSize="@dimen/settings_item_title_size"/>
+        <obric.widget.SettingItemText
+            android:id="@+id/item_mode_pattern"
+            android:background="@drawable/selector_setting_sub_item_bg_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/lock_screen_mode_pattern"
+            app:subTitleFontSize="@dimen/settings_item_title_size"/>
+        <include layout="@layout/item_bottom_shadow_layout"/>
+    </LinearLayout>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gradient xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:type="linear"
+    android:startX="180"
+    android:startY="0"
+    android:endX="180"
+    android:endY="120">
+    <item
+        android:color="@color/oui_advanced_gradient_immersive_s4"
+        android:offset="0"/>
+    <item
+        android:color="@color/oui_advanced_gradient_immersive_s4"
+        android:offset="0.5"/>
+    <item
+        android:color="@color/oui_advanced_gradient_immersive_s3"
+        android:offset="0.6"/>
+    <item
+        android:color="@color/oui_advanced_gradient_immersive_s2"
+        android:offset="0.75"/>
+    <item
+        android:color="@color/Transparent"
+        android:offset="1"/>
+</gradient>

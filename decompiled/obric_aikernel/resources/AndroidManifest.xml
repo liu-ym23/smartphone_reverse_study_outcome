@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="500010400"
+    android:versionName="5.0.1.4.0"
+    android:compileSdkVersion="33"
+    android:compileSdkVersionCodename="13"
+    package="com.obric.aikernel"
+    platformBuildVersionCode="33"
+    platformBuildVersionName="13">
+    <uses-sdk
+        android:minSdkVersion="29"
+        android:targetSdkVersion="35"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <permission
+        android:name="com.obric.aikernel.AIKernelService.permission"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="android.permission.MANAGE_ROLE_HOLDERS"/>
+    <uses-permission android:name="android.permission.OBSERVE_ROLE_HOLDERS"/>
+    <uses-permission android:name="com.obric.assist.permission.ENABLE_DISABLE_ASSIST"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="com.bytedance.securityserver.ACCESS_PROVISION"/>
+    <queries>
+        <package android:name="com.bytedance.securityserver"/>
+        <package android:name="com.obric.aikernel"/>
+        <package android:name="com.larus.nova"/>
+        <package android:name="com.obric.matrix"/>
+        <package android:name="com.obric.downloadserver"/>
+    </queries>
+    <meta-data
+        android:name="com.miui.bugreport.LOG_DIR"
+        android:resource="@xml/log_paths"/>
+    <uses-permission android:name="com.miui.bugreport.permission.DUMP_CACHED_LOG"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.obric.aikernel.AIKernelService.permission"/>
+    <permission
+        android:name="obric.permission.PROCESS_SERVICE_CLIENT"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="obric.permission.PROCESS_SERVICE"/>
+    <uses-permission android:name="obric.permission.PROCESS_SERVICE_CLIENT"/>
+    <uses-permission android:name="slardaros.intent.permission"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.obric.account.NAVIGATE"/>
+    <uses-permission android:name="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"/>
+    <uses-permission android:name="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <permission
+        android:name="com.obric.aikernel.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.obric.aikernel.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <permission
+        android:name="com.obric.olog.ACCESS_LOG_COMPRESSION_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.obric.downloadserver.permission.USE_DOWNLOAD_SERVICE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:theme="@style/Theme.AIKernel"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.obric.aikernel.AIKernelApplication"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:usesNonSdkApi="true">
+        <service
+            android:name="com.obric.aikernel.AIKernelService"
+            android:permission="com.obric.aikernel.AIKernelService.permission"
+            android:exported="true"/>
+        <meta-data
+            android:name="teatracker_app_id"
+            android:value="@string/app_id"/>
+        <meta-data
+            android:name="UPDATE_VERSION_CODE"
+            android:value="500010400"/>
+        <service
+            android:name="com.obric.aikernel.LifeCycleService"
+            android:exported="true"/>
+        <service
+            android:name="com.obric.aikernel.InferLifeCycleService"
+            android:exported="true"
+            android:process=":infer"/>
+        <service
+            android:name="com.obric.aikernel.LLMLifeCycleService"
+            android:exported="true"
+            android:process=":llm"/>
+        <provider
+            android:name="com.obric.aikernel.AuthProvider"
+            android:exported="true"
+            android:authorities="com.obric.aikernel.service.auth;com.obric.aikernel.provider.AIKernelCommonProvider"/>
+        <provider
+            android:name="com.obric.aikernel.MultiProcHandler"
+            android:exported="false"
+            android:authorities="com.obric.aikernel.multiproc.main.handler"/>
+        <service
+            android:name="com.obric.aikernel.multiusr.AIKernelServiceEntry"
+            android:exported="false"
+            android:singleUser="true"/>
+        <service
+            android:name="com.obric.aikernel.multiusr.LifeCycleServiceEntry"
+            android:exported="false"
+            android:singleUser="true"/>
+        <service
+            android:name="com.obric.aikernel.multiusr.InferLifeCycleServiceEntry"
+            android:exported="false"
+            android:process=":infer"
+            android:singleUser="true"/>
+        <service
+            android:name="com.obric.aikernel.multiusr.LLMLifeCycleServiceEntry"
+            android:exported="false"
+            android:process=":llm"
+            android:singleUser="true"/>
+        <provider
+            android:name="com.obric.aikernel.multiusr.AuthProviderEntry"
+            android:exported="false"
+            android:authorities="com.obric.aikernel.service.auth.multiuser"
+            android:singleUser="true"/>
+        <uses-native-library
+            android:name="libOpenCL.so"
+            android:required="false"/>
+        <uses-native-library
+            android:name="libcdsprpc.so"
+            android:required="false"/>
+        <provider
+            android:name="com.obric.aikernel.multiproc.GeneralInferProvider"
+            android:exported="false"
+            android:process=":infer"
+            android:authorities="aikernel.inner.infer.general"/>
+        <provider
+            android:name="com.obric.aikernel.multiproc.LLMInferProvider"
+            android:exported="false"
+            android:process=":llm"
+            android:authorities="aikernel.inner.infer.llm"/>
+        <service
+            android:name="com.obric.aikernel.legacy.InferService"
+            android:permission="com.obric.aikernel.AIKernelService.permission"
+            android:exported="false"
+            android:process=":infer"/>
+        <service
+            android:name="com.obric.aikernel.service.session.inr.TriggerAnrService"
+            android:exported="false"/>
+        <service
+            android:name="com.obric.aikernel.multiproc.InferProcDumpEntry"
+            android:exported="false"
+            android:process=":infer"/>
+        <service
+            android:name="com.obric.aikernel.multiproc.InferForegroundService"
+            android:exported="false"
+            android:process=":infer"
+            android:foregroundServiceType="dataSync"/>
+        <service
+            android:name="com.obric.aikernel.multiproc.LLMProcDumpEntry"
+            android:exported="false"
+            android:process=":llm"/>
+        <service
+            android:name="com.obric.aikernel.multiproc.LLMForegroundService"
+            android:exported="false"
+            android:process=":llm"
+            android:foregroundServiceType="dataSync"/>
+        <service
+            android:name="com.obric.aikernel.service.res.DownloadForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+        <provider
+            android:name="com.obric.aikernel.model_preset.impl.ipc.PresetDecryptIPCProvider"
+            android:exported="false"
+            android:authorities="com.obric.aikernel.preset_decrypt.api"/>
+        <meta-data
+            android:name="com.miui.bugreport.DEFAULT_LOG_DIR"
+            android:resource="@xml/default_log_paths"/>
+        <provider
+            android:name="com.miui.bugreport.logprovider.DumpLogProvider"
+            android:permission="com.miui.bugreport.permission.DUMP_CACHED_LOG"
+            android:exported="true"
+            android:authorities="com.obric.aikernel.provider.bugreport">
+            <intent-filter>
+                <action android:name="com.miui.bugreport.intent.ACTION_DUMP_CACHED_LOG"/>
+            </intent-filter>
+        </provider>
+        <service
+            android:name="com.obric.processsdk.KeepAliveService"
+            android:permission="obric.permission.PROCESS_SERVICE_CLIENT"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.aikernel.KeepAliveService"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.obric.processsdk.wakeup.WakeUpReceiver"
+            android:permission="obric.permission.PROCESS_SERVICE_CLIENT"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.aikernel.WAKE_UP"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService"
+            android:exported="false"
+            android:process=":downloader">
+            <intent-filter>
+                <action android:name="com.ss.android.socialbase.downloader.remote"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.DownloadService"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService"
+            android:stopWithTask="true"/>
+        <provider
+            android:name="com.obric.matrix.platform.sdk.ones.ws.WsMsgProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.obric.matrix.platform.sdk.ones.provider.com.obric.aikernel"/>
+        <receiver
+            android:name="com.bytedance.applog.collector.Collector"
+            android:enabled="true"
+            android:exported="false"/>
+        <provider
+            android:name="com.bytedance.apm.battery.dao.MonitorContentProvider"
+            android:exported="false"
+            android:authorities="com.obric.aikernel.apm"/>
+        <activity android:name="com.bytedance.bdinstall.migrate.MigrateDetectorActivity"/>
+        <provider
+            android:name="com.bytedance.bdinstall.BDInstallProvider"
+            android:exported="false"
+            android:authorities="com.obric.aikernel.bdinstall.provider"/>
+        <service
+            android:name="com.bytedance.common.wschannel.server.WsChannelService"
+            android:exported="false"
+            android:process=":push"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.bytedance.common.wschannel.client.WsClientService"
+            android:exported="false"
+            android:stopWithTask="true"/>
+        <provider
+            android:name="com.bytedance.common.wschannel.WsChannelMultiProcessSharedProvider"
+            android:exported="false"
+            android:authorities="com.obric.aikernel.WsChannelMultiProcessSharedProvider"/>
+        <provider
+            android:name="com.bytedance.apm.util.MultiProcessSharedPreferences"
+            android:exported="false"
+            android:authorities="com.obric.aikernel.apm6"/>
+        <service
+            android:name="com.bytedance.memory.upload.MemoryUploadService"
+            android:exported="false"
+            android:process=":apm_memory_upload"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.obric.aikernel.androidx-startup">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.obric.olog.salvage.LogCompressionProvider"
+            android:exported="true"
+            android:authorities="com.obric.aikernel.logcompressionprovider"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name="com.obric.oui.window.permission.PrivacyStatementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.oui.window.permission.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

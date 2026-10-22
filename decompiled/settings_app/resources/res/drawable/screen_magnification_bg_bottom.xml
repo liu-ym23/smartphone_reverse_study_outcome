@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/settings_container_item_horizontal_padding"
+        android:right="@dimen/settings_container_item_horizontal_padding">
+        <shape>
+            <solid android:color="@color/oui_fill_list_item_card"/>
+            <corners
+                android:bottomLeftRadius="20dp"
+                android:bottomRightRadius="20dp"/>
+        </shape>
+    </item>
+</layer-list>

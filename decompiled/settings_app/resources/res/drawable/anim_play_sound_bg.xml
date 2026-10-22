@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item
+        android:duration="650"
+        android:drawable="@drawable/settings_oic_speaker_wave_1_fill"/>
+    <item
+        android:duration="650"
+        android:drawable="@drawable/settings_oic_speaker_wave_2_fill"/>
+    <item
+        android:duration="650"
+        android:drawable="@drawable/settings_oic_speaker_wave_3_fill"/>
+</animation-list>

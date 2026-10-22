@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dlg_section_vertical_space"
+    android:paddingBottom="@dimen/dlg_section_vertical_space"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/et_custom_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/DialogPatternEditText"/>
+    <TextView
+        android:id="@+id/et_custom_key_tips"
+        android:visibility="gone"
+        android:layout_marginBottom="0dp"
+        android:text="@string/custom_key_tips"
+        style="@style/SettingItemTipsStyle"/>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <vector
+            android:height="24dp"
+            android:width="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="#000000"
+                android:pathData="M8,10.667L16.445,5.037C17.11,4.594 18,5.07 18,5.869L18,18.132C18,18.93 17.11,19.407 16.445,18.964L8,13.333L8,18C8,18.552 7.552,19 7,19C6.448,19 6,18.552 6,18L6,6C6,5.448 6.448,5 7,5C7.552,5 8,5.448 8,6L8,10.667Z"
+                android:fillType="evenOdd"/>
+        </vector>
+    </item>
+    <item android:state_pressed="true">
+        <vector
+            android:height="24dp"
+            android:width="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="#000000"
+                android:pathData="M8,10.667L16.445,5.037C17.11,4.594 18,5.07 18,5.869L18,18.132C18,18.93 17.11,19.407 16.445,18.964L8,13.333L8,18C8,18.552 7.552,19 7,19C6.448,19 6,18.552 6,18L6,6C6,5.448 6.448,5 7,5C7.552,5 8,5.448 8,6L8,10.667Z"
+                android:strokeAlpha="0.4"
+                android:fillAlpha="0.4"
+                android:fillType="evenOdd"/>
+        </vector>
+    </item>
+</selector>

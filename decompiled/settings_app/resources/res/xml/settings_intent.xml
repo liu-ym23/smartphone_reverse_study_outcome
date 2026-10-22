@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<intents>
+    <intent
+        impl="com.android.settings.intent.SwitchModeIntent"
+        name="System_SwitchMode"/>
+    <intent
+        impl="com.android.settings.intent.SwitchNotificationIntent"
+        name="System_SwitchNotification"/>
+    <intent
+        impl="com.android.settings.intent.SetVolumeIntent"
+        name="System_SetVolume"/>
+    <intent
+        impl="com.android.settings.intent.SetBrightnessIntent"
+        name="System_SetBrightness"/>
+    <intent
+        impl="com.android.settings.intent.AdjustVolumeIntent"
+        name="System_AdjustVolume"/>
+    <intent
+        impl="com.android.settings.intent.AdjustBrightnessIntent"
+        name="System_AdjustBrightness"/>
+    <intent
+        impl="com.android.settings.intent.SettingsAvailableIntent"
+        name="System_SettingsAvailable"/>
+    <intent
+        impl="com.android.settings.intent.PowerLockControlIntent"
+        name="System_PowerLockControl"/>
+    <intent
+        impl="com.android.settings.intent.DeviceStateIntent"
+        name="System_DeviceState"/>
+</intents>

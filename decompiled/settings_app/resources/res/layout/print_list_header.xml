@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/item_profile"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginBottom="@dimen/dimen_16"
+        app:ocardlistitem_defaultTailIcon="tail_chevron"
+        app:ocardlistitem_showSubTitle="false"
+        app:ocardlistitem_title="@string/choose_profile"
+        style="@style/OCardListItemTextSingle"/>
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:id="@+id/print_job_title"
+        android:layout_marginHorizontal="32dp"
+        app:sectionTitle_titleText="@string/print_service_title"
+        style="@style/OSectionTitleBar.S"/>
+</LinearLayout>

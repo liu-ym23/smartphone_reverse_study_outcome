@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:paddingVertical="8dp">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_basic_text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_list_history_separator"
+        android:layout_marginHorizontal="11dp"
+        style="@style/Subtitle_2_Medium"/>
+</LinearLayout>

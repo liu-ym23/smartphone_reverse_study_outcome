@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:setting="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/choose_bot_id"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_view"
+        android:scrollbars="none"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/view_title"
+        app:layout_behavior="com.android.settings.widget.HomepageAppBarScrollingViewBehavior"
+        style="@style/ListViewGeneralStyle"/>
+</RelativeLayout>

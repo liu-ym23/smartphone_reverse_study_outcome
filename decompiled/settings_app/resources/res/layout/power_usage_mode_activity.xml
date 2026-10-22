@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/power_usage_save_mode"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:overScrollMode="always"
+        android:importantForAccessibility="no">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no">
+            <obric.widget.ListContentItemSwitch
+                android:id="@+id/power_usage_low_battery_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:smtTitle="@string/power_usage_low_battery_mode"
+                style="@style/ListContentItemStyle.Single"/>
+            <TextView
+                android:layout_marginTop="5.3dp"
+                android:text="@string/power_usage_low_battery_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <obric.widget.ListContentItemSwitch
+                android:id="@+id/power_usage_feature_phone_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:smtTitle="@string/power_usage_feature_phone_mode"
+                style="@style/ListContentItemStyle.Single"/>
+            <TextView
+                android:layout_marginTop="5.3dp"
+                android:text="@string/power_usage_feature_phone_tips"
+                style="@style/SettingItemTipsStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

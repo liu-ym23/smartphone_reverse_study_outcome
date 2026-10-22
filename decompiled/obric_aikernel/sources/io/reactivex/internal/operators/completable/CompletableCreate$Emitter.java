@@ -1,0 +1,95 @@
+package io.reactivex.internal.operators.completable;
+
+import io.reactivex.disposables.b;
+import io.reactivex.internal.disposables.CancellableDisposable;
+import io.reactivex.internal.disposables.DisposableHelper;
+import java.util.concurrent.atomic.AtomicReference;
+import zb.f;
+
+/* JADX INFO: loaded from: classes2.dex */
+final class CompletableCreate$Emitter extends AtomicReference<b> implements b {
+    private static final long serialVersionUID = -2467358622224974244L;
+    final xb.b downstream;
+
+    CompletableCreate$Emitter(xb.b r10) {
+        this.downstream = r10;
+    }
+
+    @Override // io.reactivex.disposables.b
+    public void dispose() {
+        DisposableHelper.dispose(this);
+    }
+
+    @Override // io.reactivex.disposables.b
+    public boolean isDisposed() {
+        return DisposableHelper.isDisposed(get());
+    }
+
+    public void onComplete() {
+        b r10 = get();
+        DisposableHelper r11 = DisposableHelper.DISPOSED;
+        if (r10 == r11) goto L13;
+        b r12 = getAndSet(r11);
+        if (r12 == r11) goto L16;
+        this.downstream.onComplete();     // Catch: Throwable -> L9
+        if (r12 == null) goto L17;
+        r12.dispose();
+        return;
+    L17:
+        return;
+    L9:
+        th = move-exception;
+        if (r12 == null) goto L12;
+        r12.dispose();
+    L12:
+        throw th;
+    L16:
+        return;
+    }
+
+    public void onError(Throwable r10) {
+        if (tryOnError(r10) == true) goto L6;
+        dc.a.n(r10);
+        return;
+    }
+
+    public void setCancellable(f r10) {
+        setDisposable(new CancellableDisposable(r10));
+    }
+
+    public void setDisposable(b r10) {
+        DisposableHelper.set(this, r10);
+    }
+
+    @Override // java.util.concurrent.atomic.AtomicReference
+    public String toString() {
+        return String.format("%s{%s}", new Object[]{CompletableCreate$Emitter.class.getSimpleName(), super.toString()});
+    }
+
+    public boolean tryOnError(Throwable r10) {
+        if (r10 != null) goto L4;
+        r10 = new NullPointerException("onError called with null. Null values are generally not allowed in 2.x operators and sources.");
+    L4:
+        b r11 = get();
+        DisposableHelper r12 = DisposableHelper.DISPOSED;
+        if (r11 == r12) goto L17;
+        b r13 = getAndSet(r12);
+        if (r13 == r12) goto L22;
+        this.downstream.onError(r10);     // Catch: Throwable -> L13
+        if (r13 == null) goto L21;
+        r13.dispose();
+        return true;
+    L21:
+        return true;
+    L13:
+        th = move-exception;
+        if (r13 == null) goto L16;
+        r13.dispose();
+    L16:
+        throw th;
+    L22:
+        return false;
+    L17:
+        return false;
+    }
+}

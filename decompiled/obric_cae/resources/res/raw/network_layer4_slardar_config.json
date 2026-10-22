@@ -1,0 +1,60 @@
+{
+    "business_type": "wifi",
+    "type": 0,
+    "l4net_evaluate_settings": {
+        "up_retrans_err_time_period": 3,
+        "up_retrans_err_times_threshold": 3,
+        "up_retrans_err_send_retrans_threshold": 10,
+        "up_retrans_err_tx_rx_pkt_num_threshold": 10,
+        "up_retrans_err_unacked_threshold": 12,
+        "retrans_err_time_period": 5,
+        "retrans_err_times_threshold": 3,
+        "retrans_err_low_retrans_threshold": 20,
+        "retrans_err_high_retrans_threshold": 50,
+        "retrans_err_rx_low_retrans_threshold": 50,
+        "retrans_err_rx_high_retrans_threshold": 75,
+        "retrans_err_low_pkt_num_threshold": 10,
+        "retrans_err_high_pkt_num_threshold": 20,
+        "foreground_app_no_download_err_time_period": 6,
+        "foreground_app_no_download_err_times_threshold": 3,
+        "rtt_err_rtt_threshold": 700,
+        "rtt_err_rate_threshold": 128000,
+        "no_download_err_time_period": 8,
+        "no_download_err_times_threshold": 4,
+        "qos_bad_err_time_period": 3,
+        "qos_bad_err_times_threshold": 3,
+        "qos_bad_err_rtt_threshold": 750,
+        "qos_bad_err_recv_retrans_threshold": 25,
+        "qos_bad_err_send_retrans_threshold": 30,
+        "qos_bad_err_tx_rx_pkt_num_threshold": 10,
+        "white_list":"[\"com.ss.android.ugc.aweme\", \"com.ss.android.lark\", \"com.ss.android.article.news\", \"com.larus.nova\", \"com.ss.android.article.video\", \"com.ss.android.auto\", \"com.luna.music\", \"com.tencent.mm\", \"com.qiyi.video\", \"com.dianping.v1\", \"com.autonavi.minimap\", \"ctrip.android.view\", \"com.xingin.xhs\", \"com.tencent.qqlive\"]",
+        "ticket_grabbing_white_list": "[\"cn.damai\", \"com.MobileTicket\"]",
+        "accelerate_app_whitelist": [
+            {
+                "package_name": "cn.damai",
+                "acc_activities": [
+                    { "comment": "大麦票的详情界面", "activity": "cn.damai.trade.newtradeorder.ui.projectdetail.ui.activity.ProjectDetailActivity" },
+                    { "comment": "大麦选座位等级界面", "activity": "cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuActivity" },
+                    { "comment": "大麦付款界面", "activity": "cn.damai.ultron.view.activity.DmOrderActivity" },
+                    { "comment": "大麦选座位号界面", "activity": "cn.damai.seat.ui.TSeatActivity" }
+                ]
+            },
+            {
+                "package_name": "com.MobileTicket",
+                "acc_activities": [
+                    { "comment": "预订购票界面", "activity": "com.MobileTicket/com.alipay.mobile.nebulacore.ui.H5Activity" }
+                ]
+            }
+        ],
+        "vip_strategy_settings": {
+            "vip_network_enable": true,
+            "wifi_msc_set_value": 7,
+            "black_list": "[\"com.baidu.netdisk\", \"com.xunlei.downloadprovider\"]"
+        }
+    },
+    "cellular_qoe_evaluate_settings": {
+        "pdcp_up_throughput_threshold": 1250000,
+        "pdcp_up_loss_rate_high_threshold": 20,
+        "pdcp_up_loss_rate_low_threshold": 10
+    }
+}

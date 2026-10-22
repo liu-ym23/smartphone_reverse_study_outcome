@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<intents>
+    <intent name="Contacts_Search"/>
+    <intent name="Contacts_Create"/>
+    <intent name="Contacts_Update"/>
+    <intent name="Contacts_AddToFavorite"/>
+    <intent name="Contacts_AddToBlocklist"/>
+    <intent name="Phone_Search"/>
+    <intent name="Clock_CreateAlarm"/>
+    <intent name="Clock_DeleteAlarm"/>
+    <intent name="Clock_UpdateAlarm"/>
+    <intent name="Clock_TurnOffAlarm"/>
+    <intent name="Clock_TurnOnAlarm"/>
+    <intent name="Clock_StartCountdown"/>
+    <intent name="Clock_PauseCountdown"/>
+    <intent name="Clock_ResumeCountdown"/>
+    <intent name="Notes_Create"/>
+    <intent name="Notes_Update"/>
+    <intent name="Messages_Search"/>
+    <intent name="Messages_Send"/>
+    <intent name="System_InAppSearch"/>
+    <intent name="System_UserConfirm"/>
+    <intent name="System_UserSelect"/>
+    <intent name="System_MultiUserSelect"/>
+    <intent name="Memory_Produce"/>
+    <intent name="Memory_Operate"/>
+    <intent name="Memory_OperateNew"/>
+    <intent name="Office_SearchMeeting"/>
+    <intent name="Weather_Search"/>
+    <intent name="Calculator_Calculate"/>
+    <intent name="Office_BookMeeting"/>
+    <intent name="Office_SendMessage"/>
+    <intent name="Recorder_Operate"/>
+    <intent name="Recorder_Delete"/>
+    <intent name="Photo_Search"/>
+    <intent name="System_DownloadApp"/>
+</intents>

@@ -1,0 +1,67 @@
+package com.obric.memorydata.memory.ui.list;
+
+import com.obric.memorydata.middleware.api.log.RunLog;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+
+/* JADX INFO: loaded from: classes5.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 0, 0}, xi = 48)
+@DebugMetadata(c = "com.obric.memorydata.memory.ui.list.MemoryWidgetProvider$Companion$doLoadDataAndUpdateWidgets$2", f = "MemoryWidgetProvider.kt", i = {}, l = {223}, m = "invokeSuspend", n = {}, s = {})
+final class MemoryWidgetProvider$Companion$doLoadDataAndUpdateWidgets$2 extends SuspendLambda implements Function2<kotlinx.coroutines.al, Continuation<? super Unit>, Object> {
+    int label;
+
+    MemoryWidgetProvider$Companion$doLoadDataAndUpdateWidgets$2(Continuation<? super MemoryWidgetProvider$Companion$doLoadDataAndUpdateWidgets$2> r3) {
+        super(2, (Continuation) ZeusTransformUtils.wrapperContextForParams(r3, Continuation.class, "com.obric.memorydata.plugin"));
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object r1, Continuation<?> r2) {
+        return (Continuation) ZeusTransformUtils.preCheckCast(new MemoryWidgetProvider$Companion$doLoadDataAndUpdateWidgets$2((Continuation) ZeusTransformUtils.wrapperContextForParams(r2, Continuation.class, "com.obric.memorydata.plugin")), Continuation.class, "com.obric.memorydata.plugin");
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public /* synthetic */ Object invoke(kotlinx.coroutines.al r3, Continuation<? super Unit> r4) {
+        return invoke2((kotlinx.coroutines.al) ZeusTransformUtils.preCheckCast(r3, kotlinx.coroutines.al.class, "com.obric.memorydata.plugin"), (Continuation) ZeusTransformUtils.preCheckCast(r4, Continuation.class, "com.obric.memorydata.plugin"));
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Object invoke2(kotlinx.coroutines.al r3, Continuation<? super Unit> r4) {
+        return ((MemoryWidgetProvider$Companion$doLoadDataAndUpdateWidgets$2) ZeusTransformUtils.preCheckCast(create((kotlinx.coroutines.al) ZeusTransformUtils.wrapperContextForParams(r3, kotlinx.coroutines.al.class, "com.obric.memorydata.plugin"), (Continuation) ZeusTransformUtils.wrapperContextForParams(r4, Continuation.class, "com.obric.memorydata.plugin")), MemoryWidgetProvider$Companion$doLoadDataAndUpdateWidgets$2.class, "com.obric.memorydata.plugin")).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r5) {
+        Object r0 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int r1 = this.label;
+        if (r1 == 0) goto L11;
+        if (r1 != 1) goto L10;
+        ResultKt.throwOnFailure(r5);     // Catch: Exception -> L7
+    L15:
+        al.e r4 = (al.e) ZeusTransformUtils.preCheckCast(r5, al.e.class, "com.obric.memorydata.plugin");     // Catch: Exception -> L7
+        al.a.a(al.f11186a, r4);     // Catch: Exception -> L7
+        al.a.a(al.f11186a);     // Catch: Exception -> L7
+    L19:
+        return Unit.INSTANCE;
+    L10:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    L11:
+        ResultKt.throwOnFailure(r5);
+        al.a r6 = al.f11186a;     // Catch: Exception -> L7
+        Continuation r2 = (Continuation) ZeusTransformUtils.preCheckCast(this, Continuation.class, "com.obric.memorydata.plugin");     // Catch: Exception -> L7
+        this.label = 1;     // Catch: Exception -> L7
+        r5 = al.a.b(r6, r2);     // Catch: Exception -> L7
+        if (r5 != r0) goto L15;
+        return r0;
+    L7:
+        e = move-exception;
+        RunLog.INSTANCE.error("MemoryWidgetProvider", "failed to load data and update widgets", (Throwable) ZeusTransformUtils.preCheckCast(e, Throwable.class, "com.obric.memorydata.plugin"));
+        goto L19
+    }
+}

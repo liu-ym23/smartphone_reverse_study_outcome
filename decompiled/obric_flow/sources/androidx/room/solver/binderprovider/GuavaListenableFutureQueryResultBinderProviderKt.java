@@ -1,0 +1,17 @@
+package androidx.room.solver.binderprovider;
+
+import androidx.room.ext.RoomGuavaTypeNames;
+import androidx.room.processor.Context;
+import androidx.room.processor.ProcessorErrors;
+import androidx.room.solver.QueryResultBinderProvider;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u001a\u000e\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003¨\u0006\u0004"}, d2 = {"GuavaListenableFutureQueryResultBinderProvider", "Landroidx/room/solver/QueryResultBinderProvider;", "context", "Landroidx/room/processor/Context;", "room-compiler"}, k = 2, mv = {1, 7, 1}, xi = 48)
+public final class GuavaListenableFutureQueryResultBinderProviderKt {
+    public static final QueryResultBinderProvider GuavaListenableFutureQueryResultBinderProvider(Context r5) {
+        Intrinsics.checkNotNullParameter(r5, "context");
+        return QueryResultBinderProviderWithRequiredArtifactKt.requireArtifact(new GuavaListenableFutureQueryResultBinderProviderImpl(r5), r5, RoomGuavaTypeNames.INSTANCE.getGUAVA_ROOM(), ProcessorErrors.INSTANCE.getMISSING_ROOM_GUAVA_ARTIFACT());
+    }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:pref="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.ChooseLockGenericPreference
+        android:persistent="false"
+        android:title="@string/unlock_set_unlock_off_title"
+        android:key="unlock_set_off"
+        pref:prefBg="@drawable/selector_setting_sub_item_bg_top"/>
+    <com.android.settings.ChooseLockGenericPreference
+        android:persistent="false"
+        android:title="@string/lockscreen_mode_item_title_pattern"
+        android:key="unlock_set_pattern"
+        pref:prefBg="@drawable/selector_setting_sub_item_bg_middle"/>
+    <com.android.settings.ChooseLockGenericPreference
+        android:persistent="false"
+        android:title="@string/lockscreen_mode_pin_four"
+        android:key="unlock_set_pin_four"
+        pref:prefBg="@drawable/selector_setting_sub_item_bg_middle"/>
+    <com.android.settings.ChooseLockGenericPreference
+        android:persistent="false"
+        android:title="@string/lockscreen_mode_pin_six"
+        android:key="unlock_set_pin_six"
+        pref:prefBg="@drawable/selector_setting_sub_item_bg_middle"/>
+    <com.android.settings.ChooseLockGenericPreference
+        android:persistent="false"
+        android:title="@string/lockscreen_mode_item_title_hard"
+        android:key="unlock_set_password"
+        pref:prefBg="@drawable/selector_setting_sub_item_bg_bottom"/>
+</PreferenceScreen>

@@ -1,0 +1,44 @@
+package kotlin.ranges;
+
+import androidx.exifinterface.media.ExifInterface;
+import java.lang.Comparable;
+import kotlin.ExperimentalStdlibApi;
+import kotlin.Metadata;
+import kotlin.SinceKotlin;
+import kotlin.WasExperimental;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes3.dex */
+@SinceKotlin(version = "1.9")
+@Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000f\n\u0002\u0010\u0000\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0004\bg\u0018\u0000*\u000e\b\u0000\u0010\u0001*\b\u0012\u0004\u0012\u0002H\u00010\u00022\u00020\u0003J\u0016\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00028\u0000H\u0096\u0002¢\u0006\u0002\u0010\fJ\b\u0010\r\u001a\u00020\nH\u0016R\u0012\u0010\u0004\u001a\u00028\u0000X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0005\u0010\u0006R\u0012\u0010\u0007\u001a\u00028\u0000X¦\u0004¢\u0006\u0006\u001a\u0004\b\b\u0010\u0006¨\u0006\u000e"}, d2 = {"Lkotlin/ranges/OpenEndRange;", ExifInterface.GPS_DIRECTION_TRUE, "", "", "endExclusive", "getEndExclusive", "()Ljava/lang/Comparable;", "start", "getStart", "contains", "", "value", "(Ljava/lang/Comparable;)Z", "isEmpty", "kotlin-stdlib"}, k = 1, mv = {1, 9, 0}, xi = 48)
+@WasExperimental(markerClass = {ExperimentalStdlibApi.class})
+public interface OpenEndRange<T extends Comparable<? super T>> {
+
+    @Metadata(k = 3, mv = {1, 9, 0}, xi = 48)
+    public static final class DefaultImpls {
+        public static <T extends Comparable<? super T>> boolean contains(OpenEndRange<T> r5, T r10) {
+            Intrinsics.checkNotNullParameter(r10, "value");
+            if (r10.compareTo(r5.getStart()) >= 0) goto L5;
+        L7:
+            return false;
+        L5:
+            if (r10.compareTo(r5.getEndExclusive()) >= 0) goto L7;
+            return true;
+        }
+
+        public static <T extends Comparable<? super T>> boolean isEmpty(OpenEndRange<T> r5) {
+            if (r5.getStart().compareTo(r5.getEndExclusive()) < 0) goto L5;
+            return true;
+        L5:
+            return false;
+        }
+    }
+
+    boolean contains(T r5);
+
+    T getEndExclusive();
+
+    T getStart();
+
+    boolean isEmpty();
+}

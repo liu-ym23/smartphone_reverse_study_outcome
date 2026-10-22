@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/item_title_summary_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/item_title_summary_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bootable_group_title"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/permission_system_boot"
+        android:onClick="onClick"
+        app:oui_list_item_title="@string/launch_by_system"
+        style="@style/OSettingItemNoIconStyle"/>
+    <com.obric.oui.lisitem.OListItemSettings
+        android:id="@+id/permission_receive_boot_completed"
+        android:onClick="onClick"
+        app:oui_list_item_title="@string/launch_by_app"
+        style="@style/OSettingItemNoIconStyle"/>
+</merge>

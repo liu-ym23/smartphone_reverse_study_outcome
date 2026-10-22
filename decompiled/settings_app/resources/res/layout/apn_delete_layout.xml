@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.button.OButton
+        android:textColor="@color/oui_red_6"
+        android:id="@+id/delete_apn"
+        android:visibility="visible"
+        android:clickable="true"
+        android:layout_height="@dimen/oui_h_l2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/menu_delete_confirm"
+        android:layout_centerInParent="true"
+        style="@style/OButton.ListItem.Center"/>
+</LinearLayout>

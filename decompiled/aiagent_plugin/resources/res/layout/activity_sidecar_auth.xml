@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_basic_bg_base_1"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/sidecar_auth_content_container"
+        android:background="@color/oui_basic_bg_base_1"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/sidecar_auth_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <com.obric.oui.status.OPageStatus
+        android:layout_gravity="center"
+        android:id="@+id/sidecar_auth_error_status"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:opagestatus_message="@string/obric_skill_credentials_sidecar_auth_error_message"
+        app:opagestatus_title="@string/obric_skill_credentials_sidecar_auth_error_title"
+        app:opagestatus_type="status_content"/>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/sidecar_auth_progress"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:layout_gravity="top"
+        android:id="@+id/sidecar_auth_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_centerTitle="@string/obric_skill_credentials_sidecar_auth_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oui_widgetFitInsetTop="true"/>
+</FrameLayout>

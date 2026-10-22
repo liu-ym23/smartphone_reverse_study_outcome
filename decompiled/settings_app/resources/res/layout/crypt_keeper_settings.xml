@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/crypt_keeper_encrypt_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/group_list_item_vertical_gap_layout"/>
+            <com.android.settings.widget.SettingItemButton
+                android:id="@+id/initiate_encrypt"
+                android:text="@string/crypt_keeper_button_text"
+                style="@style/SettingItemButtonStyle.Single"/>
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/crypt_keeper_desc"
+                style="@style/SettingItemTipsStyle"/>
+            <TextView
+                android:id="@+id/tip_warning_need_lock_screen"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                android:text="@string/crypt_keeper_need_lock_password_warning"
+                style="@style/SettingItemTipsStyle"/>
+            <TextView
+                android:id="@+id/warning_unplugged"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                android:text="@string/crypt_keeper_unplugged_text"
+                style="@style/SettingItemTipsStyle"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

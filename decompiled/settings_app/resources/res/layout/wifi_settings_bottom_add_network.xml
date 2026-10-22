@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:textColor="@color/oui_accent_7_fg"
+            android:id="@+id/add_network"
+            android:background="@null"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oui_h_l2"
+            android:layout_marginBottom="4dp"
+            android:text="@string/wifi_add_network"
+            android:layout_centerInParent="true"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="12dp"
+            style="@style/Title_1_Medium"/>
+        <com.obric.oui.button.OButton
+            android:id="@+id/scan_QRcode"
+            android:clickable="true"
+            android:layout_height="@dimen/oui_h_l2"
+            android:text="@string/wifi_scan_QRcode"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="16dp"
+            style="@style/OButton.ListItem.Center"/>
+        <TextView
+            android:id="@+id/qr_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi_scan_QRcode_tips"
+            style="@style/GroupListTipsViewStyle"/>
+    </LinearLayout>
+</RelativeLayout>

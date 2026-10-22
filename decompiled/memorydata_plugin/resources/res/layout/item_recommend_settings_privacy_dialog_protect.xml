@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/recommend_settings_privacy_dialog_image"
+        android:layout_width="1036px"
+        android:layout_height="490px"
+        android:src="@drawable/bg_recommend_privacy_detail"
+        android:scaleType="fitCenter"
+        android:layout_marginVertical="@dimen/oui_p_container_tiny_2"/>
+</FrameLayout>

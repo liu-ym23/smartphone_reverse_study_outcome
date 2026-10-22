@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@color/oui_basic_text_1"
+        android:pathData="M0,16C0,7.163 7.163,0 16,0C24.837,0 32,7.163 32,16C32,24.837 24.837,32 16,32C7.163,32 0,24.837 0,16Z"
+        android:fillAlpha="0.06"/>
+    <path
+        android:fillColor="@color/oui_fill_icon_as_action"
+        android:pathData="M17.92,10.701C18.679,9.947 19.906,9.954 20.656,10.717C21.399,11.474 21.393,12.689 20.641,13.437L13.679,20.363C13.055,20.985 12.21,21.333 11.328,21.333H10.333C10.149,21.333 10,21.184 10,21V19.962C10,19.074 10.354,18.223 10.983,17.598L17.92,10.701ZM19.7,12.492L12.739,19.418C12.365,19.79 11.86,19.999 11.333,20V19.962C11.333,19.429 11.546,18.919 11.923,18.543L18.86,11.647C19.094,11.414 19.473,11.416 19.705,11.652C19.935,11.885 19.933,12.261 19.7,12.492Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@color/oui_fill_icon_as_action"
+        android:pathData="M22,21.334L14.156,21.334L15.495,20.001L22,20.001V21.334Z"/>
+</vector>

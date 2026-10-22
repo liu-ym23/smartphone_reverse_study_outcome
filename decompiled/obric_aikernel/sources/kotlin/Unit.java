@@ -1,0 +1,17 @@
+package kotlin;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class Unit {
+    public static final Unit INSTANCE = null;
+
+    static {
+        INSTANCE = new Unit();
+    }
+
+    private Unit() {
+    }
+
+    public String toString() {
+        return "kotlin.Unit";
+    }
+}

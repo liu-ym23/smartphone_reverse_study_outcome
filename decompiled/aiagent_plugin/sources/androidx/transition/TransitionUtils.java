@@ -1,0 +1,181 @@
+package androidx.transition;
+
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.TypeEvaluator;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Picture;
+import android.graphics.RectF;
+import android.os.Build;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+
+/* JADX INFO: loaded from: classes.dex */
+class TransitionUtils {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private static final boolean f2768a = false;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private static final boolean f2769b = false;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private static final boolean f2770c = false;
+
+    static class MatrixEvaluator implements TypeEvaluator<Matrix> {
+        final float[] mTempEndValues;
+        final Matrix mTempMatrix;
+        final float[] mTempStartValues;
+
+        MatrixEvaluator() {
+            this.mTempStartValues = new float[9];
+            this.mTempEndValues = new float[9];
+            this.mTempMatrix = new Matrix();
+        }
+
+        @Override // android.animation.TypeEvaluator
+        public /* synthetic */ Matrix evaluate(float r3, Matrix r4, Matrix r5) {
+            return evaluate2(r3, (Matrix) ZeusTransformUtils.preCheckCast(r4, Matrix.class, "com.obric.aiagent.plugin"), (Matrix) ZeusTransformUtils.preCheckCast(r5, Matrix.class, "com.obric.aiagent.plugin"));
+        }
+
+        /* JADX INFO: renamed from: evaluate, reason: avoid collision after fix types in other method */
+        public Matrix evaluate2(float r4, Matrix r5, Matrix r6) {
+            r5.getValues(this.mTempStartValues);
+            r6.getValues(this.mTempEndValues);
+            int r7 = 0;
+        L4:
+            if (r7 >= 9) goto L6;
+            float[] r8 = this.mTempEndValues;
+            float r0 = r8[r7];
+            float[] r1 = this.mTempStartValues;
+            float r2 = r0 - r1[r7];
+            r8[r7] = r1[r7] + (r2 * r4);
+            r7 = r7 + 1;
+            goto L4
+        L6:
+            this.mTempMatrix.setValues(this.mTempEndValues);
+            return this.mTempMatrix;
+        }
+    }
+
+    static {
+        boolean r1 = true;
+        if (Build.VERSION.SDK_INT < 19) goto L5;
+        boolean r0 = true;
+    L6:
+        f2768a = r0;
+        if (Build.VERSION.SDK_INT < 18) goto L9;
+        boolean r2 = true;
+    L10:
+        f2769b = r2;
+        if (Build.VERSION.SDK_INT >= 28) goto L14;
+        r1 = false;
+    L14:
+        f2770c = r1;
+        return;
+    L9:
+        r2 = false;
+        goto L10
+    L5:
+        r0 = false;
+        goto L6
+    }
+
+    static View a(ViewGroup r9, View r10, View r11) {
+        Matrix r0 = new Matrix();
+        r0.setTranslate(-r11.getScrollX(), -r11.getScrollY());
+        af.a(r10, r0);
+        af.b(r9, r0);
+        RectF r12 = new RectF(0.0f, 0.0f, r10.getWidth(), r10.getHeight());
+        r0.mapRect(r12);
+        int r1 = Math.round(r12.left);
+        int r2 = Math.round(r12.top);
+        int r3 = Math.round(r12.right);
+        int r4 = Math.round(r12.bottom);
+        ImageView r5 = new ImageView((Context) ZeusTransformUtils.preCheckCast(ZeusTransformUtils.wrapperContext(r10.getContext(), "com.obric.aiagent.plugin"), Context.class, "com.obric.aiagent.plugin"));
+        r5.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        Bitmap r13 = a(r10, r0, r12, r9);
+        if (r13 == null) goto L5;
+        r5.setImageBitmap(r13);
+    L5:
+        r5.measure(View.MeasureSpec.makeMeasureSpec(r3 - r1, 1073741824), View.MeasureSpec.makeMeasureSpec(r4 - r2, 1073741824));
+        r5.layout(r1, r2, r3, r4);
+        return r5;
+    }
+
+    private static Bitmap a(View r9, Matrix r10, RectF r11, ViewGroup r12) {
+        if (f2768a == false) goto L8;
+        boolean r0 = !r9.isAttachedToWindow();
+        if (r12 != null) goto L7;
+        boolean r2 = false;
+    L9:
+        boolean r3 = f2769b;
+        Bitmap r4 = null;
+        if (r3 == false) goto L15;
+        if (r0 == false) goto L15;
+        if (r2 == true) goto L14;
+        return null;
+    L14:
+        ViewGroup r1 = (ViewGroup) ZeusTransformUtils.preCheckCast(r9.getParent(), ViewGroup.class, "com.obric.aiagent.plugin");
+        int r5 = r1.indexOfChild(r9);
+        r12.getOverlay().add(r9);
+    L16:
+        int r6 = Math.round(r11.width());
+        int r7 = Math.round(r11.height());
+        if (r6 <= 0) goto L23;
+        if (r7 <= 0) goto L23;
+        float r8 = Math.min(1.0f, 1048576.0f / (r6 * r7));
+        int r13 = Math.round(r6 * r8);
+        int r14 = Math.round(r7 * r8);
+        r10.postTranslate(-r11.left, -r11.top);
+        r10.postScale(r8, r8);
+        if (f2770c == false) goto L22;
+        Picture r15 = new Picture();
+        Canvas r16 = r15.beginRecording(r13, r14);
+        r16.concat(r10);
+        r9.draw(r16);
+        r15.endRecording();
+        r4 = Bitmap.createBitmap(r15);
+        goto L23
+    L22:
+        r4 = Bitmap.createBitmap(r13, r14, Bitmap.Config.ARGB_8888);
+        Canvas r17 = new Canvas(r4);
+        r17.concat(r10);
+        r9.draw(r17);
+    L23:
+        if (r3 == false) goto L26;
+        if (r0 == false) goto L26;
+        r12.getOverlay().remove(r9);
+        r1.addView(r9, r5);
+    L26:
+        return r4;
+    L15:
+        r5 = 0;
+        r1 = null;
+        goto L16
+    L7:
+        r2 = r12.isAttachedToWindow();
+        goto L9
+    L8:
+        r0 = false;
+        r2 = false;
+        goto L9
+    }
+
+    static Animator a(Animator r3, Animator r4) {
+        if (r3 != null) goto L4;
+        return r4;
+    L4:
+        if (r4 != null) goto L6;
+        return r3;
+    L6:
+        AnimatorSet r0 = new AnimatorSet();
+        r0.playTogether(new Animator[]{r3, r4});
+        return r0;
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dimen_12"
+    android:paddingEnd="@dimen/dimen_8"
+    android:paddingVertical="@dimen/dimen_10">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_basic_text_1"
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/custom_start_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_weight="1"
+        style="@style/Title_1_Regular"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/custom_start_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/dimen_4dp"/>
+</LinearLayout>

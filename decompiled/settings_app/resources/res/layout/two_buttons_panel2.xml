@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/settings_item_top_bottom_margin">
+    <com.obric.oui.button.OButton
+        android:textStyle="bold"
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/left_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="4dp"
+        style="@style/OButton.ListItem.Center"/>
+    <com.obric.oui.button.OButton
+        android:textStyle="bold"
+        android:textColor="@color/oui_accent_fg"
+        android:id="@+id/right_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/cancel"
+        style="@style/OButton.ListItem.Center"/>
+</LinearLayout>

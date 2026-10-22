@@ -1,0 +1,11 @@
+package androidx.room.compiler.processing;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\bf\u0018\u00002\u00020\u0001J\u0010\u0010\u0006\u001a\u00020\u00032\u0006\u0010\u0007\u001a\u00020\u0003H&R\u0012\u0010\u0002\u001a\u00020\u0003X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0004\u0010\u0005ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\bÀ\u0006\u0001"}, d2 = {"Landroidx/room/compiler/processing/XVariableElement;", "Landroidx/room/compiler/processing/XElement;", "type", "Landroidx/room/compiler/processing/XType;", "getType", "()Landroidx/room/compiler/processing/XType;", "asMemberOf", "other", "room-compiler-processing"}, k = 1, mv = {1, 7, 1}, xi = 48)
+public interface XVariableElement extends XElement {
+    XType asMemberOf(XType r5);
+
+    XType getType();
+}

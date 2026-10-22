@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duplicateParentState="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/item_title"
+        android:duplicateParentState="true"
+        android:lineHeight="22dp"
+        style="@style/SecurityItemTitleNormalStyle"/>
+    <TextView
+        android:id="@+id/item_warning"
+        android:visibility="gone"
+        android:duplicateParentState="true"
+        android:layout_toRightOf="@+id/item_title"
+        style="@style/SecurityItemWarnTitleNormalStyle"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/setting_item_summary_text_colorlist"
+        android:id="@+id/item_summary"
+        android:visibility="gone"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.3dp"
+        android:layout_below="@+id/item_title"/>
+</RelativeLayout>

@@ -1,0 +1,348 @@
+package com.obric.capabilitykit.common.intent;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.obric.a.a;
+import com.volcengine.zeus.transform.ZeusTransformUtils;
+import d.h.b.h;
+import d.h.b.o;
+
+/* JADX INFO: compiled from: PCGlobalSearchIntentParams.kt */
+/* JADX INFO: loaded from: classes3.dex */
+public final class PCGlobalSearchIntentParams implements Parcelable, IntentParams {
+    public static final Parcelable.Creator<PCGlobalSearchIntentParams> CREATOR = null;
+    String interactionType;
+    Integer limitCount;
+    String meta;
+    Boolean needDeepSearch;
+    private String quResult;
+
+    /* JADX INFO: compiled from: PCGlobalSearchIntentParams.kt */
+    public static final class Creator implements Parcelable.Creator<PCGlobalSearchIntentParams> {
+        public Creator() {
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final PCGlobalSearchIntentParams createFromParcel(Parcel r11) {
+            int r0 = r11.readInt();
+            o.e(r11, "parcel");
+            PCGlobalSearchIntentParams r1 = new PCGlobalSearchIntentParams(r11.readString(), null, null, null, null, 30, null);
+            int r3 = Math.min(r0, 4);
+            ClassLoader r10 = getClass().getClassLoader();
+            int r5 = 1;
+        L3:
+            if (r5 > r3) goto L24;
+            if (r5 != 1) goto L10;
+            Object r7 = a.b(r11, r10);
+            if (r7 == null) goto L23;
+            r1.needDeepSearch = (Boolean) ZeusTransformUtils.preCheckCast(r7, Boolean.class, "com.obric.aiagent.plugin");
+        L23:
+            r5 = r5 + 1;
+            goto L3
+        L10:
+            if (r5 != 2) goto L15;
+            Object r8 = a.b(r11, r10);
+            if (r8 == null) goto L23;
+            r1.limitCount = (Integer) ZeusTransformUtils.preCheckCast(r8, Integer.class, "com.obric.aiagent.plugin");
+            goto L23
+        L15:
+            if (r5 != 3) goto L19;
+            Object r9 = a.b(r11, r10);
+            if (r9 == null) goto L23;
+            r1.interactionType = (String) ZeusTransformUtils.preCheckCast(r9, String.class, "com.obric.aiagent.plugin");
+            goto L23
+        L19:
+            if (r5 != 4) goto L23;
+            Object r12 = a.b(r11, r10);
+            if (r12 == null) goto L23;
+            r1.meta = (String) ZeusTransformUtils.preCheckCast(r12, String.class, "com.obric.aiagent.plugin");
+        L24:
+            if (r5 > r0) goto L26;
+            a.a(r11, r10);
+            r5 = r5 + 1;
+            goto L24
+        L26:
+            return r1;
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ PCGlobalSearchIntentParams createFromParcel(Parcel r1) {
+            return createFromParcel(r1);
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final PCGlobalSearchIntentParams[] newArray(int r1) {
+            return new PCGlobalSearchIntentParams[r1];
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public /* bridge */ /* synthetic */ PCGlobalSearchIntentParams[] newArray(int r1) {
+            return newArray(r1);
+        }
+    }
+
+    static {
+        CREATOR = (Parcelable.Creator) ZeusTransformUtils.preCheckCast(new Creator(), Parcelable.Creator.class, "com.obric.aiagent.plugin");
+    }
+
+    public PCGlobalSearchIntentParams() {
+        this(null, null, null, null, null, 31, null);
+    }
+
+    public static /* synthetic */ PCGlobalSearchIntentParams copy$default(PCGlobalSearchIntentParams r3, String r4, Boolean r5, Integer r6, String r7, String r8, int r9, Object r10) {
+        if ((r9 & 1) == 0) goto L6;
+        r4 = r3.quResult;
+    L6:
+        if ((r9 & 2) == 0) goto L8;
+        r5 = r3.needDeepSearch;
+    L8:
+        Boolean r11 = r5;
+        if ((r9 & 4) == 0) goto L11;
+        r6 = r3.limitCount;
+    L11:
+        Integer r0 = r6;
+        if ((r9 & 8) == 0) goto L14;
+        r7 = r3.interactionType;
+    L14:
+        String r1 = r7;
+        if ((r9 & 16) == 0) goto L17;
+        r8 = r3.meta;
+    L17:
+        String r12 = r4;
+        return r3.copy(r12, r11, r0, r1, r8);
+    }
+
+    public static /* synthetic */ void getInteractionType$annotations() {
+    }
+
+    public static /* synthetic */ void getLimitCount$annotations() {
+    }
+
+    public static /* synthetic */ void getMeta$annotations() {
+    }
+
+    public static /* synthetic */ void getNeedDeepSearch$annotations() {
+    }
+
+    public final String component1() {
+        return this.quResult;
+    }
+
+    public final Boolean component2() {
+        return this.needDeepSearch;
+    }
+
+    public final Integer component3() {
+        return this.limitCount;
+    }
+
+    public final String component4() {
+        return this.interactionType;
+    }
+
+    public final String component5() {
+        return this.meta;
+    }
+
+    public final PCGlobalSearchIntentParams copy(String r7, Boolean r8, Integer r9, String r10, String r11) {
+        return new PCGlobalSearchIntentParams(r7, r8, r9, r10, r11);
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object r5) {
+        if (this != r5) goto L6;
+        return true;
+    L6:
+        if (ZeusTransformUtils.instanceOf(r5, PCGlobalSearchIntentParams.class) == true) goto L8;
+        return false;
+    L8:
+        PCGlobalSearchIntentParams r6 = (PCGlobalSearchIntentParams) ZeusTransformUtils.preCheckCast(r5, PCGlobalSearchIntentParams.class, "com.obric.aiagent.plugin");
+        if (o.a(this.quResult, r6.quResult) == true) goto L12;
+        return false;
+    L12:
+        if (o.a(this.needDeepSearch, r6.needDeepSearch) == true) goto L15;
+        return false;
+    L15:
+        if (o.a(this.limitCount, r6.limitCount) == true) goto L18;
+        return false;
+    L18:
+        if (o.a(this.interactionType, r6.interactionType) == true) goto L21;
+        return false;
+    L21:
+        if (o.a(this.meta, r6.meta) == true) goto L23;
+        return false;
+    L23:
+        return true;
+    }
+
+    public int hashCode() {
+        String r0 = this.quResult;
+        int r1 = 0;
+        if (r0 != null) goto L5;
+        int r2 = 0;
+    L6:
+        int r3 = r2 * 31;
+        Boolean r4 = this.needDeepSearch;
+        if (r4 != null) goto L9;
+        int r5 = 0;
+    L10:
+        int r6 = (r3 + r5) * 31;
+        Integer r7 = this.limitCount;
+        if (r7 != null) goto L13;
+        int r8 = 0;
+    L14:
+        int r9 = (r6 + r8) * 31;
+        String r10 = this.interactionType;
+        if (r10 != null) goto L17;
+        int r11 = 0;
+    L18:
+        int r12 = (r9 + r11) * 31;
+        String r13 = this.meta;
+        if (r13 == null) goto L23;
+        r1 = r13.hashCode();
+    L23:
+        return r12 + r1;
+    L17:
+        r11 = r10.hashCode();
+        goto L18
+    L13:
+        r8 = r7.hashCode();
+        goto L14
+    L9:
+        r5 = r4.hashCode();
+        goto L10
+    L5:
+        r2 = r0.hashCode();
+        goto L6
+    }
+
+    public String toString() {
+        return "PCGlobalSearchIntentParams(quResult=" + this.quResult + ", needDeepSearch=" + this.needDeepSearch + ", limitCount=" + this.limitCount + ", interactionType=" + this.interactionType + ", meta=" + this.meta + ')';
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel r1, int r2) {
+        r1.writeInt(4);
+        o.e(r1, "out");
+        r1.writeString(this.quResult);
+        r1.writeValue(this.needDeepSearch);
+        r1.writeValue(this.limitCount);
+        r1.writeValue(this.interactionType);
+        r1.writeValue(this.meta);
+    }
+
+    public PCGlobalSearchIntentParams(String r1, Boolean r2, Integer r3, String r4, String r5) {
+        this.quResult = r1;
+        this.needDeepSearch = r2;
+        this.limitCount = r3;
+        this.interactionType = r4;
+        this.meta = r5;
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public String getSubActionValue() {
+        return IntentParams.a.b(this);
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public boolean isParamsCompleted() {
+        return IntentParams.a.a(this);
+    }
+
+    public /* synthetic */ PCGlobalSearchIntentParams(String r2, Boolean r3, Integer r4, String r5, String r6, int r7, h r8) {
+        if ((r7 & 1) == 0) goto L6;
+        r2 = null;
+    L6:
+        if ((r7 & 2) == 0) goto L9;
+        r3 = null;
+    L9:
+        if ((r7 & 4) == 0) goto L12;
+        r4 = null;
+    L12:
+        if ((r7 & 8) == 0) goto L15;
+        r5 = null;
+    L15:
+        if ((r7 & 16) == 0) goto L17;
+        r6 = null;
+    L17:
+        this(r2, r3, r4, r5, r6);
+    }
+
+    public final String getQuResult() {
+        return this.quResult;
+    }
+
+    public final void setQuResult(String r1) {
+        this.quResult = r1;
+    }
+
+    public final Boolean getNeedDeepSearch() {
+        return this.needDeepSearch;
+    }
+
+    public final void setNeedDeepSearch(Boolean r1) {
+        this.needDeepSearch = r1;
+    }
+
+    public final Integer getLimitCount() {
+        return this.limitCount;
+    }
+
+    public final void setLimitCount(Integer r1) {
+        this.limitCount = r1;
+    }
+
+    public final String getInteractionType() {
+        return this.interactionType;
+    }
+
+    public final void setInteractionType(String r1) {
+        this.interactionType = r1;
+    }
+
+    public final String getMeta() {
+        return this.meta;
+    }
+
+    public final void setMeta(String r1) {
+        this.meta = r1;
+    }
+
+    @Override // com.obric.capabilitykit.common.intent.IntentParams
+    public IntentParams mergeParams(Object r10) {
+        if (ZeusTransformUtils.instanceOf(r10, PCGlobalSearchIntentParams.class) == false) goto L5;
+        String r1 = this.quResult;
+        if (r1 != null) goto L9;
+        r1 = ((PCGlobalSearchIntentParams) ZeusTransformUtils.preCheckCast(r10, PCGlobalSearchIntentParams.class, "com.obric.aiagent.plugin")).quResult;
+    L9:
+        String r4 = r1;
+        Boolean r2 = this.needDeepSearch;
+        if (r2 != null) goto L12;
+        r2 = ((PCGlobalSearchIntentParams) ZeusTransformUtils.preCheckCast(r10, PCGlobalSearchIntentParams.class, "com.obric.aiagent.plugin")).needDeepSearch;
+    L12:
+        Boolean r5 = r2;
+        Integer r3 = this.limitCount;
+        if (r3 != null) goto L15;
+        r3 = ((PCGlobalSearchIntentParams) ZeusTransformUtils.preCheckCast(r10, PCGlobalSearchIntentParams.class, "com.obric.aiagent.plugin")).limitCount;
+    L15:
+        Integer r6 = r3;
+        String r7 = this.interactionType;
+        if (r7 != null) goto L18;
+        r7 = ((PCGlobalSearchIntentParams) ZeusTransformUtils.preCheckCast(r10, PCGlobalSearchIntentParams.class, "com.obric.aiagent.plugin")).interactionType;
+    L18:
+        String r8 = r7;
+        String r9 = this.meta;
+        if (r9 != null) goto L22;
+        r9 = ((PCGlobalSearchIntentParams) ZeusTransformUtils.preCheckCast(r10, PCGlobalSearchIntentParams.class, "com.obric.aiagent.plugin")).meta;
+    L22:
+        return (IntentParams) ZeusTransformUtils.preCheckCast(new PCGlobalSearchIntentParams(r4, r5, r6, r8, r9), IntentParams.class, "com.obric.aiagent.plugin");
+    L5:
+        return (IntentParams) ZeusTransformUtils.preCheckCast(this, IntentParams.class, "com.obric.aiagent.plugin");
+    }
+}

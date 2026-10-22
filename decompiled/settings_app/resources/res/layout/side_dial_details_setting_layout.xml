@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bytedanceos="http://schemas.android.com/apk/res/bytedanceos"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        app:oFloatingTitleBar_centerTitle="@string/side_dial_title"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"
+        style="@style/TitleStyle"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_alignParentBottom="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/side_dial_details_container"
+            android:paddingTop="@dimen/settings_item_top_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/side_dial_car_mode_container"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/bluetooth"
+                    style="@style/SettingItemTitleStyle"/>
+                <obric.widget.SettingItemSwitch
+                    android:id="@+id/car_mode_bluetooth"
+                    android:title="@string/bluetooth"
+                    style="@style/SettingSubItemSingleStyle"/>
+                <include layout="@layout/item_bottom_shadow_layout"/>
+                <TextView
+                    android:text="@string/display_label"
+                    style="@style/SettingItemTitleStyle"/>
+                <obric.widget.SettingItemSwitch
+                    android:id="@+id/car_mode_always_on_screen"
+                    android:title="@string/side_dial_screen_always_on"
+                    style="@style/SettingItemTopStyle"/>
+                <obric.widget.SettingItemSwitch
+                    android:id="@+id/car_mode_screen_rotation"
+                    android:title="@string/auto_rotation_header_title"
+                    style="@style/SettingItemBottomStyle"/>
+                <include layout="@layout/item_bottom_shadow_layout"/>
+                <TextView
+                    android:text="@string/car_mode_navigation_title"
+                    style="@style/SettingItemTitleStyle"/>
+                <obric.widget.SettingItemText
+                    android:id="@+id/car_mode_navigation"
+                    android:title="@string/car_mode_navigation"
+                    style="@style/SettingSubItemSingleStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

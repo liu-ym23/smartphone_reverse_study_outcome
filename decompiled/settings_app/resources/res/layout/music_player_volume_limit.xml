@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/music_player_volume_limit"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.obric.oui.bouncelayout.OScrollView
+        android:id="@+id/page_scrollview"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/page_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_item_top_bottom_margin">
+            <com.obric.oui.layout.OUILinearLayout
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/oui_p_list_item_2"
+                android:paddingRight="@dimen/oui_p_list_item_2"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:oui_radius="@dimen/oui_r_l3_rect">
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/o_background_list_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <com.obric.oui.slider.OSlider
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:id="@+id/seekbar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="16dp"
+                        app:oui_slider_left_icon="@drawable/bytedance_vol_min"
+                        app:oui_slider_right_icon="@drawable/bytedance_vol_max"
+                        app:seekbarHeight="8dp"/>
+                </LinearLayout>
+            </com.obric.oui.layout.OUILinearLayout>
+            <TextView
+                android:id="@+id/volume_limit_tips"
+                style="@style/SettingItemTipsStyle"/>
+            <include layout="@layout/item_bottom_shadow_layout"/>
+        </LinearLayout>
+    </com.obric.oui.bouncelayout.OScrollView>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

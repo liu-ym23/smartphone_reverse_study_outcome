@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/item_container"
+        android:background="@drawable/grey_board_land"
+        android:layout_width="@dimen/tnt_drag_grid_view_column_width"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/tnt_drag_grid_view_min_height"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="@dimen/tnt_grid_item_padding"
+        android:paddingEnd="@dimen/tnt_grid_item_padding">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/tnt_grid_item_img_width"
+            android:layout_height="@dimen/tnt_grid_item_img_height"/>
+        <TextView
+            android:textSize="@dimen/tnt_notification_custom_widget_name_text_size_land"
+            android:textColor="@color/tnt_grid_item_text_color"
+            android:ellipsize="end"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tnt_grid_item_top_margin"
+            android:singleLine="true"/>
+    </LinearLayout>
+</RelativeLayout>

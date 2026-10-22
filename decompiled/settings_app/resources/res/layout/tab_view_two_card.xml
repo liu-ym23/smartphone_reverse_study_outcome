@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/top_tab_contact_layout"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+    <TextView
+        android:textSize="13.5sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/top_tab_sim1"
+        android:background="@drawable/top_tab_left_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/data_usage_tab_min_width"
+        android:text="@string/tab_sim1_title"/>
+    <TextView
+        android:textSize="13.5sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/top_tab_sim2"
+        android:background="@drawable/top_tab_right_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/data_usage_tab_min_width"
+        android:text="@string/tab_sim2_title"/>
+</LinearLayout>

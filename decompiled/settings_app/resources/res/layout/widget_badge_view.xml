@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.badge.OBadgeView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:maxWidth="18dp"
+    android:maxHeight="18dp"
+    android:text="1"
+    style="@style/OBadgeView.S1.Number.Red"/>

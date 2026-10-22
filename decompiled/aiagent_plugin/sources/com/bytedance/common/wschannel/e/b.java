@@ -1,0 +1,15 @@
+package com.bytedance.common.wschannel.e;
+
+import android.os.Build;
+import android.os.SystemClock;
+
+/* JADX INFO: compiled from: TimeCompactUtil.java */
+/* JADX INFO: loaded from: classes.dex */
+public class b {
+    public static long a() {
+        if (Build.VERSION.SDK_INT < 17) goto L7;
+        return SystemClock.elapsedRealtimeNanos();
+    L7:
+        return SystemClock.elapsedRealtime() * 1000;
+    }
+}

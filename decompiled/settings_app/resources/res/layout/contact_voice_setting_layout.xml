@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <obric.widget.SettingItemSwitch
+        android:id="@+id/contact_voice_button"
+        app:smtTitle="@string/show_button_in_contact"
+        style="@style/SettingSubItemTopStyle"/>
+    <obric.widget.ListContentItemText
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/ListContentItemStyle.Bottom">
+        <ImageView
+            android:background="@drawable/setting_voice_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </obric.widget.ListContentItemText>
+    <include layout="@layout/item_bottom_shadow_layout"/>
+</LinearLayout>

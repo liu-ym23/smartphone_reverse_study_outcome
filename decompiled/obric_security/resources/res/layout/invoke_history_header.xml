@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedance="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="13dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:importantForAccessibility="no">
+    <obric.widget.ListContentItemSwitch
+        android:id="@+id/system_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bytedance:smtTitle="@string/launch_by_system"
+        style="@style/ListContentItemStyle.Top"/>
+    <obric.widget.ListContentItemSwitch
+        android:id="@+id/app_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        bytedance:smtTitle="@string/launch_by_app"
+        style="@style/ListContentItemStyle.Bottom"/>
+    <TextView
+        android:textSize="@dimen/item_title_summary_text_size"
+        android:textColor="@color/item_title_summary_text_color"
+        android:id="@+id/invoke_history_title"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_padding_left"
+        android:layout_marginRight="@dimen/item_padding_left"
+        android:layout_marginBottom="@dimen/group_title_padding_bottom"
+        android:text="@string/app_invoke_history"
+        android:shadowColor="#2dffffff"
+        android:shadowDy="2"
+        android:shadowRadius="0.1"/>
+</LinearLayout>

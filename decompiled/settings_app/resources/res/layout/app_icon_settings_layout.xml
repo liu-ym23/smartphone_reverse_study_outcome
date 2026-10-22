@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/view_title"
+        android:background="@color/oui_bg_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:oFloatingTitleBar_centerTitle="@string/icon_setting_text"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <com.android.settings.stickylistheaders.StickyListHeadersListView
+        android:id="@+id/icons_list_view"
+        android:layout_below="@+id/view_title"
+        style="@style/ListViewGeneralStyle"/>
+    <TextView
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/list_empty_view_text_color"
+        android:gravity="center"
+        android:id="@+id/empty_view"
+        android:layout_width="@dimen/list_item_maximum_width"
+        android:layout_height="match_parent"
+        android:text="@string/icon_setting_empty_tip"
+        android:layout_below="@+id/view_title"
+        android:layout_centerInParent="true"/>
+    <include layout="@layout/title_bar_shadow"/>
+</RelativeLayout>

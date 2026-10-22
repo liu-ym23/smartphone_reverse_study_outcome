@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.tab.OTabLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" style="@style/OTabTextV2.Background.Light">
+    <com.obric.oui.tab.OTabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_observation_app_setting_rule_title"/>
+    <com.obric.oui.tab.OTabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_observation_disable_setting_rule_title"/>
+</com.obric.oui.tab.OTabLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<obric.widget.TitleBar xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedance="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/net_list_control"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    bytedance:title_bar_bottom_type="true"/>

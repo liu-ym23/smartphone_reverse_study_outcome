@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OBaseTextView
+        android:textSize="20sp"
+        android:textColor="#b3000000"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/popup_name"
+        android:background="@drawable/surname_second_popup_ex_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="320dp"
+        android:maxLines="2"/>
+    <ImageView
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/arrow_bottom"
+        android:background="@drawable/surname_popup_bottom_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+</FrameLayout>
