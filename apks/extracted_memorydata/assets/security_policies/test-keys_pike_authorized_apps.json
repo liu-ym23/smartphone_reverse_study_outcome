@@ -1,0 +1,54 @@
+{
+    "content": {
+        "version": 1,
+        "subject_apps": [
+            {
+                "package": "com.android.contacts",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            },
+            {
+                "package": "com.android.mms",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            },
+            {
+                "package": "com.android.gallery3d",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            },
+            {
+                "package": "com.obric.notes",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            },
+            {
+                "package": "com.obric.clock",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            },
+            {
+                "package": "com.obric.recorder",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            },
+            {
+                "package": "com.obric.browser",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            },
+            {
+                "package": "com.obric.calendar",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            },
+            {
+                "package": "com.larus.nova",
+                "sign": "ff04b47ec9dd20b79f758af67a184926db00ac55cfd2a01e03fba9a1dca9de2a"
+            },
+            {
+                "package": "com.obric.appletapp",
+                "sign": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8"
+            }
+        ],
+        "target_apps": [
+            {
+                "package": "com.larus.nova",
+                "sign": "ff04b47ec9dd20b79f758af67a184926db00ac55cfd2a01e03fba9a1dca9de2a"
+            }
+        ]
+    },
+    "signature": "3046022100e68106cfeb055050150cd7586b351c11e4b65948c27b92e9e326284564904aee0221009c3c3cb8fd1075d6bd0986fa9a521e996e7c240078b93d825471a5e62d992594"
+}

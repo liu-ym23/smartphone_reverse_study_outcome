@@ -1,0 +1,2242 @@
+{
+  "nodes": [
+    {
+      "nodes": [],
+      "config": {
+        "__id__": 810465852100677,
+        "right_item": {
+          "action": {
+            "action_url": "sslocal://flow/dora/device_list?page_key=device_list_v2&previous_page=device_management&enter_method=click_button",
+            "action_type": "internal_jump"
+          },
+          "image_link": {
+            "local_value": "icon_common_add"
+          }
+        },
+        "center_item": {
+          "title": {
+            "type": "string_type",
+            "value": ""
+          },
+          "image_link": {
+            "local_value": "icon_dora_lite_dm_bar_black",
+            "remote_info": {
+              "dark_url": [
+                "https://p11-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/icon_${product}_dm_bar_${sku}_dark.png"
+              ],
+              "light_url": [
+                "https://p11-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/icon_${product}_dm_bar_${sku}_light.png"
+              ]
+            }
+          }
+        }
+      },
+      "node_name": "Navigation Bar 2",
+      "node_type": "nav_bar",
+      "template_type": "history_device_list"
+    },
+    {
+      "nodes": [
+        {
+          "nodes": [
+            {
+              "nodes": [
+                {
+                  "nodes": [],
+                  "config": {
+                    "__id__": 810466345058373,
+                    "image_link": {
+                      "local_value": "image_dora_lite_headphone_${device_component}_silver",
+                      "remote_info": {
+                        "dark_url": [
+                          "https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_${product}_headphone_${device_component}_${sku}_dark.png"
+                        ],
+                        "light_url": [
+                          "https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_${product}_headphone_${device_component}_${sku}_light.png"
+                        ]
+                      }
+                    },
+                    "__card_id__": 13042176770,
+                    "__version__": "1.0.1",
+                    "battery_info": {
+                      "title": {
+                        "type": "starling_type",
+                        "value": "dora_device_disconnected_state_cn"
+                      }
+                    },
+                    "__card_instance_id__": "13042180098"
+                  },
+                  "node_key": "dora_card_lite_product_display_v2",
+                  "node_name": "Lite Device SKU & Battery V2",
+                  "node_type": "card",
+                  "template_type": "product_display"
+                }
+              ],
+              "config": {
+                "__id__": 810466251497541
+              },
+              "node_name": "Floor 18",
+              "node_type": "layer"
+            },
+            {
+              "nodes": [
+                {
+                  "nodes": [
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "title": {
+                              "type": "string_type",
+                              "value": "dora_soda_membership_title_cn"
+                            },
+                            "__id__": 810467277877317,
+                            "action": {
+                              "action_url": "sslocal://flow/dora/luna_music_page?page_key=luna_music_page",
+                              "action_type": "internal_jump"
+                            },
+                            "subtitle": {
+                              "type": "string_type",
+                              "value": "dora_soda_membership_detail_cn"
+                            },
+                            "image_link": {
+                              "local_value": "image_device_manage_banner"
+                            },
+                            "__card_id__": 13042177794,
+                            "__version__": "1.0.1",
+                            "__card_instance_id__": "13042182146"
+                          },
+                          "node_key": "dora_card_lite_banner_v2",
+                          "node_name": "Lite Soda VIP Banner V2",
+                          "node_type": "card",
+                          "template_type": "banner"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810466758815813
+                      },
+                      "node_name": "Floor 19",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_lite_simultaneous_interpretation_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/simul_interpretat_detail?product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "quick_access",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "interpretation_tutor"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_interpretation"
+                                  ]
+                                },
+                                "image_link": {
+                                  "local_value": "icon_dora_interpret"
+                                }
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_englisth_tutor_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/chat?is_from_outer=true&bot_id=7369823807386877971",
+                                  "action_data": {
+                                    "toast_text": {
+                                      "type": "string_type",
+                                      "value": "dora_englisth_tutor_open_wakeup_toast_cn"
+                                    }
+                                  },
+                                  "action_type": "jump_owen_and_check_show_toast",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "quick_access",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "english_tutor"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_owen_wakeup"
+                                  ]
+                                },
+                                "image_link": {
+                                  "local_value": "icon_dora_ai_coach"
+                                }
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_message_broadcast_cn"
+                                },
+                                "action": {
+                                  "action_url": "obric://smartnotification",
+                                  "action_data": {
+                                    "class_name": "com.obric.smartnotification.featuresettings.impl.SmartNotificationSetting",
+                                    "package_name": "com.obric.smartnotification",
+                                    "previous_page": "page_dora_device_management"
+                                  },
+                                  "action_type": "external_jump_by_explicit_intent",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "quick_access",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "broadcast"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_notification_broadcast"
+                                  ]
+                                },
+                                "image_link": {
+                                  "local_value": "icon_dora_speaker"
+                                }
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_individuation_tone_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/single_tts_speaker_setting?product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "quick_access",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "personalized_voice"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "icon_dora_bubble_voice"
+                                }
+                              }
+                            ],
+                            "__id__": 810467620167749,
+                            "__card_id__": 13278720002,
+                            "__version__": "1.0.4",
+                            "__card_instance_id__": "6601729026"
+                          },
+                          "node_key": "dora_p_card_lite_func_entry_v2",
+                          "node_name": "P & Lite Function Entry V2",
+                          "node_type": "card",
+                          "template_type": "duo_group"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810467584274501
+                      },
+                      "node_name": "Floor 20",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "tag": true,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_generate_podcast_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_podcast_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "podcast"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_generate_podcast_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_generate_podcast_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_generate_podcast_desc2_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_generate_podcast_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_generate_podcast_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_generate_podcast_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/1.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_generate_podcast_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_podcast_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    }
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/1.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": false,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_know_all_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?product_id=1&previous_page=device_management&enter_method=click_button&current_page=dora_portable_guide_detail",
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "portable_guide"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_know_all_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_desc2_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_desc3_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_know_all_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/2.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_know_all_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_portable_guide_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    }
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/2.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": false,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_walkman_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_music_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "music"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_walkman_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_desc2_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_desc3_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_walkman_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/3.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_walkman_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_music_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    }
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/3.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": true,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_multilingual_translator_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?product_id=1&previous_page=device_management&enter_method=click_button&current_page=dora_interpretation_detail",
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "interpretation"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_multilingual_translator_subtitle_cn"
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_interpretation"
+                                  ]
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_multilingual_translator_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_multilingual_translator_desc2_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_multilingual_translator_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_multilingual_translator_query1_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/5.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "sslocal://flow/dora/simul_interpretat_detail?product_id=1&previous_page=device_management&enter_method=click_button",
+                                      "action_type": "internal_jump",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_interpretation_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    }
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/5.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": true,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_lucubrate_easy_understand_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_deep_research_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "deep_research"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_lucubrate_easy_understand_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_lucubrate_easy_understand_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_lucubrate_easy_understand_desc2_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_lucubrate_easy_understand_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_lucubrate_easy_understand_query1_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/6.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_lucubrate_easy_understand_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_deep_research_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    }
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/6.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": false,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_ride_walk_navigation_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_navigation_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "navigation"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_ride_walk_navigation_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_ride_walk_navigation_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_ride_walk_navigation_desc2_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_ride_walk_navigation_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_ride_walk_navigation_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_ride_walk_navigation_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/8.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_ride_walk_navigation_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_navigation_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    }
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/8.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": false,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_daily_news_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_news_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "news"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_daily_news_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_daily_news_desc1_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_daily_news_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_daily_news_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_daily_news_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/9.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_daily_news_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_news_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    }
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/9.png"
+                                    ]
+                                  }
+                                }
+                              }
+                            ],
+                            "title": {
+                              "type": "string_type",
+                              "value": "dora_function_introduction_title_cn"
+                            },
+                            "__id__": 810467823841349,
+                            "__card_id__": 6672384514,
+                            "__version__": "1.0.3",
+                            "__card_instance_id__": "13747201026"
+                          },
+                          "node_key": "dora_p_card_lite_func_intro_v2",
+                          "node_name": "P & Lite Function Introduction V2",
+                          "node_type": "card",
+                          "template_type": "function_introduction_set"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810467785035845
+                      },
+                      "node_name": "Floor 21",
+                      "node_type": "layer"
+                    }
+                  ],
+                  "config": {
+                    "title": {
+                      "type": "string_type",
+                      "value": "dora_device_manage_tab_explore_cn"
+                    },
+                    "__id__": 810466681528389
+                  },
+                  "node_name": "Explore",
+                  "node_type": "tab"
+                },
+                {
+                  "nodes": [
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_device_name_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/device_rename?page_key=device_rename&product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump"
+                                },
+                                "right_icon": "arrow",
+                                "right_text": "device_name"
+                              }
+                            ],
+                            "__id__": 810468020858949,
+                            "__card_id__": 13042178562,
+                            "__version__": "1.0.1",
+                            "__card_instance_id__": "13042183682"
+                          },
+                          "node_key": "dora_card_lite_conn_device_name_v2",
+                          "node_name": "Lite Connected Device Name V2",
+                          "node_type": "card",
+                          "template_type": "general_group"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810467924885573
+                      },
+                      "node_name": "Floor 22",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_device_sound_settings_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/voice_settings?page_key=voice_settings&product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump"
+                                },
+                                "right_icon": "arrow"
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_device_gesture_settings_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/gesture_settings?page_key=gesture_settings&product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump"
+                                },
+                                "right_icon": "arrow"
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_device_general_settings_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/general_settings?page_key=general_settings&product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump"
+                                },
+                                "red_dot": [
+                                  "firmware_upgrade"
+                                ],
+                                "right_icon": "arrow"
+                              }
+                            ],
+                            "__id__": 810468041613381,
+                            "__card_id__": 13042178818,
+                            "__version__": "1.0.2",
+                            "__card_instance_id__": "5975040258"
+                          },
+                          "node_key": "dora_card_lite_base_settings_v2",
+                          "node_name": "Lite Basic Settings V2",
+                          "node_type": "card",
+                          "template_type": "general_group"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810467934056517
+                      },
+                      "node_name": "Floor 23",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "doubao_active_notification_entrance_cn"
+                                },
+                                "action": {
+                                  "action_url": "",
+                                  "action_data": {
+                                    "class_name": "com.obric.smartnotification.featuresettings.impl.SmartNotificationSetting",
+                                    "package_name": "com.obric.smartnotification",
+                                    "previous_page": "page_dora_device_management"
+                                  },
+                                  "action_type": "external_jump_by_explicit_intent"
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_notification_broadcast"
+                                  ]
+                                },
+                                "item_type": "proactive_settings",
+                                "right_icon": "arrow"
+                              }
+                            ],
+                            "__id__": 810468131336261,
+                            "__card_id__": 6853632514,
+                            "__version__": "1.0.3",
+                            "__card_instance_id__": "6962688514"
+                          },
+                          "node_key": "dora_p_card_lite_proactive_noti_v2",
+                          "node_name": "P & Lite Doubao Active Notification V2",
+                          "node_type": "card",
+                          "template_type": "general_group"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810467948290117
+                      },
+                      "node_name": "Floor 24",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "desc": {
+                              "type": "string_type",
+                              "value": "dora_device_ai_lab_tips_cn"
+                            },
+                            "items": [
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_ai_lab_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/ai_lab?page_key=ai_lab&product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump"
+                                },
+                                "right_icon": "arrow"
+                              }
+                            ],
+                            "__id__": 810468185993285,
+                            "__card_id__": 13042179330,
+                            "__version__": "1.0.1",
+                            "__card_instance_id__": "13042185218"
+                          },
+                          "node_key": "dora_card_lite_ai_lab_v2",
+                          "node_name": "Lite AI Lab V2",
+                          "node_type": "card",
+                          "template_type": "general_group"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810468166697029
+                      },
+                      "node_name": "Floor 25",
+                      "node_type": "layer"
+                    }
+                  ],
+                  "config": {
+                    "title": {
+                      "type": "string_type",
+                      "value": "dora_device_manage_tab_settings_cn"
+                    },
+                    "__id__": 810466674782277
+                  },
+                  "node_name": "Settings",
+                  "node_type": "tab"
+                }
+              ],
+              "config": {
+                "__id__": 810466657370181
+              },
+              "node_name": "Tab Page 2",
+              "node_type": "tabs"
+            }
+          ],
+          "config": {
+            "title": {
+              "type": "string_type",
+              "value": "dora_device_manage_tab_explore_cn"
+            },
+            "__id__": 810466171555909
+          },
+          "node_name": "Connection Display Page",
+          "node_type": "subpage"
+        },
+        {
+          "nodes": [
+            {
+              "nodes": [
+                {
+                  "nodes": [],
+                  "config": {
+                    "__id__": 810471332061253,
+                    "image_link": {
+                      "local_value": "image_dora_lite_headphone_${device_component}_silver",
+                      "remote_info": {
+                        "dark_url": [
+                          "https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_${product}_headphone_${device_component}_${sku}_dark.png"
+                        ],
+                        "light_url": [
+                          "https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_${product}_headphone_${device_component}_${sku}_light.png"
+                        ]
+                      }
+                    },
+                    "__card_id__": 13042176770,
+                    "__version__": "1.0.1",
+                    "battery_info": {
+                      "title": {
+                        "type": "starling_type",
+                        "value": "dora_device_disconnected_state_cn"
+                      }
+                    },
+                    "__card_instance_id__": "13042180098"
+                  },
+                  "node_key": "dora_card_lite_product_display_v2",
+                  "node_name": "Lite Device SKU & Battery V2",
+                  "node_type": "card",
+                  "template_type": "product_display"
+                }
+              ],
+              "config": {
+                "__id__": 810471282413637
+              },
+              "node_name": "Floor 26",
+              "node_type": "layer"
+            },
+            {
+              "nodes": [
+                {
+                  "nodes": [
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "title": {
+                              "type": "string_type",
+                              "value": "dora_soda_membership_title_cn"
+                            },
+                            "__id__": 810471853166661,
+                            "action": {
+                              "action_url": "sslocal://flow/dora/luna_music_page?page_key=luna_music_page",
+                              "action_type": "internal_jump"
+                            },
+                            "subtitle": {
+                              "type": "string_type",
+                              "value": "dora_soda_membership_detail_cn"
+                            },
+                            "image_link": {
+                              "local_value": "image_device_manage_banner"
+                            },
+                            "__card_id__": 13042177794,
+                            "__version__": "1.0.1",
+                            "__card_instance_id__": "13042182146"
+                          },
+                          "node_key": "dora_card_lite_banner_v2",
+                          "node_name": "Lite Soda VIP Banner V2",
+                          "node_type": "card",
+                          "template_type": "banner"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810471810748485
+                      },
+                      "node_name": "Floor 27",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_lite_simultaneous_interpretation_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/simul_interpretat_detail?product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "quick_access",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "interpretation_tutor"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_interpretation"
+                                  ],
+                                  "enable_conditions": [
+                                    "device_connected"
+                                  ]
+                                },
+                                "image_link": {
+                                  "local_value": "icon_dora_interpret"
+                                }
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_englisth_tutor_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/chat?is_from_outer=true&bot_id=7369823807386877971",
+                                  "action_data": {
+                                    "toast_text": {
+                                      "type": "string_type",
+                                      "value": "dora_englisth_tutor_open_wakeup_toast_cn"
+                                    }
+                                  },
+                                  "action_type": "jump_owen_and_check_show_toast",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "quick_access",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "english_tutor"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_owen_wakeup"
+                                  ],
+                                  "enable_conditions": [
+                                    "device_connected"
+                                  ]
+                                },
+                                "image_link": {
+                                  "local_value": "icon_dora_ai_coach"
+                                }
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_message_broadcast_cn"
+                                },
+                                "action": {
+                                  "action_url": "obric://smartnotification",
+                                  "action_data": {
+                                    "class_name": "com.obric.smartnotification.featuresettings.impl.SmartNotificationSetting",
+                                    "package_name": "com.obric.smartnotification",
+                                    "previous_page": "page_dora_device_management"
+                                  },
+                                  "action_type": "external_jump_by_explicit_intent",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "quick_access",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "broadcast"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_notification_broadcast"
+                                  ],
+                                  "enable_conditions": [
+                                    "device_connected"
+                                  ]
+                                },
+                                "image_link": {
+                                  "local_value": "icon_dora_speaker"
+                                }
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_individuation_tone_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/single_tts_speaker_setting?product_id=1&previous_page=device_management&enter_method=click_button",
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "quick_access",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "personalized_voice"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "icon_dora_bubble_voice"
+                                }
+                              }
+                            ],
+                            "__id__": 810472016732229,
+                            "__card_id__": 13278720002,
+                            "__version__": "1.0.5",
+                            "__card_instance_id__": "16513536002"
+                          },
+                          "node_key": "dora_p_card_lite_func_entry_v2",
+                          "node_name": "P & Lite Function Entry V2",
+                          "node_type": "card",
+                          "template_type": "duo_group"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810471874711621
+                      },
+                      "node_name": "Floor 28",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "tag": true,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_generate_podcast_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_podcast_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "podcast"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_generate_podcast_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_generate_podcast_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_generate_podcast_desc2_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_generate_podcast_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_generate_podcast_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_generate_podcast_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/1.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_generate_podcast_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_podcast_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    },
+                                    "is_hidden": true
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/1.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": false,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_know_all_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?product_id=1&previous_page=device_management&enter_method=click_button&current_page=dora_portable_guide_detail",
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "portable_guide"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_know_all_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_desc2_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_desc3_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_know_all_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_know_all_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/2.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_know_all_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_portable_guide_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    },
+                                    "is_hidden": true
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/2.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": false,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_walkman_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_music_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "music"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_walkman_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_desc2_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_desc3_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_walkman_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_walkman_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/3.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_walkman_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_music_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    },
+                                    "is_hidden": true
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/3.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": true,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_multilingual_translator_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?product_id=1&previous_page=device_management&enter_method=click_button&current_page=dora_interpretation_detail",
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "interpretation"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_multilingual_translator_subtitle_cn"
+                                },
+                                "condition": {
+                                  "biz_conditions": [
+                                    "support_interpretation"
+                                  ]
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_multilingual_translator_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_multilingual_translator_desc2_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_multilingual_translator_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_multilingual_translator_query1_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/5.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "sslocal://flow/dora/simul_interpretat_detail?product_id=1&previous_page=device_management&enter_method=click_button",
+                                      "action_type": "internal_jump",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_interpretation_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    },
+                                    "is_hidden": true
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/5.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": true,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_lucubrate_easy_understand_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_deep_research_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "deep_research"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_lucubrate_easy_understand_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_lucubrate_easy_understand_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_lucubrate_easy_understand_desc2_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_lucubrate_easy_understand_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_lucubrate_easy_understand_query1_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/6.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_lucubrate_easy_understand_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_deep_research_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    },
+                                    "is_hidden": true
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/6.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": false,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_ride_walk_navigation_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_navigation_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "navigation"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_ride_walk_navigation_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_ride_walk_navigation_desc1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_ride_walk_navigation_desc2_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_ride_walk_navigation_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_ride_walk_navigation_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_ride_walk_navigation_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/8.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_ride_walk_navigation_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_navigation_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    },
+                                    "is_hidden": true
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/8.png"
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "tag": false,
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_daily_news_title_cn"
+                                },
+                                "action": {
+                                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=device_management&enter_method=click_button&current_page=dora_news_detail",
+                                  "action_data": {},
+                                  "action_type": "internal_jump",
+                                  "action_tracker": {
+                                    "event": "dora_card_click",
+                                    "params": {
+                                      "card_type": "feature_introduction",
+                                      "action_type": "normal_click",
+                                      "card_content_type": "news"
+                                    },
+                                    "params_type": "const"
+                                  }
+                                },
+                                "subtitle": {
+                                  "type": "string_type",
+                                  "value": "dora_introduce_daily_news_subtitle_cn"
+                                },
+                                "page_info": {
+                                  "descs": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_daily_news_desc1_cn"
+                                    }
+                                  ],
+                                  "title": {
+                                    "type": "string_type",
+                                    "value": "dora_introduce_daily_news_title_cn"
+                                  },
+                                  "querys": [
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_daily_news_query1_cn"
+                                    },
+                                    {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_daily_news_query2_cn"
+                                    }
+                                  ],
+                                  "image_link": {
+                                    "local_value": "image_dora_function_introduction_page",
+                                    "remote_info": {
+                                      "light_url": [
+                                        "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/page/v1/9.png"
+                                      ]
+                                    }
+                                  },
+                                  "button_info": {
+                                    "title": {
+                                      "type": "string_type",
+                                      "value": "dora_introduce_details_page_try_btn_cn"
+                                    },
+                                    "action": {
+                                      "action_url": "",
+                                      "action_data": {
+                                        "tts": {
+                                          "type": "string_type",
+                                          "value": "dora_introduce_daily_news_pretts_cn"
+                                        }
+                                      },
+                                      "action_type": "wakeup_and_play_tts",
+                                      "action_tracker": {
+                                        "event": "dora_card_click",
+                                        "params": {
+                                          "card_type": "feature_detail",
+                                          "action_type": "normal_click",
+                                          "card_content_type": "dora_news_detail"
+                                        },
+                                        "params_type": "const"
+                                      }
+                                    },
+                                    "is_hidden": true
+                                  }
+                                },
+                                "image_link": {
+                                  "local_value": "",
+                                  "remote_info": {
+                                    "light_url": [
+                                      "https://p3-starweave-source.byteimg.com/dora/lite/device_management/func_intro/card/v1/9.png"
+                                    ]
+                                  }
+                                }
+                              }
+                            ],
+                            "title": {
+                              "type": "string_type",
+                              "value": "dora_function_introduction_title_cn"
+                            },
+                            "__id__": 810476560547909,
+                            "__card_id__": 17057280258,
+                            "__version__": "1.0.1",
+                            "__card_instance_id__": "16513536258"
+                          },
+                          "node_key": "dora_p_card_lite_func_intro_disconn_v2",
+                          "node_name": "P & Lite Function Introduction Disconnected V2",
+                          "node_type": "card",
+                          "template_type": "function_introduction_set"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810476405362757
+                      },
+                      "node_name": "Floor 34",
+                      "node_type": "layer"
+                    }
+                  ],
+                  "config": {
+                    "title": {
+                      "type": "string_type",
+                      "value": "dora_device_manage_tab_explore_cn"
+                    },
+                    "__id__": 810471390924869
+                  },
+                  "node_name": "Explore",
+                  "node_type": "tab"
+                },
+                {
+                  "nodes": [
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_device_name_cn"
+                                },
+                                "action_url": "",
+                                "right_icon": "",
+                                "right_text": "device_name"
+                              }
+                            ],
+                            "__id__": 810473141735493,
+                            "__card_id__": 13042177026,
+                            "__version__": "1.0.1",
+                            "__card_instance_id__": "13042180610"
+                          },
+                          "node_key": "dora_card_lite_device_name_v2",
+                          "node_name": "Lite Disconnected Device Name V2",
+                          "node_type": "card",
+                          "template_type": "general_group"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810473122484293
+                      },
+                      "node_name": "Floor 31",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "items": [
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_ota_firmware_version_cn"
+                                },
+                                "item_type": "firmware_version",
+                                "action_url": "",
+                                "right_icon": "",
+                                "right_text": "firmware_version"
+                              },
+                              {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_device_sn_cn"
+                                },
+                                "item_type": "device_sn",
+                                "action_url": "",
+                                "right_icon": "",
+                                "right_text": "device_sn"
+                              }
+                            ],
+                            "__id__": 810473183182917,
+                            "__card_id__": 13042177282,
+                            "__version__": "1.0.1",
+                            "__card_instance_id__": "13042181122"
+                          },
+                          "node_key": "dora_card_lite_device_info_v2",
+                          "node_name": "Lite Device Basic Info V2",
+                          "node_type": "card",
+                          "template_type": "general_group"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810473150586949
+                      },
+                      "node_name": "Floor 32",
+                      "node_type": "layer"
+                    },
+                    {
+                      "nodes": [
+                        {
+                          "nodes": [],
+                          "config": {
+                            "__id__": 810473418793029,
+                            "__card_id__": 13042177538,
+                            "__version__": "1.0.1",
+                            "unbind_button": {
+                              "title": {
+                                "type": "string_type",
+                                "value": "dora_btn_unbind_buds_cn"
+                              },
+                              "dialog": {
+                                "title": {
+                                  "type": "string_type",
+                                  "value": "dora_device_unbind_dialog_title_cn"
+                                },
+                                "cancel": {
+                                  "type": "string_type",
+                                  "value": "dora_dialog_btn_cancel_cn"
+                                },
+                                "confirm": {
+                                  "type": "string_type",
+                                  "value": "dora_device_btn_unbind_cn"
+                                },
+                                "message": {
+                                  "type": "string_type",
+                                  "value": "dora_device_unbind_dialog_msg_cn"
+                                }
+                              }
+                            },
+                            "reconnect_button": {
+                              "title": {
+                                "type": "string_type",
+                                "value": "dora_device_reconnect_btn_cn"
+                              }
+                            },
+                            "__card_instance_id__": "13042181634"
+                          },
+                          "node_key": "dora_card_lite_reconnect_unbind_panel_v2",
+                          "node_name": "Reconnect & Unbind Panel V2",
+                          "node_type": "card",
+                          "template_type": "reconnect_unbind_panel"
+                        }
+                      ],
+                      "config": {
+                        "__id__": 810473213534277
+                      },
+                      "node_name": "Floor 33",
+                      "node_type": "layer"
+                    }
+                  ],
+                  "config": {
+                    "title": {
+                      "type": "string_type",
+                      "value": "dora_device_manage_tab_settings_cn"
+                    },
+                    "__id__": 810471380430917
+                  },
+                  "node_name": "Settings",
+                  "node_type": "tab"
+                }
+              ],
+              "config": {
+                "__id__": 810471374082117
+              },
+              "node_name": "Tab Page 3",
+              "node_type": "tabs"
+            }
+          ],
+          "config": {
+            "__id__": 810466035683397
+          },
+          "node_name": "Disconnected Display Page",
+          "node_type": "subpage"
+        }
+      ],
+      "config": {
+        "__id__": 810466026664005
+      },
+      "node_name": "Page Container 3",
+      "node_type": "subpages"
+    }
+  ],
+  "config": {
+    "__id__": 810463912800325,
+    "__branch__": "master",
+    "__global_node_index_map__": {
+      "tab": 7,
+      "card": 43,
+      "page": 1,
+      "tabs": 4,
+      "layer": 35,
+      "nav_bar": 3,
+      "subpage": 5,
+      "subpages": 4
+    }
+  },
+  "node_key": "device_manage_p_v3",
+  "node_name": "P & Lite Device Management V3",
+  "node_type": "page",
+  "dsl_version": "2.0.0"
+}

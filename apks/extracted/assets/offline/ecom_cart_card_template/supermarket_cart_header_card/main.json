@@ -1,0 +1,160 @@
+{
+    "type": "View",
+     "style": {
+        "width": "stretch",
+         "height": "auto",
+         ":bg_img": "data.theme_config.src",
+         ":padding": "[data.custom.padding_top, '0', '0', '0']",
+         "bg_color": "#ffffff",
+         "bg_scale_type": "fit_top",
+         "flex_direction": "column",
+         "justify_content": "space-between",
+         "background_position": "0% 0%"
+    },
+     "elements": [{
+        "type": "View",
+         "style": {
+            "width": "stretch",
+             ":height": "option(data.address.address_text, 56, 44)",
+             "align_items": "center",
+             "flex_direction": "row",
+             "justify_content": "space-around"
+        },
+         "elements": [{
+            "attr": {
+                "src": "https://p26-piu.byteimg.com/tos-cn-i-8jisjyls3a/d9deaddbdf67466c9ea9351b58c5a071~tplv-8jisjyls3a-3:0:0:q75.png"
+            },
+             "type": "Image",
+             "style": {
+                "left": 0,
+                 "width": "24",
+                 "height": "24",
+                 "margin": ["0",
+                 "16",
+                 "0",
+                 "16"],
+                 "position": "absolute"
+            },
+             "click_action": {
+                "type": "quitCart"
+            }
+        },
+         {
+            "type": "View",
+             "style": {
+                "align_items": "center",
+                 "flex_direction": "column",
+                 "justify_content": "center"
+            },
+             "elements": [{
+                "attr": {
+                    ":text": "data.title_text"
+                },
+                 "type": "Text",
+                 "style": {
+                    "font_size": 17,
+                     "font_weight": "bold"
+                }
+            },
+             {
+                "type": "View",
+                 "style": {
+                    "line": 1,
+                     "height": 16,
+                     "margin": [5.5,
+                     0,
+                     0,
+                     0],
+                     ":display": "option(data.address.address_text, 'flex', 'none')",
+                     "align_items": "center"
+                },
+                 "elements": [{
+                    "attr": {
+                        ":src": "data.address.location_icon"
+                    },
+                     "type": "Image",
+                     "style": {
+                        "width": "16",
+                         "height": "16",
+                         "margin": ["0",
+                         "2",
+                         "0",
+                         "0"]
+                    }
+                },
+                 {
+                    "attr": {
+                        ":text": "data.address.address_text"
+                    },
+                     "type": "Text",
+                     "style": {
+                        "margin": [0,
+                         0,
+                         -2,
+                         0],
+                         "display": "block",
+                         "font_size": 13,
+                         "max_width": 193,
+                         ":font_color": "data.address.color",
+                         "end_ellipse": true,
+                         "flex_shrink": 1,
+                         "white_space": "nowrap",
+                         "text_overflow": "ellipsis"
+                    }
+                },
+                 {
+                    "attr": {
+                        "src": "https://p6-piu.byteimg.com/tos-cn-i-8jisjyls3a/dbef11d1639e45d3b879ac5f3466c952~tplv-8jisjyls3a-3:0:0:q75.png"
+                    },
+                     "type": "Image",
+                     "style": {
+                        "width": "12",
+                         "height": "12",
+                         "margin": ["0",
+                         "0",
+                         "0",
+                         "2"]
+                    }
+                }],
+                 "click_action": {
+                    "type": "openAddressList"
+                }
+            }]
+        },
+         {
+            "attr": {
+                ":text": "data.button_text"
+            },
+             "type": "Text",
+             "style": {
+                "right": 0,
+                 "padding": ["11",
+                 "16",
+                 "11",
+                 "16"],
+                 ":display": "option(data.button_text, 'flex', 'none')",
+                 "position": "absolute"
+            },
+             "click_action": {
+                "type": "changeManage"
+            }
+        }]
+    },
+     {
+        "attr": {
+            ":tab_list": "data.tab_list",
+             ":store_num": "data.global.tracker.store_num",
+             ":product_num": "data.global.tracker.product_num",
+             ":selected_tab_type": "data.selected_tab_type"
+        },
+         "type": "ECCartTabContainer",
+         "style": {
+            "width": "stretch",
+             ":height": "option(data.tab_list, option(len(data.tab_list)>0, '40','0'),'0')",
+             "padding": ["0",
+             "16",
+             "0",
+             "16"]
+        }
+    }]
+}

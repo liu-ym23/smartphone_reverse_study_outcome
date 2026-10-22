@@ -1,0 +1,86 @@
+{
+    "content": {
+        "version": 1,
+        "subject_apps": [
+            {
+                "package": "com.android.contacts",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.android.mms",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.android.gallery3d",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.obric.notes",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.android.camera",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.android.settings",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.obric.clock",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.ss.android.lark",
+                "sign": "c80ad6826d563bc397cbc5a3babf317c0fdc8da9efbeb501a7ca39426d021944"
+            },
+            {
+                "package": "com.ss.android.lark.debug",
+                "sign": "2646d76aaeabeae33b8ebca8dd2d362ea96dd40b47b089334110f52551b6e209"
+            },
+            {
+                "package": "com.obric.recorder",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.obric.browser",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.obric.calendar",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.obric.filemanager",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "zte.com.market",
+                "sign": "c2de9d066ef96be02e61acbe477eeed7e0b6f205ba02b59177c48be52778ed55"
+            },
+            {
+                "package": "com.obric.screenrecorder",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.obric.weather",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.obric.calculator",
+                "sign": "144258ce6dce3a5375d7b2077d8727bee863c8f6b9172c2e016ac73ca6f07095"
+            },
+            {
+                "package": "com.larus.nova",
+                "sign": "ff04b47ec9dd20b79f758af67a184926db00ac55cfd2a01e03fba9a1dca9de2a"
+            }
+        ],
+        "target_apps": [
+            {
+                "package": "com.larus.nova",
+                "sign": "ff04b47ec9dd20b79f758af67a184926db00ac55cfd2a01e03fba9a1dca9de2a"
+            }
+        ]
+    },
+    "signature": "3045022100b5f96a3c8d2d088101aebec6cd8b331414e4a50a949e668bdbe8336c49269000022067f6d7639fe01a21dd9996bc9ec2f88b132c5c588af1a0977075376eedecf618"
+}

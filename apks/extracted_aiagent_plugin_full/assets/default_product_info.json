@@ -1,0 +1,24 @@
+{
+  "pacific": {
+    "ro.product.brand": ["nubia","unknown"],
+    "ro.product.model": ["Ashe","P0110"],
+    "policy": "and"
+  },
+  "nerida": {
+    "ro.product.brand": ["nubia", "Nerida", "unknown"],
+    "ro.product.model": ["NX888J","P0210"],
+    "policy": "and"
+  },
+  "xxx": {
+    "ro.product.brand": ["xxx"],
+    "ro.product.model": ["xxx"],
+    "ro.product.manufacturer": ["xxx"],
+    "policy": "or"
+  },
+  "genesis": {
+    "ro.product.manufacturer": ["Genesis"],
+    "ro.product.brand": ["genesis"],
+    "ro.product.model": ["G1"],
+    "policy": "and"
+  }
+}

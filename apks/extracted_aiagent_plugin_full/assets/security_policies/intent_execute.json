@@ -1,0 +1,961 @@
+{
+    "version": 1,
+    "content": {
+        "app_version": null,
+        "policies": {
+            "Contacts_Create": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "contacts"
+                }
+            },
+            "Contacts_Search": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "contacts"
+                }
+            },
+            "Contacts_Update": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "contacts"
+                }
+            },
+            "Contacts_Delete": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "contacts"
+                }
+            },
+            "Contacts_AddToFavorite": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "contacts"
+                }
+            },
+            "Contacts_ShowContact": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Contacts_AddToBlocklist": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "contacts"
+                }
+            },
+            "Phone_Call": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "phone"
+                }
+            },
+            "Phone_GetSim": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "phone"
+                }
+            },
+            "Phone_ProxyCall": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "phone"
+                }
+            },
+            "Phone_OpenPage": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Phone_Search": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "phone"
+                }
+            },
+            "Phone_Delete": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "phone"
+                }
+            },
+            "Phone_ShowCallHistory": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Messages_Send": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Messages_Search": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "messages"
+                }
+            },
+            "Messages_Delete": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "messages"
+                }
+            },
+            "Messages_ShowMessage": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Camera_StartCapture": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_StartRecording": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_StopCapture": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_RotateCamera": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SwitchCameraMode": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetFocal": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetImageRatio": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetSelfTimer": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetFlashMode": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetFilter": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetISO": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetExposureTime": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetFocusDistance": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetWB": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetEV": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetTouchCapture": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetMeteringMode": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Camera_SetAuxiliaryLine": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "camera"
+                }
+            },
+            "Photo_Search": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SearchAlbum": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetFilter": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetWarm": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetExposure": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetSaturation": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetContrast": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetTone": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetClarity": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetSharpness": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetFade": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetBrightness": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_SetShadow": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_ShowPhoto": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Photo_ShowAlbum": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Notes_Create": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "notes"
+                }
+            },
+            "Notes_Search": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "notes"
+                }
+            },
+            "Notes_Update": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "notes"
+                }
+            },
+            "Notes_ShowNote": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Clock_CreateAlarm": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock"
+                }
+            },
+            "Clock_UpdateAlarm": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock"
+                }
+            },
+            "Clock_DeleteAlarm": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock"
+                }
+            },
+            "Clock_SearchAlarm": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock"
+                }
+            },
+            "Clock_TurnOffAlarm": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock_simple"
+                }
+            },
+            "Clock_TurnOnAlarm": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock"
+                }
+            },
+            "Clock_StartCountdown": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock_simple"
+                }
+            },
+            "Clock_DeleteCountdown": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock_simple"
+                }
+            },
+            "Clock_PauseCountdown": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock_simple"
+                }
+            },
+            "Clock_ResumeCountdown": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock_simple"
+                }
+            },
+            "Clock_SearchCountdown": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "clock_simple"
+                }
+            },
+            "Clock_ShowAlarm": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Clock_ShowCountdown": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Recorder_ShowRecording": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Recorder_Operate": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "recorder"
+                }
+            },
+            "Recorder_Delete": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "recorder"
+                }
+            },
+            "Files_ShowFile": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Calendar_ShowSchedule": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Office_SendMessage": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "office"
+                }
+            },
+            "Office_BookMeeting": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "office"
+                }
+            },
+            "Office_SearchMeeting": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "office"
+                }
+            },
+            "Office_CheckLogin": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "office"
+                }
+            },
+            "Office_SearchLarkContactInfoByAsr": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "office"
+                }
+            },
+            "Office_SearchLarkContactInfoByName": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "office"
+                }
+            },
+            "Office_KnowledgeAI": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "office"
+                }
+            },
+            "Office_JumpToLarkUrl": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Office_LarkCLICheckLogin": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "Office_LarkCLIEnsureAuth": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "office"
+                }
+            },
+            "System_SetVolume": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings"
+                }
+            },
+            "System_SettingsAvailable": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings"
+                }
+            },
+            "System_SwitchMode": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings"
+                }
+            },
+            "System_AdjustBrightness": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings"
+                }
+            },
+            "System_SetBrightness": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings"
+                }
+            },
+            "System_AdjustVolume": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings"
+                }
+            },
+            "System_OpenApp": {
+                "policy": {
+                    "type": 4
+                },
+                "sub_actions": {
+                    "camera": {
+                        "type": 0,
+                        "setting_key": "system_settings"
+                    },
+                    "相机": {
+                        "type": 0,
+                        "setting_key": "system_settings"
+                    }
+                }
+            },
+            "System_DownloadApp": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "System_DataSyncTrigger": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_Reboot": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings_sensitive"
+                }
+            },
+            "System_Shutdown": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings_sensitive"
+                }
+            },
+            "System_PowerLockControl": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings"
+                }
+            },
+            "System_UserSelect": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_MultiUserSelect": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_UserConfirm": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_QAWithSearch": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_ShowEntities": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_InAppSearch": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "System_Screenshot": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings"
+                }
+            },
+            "System_ScreenRecord": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_FindPhone": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_UserAuthorize": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                },
+                "sub_actions": {
+                    "autogui": {
+                        "type": 1,
+                        "setting_key": "autogui"
+                    },
+                    "new_conversation": {
+                        "type": 1,
+                        "setting_key": "new_conversation"
+                    },
+                    "calendar": {
+                        "type": 1,
+                        "setting_key": "calendar"
+                    },
+                    "clock_simple": {
+                        "type": 1,
+                        "setting_key": "clock_simple"
+                    },
+                    "history_conversation": {
+                        "type": 1,
+                        "setting_key": "history_conversation"
+                    }
+                }
+            },
+            "System_SwitchNotification": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "system_settings_sensitive"
+                }
+            },
+            "System_OpenPage": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "NetEaseCloudMusic_Search": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "netease_music"
+                }
+            },
+            "AppFunc_Execute": {
+                "policy": {
+                    "type": 4,
+                    "setting_key": "appfunc_execute"
+                }
+            },
+            "AudioControl_Play": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "audio_control"
+                }
+            },
+            "AudioControl_Pause": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "audio_control"
+                }
+            },
+            "AudioControl_PlayNext": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "audio_control"
+                }
+            },
+            "AudioControl_PlayPrevious": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "audio_control"
+                }
+            },
+            "AudioControl_PlayFromScratch": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "audio_control"
+                }
+            },
+            "AudioControl_SeekTo": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "audio_control"
+                }
+            },
+            "System_AutoAction": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                },
+                "sub_actions": {
+                    "false": {
+                        "type": 0
+                    }
+                }
+            },
+            "System_Skill": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                }
+            },
+            "System_Shell": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                }
+            },
+            "System_UserRemind": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_AskUser": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "Doubao_RealTimeVoiceCall": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "doubao_rtc"
+                }
+            },
+            "Doubao_RealTimeVideoCall": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "doubao_rtc"
+                }
+            },
+            "Doubao_RealTimeScreenShare": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "PC_SearchAppEntity": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_AppFcEntitySearch": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_GlobalSearch": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_IntentGlobalSearch": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_CommonGlobalSearch": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_EntityPoisonLabel": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_PersonalContextSearch": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_PersonalContextFetch": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_GetImageUrl": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_DoubaoGlobalSearch": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "PC_GlobalSearchIntent": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "personalcontext"
+                }
+            },
+            "RC_Search": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "realtimecontext"
+                }
+            },
+            "RC_DeviceState": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "realtimecontext"
+                }
+            },
+            "Memory_Operate": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "memory"
+                }
+            },
+            "Memory_Produce": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "memory"
+                }
+            },
+            "Memory_Delete": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "memory"
+                }
+            },
+            "Memory_SaveDialogueMemory": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "memory"
+                }
+            },
+            "Memory_Search": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "memory"
+                }
+            },
+            "Memory_OperateNew": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "memory"
+                }
+            },
+            "Common_ViewEntities": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "Weather_Search": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "weather"
+                }
+            },
+            "Weather_Show": {
+                "policy": {
+                    "type": 4
+                }
+            },
+            "System_LocationRequest": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "autogui"
+                }
+            },
+            "RC_ComplexTaskContext": {
+                "policy": {
+                    "type": 0,
+                    "setting_key": "autogui"
+                }
+            },
+            "System_CheckPermissions": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_RequestPermissions": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_UpdatePermissions": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_GetLocation": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_HeartBeat": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_StopAction": {
+                "policy": {
+                    "type": 0
+                }
+            },
+            "System_DeviceState": {
+                "policy": {
+                  "type": 0,
+                  "setting_key": "system_settings"
+                }
+            },
+            "GUI_Action": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                }
+            },
+            "GUI_INIT": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                }
+            },
+            "EventTask_CreateDraft": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                }
+            },
+            "EventTask_UpdateTask": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                }
+            },
+            "EventTask_SubmitTask": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                }
+            },
+            "EventTask_GetTaskInfo": {
+                "policy": {
+                    "type": 1,
+                    "setting_key": "autogui"
+                }
+            },
+            "Browser_Use": {
+                "policy": {
+                    "type": 0
+                }
+            }
+        }
+    },
+    "signature": ""
+}

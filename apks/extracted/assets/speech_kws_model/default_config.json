@@ -1,0 +1,20 @@
+{
+  "model": "豆包豆包模型",
+  "date": "2026-09-18",
+  "version": "15.6.4",
+  "description": "更新flute版本模型，对应1.0.3.287版本",
+  "kws-file": "kws_second_model.bin",
+  "kws-model-version": "p_second_wakeup_260815_v1.0",
+  "kws-engine-version": "1.0.3.133",
+  "kws-md5": "18797237819aa05a6e71c5383e726375",
+  "kws-key": "key_info_kws_second_model.txt",
+  "kws-key-md5": "0f9123c126fb4431ab42851b579580d3",
+  "voiceprint-file": "kws_sid_model.bin",
+  "voiceprint-model-version": "p_second_sid_qnn_260815_v1.1",
+  "voiceprint-engine-version": "1.0.0.100",
+  "voiceprint-md5": "cae6cfc739315c66c595434193ee2c5d",
+  "voiceprint-key": "key_info_kws_sid_model.txt",
+  "voiceprint-key-md5": "9f598169aa87253186e94e0f67761a45",
+  "voiceprint-rawfile-md5": "335d3e7e171c9e0276beee1f6faac624",
+  "kws-rawfile-md5": "5b979382b2b4d25dd08e15c24b54715c"
+}

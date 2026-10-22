@@ -1,0 +1,102 @@
+{
+    "type": "View",
+     "style": {
+        "padding": ["8",
+         "8",
+         "0",
+         "8"],
+        "display": "{{option(data.custom.top_bar_visibility == false, 'none', 'flex')}}"
+    },
+     "elements": [{
+        "attr": {
+            "role": "button",
+             ":aria_label": "strcat('小时达,',data.pop_cart_desc)"
+        },
+         "type": "View",
+         "style": {
+            "width": "stretch",
+             "height": "44",
+             "radius": ["12"],
+             "padding": ["0",
+             "12"],
+             "bg_color": "#FFFFFF",
+             "align_items": "center",
+             "justify_content": "space-between"
+        },
+         "elements": [{
+            "type": "View",
+             "style": {
+                "align_items": "center"
+            },
+             "elements": [{
+                "attr": {
+                    ":src": "data.icon"
+                },
+                 "type": "Image",
+                 "style": {
+                    "width": "45",
+                     "height": "14"
+                }
+            },
+             {
+                "type": "View",
+                 "style": {
+                    "width": "1",
+                     "height": "12",
+                     "margin": ["0",
+                     "8"],
+                     "bg_color": "#57161823"
+                }
+            },
+             {
+                "attr": {
+                    ":text": "data.pop_cart_desc"
+                },
+                 "type": "Text",
+                 "style": {
+                    "font_size": 14,
+                     "font_color": "#FF161824",
+                     "font_weight": 400
+                }
+            }]
+        },
+         {
+            "type": "View",
+             "style": {
+                "align_items": "center"
+            },
+             "elements": [{
+                "for": {
+                    "items": "data.product_covers"
+                },
+                 "attr": {
+                    ":src": "item"
+                },
+                 "type": "Image",
+                 "style": {
+                    "width": "24",
+                     "height": "24",
+                     "margin": ["0",
+                     "0",
+                     "0",
+                     "4"],
+                     "radius": ["4"],
+                     "bg_color": "#08161823"
+                }
+            },
+             {
+                "attr": {
+                    "src": "https://p6-piu.byteimg.com/tos-cn-i-8jisjyls3a/d3441fd00c564c51a35df522a3b077d4~tplv-8jisjyls3a-3:0:0:q75.png"
+                },
+                 "type": "Image",
+                 "style": {
+                    "width": "12",
+                     "height": "12"
+                }
+            }]
+        }],
+         "click_action": {
+            "type": "itemClick"
+        }
+    }]
+}

@@ -1,0 +1,48 @@
+{
+    "page_key": "device_list",
+    "nav_bar": {
+        "template_type": "general_bar",
+        "template_data": "{\"center_item\":{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_list_title_cn\"}}}"
+    },
+    "layers": [
+        {
+            "name": "layer2",
+            "card": {
+                "name": "card2",
+                "card_instance_id": "",
+                "card_key": "dora_card_e_item",
+                "card_data": {
+                    "template_type": "product_item",
+                    "template_data": "{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_list_e_title_cn\"},\"subtitle\":{\"type\":\"string_type\",\"value\":\"dora_device_list_e_subtitle_cn\"},\"image_link\":{\"type\":\"local\",\"value\":\"image_dora_e_device_list\"},\"action_url\":\"sslocal://flow/dora/bind_device?page_key=bind_device&product_id=2\"}"
+                },
+                "biz_data": ""
+            }
+        },
+        {
+            "name": "layer1",
+            "card": {
+                "name": "card1",
+                "card_instance_id": "",
+                "card_key": "dora_card_lite_item",
+                "card_data": {
+                    "template_type": "product_item",
+                    "template_data": "{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_list_lite_title_cn\"},\"subtitle\":{\"type\":\"string_type\",\"value\":\"dora_device_list_lite_subtitle_cn\"},\"image_link\":{\"type\":\"local\",\"value\":\"image_dora_lite_device_list\"},\"action_url\":\"sslocal://flow/dora/bind_device?page_key=bind_device&product_id=1\"}"
+                },
+                "biz_data": ""
+            }
+        },
+        {
+            "name": "layer3",
+            "card": {
+                "name": "card1",
+                "card_instance_id": "",
+                "card_key": "dora_card_g_item",
+                "card_data": {
+                    "template_type": "product_item",
+                    "template_data": "{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_list_g_title_cn\"},\"subtitle\":{\"type\":\"string_type\",\"value\":\"dora_device_list_g_subtitle_cn\"},\"image_link\":{\"type\":\"local\",\"value\":\"image_dora_g_device_list\"},\"action_url\":\"sslocal://flow/dora/bind_device?page_key=bind_device&product_id=16\"}"
+                },
+                "biz_data": ""
+            }
+        }
+    ]
+}

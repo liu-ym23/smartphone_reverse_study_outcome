@@ -1,0 +1,921 @@
+{
+  "scene_list": [
+    {
+      "scene": "share_app",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "notice_list",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "common_bot",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "common_bot_with_save",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "webview",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "messages_link_image",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "collect",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "messages_link",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "collect",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "messages_link_sub_conv",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "conversation_group",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "conversation_group_with_save",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "single_image",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "image"
+        }
+      ]
+    },
+    {
+      "scene": "share_link",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "z_share_link_planb",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "image_viewer",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "image"
+        }
+      ]
+    },
+    {
+      "scene": "music_video",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "save_video",
+          "share_type": "video"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "video"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    }, 
+    {
+      "scene": "creation_music_video",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "save_video",
+          "share_type": "video"
+        },
+        {
+          "channel_type": "report",
+          "share_type": "report"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "video"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },    {
+      "scene": "creation_image_viewer",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },        
+        {
+          "channel_type": "report",
+          "share_type": "report"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "image"
+        }
+      ]
+    },
+    {
+      "scene": "show_long_image",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "table_full_screen_page",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "copy_text",
+          "share_type": "text"
+        },
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "export_file",
+          "share_type": "file"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "code_full_screen_page",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "copy_text",
+          "share_type": "text"
+        },
+        {
+          "channel_type": "export_file",
+          "share_type": "file"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "sdk_video",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "text"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "text"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "text"
+        }
+      ]
+    },
+    {
+      "scene": "deep_research_episode",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "report",
+          "share_type": "report"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "documents",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "collect",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "mini_artifact",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "report",
+          "share_type": "text"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "office_my_qr_code",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "scan_qr_code",
+          "share_type": "image"
+        },
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        }
+      ]
+    },
+    {
+      "scene": "office_share_chat",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "forward",
+          "need_login": false,
+          "need_original_image": false,
+          "need_original_video": false
+        },
+        {
+          "channel_type": "copy_link",
+          "need_login": false,
+          "need_original_image": false,
+          "need_original_video": false
+        },
+        {
+          "channel_type": "aweme",
+          "need_login": false,
+          "need_original_image": false,
+          "need_original_video": false
+        },
+        {
+          "channel_type": "wechat",
+          "need_login": false,
+          "need_original_image": false,
+          "need_original_video": false
+        },
+        {
+          "channel_type": "moments",
+          "need_login": false,
+          "need_original_image": false,
+          "need_original_video": false
+        }
+      ]
+    },
+    {
+      "scene": "office_share_thread",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "merge_forward",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "office_group_qr_code",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        }
+      ]
+    },
+    {
+      "scene": "social_image_share",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "save_image",
+          "share_type": "image"
+        }
+      ]
+    },
+    {
+      "scene": "social_video_share",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "save_video",
+          "share_type": "video"
+        }
+      ]
+    },
+    {
+      "scene": "unknown",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "qq",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    },
+    {
+      "scene": "conversation_ccm",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "wechat",
+          "need_login": false,
+          "need_original_image": false,
+          "need_original_video": false
+        },
+        {
+          "channel_type": "moments",
+          "need_login": false,
+          "need_original_image": false,
+          "need_original_video": false
+        },
+        {
+          "channel_type": "qq",
+          "need_login": false,
+          "need_original_image": false,
+          "need_original_video": false
+        }
+      ]
+    },
+    {
+      "scene": "saas_share",
+      "first_group_sort_type": [],
+      "second_group_sort_type": [
+        {
+          "channel_type": "copy_link",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "wechat",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "moments",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "aweme",
+          "share_type": "url"
+        },
+        {
+          "channel_type": "more",
+          "share_type": "url"
+        }
+      ]
+    }
+  ]
+}

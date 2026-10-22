@@ -1,0 +1,1194 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "enabled": true,
+      "rule_id": 1,
+      "rule_version": 3,
+      "rule_name_en": "[v] Chinese Citizen ID Number",
+      "bdt_id": 23,
+      "sensitive_type": "china_id",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "scanner",
+            "values": [
+              "yyyy"
+            ],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "\\d{7}[0-9Xx]"
+            ],
+            "min_length": 8,
+            "max_length": 8,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^0-9a-zA-Z_]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {
+        "extenders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "(11|12|31|50|15|65|54|64|45|23|22|21|13|14|63|37|41|32|34|33|35|36|43|42|44|46|62|61|51|52|53)\\d{4}|810000|820000|710000"
+            ],
+            "min_length": 6,
+            "max_length": 6,
+            "in_value": true,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 2,
+      "rule_version": 2,
+      "rule_name_en": "[kv] User Real Name (Chinese)",
+      "bdt_id": 13,
+      "sensitive_type": "real_name",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "identity_name",
+              "name",
+              "real_name",
+              "legal_name",
+              "legal_person_name",
+              "user_name",
+              "post_receiver",
+              "收件人",
+              "姓名",
+              "名称",
+              "名字",
+              "用户名"
+            ],
+            "in_value": false
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$kvconnection"
+            ],
+            "min_length": 1,
+            "max_length": 20,
+            "in_value": false,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "[\\u4E00-\\u9FFF·]{2,5}"
+            ],
+            "min_length": 2,
+            "max_length": 20,
+            "in_value": true,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 3,
+      "rule_version": 2,
+      "rule_name_en": "[kv] Bank Account/Card Number",
+      "bdt_id": 73,
+      "sensitive_type": "bank_account",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "bank_card",
+              "bank_card_id",
+              "bank_card_num",
+              "bank_card_number",
+              "bank_account",
+              "bank_account_id",
+              "bank_account_number",
+              "bank_account_num",
+              "account_no",
+              "bank_acc_no",
+              "debit_card",
+              "debit_card_number",
+              "credit_card",
+              "credit_card_number",
+              "银行卡",
+              "银行卡号",
+              "银行账户",
+              "银行帐户",
+              "借记卡",
+              "借记卡号",
+              "信用卡",
+              "信用卡号",
+              "储蓄卡",
+              "储蓄卡号"
+            ],
+            "in_value": false
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$kvconnection"
+            ],
+            "min_length": 1,
+            "max_length": 20,
+            "in_value": false,
+            "extra": {}
+          },
+          {
+            "mode": "character_set",
+            "values": [
+              "0123456789 -"
+            ],
+            "min_length": 13,
+            "max_length": 24,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^0-9a-zA-Z-]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 4,
+      "rule_version": 2,
+      "rule_name_en": "[kv] Passport Number",
+      "bdt_id": 24,
+      "sensitive_type": "passport",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "passport",
+              "passport_no",
+              "passport no",
+              "passport_num",
+              "passport num",
+              "passport_number",
+              "passport number",
+              "护照号码",
+              "护照号",
+              "护照"
+            ],
+            "in_value": false
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$kvconnection"
+            ],
+            "min_length": 0,
+            "max_length": 20,
+            "in_value": false,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "[a-zA-Z0-9]{2}[0-9]{5,10}"
+            ],
+            "min_length": 7,
+            "max_length": 12,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^0-9a-zA-Z]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 5,
+      "rule_version": 2,
+      "rule_name_en": "[v] China Mobile Number(with space or -)",
+      "bdt_id": 20,
+      "sensitive_type": "mobile",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "scanner",
+            "values": [
+              "china_mobile_prefix"
+            ],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              " -"
+            ],
+            "min_length": 1,
+            "max_length": 1,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "character_set",
+            "values": [
+              "$numbers"
+            ],
+            "min_length": 4,
+            "max_length": 4,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "character_set",
+            "values": [
+              " -"
+            ],
+            "min_length": 1,
+            "max_length": 1,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "character_set",
+            "values": [
+              "$numbers"
+            ],
+            "min_length": 4,
+            "max_length": 4,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^A-Za-z0-9-]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {
+        "extenders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "\\(?(%2B|\\+)?86\\)?[\\s-]?"
+            ],
+            "min_length": 0,
+            "max_length": 8,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "(id|ID|Id)[sS]?|COL"
+            ],
+            "min_length": 0,
+            "max_length": 9,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "(id|ID|Id)[sS]?|COL"
+            ]
+          }
+        ]
+      },
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 6,
+      "rule_version": 1,
+      "rule_name_en": "[v] China Mobile Number(without space or -)",
+      "bdt_id": 20,
+      "sensitive_type": "mobile",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "scanner",
+            "values": [
+              "china_mobile_prefix"
+            ],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$numbers"
+            ],
+            "min_length": 8,
+            "max_length": 8,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^A-Za-z0-9-]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {
+        "extenders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "\\(?(%2B|\\+)?86\\)?[\\s-]?"
+            ],
+            "min_length": 0,
+            "max_length": 8,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "(id|ID|Id)[sS]?|COL"
+            ],
+            "min_length": 0,
+            "max_length": 9,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "(id|ID|Id)[sS]?|COL"
+            ]
+          }
+        ]
+      },
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 7,
+      "rule_version": 2,
+      "rule_name_en": "[v] User Email Address",
+      "bdt_id": 21,
+      "sensitive_type": "email",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "@"
+            ],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "([A-Za-z0-9-]+\\.)+(com|cn|io|jp|uk|us|org|net|top|tech|gov|edu|cc|ru|sg|local|it|de|work|ai|vip|ph)"
+            ],
+            "min_length": 2,
+            "max_length": 64,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "character_set",
+            "values": [
+              "$alphabets"
+            ],
+            "min_length": 0,
+            "max_length": 5,
+            "in_value": true,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$alphabets",
+              "$numbers",
+              "_.-*"
+            ],
+            "min_length": 1,
+            "max_length": 30,
+            "in_value": true,
+            "extra": {}
+          }
+        ]
+      },
+      "value_excluders": [
+        {
+          "mode": "contain",
+          "values": [
+            "*"
+          ]
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "rule_id": 8,
+      "rule_version": 2,
+      "rule_name_en": "[kv] Plaintext Password",
+      "bdt_id": 29,
+      "sensitive_type": "password",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "pwd",
+              "passwd",
+              "pass_word",
+              "salt",
+              "secret_key",
+              "secretkey",
+              "access_key",
+              "accesskey",
+              "private_key",
+              "privatekey",
+              "密码",
+              "口令"
+            ],
+            "in_value": false
+          }
+        ],
+        "excluders": [
+          {
+            "mode": "suffix_of",
+            "values": [
+              "share_password"
+            ]
+          }
+        ]
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$kvconnection"
+            ],
+            "min_length": 1,
+            "max_length": 20,
+            "in_value": false,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "[A-Za-z0-9#?!@$%^&*,./()=+\\-]{6,40}"
+            ],
+            "min_length": 6,
+            "max_length": 60,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^A-Za-z0-9#?!@$%^&*,./()=+\\-]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": [
+          {
+            "mode": "contain",
+            "values": [
+              "****"
+            ]
+          }
+        ]
+      },
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 9,
+      "rule_version": 2,
+      "rule_name_en": "[v] Physical Address (Chinese)",
+      "bdt_id": 19,
+      "sensitive_type": "address",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "市",
+              "省",
+              "自治区"
+            ],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "[^\"'：:？?]{2,30}(单元|楼|号|栋|幢|村|(小区)|(新城)|(公寓)|(大厦)|(酒店)|路|层|室|户|街|道|园|弄|院|苑)([^\"'：:？?]?\\d{0,4}\\-?\\d{0,4})?"
+            ],
+            "min_length": 6,
+            "max_length": 80,
+            "in_value": true,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {
+        "extenders": [
+          {
+            "mode": "regexp",
+            "values": [
+              "[\\u4E00-\\u9FFF·]{2,5}"
+            ],
+            "min_length": 6,
+            "max_length": 6,
+            "in_value": true,
+            "extra": {}
+          }
+        ]
+      },
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 10,
+      "rule_version": 2,
+      "rule_name_en": "[kv] Date of Birth",
+      "bdt_id": 14,
+      "sensitive_type": "date_of_birth",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "dob",
+              "birthday",
+              "birth_day",
+              "birth_date",
+              "birth_time",
+              "birthday_time",
+              "birth_day_time",
+              "date_of_birth",
+              "date_birth",
+              "birthday_date",
+              "birth_day_date",
+              "生日",
+              "出生日期",
+              "出生年月"
+            ],
+            "in_value": false
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$kvconnection"
+            ],
+            "min_length": 1,
+            "max_length": 20,
+            "in_value": false,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "(19\\d{2}|20[0123][0-9])[-/._年]?(0[1-9]|1[012]|[1-9])[-/._月]?(0[1-9]|[12][0-9]|3[01]|[1-9])[日]?",
+              "(0[1-9]|1[012])[-/._](0[1-9]|[12][0-9]|3[01])[-/._](19\\d{2}|20[012][0-9])",
+              "(0[1-9]|[12][0-9]|3[01])[-/._](0[1-9]|1[012])[-/._](19\\d{2}|20[012][0-9])",
+              "1\\d{9}"
+            ],
+            "min_length": 8,
+            "max_length": 20,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^0-9]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 11,
+      "rule_version": 2,
+      "rule_name_en": "[kv] User Age",
+      "bdt_id": 15,
+      "sensitive_type": "user_age",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "user_age",
+              "aged",
+              "年龄",
+              "岁数",
+              "年纪"
+            ],
+            "in_value": false
+          }
+        ],
+        "excluders": [
+          {
+            "mode": "suffix_of",
+            "values": [
+              "适用年龄"
+            ]
+          }
+        ]
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$kvconnection"
+            ],
+            "min_length": 1,
+            "max_length": 20,
+            "in_value": false,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "(1[012]\\d|[1-9]\\d?)"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^0-9+-]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 12,
+      "rule_version": 2,
+      "rule_name_en": "[kv] Latitude and Longtitude",
+      "bdt_id": 27,
+      "sensitive_type": "coordinates",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "longitude",
+              "latitude",
+              "lat",
+              "lng",
+              "long",
+              "经度",
+              "纬度",
+              "经纬度"
+            ],
+            "in_value": false
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$kvconnection"
+            ],
+            "min_length": 1,
+            "max_length": 20,
+            "in_value": false,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "(\\-)?((0|[1-9]\\d?|1[0-7]\\d)\\.\\d{2,8})|180\\.[0]{2,8}"
+            ],
+            "min_length": 1,
+            "max_length": 13,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^0-9.-]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 13,
+      "rule_version": 1,
+      "rule_name_en": "[kv] Tracking Number",
+      "bdt_id": 3394,
+      "sensitive_type": "tracking_number",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "word",
+            "values": [
+              "tracking_number",
+              "tracking number",
+              "waybill_number",
+              "waybill number",
+              "waybillNo",
+              "express_number",
+              "express number",
+              "expressNo",
+              "shipment_id",
+              "shipment id",
+              "shipmentId",
+              "物流单号",
+              "物流编号",
+              "运单号",
+              "快递号",
+              "快递单号",
+              "快递编号",
+              "包裹编号",
+              "包裹单号",
+              "SF",
+              "JD",
+              "YT"
+            ],
+            "in_value": false
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {
+        "extenders": [
+          {
+            "mode": "character_set",
+            "values": [
+              "$kvconnection"
+            ],
+            "min_length": 0,
+            "max_length": 20,
+            "in_value": false,
+            "extra": {}
+          },
+          {
+            "mode": "regexp",
+            "values": [
+              "\\d{8,18}"
+            ],
+            "min_length": 10,
+            "max_length": 20,
+            "in_value": true,
+            "extra": {}
+          },
+          {
+            "mode": "boundary",
+            "values": [
+              "[^0-9a-zA-Z]"
+            ],
+            "min_length": 1,
+            "max_length": 3,
+            "in_value": false,
+            "extra": {}
+          }
+        ],
+        "excluders": []
+      },
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1000,
+      "rule_version": 1,
+      "rule_name_en": "[v] WiFi BSSID",
+      "bdt_id": 84,
+      "sensitive_type": "mac_addr",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1001,
+      "rule_version": 1,
+      "rule_name_en": "[v] WiFi SSID",
+      "bdt_id": 83,
+      "sensitive_type": "wifi_ssid",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1002,
+      "rule_version": 1,
+      "rule_name_en": "[v] Device serial number",
+      "bdt_id": 236,
+      "sensitive_type": "device_serial_number",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1003,
+      "rule_version": 1,
+      "rule_name_en": "[v] Mac address",
+      "bdt_id": 85,
+      "sensitive_type": "mac_addr",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1004,
+      "rule_version": 1,
+      "rule_name_en": "[v] Device Name",
+      "bdt_id": 2098,
+      "sensitive_type": "device_name",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1005,
+      "rule_version": 1,
+      "rule_name_en": "[v] ICCID",
+      "bdt_id": 138,
+      "sensitive_type": "iccid",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1006,
+      "rule_version": 1,
+      "rule_name_en": "[v] IMEI",
+      "bdt_id": 86,
+      "sensitive_type": "imei",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1007,
+      "rule_version": 1,
+      "rule_name_en": "[v] IMSI",
+      "bdt_id": 87,
+      "sensitive_type": "imsi",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1008,
+      "rule_version": 1,
+      "rule_name_en": "[v] MEID",
+      "bdt_id": 238,
+      "sensitive_type": "meid",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1009,
+      "rule_version": 1,
+      "rule_name_en": "[v] MSIN",
+      "bdt_id": 87,
+      "sensitive_type": "msin",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1010,
+      "rule_version": 1,
+      "rule_name_en": "[v] Android ID",
+      "bdt_id": 134,
+      "sensitive_type": "android_id",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    },
+    {
+      "enabled": true,
+      "rule_id": 1011,
+      "rule_version": 1,
+      "rule_name_en": "[v] IMEI2",
+      "bdt_id": 134,
+      "sensitive_type": "imei",
+      "anchor": {
+        "finders": [
+          {
+            "mode": "exact_match",
+            "values": [],
+            "in_value": true
+          }
+        ],
+        "excluders": []
+      },
+      "forward": {},
+      "backward": {},
+      "value_excluders": []
+    }
+  ]
+}

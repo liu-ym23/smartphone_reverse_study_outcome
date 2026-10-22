@@ -1,0 +1,86 @@
+{
+  "paths": {
+    "evalDir": "/Users/bytedance/Desktop/朝向优化数据/hwp30/20260422_155847_420",
+    "imuRelPath": "imu/imu.csv",
+    "gnssRelPath": "amap/location.csv",
+    "gtRelPath": "gt.csv",
+    "outDir": "/Users/bytedance/PycharmProjects/heading_fusion/eskf/android_out"
+  },
+  "replay": {
+    "recordPeriodNs": 100000000,
+    "maxDtS": 0.1,
+    "dtDefaultS": 0.02,
+    "magDeclinationDeg": -6.0
+  },
+  "imuNoise": {
+    "arwDegSqrtHr": [0.3, 0.3, 0.3],
+    "vrwMpsSqrtHr": [0.07, 0.07, 0.07],
+    "gbStdDegHr": [10, 10, 10],
+    "abStdMGal": [36, 36, 36],
+    "sigmaGyroBiasRwRadSqrtS": [0.0005, 0.0005, 0.0005],
+    "sigmaAccBiasRwMps2SqrtS": [0.05, 0.05, 0.05]
+  },
+  "init": {
+    "attStdDeg": [15.0, 15.0, 30.0],
+    "initVelStdMps": 0.5,
+    "gravityMps2": 9.81
+  },
+  "gnss": {
+    "provider": "gps",
+    "accuracyStartThreshM": 50.0,
+    "posStdMinM": 0.5,
+    "zStdScale": 2.0
+  },
+  "merge": {
+    "gtToleranceNs": 200000000,
+    "imuYawToleranceNs": 200000000
+  },
+  "gpsHeadingUpdate": {
+    "enabled": true,
+    "minSpeedMps": 0.5,
+    "innovGateDeg": 80.0,
+    "headingDiffGateDeg": 10.0,
+    "rollGateDeg": 15.0,
+    "pitchGateDegLow": -30.0,
+    "pitchGateDegHigh": 70.0,
+    "headingStdAccLowM": 3.0,
+    "headingStdAtLowDeg": 30.0,
+    "headingStdAccHighM": 10.0,
+    "headingStdAtHighDeg": 50.0
+  },
+  "gpsVelocityUpdate": {
+    "enabled": false,
+    "minSpeedMps": 0.5,
+    "velStdScale": 0.5,
+    "velStdMinMps": 0.5
+  },
+  "magHeadingUpdate": {
+    "enabled": true,
+    "yawStdDeg": 60.0,
+    "updatePeriodS": 1.0,
+    "silentAfterGpsS": 0.5,
+    "innovGateDeg": 40.0,
+    "maxTiltDeg": 60.0
+  },
+  "displayFilter": {
+    "uiIntervalMs": 100,
+    "alpha": 0.2,
+    "deadZoneDeg": 1.0
+  },
+  "zupt": {
+    "enabled": true,
+    "angleUpdateEnabled": false,
+    "windowS": 1.0,
+    "minIntervalS": 1.0,
+    "useBiasCompensation": true,
+    "recordDebug": true,
+    "gyroRmsThreshDegS": 30.0,
+    "accMeanNormThreshMps2": 0.1,
+    "accStdNormThreshMps2": 0.3,
+    "velMeasStdMps": 0.05,
+    "rollMeasStdDeg": 2.0,
+    "pitchMeasStdDeg": 2.0,
+    "maxTiltAbsDeg": 80.0,
+    "angleInnovGateDeg": 45.0
+  }
+}

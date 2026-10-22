@@ -1,0 +1,149 @@
+{
+    "content": {
+        "version": 1,
+        "category": "data_donate",
+        "policies": [
+            {
+                "subject": ["com.android.mms"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Message": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Contact": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.android.contacts"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Contact": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "CallHistory": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.android.gallery3d"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Photo": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Album": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "PhotoFace": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.notes"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Note": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.clock"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Alarm": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Countdown": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.recorder"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Recording": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "AuditoryRecording": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.browser"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "BrowserBookmark": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.calendar"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Schedule": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.larus.nova"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Schedule": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.appletapp"],
+                "target": ["com.larus.nova"],
+                "actions": {
+                    "Schedule": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "signature": "3046022100912dfb23c3a91ff479f7d5d3cc382e89c086f6a3355f5195d88f7a07292855b6022100876a377c937e7aa41f1866a25e8dfc7b43fc230c0f5733a9e39a59250a340e3f"
+}

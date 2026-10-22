@@ -1,0 +1,317 @@
+{
+  "facade": {
+    "root": "global_1",
+    "structure": {
+      "extend_block_1": [
+        "shop_card_YOCdLfNE"
+      ],
+      "footer_1": [
+        "submit_1"
+      ],
+      "global_1": [
+        "cart_header_1",
+        "extend_block_1",
+        "footer_1"
+      ],
+      "product_group_YOCdLfNE": [
+        "product_card_7198044552451146044"
+      ],
+      "shop_card_YOCdLfNE": [
+        "shop_header_YOCdLfNE",
+        "product_group_YOCdLfNE"
+      ]
+    }
+  },
+  "data": {
+    "cart_header_1": {
+      "events": {
+        "changeManaging": [
+          {
+            "fields": {},
+            "type": "changeManaging"
+          }
+        ],
+        "quitClick": [
+          {
+            "fields": {},
+            "type": "quitClick"
+          }
+        ]
+      },
+      "features": {
+        "extend_block": false,
+        "id": "1",
+        "is_input": "false",
+        "node_name": "cart_header",
+        "parent_id": "1",
+        "parent_node_name": "global",
+        "position": "header",
+        "type": "ecom_cart$cart_header$1_snapshot_caijialun.npu_1675306707"
+      },
+      "fields": {
+        "navigation_info": {
+          "button_text": "管理",
+          "title": "购物车"
+        }
+      }
+    },
+    "extend_block_1": {
+      "events": {},
+      "features": {
+        "extend_block": true,
+        "id": "1",
+        "is_input": "false",
+        "node_name": "extend_block",
+        "parent_id": "1",
+        "parent_node_name": "global",
+        "position": "body",
+        "type": ""
+      },
+      "fields": {}
+    },
+    "footer_1": {
+      "events": {},
+      "features": {
+        "extend_block": true,
+        "id": "1",
+        "is_input": "false",
+        "node_name": "footer",
+        "parent_id": "1",
+        "parent_node_name": "global",
+        "position": "footer",
+        "type": ""
+      },
+      "fields": {}
+    },
+    "global_1": {
+      "events": {},
+      "features": {
+        "extend_block": true,
+        "id": "1",
+        "is_input": "false",
+        "node_name": "global",
+        "parent_id": "1",
+        "parent_node_name": "root",
+        "position": "body",
+        "type": ""
+      },
+      "fields": {}
+    },
+    "product_card_7198044552451146044": {
+      "events": {
+        "cartChangeQuantity": [
+          {
+            "fields": {
+              "operate_type": "changeQuantity"
+            },
+            "type": "cartChangeQuantity"
+          }
+        ],
+        "checkClick": [
+          {
+            "fields": {},
+            "type": "cartCheck"
+          }
+        ],
+        "deleteClick": [
+          {
+            "fields": {
+              "operate_type": "delete"
+            },
+            "type": "cartAdjust"
+          }
+        ],
+        "moveFavorClick": [
+          {
+            "fields": {
+              "operate_type": "addFavor"
+            },
+            "type": "cartAdjust"
+          }
+        ]
+      },
+      "features": {
+        "extend_block": false,
+        "id": "7198044552451146044",
+        "is_input": "false",
+        "node_name": "product_card",
+        "parent_id": "YOCdLfNE",
+        "parent_node_name": "product_group",
+        "position": "body",
+        "type": "ecom_cart$product_card$0_snapshot_caijialun.npu_1675499372"
+      },
+      "fields": {
+        "basic_info": {
+          "cart_id": "7198044552451146044",
+          "combo_id": "7198157562276053259",
+          "combo_num": 1,
+          "name": "塑料衣服玩具化妆品收纳箱带盖",
+          "product_id": "3597710516782533573",
+          "shop_id": "YOCdLfNE",
+          "spec_desc": "洛克蓝【升级加厚款】/3件套【中号+大号+加大号】",
+          "spec_pic": "https://p26-item.ecombdimg.com/img/ecom-shop-material/YOCdLfNE_m_ea90bdd5124be280812acbe95fc1c8d2_sx_52109_www800-800~tplv-5mmsx3fupr-resize:200:200.image"
+        },
+        "extra": "{\"add_cart_source\":\"product_detail\",\"author_id\":\"99514375927\",\"btm_show_id\":\"5039adf0-fac4-4747-8640-d1c3cb0ed3a5\",\"buyin_track\":\"\",\"c_biz_combo\":\"8\",\"cart_track\":\"{\\\"anchor_id\\\":\\\"\\\",\\\"apt_path_id\\\":\\\"1\\\",\\\"brand_verified\\\":0,\\\"card_status\\\":\\\"\\\",\\\"carrier_source\\\":\\\"xtab_homepage\\\",\\\"click_order\\\":1,\\\"discount_type\\\":\\\"{130:7195009762609152256}\\\",\\\"display_rank\\\":0,\\\"ecom_entrance_form\\\":\\\"guess_you_like\\\",\\\"ecom_group_type\\\":\\\"\\\",\\\"ecom_icon\\\":\\\"\\\",\\\"ecom_scene_id\\\":\\\"1031\\\",\\\"full_return\\\":\\\"0\\\",\\\"group_id\\\":\\\"\\\",\\\"head_pic_type\\\":\\\"default\\\",\\\"is_activity\\\":\\\"0\\\",\\\"is_activity_banner\\\":1,\\\"is_exist_size_tab\\\":\\\"0\\\",\\\"is_groupbuying\\\":0,\\\"is_live_product\\\":0,\\\"is_other_channel\\\":\\\"\\\",\\\"is_package_sale\\\":0,\\\"is_replay\\\":0,\\\"is_short_screen\\\":\\\"1\\\",\\\"is_with_video\\\":1,\\\"label_name\\\":\\\"\\\",\\\"market_channel_hot_fix\\\":\\\"\\\",\\\"module_label\\\":\\\"guess_you_like_product\\\",\\\"outflow_order\\\":1,\\\"previous_page\\\":\\\"homepage_top_tab\\\",\\\"price_info\\\":{\\\"hot_sale_price\\\":1316,\\\"hot_sale_sku_id\\\":\\\"1756694584876055\\\",\\\"market_price\\\":1190,\\\"max_price\\\":0,\\\"min_price\\\":76,\\\"original_price\\\":12890,\\\"type\\\":11,\\\"type_text\\\":\\\"店铺新人价\\\"},\\\"product_activity_type\\\":\\\"seckill\\\",\\\"product_id\\\":\\\"3597710516782533573\\\",\\\"product_source_page\\\":\\\"xtab_homepage\\\",\\\"promotion_id\\\":\\\"3597710516782533573\\\",\\\"rank_id_source\\\":\\\"\\\",\\\"recommend_info\\\":\\\"{\\\\\\\"uid\\\\\\\":2423769041483608,\\\\\\\"gid\\\\\\\":3597710516782533573,\\\\\\\"prd\\\\\\\":{\\\\\\\"pnum\\\\\\\":1,\\\\\\\"pname\\\\\\\":\\\\\\\"xtab_homepage\\\\\\\",\\\\\\\"rsn\\\\\\\":\\\\\\\"i2i_cf:276:1.810075\\\\\\\",\\\\\\\"new\\\\\\\":1,\\\\\\\"thr_new\\\\\\\":1,\\\\\\\"idx\\\\\\\":21,\\\\\\\"trig\\\\\\\":\\\\\\\"3585500835033007696\\\\\\\",\\\\\\\"impr\\\\\\\":0,\\\\\\\"simid\\\\\\\":0,\\\\\\\"spu_simid\\\\\\\":7132038851593437455,\\\\\\\"lctg\\\\\\\":30986,\\\\\\\"ctg1\\\\\\\":20076,\\\\\\\"ai_ctg\\\\\\\":20076,\\\\\\\"dprice\\\\\\\":76,\\\\\\\"ai_lctg\\\\\\\":30986,\\\\\\\"price_comp\\\\\\\":4,\\\\\\\"price_comp_v2\\\\\\\":-1,\\\\\\\"price_comp_sc\\\\\\\":\\\\\\\"0.000000\\\\\\\",\\\\\\\"brand\\\\\\\":0,\\\\\\\"camp\\\\\\\":1,\\\\\\\"vctg\\\\\\\":90,\\\\\\\"pred_sc\\\\\\\":\\\\\\\"0.890247\\\\\\\",\\\\\\\"r_dw_sc\\\\\\\":0.0,\\\\\\\"prd_clk\\\\\\\":\\\\\\\"0.074811\\\\\\\",\\\\\\\"prd_buy\\\\\\\":0.0,\\\\\\\"ord_sub\\\\\\\":\\\\\\\"0.056307\\\\\\\",\\\\\\\"prd_ltr\\\\\\\":\\\\\\\"0.890247\\\\\\\",\\\\\\\"bst2\\\\\\\":\\\\\\\"1.000000\\\\\\\",\\\\\\\"bst\\\\\\\":1.0,\\\\\\\"be_bst\\\\\\\":45.74989318847656,\\\\\\\"ori_ctr\\\\\\\":\\\\\\\"0.074811\\\\\\\",\\\\\\\"ori_cvr\\\\\\\":\\\\\\\"0.056307\\\\\\\",\\\\\\\"ori_slide\\\\\\\":\\\\\\\"0.000000\\\\\\\",\\\\\\\"ori_cu\\\\\\\":\\\\\\\"45.749893\\\\\\\",\\\\\\\"ccr_mean\\\\\\\":\\\\\\\"0.011400\\\\\\\",\\\\\\\"ccr_std\\\\\\\":\\\\\\\"0.009519\\\\\\\",\\\\\\\"pccr_mean\\\\\\\":\\\\\\\"0.012558\\\\\\\",\\\\\\\"pqccr_mean\\\\\\\":\\\\\\\"0.006847\\\\\\\",\\\\\\\"pccr\\\\\\\":\\\\\\\"0.013748\\\\\\\",\\\\\\\"pqccr\\\\\\\":\\\\\\\"0.005269\\\\\\\",\\\\\\\"pbcmt\\\\\\\":\\\\\\\"0.055213\\\\\\\",\\\\\\\"pfeedback\\\\\\\":\\\\\\\"0.016521\\\\\\\",\\\\\\\"rctr\\\\\\\":\\\\\\\"0.048772\\\\\\\",\\\\\\\"rcvr\\\\\\\":\\\\\\\"0.032382\\\\\\\",\\\\\\\"rscore\\\\\\\":\\\\\\\"0.000223\\\\\\\"},\\\\\\\"chnid\\\\\\\":1111868,\\\\\\\"ent\\\\\\\":\\\\\\\"guess_u_like\\\\\\\",\\\\\\\"appid\\\\\\\":1128,\\\\\\\"req_id\\\\\\\":\\\\\\\"20230209144947B87FD683267BC593711E\\\\\\\",\\\\\\\"loc\\\\\\\":310110,\\\\\\\"tab\\\\\\\":0,\\\\\\\"sub_req_id\\\\\\\":\\\\\\\"2D42DFCDBA\\\\\\\",\\\\\\\"zerovk\\\\\\\":0,\\\\\\\"cs_s\\\\\\\":0,\\\\\\\"pv_14d\\\\\\\":587,\\\\\\\"spw\\\\\\\":{\\\\\\\"enable\\\\\\\":1,\\\\\\\"pv\\\\\\\":0.0,\\\\\\\"ctr\\\\\\\":0.0,\\\\\\\"ctcvr\\\\\\\":0.0,\\\\\\\"gpm\\\\\\\":0.0,\\\\\\\"peo\\\\\\\":1,\\\\\\\"rough\\\\\\\":0.0},\\\\\\\"m_new_t\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"pctx\\\\\\\":{\\\\\\\"sid\\\\\\\":0},\\\\\\\"mix\\\\\\\":{\\\\\\\"ctr\\\\\\\":0.07481,\\\\\\\"cvr\\\\\\\":0.056306999999999996,\\\\\\\"pos\\\\\\\":1,\\\\\\\"tabid\\\\\\\":0,\\\\\\\"pnum\\\\\\\":1,\\\\\\\"is_new\\\\\\\":1,\\\\\\\"is_new_t\\\\\\\":1,\\\\\\\"pctr\\\\\\\":0.092028,\\\\\\\"pcvr\\\\\\\":0.014237999999999999,\\\\\\\"wt\\\\\\\":1.56849,\\\\\\\"mix_sc\\\\\\\":1.4975829999999999,\\\\\\\"price\\\\\\\":0,\\\\\\\"type\\\\\\\":1003,\\\\\\\"pred_pos\\\\\\\":2,\\\\\\\"sig\\\\\\\":0},\\\\\\\"mrc\\\\\\\":0}\\\",\\\"request_id\\\":\\\"20230209144947B87FD683267BC593711E\\\",\\\"resource_id\\\":\\\"\\\",\\\"room_id\\\":\\\"\\\",\\\"search_params\\\":\\\"\\\",\\\"show_dou_campaign\\\":0,\\\"show_rank\\\":\\\"not_in_rank\\\",\\\"source_method\\\":\\\"guess_you_like\\\",\\\"title_type\\\":\\\"\\\",\\\"upfront_presell\\\":0,\\\"warm_up_status\\\":\\\"0\\\",\\\"author_id\\\":\\\"99514375927\\\",\\\"btm_list\\\":\\\"[\\\\\\\"a1.b5267.c0.d0\\\\\\\",\\\\\\\"a1.b8094.c7963.d8736\\\\\\\",\\\\\\\"a1.b1923.c0.d0\\\\\\\",\\\\\\\"a1128.b0438.c0.d0\\\\\\\",\\\\\\\"a1128.b0740.c0.d0\\\\\\\"]\\\",\\\"app_version\\\":\\\"24.2.0\\\",\\\"in_search_graph\\\":0,\\\"in_sec_graph\\\":0}\",\"category_id\":\"20076\",\"ecom_scene_id\":\"1031\",\"group_id\":\"\",\"inflow_list_type\":\"\",\"product_channel_id\":\"99514375927\",\"product_channel_type\":\"1\",\"promotion_id\":\"3597710516782533573\",\"rank_id\":\"\",\"rank_name\":\"\",\"room_id\":\"\",\"shop_user_id\":\"76354036\"}",
+        "limit_info": {
+          "max": 8,
+          "max_limit_toast": "所选商品每人限购8件，当前最多可购买8件",
+          "min": 1,
+          "min_limit_toast": "最少购买1件"
+        },
+        "price_info": {
+          "price_decimal": "35",
+          "price_integer": "31"
+        },
+        "selected": true
+      }
+    },
+    "product_group_YOCdLfNE": {
+      "events": {},
+      "features": {
+        "extend_block": true,
+        "id": "YOCdLfNE",
+        "is_input": "false",
+        "node_name": "product_group",
+        "parent_id": "YOCdLfNE",
+        "parent_node_name": "shop_card",
+        "position": "body",
+        "type": ""
+      },
+      "fields": {}
+    },
+    "shop_card_YOCdLfNE": {
+      "events": {},
+      "features": {
+        "extend_block": true,
+        "id": "YOCdLfNE",
+        "is_input": "false",
+        "node_name": "shop_card",
+        "parent_id": "1",
+        "parent_node_name": "extend_block",
+        "position": "body",
+        "type": ""
+      },
+      "fields": {}
+    },
+    "shop_header_YOCdLfNE": {
+      "events": {
+        "checkClick": [
+          {
+            "fields": {
+              "name": "Spring甄选",
+              "sku_id": "YOCdLfNE"
+            },
+            "type": "cartCheck"
+          }
+        ],
+        "itemClick": [
+          {
+            "fields": {},
+            "type": "cartClick"
+          }
+        ]
+      },
+      "features": {
+        "extend_block": false,
+        "id": "YOCdLfNE",
+        "is_input": "false",
+        "node_name": "shop_header",
+        "parent_id": "YOCdLfNE",
+        "parent_node_name": "shop_card",
+        "position": "body",
+        "type": "ecom_cart$shop_header$1_snapshot_caijialun.npu_1675306722"
+      },
+      "fields": {
+        "selected": true,
+        "shop_info": {
+          "shop_id": "YOCdLfNE",
+          "shop_logo": "",
+          "shop_name": "Spring甄选",
+          "shop_url": "sslocal://goods/store?sec_shop_id=YOCdLfNE\u0026entrance_location=h5_cart_list\u0026custom_id_type=0\u0026sort_type=0\u0026url_maker=schema_sdk"
+        }
+      }
+    },
+    "submit_1": {
+      "events": {
+        "checkClick": [
+          {
+            "fields": {},
+            "type": "cartCheck"
+          }
+        ]
+      },
+      "features": {
+        "extend_block": false,
+        "id": "1",
+        "is_input": "false",
+        "node_name": "submit",
+        "parent_id": "1",
+        "parent_node_name": "footer",
+        "position": "footer",
+        "type": "ecom_cart$submit$1_snapshot_caijialun.npu_1675306671"
+      },
+      "fields": {
+        "order_button": {
+          "text": "结算(1)"
+        },
+        "price_info": {
+          "total_price_decimal": "35",
+          "total_price_integer": "27"
+        },
+        "selected": false,
+        "show": true
+      }
+    }
+  },
+  "linkage": {
+    "input": null,
+    "common": {
+      "queryParams": "H4sIAAAAAAAA/6pWyi9ILUosSY0vqSxIVbJSUqoFAAAA//8BAAD//0XO9uETAAAA",
+      "compress": true
+    }
+  },
+  "container": [
+    {
+      "container_type": "Slice",
+      "md5": null,
+      "type": [
+        "ecom_cart$cart_header$1_snapshot_caijialun.npu_1675306707"
+      ],
+      "url": "https://tosv.byted.org/obj/gecko-internal/10180/gecko/resource/ecom_cart_card_template/cart_header/1_snapshot_caijialun.npu_1675306707/main.json",
+      "version": "1_snapshot_caijialun.npu_1675306707"
+    },
+    {
+      "container_type": "Slice",
+      "md5": null,
+      "type": [
+        "ecom_cart$shop_header$1_snapshot_caijialun.npu_1675306722"
+      ],
+      "url": "https://tosv.byted.org/obj/gecko-internal/10180/gecko/resource/ecom_cart_card_template/shop_header/1_snapshot_caijialun.npu_1675306722/main.json",
+      "version": "1_snapshot_caijialun.npu_1675306722"
+    },
+    {
+      "container_type": "Slice",
+      "md5": null,
+      "type": [
+        "ecom_cart$product_card$0_snapshot_caijialun.npu_1675499372"
+      ],
+      "url": "https://tosv.byted.org/obj/gecko-internal/10180/gecko/resource/ecom_cart_card_template/product_card/caijialun/main.json",
+      "version": "0_snapshot_caijialun.npu_1675499372"
+    },
+    {
+      "container_type": "Slice",
+      "md5": null,
+      "type": [
+        "ecom_cart$submit$1_snapshot_caijialun.npu_1675306671"
+      ],
+      "url": "https://tosv.byted.org/obj/gecko-internal/10180/gecko/resource/ecom_cart_card_template/submit/1_snapshot_caijialun.npu_1675306671/main.json",
+      "version": "1_snapshot_caijialun.npu_1675306671"
+    }
+  ],
+  "end_point": {
+    "protocol_version": "0.1"
+  },
+  "global": {
+    "test_global": "0.0"
+  }
+}

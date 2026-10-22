@@ -1,0 +1,1 @@
+{"meta": {"name": "BaseInfoOffset", "version": "1"}, "type": "View", "style": {"width": "auto", ":height": "data.offset*8", ":display": "option(data.offset>0.4, null, 'none')"}}

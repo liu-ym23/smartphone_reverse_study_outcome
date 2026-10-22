@@ -1,0 +1,21 @@
+{
+    "page_key": "bind_device",
+    "nav_bar": {
+        "template_type": "only_back",
+        "template_data": ""
+    },
+    
+    "layers": [{
+        "name": "layer1",
+        "card": {
+            "name": "card1",
+            "card_instance_id": "",
+            "card_key": "dora_card_lite_bind_device",
+            "card_data": {
+                "template_type": "bind_device",
+                "template_data": "{\"title\":{\"type\":\"string_type\",\"value\":\"dora_lite_bind_device_title_cn\"},\"desc\":{\"type\":\"string_type\",\"value\":\"dora_lite_bind_device_desc_cn\"},\"image_link\":{\"type\":\"local\",\"value\":\"image_dora_lite_bind_device\"},\"bind_button_info\":{\"title\":{\"type\":\"string_type\",\"value\":\"dora_bind_device_button_title_cn\"},\"action_info\":{\"action_url\":\"sslocal://flow/dora/onboarding_found?product_id=1&page_key=onboarding_found\",\"action_data\":{\"bind_data\":{\"title\":{\"type\":\"string_type\",\"value\":\"dora_onboarding_bind_device_cn\"},\"image_link\":{\"type\":\"local\",\"value\":\"image_onboarding_bind_device\"},\"desc\":{\"type\":\"string_type\",\"value\":\"dora_onboarding_bind_device_open_box_cn\"}},\"bind_timeout_data\":{\"title\":{\"type\":\"string_type\",\"value\":\"dora_onboarding_bind_device_cn\"},\"image_link\":{\"type\":\"local\",\"value\":\"image_onboarding_bind_timeout\"},\"desc\":{\"type\":\"string_type\",\"value\":\"dora_onboarding_bind_device_timeout_cn\"}},\"link_data\":{\"title\":{\"type\":\"string_type\",\"value\":\"dora_onboarding_device_found_cn\"},\"image_link\":{\"type\":\"local\",\"value\":\"image_onboarding_connect\"},\"button_info\":{\"title\":{\"type\":\"string_type\",\"value\":\"dora_onboarding_connect_cn\"},\"action_url\":\"sslocal://flow/dora/dynamic_page?product_id=1\"}}}}},\"buy_button_info\":{\"title\":{\"type\":\"string_type\",\"value\":\"dora_lite_bind_device_buy_button_title_cn\"},\"action_url\":\"sslocal://flow/webview?product_id=1&link_url=https://www.olafriend.cn/product?allows_inline_media_playback=1\"}}"
+            },
+            "biz_data": ""
+        }
+    }]
+}

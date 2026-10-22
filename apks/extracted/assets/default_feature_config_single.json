@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "feature_config_warps": {
+    "obric_feature_audio_xxx": {
+      "description": "This is an example used to demonstrate how to configure the whitelist (supported by all device models and versions under the project) and the special list (configured by device model, version, etc.).",
+      "enabled": true,
+      "default_state": "x1",
+      "feature_state_config_list": [
+        {
+          "state": "x2",
+          "product_list": [
+            "ccc",
+            "ddd"
+          ],
+          "product_special_list": {
+            "pacific": {
+              "P0110": {
+                "min_rom_version": "1.1.5.0",
+                "min_rom_release_date": 20251106,
+                "max_rom_version": "",
+                "max_rom_release_date": 0,
+                "rom_version_black_list": [
+                  "1.1.6.0"
+                ]
+              },
+              "Ashe": {
+                "min_rom_version": ""
+              }
+            },
+            "nerida": {
+              "NX888J": {
+                "min_rom_version": "0"
+              }
+            }
+          }
+        },
+        {
+          "state": "x3",
+          "product_list": [
+            "ccc",
+            "ddd",
+            "pacific"
+          ],
+          "product_special_list": {
+            "pacific": {
+              "P0110": {
+                "min_rom_version": "1.1.5.0",
+                "min_rom_release_date": 20251106,
+                "max_rom_version": "",
+                "max_rom_release_date": 0,
+                "rom_version_black_list": [
+                  "1.1.6.0"
+                ]
+              },
+              "xxx": {
+                "min_rom_version": ""
+              }
+            },
+            "nerida": {
+              "NX888J": {
+                "min_rom_version": "0"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "obric_memory_feature_self_collection_type": {
+      "description": "memory self collection support type, value=[all, partial, none]",
+      "enabled": true,
+      "default_state": "all",
+      "feature_state_config_list": [
+        {
+          "state": "none",
+          "product_list": [
+            "pacific",
+            "nerida",
+            "pike",
+            "nerida-lite"
+          ]
+        }
+      ]
+    },
+    "obric_memory_feature_self_collection_message_pkg": {
+      "description": "memory self collection message, package name",
+      "enabled": true,
+      "default_state": ""
+    },
+    "obric_memory_feature_self_collection_contact_pkg": {
+      "description": "memory self collection contact, package name",
+      "enabled": true,
+      "default_state": ""
+    },
+    "obric_memory_feature_self_collection_call_history_pkg": {
+      "description": "memory self collection call history, package name",
+      "enabled": true,
+      "default_state": ""
+    },
+    "obric_memory_feature_self_collection_photo_pkg": {
+      "description": "memory self collection photo, package name",
+      "enabled": true,
+      "default_state": ""
+    },
+    "obric_memory_feature_self_collection_file_pkg": {
+      "description": "memory self collection file, package name",
+      "enabled": true,
+      "default_state": ""
+    }
+  }
+}

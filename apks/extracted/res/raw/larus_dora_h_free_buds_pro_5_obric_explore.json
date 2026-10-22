@@ -1,0 +1,308 @@
+{
+  "dsl_version": "2.0.0",
+  "node_type": "page",
+  "node_name": "h_free_buds_pro_5",
+  "node_key": "obric_explore",
+  "nodes": [
+    {
+      "node_type": "layer",
+      "nodes": [
+        {
+          "node_type": "card",
+          "node_name": "h_free_buds_pro_5",
+          "node_key": "dora_card_h_free_buds_pro_5_obric_explore",
+          "template_type": "function_introduction_set",
+          "config": {
+            "title": {
+              "type": "string_type",
+              "value": "dora_explore_group_huawei_freebuds_pro5_cn",
+              "default_value": "dora_explore_group_huawei_freebuds_pro5_cn"
+            },
+            "items": [
+              {
+                "tag": false,
+                "title": {
+                  "type": "string_type",
+                  "value": "dora_introduce_note_title_cn"
+                },
+                "subtitle": {
+                  "type": "string_type",
+                  "value": "dora_introduce_note_subtitle_cn"
+                },
+                "image_link": {
+                  "remote_info": {
+                    "light_url": [
+                      "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/card/quick_note.png"
+                    ]
+                  }
+                },
+                "action": {
+                  "action_type": "internal_jump",
+                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=explore_home&current_page=dora_note_detail"
+                },
+                "page_info": {
+                  "title": {
+                    "type": "string_type",
+                    "value": "dora_introduce_note_title_cn"
+                  },
+                  "descs": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_note_desc1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_note_desc2_cn"
+                    }
+                  ],
+                  "querys": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_note_query1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_note_query2_cn"
+                    }
+                  ],
+                  "image_link": {
+                    "local_value": "image_dora_function_introduction_page",
+                    "remote_info": {
+                      "light_url": [
+                        "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/page/quick_note.png"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "tag": false,
+                "title": {
+                  "type": "string_type",
+                  "value": "dora_introduce_walkman_title_cn"
+                },
+                "subtitle": {
+                  "type": "string_type",
+                  "value": "dora_introduce_walkman_subtitle_cn"
+                },
+                "image_link": {
+                  "remote_info": {
+                    "light_url": [
+                      "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/card/walkman.png"
+                    ]
+                  }
+                },
+                "action": {
+                  "action_type": "internal_jump",
+                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=explore_home&current_page=dora_music_detail"
+                },
+                "page_info": {
+                  "title": {
+                    "type": "string_type",
+                    "value": "dora_introduce_walkman_title_cn"
+                  },
+                  "descs": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_walkman_desc1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_walkman_desc2_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_walkman_desc3_cn"
+                    }
+                  ],
+                  "querys": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_walkman_query1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_walkman_query2_cn"
+                    }
+                  ],
+                  "image_link": {
+                    "local_value": "image_dora_function_introduction_page",
+                    "remote_info": {
+                      "light_url": [
+                        "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/page/walkman.png"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "tag": false,
+                "title": {
+                  "type": "string_type",
+                  "value": "dora_introduce_ride_walk_navigation_title_cn"
+                },
+                "subtitle": {
+                  "type": "string_type",
+                  "value": "dora_introduce_ride_walk_navigation_subtitle_cn"
+                },
+                "image_link": {
+                  "remote_info": {
+                    "light_url": [
+                      "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/card/navigation.png"
+                    ]
+                  }
+                },
+                "action": {
+                  "action_type": "internal_jump",
+                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=explore_home&current_page=dora_navigation_detail"
+                },
+                "page_info": {
+                  "title": {
+                    "type": "string_type",
+                    "value": "dora_introduce_ride_walk_navigation_title_cn"
+                  },
+                  "descs": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_ride_walk_navigation_desc1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_ride_walk_navigation_desc2_cn"
+                    }
+                  ],
+                  "querys": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_ride_walk_navigation_query1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_ride_walk_navigation_query2_cn"
+                    }
+                  ],
+                  "image_link": {
+                    "local_value": "image_dora_function_introduction_page",
+                    "remote_info": {
+                      "light_url": [
+                        "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/page/navigation.png"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "tag": false,
+                "title": {
+                  "type": "string_type",
+                  "value": "dora_introduce_daily_news_title_cn"
+                },
+                "subtitle": {
+                  "type": "string_type",
+                  "value": "dora_introduce_daily_news_subtitle_cn"
+                },
+                "image_link": {
+                  "remote_info": {
+                    "light_url": [
+                      "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/card/news.png"
+                    ]
+                  }
+                },
+                "action": {
+                  "action_type": "internal_jump",
+                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=explore_home&current_page=dora_news_detail"
+                },
+                "page_info": {
+                  "title": {
+                    "type": "string_type",
+                    "value": "dora_introduce_daily_news_title_cn"
+                  },
+                  "descs": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_daily_news_desc1_cn"
+                    }
+                  ],
+                  "querys": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_daily_news_query1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_daily_news_query2_cn"
+                    }
+                  ],
+                  "image_link": {
+                    "local_value": "image_dora_function_introduction_page",
+                    "remote_info": {
+                      "light_url": [
+                        "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/page/news.png"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "tag": false,
+                "title": {
+                  "type": "string_type",
+                  "value": "dora_introduce_generate_podcast_title_cn"
+                },
+                "subtitle": {
+                  "type": "string_type",
+                  "value": "dora_introduce_generate_podcast_subtitle_cn"
+                },
+                "image_link": {
+                  "remote_info": {
+                    "light_url": [
+                      "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/card/podcast.png"
+                    ]
+                  }
+                },
+                "action": {
+                  "action_type": "internal_jump",
+                  "action_url": "sslocal://flow/dora/function_introduction?previous_page=explore_home&current_page=dora_podcast_detail"
+                },
+                "page_info": {
+                  "title": {
+                    "type": "string_type",
+                    "value": "dora_introduce_generate_podcast_title_cn"
+                  },
+                  "descs": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_generate_podcast_desc1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_generate_podcast_desc2_cn"
+                    }
+                  ],
+                  "querys": [
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_generate_podcast_query1_cn"
+                    },
+                    {
+                      "type": "string_type",
+                      "value": "dora_introduce_generate_podcast_query2_cn"
+                    }
+                  ],
+                  "image_link": {
+                    "local_value": "image_dora_function_introduction_page",
+                    "remote_info": {
+                      "light_url": [
+                        "https://p3-starweave-source.byteimg.com/h/${product}/device_management/func_intro/page/podcast.png"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

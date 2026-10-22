@@ -1,0 +1,663 @@
+{
+    "content": {
+        "version": 1,
+        "category": "intent_register",
+        "policies": [
+            {
+                "subject": ["com.android.contacts"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Contacts_Create": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Contacts_Update": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Contacts_Delete": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Contacts_AddToFavorite": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Contacts_AddToBlocklist": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Contacts_ShowContact": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Phone_Call": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Phone_Delete": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Phone_ShowCallHistory": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Phone_ProxyCall": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Common_ViewEntities": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Phone_OpenPage": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Phone_GetSim": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.android.mms"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Messages_Send": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Messages_Delete": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Messages_ShowMessage": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Common_ViewEntities": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.android.camera"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Camera_StartCapture": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_StartRecording": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_RotateCamera": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.camera2"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Camera_StartCapture": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_StartRecording": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_StopCapture": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_RotateCamera": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SwitchCameraMode": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetFocal": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetImageRatio": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetSelfTimer": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetFlashMode": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetFilter": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetISO": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetExposureTime": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetFocusDistance": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetWB": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetEV": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetTouchCapture": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetMeteringMode": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Camera_SetAuxiliaryLine": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.android.gallery3d"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Photo_Search": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetFilter": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetWarm": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetExposure": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetSaturation": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetContrast": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetTone": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetClarity": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetSharpness": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetFade": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetBrightness": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_SetShadow": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_ShowPhoto": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Photo_ShowAlbum": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Common_ViewEntities": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.notes"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Notes_Create": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Notes_Update": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Notes_ShowNote": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Common_ViewEntities": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.android.settings"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "System_SetVolume": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "System_SettingsAvailable": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "System_SwitchMode": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "System_AdjustBrightness": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "System_SetBrightness": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "System_AdjustVolume": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "System_SwitchNotification": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "System_PowerLockControl": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "System_DeviceState": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.larus.nova"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "*": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.clock"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Clock_CreateAlarm": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_UpdateAlarm": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_DeleteAlarm": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_TurnOffAlarm": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_TurnOnAlarm": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_ShowAlarm": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_StartCountdown": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_PauseCountdown": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_ResumeCountdown": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_DeleteCountdown": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Clock_ShowCountdown": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Common_ViewEntities": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.recorder"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Recorder_ShowRecording": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Recorder_Operate": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Recorder_Delete": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.filemanager"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Files_ShowFile": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.calendar"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Calendar_ShowSchedule": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.ss.android.lark"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Office_SendMessage": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_BookMeeting": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_SearchMeeting": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_CheckLogin": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_SearchLarkContactInfoByAsr": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_SearchLarkContactInfoByName": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_KnowledgeAI": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_JumpToLarkUrl": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Common_ViewEntities": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.ss.android.lark.debug"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Office_SendMessage": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_BookMeeting": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_SearchMeeting": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_CheckLogin": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_SearchLarkContactInfoByAsr": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_SearchLarkContactInfoByName": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_KnowledgeAI": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Office_JumpToLarkUrl": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Common_ViewEntities": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.appstore"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "System_DownloadApp": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["zte.com.market"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "System_DownloadApp": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.screenrecorder"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "System_ScreenRecord": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.weather"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Weather_Search": {
+                        "policy": {
+                            "type": 0
+                        }
+                    },
+                    "Weather_Show": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            },
+            {
+                "subject": ["com.obric.calculator"],
+                "target": ["{{currentPackageName}}"],
+                "actions": {
+                    "Calculator_Calculate": {
+                        "policy": {
+                            "type": 0
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "signature": ""
+}

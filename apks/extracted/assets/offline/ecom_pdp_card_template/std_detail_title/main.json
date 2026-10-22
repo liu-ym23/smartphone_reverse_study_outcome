@@ -1,0 +1,1 @@
+{"meta": {"name": "std_detail_title", "version": "1"}, "type": "View", "style": {"width": "100%", "height": "100%", "align_items": "center", "flex_direction": "column", "justify_content": "center"}, "elements": [{"attr": {":src": "data.title_image.url"}, "type": "Image", "style": {":width": "data.title_image.width", ":height": "data.title_image.height", "flex_shrink": 0}}]}
