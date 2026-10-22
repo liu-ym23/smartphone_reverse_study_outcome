@@ -1,0 +1,172 @@
+package androidx.activity;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.window.OnBackInvokedDispatcher;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LifecycleRegistry;
+import androidx.lifecycle.ViewTreeLifecycleOwner;
+import androidx.savedstate.SavedStateRegistry;
+import androidx.savedstate.SavedStateRegistryController;
+import androidx.savedstate.SavedStateRegistryOwner;
+import androidx.savedstate.ViewTreeSavedStateRegistryOwner;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: compiled from: ComponentDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000d\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0016\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u0004B\u0019\b\u0007\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\b\b\u0003\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\tJ\u001a\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\"2\b\u0010#\u001a\u0004\u0018\u00010$H\u0016J\b\u0010%\u001a\u00020 H\u0002J\b\u0010&\u001a\u00020 H\u0017J\u0012\u0010'\u001a\u00020 2\b\u0010(\u001a\u0004\u0018\u00010)H\u0015J\b\u0010*\u001a\u00020)H\u0016J\b\u0010+\u001a\u00020 H\u0015J\b\u0010,\u001a\u00020 H\u0015J\u0010\u0010-\u001a\u00020 2\u0006\u0010!\u001a\u00020\"H\u0016J\u001a\u0010-\u001a\u00020 2\u0006\u0010!\u001a\u00020\"2\b\u0010#\u001a\u0004\u0018\u00010$H\u0016J\u0010\u0010-\u001a\u00020 2\u0006\u0010.\u001a\u00020\bH\u0016R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0082\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\f\u001a\u00020\r8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u000e\u0010\u000fR\u0014\u0010\u0010\u001a\u00020\u000b8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012R\u0017\u0010\u0013\u001a\u00020\u0014¢\u0006\u000e\n\u0000\u0012\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0014\u0010\u0019\u001a\u00020\u001a8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u001b\u0010\u001cR\u000e\u0010\u001d\u001a\u00020\u001eX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006/"}, d2 = {"Landroidx/activity/ComponentDialog;", "Landroid/app/Dialog;", "Landroidx/lifecycle/LifecycleOwner;", "Landroidx/activity/OnBackPressedDispatcherOwner;", "Landroidx/savedstate/SavedStateRegistryOwner;", "context", "Landroid/content/Context;", "themeResId", "", "(Landroid/content/Context;I)V", "_lifecycleRegistry", "Landroidx/lifecycle/LifecycleRegistry;", "lifecycle", "Landroidx/lifecycle/Lifecycle;", "getLifecycle", "()Landroidx/lifecycle/Lifecycle;", "lifecycleRegistry", "getLifecycleRegistry", "()Landroidx/lifecycle/LifecycleRegistry;", "onBackPressedDispatcher", "Landroidx/activity/OnBackPressedDispatcher;", "getOnBackPressedDispatcher$annotations", "()V", "getOnBackPressedDispatcher", "()Landroidx/activity/OnBackPressedDispatcher;", "savedStateRegistry", "Landroidx/savedstate/SavedStateRegistry;", "getSavedStateRegistry", "()Landroidx/savedstate/SavedStateRegistry;", "savedStateRegistryController", "Landroidx/savedstate/SavedStateRegistryController;", "addContentView", "", "view", "Landroid/view/View;", "params", "Landroid/view/ViewGroup$LayoutParams;", "initViewTreeOwners", "onBackPressed", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onSaveInstanceState", "onStart", "onStop", "setContentView", "layoutResID", "activity_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
+public class ComponentDialog extends Dialog implements LifecycleOwner, OnBackPressedDispatcherOwner, SavedStateRegistryOwner {
+    private LifecycleRegistry _lifecycleRegistry;
+    private final OnBackPressedDispatcher onBackPressedDispatcher;
+    private final SavedStateRegistryController savedStateRegistryController;
+
+    /* JADX INFO: renamed from: $r8$lambda$K-rBLxNpMJdSxVU3Lsj65hn0UyA, reason: not valid java name */
+    public static /* synthetic */ void m5$r8$lambda$KrBLxNpMJdSxVU3Lsj65hn0UyA(ComponentDialog r0) {
+        onBackPressedDispatcher$lambda$1(r0);
+    }
+
+    public ComponentDialog(Context r4) {
+        Intrinsics.checkNotNullParameter(r4, "context");
+        int r2 = 0;
+        this(r4, r2, 2, null);
+    }
+
+    public static /* synthetic */ void getOnBackPressedDispatcher$annotations() {
+    }
+
+    public /* synthetic */ ComponentDialog(Context r1, int r2, int r3, DefaultConstructorMarker r4) {
+        if ((r3 & 2) == 0) goto L5;
+        r2 = 0;
+    L5:
+        this(r1, r2);
+    }
+
+    public ComponentDialog(Context r2, int r3) {
+        Intrinsics.checkNotNullParameter(r2, "context");
+        super(r2, r3);
+        this.savedStateRegistryController = SavedStateRegistryController.Companion.create(this);
+        this.onBackPressedDispatcher = new OnBackPressedDispatcher(new ComponentDialog$$ExternalSyntheticLambda0(this));
+    }
+
+    private final LifecycleRegistry getLifecycleRegistry() {
+        LifecycleRegistry r0 = this._lifecycleRegistry;
+        if (r0 != null) goto L6;
+        LifecycleRegistry r1 = new LifecycleRegistry(this);
+        this._lifecycleRegistry = r1;
+        return r1;
+    L6:
+        return r0;
+    }
+
+    @Override // androidx.savedstate.SavedStateRegistryOwner
+    public SavedStateRegistry getSavedStateRegistry() {
+        return this.savedStateRegistryController.getSavedStateRegistry();
+    }
+
+    @Override // androidx.lifecycle.LifecycleOwner
+    public Lifecycle getLifecycle() {
+        return getLifecycleRegistry();
+    }
+
+    @Override // android.app.Dialog
+    public Bundle onSaveInstanceState() {
+        Bundle r0 = super.onSaveInstanceState();
+        Intrinsics.checkNotNullExpressionValue(r0, "super.onSaveInstanceState()");
+        this.savedStateRegistryController.performSave(r0);
+        return r0;
+    }
+
+    @Override // android.app.Dialog
+    protected void onCreate(Bundle r4) {
+        super.onCreate(r4);
+        if (Build.VERSION.SDK_INT < 33) goto L5;
+        OnBackPressedDispatcher r0 = this.onBackPressedDispatcher;
+        OnBackInvokedDispatcher r1 = getOnBackInvokedDispatcher();
+        Intrinsics.checkNotNullExpressionValue(r1, "onBackInvokedDispatcher");
+        r0.setOnBackInvokedDispatcher(r1);
+    L5:
+        this.savedStateRegistryController.performRestore(r4);
+        getLifecycleRegistry().handleLifecycleEvent(Lifecycle.Event.ON_CREATE);
+    }
+
+    @Override // android.app.Dialog
+    protected void onStart() {
+        super.onStart();
+        getLifecycleRegistry().handleLifecycleEvent(Lifecycle.Event.ON_RESUME);
+    }
+
+    @Override // android.app.Dialog
+    protected void onStop() {
+        getLifecycleRegistry().handleLifecycleEvent(Lifecycle.Event.ON_DESTROY);
+        this._lifecycleRegistry = null;
+        super.onStop();
+    }
+
+    @Override // androidx.activity.OnBackPressedDispatcherOwner
+    public final OnBackPressedDispatcher getOnBackPressedDispatcher() {
+        return this.onBackPressedDispatcher;
+    }
+
+    private static final void onBackPressedDispatcher$lambda$1(ComponentDialog r1) {
+        Intrinsics.checkNotNullParameter(r1, "this$0");
+        super.onBackPressed();
+    }
+
+    @Override // android.app.Dialog
+    public void onBackPressed() {
+        this.onBackPressedDispatcher.onBackPressed();
+    }
+
+    @Override // android.app.Dialog
+    public void setContentView(int r1) {
+        initViewTreeOwners();
+        super.setContentView(r1);
+    }
+
+    @Override // android.app.Dialog
+    public void setContentView(View r2) {
+        Intrinsics.checkNotNullParameter(r2, "view");
+        initViewTreeOwners();
+        super.setContentView(r2);
+    }
+
+    @Override // android.app.Dialog
+    public void setContentView(View r2, ViewGroup.LayoutParams r3) {
+        Intrinsics.checkNotNullParameter(r2, "view");
+        initViewTreeOwners();
+        super.setContentView(r2, r3);
+    }
+
+    @Override // android.app.Dialog
+    public void addContentView(View r2, ViewGroup.LayoutParams r3) {
+        Intrinsics.checkNotNullParameter(r2, "view");
+        initViewTreeOwners();
+        super.addContentView(r2, r3);
+    }
+
+    private final void initViewTreeOwners() {
+        Window r0 = getWindow();
+        Intrinsics.checkNotNull(r0);
+        View r1 = r0.getDecorView();
+        Intrinsics.checkNotNullExpressionValue(r1, "window!!.decorView");
+        ViewTreeLifecycleOwner.set(r1, this);
+        Window r2 = getWindow();
+        Intrinsics.checkNotNull(r2);
+        View r3 = r2.getDecorView();
+        Intrinsics.checkNotNullExpressionValue(r3, "window!!.decorView");
+        ViewTreeOnBackPressedDispatcherOwner.set(r3, this);
+        Window r4 = getWindow();
+        Intrinsics.checkNotNull(r4);
+        View r5 = r4.getDecorView();
+        Intrinsics.checkNotNullExpressionValue(r5, "window!!.decorView");
+        ViewTreeSavedStateRegistryOwner.set(r5, this);
+    }
+}

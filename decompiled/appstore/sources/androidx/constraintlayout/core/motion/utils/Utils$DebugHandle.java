@@ -1,0 +1,6 @@
+package androidx.constraintlayout.core.motion.utils;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface Utils$DebugHandle {
+    void message(String r10);
+}

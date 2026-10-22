@@ -1,0 +1,46 @@
+package com.larus.share.impl;
+
+import com.larus.network.http.HttpExtKt;
+import com.larus.share.service.IShareShortUrlCreateService;
+import com.larus.share.service.ShareShortUrlCreateResponse;
+import com.tencent.open.log.TraceLevel;
+import java.util.Iterator;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes31.dex */
+@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u0000 \u000f2\u00020\u0001:\u0001\u000fB\u0007¢\u0006\u0004\b\u0002\u0010\u0003J6\u0010\u0004\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00060\u00052\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\b2\u0006\u0010\n\u001a\u00020\u000b2\b\u0010\f\u001a\u0004\u0018\u00010\rH\u0096@¢\u0006\u0002\u0010\u000e¨\u0006\u0010"}, d2 = {"Lcom/larus/share/impl/ShareShortUrlCreateServiceImpl;", "Lcom/larus/share/service/IShareShortUrlCreateService;", "<init>", "()V", "createShortUrls", "Lcom/larus/network/http/Async;", "Lcom/larus/share/service/ShareShortUrlCreateResponse;", "longUrls", "", "", "fallbackToLongUrl", "", "shareRecord", "Lorg/json/JSONObject;", "(Ljava/util/List;ZLorg/json/JSONObject;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "Companion", "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = TraceLevel.ABOVE_WARN)
+public final class ShareShortUrlCreateServiceImpl implements IShareShortUrlCreateService {
+
+    public static final class a {
+    }
+
+    static {
+    }
+
+    public ShareShortUrlCreateServiceImpl() {
+    }
+
+    @Override // com.larus.share.service.IShareShortUrlCreateService
+    public final Object a(List<String> r13, boolean r14, JSONObject r15, Continuation<? super com.larus.network.http.a<ShareShortUrlCreateResponse>> r16) {
+        JSONObject r4 = new JSONObject();
+        JSONArray r5 = new JSONArray();
+        Iterator<T> r6 = r13.iterator();
+    L4:
+        if (r6.hasNext() == false) goto L6;
+        r5.put((String) r6.next());
+        goto L4
+    L6:
+        Unit r7 = Unit.INSTANCE;
+        r4.put("long_urls", r5);
+        r4.put("fallback_to_long_url", r14);
+        if (r15 == null) goto L10;
+        r4.put("share_record", r15);
+    L10:
+        return HttpExtKt.k("Basic", ShareShortUrlCreateResponse.class, "/commercial/short_url/create", r4, null, null, true, null, null, null, r16, 944);
+    }
+}

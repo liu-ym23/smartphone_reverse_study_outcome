@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/round_12_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="18dp"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="你最多只能选择6项"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+    <TextView
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/tv_i_know"
+        android:background="@drawable/background_submit_tv_available"
+        android:padding="8dp"
+        android:layout_width="250dp"
+        android:layout_height="44dp"
+        android:layout_margin="20dp"
+        android:text="我知道了"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

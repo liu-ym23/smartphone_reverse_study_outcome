@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="100003070"
+    android:versionName="1.0.3"
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="15"
+    package="com.obric.appstore"
+    platformBuildVersionCode="35"
+    platformBuildVersionName="15">
+    <uses-sdk
+        android:minSdkVersion="30"
+        android:targetSdkVersion="35"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.ACCESS_ALL_DOWNLOADS"/>
+    <uses-permission android:name="com.bytedance.permission.READ_ACCOUNT"/>
+    <uses-permission android:name="com.bytedanceos.updater.RECEIVE"/>
+    <uses-permission android:name="android.permission.THEME_DOWNLOAD"/>
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="com.bytedance.permission.READ_PUSH"/>
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="android.permission.gamestore.INSTALL_APPS"/>
+    <uses-permission android:name="android.permission.appstore.INSTALL_APPS"/>
+    <uses-permission android:name="com.bytedance.permission.ACCOUNT_CENTER"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.bytedanceos.permission.ACCOUNT_CENTER"/>
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS"/>
+    <uses-permission android:name="bytedance.crashreport.send_custom"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+    <uses-permission android:name="com.bytedance.android.doubaoime.permission.IME_PROVIDER"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="com.obric.permission.CAPTURE_PASS_BLUR"/>
+    <uses-permission android:name="com.obric.appletapp.permission.FLOW_BRIDGE"/>
+    <permission
+        android:name="com.bytedanceos.appstore.permission.ACCESS_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission
+        android:name="android.permission.appstore.THEME_DOWNLOAD"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission
+        android:name="android.permission.appstore.INSTALL_APPS"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission
+        android:name="android.permission.appstore.AUTO_UPDATE"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <permission
+        android:name="com.obric.appstore.download.permission.DOWNLOAD_BROADCAST"
+        android:protectionLevel="signatureOrSystem"/>
+    <queries>
+        <package android:name="com.obric.aiagent.executionengine"/>
+        <package android:name="com.larus.nova"/>
+        <package android:name="com.obric.assistantaiagent"/>
+        <intent>
+            <action android:name="com.obric.memorydata.action.SEARCH_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.aiagent.executionengine.CAPABILITY_REGISTER_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.obric.memorydata.action.GLOBAL_SEARCH_SERVICE"/>
+        </intent>
+        <package android:name="com.obric.matrix"/>
+        <package android:name="com.obric.downloadserver"/>
+    </queries>
+    <uses-permission android:name="com.obric.account.NAVIGATE"/>
+    <uses-permission android:name="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"/>
+    <uses-permission android:name="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE"/>
+    <uses-permission android:name="slardaros.intent.permission"/>
+    <uses-permission android:name="com.slardaros.METRIC_EVENT_PERMISSION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <permission
+        android:name="com.obric.appstore.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.obric.appstore.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <permission
+        android:name="com.obric.olog.ACCESS_LOG_COMPRESSION_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.obric.downloadserver.permission.USE_DOWNLOAD_SERVICE"/>
+    <application
+        android:theme="@style/AppTheme.NoActionBar"
+        android:label="@string/app_name_sysappupdate"
+        android:icon="@mipmap/app_settings"
+        android:name="com.bytedanceos.appstore.AppStoreApplication"
+        android:sharedUserId="android.uid.system"
+        android:allowBackup="false"
+        android:extractNativeLibs="false"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data
+            android:name="assistant.app.intents"
+            android:resource="@xml/intents_sysappupdate"/>
+        <provider
+            android:name="com.bytedanceos.appstore.model.provider.SuggestionsProvider"
+            android:exported="false"
+            android:authorities="com.obric.appstore.SuggestionsProvider">
+            <path-permission
+                android:readPermission="android.permission.GLOBAL_SEARCH"
+                android:pathPrefix="/search_suggest_query"/>
+            <path-permission
+                android:readPermission="android.permission.GLOBAL_SEARCH"
+                android:pathPrefix="/search_suggest_shortcut"/>
+        </provider>
+        <activity
+            android:icon="@mipmap/app_settings"
+            android:name="com.obric.appstore.sysapp.restore.SysAppRestoreActivity"
+            android:exported="true"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="com.obric.action.settings.RESTORE_SYSAPP"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:icon="@mipmap/app_settings"
+            android:name="com.obric.appstore.sysapp.restore.SysAppManageActivity"
+            android:exported="true"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="com.obric.action.settings.SYSAPP_UPDATE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <meta-data
+            android:name="windowParams"
+            android:value="0,1,1,0,900,640"/>
+        <meta-data
+            android:name="SS_CHANNEL_ID"
+            android:value="0"/>
+        <meta-data
+            android:name="SS_APP_ID"
+            android:value="1868"/>
+        <meta-data
+            android:name="AppChannel"
+            android:value="999"/>
+        <meta-data
+            android:name="android.app.activity.edgeToEdge"
+            android:value="true"/>
+        <meta-data
+            android:name="bytedance_tracker_appid"
+            android:value="9"/>
+        <meta-data
+            android:name="BYTEDANCE_APPID"
+            android:value="10000012"/>
+        <meta-data
+            android:name="com.bytedanceos.appstore.sign_ak"
+            android:value="e405aaa6f97bad8752a4e2251d1e8c49"/>
+        <meta-data
+            android:name="com.bytedanceos.appstore.sign_sk"
+            android:value="29fc518df8c2d86e564a8f7c1f9afd01"/>
+        <provider
+            android:name="com.bytedanceos.appstore.model.provider.AppStoreProvider"
+            android:permission="com.bytedanceos.appstore.permission.ACCESS_PROVIDER"
+            android:exported="true"
+            android:authorities="com.obric.appstore"/>
+        <receiver
+            android:name="com.bytedanceos.appstore.AppStoreGlobalReceiver"
+            android:permission="android.permission.appstore.INSTALL_APPS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.quicksearchbox.search.click"/>
+                <action android:name="com.bytedanceos.app.store.sync.my.apps"/>
+                <action android:name="com.bytedanceos.app.store.sync.collection.apps"/>
+                <action android:name="com.bytedanceos.app.store.sync.last.day"/>
+                <action android:name="com.bytedanceos.appstore.clean_up_storage"/>
+                <action android:name="com.bytedanceos.appstore.sync.update.apps"/>
+                <action android:name="com.bytedanceos.appstore.dismiss_clean_up_storage_notification"/>
+                <action android:name="com.android.applist.download"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.bytedanceos.appstore.SystemBroadcastReceiver"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.bytedanceos.common.receiver.LauncherHandlerReceiver"
+            android:permission="android.permission.appstore.THEME_DOWNLOAD"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bytedanceos.launcher.ready"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.bytedanceos.appstore.download.receiver.AppInstallReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.bytedanceos.check.install.app"/>
+                <action android:name="com.bytedanceos.check.install.app.list"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.bytedanceos.appstore.download.service.AutoUpdateService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.bytedance.appstore.autoupdate.pause"/>
+                <action android:name="com.bytedance.appstore.autoupdate.switch"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.bytedanceos.common.core.install.GmsInstallService"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.common.core.install.PackageAddAndRemoveService"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.common.download.AppsDownloadService"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.appstore.download.service.AppInstallDispatchService"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.appstore.download.service.AppsInstallService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.bytedance.start.install.service"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.bytedanceos.common.BackgroundWorkerService"
+            android:exported="false"/>
+        <provider
+            android:name="com.bytedanceos.appstore.update.AutoUpdateProvider"
+            android:readPermission="android.permission.appstore.AUTO_UPDATE"
+            android:exported="true"
+            android:authorities="com.bytedanceos.appstore.auto_update"/>
+        <provider
+            android:name="com.bytedanceos.appstore.model.provider.LauncherProvider"
+            android:readPermission="android.permission.appstore.THEME_DOWNLOAD"
+            android:exported="false"
+            android:authorities="com.obric.appstore.theme_download"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.obric.appstore.install.app"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+        <service
+            android:name="com.bytedanceos.appstore.job.AppStoreJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.common.config.DynamicConfigService"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedanceos.appstore.PreloadInstall.SyncPreloadInstallAppsJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <service android:name="com.bytedanceos.appstore.backup.RestoreAppsService"/>
+        <service
+            android:name="com.blankj.utilcode.util.MessengerUtils.ServerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.obric.appstore.messenger"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.bytedance.ttnet.hostmonitor.ConnectivityReceiver"
+            android:exported="true"/>
+        <activity
+            android:name="com.bytedance.ttnet.debug.TTnetDebugActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.bytedanceos.common.core.ui.AppStoreWebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <receiver
+            android:name="com.smt.obric.appstore.domain.downloader.ODownloaderReceiver"
+            android:permission="com.obric.appstore.download.permission.DOWNLOAD_BROADCAST"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.downloader.action.DOWNLOAD_COMPLETE"/>
+                <action android:name="com.obric.downloader.action.DOWNLOAD_CORE_ERROR"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.smt.obric.appstore.domain.app.jobs.AppInstallJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.app.job.JobService"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="obric.intent.sdk.version"
+            android:value="2"/>
+        <service
+            android:name="com.obric.capabilitykit.CapabilityHandleService"
+            android:permission="com.obric.aiagent.executionengine.DISPATCH_INTENTS"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.capabilitykit.CapabilityHandleService"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.capabilitykit.entity.EntityContentProvider"
+            android:exported="true"
+            android:authorities="com.obric.appstore.EntityContentProvider"/>
+        <provider
+            android:name="com.obric.matrix.platform.sdk.ones.ws.WsMsgProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.obric.matrix.platform.sdk.ones.provider.com.obric.appstore"/>
+        <service
+            android:name="com.bytedance.common.wschannel.server.WsChannelService"
+            android:exported="false"
+            android:process=":push"/>
+        <service
+            android:name="com.bytedance.common.wschannel.client.WsClientService"
+            android:exported="false"/>
+        <provider
+            android:name="com.bytedance.common.wschannel.WsChannelMultiProcessSharedProvider"
+            android:exported="false"
+            android:authorities="com.obric.appstore.WsChannelMultiProcessSharedProvider"/>
+        <activity
+            android:theme="@style/AppTheme.Transparent"
+            android:name="com.obric.oui.window.permission.PrivacyStatementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.oui.window.permission.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustNothing"/>
+        <provider
+            android:name="com.prolificinteractive.materialcalendarview.MaterialCalendarViewInitProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.obric.appstore.materialcalendarviewinitprovider"/>
+        <provider
+            android:name="com.bytedance.apm.battery.dao.MonitorContentProvider"
+            android:exported="false"
+            android:authorities="com.obric.appstore.apm"/>
+        <service
+            android:name="com.obric.olog.ConfigService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.ologaction"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.olog.OLog"
+            android:exported="false"
+            android:authorities="com.obric.appstore.contextprovider"/>
+        <meta-data
+            android:name="entity_sdk_version"
+            android:value="1"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.obric.appstore.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <activity
+            android:theme="@style/ActivityTranslucent"
+            android:name="com.blankj.utilcode.util.Utils.TransActivity"
+            android:multiprocess="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider
+            android:name="com.blankj.utilcode.util.Utils.FileProvider4UtilCode"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.obric.appstore.utilcode.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/util_code_provider_paths"/>
+        </provider>
+        <provider
+            android:name="com.obric.olog.salvage.LogCompressionProvider"
+            android:exported="true"
+            android:authorities="com.obric.appstore.logcompressionprovider"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

@@ -1,0 +1,10 @@
+package com.bytedance.ee.bear.middleground.comment.export;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes18.dex */
+public interface v {
+    boolean a();
+
+    boolean canEdit();
+
+    boolean isOwner();
+}

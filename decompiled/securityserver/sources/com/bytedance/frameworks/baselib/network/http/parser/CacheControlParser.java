@@ -1,0 +1,108 @@
+package com.bytedance.frameworks.baselib.network.http.parser;
+
+import com.bytedance.networkstackapplib.NetworkStackConstant;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/* JADX INFO: loaded from: classes.dex */
+public class CacheControlParser {
+    private static final String REGEX = "\\s*([\\w\\-]+)\\s*(=)?\\s*(\\d+|\\\"([^\"\\\\]*(\\\\.[^\"\\\\]*)*)+\\\")?\\s*";
+    private static final Pattern pattern = null;
+    private HashMap<Directive, String> values;
+
+    public static final enum Directive extends Enum<Directive> {
+        private static final /* synthetic */ Directive[] $VALUES = null;
+        public static final Directive MAXAGE = null;
+        public static final Directive MAXSTALE = null;
+        public static final Directive MINFRESH = null;
+        public static final Directive MUSTREVALIDATE = null;
+        public static final Directive NOCACHE = null;
+        public static final Directive NOSTORE = null;
+        public static final Directive NOTRANSFORM = null;
+        public static final Directive ONLYIFCACHED = null;
+        public static final Directive PRIVATE = null;
+        public static final Directive PROXYREVALIDATE = null;
+        public static final Directive PUBLIC = null;
+        public static final Directive SMAXAGE = null;
+        public static final Directive UNKNOWN = null;
+
+        static {
+            Directive r0 = new Directive("MAXAGE", 0);
+            MAXAGE = r0;
+            Directive r1 = new Directive("MAXSTALE", 1);
+            MAXSTALE = r1;
+            Directive r2 = new Directive("MINFRESH", 2);
+            MINFRESH = r2;
+            Directive r3 = new Directive("NOCACHE", 3);
+            NOCACHE = r3;
+            Directive r4 = new Directive("NOSTORE", 4);
+            NOSTORE = r4;
+            Directive r5 = new Directive("NOTRANSFORM", 5);
+            NOTRANSFORM = r5;
+            Directive r6 = new Directive("ONLYIFCACHED", 6);
+            ONLYIFCACHED = r6;
+            Directive r7 = new Directive("MUSTREVALIDATE", 7);
+            MUSTREVALIDATE = r7;
+            Directive r8 = new Directive("PRIVATE", 8);
+            PRIVATE = r8;
+            Directive r9 = new Directive("PROXYREVALIDATE", 9);
+            PROXYREVALIDATE = r9;
+            Directive r10 = new Directive("PUBLIC", 10);
+            PUBLIC = r10;
+            Directive r11 = new Directive("SMAXAGE", 11);
+            SMAXAGE = r11;
+            Directive r12 = new Directive(NetworkStackConstant.UNKNOWN_TYPE, 12);
+            UNKNOWN = r12;
+            $VALUES = new Directive[]{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12};
+        }
+
+        private Directive(String r1, int r2) {
+            super(r1, r2);
+        }
+
+        public static Directive select(String r2) {
+            return valueOf(r2.toUpperCase().replaceAll("-", ""));
+        L5:
+            return UNKNOWN;
+        }
+
+        public static Directive valueOf(String r1) {
+            return (Directive) Enum.valueOf(Directive.class, r1);
+        }
+
+        public static Directive[] values() {
+            return (Directive[]) $VALUES.clone();
+        }
+    }
+
+    static {
+        pattern = Pattern.compile(REGEX);
+    }
+
+    public CacheControlParser(String r4) {
+        this.values = new HashMap();
+        Matcher r5 = pattern.matcher(r4);     // Catch: IllegalArgumentException -> L11
+    L5:
+        if (r5.find() == false) goto L19;
+        Directive r0 = Directive.select(r5.group(1));     // Catch: IllegalArgumentException -> L11
+        if (r0 == Directive.UNKNOWN) goto L5;
+        this.values.put(r0, r5.group(3));     // Catch: IllegalArgumentException -> L11
+    L19:
+        return;
+    }
+
+    public String getValue(Directive r1) {
+        return this.values.get(r1);
+    }
+
+    public Map<Directive, String> getValues() {
+        return this.values;
+    }
+
+    public Iterator<Directive> iterator() {
+        return this.values.keySet().iterator();
+    }
+}

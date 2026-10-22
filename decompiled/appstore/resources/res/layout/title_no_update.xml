@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_no_update"
+    android:background="@color/oui_green_2"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:paddingHorizontal="@dimen/oui_p_container_3"
+    android:paddingVertical="@dimen/oui_p_button_m2">
+    <ImageView
+        android:id="@+id/title_icon"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/oui_update_icon"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"/>
+    <TextView
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/title_icon"
+        android:layout_centerVertical="true"
+        style="@style/Label_L"/>
+</RelativeLayout>

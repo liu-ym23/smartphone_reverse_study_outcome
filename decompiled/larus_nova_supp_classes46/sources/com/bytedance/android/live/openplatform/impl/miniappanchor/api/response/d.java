@@ -1,0 +1,66 @@
+package com.bytedance.android.live.openplatform.impl.miniappanchor.api.response;
+
+import com.bytedance.android.tools.pbadapter.annotation.ProtoMessage;
+import com.google.gson.annotations.SerializedName;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes46.dex */
+@ProtoMessage("webcast.api.stamp.GetMicroAppOpenInfoResponse.Data")
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u0001R\u001c\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lcom/bytedance/android/live/openplatform/impl/miniappanchor/api/response/d;", "", "Lcom/bytedance/android/live/openplatform/impl/miniappanchor/api/response/m;", "presetCardList", "Lcom/bytedance/android/live/openplatform/impl/miniappanchor/api/response/m;", "a", "()Lcom/bytedance/android/live/openplatform/impl/miniappanchor/api/response/m;", "liveopenplatform-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class d implements vh7.h {
+
+    @SerializedName("preset_card_list")
+    protected m presetCardList;
+
+    public final boolean equals(Object r2) {
+        if (this != r2) goto L4;
+        return true;
+    L4:
+        if ((r2 instanceof d) == true) goto L6;
+        return false;
+    L6:
+        if (Intrinsics.areEqual(this.presetCardList, ((d) r2).presetCardList) == true) goto L13;
+        return false;
+    L13:
+        return true;
+    }
+
+    public final int hashCode() {
+        m r0 = this.presetCardList;
+        if (r0 != null) goto L7;
+        return 0;
+    L7:
+        return r0.hashCode();
+    }
+
+    public final String toString() {
+        return "GetMicroAppOpenInfoResponse(presetCardList=" + this.presetCardList + ")";
+    }
+
+    public d() {
+        this.presetCardList = null;
+    }
+
+    public final m a() {
+        return this.presetCardList;
+    }
+
+    public d(am3.g r5) {
+        long r0 = r5.c();
+    L3:
+        int r2 = r5.f();
+        if (r2 == (-1)) goto L9;
+        if (r2 != 1) goto L7;
+        this.presetCardList = new m(r5);
+        goto L3
+    L7:
+        am3.h.e(r5);
+        goto L3
+    L9:
+        r5.d(r0);
+        if (this.presetCardList != null) goto L19;
+        this.presetCardList = null;
+        return;
+    }
+}

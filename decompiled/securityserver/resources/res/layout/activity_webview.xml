@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.optimize.OCTitleBar
+        android:id="@+id/web_activity_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        style="?android:attr/progressBarStyleHorizontal"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.obric.oui.text.OBaseTextView
+            android:textColor="@color/oui_text_3b"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/errorView"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_load_fail"
+            style="@style/Title_Title_L"/>
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

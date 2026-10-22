@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:height="@dimen/dp_2"
+        android:width="@dimen/dp_6"
+        android:left="@dimen/dp_12"
+        android:top="@dimen/dp_20">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="100%"
+            android:pivotY="100%">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/island_accent_6"/>
+            </shape>
+        </rotate>
+    </item>
+    <item
+        android:height="@dimen/dp_2"
+        android:width="@dimen/dp_6"
+        android:left="@dimen/dp_18"
+        android:top="@dimen/dp_20">
+        <rotate
+            android:fromDegrees="-45"
+            android:toDegrees="-45"
+            android:pivotX="0%"
+            android:pivotY="100%">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/island_accent_6"/>
+            </shape>
+        </rotate>
+    </item>
+    <item
+        android:height="@dimen/dp_10"
+        android:width="@dimen/dp_2"
+        android:left="@dimen/dp_17"
+        android:top="@dimen/dp_11">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/island_accent_6"/>
+        </shape>
+    </item>
+    <item
+        android:height="@dimen/dp_2"
+        android:width="@dimen/dp_14"
+        android:left="@dimen/dp_11"
+        android:top="@dimen/dp_24">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/island_accent_6"/>
+        </shape>
+    </item>
+</layer-list>

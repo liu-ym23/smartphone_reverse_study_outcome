@@ -1,0 +1,20 @@
+package com.bytedance.android.live.profit.privilege;
+
+import com.bytedance.tools.kcp.ultrasettings.runtime.UltraSettingsManager;
+import kotlin.jvm.internal.PropertyReference0Impl;
+import kotlin.jvm.internal.Reflection;
+import kotlin.properties.ReadOnlyProperty;
+import kotlin.reflect.KProperty;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+public final class d {
+    public static final /* synthetic */ KProperty[] a = null;
+    public static final ReadOnlyProperty b = null;
+
+    static {
+        KProperty[] r1 = {Reflection.property0(new PropertyReference0Impl(d.class, "RESOURCE_PRELOAD_SCHEMA", "getRESOURCE_PRELOAD_SCHEMA()Ljava/lang/String;", 1))};
+        a = r1;
+        com.bytedance.tools.kcp.ultrasettings.runtime.a r0 = new com.bytedance.tools.kcp.ultrasettings.runtime.a("live_resource_preload_strategy_schema", "sslocal://webcast_lynxview?url=https%3A%2F%2Flf-webcast-gr-sourcecdn.bytegecko.com%2Fobj%2Fbyte-gurd-source-gr%2Fwebcast%2Fmono%2Flynx%2Fwebcast_common_preload_main_douyin%2Fpages%2Findex%2Ftemplate.js", String.class, false);
+        b = UltraSettingsManager.a().a(r0.a, r0.b, r0.getType(), r0.d, r1[0]);
+    }
+}

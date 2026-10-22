@@ -1,0 +1,12 @@
+package com.larksuite.component.blockit.entity;
+
+import java.io.Serializable;
+import java.util.Map;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+public class BatchGetItemTagsResponse implements Serializable {
+    public Map<String, ItemTags> itemsTags;
+
+    public BatchGetItemTagsResponse() {
+    }
+}

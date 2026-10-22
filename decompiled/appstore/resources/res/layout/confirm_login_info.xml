@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/setting_background"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/check_password_container"
+        layout="@layout/dialog_password"/>
+    <include
+        android:id="@+id/nick_name_container"
+        layout="@layout/dialog_nickname"/>
+</RelativeLayout>

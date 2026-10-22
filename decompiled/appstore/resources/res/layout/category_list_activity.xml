@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_topic"
+    android:fitsSystemWindows="true"
+    style="@style/appstore_bg_style">
+    <include layout="@layout/abc_toolbar"/>
+    <com.obric.oui.divider.ODivider
+        android:id="@+id/line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:layout_below="@+id/toolbar"/>
+    <com.bytedanceos.common.ui.widget.ParentView
+        android:id="@+id/topic_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"/>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+package com.tt.skin.sdk;
+
+import android.content.Context;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Lambda;
+import kotlin.jvm.internal.Ref$ObjectRef;
+import kotlin.jvm.internal.q;
+import org.jetbrains.annotations.NotNull;
+
+/* JADX INFO: loaded from: classes4.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n¢\u0006\u0002\b\u0004"}, d2 = {"<anonymous>", "", "it", "Landroid/content/Context;", "invoke"}, k = 3, mv = {1, 1, 15})
+final class Default$DEFAULT_VIEW_INTERCEPTOR$1$getDrawableFromSkinResource$1 extends Lambda implements Function1<Context, Unit> {
+    final /* synthetic */ Ref$ObjectRef $drawable;
+    final /* synthetic */ int $drawableRes;
+
+    public Default$DEFAULT_VIEW_INTERCEPTOR$1$getDrawableFromSkinResource$1(Ref$ObjectRef r10, int r11) {
+        this.$drawable = r10;
+        this.$drawableRes = r11;
+        super(1);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ Unit invoke(Context r10) {
+        invoke2(r10);
+        return Unit.f21064a;
+    }
+
+    /* JADX WARN: Type inference failed for: r1v2, types: [T, android.graphics.drawable.Drawable] */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final void invoke2(@NotNull Context r10) {
+        q.h(r10, "it");
+        Ref$ObjectRef r11 = this.$drawable;
+        r11.element = r10.getResources().getDrawable(this.$drawableRes);
+    }
+}

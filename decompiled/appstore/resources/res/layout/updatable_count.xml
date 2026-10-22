@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="false"
+    android:clickable="false"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:elevation="@dimen/elevation_bar_height">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/updatable_count"
+        android:background="@color/oui_red_7"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="9dp"
+        android:minWidth="16dp"
+        android:layout_alignParentLeft="true"
+        android:paddingHorizontal="4.5dp"
+        app:oui_radius="200dp"
+        style="@style/Label_S"/>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+package tc2;
+
+import android.view.View;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes9.dex */
+public interface d extends nf6.a {
+    void onClick(View r1);
+}

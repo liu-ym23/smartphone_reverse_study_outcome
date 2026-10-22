@@ -1,0 +1,35 @@
+package com.bytedance.android.livesdk.drawer.relax;
+
+import com.relax.relaxframework.RelaxFrameworkKt;
+import com.relax.relaxframework.j5;
+import java.util.ArrayList;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0010\u0005\u001a\u0012\u0012\u0004\u0012\u00020\u00010\u0000j\b\u0012\u0004\u0012\u00020\u0001`\u0002H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Ljava/util/ArrayList;", "Lcom/relax/relaxframework/j5;", "Lcom/bytedance/rts/foundation/RTSArray;", "invoke", "()Ljava/util/ArrayList;", "<no name provided>"}, k = 3, mv = {1, 4, 3})
+public final class MainpageHistoryListItemKt$LiveDrawerHistoryListItem$1$1$1$switch__1$2$match__1$1$1$switch__4$2$match__4$2 extends Lambda implements Function0<ArrayList<j5>> {
+    final /* synthetic */ MainpageHistoryListItemKt$LiveDrawerHistoryListItem$1$1$1$switch__1$2$match__1$1$1$switch__4$2 this$0;
+
+    public MainpageHistoryListItemKt$LiveDrawerHistoryListItem$1$1$1$switch__1$2$match__1$1$1$switch__4$2$match__4$2(MainpageHistoryListItemKt$LiveDrawerHistoryListItem$1$1$1$switch__1$2$match__1$1$1$switch__4$2 r1) {
+        this.this$0 = r1;
+        super(0);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke() {
+        return m1020invoke();
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: collision with other method in class */
+    public final ArrayList<j5> m1020invoke() {
+        Function2<g, Function0<? extends ArrayList<j5>>, j5> r0 = MainpageHistoryListItemKt.a;
+        MainpageHistoryListItemKt$LiveDrawerHistoryListItem$1.AnonymousClass1 r2 = this.this$0.this$0.this$0.this$0.this$0.this$0;
+        ArrayList<j5> r1 = com.bytedance.rts.foundation.j.k(new j5[]{RelaxFrameworkKt.z(r0, new g(r2.$buttonText, r2.$followButtonClick, new MainpageHistoryListItemKt$LiveDrawerHistoryListItem$1$1$1$switch__1$2$match__1$1$1$switch__4$2$match__4$2$LiveDrawerHistoryFollowButton__0$1(this), this.this$0.this$0.this$0.this$0.this$0.this$0.$doFollowing), null)});
+        if (r1 == null) goto L6;
+        return r1;
+    L6:
+        throw new NullPointerException("null cannot be cast to non-null type com.bytedance.rts.foundation.RTSArray<com.relax.relaxframework.RxElement> /* = java.util.ArrayList<com.relax.relaxframework.RxElement> */");
+    }
+}

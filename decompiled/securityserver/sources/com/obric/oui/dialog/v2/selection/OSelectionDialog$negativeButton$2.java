@@ -1,0 +1,15 @@
+package com.obric.oui.dialog.v2.selection;
+
+import com.obric.oui.button.OButton;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata
+final class OSelectionDialog$negativeButton$2 extends Lambda implements Function0<OButton> {
+    @Override // kotlin.jvm.functions.Function0
+    public final Object invoke() {
+        throw null;
+    }
+}

@@ -1,0 +1,16 @@
+package com.bytedance.android.livesdk.config;
+
+import com.bytedance.android.livesdkapi.model.com.bytedance.android.livesdk.config.recommendAnonymous.LiveRecommendAnonymousConfig;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+public final class jm0 extends SSettingKey<LiveRecommendAnonymousConfig> {
+    public static final jm0 a = null;
+
+    static {
+        a = new jm0();
+    }
+
+    public jm0() {
+        super("live_recommend_anonymous_opt_config", "面板+预览流标签推荐给朋友优化", new LiveRecommendAnonymousConfig(), new LiveRecommendAnonymousConfig());
+    }
+}

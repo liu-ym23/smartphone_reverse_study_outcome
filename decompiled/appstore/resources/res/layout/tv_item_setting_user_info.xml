@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_80">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:background="@drawable/avator_profile_default"
+        android:layout_width="@dimen/my_icon_width"
+        android:layout_height="@dimen/my_icon_height"
+        android:layout_marginLeft="@dimen/my_icon_margin_left"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:textSize="18sp"
+        android:textColor="#cd000000"
+        android:id="@+id/my_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:text="log in"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/iv_arrow_margin_top"
+        android:layout_marginRight="@dimen/iv_arrow_margin_right"
+        android:src="@drawable/item_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</FrameLayout>

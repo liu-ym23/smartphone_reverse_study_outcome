@@ -1,0 +1,59 @@
+package com.larus.bmhome.chat.component.bottom;
+
+import com.larus.im.bean.bot.BotModel;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+public final /* synthetic */ class r implements Function2 {
+    public /* synthetic */ r() {
+    }
+
+    public final Object invoke(Object r4, Object r5) {
+        BotModel r6 = (BotModel) r4;
+        BotModel r7 = (BotModel) r5;
+        int r0 = ChatBottomComponent.L0;
+        Boolean r1 = null;
+        if (r6 == null) goto L5;
+        String r2 = r6.getBotId();
+    L6:
+        if (r7 == null) goto L8;
+        String r3 = r7.getBotId();
+    L10:
+        if (Intrinsics.areEqual(r2, r3) == false) goto L27;
+        if (r6 == null) goto L13;
+        Integer r8 = r6.getBotStatus();
+    L14:
+        if (r7 == null) goto L16;
+        Integer r9 = r7.getBotStatus();
+    L18:
+        if (Intrinsics.areEqual(r8, r9) == false) goto L27;
+        if (r6 == null) goto L21;
+        Boolean r10 = Boolean.valueOf(r6.getDisabled());
+    L22:
+        if (r7 == null) goto L25;
+        r1 = Boolean.valueOf(r7.getDisabled());
+    L25:
+        if (Intrinsics.areEqual(r10, r1) == false) goto L27;
+        boolean r11 = true;
+    L29:
+        return Boolean.valueOf(r11);
+    L21:
+        r10 = null;
+        goto L22
+    L16:
+        r9 = null;
+        goto L18
+    L13:
+        r8 = null;
+    L27:
+        r11 = false;
+        goto L29
+    L8:
+        r3 = null;
+        goto L10
+    L5:
+        r2 = null;
+        goto L6
+    }
+}

@@ -1,0 +1,45 @@
+package com.obric.memorydata.sdk.intent;
+
+import android.os.Parcelable;
+import com.obric.capabilitykit.common.DispatchContext;
+import com.obric.capabilitykit.common.ErrorCode;
+import com.obric.capabilitykit.common.intent.AppIntentImplInfo;
+import com.obric.capabilitykit.common.intent.BasePCPersonalContextSearchIntent;
+import com.obric.capabilitykit.common.intent.Empty;
+import com.obric.capabilitykit.common.intent.IntentResult;
+import com.obric.capabilitykit.common.intent.PCPersonalContextSearchParams;
+import com.obric.memorydata.sdk.MemoryResponse;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes33.dex */
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J$\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u00052\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH\u0096@¢\u0006\u0002\u0010\u000bJ\n\u0010\f\u001a\u0004\u0018\u00010\rH\u0002¨\u0006\u000e"}, d2 = {"Lcom/obric/memorydata/sdk/intent/PersonalContextSearchIntent;", "Lcom/obric/capabilitykit/common/intent/BasePCPersonalContextSearchIntent;", "<init>", "()V", "doAction", "Lcom/obric/capabilitykit/common/intent/IntentResult;", "Lcom/obric/capabilitykit/common/intent/Empty;", "params", "Lcom/obric/capabilitykit/common/intent/PCPersonalContextSearchParams;", "dispatchContext", "Lcom/obric/capabilitykit/common/DispatchContext;", "(Lcom/obric/capabilitykit/common/intent/PCPersonalContextSearchParams;Lcom/obric/capabilitykit/common/DispatchContext;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "getDispatchIntentImplInfo", "Lcom/obric/capabilitykit/common/intent/AppIntentImplInfo;", "memoryDataSDK_obricRelease"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public final class PersonalContextSearchIntent extends BasePCPersonalContextSearchIntent {
+    private final AppIntentImplInfo getDispatchIntentImplInfo() {
+        return null;
+    }
+
+    public PersonalContextSearchIntent() {
+    }
+
+    public Object doAction(PCPersonalContextSearchParams r16, DispatchContext r17, Continuation<? super IntentResult<Empty>> r18) {
+        if (getDispatchIntentImplInfo() != null) goto L11;
+        pka.a.a.getClass();
+        Intrinsics.checkNotNullParameter(r16, "params");
+        Intrinsics.checkNotNullParameter(r17, "dispatchContext");
+        MemoryResponse r0 = pka.a.b("pcPersonalContextSearchIntent", r16, r17);
+        IntentResult r1 = (IntentResult) r0.c;
+        if (r0.a != 0) goto L9;
+        if (r1 == null) goto L9;
+        return r1;
+    L9:
+        return new IntentResult(ErrorCode.INTENT_EXECUTE_ERROR, null, null, "executePersonalContextSearchIntent error", false, false, 256, null, null, null, 950, null);
+    L11:
+        throw new UnsupportedOperationException("not support dispatch intent");
+    }
+
+    public /* bridge */ /* synthetic */ Object doAction(Parcelable r1, DispatchContext r2, Continuation r3) {
+        return doAction((PCPersonalContextSearchParams) r1, r2, r3);
+    }
+}

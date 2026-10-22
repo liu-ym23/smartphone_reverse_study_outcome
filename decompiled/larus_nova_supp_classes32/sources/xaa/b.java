@@ -1,0 +1,8 @@
+package xaa;
+
+import com.obric.assistant.activation.presentation.contract.ObricListeningPresentationState;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes32.dex */
+public interface b {
+    void a(ObricListeningPresentationState r1);
+}

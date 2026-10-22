@@ -1,0 +1,31 @@
+package com.bytedance.android.shopping.anchorv4.voavhs.baseinfo;
+
+import android.view.View;
+import com.bytedance.android.shopping.anchorv4.voavhs.base.elements.MediaBoxElementView;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes13.dex */
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\u0010\b\u001a\u00020\u0004\"\n\b\u0000\u0010\u0001\u0018\u0001*\u00020\u00002\u0006\u0010\u0003\u001a\u00020\u0002H\n¢\u0006\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lcom/bytedance/android/shopping/anchorv4/voavhs/base/design/b;", "T", "Landroid/view/View;", "it", "", "invoke", "(Landroid/view/View;)Z", "com/bytedance/android/shopping/cache/typecache/SimpleDraweeViewCacheKt$cacheSimpleDraweeView$1", "<anonymous>"}, k = 3, mv = {1, 4, 3})
+public final class AnchorV4BaseInfoView$BaseInfoLayoutOnHierarchyChangeListener$onChildViewRemoved$$inlined$cacheSimpleDraweeView$1 extends Lambda implements Function1<View, Boolean> {
+    public static final AnchorV4BaseInfoView$BaseInfoLayoutOnHierarchyChangeListener$onChildViewRemoved$$inlined$cacheSimpleDraweeView$1 INSTANCE = null;
+
+    static {
+        INSTANCE = new AnchorV4BaseInfoView$BaseInfoLayoutOnHierarchyChangeListener$onChildViewRemoved$$inlined$cacheSimpleDraweeView$1();
+    }
+
+    public AnchorV4BaseInfoView$BaseInfoLayoutOnHierarchyChangeListener$onChildViewRemoved$$inlined$cacheSimpleDraweeView$1() {
+        super(1);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1) {
+        return Boolean.valueOf(invoke((View) r1));
+    }
+
+    public final boolean invoke(View r2) {
+        Intrinsics.checkNotNullParameter(r2, "it");
+        return r2 instanceof MediaBoxElementView;
+    }
+}

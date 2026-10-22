@@ -1,0 +1,22 @@
+package com.android.server.usb.descriptors;
+
+import com.android.server.usb.descriptors.report.ReportCanvas;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class UsbVCInputTerminal extends UsbVCInterface {
+    private static final String TAG = "UsbVCInputTerminal";
+
+    public UsbVCInputTerminal(int length, byte type, byte subtype) {
+        super(length, type, subtype);
+    }
+
+    @Override // com.android.server.usb.descriptors.UsbDescriptor
+    public int parseRawDescriptors(ByteStream stream) {
+        return super.parseRawDescriptors(stream);
+    }
+
+    @Override // com.android.server.usb.descriptors.UsbDescriptor, com.android.server.usb.descriptors.report.Reporting
+    public void report(ReportCanvas canvas) {
+        super.report(canvas);
+    }
+}

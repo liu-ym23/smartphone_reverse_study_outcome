@@ -1,0 +1,12 @@
+package com.bytedance.android.livesdk.config;
+
+import com.google.gson.reflect.TypeToken;
+import java.util.Map;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+@Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\b\n\u0018\u00002 \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020\u0003\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u00020\u00020\u0001¨\u0006\u0005"}, d2 = {"Lcom/bytedance/android/livesdk/config/g9;", "Lcom/google/gson/reflect/TypeToken;", "", "", "Lcom/bytedance/android/livesdk/config/r01;", "infrastructure_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class g9 extends TypeToken<Map<String, ? extends Map<String, ? extends r01>>> {
+    public g9() {
+    }
+}

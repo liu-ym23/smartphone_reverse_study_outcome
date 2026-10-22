@@ -1,0 +1,37 @@
+package com.ss.android.lark.chat.chatwindow.chat.v2.component.message;
+
+import com.tencent.qqmusic.third.api.contract.BuildConfig;
+import java.lang.ref.WeakReference;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes35.dex */
+@Metadata(d1 = {"\u0000\u0014\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u00012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003H\n¢\u0006\u0004\b\u0005\u0010\u0006"}, d2 = {"<anonymous>", BuildConfig.FLAVOR, "it", "Ljava/lang/ref/WeakReference;", "Lcom/ss/android/lark/chat/chatwindow/chat/v2/component/message/ChatSettingChangedService$OnChatSettingChangedListener;", "invoke", "(Ljava/lang/ref/WeakReference;)Ljava/lang/Boolean;"}, k = 3, mv = {2, 1, 0}, xi = 48)
+final class ChatSettingChangedService$notifyMessageAlignChanged$1 extends Lambda implements Function1<WeakReference<b.a>, Boolean> {
+    public static final ChatSettingChangedService$notifyMessageAlignChanged$1 INSTANCE = null;
+
+    static {
+        INSTANCE = new ChatSettingChangedService$notifyMessageAlignChanged$1();
+    }
+
+    public ChatSettingChangedService$notifyMessageAlignChanged$1() {
+        super(1);
+    }
+
+    public final Boolean invoke(WeakReference<b.a> r2) {
+        Intrinsics.checkNotNullParameter(r2, "it");
+        if (r2.get() != null) goto L5;
+        boolean r3 = true;
+    L7:
+        return Boolean.valueOf(r3);
+    L5:
+        r3 = false;
+        goto L7
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1) {
+        return invoke((WeakReference) r1);
+    }
+}

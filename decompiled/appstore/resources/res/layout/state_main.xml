@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/state_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/state_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <com.obric.oui.progress.ODownloadProgressView
+            android:id="@+id/loading_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:oui_progress_view_size="medium"/>
+    </LinearLayout>
+    <ViewStub
+        android:id="@+id/viewstub_retry"
+        android:layout="@layout/state_retry"
+        android:inflatedId="@+id/state_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <ViewStub
+        android:id="@+id/viewstub_empty"
+        android:layout="@layout/state_empty"
+        android:inflatedId="@+id/state_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <ViewStub
+        android:id="@+id/viewstub_login"
+        android:layout="@layout/state_login"
+        android:inflatedId="@+id/state_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

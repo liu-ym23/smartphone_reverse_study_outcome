@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="13.5sp"
+        android:textColor="#80622f"
+        android:gravity="center_vertical"
+        android:id="@+id/ext_split_item"
+        android:background="@drawable/list_outsider"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/split_item_desc"
+        android:lineSpacingExtra="4dp"/>
+    <ImageView
+        android:background="@drawable/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUIRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_56">
+    <com.bytedanceos.common.network.widget.NetworkImageView
+        android:id="@+id/category_item_icon"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_margin="@dimen/dp_18"
+        android:contentDescription="@null"/>
+    <TextView
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/category_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/category_arrow"
+        android:layout_toRightOf="@+id/category_item_icon"
+        android:layout_centerVertical="true"
+        style="@style/BtnLabel_M2"/>
+    <ImageView
+        android:id="@+id/category_arrow"
+        android:padding="@dimen/dp_4"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_28"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/oui_icon_right_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"/>
+    <com.obric.oui.divider.ODivider
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:layout_alignLeft="@+id/category_item_icon"
+        android:layout_alignParentBottom="true"/>
+</com.obric.oui.layout.OUIRelativeLayout>

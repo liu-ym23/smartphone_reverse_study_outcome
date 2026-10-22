@@ -1,0 +1,31 @@
+package com.larus.bot.impl.feature.edit;
+
+import android.view.View;
+import com.larus.bot.impl.databinding.LarusLayoutAutoFillBtnBinding;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes26.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+public /* synthetic */ class BotCreateFragment$autoFillBtnViewStub$2$1 extends FunctionReferenceImpl implements Function1<View, LarusLayoutAutoFillBtnBinding> {
+    public static final BotCreateFragment$autoFillBtnViewStub$2$1 INSTANCE = null;
+
+    static {
+        INSTANCE = new BotCreateFragment$autoFillBtnViewStub$2$1();
+    }
+
+    public BotCreateFragment$autoFillBtnViewStub$2$1() {
+        super(1, LarusLayoutAutoFillBtnBinding.class, "bind", "bind(Landroid/view/View;)Lcom/larus/bot/impl/databinding/LarusLayoutAutoFillBtnBinding;", 0);
+    }
+
+    public final LarusLayoutAutoFillBtnBinding invoke(View r2) {
+        Intrinsics.checkNotNullParameter(r2, "p0");
+        return LarusLayoutAutoFillBtnBinding.a(r2);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1) {
+        return invoke((View) r1);
+    }
+}

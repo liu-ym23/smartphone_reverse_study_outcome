@@ -1,0 +1,7 @@
+package nu9;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes.dex */
+public final class y {
+    public y() {
+    }
+}

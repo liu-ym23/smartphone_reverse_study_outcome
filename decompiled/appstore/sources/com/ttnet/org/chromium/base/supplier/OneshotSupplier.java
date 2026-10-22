@@ -1,0 +1,8 @@
+package com.ttnet.org.chromium.base.supplier;
+
+import com.ttnet.org.chromium.base.Callback;
+
+/* JADX INFO: loaded from: classes4.dex */
+public interface OneshotSupplier<T> extends Supplier<T> {
+    void onAvailable(Callback<T> r10);
+}

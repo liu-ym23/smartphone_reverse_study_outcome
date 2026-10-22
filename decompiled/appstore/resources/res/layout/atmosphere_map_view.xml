@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="8dp"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/oui_atmosphere_height">
+    <com.bytedanceos.common.network.widget.NetworkImageView
+        android:id="@+id/atmosphere_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_atmosphere_bg_height"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitXY"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/app_container"
+        android:background="@null"
+        android:scrollbars="none"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="never"/>
+</RelativeLayout>

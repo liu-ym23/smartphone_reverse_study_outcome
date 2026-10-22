@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUIFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:oui_radius="20dp">
+    <com.bytedanceos.common.network.widget.NetworkImageView
+        android:id="@+id/large_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/oui_default_banner"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:maxHeight="500dp"/>
+    <com.obric.appstore.common.core.ui.view.ObricAppItemView
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_app_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        app:oui_bottomLeft_radius="20dp"
+        app:oui_bottomRight_radius="20dp"
+        app:oui_topLeft_radius="0dp"
+        app:oui_topRight_radius="0dp"/>
+</com.obric.oui.layout.OUIFrameLayout>

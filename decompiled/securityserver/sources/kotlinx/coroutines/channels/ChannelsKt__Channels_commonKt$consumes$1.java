@@ -1,0 +1,16 @@
+package kotlinx.coroutines.channels;
+
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata
+final class ChannelsKt__Channels_commonKt$consumes$1 extends Lambda implements Function1<Throwable, Unit> {
+    @Override // kotlin.jvm.functions.Function1
+    public final Object invoke(Object r1) {
+        ChannelsKt.a(null, (Throwable) r1);
+        return Unit.f330a;
+    }
+}

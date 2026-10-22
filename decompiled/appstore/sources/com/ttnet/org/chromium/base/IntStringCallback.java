@@ -1,0 +1,9 @@
+package com.ttnet.org.chromium.base;
+
+import com.ttnet.org.chromium.base.annotations.CalledByNative;
+
+/* JADX INFO: loaded from: classes4.dex */
+public interface IntStringCallback {
+    @CalledByNative
+    void onResult(int r10, String r11);
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedanceos.common.ui.widget.oui.OUIAppItemView
+        android:id="@+id/app_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"/>
+    <ViewStub
+        android:id="@+id/suppose_layout_stub"
+        android:layout="@layout/suppose_app_layout"
+        android:inflatedId="@+id/suppose_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/suppose_app_layout_top_margin"
+        android:layout_below="@+id/app_list_item"/>
+</RelativeLayout>

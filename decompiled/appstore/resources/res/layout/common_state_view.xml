@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedanceos.ui.FrameLayoutCenterChildrenInDecorView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@+id/vs_state_loading_view"
+        android:layout="@layout/common_state_loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@+id/vs_state_retry_view"
+        android:layout="@layout/common_state_retry_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@+id/vs_state_empty_view"
+        android:layout="@layout/common_state_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.bytedanceos.ui.FrameLayoutCenterChildrenInDecorView>

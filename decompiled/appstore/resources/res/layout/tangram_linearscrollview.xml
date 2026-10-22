@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tangram_linearscrollview_container"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"/>
+    <FrameLayout
+        android:id="@+id/tangram_linearscrollview_indicator_container"
+        android:background="@drawable/tangram_linearscrollview_indicator_bg"
+        android:layout_width="60dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="12dp">
+        <FrameLayout
+            android:id="@+id/tangram_linearscrollview_indicator"
+            android:background="@drawable/tangram_linearscrollview_indicator"
+            android:layout_width="26dp"
+            android:layout_height="3dp"/>
+    </FrameLayout>
+</merge>

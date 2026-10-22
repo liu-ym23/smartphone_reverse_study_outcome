@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.layout.OUIRelativeLayout
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        app:oui_radius="@dimen/oui_r_l3_rect">
+        <TextView
+            android:textColor="@color/oui_text_1"
+            android:ellipsize="end"
+            android:id="@+id/appKeywords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/arrow"
+            android:layout_centerVertical="true"
+            style="@style/Title_Title_M"/>
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_28"
+            android:layout_marginRight="@dimen/dp_16"
+            android:src="@drawable/oui_icon_right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+        <com.obric.oui.divider.ODivider
+            android:layout_width="match_parent"
+            android:layout_height="0.66dp"
+            android:layout_alignParentBottom="true"/>
+    </com.obric.oui.layout.OUIRelativeLayout>
+</FrameLayout>

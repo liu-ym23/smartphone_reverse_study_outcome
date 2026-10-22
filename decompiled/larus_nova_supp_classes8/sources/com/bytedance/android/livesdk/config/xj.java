@@ -1,0 +1,16 @@
+package com.bytedance.android.livesdk.config;
+
+import com.bytedance.android.live.core.setting.SettingKey;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+public final class xj extends SettingKey<Integer> {
+    public static final xj a = null;
+
+    public xj() {
+        super("live_chat_channel_audio_downgrade_switch", "频道房边看边聊语音功能是否可用（端上降级）", 0, 0);
+    }
+
+    static {
+        a = new xj();
+    }
+}

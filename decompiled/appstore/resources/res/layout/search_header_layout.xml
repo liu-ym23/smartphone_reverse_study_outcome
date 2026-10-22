@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/title_bar_container"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.blur.OBlurMaskView
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        app:oBlurMask_blurRadius="12"
+        app:oBlurMask_statusBarImmersion="true"/>
+    <RelativeLayout
+        android:id="@+id/search_bar_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:paddingHorizontal="12dp">
+        <com.obric.oui.searchbar.v2.OSearchBar
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/search_bar_cancel_btn"
+            android:layout_centerVertical="true"
+            style="@style/OStyleV2.OSearchBar.Default.S"/>
+        <com.obric.oui.button.OIconButtonFloating
+            android:id="@+id/search_bar_cancel_btn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:oui_widgetIcon="@drawable/oui_title_bar_close"
+            app:oui_widgetTintColor="@color/oui_text_1"
+            style="@style/OStyleV2.OButtonFloating.S.Standard.Icon"/>
+    </RelativeLayout>
+</RelativeLayout>

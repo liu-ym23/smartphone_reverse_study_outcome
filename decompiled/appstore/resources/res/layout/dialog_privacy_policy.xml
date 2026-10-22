@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/welcome_dialog_padding"
+    android:paddingTop="@dimen/welcome_dialog_padding"
+    android:paddingRight="@dimen/welcome_dialog_padding"
+    android:paddingBottom="@dimen/welcome_dialog_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/oui_text_2"
+        android:gravity="center"
+        android:id="@+id/tv_privacy_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Body_M"/>
+</RelativeLayout>

@@ -1,0 +1,87 @@
+package com.larus.search.impl.global;
+
+import com.larus.business.search.impl.databinding.LarusFragmentGlobalSearchBinding;
+import com.tencent.open.log.TraceLevel;
+import kotlin.KotlinNothingValueException;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Intrinsics;
+import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.flow.FlowCollector;
+import kotlinx.coroutines.flow.d1;
+import tx9.c0;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes31.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 1, 0}, xi = TraceLevel.ABOVE_WARN)
+@DebugMetadata(c = "com.larus.search.impl.global.GlobalSearchFragment$onViewCreated$1$2", f = "GlobalSearchFragment.kt", i = {}, l = {564}, m = "invokeSuspend", n = {}, s = {})
+public final class GlobalSearchFragment$onViewCreated$1$2 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ LarusFragmentGlobalSearchBinding $this_apply;
+    int label;
+    final /* synthetic */ GlobalSearchFragment this$0;
+
+    public static final class a<T> implements FlowCollector {
+        public final /* synthetic */ GlobalSearchFragment a;
+
+        public a(GlobalSearchFragment r1) {
+            this.a = r1;
+        }
+
+        public final Object emit(Object r2, Continuation r3) {
+            String r4 = (String) r2;
+            if (Intrinsics.areEqual(this.a.h, r4) == true) goto L5;
+            GlobalSearchFragment r5 = this.a;
+            r5.h = r4;
+            r5.i = iz8.c.d(r4);
+            this.a.Y90("click_button");
+            c0.y("click_button", this.a);
+        L7:
+            return Unit.INSTANCE;
+        L5:
+            c0.y("click_button", this.a);
+            goto L7
+        }
+    }
+
+    public GlobalSearchFragment$onViewCreated$1$2(LarusFragmentGlobalSearchBinding r1, GlobalSearchFragment r2, Continuation<? super GlobalSearchFragment$onViewCreated$1$2> r3) {
+        this.$this_apply = r1;
+        this.this$0 = r2;
+        super(2, r3);
+    }
+
+    public final Continuation<Unit> create(Object r3, Continuation<?> r4) {
+        return new GlobalSearchFragment$onViewCreated$1$2(this.$this_apply, this.this$0, r4);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1, Object r2) {
+        return invoke((CoroutineScope) r1, (Continuation) r2);
+    }
+
+    public final Object invoke(CoroutineScope r1, Continuation<? super Unit> r2) {
+        return create(r1, r2).invokeSuspend(Unit.INSTANCE);
+    }
+
+    public final Object invokeSuspend(Object r5) {
+        Object r0 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int r1 = this.label;
+        if (r1 == 0) goto L8;
+        if (r1 != 1) goto L6;
+        ResultKt.throwOnFailure(r5);
+    L12:
+        throw new KotlinNothingValueException();
+    L6:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    L8:
+        ResultKt.throwOnFailure(r5);
+        d1 r6 = this.$this_apply.c.getSearchTextFlow();
+        a r2 = new a(this.this$0);
+        this.label = 1;
+        if (r6.collect(r2, this) != r0) goto L12;
+        return r0;
+    }
+}

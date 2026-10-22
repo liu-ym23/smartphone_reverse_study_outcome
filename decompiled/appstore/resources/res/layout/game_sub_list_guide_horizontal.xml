@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:id="@+id/tv_msg"
+        android:background="#9647b1"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:text="@string/sub_btn_guide_msg"
+        android:lineSpacingExtra="3dp"/>
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="@dimen/sub_guide_triangle_height"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/game_sub_guide_triangle"
+        android:layout_below="@+id/tv_msg"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

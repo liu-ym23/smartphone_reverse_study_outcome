@@ -1,0 +1,14 @@
+package com.larksuite.component.universe_design.checkbox.compose;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+public final class a {
+    public final long a;
+    public final long b;
+    public final long c;
+
+    public a(long r1, long r3, long r5) {
+        this.a = r1;
+        this.b = r3;
+        this.c = r5;
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedanceos.common.ui.widget.RefreshLoadListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appComments_lv"
+    android:background="@null"
+    android:paddingTop="12dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:listSelector="@android:color/transparent"
+    style="@style/comment_list_style"/>

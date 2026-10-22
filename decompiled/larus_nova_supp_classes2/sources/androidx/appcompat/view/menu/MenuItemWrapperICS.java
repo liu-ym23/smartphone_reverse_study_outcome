@@ -1,0 +1,503 @@
+package androidx.appcompat.view.menu;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.view.ContextMenu;
+import android.view.MenuItem;
+import android.view.SubMenu;
+import android.view.View;
+import android.widget.FrameLayout;
+import androidx.appcompat.view.CollapsibleActionView;
+import androidx.core.internal.view.SupportMenuItem;
+import androidx.core.view.ActionProvider;
+import java.lang.reflect.Method;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes2.dex */
+public class MenuItemWrapperICS extends BaseMenuWrapper implements MenuItem {
+    static final String LOG_TAG = "MenuItemWrapper";
+    private Method mSetExclusiveCheckableMethod;
+    private final SupportMenuItem mWrappedObject;
+
+    public class ActionProviderWrapper extends ActionProvider {
+        final android.view.ActionProvider mInner;
+        final /* synthetic */ MenuItemWrapperICS this$0;
+
+        public boolean hasSubMenu() {
+            return this.mInner.hasSubMenu();
+        }
+
+        public View onCreateActionView() {
+            return this.mInner.onCreateActionView();
+        }
+
+        public boolean onPerformDefaultAction() {
+            return this.mInner.onPerformDefaultAction();
+        }
+
+        public void onPrepareSubMenu(SubMenu r3) {
+            this.mInner.onPrepareSubMenu(this.this$0.getSubMenuWrapper(r3));
+        }
+
+        public ActionProviderWrapper(MenuItemWrapperICS r1, Context r2, android.view.ActionProvider r3) {
+            this.this$0 = r1;
+            super(r2);
+            this.mInner = r3;
+        }
+    }
+
+    public class ActionProviderWrapperJB extends ActionProviderWrapper implements android.view.ActionProvider.VisibilityListener {
+        private ActionProvider.VisibilityListener mListener;
+        final /* synthetic */ MenuItemWrapperICS this$0;
+
+        public boolean isVisible() {
+            return this.mInner.isVisible();
+        }
+
+        public boolean overridesItemVisibility() {
+            return this.mInner.overridesItemVisibility();
+        }
+
+        public void refreshVisibility() {
+            this.mInner.refreshVisibility();
+        }
+
+        @Override // android.view.ActionProvider.VisibilityListener
+        public void onActionProviderVisibilityChanged(boolean r2) {
+            ActionProvider.VisibilityListener r0 = this.mListener;
+            if (r0 == null) goto L6;
+            r0.onActionProviderVisibilityChanged(r2);
+            return;
+        }
+
+        public View onCreateActionView(MenuItem r2) {
+            return this.mInner.onCreateActionView(r2);
+        }
+
+        public void setVisibilityListener(ActionProvider.VisibilityListener r2) {
+            this.mListener = r2;
+            android.view.ActionProvider r0 = this.mInner;
+            if (r2 == null) goto L5;
+            ActionProviderWrapperJB r3 = this;
+        L6:
+            r0.setVisibilityListener(r3);
+            return;
+        L5:
+            r3 = null;
+            goto L6
+        }
+
+        public ActionProviderWrapperJB(MenuItemWrapperICS r1, Context r2, android.view.ActionProvider r3) {
+            this.this$0 = r1;
+            super(r1, r2, r3);
+        }
+    }
+
+    public static class CollapsibleActionViewWrapper extends FrameLayout implements CollapsibleActionView {
+        final android.view.CollapsibleActionView mWrappedView;
+
+        public View getWrappedView() {
+            return (View) this.mWrappedView;
+        }
+
+        @Override // androidx.appcompat.view.CollapsibleActionView
+        public void onActionViewCollapsed() {
+            this.mWrappedView.onActionViewCollapsed();
+        }
+
+        @Override // androidx.appcompat.view.CollapsibleActionView
+        public void onActionViewExpanded() {
+            this.mWrappedView.onActionViewExpanded();
+        }
+
+        /* JADX WARN: Multi-variable type inference failed */
+        public CollapsibleActionViewWrapper(View r2) {
+            super(r2.getContext());
+            this.mWrappedView = (android.view.CollapsibleActionView) r2;
+            addView(r2);
+        }
+    }
+
+    public class OnActionExpandListenerWrapper implements MenuItem.OnActionExpandListener {
+        private final MenuItem.OnActionExpandListener mObject;
+        final /* synthetic */ MenuItemWrapperICS this$0;
+
+        @Override // android.view.MenuItem.OnActionExpandListener
+        public boolean onMenuItemActionCollapse(MenuItem r3) {
+            return this.mObject.onMenuItemActionCollapse(this.this$0.getMenuItemWrapper(r3));
+        }
+
+        @Override // android.view.MenuItem.OnActionExpandListener
+        public boolean onMenuItemActionExpand(MenuItem r3) {
+            return this.mObject.onMenuItemActionExpand(this.this$0.getMenuItemWrapper(r3));
+        }
+
+        public OnActionExpandListenerWrapper(MenuItemWrapperICS r1, MenuItem.OnActionExpandListener r2) {
+            this.this$0 = r1;
+            this.mObject = r2;
+        }
+    }
+
+    public class OnMenuItemClickListenerWrapper implements MenuItem.OnMenuItemClickListener {
+        private final MenuItem.OnMenuItemClickListener mObject;
+        final /* synthetic */ MenuItemWrapperICS this$0;
+
+        @Override // android.view.MenuItem.OnMenuItemClickListener
+        public boolean onMenuItemClick(MenuItem r3) {
+            return this.mObject.onMenuItemClick(this.this$0.getMenuItemWrapper(r3));
+        }
+
+        public OnMenuItemClickListenerWrapper(MenuItemWrapperICS r1, MenuItem.OnMenuItemClickListener r2) {
+            this.this$0 = r1;
+            this.mObject = r2;
+        }
+    }
+
+    @Override // android.view.MenuItem
+    public boolean collapseActionView() {
+        return this.mWrappedObject.collapseActionView();
+    }
+
+    @Override // android.view.MenuItem
+    public boolean expandActionView() {
+        return this.mWrappedObject.expandActionView();
+    }
+
+    @Override // android.view.MenuItem
+    public android.view.ActionProvider getActionProvider() {
+        ActionProvider r0 = this.mWrappedObject.getSupportActionProvider();
+        if ((r0 instanceof ActionProviderWrapper) == true) goto L5;
+        return null;
+    L5:
+        return ((ActionProviderWrapper) r0).mInner;
+    }
+
+    @Override // android.view.MenuItem
+    public View getActionView() {
+        View r0 = this.mWrappedObject.getActionView();
+        if ((r0 instanceof CollapsibleActionViewWrapper) == true) goto L5;
+        return r0;
+    L5:
+        return ((CollapsibleActionViewWrapper) r0).getWrappedView();
+    }
+
+    @Override // android.view.MenuItem
+    public int getAlphabeticModifiers() {
+        return this.mWrappedObject.getAlphabeticModifiers();
+    }
+
+    @Override // android.view.MenuItem
+    public char getAlphabeticShortcut() {
+        return this.mWrappedObject.getAlphabeticShortcut();
+    }
+
+    @Override // android.view.MenuItem
+    public CharSequence getContentDescription() {
+        return this.mWrappedObject.getContentDescription();
+    }
+
+    @Override // android.view.MenuItem
+    public int getGroupId() {
+        return this.mWrappedObject.getGroupId();
+    }
+
+    @Override // android.view.MenuItem
+    public Drawable getIcon() {
+        return this.mWrappedObject.getIcon();
+    }
+
+    @Override // android.view.MenuItem
+    public ColorStateList getIconTintList() {
+        return this.mWrappedObject.getIconTintList();
+    }
+
+    @Override // android.view.MenuItem
+    public PorterDuff.Mode getIconTintMode() {
+        return this.mWrappedObject.getIconTintMode();
+    }
+
+    @Override // android.view.MenuItem
+    public Intent getIntent() {
+        return this.mWrappedObject.getIntent();
+    }
+
+    @Override // android.view.MenuItem
+    public int getItemId() {
+        return this.mWrappedObject.getItemId();
+    }
+
+    @Override // android.view.MenuItem
+    public ContextMenu.ContextMenuInfo getMenuInfo() {
+        return this.mWrappedObject.getMenuInfo();
+    }
+
+    @Override // android.view.MenuItem
+    public int getNumericModifiers() {
+        return this.mWrappedObject.getNumericModifiers();
+    }
+
+    @Override // android.view.MenuItem
+    public char getNumericShortcut() {
+        return this.mWrappedObject.getNumericShortcut();
+    }
+
+    @Override // android.view.MenuItem
+    public int getOrder() {
+        return this.mWrappedObject.getOrder();
+    }
+
+    @Override // android.view.MenuItem
+    public SubMenu getSubMenu() {
+        return getSubMenuWrapper(this.mWrappedObject.getSubMenu());
+    }
+
+    @Override // android.view.MenuItem
+    public CharSequence getTitle() {
+        return this.mWrappedObject.getTitle();
+    }
+
+    @Override // android.view.MenuItem
+    public CharSequence getTitleCondensed() {
+        return this.mWrappedObject.getTitleCondensed();
+    }
+
+    @Override // android.view.MenuItem
+    public CharSequence getTooltipText() {
+        return this.mWrappedObject.getTooltipText();
+    }
+
+    @Override // android.view.MenuItem
+    public boolean hasSubMenu() {
+        return this.mWrappedObject.hasSubMenu();
+    }
+
+    @Override // android.view.MenuItem
+    public boolean isActionViewExpanded() {
+        return this.mWrappedObject.isActionViewExpanded();
+    }
+
+    @Override // android.view.MenuItem
+    public boolean isCheckable() {
+        return this.mWrappedObject.isCheckable();
+    }
+
+    @Override // android.view.MenuItem
+    public boolean isChecked() {
+        return this.mWrappedObject.isChecked();
+    }
+
+    @Override // android.view.MenuItem
+    public boolean isEnabled() {
+        return this.mWrappedObject.isEnabled();
+    }
+
+    @Override // android.view.MenuItem
+    public boolean isVisible() {
+        return this.mWrappedObject.isVisible();
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setActionProvider(android.view.ActionProvider r3) {
+        ActionProviderWrapperJB r0 = new ActionProviderWrapperJB(this, this.mContext, r3);
+        SupportMenuItem r1 = this.mWrappedObject;
+        if (r3 != null) goto L6;
+        r0 = null;
+    L6:
+        r1.setSupportActionProvider(r0);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setActionView(int r3) {
+        this.mWrappedObject.setActionView(r3);
+        View r4 = this.mWrappedObject.getActionView();
+        if ((r4 instanceof android.view.CollapsibleActionView) == false) goto L5;
+        this.mWrappedObject.setActionView(new CollapsibleActionViewWrapper(r4));
+    L5:
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setAlphabeticShortcut(char r2) {
+        this.mWrappedObject.setAlphabeticShortcut(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setCheckable(boolean r2) {
+        this.mWrappedObject.setCheckable(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setChecked(boolean r2) {
+        this.mWrappedObject.setChecked(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setContentDescription(CharSequence r2) {
+        this.mWrappedObject.setContentDescription(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setEnabled(boolean r2) {
+        this.mWrappedObject.setEnabled(r2);
+        return this;
+    }
+
+    public void setExclusiveCheckable(boolean r7) {
+        if (this.mSetExclusiveCheckableMethod != null) goto L5;
+        this.mSetExclusiveCheckableMethod = this.mWrappedObject.getClass().getDeclaredMethod("setExclusiveCheckable", new Class[]{Boolean.TYPE});     // Catch: Exception -> L7
+    L5:
+        this.mSetExclusiveCheckableMethod.invoke(this.mWrappedObject, new Object[]{Boolean.valueOf(r7)});     // Catch: Exception -> L7
+        return;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setIcon(int r2) {
+        this.mWrappedObject.setIcon(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setIconTintList(ColorStateList r2) {
+        this.mWrappedObject.setIconTintList(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setIconTintMode(PorterDuff.Mode r2) {
+        this.mWrappedObject.setIconTintMode(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setIntent(Intent r2) {
+        this.mWrappedObject.setIntent(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setNumericShortcut(char r2) {
+        this.mWrappedObject.setNumericShortcut(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setOnActionExpandListener(MenuItem.OnActionExpandListener r3) {
+        SupportMenuItem r0 = this.mWrappedObject;
+        if (r3 == null) goto L5;
+        OnActionExpandListenerWrapper r1 = new OnActionExpandListenerWrapper(this, r3);
+    L6:
+        r0.setOnActionExpandListener(r1);
+        return this;
+    L5:
+        r1 = null;
+        goto L6
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener r3) {
+        SupportMenuItem r0 = this.mWrappedObject;
+        if (r3 == null) goto L5;
+        OnMenuItemClickListenerWrapper r1 = new OnMenuItemClickListenerWrapper(this, r3);
+    L6:
+        r0.setOnMenuItemClickListener(r1);
+        return this;
+    L5:
+        r1 = null;
+        goto L6
+    }
+
+    @Override // android.view.MenuItem
+    public void setShowAsAction(int r2) {
+        this.mWrappedObject.setShowAsAction(r2);
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setShowAsActionFlags(int r2) {
+        this.mWrappedObject.setShowAsActionFlags(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setTitle(int r2) {
+        this.mWrappedObject.setTitle(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setTitleCondensed(CharSequence r2) {
+        this.mWrappedObject.setTitleCondensed(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setTooltipText(CharSequence r2) {
+        this.mWrappedObject.setTooltipText(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setVisible(boolean r2) {
+        return this.mWrappedObject.setVisible(r2);
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setActionView(View r2) {
+        if ((r2 instanceof android.view.CollapsibleActionView) == false) goto L5;
+        r2 = new CollapsibleActionViewWrapper(r2);
+    L5:
+        this.mWrappedObject.setActionView(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setIcon(Drawable r2) {
+        this.mWrappedObject.setIcon(r2);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setTitle(CharSequence r2) {
+        this.mWrappedObject.setTitle(r2);
+        return this;
+    }
+
+    public MenuItemWrapperICS(Context r1, SupportMenuItem r2) {
+        super(r1);
+        if (r2 == null) goto L7;
+        this.mWrappedObject = r2;
+        return;
+    L7:
+        throw new IllegalArgumentException("Wrapped Object can not be null.");
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setAlphabeticShortcut(char r2, int r3) {
+        this.mWrappedObject.setAlphabeticShortcut(r2, r3);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setNumericShortcut(char r2, int r3) {
+        this.mWrappedObject.setNumericShortcut(r2, r3);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setShortcut(char r2, char r3) {
+        this.mWrappedObject.setShortcut(r2, r3);
+        return this;
+    }
+
+    @Override // android.view.MenuItem
+    public MenuItem setShortcut(char r2, char r3, int r4, int r5) {
+        this.mWrappedObject.setShortcut(r2, r3, r4, r5);
+        return this;
+    }
+}

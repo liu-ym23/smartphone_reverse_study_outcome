@@ -1,0 +1,35 @@
+package com.bytedance.android.live.revlink.link.core;
+
+import kotlin.Metadata;
+import r27.a;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0004\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001j\u0002\b\u0002j\u0002\b\u0003j\u0002\b\u0004¨\u0006\u0005"}, d2 = {"Lcom/bytedance/android/live/revlink/link/core/UILayoutServerIndex;", "", "Normal", "Focus", "Full", "liverevlink-impl_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final enum UILayoutServerIndex extends Enum<UILayoutServerIndex> {
+    public static final UILayoutServerIndex Focus = null;
+    public static final UILayoutServerIndex Full = null;
+    public static final UILayoutServerIndex Normal = null;
+    public static final /* synthetic */ UILayoutServerIndex[] a = null;
+
+    static {
+        UILayoutServerIndex r1 = new UILayoutServerIndex("Normal", 0);
+        Normal = r1;
+        UILayoutServerIndex r2 = new UILayoutServerIndex("Focus", 1);
+        Focus = r2;
+        UILayoutServerIndex r3 = new UILayoutServerIndex("Full", 2);
+        Full = r3;
+        a = new UILayoutServerIndex[]{r1, r2, r3};
+    }
+
+    public static UILayoutServerIndex valueOf(String r1) {
+        return (UILayoutServerIndex) a.a(UILayoutServerIndex.class, r1);
+    }
+
+    public static UILayoutServerIndex[] values() {
+        return (UILayoutServerIndex[]) a.clone();
+    }
+
+    public UILayoutServerIndex(String r1, int r2) {
+        super(r1, r2);
+    }
+}

@@ -1,0 +1,127 @@
+package com.larus.bmhome.databinding;
+
+import android.view.View;
+import android.view.ViewStub;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.viewbinding.ViewBinding;
+import com.facebook.drawee.view.SimpleDraweeView;
+import com.larus.bmhome.view.NovaTitleBarEx;
+import com.larus.bmhome.view.RoundAvatarImageView;
+import com.larus.bmhome.view.item.ItemGroup;
+import com.larus.bmhome.view.item.ItemLongTextArrow;
+import com.larus.bmhome.view.item.ItemTextArrow;
+import com.larus.bmhome.view.item.ItemTextToggle;
+import com.larus.bmhome.view.item.ItemTextView;
+import com.larus.common_ui.widget.TagTextView;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes26.dex */
+public final class LarusPageChatSettingBinding implements ViewBinding {
+    public final ItemGroup A;
+    public final ItemGroup B;
+    public final ItemGroup C;
+    public final TextView D;
+    public final AppCompatImageView E;
+    public final ItemTextArrow F;
+    public final ItemTextArrow G;
+    public final TextView H;
+    public final ItemTextArrow I;
+    public final ItemTextArrow J;
+    public final ItemTextToggle K;
+    public final ItemTextArrow L;
+    public final ItemTextArrow M;
+    public final ItemTextToggle N;
+    public final ItemTextArrow O;
+    public final ItemTextArrow P;
+    public final ItemTextArrow Q;
+    public final ViewStub R;
+    public final ItemGroup S;
+    public final NovaTitleBarEx T;
+    public final ItemTextArrow U;
+    public final ItemTextArrow V;
+    public final ItemTextArrow W;
+    public final LinearLayout a;
+    public final ItemLongTextArrow b;
+    public final ItemTextView c;
+    public final RoundAvatarImageView d;
+    public final SimpleDraweeView e;
+    public final TextView f;
+    public final TextView g;
+    public final LinearLayout h;
+    public final LinearLayout i;
+    public final LinearLayout j;
+    public final TextView k;
+    public final LinearLayout l;
+    public final TagTextView m;
+    public final FrameLayout n;
+    public final LinearLayout o;
+    public final ItemTextView p;
+    public final ItemTextArrow q;
+    public final ItemTextArrow r;
+    public final ItemTextToggle s;
+    public final ItemTextArrow t;
+    public final ItemGroup u;
+    public final ItemGroup v;
+    public final ItemGroup w;
+    public final ItemGroup x;
+    public final ItemGroup y;
+    public final ItemGroup z;
+
+    public final View getRoot() {
+        return this.a;
+    }
+
+    public LarusPageChatSettingBinding(LinearLayout r3, ItemLongTextArrow r4, ItemTextView r5, RoundAvatarImageView r6, SimpleDraweeView r7, TextView r8, TextView r9, LinearLayout r10, LinearLayout r11, LinearLayout r12, TextView r13, LinearLayout r14, TagTextView r15, FrameLayout r16, LinearLayout r17, ItemTextView r18, ItemTextArrow r19, ItemTextArrow r20, ItemTextToggle r21, ItemTextArrow r22, ItemGroup r23, ItemGroup r24, ItemGroup r25, ItemGroup r26, ItemGroup r27, ItemGroup r28, ItemGroup r29, ItemGroup r30, ItemGroup r31, TextView r32, AppCompatImageView r33, ItemTextArrow r34, ItemTextArrow r35, TextView r36, ItemTextArrow r37, ItemTextArrow r38, ItemTextToggle r39, ItemTextArrow r40, ItemTextArrow r41, ItemTextToggle r42, ItemTextArrow r43, ItemTextArrow r44, ItemTextArrow r45, ViewStub r46, ItemGroup r47, NovaTitleBarEx r48, ItemTextArrow r49, ItemTextArrow r50, ItemTextArrow r51) {
+        this.a = r3;
+        this.b = r4;
+        this.c = r5;
+        this.d = r6;
+        this.e = r7;
+        this.f = r8;
+        this.g = r9;
+        this.h = r10;
+        this.i = r11;
+        this.j = r12;
+        this.k = r13;
+        this.l = r14;
+        this.m = r15;
+        this.n = r16;
+        this.o = r17;
+        this.p = r18;
+        this.q = r19;
+        this.r = r20;
+        this.s = r21;
+        this.t = r22;
+        this.u = r23;
+        this.v = r24;
+        this.w = r25;
+        this.x = r26;
+        this.y = r27;
+        this.z = r28;
+        this.A = r29;
+        this.B = r30;
+        this.C = r31;
+        this.D = r32;
+        this.E = r33;
+        this.F = r34;
+        this.G = r35;
+        this.H = r36;
+        this.I = r37;
+        this.J = r38;
+        this.K = r39;
+        this.L = r40;
+        this.M = r41;
+        this.N = r42;
+        this.O = r43;
+        this.P = r44;
+        this.Q = r45;
+        this.R = r46;
+        this.S = r47;
+        this.T = r48;
+        this.U = r49;
+        this.V = r50;
+        this.W = r51;
+    }
+}

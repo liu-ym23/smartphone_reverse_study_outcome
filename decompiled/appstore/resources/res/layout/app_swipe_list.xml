@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedanceos.common.ui.widget.MyAppSwipeListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipelist_lv"
+    android:listSelector="@drawable/myapp_list_selector"
+    style="@style/list_style"/>

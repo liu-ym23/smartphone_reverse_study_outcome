@@ -1,0 +1,43 @@
+package com.larus.bmhome.chat.component.list.pipeline;
+
+import com.larus.bmhome.chat.cell.MessageCellStateTransformerType;
+import com.larus.platform.IFlowSdkDepend;
+import com.ss.android.ugc.aweme.framework.services.ServiceManager;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import td8.a;
+import td8.c;
+import td8.d;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\b\u0010\u0004\u001a\u00020\u0005H\u0016J\b\u0010\u0006\u001a\u00020\u0007H\u0016J\b\u0010\b\u001a\u00020\tH\u0016J\u0010\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\rH\u0016¨\u0006\u000e"}, d2 = {"Lcom/larus/bmhome/chat/component/list/pipeline/AwemeOnboardingTaskProvider;", "Lcom/larus/bmhome/chat/component/list/pipeline/PipelineTaskProvider;", "<init>", "()V", "stage", "Lcom/larus/bmhome/chat/component/list/pipeline/PipelineTaskStageEnum;", "type", "Lcom/larus/bmhome/chat/component/list/pipeline/PipelineTaskType;", "order", "", "providerPipelineTask", "Lcom/larus/bmhome/chat/component/list/pipeline/ITask;", "context", "Lcom/larus/bmhome/chat/component/list/pipeline/ITaskContext;", "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = MessageCellStateTransformerType.Z_LOTTERY_GUIDE_CELL)
+public final class AwemeOnboardingTaskProvider implements PipelineTaskProvider {
+    public AwemeOnboardingTaskProvider() {
+    }
+
+    @Override // com.larus.bmhome.chat.component.list.pipeline.PipelineTaskProvider
+    public final int order() {
+        return 300;
+    }
+
+    @Override // com.larus.bmhome.chat.component.list.pipeline.PipelineTaskProvider
+    public final PipelineTaskStageEnum stage() {
+        return PipelineTaskStageEnum.DIRECT_ADD;
+    }
+
+    @Override // com.larus.bmhome.chat.component.list.pipeline.PipelineTaskProvider
+    public final PipelineTaskType type() {
+        return PipelineTaskType.FOR_EACH;
+    }
+
+    @Override // com.larus.bmhome.chat.component.list.pipeline.PipelineTaskProvider
+    public final c a(d r3) {
+        Intrinsics.checkNotNullParameter(r3, "context");
+        IFlowSdkDepend r0 = (IFlowSdkDepend) ServiceManager.get().getService(IFlowSdkDepend.class);
+        if (r0 == null) goto L6;
+        r0.C0();
+        hc9.d r1 = hc9.d.a;
+    L6:
+        return new a(r3);
+    }
+}

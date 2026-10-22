@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:state_enabled="true"
+        android:state_checked="true"
+        android:id="@+id/state_checked_light"
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal_light"/>
+    <item
+        android:state_enabled="true"
+        android:id="@+id/state_indeterminate_light"
+        android:drawable="@drawable/o_ic_radio_round_indeterminate_light"
+        app:oui_state_indeterminate="true"/>
+    <item
+        android:state_enabled="true"
+        android:state_checked="false"
+        android:id="@+id/state_unchecked_light"
+        android:drawable="@drawable/o_ic_radio_round_unchecked_normal_light"/>
+    <item
+        android:state_enabled="false"
+        android:state_checked="true"
+        android:drawable="@drawable/o_ic_radio_round_checked_disabled_light"/>
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/o_ic_radio_round_indeterminate_disabled_light"
+        app:oui_state_indeterminate="true"/>
+    <item
+        android:state_enabled="false"
+        android:state_checked="false"
+        android:drawable="@drawable/o_ic_radio_round_unchecked_disabled_light"/>
+    <transition
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal_light"
+        android:toId="@+id/state_checked_light"
+        android:fromId="@+id/state_unchecked_light"/>
+    <transition
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal_light"
+        android:toId="@+id/state_checked_light"
+        android:fromId="@+id/state_indeterminate_light"/>
+</animated-selector>

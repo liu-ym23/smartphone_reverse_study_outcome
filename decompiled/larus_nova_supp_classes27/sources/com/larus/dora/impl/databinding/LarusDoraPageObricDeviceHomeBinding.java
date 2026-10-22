@@ -1,0 +1,124 @@
+package com.larus.dora.impl.databinding;
+
+import android.view.View;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.viewbinding.ViewBinding;
+import com.larus.dora.obric.device_management.device_home.DoraObricDeviceModeEntryView;
+import com.obric.oui.actionbar.v2.OBottomActionBarNormalHorizontal;
+import com.obric.oui.bouncelayout.ONestedScrollView;
+import com.obric.oui.button.OButton;
+import com.obric.oui.image.OImage;
+import com.obric.oui.layout.OUIFrameLayout;
+import com.obric.oui.layout.OUILinearLayout;
+import com.obric.oui.lisitem.OUICardConstraintLayout;
+import com.obric.oui.orecyclerview.widget.RecyclerView;
+import com.obric.oui.sectiontitlebar.OSectionTitleBar;
+import com.obric.oui.segmentedtab.OBottomNavigationBar;
+import com.obric.oui.tag.OTextTag;
+import com.obric.oui.text.OTextView;
+import com.obric.oui.titlebar.OFloatingTitleBar;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes27.dex */
+public final class LarusDoraPageObricDeviceHomeBinding implements ViewBinding {
+    public final OImage A;
+    public final OButton B;
+    public final OImage C;
+    public final OImage D;
+    public final OUIFrameLayout E;
+    public final OTextView F;
+    public final OTextView G;
+    public final OImage H;
+    public final DoraObricDeviceModeEntryView I;
+    public final OTextView J;
+    public final OUICardConstraintLayout K;
+    public final OTextView L;
+    public final RecyclerView M;
+    public final OTextView N;
+    public final View O;
+    public final OTextView P;
+    public final OImage Q;
+    public final ONestedScrollView R;
+    public final OUILinearLayout S;
+    public final OFloatingTitleBar T;
+    public final OImage U;
+    public final ConstraintLayout a;
+    public final OUIFrameLayout b;
+    public final OUILinearLayout c;
+    public final OTextView d;
+    public final OBottomNavigationBar e;
+    public final OTextView f;
+    public final OImage g;
+    public final OSectionTitleBar h;
+    public final OTextView i;
+    public final OUIFrameLayout j;
+    public final OTextView k;
+    public final OUILinearLayout l;
+    public final OUICardConstraintLayout m;
+    public final RecyclerView n;
+    public final OUIFrameLayout o;
+    public final OImage p;
+    public final OTextTag q;
+    public final OTextView r;
+    public final OUILinearLayout s;
+    public final OImage t;
+    public final OUIFrameLayout u;
+    public final OUIFrameLayout v;
+    public final OUILinearLayout w;
+    public final OBottomActionBarNormalHorizontal x;
+    public final ONestedScrollView y;
+    public final OUILinearLayout z;
+
+    public final View getRoot() {
+        return this.a;
+    }
+
+    public LarusDoraPageObricDeviceHomeBinding(ConstraintLayout r3, OUIFrameLayout r4, OUILinearLayout r5, OTextView r6, OBottomNavigationBar r7, OTextView r8, OImage r9, OSectionTitleBar r10, OTextView r11, OUIFrameLayout r12, OTextView r13, OUILinearLayout r14, OUICardConstraintLayout r15, RecyclerView r16, OUIFrameLayout r17, OImage r18, OTextTag r110, OTextView r20, OUILinearLayout r21, OImage r22, OUIFrameLayout r23, OUIFrameLayout r24, OUILinearLayout r25, OBottomActionBarNormalHorizontal r26, ONestedScrollView r27, OUILinearLayout r28, OImage r210, OButton r30, OImage r31, OImage r32, OUIFrameLayout r33, OTextView r34, OTextView r35, OImage r36, DoraObricDeviceModeEntryView r37, OTextView r38, OUICardConstraintLayout r310, OTextView r40, RecyclerView r41, OTextView r42, View r43, OTextView r44, OImage r45, ONestedScrollView r46, OUILinearLayout r47, OFloatingTitleBar r48, OImage r410) {
+        this.a = r3;
+        this.b = r4;
+        this.c = r5;
+        this.d = r6;
+        this.e = r7;
+        this.f = r8;
+        this.g = r9;
+        this.h = r10;
+        this.i = r11;
+        this.j = r12;
+        this.k = r13;
+        this.l = r14;
+        this.m = r15;
+        this.n = r16;
+        this.o = r17;
+        this.p = r18;
+        this.q = r110;
+        this.r = r20;
+        this.s = r21;
+        this.t = r22;
+        this.u = r23;
+        this.v = r24;
+        this.w = r25;
+        this.x = r26;
+        this.y = r27;
+        this.z = r28;
+        this.A = r210;
+        this.B = r30;
+        this.C = r31;
+        this.D = r32;
+        this.E = r33;
+        this.F = r34;
+        this.G = r35;
+        this.H = r36;
+        this.I = r37;
+        this.J = r38;
+        this.K = r310;
+        this.L = r40;
+        this.M = r41;
+        this.N = r42;
+        this.O = r43;
+        this.P = r44;
+        this.Q = r45;
+        this.R = r46;
+        this.S = r47;
+        this.T = r48;
+        this.U = r410;
+    }
+}

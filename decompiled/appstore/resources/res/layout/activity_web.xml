@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:paddingTop="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/abc_toolbar"/>
+    <com.bytedanceos.common.ui.widget.ASWebView
+        android:id="@+id/webView"
+        android:background="@color/oui_bg_base_1"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"/>
+</RelativeLayout>

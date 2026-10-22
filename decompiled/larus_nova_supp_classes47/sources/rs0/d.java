@@ -1,0 +1,16 @@
+package rs0;
+
+import com.bytedance.android.live.core.setting.SettingKey;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+public final class d extends SettingKey<String> {
+    public static final d a = null;
+
+    static {
+        a = new d();
+    }
+
+    public d() {
+        super("livesdk_profile_flashcard_lynx_schema", "资料卡Lynx层Schema", "sslocal://webcast_lynxview?url=https%3A%2F%2Flf-webcast-sourcecdn-tos.bytegecko.com%2Fobj%2Fbyte-gurd-source%2Fwebcast%2Fmono%2Flynx%2Frevenue_privileges_lynx_douyin%2Fpages%2Fprofile_flash_card%2Ftemplate.js&enable_canvas=1&enable_canvas_optimize=1", "sslocal://webcast_lynxview?url=https%3A%2F%2Flf-webcast-sourcecdn-tos.bytegecko.com%2Fobj%2Fbyte-gurd-source%2Fwebcast%2Fmono%2Flynx%2Frevenue_privileges_lynx_douyin%2Fpages%2Fprofile_flash_card%2Ftemplate.js&enable_canvas=1&enable_canvas_optimize=1", false);
+    }
+}

@@ -1,0 +1,82 @@
+package com.bytedance.android.ec.core.hybrid.bridges;
+
+import com.bytedance.android.ec.host.api.hybrid.ECBaseBridgeMethod;
+import com.bytedance.android.ec.opt.session.ECPerfSessionManager;
+import kotlin.Metadata;
+import kotlin.Result;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.text.StringsKt;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/bytedance/android/ec/core/hybrid/bridges/ECPerfSessionReadMethod;", "Lcom/bytedance/android/ec/host/api/hybrid/ECBaseBridgeMethod;", "<init>", "()V", "ec-core_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class ECPerfSessionReadMethod extends ECBaseBridgeMethod {
+    public final String getName() {
+        return "ec.readPerfSession";
+    }
+
+    public ECPerfSessionReadMethod() {
+    }
+
+    public final void c(JSONObject r10, ECBaseBridgeMethod.a r11) {
+        Intrinsics.checkNotNullParameter(r10, "params");
+        Intrinsics.checkNotNullParameter(r11, "iReturn");
+        String r0 = r10.optString(com.bytedance.android.ec.core.event.a.KEY_SESSION_ID);
+        String r12 = r10.optString("stage");
+        if (StringsKt.isBlank(r0) == false) goto L33;
+        d("invalid session id", r11);
+        return;
+    L33:
+        Result.Companion r1 = Result.Companion;     // Catch: Throwable -> L25
+        if (r12 != null) goto L9;
+    L12:
+        boolean r13 = true;
+    L13:
+        if (r13 == false) goto L15;
+        bm.a r14 = ECPerfSessionManager.d.b(r0);     // Catch: Throwable -> L25
+    L16:
+        if (r14 != null) goto L31;
+        d("no session info", r11);     // Catch: Throwable -> L25
+    L23:
+        Object r15 = Result.constructor-impl(Unit.INSTANCE);     // Catch: Throwable -> L25
+    L27:
+        Throwable r16 = Result.exceptionOrNull-impl(r15);
+        if (r16 == null) goto L35;
+        d("read session fail: " + r16.getMessage(), r11);
+        return;
+    L35:
+        return;
+    L31:
+        r11.a(r14.b());     // Catch: Throwable -> L21
+        Result.constructor-impl(Unit.INSTANCE);     // Catch: Throwable -> L21
+    L21:
+        th = move-exception;
+        Result.Companion r17 = Result.Companion;     // Catch: Throwable -> L25
+        Result.constructor-impl(ResultKt.createFailure(th));     // Catch: Throwable -> L25
+        goto L23
+    L15:
+        r14 = ECPerfSessionManager.d.c(r0, r12);     // Catch: Throwable -> L25
+        goto L16
+    L9:
+        if (StringsKt.isBlank(r12) == true) goto L12;
+        r13 = false;
+    L25:
+        th = move-exception;
+        Result.Companion r18 = Result.Companion;
+        r15 = Result.constructor-impl(ResultKt.createFailure(th));
+        goto L27
+    }
+
+    public final void d(String r10, ECBaseBridgeMethod.a r11) {
+        Result.Companion r0 = Result.Companion;     // Catch: Throwable -> L4
+        r11.onFailed(0, r10);     // Catch: Throwable -> L4
+        Result.constructor-impl(Unit.INSTANCE);     // Catch: Throwable -> L4
+        return;
+    L4:
+        th = move-exception;
+        Result.Companion r12 = Result.Companion;
+        Result.constructor-impl(ResultKt.createFailure(th));
+    }
+}

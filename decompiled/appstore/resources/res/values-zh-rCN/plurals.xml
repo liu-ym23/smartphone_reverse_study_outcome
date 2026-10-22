@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="delete_selected_all_title">
+        <item quantity="other">确认删除这 %1$d 条历史记录？</item>
+    </plurals>
+    <plurals name="delete_selected_record">
+        <item quantity="other">%1$d 条记录已删除</item>
+    </plurals>
+    <plurals name="header_selected_item">
+        <item quantity="other">已选择 %1$d 项</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d 条新通知</item>
+        <item quantity="other">%d 条新通知</item>
+    </plurals>
+    <plurals name="myapp_update_count">
+        <item quantity="other">共 %1$s 项可更新</item>
+    </plurals>
+    <plurals name="update_footer_hide_apps">
+        <item quantity="other">%1$s 项</item>
+    </plurals>
+    <plurals name="update_notification_appstore">
+        <item quantity="other">%1$d 款应用有新版本</item>
+    </plurals>
+    <plurals name="update_notification_gamestore">
+        <item quantity="other">%1$d 款游戏有新版本</item>
+    </plurals>
+</resources>

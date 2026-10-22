@@ -1,0 +1,60 @@
+package com.larus.bmhome.chat.component.bottom.multimodal;
+
+import android.app.Application;
+import com.larus.bmhome.chat.cell.MessageCellStateTransformerType;
+import com.larus.common.apphost.AppHost;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 1, 0}, xi = MessageCellStateTransformerType.Z_LOTTERY_GUIDE_CELL)
+@DebugMetadata(c = "com.larus.bmhome.chat.component.bottom.multimodal.MultimodalInputComponentViewModel$handleUploadResultCode$2$1", f = "MultimodalInputComponentViewModel.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+public final class MultimodalInputComponentViewModel$handleUploadResultCode$2$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ j1 $this_run;
+    int label;
+
+    public MultimodalInputComponentViewModel$handleUploadResultCode$2$1(j1 r1, Continuation<? super MultimodalInputComponentViewModel$handleUploadResultCode$2$1> r2) {
+        this.$this_run = r1;
+        super(2, r2);
+    }
+
+    public final Continuation<Unit> create(Object r2, Continuation<?> r3) {
+        return new MultimodalInputComponentViewModel$handleUploadResultCode$2$1(this.$this_run, r3);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1, Object r2) {
+        return invoke((CoroutineScope) r1, (Continuation) r2);
+    }
+
+    public final Object invoke(CoroutineScope r1, Continuation<? super Unit> r2) {
+        return create(r1, r2).invokeSuspend(Unit.INSTANCE);
+    }
+
+    public final Object invokeSuspend(Object r2) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) goto L11;
+        ResultKt.throwOnFailure(r2);
+        if (this.$this_run.c == false) goto L7;
+        t19.s r3 = t19.s.a;
+        Application r0 = AppHost.a.getApplication();
+        r3.getClass();
+        t19.s.s(r0, 2131906513);
+    L9:
+        return Unit.INSTANCE;
+    L7:
+        t19.s r4 = t19.s.a;
+        Application r1 = AppHost.a.getApplication();
+        r4.getClass();
+        t19.s.s(r1, 2131905682);
+        goto L9
+    L11:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    }
+}

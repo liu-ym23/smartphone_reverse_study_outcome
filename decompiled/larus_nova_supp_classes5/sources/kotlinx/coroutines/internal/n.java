@@ -1,0 +1,11 @@
+package kotlinx.coroutines.internal;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes5.dex */
+public class n extends LockFreeLinkedListNode {
+    public final boolean h() {
+        return false;
+    }
+
+    public n() {
+    }
+}

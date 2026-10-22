@@ -1,0 +1,12 @@
+package com.suite.lark.platform.component.navroute.graph;
+
+import androidx.fragment.app.Fragment;
+import com.ss.android.lark.guide.ui.common.popup.AnchorFit;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes36.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/suite/lark/platform/component/navroute/graph/PlaceHolderRouteFragment;", "Landroidx/fragment/app/Fragment;", "<init>", "()V", "router-graph_release"}, k = 1, mv = {2, 1, 0}, xi = AnchorFit.END)
+public final class PlaceHolderRouteFragment extends Fragment {
+    public PlaceHolderRouteFragment() {
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/banner_introduce_text_size"
+    android:id="@+id/topic_introduce_textview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/banner_introduce_margin_left"
+    android:layout_marginRight="@dimen/banner_introduce_margin_right"
+    android:layout_marginBottom="@dimen/banner_introduce_margin_bottom"
+    android:lineSpacingExtra="@dimen/banner_introduce_line_spacing"/>

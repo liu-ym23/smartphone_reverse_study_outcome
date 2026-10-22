@@ -1,0 +1,38 @@
+package com.bytedance.android.live.room.api.screenrotation.config;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.util.Map;
+import kotlin.Metadata;
+import kotlin.Pair;
+import kotlin.TuplesKt;
+import kotlin.annotation.AnnotationRetention;
+import kotlin.collections.MapsKt;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+@Retention(RetentionPolicy.SOURCE)
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0002\b\u0003\b\u0087\u0002\u0018\u0000 \u00022\u00020\u0001:\u0001\u0003B\u0000¨\u0006\u0004"}, d2 = {"Lcom/bytedance/android/live/room/api/screenrotation/config/FoldType;", "", "Companion", "a", "experience-api_saasRelease"}, k = 1, mv = {1, 4, 3})
+@kotlin.annotation.Retention(AnnotationRetention.SOURCE)
+public @interface FoldType {
+    public static final a Companion = null;
+    public static final int back = 2;
+    public static final int front = 1;
+    public static final int full = 0;
+
+    public static final class a {
+        public static final Map<Integer, String> a = null;
+        public static final /* synthetic */ a b = null;
+
+        public a() {
+        }
+
+        static {
+            b = new a();
+            a = MapsKt.mapOf(new Pair[]{TuplesKt.to(0, "内屏"), TuplesKt.to(1, "外屏"), TuplesKt.to(2, "副屏")});
+        }
+    }
+
+    static {
+        Companion = a.b;
+    }
+}

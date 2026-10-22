@@ -1,0 +1,79 @@
+package com.bytedance.ee.bear.document.pageedit;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import androidx.lifecycle.ViewModelProvider;
+import com.bytedance.ee.bear.bizwidget.dialogfragment.OrientationBaseDialogFragment;
+import dagger.hilt.android.dwarf.DwarfComponentProvider;
+import dagger.hilt.android.dwarf.internal.lifecycle.DwarfViewModelFactories;
+import dagger.hilt.android.internal.managers.FragmentComponentManager;
+import dagger.hilt.internal.Preconditions;
+import dagger.hilt.internal.UnsafeCasts;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes16.dex */
+public abstract class Hilt_RemoveMemberFragment extends OrientationBaseDialogFragment {
+    public ContextWrapper i;
+    public boolean j;
+
+    public final void ea0() {
+        if (this.j == true) goto L6;
+        this.j = true;
+        f r0 = (f) ((DwarfComponentProvider) UnsafeCasts.unsafeCast(this)).provideComponent();
+        RemoveMemberFragment r1 = (RemoveMemberFragment) UnsafeCasts.unsafeCast(this);
+        r0.t0();
+        return;
+    }
+
+    public Hilt_RemoveMemberFragment() {
+        this.j = false;
+    }
+
+    public Context getContext() {
+        if (super/*androidx.fragment.app.Fragment*/.getContext() != null) goto L9;
+        if (this.i != null) goto L9;
+        return null;
+    L9:
+        if (this.i != null) goto L12;
+        this.i = FragmentComponentManager.createContextWrapper(super/*androidx.fragment.app.Fragment*/.getContext(), this);
+    L12:
+        return this.i;
+    }
+
+    public final ViewModelProvider.Factory getDefaultViewModelProviderFactory() {
+        return DwarfViewModelFactories.getFragmentFactory(this, super/*androidx.fragment.app.Fragment*/.getDefaultViewModelProviderFactory(), ((DwarfComponentProvider) UnsafeCasts.unsafeCast(this)).provideComponent());
+    }
+
+    public final void onAttach(Activity r3) {
+        super/*androidx.fragment.app.Fragment*/.onAttach(r3);
+        ContextWrapper r0 = this.i;
+        if (r0 != null) goto L5;
+    L8:
+        boolean r4 = true;
+    L9:
+        Preconditions.checkState(r4, "onAttach called multiple times with different Context! Hilt Fragments should not be retained.", new Object[0]);
+        if (this.i != null) goto L12;
+        this.i = FragmentComponentManager.createContextWrapper(super/*androidx.fragment.app.Fragment*/.getContext(), this);
+    L12:
+        ea0();
+        return;
+    L5:
+        if (FragmentComponentManager.findActivity(r0) == r3) goto L8;
+        r4 = false;
+        goto L9
+    }
+
+    public final LayoutInflater onGetLayoutInflater(Bundle r1) {
+        return LayoutInflater.from(FragmentComponentManager.createContextWrapper(super.onGetLayoutInflater(r1), this));
+    }
+
+    public final void onAttach(Context r1) {
+        super.onAttach(r1);
+        if (this.i != null) goto L5;
+        this.i = FragmentComponentManager.createContextWrapper(super/*androidx.fragment.app.Fragment*/.getContext(), this);
+    L5:
+        ea0();
+    }
+}

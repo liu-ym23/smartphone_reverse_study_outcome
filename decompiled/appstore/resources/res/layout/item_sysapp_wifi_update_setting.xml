@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="16dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ocardlistitem_cardPosition="position_single"
+        app:ocardlistitem_cardType="type_normal"
+        app:ocardlistitem_defaultCustomEnd="end_switch"
+        app:ocardlistitem_showCardBg="true"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showIcon="false"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_subTitle="@string/appns_sysapp_wifi_update_setting_desc"
+        app:ocardlistitem_title="@string/appns_sysapp_wifi_update_setting_title"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+package com.bytedance.android.btm.impl.page.lifecycle.layer1_outer;
+
+import com.byted.cast.sink.api.IAPI;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001H\n¢\u0006\u0002\b\u0002¨\u0006\u0003"}, d2 = {"<anonymous>", "", "invoke", "com/bytedance/android/btm/impl/page/lifecycle/layer1_outer/BtmActivityLifecycleCallbackV2$onActivityCreated$1$1"}, k = 3, mv = {1, 1, IAPI.OPTION_PLAYER_TYPE})
+public final class BtmActivityLifecycleCallbackV2$onActivityCreated$$inlined$run$lambda$1 extends Lambda implements Function0<String> {
+    final /* synthetic */ String $activityClassName$inlined;
+
+    public BtmActivityLifecycleCallbackV2$onActivityCreated$$inlined$run$lambda$1(String r1) {
+        this.$activityClassName$inlined = r1;
+        super(0);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: collision with other method in class */
+    public final String m743invoke() {
+        return this.$activityClassName$inlined + " not FragmentActivity";
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke() {
+        return m743invoke();
+    }
+}

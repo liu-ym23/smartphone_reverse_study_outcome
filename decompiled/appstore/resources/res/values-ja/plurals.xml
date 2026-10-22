@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="delete_selected_all_title">
+        <item quantity="other">%1$d 個の履歴を削除しますか？</item>
+    </plurals>
+    <plurals name="delete_selected_record">
+        <item quantity="other">%1$d個の履歴を削除しました</item>
+    </plurals>
+    <plurals name="header_selected_item">
+        <item quantity="other">%1$d 個を選択</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d 件の新しい通知</item>
+        <item quantity="other">%d 件の新しい通知</item>
+    </plurals>
+    <plurals name="myapp_update_count">
+        <item quantity="other">%1$sの更新</item>
+    </plurals>
+    <plurals name="update_footer_hide_apps">
+        <item quantity="other">%1$sアイテム</item>
+    </plurals>
+</resources>

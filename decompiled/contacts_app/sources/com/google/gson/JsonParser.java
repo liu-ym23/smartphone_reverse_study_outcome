@@ -1,0 +1,75 @@
+package com.google.gson;
+
+import com.google.gson.internal.Streams;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
+import com.google.gson.stream.MalformedJsonException;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class JsonParser {
+    @Deprecated
+    public JsonParser() {
+    }
+
+    public static JsonElement parseString(String r1) throws JsonSyntaxException {
+        return parseReader(new StringReader(r1));
+    }
+
+    public static JsonElement parseReader(Reader r2) throws JsonIOException, JsonSyntaxException {
+        JsonReader r0 = new JsonReader(r2);     // Catch: NumberFormatException -> L10 IOException -> L13 MalformedJsonException -> L16
+        JsonElement r3 = parseReader(r0);     // Catch: NumberFormatException -> L10 IOException -> L13 MalformedJsonException -> L16
+        if (r3.isJsonNull() == false) goto L5;
+    L9:
+        return r3;
+    L5:
+        if (r0.peek() == JsonToken.END_DOCUMENT) goto L9;
+        throw new JsonSyntaxException("Did not consume the entire document.");     // Catch: NumberFormatException -> L10 IOException -> L13 MalformedJsonException -> L16
+    L16:
+        e = move-exception;
+        throw new JsonSyntaxException(e);
+    L13:
+        e = move-exception;
+        throw new JsonIOException(e);
+    L10:
+        e = move-exception;
+        throw new JsonSyntaxException(e);
+    }
+
+    public static JsonElement parseReader(JsonReader r6) throws JsonIOException, JsonSyntaxException {
+        Strictness r2 = r6.getStrictness();
+        if (r2 != Strictness.LEGACY_STRICT) goto L18;
+        r6.setStrictness(Strictness.LENIENT);
+    L18:
+        JsonElement r0 = Streams.parse(r6);     // Catch: Throwable -> L8 OutOfMemoryError -> L10 StackOverflowError -> L13
+        r6.setStrictness(r2);
+        return r0;
+    L8:
+        th = move-exception;
+        r6.setStrictness(r2);
+        throw th;
+    L10:
+        e = move-exception;
+        throw new JsonParseException("Failed parsing JSON source: " + r6 + " to Json", e);     // Catch: Throwable -> L8
+    L13:
+        e = move-exception;
+        throw new JsonParseException("Failed parsing JSON source: " + r6 + " to Json", e);     // Catch: Throwable -> L8
+    }
+
+    @Deprecated
+    public JsonElement parse(String r1) throws JsonSyntaxException {
+        return parseString(r1);
+    }
+
+    @Deprecated
+    public JsonElement parse(Reader r1) throws JsonIOException, JsonSyntaxException {
+        return parseReader(r1);
+    }
+
+    @Deprecated
+    public JsonElement parse(JsonReader r1) throws JsonIOException, JsonSyntaxException {
+        return parseReader(r1);
+    }
+}

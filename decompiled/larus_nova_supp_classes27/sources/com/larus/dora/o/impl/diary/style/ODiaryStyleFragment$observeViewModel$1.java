@@ -1,0 +1,127 @@
+package com.larus.dora.o.impl.diary.style;
+
+import com.larus.dora.o.impl.databinding.DoraOFragmentDiaryStyleBinding;
+import kotlin.Metadata;
+import kotlin.NoWhenBranchMatchedException;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.collections.CollectionsKt;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.flow.i1;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes27.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.larus.dora.o.impl.diary.style.ODiaryStyleFragment$observeViewModel$1", f = "ODiaryStyleFragment.kt", i = {}, l = {171}, m = "invokeSuspend", n = {}, s = {})
+final class ODiaryStyleFragment$observeViewModel$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    int label;
+    final /* synthetic */ ODiaryStyleFragment this$0;
+
+    /* JADX INFO: renamed from: com.larus.dora.o.impl.diary.style.ODiaryStyleFragment$observeViewModel$1$1, reason: invalid class name */
+    @Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n"}, d2 = {"<anonymous>", "", "state", "Lcom/larus/dora/o/impl/diary/style/ODiaryStyleViewModel$ListState;"}, k = 3, mv = {2, 1, 0}, xi = 48)
+    @DebugMetadata(c = "com.larus.dora.o.impl.diary.style.ODiaryStyleFragment$observeViewModel$1$1", f = "ODiaryStyleFragment.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+    public static final class AnonymousClass1 extends SuspendLambda implements Function2<ODiaryStyleViewModel.b, Continuation<? super Unit>, Object> {
+        /* synthetic */ Object L$0;
+        int label;
+        final /* synthetic */ ODiaryStyleFragment this$0;
+
+        public AnonymousClass1(ODiaryStyleFragment r1, Continuation<? super AnonymousClass1> r2) {
+            this.this$0 = r1;
+            super(2, r2);
+        }
+
+        public final Continuation<Unit> create(Object r3, Continuation<?> r4) {
+            AnonymousClass1 r0 = new AnonymousClass1(this.this$0, r4);
+            r0.L$0 = r3;
+            return r0;
+        }
+
+        public final Object invoke(ODiaryStyleViewModel.b r1, Continuation<? super Unit> r2) {
+            return create(r1, r2).invokeSuspend(Unit.INSTANCE);
+        }
+
+        public /* bridge */ /* synthetic */ Object invoke(Object r1, Object r2) {
+            return invoke((ODiaryStyleViewModel.b) r1, (Continuation) r2);
+        }
+
+        public final Object invokeSuspend(Object r6) {
+            IntrinsicsKt.getCOROUTINE_SUSPENDED();
+            if (this.label != 0) goto L25;
+            ResultKt.throwOnFailure(r6);
+            ODiaryStyleViewModel.b r7 = (ODiaryStyleViewModel.b) this.L$0;
+            ODiaryStyleFragment r0 = this.this$0;
+            final DoraOFragmentDiaryStyleBinding r1 = r0.d;
+            if (r1 == null) goto L21;
+            if ((r7 instanceof ODiaryStyleViewModel.b.c) == false) goto L11;
+            r1.e.setVisibility(0);
+            r1.c.setVisibility(8);
+            goto L21
+        L11:
+            if ((r7 instanceof ODiaryStyleViewModel.b.a) == false) goto L16;
+            r1.e.setVisibility(8);
+            r1.c.setVisibility(8);
+            final boolean r2 = !r0.g;
+            r0.g = true;
+            ODiaryStyleAdapter r3 = r0.f;
+            if (r3 == null) goto L21;
+            r3.submitList(((ODiaryStyleViewModel.b.a) r7).a, new f(r2, r1));
+            goto L21
+        L16:
+            if ((r7 instanceof ODiaryStyleViewModel.b.C0095b) == false) goto L23;
+            r1.e.setVisibility(8);
+            r1.c.setVisibility(0);
+            ODiaryStyleAdapter r8 = r0.f;
+            if (r8 == null) goto L21;
+            r8.submitList(CollectionsKt.emptyList());
+            goto L21
+        L23:
+            throw new NoWhenBranchMatchedException();
+        L21:
+            return Unit.INSTANCE;
+        L25:
+            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+        }
+    }
+
+    public ODiaryStyleFragment$observeViewModel$1(ODiaryStyleFragment r1, Continuation<? super ODiaryStyleFragment$observeViewModel$1> r2) {
+        this.this$0 = r1;
+        super(2, r2);
+    }
+
+    public final Continuation<Unit> create(Object r2, Continuation<?> r3) {
+        return new ODiaryStyleFragment$observeViewModel$1(this.this$0, r3);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1, Object r2) {
+        return invoke((CoroutineScope) r1, (Continuation) r2);
+    }
+
+    public final Object invoke(CoroutineScope r1, Continuation<? super Unit> r2) {
+        return create(r1, r2).invokeSuspend(Unit.INSTANCE);
+    }
+
+    public final Object invokeSuspend(Object r6) {
+        Object r0 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int r1 = this.label;
+        if (r1 == 0) goto L8;
+        if (r1 != 1) goto L7;
+        ResultKt.throwOnFailure(r6);
+    L12:
+        return Unit.INSTANCE;
+    L7:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    L8:
+        ResultKt.throwOnFailure(r6);
+        ODiaryStyleFragment r7 = this.this$0;
+        int r2 = ODiaryStyleFragment.h;
+        i1<ODiaryStyleViewModel.b> r8 = r7.S90().getListState();
+        AnonymousClass1 r3 = new AnonymousClass1(this.this$0, null);
+        this.label = 1;
+        if (kotlinx.coroutines.flow.e.i(r8, r3, this) != r0) goto L12;
+        return r0;
+    }
+}

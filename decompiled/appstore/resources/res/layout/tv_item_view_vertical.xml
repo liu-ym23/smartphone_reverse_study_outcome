@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/tv_app_item_vertical_icon_size"
+        android:layout_height="@dimen/tv_app_item_vertical_icon_size"/>
+    <TextView
+        android:textSize="@dimen/tv_app_item_name_size"
+        android:textStyle="bold"
+        android:textColor="@color/tv_app_item_name_color"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/tv_name"
+        android:clickable="false"
+        android:layout_width="@dimen/tv_app_item_vertical_icon_size"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_app_item_vertical_name_top_bottom_margin"
+        android:maxLines="1"/>
+    <com.bytedanceos.common.ui.widget.AppStatusView
+        android:id="@+id/app_status_view"
+        android:layout_width="@dimen/lkp_vertical_install_btn_width"
+        android:layout_height="@dimen/lkp_vertical_install_btn_height"/>
+</LinearLayout>

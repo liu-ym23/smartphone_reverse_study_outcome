@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedanceos.common.ui.widget.ParentView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/fragment_myapp_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.oui.segmentedtab.OTabSegmentedLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/myapp_tab_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/oui_h_m2"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginHorizontal="20dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/my_list_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/myapp_tab_radiogroup"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/appinfo_replace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.bytedanceos.common.ui.widget.ParentView>

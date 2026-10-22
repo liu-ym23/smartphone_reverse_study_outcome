@@ -1,0 +1,22 @@
+package n9b;
+
+import android.view.View;
+import androidx.fragment.app.FragmentActivity;
+import com.ss.android.lark.contact.customized.privatecontact.view.OfficePrivateContactFragment;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes35.dex */
+public final class a implements View.OnClickListener {
+    public final /* synthetic */ OfficePrivateContactFragment a;
+
+    public a(OfficePrivateContactFragment r1) {
+        this.a = r1;
+    }
+
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View r1) {
+        FragmentActivity r2 = this.a.getActivity();
+        if (r2 == null) goto L6;
+        r2.finish();
+        return;
+    }
+}

@@ -1,0 +1,19 @@
+package kotlin.reflect.jvm.internal.impl.storage;
+
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.reflect.KProperty;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes5.dex */
+public final class StorageKt {
+    public static final <T> T getValue(NotNullLazyValue<? extends T> r0, Object r1, KProperty<?> r2) {
+        Intrinsics.checkNotNullParameter(r0, "<this>");
+        Intrinsics.checkNotNullParameter(r2, "p");
+        return (T) r0.invoke();
+    }
+
+    public static final <T> T getValue(NullableLazyValue<? extends T> r0, Object r1, KProperty<?> r2) {
+        Intrinsics.checkNotNullParameter(r0, "<this>");
+        Intrinsics.checkNotNullParameter(r2, "p");
+        return (T) r0.invoke();
+    }
+}

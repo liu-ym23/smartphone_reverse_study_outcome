@@ -1,0 +1,30 @@
+package com.larus.dora.o.impl.health;
+
+import android.os.Bundle;
+import androidx.fragment.app.Fragment;
+import com.larus.dora.o.api.IDoraOHealthService;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.text.StringsKt;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes27.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0012\u0010\u0004\u001a\u0004\u0018\u00010\u00052\u0006\u0010\u0006\u001a\u00020\u0007H\u0016¨\u0006\b"}, d2 = {"Lcom/larus/dora/o/impl/health/DoraOHealthServiceImpl;", "Lcom/larus/dora/o/api/IDoraOHealthService;", "<init>", "()V", "createDeviceHomeFragment", "Landroidx/fragment/app/Fragment;", "url", "", "dora_o_impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class DoraOHealthServiceImpl implements IDoraOHealthService {
+    public DoraOHealthServiceImpl() {
+    }
+
+    @Override // com.larus.dora.o.api.IDoraOHealthService
+    public final Fragment a(String r4) {
+        Intrinsics.checkNotNullParameter(r4, "url");
+        if (StringsKt.isBlank(r4) == false) goto L6;
+        return null;
+    L6:
+        int r1 = OHealthTabFragment.h;
+        Intrinsics.checkNotNullParameter(r4, "url");
+        OHealthTabFragment r0 = new OHealthTabFragment();
+        Bundle r2 = new Bundle();
+        r2.putString("dora_o_health_url", r4);
+        r0.setArguments(r2);
+        return r0;
+    }
+}

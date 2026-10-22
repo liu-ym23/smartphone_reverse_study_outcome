@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/topic_banner_desc_layout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="8dp">
+        <TextView
+            android:id="@+id/topic_banner_desc"
+            style="@style/topic_desc_style"/>
+    </RelativeLayout>
+    <com.bytedanceos.common.network.widget.NetworkImageView
+        android:id="@+id/topic_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recommend_topic_foot_banner_h"
+        android:layout_margin="8dp"
+        android:src="@drawable/history_banner_defalut"
+        android:contentDescription="@null"/>
+    <ImageView
+        android:background="@drawable/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@null"/>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+package androidx.core.app;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class NotificationCompatSideChannelService extends Service {
+    public NotificationCompatSideChannelService() {
+    }
+
+    @Override // android.app.Service
+    public IBinder onBind(Intent r10) {
+        r10.getAction().equals("android.support.BIND_NOTIFICATION_SIDE_CHANNEL");
+        return null;
+    }
+}

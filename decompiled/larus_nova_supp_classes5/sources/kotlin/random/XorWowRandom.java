@@ -1,0 +1,85 @@
+package kotlin.random;
+
+import com.ss.android.socialbase.downloader.file.DownloadFileUtils;
+import java.io.Serializable;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes5.dex */
+@Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u000e\b\u0000\u0018\u0000 \u00122\u00020\u00012\u00060\u0002j\u0002`\u0003:\u0001\u0012B\u0017\b\u0010\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0005¢\u0006\u0002\u0010\u0007B7\b\u0000\u0012\u0006\u0010\b\u001a\u00020\u0005\u0012\u0006\u0010\t\u001a\u00020\u0005\u0012\u0006\u0010\n\u001a\u00020\u0005\u0012\u0006\u0010\u000b\u001a\u00020\u0005\u0012\u0006\u0010\f\u001a\u00020\u0005\u0012\u0006\u0010\r\u001a\u00020\u0005¢\u0006\u0002\u0010\u000eJ\u0010\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0010\u001a\u00020\u0005H\u0016J\b\u0010\u0011\u001a\u00020\u0005H\u0016R\u000e\u0010\r\u001a\u00020\u0005X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0005X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0005X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0005X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0005X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0005X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u0013"}, d2 = {"Lkotlin/random/XorWowRandom;", "Lkotlin/random/Random;", "Ljava/io/Serializable;", "Lkotlin/io/Serializable;", "seed1", "", "seed2", "(II)V", "x", "y", "z", DownloadFileUtils.MODE_WRITE, "v", "addend", "(IIIIII)V", "nextBits", "bitCount", "nextInt", "Companion", "kotlin-stdlib"}, k = 1, mv = {1, 9, 0}, xi = 48)
+public final class XorWowRandom extends Random implements Serializable {
+    private static final Companion Companion = null;
+    private static final long serialVersionUID = 0;
+    private int addend;
+    private int v;
+    private int w;
+    private int x;
+    private int y;
+    private int z;
+
+    @Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\t\n\u0000\b\u0082\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lkotlin/random/XorWowRandom$Companion;", "", "()V", "serialVersionUID", "", "kotlin-stdlib"}, k = 1, mv = {1, 9, 0}, xi = 48)
+    public static final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(DefaultConstructorMarker r1) {
+            this();
+        }
+    }
+
+    static {
+        Companion = new Companion(null);
+    }
+
+    @Override // kotlin.random.Random
+    public int nextInt() {
+        int r0 = this.x;
+        int r1 = r0 ^ (r0 >>> 2);
+        this.x = this.y;
+        this.y = this.z;
+        this.z = this.w;
+        int r2 = this.v;
+        this.w = r2;
+        int r3 = ((r1 ^ (r1 << 1)) ^ r2) ^ (r2 << 4);
+        this.v = r3;
+        int r4 = this.addend + 362437;
+        this.addend = r4;
+        return r3 + r4;
+    }
+
+    @Override // kotlin.random.Random
+    public int nextBits(int r2) {
+        return RandomKt.takeUpperBits(nextInt(), r2);
+    }
+
+    public XorWowRandom(int r8, int r9) {
+        this(r8, r9, 0, 0, ~r8, (r8 << 10) ^ (r9 >>> 4));
+    }
+
+    public XorWowRandom(int r1, int r2, int r3, int r4, int r5, int r6) {
+        this.x = r1;
+        this.y = r2;
+        this.z = r3;
+        this.w = r4;
+        this.v = r5;
+        this.addend = r6;
+        int r7 = (((r1 | r2) | r3) | r4) | r5;
+        int r8 = 0;
+        if (r7 == 0) goto L5;
+        boolean r9 = true;
+    L6:
+        if (r9 == false) goto L12;
+    L8:
+        if (r8 >= 64) goto L10;
+        nextInt();
+        r8 = r8 + 1;
+        goto L8
+    L10:
+        return;
+    L12:
+        throw new IllegalArgumentException("Initial state must have at least one non-zero element.".toString());
+    L5:
+        r9 = false;
+        goto L6
+    }
+}

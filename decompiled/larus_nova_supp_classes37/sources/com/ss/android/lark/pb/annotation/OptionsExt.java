@@ -1,0 +1,180 @@
+package com.ss.android.lark.pb.annotation;
+
+import com.squareup.wire.FieldEncoding;
+import com.squareup.wire.Message;
+import com.squareup.wire.ProtoAdapter;
+import com.squareup.wire.ProtoReader;
+import com.squareup.wire.ProtoWriter;
+import java.io.IOException;
+import okio.ByteString;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes37.dex */
+public final class OptionsExt extends Message<OptionsExt, Builder> {
+    public static final ProtoAdapter<OptionsExt> ADAPTER = null;
+    public static final Boolean DEFAULT_CONST_PARAM_TY = null;
+    public static final Boolean DEFAULT_ITER = null;
+    public static final Boolean DEFAULT_SERDE = null;
+    private static final long serialVersionUID = 0;
+    public final Boolean mconst_param_ty;
+    public final Boolean miter;
+    public final Boolean mserde;
+
+    public static final class Builder extends Message.Builder<OptionsExt, Builder> {
+        public Boolean mconst_param_ty;
+        public Boolean miter;
+        public Boolean mserde;
+
+        /* JADX INFO: renamed from: build, reason: collision with other method in class */
+        public OptionsExt m818build() {
+            return new OptionsExt(this.mserde, this.miter, this.mconst_param_ty, super.buildUnknownFields());
+        }
+
+        public Builder() {
+        }
+
+        public /* bridge */ /* synthetic */ Message build() {
+            return m818build();
+        }
+
+        public Builder const_param_ty(Boolean r1) {
+            this.mconst_param_ty = r1;
+            return this;
+        }
+
+        public Builder iter(Boolean r1) {
+            this.miter = r1;
+            return this;
+        }
+
+        public Builder serde(Boolean r1) {
+            this.mserde = r1;
+            return this;
+        }
+    }
+
+    public static final class ProtoAdapter_OptionsExt extends ProtoAdapter<OptionsExt> {
+        public ProtoAdapter_OptionsExt() {
+            super(FieldEncoding.LENGTH_DELIMITED, OptionsExt.class);
+        }
+
+        public OptionsExt decode(ProtoReader r7) throws IOException {
+            Builder r0 = new Builder();
+            Boolean r1 = Boolean.FALSE;
+            r0.mserde = r1;
+            r0.miter = r1;
+            r0.mconst_param_ty = r1;
+            long r2 = r7.beginMessage();
+        L3:
+            int r3 = r7.nextTag();
+            if (r3 == (-1)) goto L15;
+            if (r3 != 1) goto L8;
+            r0.mserde = (Boolean) ProtoAdapter.BOOL.decode(r7);
+            goto L3
+        L8:
+            if (r3 != 2) goto L10;
+            r0.miter = (Boolean) ProtoAdapter.BOOL.decode(r7);
+            goto L3
+        L10:
+            if (r3 != 3) goto L11;
+            r0.mconst_param_ty = (Boolean) ProtoAdapter.BOOL.decode(r7);
+            goto L3
+        L11:
+            FieldEncoding r4 = r7.peekFieldEncoding();
+            r0.addUnknownField(r3, r4, r4.rawProtoAdapter().decode(r7));
+            goto L3
+        L15:
+            r7.endMessage(r2);
+            return r0.m818build();
+        }
+
+        public int encodedSize(OptionsExt r6) {
+            Boolean r0 = r6.mserde;
+            int r1 = 0;
+            if (r0 == null) goto L5;
+            int r2 = ProtoAdapter.BOOL.encodedSizeWithTag(1, r0);
+        L6:
+            Boolean r3 = r6.miter;
+            if (r3 == null) goto L9;
+            int r4 = ProtoAdapter.BOOL.encodedSizeWithTag(2, r3);
+        L10:
+            int r5 = r2 + r4;
+            Boolean r7 = r6.mconst_param_ty;
+            if (r7 == null) goto L14;
+            r1 = ProtoAdapter.BOOL.encodedSizeWithTag(3, r7);
+        L14:
+            return (r5 + r1) + r6.unknownFields().size();
+        L9:
+            r4 = 0;
+            goto L10
+        L5:
+            r2 = 0;
+            goto L6
+        }
+
+        /* JADX INFO: renamed from: decode, reason: collision with other method in class */
+        public /* bridge */ /* synthetic */ Object m819decode(ProtoReader r1) throws IOException {
+            return decode(r1);
+        }
+
+        public /* bridge */ /* synthetic */ int encodedSize(Object r1) {
+            return encodedSize((OptionsExt) r1);
+        }
+
+        public void encode(ProtoWriter r4, OptionsExt r5) throws IOException {
+            Boolean r0 = r5.mserde;
+            if (r0 == null) goto L5;
+            ProtoAdapter.BOOL.encodeWithTag(r4, 1, r0);
+        L5:
+            Boolean r1 = r5.miter;
+            if (r1 == null) goto L8;
+            ProtoAdapter.BOOL.encodeWithTag(r4, 2, r1);
+        L8:
+            Boolean r2 = r5.mconst_param_ty;
+            if (r2 == null) goto L11;
+            ProtoAdapter.BOOL.encodeWithTag(r4, 3, r2);
+        L11:
+            r4.writeBytes(r5.unknownFields());
+        }
+
+        public /* bridge */ /* synthetic */ void encode(ProtoWriter r1, Object r2) throws IOException {
+            encode(r1, (OptionsExt) r2);
+        }
+    }
+
+    static {
+        ADAPTER = new ProtoAdapter_OptionsExt();
+        Boolean r0 = Boolean.FALSE;
+        DEFAULT_SERDE = r0;
+        DEFAULT_ITER = r0;
+        DEFAULT_CONST_PARAM_TY = r0;
+    }
+
+    /* JADX INFO: renamed from: newBuilder, reason: collision with other method in class */
+    public Builder m817newBuilder() {
+        Builder r0 = new Builder();
+        r0.mserde = this.mserde;
+        r0.miter = this.miter;
+        r0.mconst_param_ty = this.mconst_param_ty;
+        r0.addUnknownFields(unknownFields());
+        return r0;
+    }
+
+    public String toString() {
+        return OptionsExt.class.getName() + "@" + Integer.toHexString(hashCode());
+    }
+
+    public /* bridge */ /* synthetic */ Message.Builder newBuilder() {
+        return m817newBuilder();
+    }
+
+    public OptionsExt(Boolean r2, Boolean r3, Boolean r4) {
+        this(r2, r3, r4, ByteString.EMPTY);
+    }
+
+    public OptionsExt(Boolean r2, Boolean r3, Boolean r4, ByteString r5) {
+        super(ADAPTER, r5);
+        this.mserde = r2;
+        this.miter = r3;
+        this.mconst_param_ty = r4;
+    }
+}

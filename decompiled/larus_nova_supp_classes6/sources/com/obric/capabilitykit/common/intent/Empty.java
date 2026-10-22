@@ -1,0 +1,43 @@
+package com.obric.capabilitykit.common.intent;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.obric.eventkit.eventstaskmanager.ITaskManager;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes6.dex */
+@Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0007\u0018\u00002\u00020\u00012\u00020\u0002B\u0005¢\u0006\u0002\u0010\u0003J\t\u0010\u0004\u001a\u00020\u0005HÖ\u0001J\u0019\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u0005HÖ\u0001¨\u0006\u000b"}, d2 = {"Lcom/obric/capabilitykit/common/intent/Empty;", "Landroid/os/Parcelable;", "Lcom/obric/capabilitykit/common/intent/IntentParams;", "()V", "describeContents", "", "writeToParcel", "", "parcel", "Landroid/os/Parcel;", "flags", "capabilitykitcommon_release"}, k = 1, mv = {1, 7, 1}, xi = ITaskManager.Stub.TRANSACTION_getEventTasksByType)
+public final class Empty implements Parcelable, IntentParams {
+    public static final Parcelable.Creator<Empty> CREATOR = null;
+
+    static {
+        CREATOR = new a();
+    }
+
+    public Empty() {
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public String getSubActionValue() {
+        return null;
+    }
+
+    public boolean isParamsCompleted() {
+        return true;
+    }
+
+    public IntentParams mergeParams(Object r1) {
+        return this;
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel r1, int r2) {
+        Intrinsics.checkNotNullParameter(r1, "out");
+        r1.writeInt(1);
+    }
+}

@@ -1,0 +1,8 @@
+package com.bytedance.apm6.consumer.slardar;
+
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes2.dex */
+public interface SlardarResponseService {
+    void onResponse(JSONObject r1);
+}

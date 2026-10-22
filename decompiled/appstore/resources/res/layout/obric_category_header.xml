@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.blur.OBlurMaskView
+        android:id="@+id/blur_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oBlurMask_blurRadius="8"
+        app:oBlurMask_statusBarImmersion="true"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_toolbar_o"/>
+    <com.obric.oui.layout.OUILinearLayout
+        android:id="@+id/second_category_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-15dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginHorizontal="12dp">
+        <com.obric.oui.tab.OTabLayout
+            android:id="@+id/second_category_tab_layout"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            app:tabGravity="fill"
+            app:tabMode="scrollable"
+            app:tab_edgeFadeEnabled="false"
+            style="@style/OTabTextV2.NoBackground.ChipsTab"/>
+    </com.obric.oui.layout.OUILinearLayout>
+</RelativeLayout>

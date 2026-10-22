@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_topic"
+    android:fitsSystemWindows="true"
+    style="@style/appstore_bg_style">
+    <include layout="@layout/abc_toolbar"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+        <include layout="@layout/detail_info_header_smart"/>
+        <com.obric.oui.divider.ODivider
+            android:id="@+id/line"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.66dp"/>
+        <ViewStub
+            android:id="@+id/summary_layout"
+            android:layout="@layout/appinfo_summary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ViewStub
+            android:id="@+id/comments_layout"
+            android:layout="@layout/appinfo_comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

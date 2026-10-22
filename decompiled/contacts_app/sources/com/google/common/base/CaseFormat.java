@@ -1,0 +1,184 @@
+package com.google.common.base;
+
+import java.io.Serializable;
+import javax.annotation.Nullable;
+
+/* JADX INFO: loaded from: classes2.dex */
+public abstract enum CaseFormat extends Enum<CaseFormat> {
+    private static final /* synthetic */ CaseFormat[] $VALUES = null;
+    public static final CaseFormat LOWER_CAMEL = null;
+    public static final CaseFormat LOWER_HYPHEN = null;
+    public static final CaseFormat LOWER_UNDERSCORE = null;
+    public static final CaseFormat UPPER_CAMEL = null;
+    public static final CaseFormat UPPER_UNDERSCORE = null;
+    private final CharMatcher wordBoundary;
+    private final String wordSeparator;
+
+    private static final class StringConverter extends Converter<String, String> implements Serializable {
+        private static final long serialVersionUID = 0;
+        private final CaseFormat sourceFormat;
+        private final CaseFormat targetFormat;
+
+        @Override // com.google.common.base.Converter
+        protected /* bridge */ /* synthetic */ String doBackward(String r1) {
+            return doBackward2(r1);
+        }
+
+        @Override // com.google.common.base.Converter
+        protected /* bridge */ /* synthetic */ String doForward(String r1) {
+            return doForward2(r1);
+        }
+
+        StringConverter(CaseFormat r1, CaseFormat r2) {
+            this.sourceFormat = (CaseFormat) Preconditions.checkNotNull(r1);
+            this.targetFormat = (CaseFormat) Preconditions.checkNotNull(r2);
+        }
+
+        /* JADX INFO: renamed from: doForward, reason: avoid collision after fix types in other method */
+        protected String doForward2(String r2) {
+            if (r2 != null) goto L5;
+            return null;
+        L5:
+            return this.sourceFormat.to(this.targetFormat, r2);
+        }
+
+        /* JADX INFO: renamed from: doBackward, reason: avoid collision after fix types in other method */
+        protected String doBackward2(String r2) {
+            if (r2 != null) goto L5;
+            return null;
+        L5:
+            return this.targetFormat.to(this.sourceFormat, r2);
+        }
+
+        @Override // com.google.common.base.Converter, com.google.common.base.Function
+        public boolean equals(@Nullable Object r4) {
+            if ((r4 instanceof StringConverter) == false) goto L10;
+            StringConverter r5 = (StringConverter) r4;
+            if (this.sourceFormat.equals(r5.sourceFormat) == true) goto L7;
+            return false;
+        L7:
+            if (this.targetFormat.equals(r5.targetFormat) == false) goto L12;
+            return true;
+        L12:
+            return false;
+        L10:
+            return false;
+        }
+
+        public int hashCode() {
+            int r0 = this.sourceFormat.hashCode();
+            return this.targetFormat.hashCode() ^ r0;
+        }
+
+        public String toString() {
+            return this.sourceFormat + ".converterTo(" + this.targetFormat + ")";
+        }
+    }
+
+    abstract String normalizeWord(String r1);
+
+    public static CaseFormat valueOf(String r1) {
+        return (CaseFormat) Enum.valueOf(CaseFormat.class, r1);
+    }
+
+    public static CaseFormat[] values() {
+        return (CaseFormat[]) $VALUES.clone();
+    }
+
+    /* synthetic */ CaseFormat(String r1, int r2, CharMatcher r3, String r4, AnonymousClass1 r5) {
+        this(r1, r2, r3, r4);
+    }
+
+    static /* synthetic */ String access$100(String r0) {
+        return firstCharOnlyToUpper(r0);
+    }
+
+    static {
+        final CharMatcher r1 = CharMatcher.is('-');
+        final String r2 = "-";
+        final String r3 = "LOWER_HYPHEN";
+        final int r4 = 0;
+        CaseFormat r0 = new AnonymousClass1(r3, r4, r1, r2);
+        LOWER_HYPHEN = r0;
+        final CharMatcher r5 = CharMatcher.is('_');
+        final String r6 = "LOWER_UNDERSCORE";
+        final int r7 = 1;
+        final String r8 = "_";
+        CaseFormat r9 = new AnonymousClass2(r6, r7, r5, r8);
+        LOWER_UNDERSCORE = r9;
+        final CharMatcher r10 = CharMatcher.inRange('A', 'Z');
+        final String r11 = "LOWER_CAMEL";
+        final int r12 = 2;
+        final String r13 = "";
+        CaseFormat r14 = new AnonymousClass3(r11, r12, r10, r13);
+        LOWER_CAMEL = r14;
+        final CharMatcher r15 = CharMatcher.inRange('A', 'Z');
+        final String r16 = "UPPER_CAMEL";
+        final int r17 = 3;
+        CaseFormat r18 = new AnonymousClass4(r16, r17, r15, r13);
+        UPPER_CAMEL = r18;
+        final CharMatcher r19 = CharMatcher.is('_');
+        final String r20 = "UPPER_UNDERSCORE";
+        final int r110 = 4;
+        CaseFormat r21 = new AnonymousClass5(r20, r110, r19, r8);
+        UPPER_UNDERSCORE = r21;
+        $VALUES = new CaseFormat[]{r0, r9, r14, r18, r21};
+    }
+
+    private CaseFormat(String r1, int r2, CharMatcher r3, String r4) {
+        super(r1, r2);
+        this.wordBoundary = r3;
+        this.wordSeparator = r4;
+    }
+
+    public final String to(CaseFormat r1, String r2) {
+        Preconditions.checkNotNull(r1);
+        Preconditions.checkNotNull(r2);
+        if (r1 != this) goto L6;
+        return r2;
+    L6:
+        return convert(r1, r2);
+    }
+
+    String convert(CaseFormat r7, String r8) {
+        StringBuilder r0 = null;
+        int r1 = 0;
+        int r3 = -1;
+    L3:
+        r3 = this.wordBoundary.indexIn(r8, r3 + 1);
+        if (r3 == (-1)) goto L9;
+        if (r1 != 0) goto L7;
+        r0 = new StringBuilder(r8.length() + (this.wordSeparator.length() * 4));
+        r0.append(r7.normalizeFirstWord(r8.substring(r1, r3)));
+    L8:
+        r0.append(r7.wordSeparator);
+        r1 = this.wordSeparator.length() + r3;
+        goto L3
+    L7:
+        r0.append(r7.normalizeWord(r8.substring(r1, r3)));
+        goto L8
+    L9:
+        if (r1 != 0) goto L12;
+        return r7.normalizeFirstWord(r8);
+    L12:
+        return r0.append(r7.normalizeWord(r8.substring(r1))).toString();
+    }
+
+    public Converter<String, String> converterTo(CaseFormat r2) {
+        return new StringConverter(this, r2);
+    }
+
+    private String normalizeFirstWord(String r2) {
+        if (this != LOWER_CAMEL) goto L6;
+        return Ascii.toLowerCase(r2);
+    L6:
+        return normalizeWord(r2);
+    }
+
+    private static String firstCharOnlyToUpper(String r2) {
+        if (r2.isEmpty() == false) goto L6;
+        return r2;
+    L6:
+        return new StringBuilder(r2.length()).append(Ascii.toUpperCase(r2.charAt(0))).append(Ascii.toLowerCase(r2.substring(1))).toString();
+    }
+}

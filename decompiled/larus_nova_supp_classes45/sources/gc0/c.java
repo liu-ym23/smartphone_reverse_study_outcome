@@ -1,0 +1,16 @@
+package gc0;
+
+import com.bytedance.android.livesdk.widget.SeekBarWithProgress;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+public interface c {
+    String a();
+
+    SeekBarWithProgress.b b();
+
+    int c();
+
+    int d();
+
+    void onProgressChanged(int r1);
+}

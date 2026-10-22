@@ -1,0 +1,59 @@
+package com.bytedance.android.live.gson;
+
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+public class BooleanTypeAdapterForSaaS extends TypeAdapter<Boolean> {
+
+    public static /* synthetic */ class a {
+        public static final /* synthetic */ int[] a = null;
+
+        static {
+            int[] r0 = new int[JsonToken.values().length];
+            a = r0;
+            r0[JsonToken.BOOLEAN.ordinal()] = 1;     // Catch: NoSuchFieldError -> L7
+        L10:
+            a[JsonToken.NULL.ordinal()] = 2;     // Catch: NoSuchFieldError -> L8
+        L12:
+            a[JsonToken.NUMBER.ordinal()] = 3;     // Catch: NoSuchFieldError -> L9
+            return;
+        }
+    }
+
+    public BooleanTypeAdapterForSaaS() {
+    }
+
+    public final Object read(JsonReader r5) throws IOException {
+        JsonToken r0 = r5.peek();
+        int r1 = a.a[r0.ordinal()];
+        boolean r2 = true;
+        if (r1 == 1) goto L17;
+        if (r1 != 2) goto L7;
+        r5.nextNull();
+        return null;
+    L7:
+        if (r1 != 3) goto L14;
+        if (r5.nextInt() != 0) goto L18;
+        r2 = false;
+    L18:
+        return Boolean.valueOf(r2);
+    L14:
+        throw new JsonParseException("Expected BOOLEAN or NUMBER but was " + r0);
+    L17:
+        return Boolean.valueOf(r5.nextBoolean());
+    }
+
+    public final void write(JsonWriter r1, Object r2) throws IOException {
+        Boolean r3 = (Boolean) r2;
+        if (r3 != null) goto L5;
+        r1.nullValue();
+        return;
+    L5:
+        r1.value(r3);
+    }
+}

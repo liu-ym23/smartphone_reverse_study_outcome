@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="600808520"
+    android:versionName="6.8.8"
+    android:compileSdkVersion="33"
+    android:compileSdkVersionCodename="13"
+    package="com.obric.matrix"
+    platformBuildVersionCode="33"
+    platformBuildVersionName="13">
+    <uses-sdk
+        android:minSdkVersion="30"
+        android:targetSdkVersion="33"/>
+    <queries>
+        <package android:name="com.larus.nova"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data
+                android:scheme="lark"
+                android:host="ssoclient"/>
+        </intent>
+        <package android:name="com.obric.aiagent.executionengine"/>
+    </queries>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="com.picovr.permission.SEND_BROADCAST"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.obric.account.permission.LOGOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="com.obric.matrix.platform.sdk.ones.provider.READ_WS_MSG"/>
+    <protected-broadcast android:name="android.intent.action.WS_STATUS"/>
+    <uses-permission android:name="android.permission.GET_INTENT_SENDER_INTENT"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <permission
+        android:name="com.obric.account.permission.ACCOUNT_STATUS"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.obric.account.permission.ACCOUNT_STATUS"/>
+    <protected-broadcast android:name="obric.intent.action.account.LOGIN"/>
+    <protected-broadcast android:name="obric.intent.action.account.LOGOUT"/>
+    <protected-broadcast android:name="obric.intent.action.account.ACCOUNT_INFO_UPDATE"/>
+    <protected-broadcast android:name="obric.intent.action.account.SECURE_LOGIN"/>
+    <protected-broadcast android:name="obric.intent.action.account.SECURE_LOGOUT"/>
+    <protected-broadcast android:name="obric.intent.action.account.SECURE_ACCOUNT_INFO_UPDATE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="com.android.systemui.permission.SELF"/>
+    <permission
+        android:label="Data service permission"
+        android:name="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.ocean.oms.permission.BIND_OMS_DEVICE_INFO_SERVICE"/>
+    <uses-permission android:name="com.ocean.oms.permission.BIND_OMS_MONITOR_SERVICE"/>
+    <permission
+        android:name="android.permission.UPDATE_APP_BADGE"
+        android:protectionLevel="normal"/>
+    <permission
+        android:name="android.permission.READ_APP_BADGE"
+        android:protectionLevel="normal"/>
+    <uses-permission android:name="obric.launcher.UPDATE_BADGE_OR_MSG"/>
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS"/>
+    <permission
+        android:label="Permission to receive settings update broadcasts"
+        android:name="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"
+        android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.obric.matrix.permission.dynamicreceiver"/>
+    <uses-permission android:name="com.obric.matrix.permission.dynamicreceiver"/>
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
+    <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE"/>
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22"/>
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <permission
+        android:name="com.obric.matrix.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.obric.matrix.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <permission
+        android:name="com.obric.olog.ACCESS_LOG_COMPRESSION_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.soter.permission.ACCESS_SOTER_KEYSTORE"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="com.huawei.permission.ACCESS_HW_KEYSTORE"/>
+    <uses-permission android:name="com.hihonor.security.permission.ACCESS_THREAT_DETECTION"/>
+    <uses-permission android:name="os.permission.BIND_TEA_TRACKER_SERVICE"/>
+    <uses-permission android:name="os.permission.appstate.change"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.bd.mpaas.base.MiddlewareApplication"
+        android:allowClearUserData="false"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:directBootAware="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data
+            android:name="teatracker_app_id"
+            android:value="@string/app_id"/>
+        <meta-data
+            android:name="teatracker_app_channel"
+            android:value="release"/>
+        <meta-data
+            android:name="rtc_version_code"
+            android:value="34101"/>
+        <meta-data
+            android:name="matrix_social_feature_support"
+            android:value="true"/>
+        <meta-data
+            android:name="audio_mode_feature"
+            android:value="2"/>
+        <meta-data
+            android:name="matrix_intent_service_feature"
+            android:value="1"/>
+        <meta-data
+            android:name="broadcast_authorize"
+            android:value="1"/>
+        <meta-data
+            android:name="douyin_auth_feature"
+            android:value="2"/>
+        <meta-data
+            android:name="one_party_net_request_support"
+            android:value="true"/>
+        <meta-data
+            android:name="get_pico_info_feature"
+            android:value="1"/>
+        <meta-data
+            android:name="get_authorize_list_feature"
+            android:value="2"/>
+        <meta-data
+            android:name="UPDATE_VERSION_CODE"
+            android:value="600808520"/>
+        <activity android:name="com.obric.matrix.PpeSettingsActivity"/>
+        <activity
+            android:name="com.obric.matrix.PushBadgeTestActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/TranslucentTheme2"
+            android:name="com.obric.matrix.auth.AccountGroupAuthActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:theme="@style/TranslucentTheme2"
+            android:name="com.obric.matrix.auth.AccountGroupAuthActivity2"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <service
+            android:name="com.obric.matrix.MainService"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="com.obric.matrix.SelfUpdateReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.obric.matrix.push.service.CoreService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.matrix.action.CROSS_PROCESS"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.matrix.push.action.NOTIFICATION_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.obric.matrix.push.receiver.CoreBroadCastReceiver"
+            android:exported="true"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.matrix.push.receiver.PushHandlerReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.obric.matrix.push.action.ALARM_SERVICE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.matrix.push.action.CLICK_PUSH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.matrix.push.action.DELETE_PUSH"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.obric.matrix.account.service.OAccountService"
+            android:enabled="true"
+            android:exported="true"/>
+        <provider
+            android:name="com.obric.matrix.account.provider.OAccountProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.obric.common.account.provider"/>
+        <service
+            android:name="com.obric.matrix.opush.service.CoreService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.matrix.action.CROSS_PROCESS"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.obric.matrix.opush.service.NotificationEventService"
+            android:exported="false"/>
+        <receiver
+            android:name="com.obric.matrix.opush.receiver.CoreBroadCastReceiver"
+            android:exported="true"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.matrix.opush.receiver.PushHandlerReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.obric.matrix.opush.action.ALARM_SERVICE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.matrix.opush.action.CLICK_PUSH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.obric.matrix.opush.action.DELETE_PUSH"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.obric.matrix.opush.receiver.SystemUiNotificationCallbackReceiver"
+            android:permission="com.android.systemui.permission.SELF"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.systemui.action.NOTIFICATION_POSTED_CALLBACK"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.obric.matrix.dataanalysis.DataService"
+            android:permission="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.matrix.dataanalysis.service"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.obric.capabilitykit.CapabilityHandleService"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="com.obric.matrix.server.MatrixServer"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="com.obric.matrix.server.MatrixIntentService"
+            android:exported="true"/>
+        <provider
+            android:name="com.obric.matrix.server.MatrixForThirdProvider"
+            android:exported="true"
+            android:authorities="com.obric.matrix.third.provider"/>
+        <provider
+            android:name="com.obric.matrix.common.cmd.CmdHandlerProvider"
+            android:exported="true"
+            android:authorities="com.obric.matrix.sdk.cmd.handler.provider"/>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6dfa9a399eb568557182f10f12e1f30b"/>
+        <service android:name="com.amap.api.location.APSService"/>
+        <receiver
+            android:name="com.obric.matrix.location.receiver.LocationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.obric.matrix.location.service.LocationService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="obric.intent.action.location.LOCATION_ALARM"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.obric.matrix.deviceinfo.DeviceInfoBackendService"
+            android:permission="com.ocean.oms.permission.BIND_OMS_DEVICE_INFO_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bytedance.os.oms.deviceinfo.action.BIND_BACKEND"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.obric.matrix.monitor.OmsMonitorBackendService"
+            android:permission="com.ocean.oms.permission.BIND_OMS_MONITOR_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bytedance.os.oms.monitor.action.BIND_BACKEND"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.matrix.badge.MessageBadgeProvider"
+            android:readPermission="android.permission.UPDATE_APP_BADGE"
+            android:exported="true"
+            android:multiprocess="true"
+            android:authorities="com.bytedanceos.launcher.badge"/>
+        <provider
+            android:name="com.obric.matrix.badge.CommonBadgeNumProvider"
+            android:readPermission="android.permission.READ_APP_BADGE"
+            android:exported="true"
+            android:multiprocess="true"
+            android:authorities="com.android.badge"/>
+        <receiver
+            android:name="com.obric.matrix.badge.BadgeBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BADGE_COUNT_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.obric.matrix.base.settings.MatrixSdkSettingsProvider"
+            android:exported="true"
+            android:authorities="com.obric.matrix.sdk.settings.provider"/>
+        <provider
+            android:name="com.obric.matrix.base.settings.SystemAppSettingsProvider"
+            android:exported="true"
+            android:authorities="com.obric.matrix.systemapp.settings.provider"/>
+        <provider
+            android:name="com.obric.matrix.base.env.BoeProvider"
+            android:exported="true"
+            android:authorities="com.obric.matrix.boe"/>
+        <provider
+            android:name="com.obric.matrix.base.event.OutwardEventProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.obric.matrix.outward_event_provider"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.obric.matrix.common_utils.restart.RestartAppActivity"
+            android:exported="false"
+            android:process=":matrix2"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.obric.matrix.common_utils.restart.EmptyActivity"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedance.boost_multidex.OptimizeService"
+            android:exported="false"
+            android:process=":boost_multidex"/>
+        <meta-data
+            android:name="com.bytedance.feedbackerlib.larkScheme"
+            android:value="lka5086bf562bb500c"/>
+        <provider
+            android:name="com.bytedance.feedbackerlib.provider.FeedbackerContentProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":feedbacker"
+            android:authorities="com.obric.matrix.feedbacker.cache"/>
+        <service
+            android:name="com.bytedance.feedbackerlib.service.FloatWindowService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":feedbacker"
+            android:foregroundServiceType="mediaProjection"/>
+        <activity
+            android:theme="@style/DialogActivity"
+            android:name="com.bytedance.feedbackerlib.activity.DialogActivity"
+            android:multiprocess="true"/>
+        <activity
+            android:theme="@style/DialogActivity"
+            android:name="com.bytedance.feedbackerlib.activity.RequestOverlayWindowPermissionActivity"
+            android:process=":feedbacker"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name="com.bytedance.feedbackerlib.activity.FeedbackActivity"
+            android:process=":feedbacker"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:theme="@style/TranslucentNoActionBar"
+            android:name="com.bytedance.feedbackerlib.activity.TranslucentOnePixelActivity"
+            android:process=":feedbacker"/>
+        <activity
+            android:name="com.bytedance.feedbackerlib.matisse.ui.MatisseActivity"
+            android:process=":feedbacker"/>
+        <activity
+            android:name="com.bytedance.feedbackerlib.matisse.internal.ui.AlbumPreviewActivity"
+            android:process=":feedbacker"/>
+        <activity
+            android:name="com.bytedance.feedbackerlib.matisse.internal.ui.SelectedPreviewActivity"
+            android:process=":feedbacker"/>
+        <provider
+            android:name="com.bytedance.apm.battery.dao.MonitorContentProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.apm"/>
+        <activity
+            android:theme="@style/twice_verify.ActivityDialogStyle"
+            android:name="com.bytedance.bdturing.twiceverify.TwiceVerifyWebActivity"
+            android:exported="false"
+            android:multiprocess="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize"/>
+        <provider
+            android:name="com.bytedance.bdturing.ttnet.BdTuringInitProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.bdturing.InitProvider"
+            android:initOrder="9"/>
+        <receiver
+            android:name="com.bytedance.applog.collector.Collector"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.obric.olog.ConfigService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.obric.ologaction"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.obric.olog.OLog"
+            android:exported="false"
+            android:authorities="com.obric.matrix.contextprovider"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="com.ss.android.larksso.LarkSSOActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:name="com.ss.android.account.share.data.write.activity.ShareDataActivity"
+            android:exported="true"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:name="com.ss.android.account.share.data.read.ReadTempActivity"/>
+        <provider
+            android:name="com.ss.android.account.share.data.write.provider.SecShareDataProvider"
+            android:exported="true"
+            android:authorities="com.obric.matrix.SecShareProviderAuthority"/>
+        <provider
+            android:name="com.bytedance.push.settings.storage.PushProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.push.settings"/>
+        <activity android:name="com.bytedance.bdinstall.migrate.MigrateDetectorActivity"/>
+        <provider
+            android:name="com.bytedance.bdinstall.BDInstallProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.bdinstall.provider"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.ss.android.account.group_onekey.AccountGroupAuthCallbackActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity-alias
+            android:name="com.obric.matrix.auth.AccountGroupAuthCallbackActivity"
+            android:exported="true"
+            android:targetActivity="com.ss.android.account.group_onekey.AccountGroupAuthCallbackActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:name="com.ss.android.ShowDialogActivity"/>
+        <provider
+            android:name="com.ss.android.token.AuthTokenMultiProcessSharedProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.auth_token.SHARE_PROVIDER_AUTHORITY"/>
+        <provider
+            android:name="com.ss.android.token.TokenObjectProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.TokenObjectProvider"/>
+        <service
+            android:name="com.bytedance.common.wschannel.server.WsChannelService"
+            android:exported="false"
+            android:process=":push"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.bytedance.common.wschannel.client.WsClientService"
+            android:exported="false"
+            android:stopWithTask="true"/>
+        <provider
+            android:name="com.bytedance.common.wschannel.WsChannelMultiProcessSharedProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.WsChannelMultiProcessSharedProvider"/>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <provider
+            android:name="com.obric.olog.salvage.LogCompressionProvider"
+            android:exported="true"
+            android:authorities="com.obric.matrix.logcompressionprovider"/>
+        <provider
+            android:name="com.bytedance.android.sdk.bdticketguard.TicketGuardProvider"
+            android:exported="false"
+            android:authorities="com.obric.matrix.TicketGuardProvider"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name="com.obric.oui.window.permission.PrivacyStatementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.oui.window.permission.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <meta-data
+            android:name="_mp_channel"
+            android:value="release"/>
+        <meta-data
+            android:name="_mp_rpcUrl"
+            android:value="http://is.snssdk.com"/>
+        <meta-data
+            android:name="_mp_locationUrl"
+            android:value="https://is.snssdk.com"/>
+        <meta-data
+            android:name="_mp_settingsUrl"
+            android:value="https://is.snssdk.com"/>
+        <meta-data
+            android:name="_mp_shareUrl"
+            android:value="http://i.snssdk.com"/>
+        <meta-data
+            android:name="_mp_accountUrl"
+            android:value="security.snssdk.com"/>
+        <meta-data
+            android:name="_mp_appCloudName"
+            android:value="buscommonshell"/>
+        <meta-data
+            android:name="_mp_routerScheme"
+            android:value="buscommonshell"/>
+        <meta-data
+            android:name="_mp_appId"
+            android:value="508474"/>
+        <meta-data
+            android:name="_mp_lastCommitId"
+            android:value="f68053159"/>
+    </application>
+</manifest>

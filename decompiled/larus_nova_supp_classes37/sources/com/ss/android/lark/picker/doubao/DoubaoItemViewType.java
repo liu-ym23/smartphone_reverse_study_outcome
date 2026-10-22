@@ -1,0 +1,22 @@
+package com.ss.android.lark.picker.doubao;
+
+import com.ss.android.lark.picker.base.view.ItemViewType;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes37.dex */
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0005\bÀ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u000e\u0010\u0004\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000¨\u0006\n"}, d2 = {"Lcom/ss/android/lark/picker/doubao/DoubaoItemViewType;", "", "<init>", "()V", "ITEM_VIEW_TYPE_CCM", "", "ITEM_VIEW_TYPE_CHATTER", "ITEM_VIEW_TYPE_CHAT", "ITEM_VIEW_TYPE_THREAD", "ITEM_VIEW_TYPE_REPLY_IN_THREAD", "picker-doubao_release"}, k = 1, mv = {2, 1, 0}, xi = ItemViewType.ITEM_VIEW_TYPE_DOUBAO_COMMON_CCM)
+public final class DoubaoItemViewType {
+    public static final DoubaoItemViewType INSTANCE = null;
+    public static final int ITEM_VIEW_TYPE_CCM = 6;
+    public static final int ITEM_VIEW_TYPE_CHAT = 1;
+    public static final int ITEM_VIEW_TYPE_CHATTER = 0;
+    public static final int ITEM_VIEW_TYPE_REPLY_IN_THREAD = 33;
+    public static final int ITEM_VIEW_TYPE_THREAD = 7;
+
+    static {
+        INSTANCE = new DoubaoItemViewType();
+    }
+
+    private DoubaoItemViewType() {
+    }
+}

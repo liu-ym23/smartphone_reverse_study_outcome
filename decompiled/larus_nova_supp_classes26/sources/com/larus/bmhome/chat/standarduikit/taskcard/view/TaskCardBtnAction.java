@@ -1,0 +1,59 @@
+package com.larus.bmhome.chat.standarduikit.taskcard.view;
+
+import kotlin.Metadata;
+import kotlin.enums.EnumEntries;
+import kotlin.enums.EnumEntriesKt;
+import r27.a;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes26.dex */
+@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\b\n\u0002\b\u000b\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\u0011\b\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0004\b\u0004\u0010\u0005R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\r¨\u0006\u000e"}, d2 = {"Lcom/larus/bmhome/chat/standarduikit/taskcard/view/TaskCardBtnAction;", "", "value", "", "<init>", "(Ljava/lang/String;II)V", "getValue", "()I", "APPEND_MESSAGE", "DIRECT_ANSWER", "SKIP", "OPERATING", "AUTHORIZE", "STOP_TASK", "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final enum TaskCardBtnAction extends Enum<TaskCardBtnAction> {
+    public static final TaskCardBtnAction APPEND_MESSAGE = null;
+    public static final TaskCardBtnAction AUTHORIZE = null;
+    public static final TaskCardBtnAction DIRECT_ANSWER = null;
+    public static final TaskCardBtnAction OPERATING = null;
+    public static final TaskCardBtnAction SKIP = null;
+    public static final TaskCardBtnAction STOP_TASK = null;
+    public static final /* synthetic */ TaskCardBtnAction[] a = null;
+    public static final /* synthetic */ EnumEntries b = null;
+    private final int value;
+
+    public static EnumEntries<TaskCardBtnAction> getEntries() {
+        return b;
+    }
+
+    static {
+        TaskCardBtnAction r0 = new TaskCardBtnAction("APPEND_MESSAGE", 0, 1);
+        APPEND_MESSAGE = r0;
+        TaskCardBtnAction r1 = new TaskCardBtnAction("DIRECT_ANSWER", 1, 2);
+        DIRECT_ANSWER = r1;
+        TaskCardBtnAction r4 = new TaskCardBtnAction("SKIP", 2, 3);
+        SKIP = r4;
+        TaskCardBtnAction r6 = new TaskCardBtnAction("OPERATING", 3, 4);
+        OPERATING = r6;
+        TaskCardBtnAction r8 = new TaskCardBtnAction("AUTHORIZE", 4, 5);
+        AUTHORIZE = r8;
+        TaskCardBtnAction r10 = new TaskCardBtnAction("STOP_TASK", 5, 6);
+        STOP_TASK = r10;
+        TaskCardBtnAction[] r12 = {r0, r1, r4, r6, r8, r10};
+        a = r12;
+        b = EnumEntriesKt.enumEntries(r12);
+    }
+
+    public static TaskCardBtnAction[] values() {
+        return (TaskCardBtnAction[]) a.clone();
+    }
+
+    public final int getValue() {
+        return this.value;
+    }
+
+    public static TaskCardBtnAction valueOf(String r1) {
+        return (TaskCardBtnAction) a.a(TaskCardBtnAction.class, r1);
+    }
+
+    public TaskCardBtnAction(String r1, int r2, int r3) {
+        super(r1, r2);
+        this.value = r3;
+    }
+}

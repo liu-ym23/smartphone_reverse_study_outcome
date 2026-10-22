@@ -1,0 +1,11 @@
+package com.ss.android.lark.feed.shared.databinding;
+
+import android.view.View;
+import androidx.viewbinding.ViewBinding;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes35.dex */
+public final class ItemFeedSwipeActionV2Binding implements ViewBinding {
+    public final View getRoot() {
+        return null;
+    }
+}

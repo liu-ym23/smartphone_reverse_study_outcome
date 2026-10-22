@@ -1,0 +1,105 @@
+package com.bytedance.android.livesdk.chatroom.widget;
+
+import android.animation.Animator;
+import android.view.View;
+import com.bytedance.android.live.core.utils.UtilityKotlinExtentionsKt;
+import java.util.ArrayList;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lcom/bytedance/android/live/room/api/visibilitycontrol/d;", "item", "", "invoke", "(Lcom/bytedance/android/live/room/api/visibilitycontrol/d;)V", "realHandle"}, k = 3, mv = {1, 4, 3})
+public final class LiveVisibilityControlWidget$handleRightViews$1 extends Lambda implements Function1<com.bytedance.android.live.room.api.visibilitycontrol.d, Unit> {
+    final /* synthetic */ long $duration;
+    final /* synthetic */ boolean $entiretyVisible;
+    final /* synthetic */ LiveVisibilityControlWidget this$0;
+
+    public LiveVisibilityControlWidget$handleRightViews$1(LiveVisibilityControlWidget r1, boolean r2, long r3) {
+        this.this$0 = r1;
+        this.$entiretyVisible = r2;
+        this.$duration = r3;
+        super(1);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public final void invoke(com.bytedance.android.live.room.api.visibilitycontrol.d r13) {
+        Intrinsics.checkNotNullParameter(r13, "item");
+        if (r13.n == true) goto L5;
+        boolean r0 = this.$entiretyVisible;
+    L9:
+        int r2 = !r0;
+        Integer r3 = (Integer) r13.e.getValue();
+        if (r3 != null) goto L13;
+    L15:
+        r13.e.postValue(Integer.valueOf(r2));
+        float r4 = 0.0f;
+        if (r0 == 0) goto L18;
+        float r8 = 0.0f;
+    L19:
+        int r5 = e1.h[r13.j.ordinal()];
+        if (r5 == 1) goto L36;
+        if (r5 != 2) goto L49;
+        float r9 = (this.this$0.u - r13.d) - UtilityKotlinExtentionsKt.h(r13.k);
+        if (this.$duration <= 0) goto L30;
+        if (r0 == 0) goto L28;
+        float r7 = UtilityKotlinExtentionsKt.h(65);
+    L29:
+        ((ArrayList) this.this$0.v).add(LiveVisibilityControlWidget.xq(this.this$0, r13.h, r7, r8, r9, this.$duration));
+        return;
+    L28:
+        r7 = 0.0f;
+        goto L29
+    L30:
+        View r14 = r13.h;
+        if (r0 != 0) goto L34;
+        r4 = r9;
+    L34:
+        r14.setTranslationX(r4);
+        return;
+    L49:
+        return;
+    L36:
+        if (this.$duration <= 0) goto L41;
+        LiveVisibilityControlWidget r6 = this.this$0;
+        View r10 = r13.h;
+        Animator r1 = LiveVisibilityControlWidget.zq(r6, r10, r10.getTranslationX(), r8, this.$duration);
+        LiveVisibilityControlWidget r11 = this.this$0;
+        View r15 = r13.h;
+        if (r0 == 0) goto L40;
+        r4 = 1.0f;
+    L40:
+        Animator r16 = LiveVisibilityControlWidget.wq(r11, r15, r4, this.$duration);
+        ((ArrayList) this.this$0.v).add(r1);
+        ((ArrayList) this.this$0.v).add(r16);
+        return;
+    L41:
+        View r12 = r13.h;
+        if (r0 == 0) goto L44;
+        r4 = 1.0f;
+    L44:
+        r12.setAlpha(r4);
+        r13.h.setTranslationX(r8);
+        return;
+    L18:
+        r8 = UtilityKotlinExtentionsKt.h(65);
+        goto L19
+    L13:
+        if (r3.intValue() != r2) goto L15;
+        return;
+    L5:
+        if (this.$entiretyVisible == true) goto L7;
+        r0 = 1;
+        goto L9
+    L7:
+        r0 = 0;
+        goto L9
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1) {
+        invoke((com.bytedance.android.live.room.api.visibilitycontrol.d) r1);
+        return Unit.INSTANCE;
+    }
+}

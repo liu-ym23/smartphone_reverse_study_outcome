@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appinfo_root"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="79dp"
+        android:layout_alignParentBottom="true"/>
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_layout"/>
+    <ImageView
+        android:id="@+id/footer_shadow"
+        android:background="@drawable/tab_shadow"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_layout"
+        android:contentDescription="@null"/>
+</RelativeLayout>

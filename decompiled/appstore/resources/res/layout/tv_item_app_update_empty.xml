@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_empty_layout"
+    android:background="@color/oui_green_2"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_52">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:src="@drawable/oui_update_icon"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"/>
+    <TextView
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:text="@string/myapp_list_update_empty"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_centerVertical="true"
+        style="@style/Label_L"/>
+</RelativeLayout>

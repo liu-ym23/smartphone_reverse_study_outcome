@@ -1,0 +1,58 @@
+package com.larus.platform.model.chat;
+
+import com.google.gson.annotations.SerializedName;
+import com.tencent.open.log.TraceLevel;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes31.dex */
+@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0007\n\u0002\b\n\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u0086\b\u0018\u00002\u00020\u0001B\u001b\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006J\t\u0010\n\u001a\u00020\u0003HÆ\u0003J\t\u0010\u000b\u001a\u00020\u0003HÆ\u0003J\u001d\u0010\f\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u0003HÆ\u0001J\u0013\u0010\r\u001a\u00020\u000e2\b\u0010\u000f\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u0010\u001a\u00020\u0011HÖ\u0001J\t\u0010\u0012\u001a\u00020\u0013HÖ\u0001R\u0016\u0010\u0002\u001a\u00020\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0016\u0010\u0004\u001a\u00020\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\b¨\u0006\u0014"}, d2 = {"Lcom/larus/platform/model/chat/CameraMarkStyleConfig;", "", "lineWidth", "", "lineAlpha", "<init>", "(FF)V", "getLineWidth", "()F", "getLineAlpha", "component1", "component2", "copy", "equals", "", "other", "hashCode", "", "toString", "", "platform_release"}, k = 1, mv = {2, 1, 0}, xi = TraceLevel.ABOVE_WARN)
+public final class g {
+
+    @SerializedName("camara_mark_line_alpha")
+    private final float lineAlpha;
+
+    @SerializedName("camara_mark_line_width")
+    private final float lineWidth;
+
+    public g() {
+        this(0);
+    }
+
+    public final boolean equals(Object r5) {
+        if (this != r5) goto L6;
+        return true;
+    L6:
+        if ((r5 instanceof g) == true) goto L8;
+        return false;
+    L8:
+        g r6 = (g) r5;
+        if (Float.compare(this.lineWidth, r6.lineWidth) == 0) goto L12;
+        return false;
+    L12:
+        if (Float.compare(this.lineAlpha, r6.lineAlpha) == 0) goto L14;
+        return false;
+    L14:
+        return true;
+    }
+
+    public final int hashCode() {
+        return (Float.floatToIntBits(this.lineWidth) * 31) + Float.floatToIntBits(this.lineAlpha);
+    }
+
+    public final String toString() {
+        return "CameraMarkStyleConfig(lineWidth=" + this.lineWidth + ", lineAlpha=" + this.lineAlpha + ')';
+    }
+
+    public final float a() {
+        return this.lineAlpha;
+    }
+
+    public final float b() {
+        return this.lineWidth;
+    }
+
+    public g(int r1) {
+        this.lineWidth = 6.0f;
+        this.lineAlpha = 1.0f;
+    }
+}

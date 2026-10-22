@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topic_banner_layout"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/topic_banner_slimness_height">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topic_banner_card"
+        android:layout_width="@dimen/topic_banner_card_width"
+        android:layout_height="@dimen/topic_banner_card_slimness_height"
+        android:layout_marginLeft="@dimen/topic_banner_margin_horizontal"
+        android:layout_marginTop="@dimen/topic_banner_margin_top"
+        android:layout_marginRight="@dimen/topic_banner_margin_horizontal"
+        android:layout_marginBottom="@dimen/topic_banner_margin_bottom"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="0dp">
+        <com.bytedanceos.common.network.widget.NetworkImageView
+            android:id="@+id/topic_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:contentDescription="@null"/>
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@null"/>
+    <ImageView
+        android:id="@+id/topic_banner_shadow"
+        android:background="@drawable/banner_shadow_10dp"
+        android:layout_width="@dimen/topic_banner_shadow_width"
+        android:layout_height="@dimen/topic_banner_shadow_slimness_height"
+        android:layout_marginLeft="@dimen/topic_banner_shadow_margin"
+        android:layout_marginTop="@dimen/topic_banner_margin_top"
+        android:layout_marginRight="@dimen/topic_banner_shadow_margin"
+        android:layout_marginBottom="@dimen/topic_banner_shadow_margin"
+        android:contentDescription="@null"/>
+</RelativeLayout>

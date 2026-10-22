@@ -1,0 +1,11 @@
+package q20;
+
+import java.util.Map;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+public final class h {
+    public static Map<String, r20.a> a;
+
+    static {
+    }
+}

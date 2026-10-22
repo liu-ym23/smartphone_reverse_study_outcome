@@ -1,0 +1,19 @@
+package com.larus.bmhome.chat.list.cell.record;
+
+import java.util.Map;
+import kotlin.jvm.functions.Function0;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+public final /* synthetic */ class a implements Function0 {
+    public final /* synthetic */ RecordCardCell a;
+
+    public /* synthetic */ a(RecordCardCell r1) {
+        this.a = r1;
+    }
+
+    public final Object invoke() {
+        RecordCardCell r0 = this.a;
+        Map r1 = RecordCardCell.m;
+        return (de8.c) lf8.a.c(r0, de8.c.class);
+    }
+}

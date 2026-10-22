@@ -1,0 +1,10 @@
+package com.bytedance.anniex.bd.foundation.impl;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes14.dex */
+public final class f {
+    public static final SLNetworkImpl a = null;
+
+    static {
+        a = new SLNetworkImpl();
+    }
+}

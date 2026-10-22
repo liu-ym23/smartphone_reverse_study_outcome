@@ -1,0 +1,25 @@
+package com.larus.bmhome.chat.component.input;
+
+import com.larus.bmhome.chat.cell.MessageCellStateTransformerType;
+import com.larus.bmhome.chat.component.camera.CameraInputFragment;
+import com.larus.camera.api.IInputServiceProvider;
+import com.larus.camera.impl.ui.component.result.inputtable.ResultInputControlBinder;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+@Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0007H\u0016J\u0010\u0010\b\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0007H\u0016¨\u0006\t"}, d2 = {"Lcom/larus/bmhome/chat/component/input/InputServiceProviderImpl;", "Lcom/larus/camera/api/IInputServiceProvider;", "<init>", "()V", "createInjectToCameraService", "Lcom/larus/bmhome/injectinput/IInjectInputService;", "callback", "Lcom/larus/bmhome/injectinput/IInjectInputCallback;", "createInjectToPhotoPickerService", "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = MessageCellStateTransformerType.Z_LOTTERY_GUIDE_CELL)
+public final class InputServiceProviderImpl implements IInputServiceProvider {
+    public InputServiceProviderImpl() {
+    }
+
+    public final InjectInputServiceProxy a(ResultInputControlBinder.a r4) {
+        Intrinsics.checkNotNullParameter(r4, "callback");
+        return new InjectInputServiceProxy(CameraInputFragment.class, InputServiceProviderImpl$createInjectToCameraService$1.INSTANCE, r4);
+    }
+
+    public final InjectInputServiceProxy b(op8.c r4) {
+        Intrinsics.checkNotNullParameter(r4, "callback");
+        return new InjectInputServiceProxy(InjectInputFragment.class, InputServiceProviderImpl$createInjectToPhotoPickerService$1.INSTANCE, r4);
+    }
+}

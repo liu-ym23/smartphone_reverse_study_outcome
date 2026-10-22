@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="100dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp">
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_h_m1"
+        android:layout_marginTop="8dp"
+        app:sectionTitle_titleText="PPE环境"/>
+    <com.obric.oui.forms.OInputView
+        android:id="@+id/input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oui_showLabel="false"/>
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_h_m1"
+        android:layout_marginTop="8dp"
+        app:sectionTitle_titleText="最近5次Commit"/>
+    <TextView
+        android:textColor="@color/oui_text_3"
+        android:id="@+id/commit_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Label_M_Thin"/>
+    <com.obric.oui.sectiontitlebar.OSectionTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_h_m1"
+        android:layout_marginTop="8dp"
+        app:sectionTitle_titleText="应用版本"/>
+    <TextView
+        android:textColor="@color/oui_text_3"
+        android:id="@+id/version_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Label_M_Thin"/>
+</LinearLayout>

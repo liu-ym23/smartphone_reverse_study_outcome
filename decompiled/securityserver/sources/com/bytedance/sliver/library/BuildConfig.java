@@ -1,0 +1,5 @@
+package com.bytedance.sliver.library;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class BuildConfig {
+}

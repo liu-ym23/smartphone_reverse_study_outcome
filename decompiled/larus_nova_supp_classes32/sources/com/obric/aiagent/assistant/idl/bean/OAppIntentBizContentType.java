@@ -1,0 +1,42 @@
+package com.obric.aiagent.assistant.idl.bean;
+
+import com.obric.aivoice.core.data.NameKeys;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes32.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\b\u0007\u0018\u0000 \u00042\u00020\u0001:\u0001\u0004B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0005"}, d2 = {"Lcom/obric/aiagent/assistant/idl/bean/OAppIntentBizContentType;", NameKeys.UnloadStrategy_No_Strategy, "<init>", "()V", "Companion", "assistant-ipc_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class OAppIntentBizContentType {
+    public static final String CLOCK_CARD = "obric_clock_card";
+    public static final String CONTACT_CARD = "obric_contact_card";
+    public static final String COUNTDOWN_CARD = "obric_countdown_card";
+    public static final a Companion = null;
+    public static final String DM_CARD = "obric_dm_card";
+    public static final String DOWNLOAD_APP_CARD = "obric_download_app_card";
+    public static final String EVENT_TASK_CARD = "obric_event_task_card";
+    public static final String MEMORY_CARD = "obric_memory_card";
+    public static final String MSG_CONFIRM_CARD = "obric_msg_confirm_card";
+    public static final String MSG_DISPLAY_CARD = "obric_msg_display_card";
+    public static final String MUSIC_CARD = "obric_music_card";
+    public static final String NOTE_CARD = "obric_note_card";
+    public static final String PHONE_CARD = "obric_phone_card";
+    public static final String RECORDER_CARD = "obric_recorder_card";
+    public static final String REMOTE_CARD = "obric_remote_card";
+    public static final String REMOTE_CARD_ITEM = "obric_remote_card_item";
+    public static final String SCHEDULE_CARD = "obric_schedule_card";
+    public static final String SEARCH_RESULT_CARD = "obric_searchresult_card";
+    public static final String SETTING_CARD = "obric_setting_card";
+    public static final String SMS_CARD = "obric_sms_card";
+    public static final String USER_REMIND_CARD = "obric_user_remind_card";
+
+    public static final class a {
+        public a() {
+        }
+    }
+
+    static {
+        Companion = new a();
+    }
+
+    public OAppIntentBizContentType() {
+    }
+}

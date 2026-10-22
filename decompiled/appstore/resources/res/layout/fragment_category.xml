@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedanceos.common.ui.widget.ParentView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/category_gv"
+        android:visibility="gone"
+        android:listSelector="@android:color/transparent"
+        android:layout_below="@+id/line"
+        style="@style/grid_view_style"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/app_list_lv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.obric.oui.chip.OChipGroup
+            android:id="@+id/second_category_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="12dp"
+            app:oui_item_space="8dp"
+            app:oui_line_space="8dp"/>
+        <RelativeLayout
+            android:orientation="vertical"
+            android:id="@+id/category_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.obric.oui.divider.ODivider
+                android:layout_width="match_parent"
+                android:layout_height="0.66dp"
+                android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/appinfo_replace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.bytedanceos.common.ui.widget.ParentView>

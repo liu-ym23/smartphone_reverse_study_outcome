@@ -1,0 +1,29 @@
+package com.bytedance.android.shopping.buynow.ultimate.func;
+
+import com.bytedance.android.shopping.buynow.viewmodel.BuyNowViewModel;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes13.dex */
+public final class f extends com.bytedance.kmp.ec.yata.event.common.a {
+    public final BuyNowViewModel a;
+
+    public static final class a {
+    }
+
+    static {
+    }
+
+    public f(BuyNowViewModel r2) {
+        Intrinsics.checkNotNullParameter(r2, "viewModel");
+        this.a = r2;
+    }
+
+    public final void c(com.bytedance.kmp.ec.yata.event.core.a r3, Function1 r4) {
+        Intrinsics.checkNotNullParameter(r3, "input");
+        Intrinsics.checkNotNullParameter(r4, "chainNextCallback");
+        this.a.getSkuService().o(r3);
+        int r5 = com.bytedance.kmp.ec.yata.chain.event.b.h;
+        r4.invoke(com.bytedance.kmp.ec.yata.chain.event.b.a.c(false, null, null, 7));
+    }
+}

@@ -1,0 +1,15 @@
+package com.bytedance.android.brick.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.CLASS)
+public @interface BrickFallbackModule {
+    Class<?>[] contributesTo();
+
+    String name();
+}

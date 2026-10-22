@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/ll_gift"
+        android:background="@color/bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/tv_gift_all"
+            android:background="@drawable/selector_gift_all"
+            android:paddingLeft="40dp"
+            android:paddingTop="9dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部礼包"/>
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/tv_gift_my"
+            android:background="@drawable/selector_gift_my"
+            android:paddingLeft="40dp"
+            android:paddingTop="9dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1dp"
+            android:text="我的礼包"/>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

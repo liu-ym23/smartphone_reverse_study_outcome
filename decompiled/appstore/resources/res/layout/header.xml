@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/header_style">
+    <ViewStub
+        android:id="@+id/vs_toolbar"
+        android:layout="@layout/abc_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedanceos.common.ui.widget.oui.OUISearchBar
+        android:id="@+id/searchbar_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="12dp"/>
+    <ViewFlipper
+        android:id="@+id/cover_searchbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@anim/push_up_in"
+        android:outAnimation="@anim/push_up_out"
+        android:flipInterval="4000"
+        android:layout_alignLeft="@+id/searchbar_edit_layout"
+        android:layout_alignTop="@+id/searchbar_edit_layout"
+        android:layout_alignRight="@+id/searchbar_edit_layout"
+        android:layout_alignBottom="@+id/searchbar_edit_layout"
+        android:layout_marginHorizontal="52dp"/>
+</RelativeLayout>

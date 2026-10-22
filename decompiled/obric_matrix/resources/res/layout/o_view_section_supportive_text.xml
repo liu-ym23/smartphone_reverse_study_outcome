@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="4dp">
+    <com.obric.oui.text.OBaseTextView
+        android:textColor="@color/oui_basic_text_3"
+        android:id="@+id/section_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Label_M_Thin"/>
+</merge>

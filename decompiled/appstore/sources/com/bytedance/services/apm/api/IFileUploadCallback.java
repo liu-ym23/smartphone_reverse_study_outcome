@@ -1,0 +1,8 @@
+package com.bytedance.services.apm.api;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface IFileUploadCallback {
+    void onFail(String r10);
+
+    void onSuccess();
+}

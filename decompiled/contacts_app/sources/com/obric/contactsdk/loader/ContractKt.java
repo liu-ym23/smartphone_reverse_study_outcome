@@ -1,0 +1,87 @@
+package com.obric.contactsdk.loader;
+
+import android.net.Uri;
+import com.bytedance.framwork.core.sdklib.DBHelper;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: Contract.kt */
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\u001a\n\u0000\n\u0002\u0010\u000e\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0011\n\u0002\b4\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0002\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0003\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0004\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0005\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0006\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0007\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\b\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u0019\u0010\t\u001a\n \u000b*\u0004\u0018\u00010\n0\n¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\r\"\u000e\u0010\u000e\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u0019\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u00010\u0010¢\u0006\n\n\u0002\u0010\u0013\u001a\u0004\b\u0011\u0010\u0012\"\u0019\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00010\u0010¢\u0006\n\n\u0002\u0010\u0013\u001a\u0004\b\u0015\u0010\u0012\"\u000e\u0010\u0016\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0017\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0018\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u0019\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u001a\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u001b\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u001c\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u001d\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u001e\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\u001f\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010 \u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010!\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010\"\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010#\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010$\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010%\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010&\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010'\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010(\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010)\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010*\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010+\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010,\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010-\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010.\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010/\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00100\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00101\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00102\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00103\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00104\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00105\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00106\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00107\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00108\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u00109\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010:\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010;\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010<\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010=\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010>\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010?\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010@\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010A\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010B\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000\"\u000e\u0010C\u001a\u00020\u0001X\u0086T¢\u0006\u0002\n\u0000¨\u0006D"}, d2 = {"ADDRESS_CUSTOM", "", "ADDRESS_HOME", "ADDRESS_OTHER", "ADDRESS_WORK", "CARD_ID_BANKCARD", "CARD_ID_DRIVING", "CARD_ID_IDENTITY", "CARD_ID_TYPE", "CONTACT_DATABASE_URI", "Landroid/net/Uri;", "kotlin.jvm.PlatformType", "getCONTACT_DATABASE_URI", "()Landroid/net/Uri;", "CONTACT_DATABASE_URI_CONTENT", "CONTACT_DATA_PROJECTION", "", "getCONTACT_DATA_PROJECTION", "()[Ljava/lang/String;", "[Ljava/lang/String;", "CONTACT_PROJECTION", "getCONTACT_PROJECTION", "DATE_ANNIVERSARY", "DATE_BIRTHDAY", "DATE_CHINESE_BIRTHDAY", "DATE_CUSTOM", "DATE_OTHER", "EMAIL_CUSTOM", "EMAIL_OTHER", "EMAIL_SELF", "EMAIL_WORK", "GENDER_MAN", "GENDER_TYPE", "GENDER_WOMAN", "IM_CUSTOM", "IM_MOMO", "IM_MSN", "IM_QQ", "IM_SKYPE", "IM_WANGWANG", "IM_WECHAT", "OBRIC_ACTION_CREATE", "OBRIC_ACTION_DELETE", "OBRIC_ACTION_INSERT", "OBRIC_ACTION_UPDATE", "PARAM_ACTION_ACTION", "PARAM_ACTION_DOMAIN", "PARAM_ACTION_DOMAIN_CALLLOG", "PARAM_ACTION_DOMAIN_CONTACTS", "PARAM_ACTION_ID", "PARAM_ACTION_TABLE_NAME", "PARAM_ACTION_TYPE", "PARAM_ACTION_TYPE_DELETE", "PARAM_ACTION_TYPE_INDEX", "PARAM_ACTION_URI", "PHONE_CUSTOM", "PHONE_FAX", "PHONE_HOME", "PHONE_OTHER", "PHONE_TELE", "PHONE_WORK", "RELATION_CLASSMATE", "RELATION_COLLEAGUE", "RELATION_CUSTOM", "RELATION_FAMILY", "RELATION_FRIEND", "RELATION_LEADER", "RELATION_PARTNER", "contactsdk_release"}, k = 2, mv = {1, 8, 0}, xi = 48)
+public final class ContractKt {
+    public static final String ADDRESS_CUSTOM = "0";
+    public static final String ADDRESS_HOME = "1";
+    public static final String ADDRESS_OTHER = "3";
+    public static final String ADDRESS_WORK = "2";
+    public static final String CARD_ID_BANKCARD = "2";
+    public static final String CARD_ID_DRIVING = "3";
+    public static final String CARD_ID_IDENTITY = "1";
+    public static final String CARD_ID_TYPE = "vnd.android.cursor.item/card_id";
+    private static final Uri CONTACT_DATABASE_URI = null;
+    public static final String CONTACT_DATABASE_URI_CONTENT = "content://obric_data_awareness_contacts";
+    private static final String[] CONTACT_DATA_PROJECTION = null;
+    private static final String[] CONTACT_PROJECTION = null;
+    public static final String DATE_ANNIVERSARY = "1";
+    public static final String DATE_BIRTHDAY = "3";
+    public static final String DATE_CHINESE_BIRTHDAY = "4";
+    public static final String DATE_CUSTOM = "0";
+    public static final String DATE_OTHER = "2";
+    public static final String EMAIL_CUSTOM = "0";
+    public static final String EMAIL_OTHER = "3";
+    public static final String EMAIL_SELF = "1";
+    public static final String EMAIL_WORK = "2";
+    public static final String GENDER_MAN = "1";
+    public static final String GENDER_TYPE = "vnd.android.cursor.item/gender";
+    public static final String GENDER_WOMAN = "2";
+    public static final String IM_CUSTOM = "-1";
+    public static final String IM_MOMO = "101";
+    public static final String IM_MSN = "1";
+    public static final String IM_QQ = "4";
+    public static final String IM_SKYPE = "3";
+    public static final String IM_WANGWANG = "102";
+    public static final String IM_WECHAT = "100";
+    public static final String OBRIC_ACTION_CREATE = "create";
+    public static final String OBRIC_ACTION_DELETE = "delete";
+    public static final String OBRIC_ACTION_INSERT = "insert";
+    public static final String OBRIC_ACTION_UPDATE = "update";
+    public static final String PARAM_ACTION_ACTION = "obric_action";
+    public static final String PARAM_ACTION_DOMAIN = "domain";
+    public static final String PARAM_ACTION_DOMAIN_CALLLOG = "calllog";
+    public static final String PARAM_ACTION_DOMAIN_CONTACTS = "contacts";
+    public static final String PARAM_ACTION_ID = "id";
+    public static final String PARAM_ACTION_TABLE_NAME = "obric_table_name";
+    public static final String PARAM_ACTION_TYPE = "type";
+    public static final String PARAM_ACTION_TYPE_DELETE = "delete";
+    public static final String PARAM_ACTION_TYPE_INDEX = "index";
+    public static final String PARAM_ACTION_URI = "obric_uri";
+    public static final String PHONE_CUSTOM = "0";
+    public static final String PHONE_FAX = "4";
+    public static final String PHONE_HOME = "1";
+    public static final String PHONE_OTHER = "7";
+    public static final String PHONE_TELE = "2";
+    public static final String PHONE_WORK = "3";
+    public static final String RELATION_CLASSMATE = "101";
+    public static final String RELATION_COLLEAGUE = "100";
+    public static final String RELATION_CUSTOM = "0";
+    public static final String RELATION_FAMILY = "12";
+    public static final String RELATION_FRIEND = "6";
+    public static final String RELATION_LEADER = "7";
+    public static final String RELATION_PARTNER = "10";
+
+    public static final String[] getCONTACT_DATA_PROJECTION() {
+        return CONTACT_DATA_PROJECTION;
+    }
+
+    static {
+        CONTACT_DATA_PROJECTION = new String[]{"contact_id", "mimetype", "data1", DBHelper.COL_DATA2, DBHelper.COL_DATA3, "data4", "data5", "data6"};
+        CONTACT_PROJECTION = new String[]{"photo_uri", "contact_last_updated_timestamp"};
+        CONTACT_DATABASE_URI = Uri.parse(CONTACT_DATABASE_URI_CONTENT);
+    }
+
+    public static final String[] getCONTACT_PROJECTION() {
+        return CONTACT_PROJECTION;
+    }
+
+    public static final Uri getCONTACT_DATABASE_URI() {
+        return CONTACT_DATABASE_URI;
+    }
+}

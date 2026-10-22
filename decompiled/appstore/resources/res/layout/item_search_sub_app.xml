@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/app_list_sub_item"
+    android:background="@drawable/app_list_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_list_height">
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_marginLeft="@dimen/item_padding_hor"
+            android:contentDescription="@null"
+            style="@style/normal_app_icon_style"/>
+        <include layout="@layout/layout_app_content"/>
+        <com.bytedanceos.common.ui.widget.SubButton
+            android:id="@+id/btn_sub"
+            android:layout_width="@dimen/app_navigation_install_btn_width"
+            android:layout_marginLeft="@dimen/item_sub_btn_in_search_hor"
+            android:layout_marginRight="@dimen/item_sub_btn_in_search_hor"
+            style="@style/normal_app_btn_style"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/div_line"
+        android:background="@drawable/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,35 @@
+package com.bytedance.android.live.cloudgrouplive.event;
+
+import kotlin.Metadata;
+import r27.a;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0004\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001j\u0002\b\u0002j\u0002\b\u0003j\u0002\b\u0004¨\u0006\u0005"}, d2 = {"Lcom/bytedance/android/live/cloudgrouplive/event/EventType;", "", "RTC_LINK_SUCCESS", "RTC_LINK_END", "RTS_MSG_RECEIVED", "liveinteract-api_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final enum EventType extends Enum<EventType> {
+    public static final EventType RTC_LINK_END = null;
+    public static final EventType RTC_LINK_SUCCESS = null;
+    public static final EventType RTS_MSG_RECEIVED = null;
+    public static final /* synthetic */ EventType[] a = null;
+
+    static {
+        EventType r1 = new EventType("RTC_LINK_SUCCESS", 0);
+        RTC_LINK_SUCCESS = r1;
+        EventType r2 = new EventType("RTC_LINK_END", 1);
+        RTC_LINK_END = r2;
+        EventType r3 = new EventType("RTS_MSG_RECEIVED", 2);
+        RTS_MSG_RECEIVED = r3;
+        a = new EventType[]{r1, r2, r3};
+    }
+
+    public static EventType valueOf(String r1) {
+        return (EventType) a.a(EventType.class, r1);
+    }
+
+    public static EventType[] values() {
+        return (EventType[]) a.clone();
+    }
+
+    public EventType(String r1, int r2) {
+        super(r1, r2);
+    }
+}

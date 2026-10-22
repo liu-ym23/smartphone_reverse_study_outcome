@@ -1,0 +1,225 @@
+package android.support.v4.app;
+
+import android.app.Notification;
+import android.os.Binder;
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Looper;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.os.RemoteException;
+import android.os.SystemClock;
+import com.obric.assistant.interaction.impl.performance.BinderPerformanceReporter;
+import me.ele.lancet.base.annotations.Skip;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes2.dex */
+public interface INotificationSideChannel extends IInterface {
+    public static final String DESCRIPTOR = null;
+
+    public static class Default implements INotificationSideChannel {
+        public Default() {
+        }
+
+        @Override // android.os.IInterface
+        public IBinder asBinder() {
+            return null;
+        }
+
+        @Override // android.support.v4.app.INotificationSideChannel
+        public void cancel(String r1, int r2, String r3) throws RemoteException {
+        }
+
+        @Override // android.support.v4.app.INotificationSideChannel
+        public void cancelAll(String r1) throws RemoteException {
+        }
+
+        @Override // android.support.v4.app.INotificationSideChannel
+        public void notify(String r1, int r2, String r3, Notification r4) throws RemoteException {
+        }
+    }
+
+    public static abstract class Stub extends Binder implements INotificationSideChannel {
+        static final int TRANSACTION_cancel = 2;
+        static final int TRANSACTION_cancelAll = 3;
+        static final int TRANSACTION_notify = 1;
+
+        public static class Proxy implements INotificationSideChannel {
+            private IBinder mRemote;
+
+            @Override // android.os.IInterface
+            public IBinder asBinder() {
+                return this.mRemote;
+            }
+
+            public String getInterfaceDescriptor() {
+                return INotificationSideChannel.DESCRIPTOR;
+            }
+
+            public Proxy(IBinder r1) {
+                this.mRemote = r1;
+            }
+
+            @Override // android.support.v4.app.INotificationSideChannel
+            public void cancelAll(String r5) throws RemoteException {
+                Parcel r0 = Parcel.obtain();
+                r0.writeInterfaceToken(INotificationSideChannel.DESCRIPTOR);     // Catch: Throwable -> L6
+                r0.writeString(r5);     // Catch: Throwable -> L6
+                INVOKEINTERFACE_android_support_v4_app_INotificationSideChannel$Stub$Proxy_com_obric_assistant_interaction_impl_BinderLancet_transact(this.mRemote, 3, r0, null, 1);     // Catch: Throwable -> L6
+                r0.recycle();
+                return;
+            L6:
+                th = move-exception;
+                r0.recycle();
+                throw th;
+            }
+
+            @Override // android.support.v4.app.INotificationSideChannel
+            public void cancel(String r3, int r4, String r5) throws RemoteException {
+                Parcel r0 = Parcel.obtain();
+                r0.writeInterfaceToken(INotificationSideChannel.DESCRIPTOR);     // Catch: Throwable -> L6
+                r0.writeString(r3);     // Catch: Throwable -> L6
+                r0.writeInt(r4);     // Catch: Throwable -> L6
+                r0.writeString(r5);     // Catch: Throwable -> L6
+                INVOKEINTERFACE_android_support_v4_app_INotificationSideChannel$Stub$Proxy_com_obric_assistant_interaction_impl_BinderLancet_transact(this.mRemote, 2, r0, null, 1);     // Catch: Throwable -> L6
+                r0.recycle();
+                return;
+            L6:
+                th = move-exception;
+                r0.recycle();
+                throw th;
+            }
+
+            @Override // android.support.v4.app.INotificationSideChannel
+            public void notify(String r3, int r4, String r5, Notification r6) throws RemoteException {
+                Parcel r0 = Parcel.obtain();
+                r0.writeInterfaceToken(INotificationSideChannel.DESCRIPTOR);     // Catch: Throwable -> L6
+                r0.writeString(r3);     // Catch: Throwable -> L6
+                r0.writeInt(r4);     // Catch: Throwable -> L6
+                r0.writeString(r5);     // Catch: Throwable -> L6
+                _Parcel.access$100(r0, r6, 0);     // Catch: Throwable -> L6
+                INVOKEINTERFACE_android_support_v4_app_INotificationSideChannel$Stub$Proxy_com_obric_assistant_interaction_impl_BinderLancet_transact(this.mRemote, 1, r0, null, 1);     // Catch: Throwable -> L6
+                r0.recycle();
+                return;
+            L6:
+                th = move-exception;
+                r0.recycle();
+                throw th;
+            }
+
+            @Skip({"com.obric.assistant.interaction.impl.performance"})
+            public static boolean INVOKEINTERFACE_android_support_v4_app_INotificationSideChannel$Stub$Proxy_com_obric_assistant_interaction_impl_BinderLancet_transact(IBinder r15, int r16, Parcel r17, Parcel r18, int r19) throws RemoteException {
+                if (Looper.myLooper() != Looper.getMainLooper()) goto L5;
+                long r2 = SystemClock.uptimeMillis();
+                boolean r0 = r15.transact(r16, r17, r18, r19);     // Catch: Throwable -> L12
+                long r8 = SystemClock.uptimeMillis() - r2;
+                if (r8 < 100) goto L11;
+                BinderPerformanceReporter.report(r8, r15.getClass().getName(), r16, r19, new Throwable("Slow main-thread Binder transaction"));
+            L11:
+                return r0;
+            L12:
+                th = move-exception;
+                long r9 = SystemClock.uptimeMillis() - r2;
+                if (r9 < 100) goto L22;
+                if (r15 != null) goto L17;
+                String r1 = "";
+            L18:
+                BinderPerformanceReporter.report(r9, r1, r16, r19, new Throwable("Slow main-thread Binder transaction"));
+                throw th;
+            L17:
+                r1 = r15.getClass().getName();
+                goto L18
+            L22:
+                throw th;
+            L5:
+                return r15.transact(r16, r17, r18, r19);
+            }
+        }
+
+        @Override // android.os.IInterface
+        public IBinder asBinder() {
+            return this;
+        }
+
+        public Stub() {
+            attachInterface(this, INotificationSideChannel.DESCRIPTOR);
+        }
+
+        public static INotificationSideChannel asInterface(IBinder r2) {
+            if (r2 != null) goto L5;
+            return null;
+        L5:
+            IInterface r0 = r2.queryLocalInterface(INotificationSideChannel.DESCRIPTOR);
+            if (r0 == null) goto L12;
+            if ((r0 instanceof INotificationSideChannel) == false) goto L12;
+            return (INotificationSideChannel) r0;
+        L12:
+            return new Proxy(r2);
+        }
+
+        @Override // android.os.Binder
+        public boolean onTransact(int r4, Parcel r5, Parcel r6, int r7) throws RemoteException {
+            String r0 = INotificationSideChannel.DESCRIPTOR;
+            if (r4 < 1) goto L8;
+            if (r4 > 16777215) goto L8;
+            r5.enforceInterface(r0);
+        L8:
+            if (r4 != 1598968902) goto L11;
+            r6.writeString(r0);
+            return true;
+        L11:
+            if (r4 != 1) goto L13;
+            notify(r5.readString(), r5.readInt(), r5.readString(), (Notification) _Parcel.access$000(r5, Notification.CREATOR));
+        L21:
+            return true;
+        L13:
+            if (r4 != 2) goto L15;
+            cancel(r5.readString(), r5.readInt(), r5.readString());
+            goto L21
+        L15:
+            if (r4 != 3) goto L17;
+            cancelAll(r5.readString());
+            goto L21
+        L17:
+            return super.onTransact(r4, r5, r6, r7);
+        }
+    }
+
+    public static class _Parcel {
+        public _Parcel() {
+        }
+
+        public static /* synthetic */ Object access$000(Parcel r0, Parcelable.Creator r1) {
+            return readTypedObject(r0, r1);
+        }
+
+        private static <T> T readTypedObject(Parcel r1, Parcelable.Creator<T> r2) {
+            if (r1.readInt() != 0) goto L5;
+            return null;
+        L5:
+            return r2.createFromParcel(r1);
+        }
+
+        public static /* synthetic */ void access$100(Parcel r0, Parcelable r1, int r2) {
+            writeTypedObject(r0, r1, r2);
+        }
+
+        private static <T extends Parcelable> void writeTypedObject(Parcel r1, T r2, int r3) {
+            if (r2 == null) goto L4;
+            r1.writeInt(1);
+            r2.writeToParcel(r1, r3);
+            return;
+        L4:
+            r1.writeInt(0);
+        }
+    }
+
+    void cancel(String r1, int r2, String r3) throws RemoteException;
+
+    void cancelAll(String r1) throws RemoteException;
+
+    void notify(String r1, int r2, String r3, Notification r4) throws RemoteException;
+
+    static {
+        DESCRIPTOR = "android$support$v4$app$INotificationSideChannel".replace('$', '.');
+    }
+}

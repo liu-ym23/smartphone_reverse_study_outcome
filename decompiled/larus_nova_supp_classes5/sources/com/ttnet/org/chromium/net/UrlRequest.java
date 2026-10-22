@@ -1,0 +1,103 @@
+package com.ttnet.org.chromium.net;
+
+import java.nio.ByteBuffer;
+import java.util.concurrent.Executor;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes5.dex */
+public abstract class UrlRequest {
+
+    public static abstract class Builder {
+        public static final int REQUEST_PRIORITY_HIGHEST = 4;
+        public static final int REQUEST_PRIORITY_IDLE = 0;
+        public static final int REQUEST_PRIORITY_LOW = 2;
+        public static final int REQUEST_PRIORITY_LOWEST = 1;
+        public static final int REQUEST_PRIORITY_MEDIUM = 3;
+
+        public Builder() {
+        }
+
+        public abstract Builder addHeader(String r1, String r2);
+
+        public abstract Builder allowDirectExecutor();
+
+        public abstract UrlRequest build();
+
+        public abstract Builder disableCache();
+
+        public abstract Builder setHttpMethod(String r1);
+
+        public abstract Builder setPriority(int r1);
+
+        public abstract Builder setRequestTimeout(int r1);
+
+        public abstract Builder setSocketConnectTimeout(int r1);
+
+        public abstract Builder setSocketReadTimeout(int r1);
+
+        public abstract Builder setSocketWriteTimeout(int r1);
+
+        public abstract Builder setUploadDataProvider(UploadDataProvider r1, Executor r2);
+    }
+
+    public static abstract class Callback {
+        public Callback() {
+        }
+
+        public void onCanceled(UrlRequest r1, UrlResponseInfo r2) {
+        }
+
+        public abstract void onFailed(UrlRequest r1, UrlResponseInfo r2, CronetException r3);
+
+        public abstract void onReadCompleted(UrlRequest r1, UrlResponseInfo r2, ByteBuffer r3) throws Exception;
+
+        public abstract void onRedirectReceived(UrlRequest r1, UrlResponseInfo r2, String r3, String r4) throws Exception;
+
+        public abstract void onResponseStarted(UrlRequest r1, UrlResponseInfo r2, String r3) throws Exception;
+
+        public abstract void onSucceeded(UrlRequest r1, UrlResponseInfo r2);
+    }
+
+    public UrlRequest() {
+    }
+
+    public abstract void AddRequestCookieHeader(String r1, String r2);
+
+    public abstract void RemoveRequestCookieHeader();
+
+    public void appTimeout() {
+    }
+
+    public abstract void cancel();
+
+    public void cancelWithException(String r1, Throwable r2) {
+    }
+
+    public abstract void followRedirect();
+
+    public abstract String getFinalUrl();
+
+    public abstract void getStatus(StatusListener r1);
+
+    public abstract boolean isDone();
+
+    public abstract void read(ByteBuffer r1);
+
+    public abstract void setAddCookieCostUs(long r1);
+
+    public abstract void setAuthCredentials(String r1, String r2);
+
+    public abstract void setCookieRelMetric(String r1);
+
+    public abstract void setRequestCookieSource(int r1);
+
+    public void setRequestFlag(int r1) {
+    }
+
+    public abstract void setRequestTypeFlags(int r1);
+
+    public abstract void setSaveCookieCostUs(long r1);
+
+    public abstract void setThrottleNetSpeed(long r1);
+
+    public abstract void start();
+}

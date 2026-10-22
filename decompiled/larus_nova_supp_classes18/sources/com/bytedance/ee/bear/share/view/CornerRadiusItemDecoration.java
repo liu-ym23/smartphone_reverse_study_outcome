@@ -1,0 +1,74 @@
+package com.bytedance.ee.bear.share.view;
+
+import android.graphics.Rect;
+import android.view.View;
+import androidx.recyclerview.widget.RecyclerView;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes18.dex */
+@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0003\u0018\u0000 \u00132\u00020\u0001:\u0001\u0013B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J(\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\rH\u0016J\u001e\u0010\u000e\u001a\u00020\u00052\u0006\u0010\u000f\u001a\u00020\t2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0011¨\u0006\u0014"}, d2 = {"Lcom/bytedance/ee/bear/share/view/CornerRadiusItemDecoration;", "Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;", "<init>", "()V", "getItemOffsets", "", "outRect", "Landroid/graphics/Rect;", "view", "Landroid/view/View;", "parent", "Landroidx/recyclerview/widget/RecyclerView;", "state", "Landroidx/recyclerview/widget/RecyclerView$State;", "setPositionBackground", "itemView", "itemCount", "", "position", "Companion", "features-share-impl_productionChinaRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class CornerRadiusItemDecoration extends RecyclerView.ItemDecoration {
+
+    public static final class a {
+    }
+
+    static {
+    }
+
+    public CornerRadiusItemDecoration() {
+    }
+
+    public final void getItemOffsets(Rect r6, View r7, RecyclerView r8, RecyclerView.State r9) {
+        Intrinsics.checkNotNullParameter(r6, "outRect");
+        Intrinsics.checkNotNullParameter(r7, "view");
+        Intrinsics.checkNotNullParameter(r8, "parent");
+        Intrinsics.checkNotNullParameter(r9, "state");
+        RecyclerView.Adapter r0 = r8.getAdapter();
+        boolean r1 = false;
+        if (r0 == null) goto L5;
+        int r2 = r0.getItemCount();
+    L6:
+        if (r2 <= 0) goto L26;
+        int r3 = r8.getChildAdapterPosition(r7);
+        Intrinsics.checkNotNullParameter(r7, "itemView");
+        if (r3 != 0) goto L10;
+        boolean r4 = true;
+    L12:
+        if (r3 != (r2 - 1)) goto L14;
+        boolean r5 = true;
+    L15:
+        if (r4 == false) goto L18;
+        if (r5 == false) goto L18;
+        r1 = true;
+    L18:
+        if (r1 == false) goto L20;
+        int r10 = 2131235315;
+    L25:
+        r7.setBackgroundResource(r10);
+        r7.setBackgroundTintList(r7.getResources().getColorStateList(2131101932));
+        goto L26
+    L20:
+        if (r4 == false) goto L22;
+        r10 = 2131235325;
+        goto L25
+    L22:
+        if (r5 == false) goto L24;
+        r10 = 2131235319;
+        goto L25
+    L24:
+        r10 = 2131235305;
+        goto L25
+    L14:
+        r5 = false;
+        goto L15
+    L10:
+        r4 = false;
+    L26:
+        super.getItemOffsets(r6, r7, r8, r9);
+        return;
+    L5:
+        r2 = 0;
+        goto L6
+    }
+}

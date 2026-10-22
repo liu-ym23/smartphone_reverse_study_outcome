@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:fitsSystemWindows="true"
+    style="@style/appstore_bg_style">
+    <include
+        android:id="@+id/main_header"
+        layout="@layout/header"/>
+    <com.obric.oui.divider.ODivider
+        android:id="@+id/line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:layout_below="@+id/main_header"/>
+    <include
+        android:id="@+id/search_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        layout="@layout/fragment_search"/>
+    <ListView
+        android:id="@+id/search_lv"
+        android:background="@null"
+        android:visibility="gone"
+        android:listSelector="@null"
+        android:layout_below="@+id/main_header"
+        style="@style/list_style"/>
+    <RelativeLayout
+        android:id="@+id/status_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_header"/>
+</RelativeLayout>

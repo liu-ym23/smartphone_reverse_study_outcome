@@ -1,0 +1,6 @@
+package hy;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+public interface g {
+    long getChannelId();
+}

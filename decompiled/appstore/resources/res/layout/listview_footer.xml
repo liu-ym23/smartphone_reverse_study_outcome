@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listview_footer_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/listview_footer_line"
+        android:background="@drawable/line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <com.obric.oui.progress.ODownloadProgressView
+            android:id="@+id/listview_footer_progressbar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/listview_footer_progressbar_margin_right"
+            app:oui_progress_view_size="small"/>
+        <TextView
+            android:textSize="@dimen/listview_footer_hint_text_size"
+            android:textColor="@color/footer_text"
+            android:gravity="center"
+            android:id="@+id/listview_footer_hint_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/listview_footer_height"
+            android:text="@string/listview_footer_hint_ready"
+            android:layout_toEndOf="@+id/listview_footer_progressbar"/>
+    </RelativeLayout>
+</RelativeLayout>

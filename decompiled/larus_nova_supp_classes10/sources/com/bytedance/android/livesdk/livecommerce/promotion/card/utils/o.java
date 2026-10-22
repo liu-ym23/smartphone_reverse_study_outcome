@@ -1,0 +1,26 @@
+package com.bytedance.android.livesdk.livecommerce.promotion.card.utils;
+
+import com.larus.apm.impl.protector.RunnableProtector;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes10.dex */
+public final class o implements Runnable {
+    public final /* synthetic */ PromotionListEventActionImpl a;
+    public final /* synthetic */ com.bytedance.android.ec.common.api.jump.model.g b;
+
+    public o(PromotionListEventActionImpl r1, com.bytedance.android.ec.common.api.jump.model.g r2) {
+        this.a = r1;
+        this.b = r2;
+    }
+
+    @Override // java.lang.Runnable
+    public final void run() {
+        this.a.l(this.b, "sub_to_cart");     // Catch: Throwable -> L4
+        return;
+    L4:
+        th = move-exception;
+        if (RunnableProtector.intercept(th) == false) goto L8;
+        return;
+    L8:
+        throw th;
+    }
+}

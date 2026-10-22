@@ -1,0 +1,11 @@
+package com.obric.matrix.account_api;
+
+import android.content.Context;
+import com.bytedance.news.common.service.manager.IService;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H&¨\u0006\u0006"}, d2 = {"Lcom/obric/matrix/account_api/ISecShareService;", "Lcom/bytedance/news/common/service/manager/IService;", "initSecShare", "", "context", "Landroid/content/Context;", "account_api_cnRelease"}, k = 1, mv = {1, 6, 0}, xi = 48)
+public interface ISecShareService extends IService {
+    void initSecShare(Context r1);
+}

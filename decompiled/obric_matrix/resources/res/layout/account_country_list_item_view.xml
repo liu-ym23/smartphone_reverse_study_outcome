@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/account_bg_account_button_country_code"
+    android:paddingTop="@dimen/common_ui_dp_18"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/common_ui_dp_17"
+        android:textColor="#000000"
+        android:ellipsize="end"
+        android:id="@+id/country_name"
+        android:paddingLeft="@dimen/common_ui_dp_16"
+        android:paddingBottom="@dimen/common_ui_dp_18"
+        android:layout_width="@dimen/common_ui_dp_0"
+        android:layout_height="wrap_content"
+        android:text="Country Name"
+        android:singleLine="true"
+        android:layout_marginEnd="@dimen/common_ui_dp_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/country_code"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="@dimen/common_ui_sp_17"
+        android:textColor="#999999"
+        android:id="@+id/country_code"
+        android:paddingRight="@dimen/common_ui_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country Code"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/divider"
+        android:background="#1a000000"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/common_ui_dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

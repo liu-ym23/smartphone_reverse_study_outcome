@@ -1,0 +1,90 @@
+package com.bytedance.android.livesdk.gift.platform.format.panel.statemachine;
+
+import ca0.w;
+import com.bytedance.android.live.core.utils.StateMachine;
+import com.bytedance.android.livesdk.gift.model.h1;
+import com.bytedance.android.livesdk.gift.model.w1;
+import com.bytedance.android.livesdk.gift.platform.business.dialog.v2.viewmodel.GiftStateMachineConfig;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes9.dex */
+public final class FormatGiftListViewModel$mSyncGiftListCallback$1 extends w {
+    public boolean a;
+    public final /* synthetic */ FormatGiftListViewModel b;
+
+    public final void a() {
+        jy0.b.a("FormatGiftListViewModel", "onSyncGiftFailure");
+        if (this.a == false) goto L11;
+        GiftStateMachineConfig.e r0 = (GiftStateMachineConfig.e) this.b.i.b();
+        if ((r0 instanceof GiftStateMachineConfig.e.c) == false) goto L13;
+        GiftStateMachineConfig.c r1 = ((GiftStateMachineConfig.e.c) r0).a;
+        if (r1 == null) goto L14;
+        List<w1> r2 = r1.a;
+        if (r2 == null) goto L15;
+        this.b.j(r2, false, new FormatGiftListViewModel$mSyncGiftListCallback$1$onSyncGiftFailure$$inlined$let$lambda$1(this));
+        return;
+    L15:
+        return;
+    L14:
+        return;
+    L13:
+        return;
+    L11:
+        StateMachine<GiftStateMachineConfig.e, GiftStateMachineConfig.Event, GiftStateMachineConfig.f> r3 = this.b.i;
+        GiftStateMachineConfig.Event.x r4 = GiftStateMachineConfig.Event.x.b;
+        StateMachine.a r5 = StateMachine.c;
+        r3.d(r4, null);
+    }
+
+    public FormatGiftListViewModel$mSyncGiftListCallback$1(FormatGiftListViewModel r1) {
+        this.b = r1;
+        this.a = true;
+    }
+
+    public final void b(List<? extends w1> r7) {
+        Intrinsics.checkNotNullParameter(r7, "giftPages");
+        jy0.b.a("FormatGiftListViewModel", "onSyncGiftPageListFinish " + r7);
+        if (this.a == true) goto L14;
+        List<w1> r0 = ((GiftStateMachineConfig.e) this.b.i.b()).a();
+        if (r0 != null) goto L7;
+    L10:
+        boolean r1 = true;
+    L11:
+        if (r1 == true) goto L14;
+        this.b.i.d(GiftStateMachineConfig.Event.x.b, null);
+        return;
+    L7:
+        if (r0.isEmpty() == true) goto L10;
+        r1 = false;
+    L14:
+        this.b.getClass();
+        ArrayList r3 = new ArrayList();
+        Iterator<T> r2 = r7.iterator();
+    L16:
+        if (r2.hasNext() == false) goto L20;
+        Object r4 = r2.next();
+        if (((w1) r4).getDisplay() == false) goto L16;
+        r3.add(r4);
+        goto L16
+    L20:
+        Iterator r5 = r3.iterator();
+    L22:
+        if (r5.hasNext() == false) goto L31;
+        w1 r6 = (w1) r5.next();
+        if (r6.getPageType() != 1) goto L22;
+        r6.getGifts().size();
+        Iterator<T> r8 = r6.getGifts().iterator();
+    L27:
+        if (r8.hasNext() == false) goto L22;
+        h1 r9 = (h1) r8.next();
+        r9.isDisplayedOnPanel();
+        if (r9.isForLinkMic() == false) goto L27;
+        r9.isDisplayedOnPanel();
+        goto L27
+    L31:
+        this.b.j(r7, false, new FormatGiftListViewModel$mSyncGiftListCallback$1$onSyncGiftPageListFinish$1(this));
+    }
+}

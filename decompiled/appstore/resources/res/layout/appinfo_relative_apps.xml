@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/app_container"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedanceos.common.network.widget.NetworkImageView
+        android:id="@+id/icon"
+        android:layout_marginTop="17dp"
+        android:importantForAccessibility="no"
+        style="@style/appinfo_recommend_icon"/>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="@dimen/appinfo_rec_text_max"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:importantForAccessibility="no">
+        <TextView
+            android:id="@+id/appname"
+            android:importantForAccessibility="no"
+            style="@style/appinfo_recommend_text"/>
+        <TextView
+            android:textSize="7sp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/label"
+            android:layout_marginLeft="@dimen/label_interval"
+            style="@style/app_list_first_pub_style"/>
+    </LinearLayout>
+</RelativeLayout>

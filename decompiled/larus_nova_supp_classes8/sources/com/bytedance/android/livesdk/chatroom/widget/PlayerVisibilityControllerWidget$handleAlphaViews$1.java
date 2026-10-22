@@ -1,0 +1,111 @@
+package com.bytedance.android.livesdk.chatroom.widget;
+
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import com.bytedance.android.live.core.utils.UtilityKotlinExtentionsKt;
+import com.bytedance.android.livesdk.chatroom.vsplayer.model.PlayerViewControl;
+import com.bytedance.android.livesdk.interactivity.api.monitor.PublicScreenTraceMonitor;
+import java.util.ArrayList;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lcom/bytedance/android/livesdk/chatroom/vsplayer/model/c;", "item", "", "invoke", "(Lcom/bytedance/android/livesdk/chatroom/vsplayer/model/c;)V", "realHandle"}, k = 3, mv = {1, 4, 3})
+public final class PlayerVisibilityControllerWidget$handleAlphaViews$1 extends Lambda implements Function1<com.bytedance.android.livesdk.chatroom.vsplayer.model.c, Unit> {
+    final /* synthetic */ long $duration;
+    final /* synthetic */ boolean $entiretyVisible;
+    final /* synthetic */ PlayerVisibilityControllerWidget this$0;
+
+    public static final class a extends AnimatorListenerAdapter {
+        public final /* synthetic */ com.bytedance.android.livesdk.chatroom.vsplayer.model.c a;
+
+        public a(com.bytedance.android.livesdk.chatroom.vsplayer.model.c r1) {
+            this.a = r1;
+        }
+
+        @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+        public final void onAnimationStart(Animator r4) {
+            Intrinsics.checkNotNullParameter(r4, "animation");
+            UtilityKotlinExtentionsKt.w(this.a.i);
+            if (PlayerViewControl.KEY.TextMessage != this.a.g) goto L6;
+            PublicScreenTraceMonitor.i("Tetromino", "vs", true, null);
+            return;
+        }
+    }
+
+    public static final class b extends AnimatorListenerAdapter {
+        public final /* synthetic */ com.bytedance.android.livesdk.chatroom.vsplayer.model.c a;
+
+        public b(com.bytedance.android.livesdk.chatroom.vsplayer.model.c r1) {
+            this.a = r1;
+        }
+
+        @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+        public final void onAnimationEnd(Animator r4) {
+            Intrinsics.checkNotNullParameter(r4, "animation");
+            UtilityKotlinExtentionsKt.u(this.a.i);
+            if (PlayerViewControl.KEY.TextMessage != this.a.g) goto L6;
+            PublicScreenTraceMonitor.i("Tetromino", "vs", false, null);
+            return;
+        }
+    }
+
+    public PlayerVisibilityControllerWidget$handleAlphaViews$1(PlayerVisibilityControllerWidget r1, boolean r2, long r3) {
+        this.this$0 = r1;
+        this.$entiretyVisible = r2;
+        this.$duration = r3;
+        super(1);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public final void invoke(com.bytedance.android.livesdk.chatroom.vsplayer.model.c r8) {
+        Intrinsics.checkNotNullParameter(r8, "item");
+        if (r8.o == true) goto L5;
+        boolean r0 = this.$entiretyVisible;
+    L9:
+        if (r0 == 0) goto L11;
+        float r1 = 1.0f;
+    L12:
+        int r2 = !r0;
+        Integer r3 = (Integer) r8.f.getValue();
+        if (r3 != null) goto L16;
+    L18:
+        r8.f.postValue(Integer.valueOf(r2));
+        long r4 = this.$duration;
+        if (r4 <= 0) goto L25;
+        Animator r5 = PlayerVisibilityControllerWidget.wq(this.this$0, r8.i, r1, r4);
+        if (r0 == 0) goto L23;
+        r5.addListener(new a(r8));
+    L24:
+        ((ArrayList) this.this$0.u).add(r5);
+        return;
+    L23:
+        r5.addListener(new b(r8));
+        goto L24
+    L25:
+        r8.i.setAlpha(r1);
+        UtilityKotlinExtentionsKt.A(r8.i, r0);
+        return;
+    L16:
+        if (r3.intValue() != r2) goto L18;
+        return;
+    L11:
+        r1 = 0.0f;
+        goto L12
+    L5:
+        if (this.$entiretyVisible == true) goto L7;
+        r0 = 1;
+        goto L9
+    L7:
+        r0 = 0;
+        goto L9
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1) {
+        invoke((com.bytedance.android.livesdk.chatroom.vsplayer.model.c) r1);
+        return Unit.INSTANCE;
+    }
+}

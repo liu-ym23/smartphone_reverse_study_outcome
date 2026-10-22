@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:paddingLeft="@dimen/tv_app_item_padding_left"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/tv_app_item_padding_left">
+    <ImageView
+        android:id="@+id/iv_video"
+        android:layout_width="@dimen/tv_item_horizontal_width"
+        android:layout_height="@dimen/tv_item_entity_video_height"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/icon_video_play"/>
+</FrameLayout>

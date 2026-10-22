@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp"/>
+            <solid android:color="@color/oui_functional_red_2"/>
+        </shape>
+    </item>
+    <item
+        android:height="6dp"
+        android:width="6dp"
+        android:left="9dp"
+        android:top="9dp"
+        android:bottom="9dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/oui_functional_red_6"/>
+        </shape>
+    </item>
+</layer-list>

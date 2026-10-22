@@ -1,0 +1,8 @@
+package com.ttnet.org.chromium.net;
+
+/* JADX INFO: loaded from: classes4.dex */
+public abstract class b {
+
+    public static abstract class a {
+    }
+}

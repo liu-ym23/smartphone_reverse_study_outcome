@@ -1,0 +1,44 @@
+package com.bytedance.android.window.shop.holder;
+
+import android.content.Context;
+import android.graphics.Rect;
+import androidx.fragment.app.Fragment;
+import com.bytedance.android.ec.core.opt.asyncInflate.ShoppingAsyncInflater;
+import com.bytedance.android.window.shop.holder.presenter.WindowAnchorCardPresenter;
+import com.ss.android.ugc.aweme.kiwi.presenter.QIPresenter;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes14.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001\u0003¨\u0006\u0004"}, d2 = {"Lcom/bytedance/android/window/shop/holder/WindowAnchorCardHolder;", "Lcom/bytedance/android/window/shop/holder/ShopWindowGenericHolder;", "Lsq3/c;", "a", "ec-biz-store-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class WindowAnchorCardHolder extends ShopWindowGenericHolder<sq3.c> {
+    public static final a v = null;
+
+    public static final class a {
+        public a() {
+        }
+    }
+
+    static {
+        v = new a();
+    }
+
+    public WindowAnchorCardHolder(Fragment r5) {
+        Intrinsics.checkNotNullParameter(r5, "fragment");
+        ShoppingAsyncInflater.a r0 = ShoppingAsyncInflater.e;
+        Context r1 = r5.requireContext();
+        r0.getClass();
+        super(r5, com.bytedance.android.ec.opt.asyncInflate.c.a(ShoppingAsyncInflater.a.a(r1), 2131561006, null, 4));
+    }
+
+    @Override // com.bytedance.android.window.shop.holder.ShopWindowItemHolder
+    public final Rect r4(int r4) {
+        return new Rect(d.a(12), 0, d.a(12), 0);
+    }
+
+    @Override // com.bytedance.android.window.shop.holder.ShopWindowGenericHolder
+    public final QIPresenter u4(Fragment r2) {
+        Intrinsics.checkNotNullParameter(r2, "fragment");
+        return new WindowAnchorCardPresenter(r2);
+    }
+}

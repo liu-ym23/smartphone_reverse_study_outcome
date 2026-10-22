@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_alignParentBottom="true">
+    <ViewStub
+        android:id="@+id/viewstub_updatable_count"
+        android:layout="@layout/updatable_count"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+    <com.obric.oui.tab.optimize.OBottomTabBar
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        app:tabSelectedTextColor="@color/oui_accent_fg"
+        app:tabTextColor="@color/oui_text_3"/>
+    <com.obric.oui.divider.ODivider
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"/>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+package androidx.appcompat.graphics.drawable;
+
+import androidx.annotation.RestrictTo;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* JADX INFO: loaded from: classes.dex */
+@Retention(RetentionPolicy.SOURCE)
+@RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
+public @interface DrawerArrowDrawable$ArrowDirection {
+}

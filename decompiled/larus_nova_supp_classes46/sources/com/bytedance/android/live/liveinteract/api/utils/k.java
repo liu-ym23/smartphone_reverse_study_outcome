@@ -1,0 +1,60 @@
+package com.bytedance.android.live.liveinteract.api.utils;
+
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes46.dex */
+public final class k {
+    public static final /* synthetic */ int c = 0;
+    public final ti6.f a;
+    public final com.bytedance.android.livesdk.link.model.bridge.k b;
+
+    public static final class a {
+    }
+
+    static {
+    }
+
+    public final boolean equals(Object r3) {
+        if (this != r3) goto L4;
+        return true;
+    L4:
+        if ((r3 instanceof k) == false) goto L10;
+        k r4 = (k) r3;
+        if (Intrinsics.areEqual(this.a, r4.a) == true) goto L8;
+        return false;
+    L8:
+        if (Intrinsics.areEqual(this.b, r4.b) == true) goto L16;
+        return false;
+    L16:
+        return true;
+    L10:
+        return false;
+    }
+
+    public final int hashCode() {
+        ti6.f r0 = this.a;
+        int r1 = 0;
+        if (r0 == null) goto L5;
+        int r2 = r0.hashCode();
+    L6:
+        int r3 = r2 * 31;
+        com.bytedance.android.livesdk.link.model.bridge.k r4 = this.b;
+        if (r4 == null) goto L10;
+        r1 = r4.hashCode();
+    L10:
+        return r3 + r1;
+    L5:
+        r2 = 0;
+        goto L6
+    }
+
+    public final String toString() {
+        return "RegionWrapper(region=" + this.a + ", linkUser=" + this.b + ")";
+    }
+
+    public k(ti6.f r2) {
+        Intrinsics.checkNotNullParameter(r2, "region");
+        this.a = r2;
+        this.b = null;
+    }
+}

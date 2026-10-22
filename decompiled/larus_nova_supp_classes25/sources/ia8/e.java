@@ -1,0 +1,21 @@
+package ia8;
+
+import com.larus.audio.AudioServiceDelegate;
+import com.larus.audio.j0;
+import com.larus.audio.x0;
+import com.larus.audio.y0;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+public final class e {
+    public static final j0 a() {
+        return AudioServiceDelegate.a.P();
+    }
+
+    public static final x0 b() {
+        return AudioServiceDelegate.a.F();
+    }
+
+    public static final y0 c() {
+        return AudioServiceDelegate.a.a0();
+    }
+}

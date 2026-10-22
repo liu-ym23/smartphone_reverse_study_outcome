@@ -1,0 +1,14 @@
+package com.larus.audio.audiov3.config.task.sami.realtime;
+
+import com.larksuite.component.universe_design.timepicker.impl.base.WheelView;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import kotlin.Metadata;
+import kotlin.annotation.AnnotationRetention;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+@Retention(RetentionPolicy.SOURCE)
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0000\b\u0087\u0002\u0018\u00002\u00020\u0001B\u0000¨\u0006\u0002"}, d2 = {"Lcom/larus/audio/audiov3/config/task/sami/realtime/ConnectType;", "", "audiosdkapi_release"}, k = 1, mv = {2, 1, 0}, xi = WheelView.WHEEL_ITEM_HEIGHT)
+@kotlin.annotation.Retention(AnnotationRetention.SOURCE)
+public @interface ConnectType {
+}

@@ -1,0 +1,119 @@
+package com.bytedance.android.ui.ec.widget.loading;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.ViewGroup;
+import android.view.ViewParent;
+import android.widget.FrameLayout;
+import com.airbnb.lottie.LottieAnimationView;
+import com.bytedance.android.ui.ec.widget.tools.UnitExtensionKt;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes14.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0007\u0018\u0000 \u00122\u00020\u0001:\u0001\u0012B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\b\u0010\u000b\u001a\u00020\fH\u0014J\b\u0010\r\u001a\u00020\fH\u0014J\u0010\u0010\u000e\u001a\u00020\f2\u0006\u0010\u000f\u001a\u00020\u0007H\u0016J\u0006\u0010\u0010\u001a\u00020\fJ\u0006\u0010\u0011\u001a\u00020\fR\u000e\u0010\t\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0013"}, d2 = {"Lcom/bytedance/android/ui/ec/widget/loading/ECSloganLoadingAnimationView;", "Landroid/widget/FrameLayout;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "animationView", "Lcom/airbnb/lottie/LottieAnimationView;", "onAttachedToWindow", "", "onDetachedFromWindow", "setVisibility", "visibility", "startAnimate", "stopAnimate", "Companion", "ui-ec-widget_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class ECSloganLoadingAnimationView extends FrameLayout {
+    private static final int ANIMATION_HEIGHT = 48;
+    private static final int ANIMATION_WIDTH = 164;
+    public static final Companion Companion = null;
+    private static final String LOTTIE_RES_NAME = "ec_new_slogan_loading_white.json";
+    private final LottieAnimationView animationView;
+
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082T¢\u0006\u0002\n\u0000¨\u0006\b"}, d2 = {"Lcom/bytedance/android/ui/ec/widget/loading/ECSloganLoadingAnimationView$Companion;", "", "()V", "ANIMATION_HEIGHT", "", "ANIMATION_WIDTH", "LOTTIE_RES_NAME", "", "ui-ec-widget_saasRelease"}, k = 1, mv = {1, 4, 3})
+    public static final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(DefaultConstructorMarker r1) {
+            this();
+        }
+    }
+
+    static {
+        Companion = new Companion(null);
+    }
+
+    public ECSloganLoadingAnimationView(Context r7) {
+        this(r7, null, 0, 6, null);
+    }
+
+    public ECSloganLoadingAnimationView(Context r7, AttributeSet r8) {
+        this(r7, r8, 0, 4, null);
+    }
+
+    public final void startAnimate() {
+        if (this.animationView.isAnimating() == true) goto L6;
+        this.animationView.playAnimation();
+        return;
+    }
+
+    public final void stopAnimate() {
+        if (this.animationView.isAnimating() == false) goto L6;
+        this.animationView.cancelAnimation();
+        return;
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        if (getParent() != null) goto L5;
+    L11:
+        ViewGroup.LayoutParams r0 = getLayoutParams();
+        if (r0 == null) goto L15;
+        r0.width = UnitExtensionKt.dp2px(ANIMATION_WIDTH);
+        r0.height = UnitExtensionKt.dp2px(ANIMATION_HEIGHT);
+        setLayoutParams(r0);
+    L15:
+        if (isShown() == false) goto L18;
+        startAnimate();
+        return;
+    L18:
+        return;
+    L5:
+        if ((getParent() instanceof ViewGroup) == false) goto L11;
+        ViewParent r1 = getParent();
+        if (r1 == null) goto L10;
+        ((ViewGroup) r1).setClipChildren(false);
+        goto L11
+    L10:
+        throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup");
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        stopAnimate();
+    }
+
+    @Override // android.view.View
+    public void setVisibility(int r1) {
+        super.setVisibility(r1);
+        if (r1 != 0) goto L5;
+        startAnimate();
+        return;
+    L5:
+        stopAnimate();
+    }
+
+    public ECSloganLoadingAnimationView(Context r2, AttributeSet r3, int r4) {
+        Intrinsics.checkNotNullParameter(r2, "context");
+        super(r2, r3, r4);
+        LottieAnimationView r5 = new LottieAnimationView(r2);
+        this.animationView = r5;
+        r5.setAnimation(LOTTIE_RES_NAME);
+        r5.setRepeatCount(-1);
+        r5.playAnimation();
+        addView(r5);
+    }
+
+    public /* synthetic */ ECSloganLoadingAnimationView(Context r1, AttributeSet r2, int r3, int r4, DefaultConstructorMarker r5) {
+        if ((r4 & 2) == 0) goto L6;
+        r2 = null;
+    L6:
+        if ((r4 & 4) == 0) goto L8;
+        r3 = 0;
+    L8:
+        this(r1, r2, r3);
+    }
+}

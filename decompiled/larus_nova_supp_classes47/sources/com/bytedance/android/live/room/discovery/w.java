@@ -1,0 +1,19 @@
+package com.bytedance.android.live.room.discovery;
+
+import io.reactivex.functions.Consumer;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+public final class w<T> implements Consumer {
+    public final /* synthetic */ AnchorPerfMonitorWidget a;
+
+    public w(AnchorPerfMonitorWidget r1) {
+        this.a = r1;
+    }
+
+    public final void accept(Object r2) {
+        Long r3 = (Long) r2;
+        AnchorPerfMonitorWidget r4 = this.a;
+        int r0 = AnchorPerfMonitorWidget.b1;
+        r4.Cq();
+    }
+}

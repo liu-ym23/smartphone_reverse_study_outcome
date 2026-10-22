@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.viewpager2.widget.ViewPager2
+        android:orientation="horizontal"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"/>
+    <com.obric.oui.blur.OBlurMaskView
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        app:oBlurMask_blurRadius="12"
+        app:oBlurMask_statusBarImmersion="true"/>
+    <com.obric.oui.tab.OTabLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_h_m2"
+        android:layout_marginTop="104dp"
+        android:layout_marginHorizontal="12dp"
+        app:tabGravity="fill"
+        style="@style/OTabTextV2.Background.Gray">
+        <com.obric.oui.tab.OTabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_rank_app"/>
+        <com.obric.oui.tab.OTabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_rank_game"/>
+    </com.obric.oui.tab.OTabLayout>
+</FrameLayout>

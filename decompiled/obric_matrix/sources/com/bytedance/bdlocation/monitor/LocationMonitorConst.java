@@ -1,0 +1,84 @@
+package com.bytedance.bdlocation.monitor;
+
+/* JADX INFO: loaded from: classes.dex */
+public class LocationMonitorConst {
+    public static final String ACCURACY = "accuracy";
+    public static final String APP_BOOT_TIME = "app_boot_time";
+    public static final String APP_COLD_BOOT_TO_END_INIT_DURATION = "end_init_duration";
+    public static final String APP_COLD_BOOT_TO_START_LOCATION_DURATION = "start_location_duration";
+    public static final String AUTH_STATUS = "auth_status";
+    public static final String BPEA_ACTION = "bpea_action";
+    public static final String BPEA_CHECK_DURATION = "elapsed_time";
+    public static final String CACHE = "cache";
+    public static final String CACHE_DURATION = "cache_duration";
+    public static final String CACHE_TIME = "cache_time";
+    public static final String CACHE_TIMESTAMP = "cache_timestamp";
+    public static final String CERT_TOKEN = "cert_token";
+    public static final String CONNECT_WIFI_INFO = "connect_wifi_info";
+    public static final String DETAIL_ERR_MSG = "detail_err_msg";
+    public static final String ERR_CODE = "err_code";
+    public static final String ERR_MSG = "err_msg";
+    public static final String EVENT_AUTH_STATUS = "bd_location_sdk_auth_status";
+    public static final String EVENT_BASE_INFO = "bd_location_sdk_base_info";
+    public static final String EVENT_BD_LOCATION_LIGHT_LOCATION = "bd_location_light_location";
+    public static final String EVENT_BPEA_CERT_CHECK = "bd_location_bpea_check";
+    public static final String EVENT_BPEA_CERT_NULL = "bd_location_bpea_cert_null";
+    public static final String EVENT_BPEA_CHECK_PARAMS_NULL = "bd_location_bpea_check_params_null";
+    public static final String EVENT_BPEA_WITHOUT_CERT_CHECK = "bd_location_without_bpea_interface";
+    public static final String EVENT_CONNECT_WIFI_INFO = "bd_location_connect_wifi_info";
+    public static final String EVENT_CONTINUE = "bd_location_sdk_continue";
+    public static final String EVENT_DESIRED_LOCATION = "bd_location_sdk_desired_location";
+    public static final String EVENT_DESIRED_LOCATION_DURATION = "bd_location_sdk_desired_location_duration";
+    public static final String EVENT_FETCH_STATION_DURATION = "bd_location_sdk_fetch_station_duration";
+    public static final String EVENT_FETCH_WIFI_DURATION = "bd_location_sdk_fetch_wifi_duration";
+    public static final String EVENT_FIRST_LOCATION_DURATION = "bd_location_sdk_first_location_duration";
+    public static final String EVENT_FIRST_SUBMIT_DURATION = "bd_location_sdk_first_submit_duration";
+    public static final String EVENT_GEOCODE = "bd_location_sdk_geocode";
+    public static final String EVENT_GIS = "bd_location_sdk_gis";
+    public static final String EVENT_GPS_CHECK_REGION = "bd_location_gps_check_region";
+    public static final String EVENT_INIT = "bd_location_sdk_init";
+    public static final String EVENT_OVERSEAS_GET_LOCATION_FAILED_CACHE_VALIDITY = "bd_location_overseas_cache_validity";
+    public static final String EVENT_RESTRICTED_INFO = "bd_location_sdk_restricted_info";
+    public static final String EVENT_SCAN_REFRESH = "bd_location_sdk_scan_refresh";
+    public static final String EVENT_SCAN_UPLOAD = "bd_location_sdk_scan_upload";
+    public static final String EVENT_SCAN_WIFI_LIST = "bd_location_scan_wifi_list";
+    public static final String EVENT_SUBMIT_V2 = "bd_location_sdk_submit_v2";
+    public static final String EVENT_TRACEROUTE_FETCH_CONFIG = "bd_location_sdk_traceroute_fetch_config";
+    public static final String EVENT_TRACEROUTE_UPLOAD = "bd_location_sdk_traceroute_upload";
+    public static final String GET_CELL_DURATION = "get_cell_duration";
+    public static final String INFO = "info";
+    public static final String INTEL_UPLOAD_INTERVAL = "intel_upload_interval";
+    public static final String IS_CACHE = "is_cache";
+    public static final String IS_CN = "is_cn";
+    public static final String IS_COLD_BOOT = "is_cold_boot";
+    public static final String IS_GPS_CHINESE_CHANNEL = "is_gps_chinese_channel";
+    public static final String IS_REGION_IN_CHINESECHANNEL = "is_region_in_chinese_channel";
+    public static final String IS_SUCCESS = "is_success";
+    public static final String IS_TIMEOUT = "is_timeout";
+    public static final String IS_VALID = "is_valid";
+    public static final String IS_WIFI_CACHE = "is_wifi_cache";
+    public static final String IS_WIFI_NULL = "is_wifi_null";
+    public static final String IS_WIFI_OPEN = "is_wifi_open";
+    public static final String LOCATE_TYPE = "locate_type";
+    public static final String LOCATION = "location";
+    public static final String LOCATION_MODE = "location_mode";
+    public static final String LOCATION_NAME = "location_name";
+    public static final String METHOD_NAME = "method_name";
+    public static final String OVERSEAS_GET_LOCATION_FAILED_CACHE_IS_VALIDITY = "is_validity";
+    public static final String OVERSEAS_GET_LOCATION_FAILED_CACHE_TIME = "cache_time";
+    public static final String SCAN_WIFI_LIST = "scan_wifi_list";
+    public static final String SDK_VERSION = "sdk_version";
+    public static final String STACKTRACE_DURATION = "stacktrace_duration";
+    public static final String STACK_TRACE = "stack_trace";
+    public static final String STATUS = "status";
+    public static final String SUBMIT = "submit";
+    public static final String SUBMIT_DURATION = "submit_duration";
+    public static final String TAG = "tag";
+    public static final String TIMEOUT = "timeout";
+    public static final String TIMESTAMP = "timestamp";
+    public static final String TOTAL_DURATION = "total_duration";
+    public static final String UPLOAD_SOURCE = "upload_source";
+
+    public LocationMonitorConst() {
+    }
+}

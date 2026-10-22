@@ -1,0 +1,12 @@
+package com.mammon.audiosdk.structures;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes32.dex */
+public class SAMICoreVopAudioCheckerAudioMetricParameter {
+    public String audioMetricModelPath;
+    public float cutoffLength;
+    public boolean enableSNR;
+    public float snrThreshold;
+
+    public SAMICoreVopAudioCheckerAudioMetricParameter() {
+    }
+}

@@ -1,0 +1,189 @@
+package com.bytedance.android.live.ktv.common.model.api;
+
+import com.bytedance.android.livesdk.d9;
+import com.bytedance.android.tools.pbadapter.annotation.IgnoreProtoFieldCheck;
+import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010 \n\u0002\u0010\t\n\u0002\b\b\n\u0002\u0010\u000e\n\u0002\b\u0015\n\u0002\u0010\b\n\u0002\b\t\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0002\b\u000b\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b7\u0010\u000bR0\u0010\u0004\u001a\n\u0012\u0004\u0012\u00020\u0003\u0018\u00010\u00028\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\b\u0004\u0010\u0005\u0012\u0004\b\n\u0010\u000b\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\tR0\u0010\r\u001a\n\u0012\u0004\u0012\u00020\f\u0018\u00010\u00028\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\b\r\u0010\u0005\u0012\u0004\b\u0010\u0010\u000b\u001a\u0004\b\u000e\u0010\u0007\"\u0004\b\u000f\u0010\tR(\u0010\u0011\u001a\u00020\u00038\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\b\u0011\u0010\u0012\u0012\u0004\b\u0017\u0010\u000b\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016R(\u0010\u0018\u001a\u00020\f8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\b\u0018\u0010\u0019\u0012\u0004\b\u001e\u0010\u000b\u001a\u0004\b\u001a\u0010\u001b\"\u0004\b\u001c\u0010\u001dR\"\u0010\u001f\u001a\u00020\u00038\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b\u001f\u0010\u0012\u001a\u0004\b \u0010\u0014\"\u0004\b!\u0010\u0016R\"\u0010#\u001a\u00020\"8\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b#\u0010$\u001a\u0004\b%\u0010&\"\u0004\b'\u0010(R\"\u0010)\u001a\u00020\f8\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b)\u0010\u0019\u001a\u0004\b*\u0010\u001b\"\u0004\b+\u0010\u001dR0\u0010.\u001a\u0010\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020-\u0018\u00010,8\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b.\u0010/\u001a\u0004\b0\u00101\"\u0004\b2\u00103R0\u00104\u001a\u0010\u0012\u0004\u0012\u00020\f\u0012\u0004\u0012\u00020-\u0018\u00010,8\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b4\u0010/\u001a\u0004\b5\u00101\"\u0004\b6\u00103¨\u00068"}, d2 = {"Lcom/bytedance/android/live/ktv/common/model/api/i0;", "", "", "", "chorusUsers", "Ljava/util/List;", "getChorusUsers", "()Ljava/util/List;", "setChorusUsers", "(Ljava/util/List;)V", "getChorusUsers$annotations", "()V", "", "chorusUserOpenIds", "getChorusUserOpenIds", "setChorusUserOpenIds", "getChorusUserOpenIds$annotations", "leadUserId", "J", "getLeadUserId", "()J", "setLeadUserId", "(J)V", "getLeadUserId$annotations", "leadOpenId", "Ljava/lang/String;", "getLeadOpenId", "()Ljava/lang/String;", "setLeadOpenId", "(Ljava/lang/String;)V", "getLeadOpenId$annotations", "songId", "d", "setSongId", "", "songType", "I", "getSongType", "()I", "setSongType", "(I)V", "chorusId", "a", "setChorusId", "", "Lcom/bytedance/android/live/ktv/common/model/api/l0;", "userBaseMap", "Ljava/util/Map;", "getUserBaseMap", "()Ljava/util/Map;", "setUserBaseMap", "(Ljava/util/Map;)V", "openUserBaseMap", "getOpenUserBaseMap", "setOpenUserBaseMap", "<init>", "multilink-base_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final class i0 implements vh7.h {
+
+    @SerializedName("chorus_id")
+    protected String chorusId;
+
+    @IgnoreProtoFieldCheck
+    @SerializedName("user_open_ids")
+    protected List<String> chorusUserOpenIds;
+
+    @IgnoreProtoFieldCheck
+    @SerializedName("user_ids")
+    protected List<Long> chorusUsers;
+
+    @IgnoreProtoFieldCheck
+    @SerializedName("leader_user_open_id")
+    protected String leadOpenId;
+
+    @IgnoreProtoFieldCheck
+    @SerializedName("leader_user_id")
+    protected long leadUserId;
+
+    @IgnoreProtoFieldCheck
+    @SerializedName("open_user_base_map")
+    protected Map<String, l0> openUserBaseMap;
+
+    @SerializedName("song_id")
+    protected long songId;
+
+    @SerializedName("song_type")
+    protected int songType;
+
+    @IgnoreProtoFieldCheck
+    @SerializedName("user_base_map")
+    protected Map<Long, l0> userBaseMap;
+
+    public final String c() {
+        return d9.c(Long.valueOf(this.leadUserId), this.leadOpenId);
+    }
+
+    public i0() {
+        this.leadOpenId = "";
+        this.chorusId = "";
+    }
+
+    public final String a() {
+        return this.chorusId;
+    }
+
+    public final List<String> b() {
+        return this.chorusUserOpenIds;
+    }
+
+    public final long d() {
+        return this.songId;
+    }
+
+    public final Map<String, l0> e() {
+        return this.openUserBaseMap;
+    }
+
+    public i0(am3.g r14) {
+        this.chorusUsers = new ArrayList();
+        this.chorusUserOpenIds = new ArrayList();
+        this.userBaseMap = new HashMap();
+        this.openUserBaseMap = new HashMap();
+        long r0 = r14.c();
+    L3:
+        int r2 = r14.f();
+        if (r2 == (-1)) goto L49;
+        Object r8 = null;
+        switch(r2) {
+            case 1: goto L47;
+            case 2: goto L46;
+            case 3: goto L45;
+            case 4: goto L44;
+            case 5: goto L28;
+            case 6: goto L27;
+            default: goto L7;
+        };
+    L27:
+        this.chorusId = am3.h.c(r14);
+        goto L3
+    L28:
+        long r9 = r14.c();
+        l0 r3 = null;
+    L29:
+        int r11 = r14.f();
+        if (r11 == (-1)) goto L36;
+        if (r11 != 1) goto L32;
+        r8 = Long.valueOf(r14.j());
+        goto L29
+    L32:
+        if (r11 != 2) goto L33;
+        r3 = new l0(r14);
+        goto L29
+    L33:
+        am3.h.e(r14);
+        goto L29
+    L36:
+        r14.d(r9);
+        Map r4 = this.userBaseMap;
+        if (r8 == null) goto L43;
+        if (r3 == null) goto L41;
+    L39:
+        r4.put(r8, r3);
+        goto L3
+    L41:
+        throw new IllegalStateException("Value must not be null");
+    L43:
+        throw new IllegalStateException("Key must not be null");
+    L44:
+        this.songType = r14.i();
+        goto L3
+    L45:
+        this.songId = r14.j();
+        goto L3
+    L46:
+        this.leadUserId = r14.j();
+        goto L3
+    L47:
+        List r5 = this.chorusUsers;
+        Object r6 = Long.valueOf(r14.j());
+    L48:
+        r5.add(r6);
+        goto L3
+    L7:
+        switch(r2) {
+            case 5000: goto L26;
+            case 5001: goto L25;
+            case 5002: goto L9;
+            default: goto L8;
+        };
+    L9:
+        long r12 = r14.c();
+        r3 = null;
+    L10:
+        int r13 = r14.f();
+        if (r13 == (-1)) goto L17;
+        if (r13 != 1) goto L13;
+        r8 = am3.h.c(r14);
+        goto L10
+    L13:
+        if (r13 != 2) goto L14;
+        r3 = new l0(r14);
+        goto L10
+    L14:
+        am3.h.e(r14);
+        goto L10
+    L17:
+        r14.d(r12);
+        r4 = this.openUserBaseMap;
+        if (r8 == null) goto L24;
+        if (r3 != null) goto L39;
+        throw new IllegalStateException("Value must not be null");
+    L24:
+        throw new IllegalStateException("Key must not be null");
+    L25:
+        this.leadOpenId = am3.h.c(r14);
+        goto L3
+    L26:
+        r5 = this.chorusUserOpenIds;
+        r6 = am3.h.c(r14);
+        goto L48
+    L8:
+        am3.h.e(r14);
+        goto L3
+    L49:
+        r14.d(r0);
+        if (this.leadOpenId != null) goto L53;
+        this.leadOpenId = "";
+    L53:
+        if (this.chorusId != null) goto L99;
+        this.chorusId = "";
+        return;
+    }
+}

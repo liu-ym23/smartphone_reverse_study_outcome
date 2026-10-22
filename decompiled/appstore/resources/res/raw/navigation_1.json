@@ -1,0 +1,441 @@
+[
+  {
+    "group_id": 9001,
+    "title": "应用推荐",
+    "items": [
+      {
+        "id": 1001,
+        "jsonType": 1,
+        "apiType": "recommend",
+        "title": "全部推荐",
+        "source": 1,
+        "iconId": "icon_1",
+        "pageIdentity": "xxxx",
+        "pageSource": "page_all_recommend"
+      },
+      {
+        "id": 1002,
+        "jsonType": 1,
+        "apiType": "pageApps",
+        "title": "装机必备",
+        "iconId": "icon_2",
+        "pageIdentity": "2",
+        "page_id": 2,
+        "pageSource": "page_must_apps"
+      },
+      {
+        "id": 1003,
+        "jsonType": 1,
+        "apiType": "pageApps",
+        "title": "时下热门",
+        "iconId": "icon_30",
+        "pageIdentity": "3",
+        "page_id": 3,
+        "pageSource": "page_hot_apps"
+      },
+      {
+        "id": 1041,
+        "jsonType": 1,
+        "apiType": "pageApps",
+        "title": "一步精选",
+        "iconId": "icon_40",
+        "pageIdentity": "3",
+        "page_id": 4,
+        "pageSource": "page_one_step_apps"
+      },
+      {
+        "id": 1004,
+        "jsonType": 1,
+        "apiType": "pageApps",
+        "title": "热游推荐",
+        "iconId": "icon_4",
+        "pageIdentity": "5",
+        "page_id": 5,
+        "pageSource": "page_hot_game_recommend"
+      },
+      {
+        "id": 1042,
+        "jsonType": 1,
+        "apiType": "topic",
+        "title": "TNT精选",
+        "iconId": "icon_41",
+        "pageIdentity": "3",
+        "page_id": 1457,
+        "pageSource": "page_tnt_apps"
+      },
+      {
+        "id": 1005,
+        "jsonType": 1,
+        "apiType": "gameSubscribe",
+        "title": "新游预约",
+        "source": 1,
+        "iconId": "icon_5",
+        "pageIdentity": "xxxx",
+        "pageSource": "page_new_game_subscribe"
+      }
+    ]
+  },
+  {
+    "group_id": 9002,
+    "title": "榜单",
+    "items": [
+      {
+        "id": 1006,
+        "jsonType": 1,
+        "apiType": "topList",
+        "title": "周排行",
+        "source": 1,
+        "type": "week",
+        "iconId": "icon_6",
+        "pageSource": "page_week_rank"
+      },
+      {
+        "id": 1007,
+        "jsonType": 1,
+        "apiType": "topList",
+        "title": "总排行",
+        "source": 1,
+        "type": "download",
+        "iconId": "icon_7",
+        "pageSource": "page_total_rank"
+      },
+      {
+        "id": 1008,
+        "jsonType": 1,
+        "apiType": "topList",
+        "title": "游戏榜",
+        "source": 2,
+        "type": "download",
+        "iconId": "icon_8",
+        "pageSource": "page_game_rank"
+      }
+    ]
+  },
+  {
+    "group_id": 9003,
+    "title": "应用分类",
+    "items": [
+      {
+        "id": 1009,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "系统工具",
+        "source": 1,
+        "cid": 34,
+        "iconId": "icon_9",
+        "pageSource": "page_system_tool"
+      },
+      {
+        "id": 1010,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "生活实用",
+        "source": 1,
+        "cid": 36,
+        "iconId": "icon_10",
+        "pageSource": "page_practical_life"
+      },
+      {
+        "id": 1011,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "交通出行",
+        "source": 1,
+        "cid": 37,
+        "iconId": "icon_11",
+        "pageSource": "page_traffic"
+      },
+      {
+        "id": 1012,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "影音图像",
+        "source": 1,
+        "cid": 38,
+        "iconId": "icon_12",
+        "pageSource": "page_video"
+      },
+      {
+        "id": 1013,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "商务办公",
+        "source": 1,
+        "cid": 39,
+        "iconId": "icon_13",
+        "pageSource": "page_office"
+      },
+      {
+        "id": 1014,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "学习教育",
+        "source": 1,
+        "cid": 40,
+        "iconId": "icon_14",
+        "pageSource": "page_education"
+      },
+      {
+        "id": 1015,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "社交通讯",
+        "source": 1,
+        "cid": 41,
+        "iconId": "icon_15",
+        "pageSource": "page_social"
+      },
+      {
+        "id": 1016,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "儿童母婴",
+        "source": 1,
+        "cid": 65,
+        "iconId": "icon_16",
+        "pageSource": "page_infant"
+      },
+      {
+        "id": 1017,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "金融理财",
+        "source": 1,
+        "cid": 43,
+        "iconId": "icon_17",
+        "pageSource": "page_financial"
+      },
+      {
+        "id": 1018,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "阅读资讯",
+        "source": 1,
+        "cid": 111,
+        "iconId": "icon_18",
+        "pageSource": "page_information"
+      },
+      {
+        "id": 1019,
+        "jsonType": 1,
+        "apiType": "categorySingle",
+        "title": "系统应用",
+        "source": 1,
+        "cid": 122,
+        "iconId": "icon_19",
+        "pageSource": "page_system_apps"
+      },
+      {
+        "jsonType": 2
+      },
+      {
+        "id": 1021,
+        "jsonType": 1,
+        "apiType": "categorySingle",
+        "title": "独立游戏",
+        "source": 1,
+        "cid": 112,
+        "iconId": "icon_20",
+        "pageSource": "page_independent_games"
+      },
+      {
+        "id": 1022,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "休闲益智",
+        "source": 1,
+        "cid": 110,
+        "iconId": "icon_21",
+        "pageSource": "page_leisure_education"
+      },
+      {
+        "id": 1023,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "角色扮演",
+        "source": 1,
+        "cid": 27,
+        "iconId": "icon_22",
+        "pageSource": "page_cosplay"
+
+      },
+      {
+        "id": 1024,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "动作冒险",
+        "source": 1,
+        "cid": 28,
+        "iconId": "icon_23",
+        "pageSource": "page_action_adventure"
+      },
+      {
+        "id": 1025,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "体育竞速",
+        "source": 1,
+        "cid": 29,
+        "iconId": "icon_24",
+        "pageSource": "page_sport"
+      },
+      {
+        "id": 1026,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "飞行射击",
+        "source": 1,
+        "cid": 30,
+        "iconId": "icon_25",
+        "pageSource": "page_fly_shoot"
+      },
+      {
+        "id": 1027,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "棋牌卡片",
+        "source": 1,
+        "cid": 31,
+        "iconId": "icon_26",
+        "pageSource": "page_chess_card"
+      },
+      {
+        "id": 1028,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "经营策略",
+        "source": 1,
+        "cid": 32,
+        "iconId": "icon_27",
+        "pageSource": "page_business_strategy"
+      },
+      {
+        "id": 1029,
+        "jsonType": 1,
+        "apiType": "category",
+        "title": "网络游戏",
+        "source": 1,
+        "cid": 232,
+        "iconId": "icon_28",
+        "pageSource": "page_net_game"
+      }
+    ]
+  },
+  {
+    "group_id": 9004,
+    "title": "游戏推荐",
+    "items": [
+      {
+        "id": 1030,
+        "jsonType": 1,
+        "apiType": "recommend",
+        "title": "全部游戏",
+        "source": 2,
+        "iconId": "icon_29",
+        "pageIdentity": "xxxx",
+        "pageSource": "page_all_games"
+      },
+      {
+        "id": 1031,
+        "jsonType": 1,
+        "apiType": "pageApps",
+        "title": "热门网游",
+        "source": 1,
+        "page_id": 12,
+        "iconId": "icon_30",
+        "pageIdentity": "xxxx",
+        "pageSource": "page_hot_games"
+      },
+      {
+        "id": 1032,
+        "jsonType": 1,
+        "apiType": "pageApps",
+        "title": "厂商专区",
+        "source": 1,
+        "page_id": 13,
+        "iconId": "icon_31",
+        "pageIdentity": "xxxx",
+        "pageSource": "page_manufacturer_zone"
+      },
+      {
+        "id": 1033,
+        "jsonType": 1,
+        "apiType": "pageApps",
+        "title": "本周新品",
+        "source": 1,
+        "page_id": 14,
+        "iconId": "icon_32",
+        "pageIdentity": "xxxx",
+        "pageSource": "page_week_new_games"
+      },
+      {
+        "id": 1034,
+        "jsonType": 1,
+        "apiType": "pageApps",
+        "title": "精品单机",
+        "source": 1,
+        "page_id": 15,
+        "iconId": "icon_33",
+        "pageIdentity": "xxxx",
+        "pageSource": "page_single_games"
+      },
+      {
+        "id": 1035,
+        "jsonType": 1,
+        "title": "礼包",
+        "apiType": "gift",
+        "iconId": "icon_34",
+        "pageIdentity": "xxxx",
+        "pageSource": "page_gifts"
+      }
+    ]
+  },
+  {
+    "group_id": 9005,
+    "title": "应用管理",
+    "items": [
+      {
+        "id": 1036,
+        "jsonType": 1,
+        "apiType": "appManagerUpdate",
+        "title": "应用更新",
+        "source": 1,
+        "iconId": "icon_35",
+        "pageSource": "page_update_apps"
+      },
+      {
+        "id": 1037,
+        "jsonType": 1,
+        "apiType": "appManagerMyApps",
+        "title": "我的应用",
+        "source": 1,
+        "iconId": "icon_36",
+        "pageSource": "page_my_apps"
+      },
+      {
+        "id": 1038,
+        "jsonType": 1,
+        "apiType": "appManagerWish",
+        "title": "心愿单",
+        "source": 1,
+        "iconId": "icon_37",
+        "pageSource": "page_my_wish"
+      },
+      {
+        "id": 1039,
+        "jsonType": 1,
+        "apiType": "systemApps",
+        "title": "系统应用",
+        "source": 1,
+        "iconId": "icon_38",
+        "pageSource": "page_my_system_app"
+      },
+      {
+        "id": 1040,
+        "jsonType": 3,
+        "apiType": "setting",
+        "title": "设置"
+      }
+    ]
+  }
+]

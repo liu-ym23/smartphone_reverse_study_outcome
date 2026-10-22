@@ -1,0 +1,51 @@
+package com.bytedance.android.window.shop.holder;
+
+import android.content.Context;
+import android.graphics.Rect;
+import androidx.fragment.app.Fragment;
+import com.bytedance.android.ec.core.opt.asyncInflate.ShoppingAsyncInflater;
+import com.bytedance.android.ec.window.base.product.presenter.element.mainimage.ECWindowProductCardMainImagePresenter;
+import com.bytedance.android.ec.window.base.product.presenter.element.recommend.ECWindowProductCardRecommendInfoElementPresenter;
+import com.bytedance.android.window.shop.product.presenter.buy.ECWindowProductCardBuyElementPresenter;
+import com.bytedance.android.window.shop.product.presenter.hotsale.ECWindowHotSaleProductGroupPresenter;
+import com.bytedance.android.window.shop.product.presenter.others.ECWindowProductCardLiveHotPlayBackElementPresenter;
+import com.ss.android.ugc.aweme.kiwi.presenter.QIPresenter;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes14.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001¨\u0006\u0003"}, d2 = {"Lcom/bytedance/android/window/shop/holder/WindowHotsaleProductHolder;", "Lcom/bytedance/android/window/shop/holder/ShopWindowGenericHolder;", "Lsq3/b;", "ec-biz-store-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class WindowHotsaleProductHolder extends ShopWindowGenericHolder<sq3.b> {
+    @Override // com.bytedance.android.window.shop.holder.ShopWindowItemHolder
+    public final boolean s4() {
+        return true;
+    }
+
+    public WindowHotsaleProductHolder(Fragment r5) {
+        Intrinsics.checkNotNullParameter(r5, "fragment");
+        ShoppingAsyncInflater.a r0 = ShoppingAsyncInflater.e;
+        Context r1 = r5.requireContext();
+        r0.getClass();
+        super(r5, com.bytedance.android.ec.opt.asyncInflate.c.a(ShoppingAsyncInflater.a.a(r1), 2131560872, null, 4), AnonymousClass1.INSTANCE);
+    }
+
+    @Override // com.bytedance.android.window.shop.holder.ShopWindowItemHolder
+    public final Rect r4(int r5) {
+        return new Rect(d.a(12), 0, d.a(12), d.a(8));
+    }
+
+    @Override // com.bytedance.android.window.shop.holder.ShopWindowGenericHolder
+    public final QIPresenter u4(Fragment r3) {
+        Intrinsics.checkNotNullParameter(r3, "fragment");
+        ECWindowHotSaleProductGroupPresenter r0 = new ECWindowHotSaleProductGroupPresenter(r3);
+        r0.d0(new ECWindowProductCardBuyElementPresenter(r3));
+        r0.d0(new iq3.a(r3));
+        r0.d0(new gq3.a(r3));
+        r0.d0(new ECWindowProductCardLiveHotPlayBackElementPresenter(r3));
+        r0.d0(new jq3.a(r3));
+        r0.d0(new ECWindowProductCardMainImagePresenter(r3));
+        r0.d0(new ECWindowProductCardRecommendInfoElementPresenter(r3));
+        r0.d0(new hq3.a(r3));
+        return r0;
+    }
+}

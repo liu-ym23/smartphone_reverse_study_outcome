@@ -1,0 +1,37 @@
+package com.bytedance.bpea.entry.api.device.info;
+
+import android.telephony.NetworkScan;
+import android.telephony.NetworkScanRequest;
+import android.telephony.TelephonyManager;
+import android.telephony.TelephonyScanManager;
+import com.bytedance.android.livesdk.chatroom.vs_base.base.service.inner.ReplayUIStateCode;
+import java.util.concurrent.Executor;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\n\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\n \u0002*\u0004\u0018\u00010\u00010\u0001H\n¢\u0006\u0002\b\u0003"}, d2 = {"<anonymous>", "Landroid/telephony/NetworkScan;", "kotlin.jvm.PlatformType", "invoke"}, k = 3, mv = {1, 1, ReplayUIStateCode.IS_FOLD_OPEN})
+final class TelephonyManagerEntry$Companion$requestNetworkScanUnsafe$1 extends Lambda implements Function0<NetworkScan> {
+    final /* synthetic */ TelephonyScanManager.NetworkScanCallback $callback;
+    final /* synthetic */ Executor $executor;
+    final /* synthetic */ NetworkScanRequest $request;
+    final /* synthetic */ TelephonyManager $this_requestNetworkScanUnsafe;
+
+    public TelephonyManagerEntry$Companion$requestNetworkScanUnsafe$1(TelephonyManager r1, NetworkScanRequest r2, Executor r3, TelephonyScanManager.NetworkScanCallback r4) {
+        this.$this_requestNetworkScanUnsafe = r1;
+        this.$request = r2;
+        this.$executor = r3;
+        this.$callback = r4;
+        super(0);
+    }
+
+    public final NetworkScan invoke() {
+        return this.$this_requestNetworkScanUnsafe.requestNetworkScan(this.$request, this.$executor, this.$callback);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: collision with other method in class */
+    public /* bridge */ /* synthetic */ Object m1681invoke() {
+        return invoke();
+    }
+}

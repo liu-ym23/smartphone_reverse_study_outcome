@@ -1,0 +1,31 @@
+package com.bytedance.android.live.effect.sticker.viewmodel;
+
+import com.bytedance.live.datacontext.m;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+public final class d {
+
+    public static final class a<T> implements Consumer {
+        public final /* synthetic */ Function1 a;
+
+        public a(Function1 r1) {
+            this.a = r1;
+        }
+
+        public final void accept(T r2) {
+            this.a.invoke(r2);
+        }
+    }
+
+    public static final <T> Disposable a(m<T> r1, Function1<? super T, Unit> r2) {
+        Intrinsics.checkNotNullParameter(r1, "$this$stickySubscribe");
+        Intrinsics.checkNotNullParameter(r2, "observer");
+        r2.invoke(r1.getValue());
+        return r1.a().subscribe(new a(r2));
+    }
+}

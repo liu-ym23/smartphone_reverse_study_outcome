@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedanceos.common.ui.widget.FlowLayout
+        android:id="@+id/fl_hot_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/tv_item_le_ri"
+        app:flChildSpacing="@dimen/search_recommend_flow_layout_child_space"
+        app:flChildSpacingForLastRow="align"
+        app:flMinChildSpacing="@dimen/search_recommend_flow_layout_min_child_space"
+        app:flRowSpacing="@dimen/search_recommend_flow_layout_row_space"/>
+    <ImageView
+        android:background="@drawable/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_18"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</LinearLayout>

@@ -1,0 +1,18 @@
+package com.larus.bmhome;
+
+import com.larus.bmhome.chat.cell.MessageCellStateTransformerType;
+import com.larus.im.bean.message.Message;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0006\bg\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H&J\u0010\u0010\u0006\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H&J\n\u0010\u0007\u001a\u0004\u0018\u00010\bH&J.\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\b2\u0006\u0010\r\u001a\u00020\b2\u0006\u0010\u000e\u001a\u00020\u0003H¦@¢\u0006\u0002\u0010\u000f¨\u0006\u0010"}, d2 = {"Lcom/larus/bmhome/IChatAzerothService;", "", "isMessageCipher", "", "data", "Lcom/larus/im/bean/message/Message;", "isAdvancedModeMessage", "generateUidToken", "", "decryptFile", "", "decryptionKey", "inputPath", "outputPath", "deleteInput", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;", "api_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = MessageCellStateTransformerType.Z_LOTTERY_GUIDE_CELL)
+public interface IChatAzerothService {
+    boolean a(Message r1);
+
+    String b();
+
+    Object c(String r1, String r2, String r3, Continuation r4);
+
+    boolean d(Message r1);
+}

@@ -1,0 +1,27 @@
+package y4a;
+
+import android.os.Handler;
+import android.os.Looper;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes32.dex */
+public final class d {
+    public static volatile Handler a;
+
+    public d() {
+    }
+
+    public static Handler a() {
+        if (a != null) goto L15;
+        monitor-enter(d.class);
+    L11:
+        th = move-exception;
+        throw th;
+    L7:
+        if (a != null) goto L9;
+        a = new Handler(Looper.getMainLooper());     // Catch: Throwable -> L11
+    L9:
+        monitor-exit(d.class);     // Catch: Throwable -> L11
+    L15:
+        return a;
+    }
+}

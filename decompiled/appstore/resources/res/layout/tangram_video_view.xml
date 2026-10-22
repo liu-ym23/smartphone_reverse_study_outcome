@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.jzvd.JzvdStd xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_view"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/topic_recommend_video_height"/>

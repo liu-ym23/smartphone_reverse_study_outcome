@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="delete_selected_all_title">
+        <item quantity="one">Delete this Record?</item>
+        <item quantity="other">Delete These %1$d Records?</item>
+    </plurals>
+    <plurals name="delete_selected_record">
+        <item quantity="one">%1$d Record Deleted</item>
+        <item quantity="other">%1$d Records Deleted</item>
+    </plurals>
+    <plurals name="header_selected_item">
+        <item quantity="one">%1$d item selected</item>
+        <item quantity="other">%1$d items selected</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="myapp_update_count">
+        <item quantity="one">%1$s Update</item>
+        <item quantity="other">%1$s Updates</item>
+    </plurals>
+    <plurals name="update_footer_hide_apps">
+        <item quantity="one">%1$s item</item>
+        <item quantity="other">%1$s items</item>
+    </plurals>
+    <plurals name="update_notification_appstore">
+        <item quantity="one">%1$d App to Update</item>
+        <item quantity="other">%1$d Apps to Update</item>
+    </plurals>
+    <plurals name="update_notification_gamestore">
+        <item quantity="one">%1$s Game to Update</item>
+        <item quantity="other">%1$s Games to Update</item>
+    </plurals>
+</resources>

@@ -1,0 +1,22 @@
+package io.reactivex.internal.operators.maybe;
+
+import io.reactivex.Maybe;
+import io.reactivex.MaybeObserver;
+import io.reactivex.internal.disposables.EmptyDisposable;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final class MaybeNever extends Maybe<Object> {
+    public static final MaybeNever INSTANCE = null;
+
+    public MaybeNever() {
+    }
+
+    static {
+        INSTANCE = new MaybeNever();
+    }
+
+    @Override // io.reactivex.Maybe
+    protected void subscribeActual(MaybeObserver<? super Object> r1) {
+        r1.onSubscribe(EmptyDisposable.NEVER);
+    }
+}

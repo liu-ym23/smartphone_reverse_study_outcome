@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_ignore_layout"
+    android:visibility="gone"
+    android:layout_width="@dimen/tv_app_item_horizontal_width"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_29">
+    <TextView
+        android:textSize="@dimen/textSize16"
+        android:textStyle="bold"
+        android:textColor="#cc000000"
+        android:gravity="center"
+        android:id="@+id/tv_ignore_update"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_24"
+        android:text="@string/update_footer_text"
+        android:drawableLeft="@drawable/slide_apphide_icon_normal"
+        android:drawablePadding="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="@dimen/textSize14"
+        android:textStyle="bold"
+        android:textColor="#66000000"
+        android:gravity="center"
+        android:id="@+id/tv_ignore_update_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:drawableRight="@drawable/item_arrow"
+        android:drawablePadding="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_ignore_update"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_ignore_update"/>
+    <View
+        android:id="@+id/line_view3"
+        android:background="#14000000"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_28"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_ignore_update"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ignore_update"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

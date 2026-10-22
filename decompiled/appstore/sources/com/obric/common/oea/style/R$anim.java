@@ -1,0 +1,66 @@
+package com.obric.common.oea.style;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class R$anim {
+    public static final int decelerate_quad = 2130771997;
+    public static final int decelerate_quart = 2130771998;
+    public static final int fast_smooth_interpolator = 2130772005;
+    public static final int fragment_fast_out_extra_slow_in = 2130772006;
+    public static final int oui_activity_close_enter = 2130772036;
+    public static final int oui_activity_close_exit = 2130772037;
+    public static final int oui_activity_open_enter = 2130772038;
+    public static final int oui_activity_open_exit = 2130772039;
+    public static final int oui_interpolator_bounce_bouncy_1 = 2130772040;
+    public static final int oui_interpolator_bounce_bouncy_2 = 2130772041;
+    public static final int oui_interpolator_bounce_bouncy_3 = 2130772042;
+    public static final int oui_interpolator_bounce_bouncy_4 = 2130772043;
+    public static final int oui_interpolator_bounce_smooth = 2130772044;
+    public static final int oui_interpolator_bounce_snappy_1 = 2130772045;
+    public static final int oui_interpolator_bounce_snappy_2 = 2130772046;
+    public static final int oui_interpolator_bounce_snappy_3 = 2130772047;
+    public static final int oui_interpolator_bounce_snappy_4 = 2130772048;
+    public static final int oui_interpolator_easing_ease = 2130772049;
+    public static final int oui_interpolator_easing_ease_in = 2130772050;
+    public static final int oui_interpolator_easing_ease_in_cubic = 2130772051;
+    public static final int oui_interpolator_easing_ease_in_expo = 2130772052;
+    public static final int oui_interpolator_easing_ease_in_out = 2130772053;
+    public static final int oui_interpolator_easing_ease_in_out_cubic = 2130772054;
+    public static final int oui_interpolator_easing_ease_in_out_expo = 2130772055;
+    public static final int oui_interpolator_easing_ease_in_out_quad = 2130772056;
+    public static final int oui_interpolator_easing_ease_in_out_quart = 2130772057;
+    public static final int oui_interpolator_easing_ease_in_out_quint = 2130772058;
+    public static final int oui_interpolator_easing_ease_in_out_sine = 2130772059;
+    public static final int oui_interpolator_easing_ease_in_quad = 2130772060;
+    public static final int oui_interpolator_easing_ease_in_quart = 2130772061;
+    public static final int oui_interpolator_easing_ease_in_quint = 2130772062;
+    public static final int oui_interpolator_easing_ease_in_sine = 2130772063;
+    public static final int oui_interpolator_easing_ease_out = 2130772064;
+    public static final int oui_interpolator_easing_ease_out_cubic = 2130772065;
+    public static final int oui_interpolator_easing_ease_out_expo = 2130772066;
+    public static final int oui_interpolator_easing_ease_out_quad = 2130772067;
+    public static final int oui_interpolator_easing_ease_out_quart = 2130772068;
+    public static final int oui_interpolator_easing_ease_out_quint = 2130772069;
+    public static final int oui_interpolator_easing_ease_out_sine = 2130772070;
+    public static final int oui_interpolator_easing_linear = 2130772071;
+    public static final int oui_interpolator_easing_standard = 2130772072;
+    public static final int oui_modal_close_enter = 2130772073;
+    public static final int oui_modal_close_exit = 2130772074;
+    public static final int oui_modal_open_enter = 2130772075;
+    public static final int oui_modal_open_exit = 2130772076;
+    public static final int oui_search_close_enter = 2130772079;
+    public static final int oui_search_close_exit = 2130772080;
+    public static final int oui_search_open_enter = 2130772081;
+    public static final int oui_search_open_exit = 2130772082;
+    public static final int oui_transition_settings_in_a = 2130772083;
+    public static final int oui_transition_settings_in_b = 2130772084;
+    public static final int oui_transition_settings_out_a = 2130772085;
+    public static final int oui_transition_settings_out_b = 2130772086;
+    public static final int oui_transition_subpage_in_a = 2130772087;
+    public static final int oui_transition_subpage_in_b = 2130772088;
+    public static final int oui_transition_subpage_out_a = 2130772089;
+    public static final int oui_transition_subpage_out_b = 2130772090;
+    public static final int smooth_interpolator = 2130772099;
+
+    private R$anim() {
+    }
+}

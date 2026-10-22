@@ -1,0 +1,18 @@
+package com.bytedance.android.shopping.new_cart.container;
+
+import androidx.lifecycle.Lifecycle;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes13.dex */
+public final /* synthetic */ class r {
+    public static final /* synthetic */ int[] a = null;
+
+    static {
+        int[] r0 = new int[Lifecycle.State.values().length];
+        a = r0;
+        r0[Lifecycle.State.INITIALIZED.ordinal()] = 1;
+        r0[Lifecycle.State.CREATED.ordinal()] = 2;
+        r0[Lifecycle.State.STARTED.ordinal()] = 3;
+        r0[Lifecycle.State.RESUMED.ordinal()] = 4;
+        r0[Lifecycle.State.DESTROYED.ordinal()] = 5;
+    }
+}

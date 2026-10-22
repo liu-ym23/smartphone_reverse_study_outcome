@@ -1,0 +1,27 @@
+package com.larksuite.framework.apiplugin.model.open.share;
+
+import com.alibaba.fastjson.annotation.JSONField;
+import com.larksuite.component.universe_design.timepicker.impl.base.WheelView;
+import com.larksuite.framework.apiplugin.annotation.LKRequiredParam;
+import com.larksuite.framework.apiplugin.common.LKBaseResponseModel;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003R \u0010\u0004\u001a\u0004\u0018\u00010\u00058\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"Lcom/larksuite/framework/apiplugin/model/open/share/DocsSharePanelResponseModel;", "Lcom/larksuite/framework/apiplugin/common/LKBaseResponseModel;", "<init>", "()V", "status", "", "getStatus", "()Ljava/lang/String;", "setStatus", "(Ljava/lang/String;)V", "open-plugin-protocol_release"}, k = 1, mv = {2, 1, 0}, xi = WheelView.WHEEL_ITEM_HEIGHT)
+public final class DocsSharePanelResponseModel extends LKBaseResponseModel {
+
+    @JSONField(name = "status")
+    @LKRequiredParam
+    private String status;
+
+    public DocsSharePanelResponseModel() {
+    }
+
+    public final String getStatus() {
+        return this.status;
+    }
+
+    public final void setStatus(String r1) {
+        this.status = r1;
+    }
+}

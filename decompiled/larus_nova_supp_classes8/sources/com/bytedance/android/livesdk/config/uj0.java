@@ -1,0 +1,15 @@
+package com.bytedance.android.livesdk.config;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+public final class uj0 extends SSettingKey<Boolean> {
+    public static final uj0 a = null;
+
+    static {
+        a = new uj0();
+    }
+
+    public uj0() {
+        Boolean r1 = Boolean.TRUE;
+        super("live_preview_multi_link_mode_opt", "修改LivePreviewMultiLinkLoader里multiLinkMode判断逻辑", r1, r1);
+    }
+}

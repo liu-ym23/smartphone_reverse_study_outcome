@@ -1,0 +1,11 @@
+package com.android.vcard.exception;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class VCardNestedException extends VCardNotSupportedException {
+    public VCardNestedException() {
+    }
+
+    public VCardNestedException(String r1) {
+        super(r1);
+    }
+}

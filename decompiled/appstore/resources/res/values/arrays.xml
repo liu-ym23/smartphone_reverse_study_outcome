@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="one_wheel_entries">
+        <item>��️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️️</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_bottom_navbar_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>28</item>
+        <item>0x4df7f7f7</item>
+        <item>18</item>
+        <item>0x4df7f7f7</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_no_gradient_blur_blend_modes">
+        <item>3</item>
+    </array>
+    <array name="oui_no_gradient_blur_colors">
+        <item>0x0</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x99000000</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="system_app_category">
+        <item>com.bytedanceos.calculator</item>
+        <item>com.bytedanceos.gamestore</item>
+        <item>com.bytedanceos.weather</item>
+        <item>com.obric.notes</item>
+        <item>com.android.email</item>
+        <item>com.bytedanceos.recharge</item>
+        <item>com.android.musicfx</item>
+        <item>com.obric.recorder</item>
+        <item>com.bytedanceos.cloudgallery</item>
+        <item>com.bytedanceos.textboom</item>
+        <item>com.sohu.inputmethod.sogou.chuizi</item>
+        <item>com.iflytek.inputmethod.bytedance</item>
+        <item>com.youdao.dict.bytedance</item>
+        <item>com.bytedanceos.screenrecorder</item>
+        <item>com.bytedanceos.handinhand</item>
+        <item>com.bytedanceos.compass</item>
+        <item>com.bytedanceos.launcher.theme.trans</item>
+        <item>com.redteamobile.global.roaming</item>
+        <item>com.bytedanceos.smartfolder.aoa</item>
+        <item>com.bytedanceos.writer</item>
+    </array>
+    <array name="system_apps_auto_update">
+        <item>com.bytedanceos.setupwizard</item>
+        <item>com.obric.security</item>
+        <item>com.bytedanceos.clock</item>
+        <item>com.obric.music</item>
+        <item>com.obric.notes</item>
+        <item>com.bytedanceos.voice</item>
+        <item>com.bytedanceos.updater</item>
+        <item>com.bytedanceos.gamestore</item>
+        <item>com.bytedanceos.calculator</item>
+        <item>com.android.contacts</item>
+        <item>com.android.camera2</item>
+        <item>com.obric.appstore</item>
+        <item>com.android.mms</item>
+        <item>com.obric.cleaner</item>
+        <item>com.obric.filemanager</item>
+        <item>com.obric.quicksearch</item>
+        <item>com.bytedanceos.weather</item>
+        <item>com.bytedanceos.launcher</item>
+        <item>com.android.gallery3d</item>
+        <item>com.bytedanceos.textboom</item>
+        <item>com.bytedanceos.sara</item>
+        <item>com.obric.recorder</item>
+        <item>com.bytedanceos.sidebar</item>
+        <item>com.bytedance.crashreport</item>
+        <item>com.android.settings</item>
+        <item>com.bytedanceos.handbook</item>
+        <item>com.bytedanceos.manual</item>
+        <item>com.bytedanceos.backup</item>
+        <item>com.android.email</item>
+        <item>com.android.phone</item>
+        <item>com.bytedanceos.cloudsync</item>
+        <item>com.bytedanceos.screenrecorder</item>
+        <item>com.bytedanceos.tracker</item>
+        <item>com.bytedanceos.thinkboost</item>
+        <item>com.bytedanceos.handinhand</item>
+        <item>com.bytedanceos.wallet</item>
+        <item>com.android.browser</item>
+        <item>com.bytedanceos.magicflow</item>
+        <item>com.bytedanceos.tpassword</item>
+        <item>com.android.musicfx</item>
+        <item>com.bytedanceos.bug2go</item>
+        <item>com.android.systemui</item>
+        <item>com.android.wifiauthorize</item>
+        <item>com.android.bluetooth</item>
+        <item>com.bytedanceos.keyguard</item>
+        <item>com.bytedance.savelog</item>
+        <item>com.bytedanceos.filepreview</item>
+        <item>bytedance.authorizer</item>
+        <item>com.bytedanceos.nodisturb</item>
+        <item>com.bytedanceos.wallpapers</item>
+        <item>com.modemdebug.sconf</item>
+        <item>com.bytedance.factorytest</item>
+        <item>com.bytedanceos.intelligenwords</item>
+        <item>com.bytedanceos.autoregistration</item>
+        <item>com.bytedanceos.phone_number_assistant</item>
+        <item>com.bytedanceos.tpassword</item>
+        <item>com.bytedanceos.recharge</item>
+        <item>com.bytedanceos.textparticiple</item>
+        <item>com.obric.wallpaper</item>
+        <item>com.bytedanceos.cloudgallery</item>
+        <item>com.bytedanceos.bytedancebrain</item>
+        <item>com.bytedance.smpush</item>
+        <item>com.bytedanceos.securitycenter</item>
+        <item>com.bytedanceos.whiteboard</item>
+        <item>com.bytedanceos.videoplayerproject</item>
+        <item>com.bytedanceos.ime</item>
+        <item>com.obric.mediametadataservice</item>
+        <item>com.obric.matrix</item>
+        <item>com.obric.updater</item>
+        <item>com.obric.browser</item>
+        <item>com.obric.filepreview</item>
+        <item>com.obric.version</item>
+        <item>com.obric.smartnotification</item>
+        <item>com.obric.camera2</item>
+        <item>com.obric.larksso_webview</item>
+        <item>com.obric.aiagent.executionengine</item>
+        <item>com.obric.compass</item>
+        <item>com.obric.feedback</item>
+        <item>com.obric.calendar</item>
+        <item>com.obric.weather</item>
+        <item>com.obric.calculator</item>
+        <item>com.obric.screenrecorder</item>
+        <item>com.obric.clock</item>
+        <item>com.obric.powersaving.launcher</item>
+        <item>com.obric.cae</item>
+        <item>com.obric.cloudservice</item>
+        <item>com.obric.videoplayer</item>
+        <item>com.obric.assistant</item>
+        <item>com.obric.account</item>
+        <item>com.obric.autoaction</item>
+        <item>com.android.launcher3</item>
+        <item>com.bytedance.mmi</item>
+        <item>com.bytedance.android.securityinput</item>
+        <item>com.bytedance.android.doubaoime</item>
+        <item>com.larus.nova</item>
+        <item>com.obric.assistantaiagent</item>
+        <item>com.obric.aikernel</item>
+        <item>com.obric.memorydata</item>
+        <item>com.obric.lifelog</item>
+        <item>com.android.incallui</item>
+        <item>com.android.packageinstaller</item>
+        <item>com.android.provision</item>
+        <item>com.bytedance.obric.airecordassistant</item>
+        <item>com.android.permissioncontroller</item>
+        <item>com.obric.vault</item>
+        <item>com.bytedance.os.mermaid</item>
+        <item>com.obric.appletapp</item>
+        <item>com.obric.aivoice</item>
+    </array>
+    <array name="week_day_labels">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </array>
+</resources>

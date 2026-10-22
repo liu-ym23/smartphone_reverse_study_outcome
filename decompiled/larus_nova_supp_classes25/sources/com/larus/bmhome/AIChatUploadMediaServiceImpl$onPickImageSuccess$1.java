@@ -1,0 +1,66 @@
+package com.larus.bmhome;
+
+import android.net.Uri;
+import com.larus.bmhome.chat.cell.MessageCellStateTransformerType;
+import com.larus.bmhome.chat.input.ChatInputService;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+import ye8.b$a;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 1, 0}, xi = MessageCellStateTransformerType.Z_LOTTERY_GUIDE_CELL)
+@DebugMetadata(c = "com.larus.bmhome.AIChatUploadMediaServiceImpl$onPickImageSuccess$1", f = "AIChatUploadMediaServiceImpl.kt", i = {}, l = {71}, m = "invokeSuspend", n = {}, s = {})
+final class AIChatUploadMediaServiceImpl$onPickImageSuccess$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ ns8.a $compressConfig;
+    final /* synthetic */ wc9.e $conversation;
+    final /* synthetic */ Uri $uri;
+    int label;
+    final /* synthetic */ AIChatUploadMediaServiceImpl this$0;
+
+    public AIChatUploadMediaServiceImpl$onPickImageSuccess$1(Uri r1, ns8.a r2, AIChatUploadMediaServiceImpl r3, wc9.e r4, Continuation<? super AIChatUploadMediaServiceImpl$onPickImageSuccess$1> r5) {
+        this.$uri = r1;
+        this.$compressConfig = r2;
+        this.this$0 = r3;
+        this.$conversation = r4;
+        super(2, r5);
+    }
+
+    public final Continuation<Unit> create(Object r7, Continuation<?> r8) {
+        return new AIChatUploadMediaServiceImpl$onPickImageSuccess$1(this.$uri, this.$compressConfig, this.this$0, this.$conversation, r8);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1, Object r2) {
+        return invoke((CoroutineScope) r1, (Continuation) r2);
+    }
+
+    public final Object invoke(CoroutineScope r1, Continuation<? super Unit> r2) {
+        return create(r1, r2).invokeSuspend(Unit.INSTANCE);
+    }
+
+    public final Object invokeSuspend(Object r11) {
+        Object r0 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int r1 = this.label;
+        if (r1 == 0) goto L8;
+        if (r1 != 1) goto L7;
+        ResultKt.throwOnFailure(r11);
+    L12:
+        return Unit.INSTANCE;
+    L7:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    L8:
+        ResultKt.throwOnFailure(r11);
+        ic8.n0 r12 = b$a.b(ChatInputService.b.f(), this.$uri, false, this.$compressConfig, null, null, 56);
+        AIChatUploadMediaServiceImpl r2 = this.this$0;
+        wc9.e r3 = this.$conversation;
+        this.label = 1;
+        if (AIChatUploadMediaServiceImpl.d(r2, r3, r12, "album", this) != r0) goto L12;
+        return r0;
+    }
+}

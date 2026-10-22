@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/line"
+        style="@style/line_style"/>
+    <TextView
+        android:textSize="@dimen/app_detail_gift_text_size"
+        android:textColor="#e6313131"
+        android:gravity="bottom|left"
+        android:id="@+id/game_gift_pack"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_detail_gift_text_height"
+        android:layout_marginLeft="@dimen/gift_item_margin"
+        android:text="@string/gift_game"
+        android:layout_below="@+id/line"/>
+    <com.bytedanceos.common.ui.widget.GiftPackListView
+        android:id="@+id/game_gift_pack_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_detail_gift_list_margin_left"
+        android:layout_marginTop="@dimen/app_detail_gift_list_margin_top"
+        android:layout_marginRight="@dimen/app_detail_gift_list_margin_left"
+        android:layout_marginBottom="@dimen/app_detail_gift_list_margin_top"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/app_detail_gift_list_divider_height"
+        android:layout_below="@+id/game_gift_pack"/>
+    <TextView
+        android:id="@+id/game_gift_pack_more"
+        android:layout_marginRight="@dimen/gift_item_margin"
+        android:drawableRight="@drawable/arrow_more"
+        android:drawablePadding="@dimen/app_detail_gift_list_more_padding"
+        android:layout_below="@+id/game_gift_pack_content"
+        style="@style/appinfo_context_more_style"/>
+</RelativeLayout>

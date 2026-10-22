@@ -1,0 +1,39 @@
+package com.bytedance.android.livesdk.livecommerce.model;
+
+import java.util.ArrayList;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes10.dex */
+public final class e implements am3.c<ECV2AuthorOrderLimitInfo.ICON> {
+    public e() {
+    }
+
+    public static ECV2AuthorOrderLimitInfo.ICON a(am3.g r5) throws Exception {
+        ECV2AuthorOrderLimitInfo.ICON r0 = new ECV2AuthorOrderLimitInfo.ICON();
+        r0.urlList = new ArrayList();
+        long r1 = r5.c();
+    L3:
+        int r3 = r5.f();
+        if (r3 == (-1)) goto L15;
+        if (r3 != 1) goto L8;
+        r0.urlList.add(am3.h.c(r5));
+        goto L3
+    L8:
+        if (r3 != 2) goto L10;
+        r0.width = r5.i();
+        goto L3
+    L10:
+        if (r3 != 3) goto L11;
+        r0.height = r5.i();
+        goto L3
+    L11:
+        am3.h.e(r5);
+        goto L3
+    L15:
+        r5.d(r1);
+        return r0;
+    }
+
+    public final Object decode(am3.g r1) throws Exception {
+        return a(r1);
+    }
+}

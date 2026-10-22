@@ -1,0 +1,12 @@
+package com.bytedance.services.apm.api;
+
+import com.bytedance.news.common.service.manager.IService;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface IActivityLifeManager extends IService {
+    boolean isForeground();
+
+    void register(IActivityLifeObserver r10);
+
+    void unregister(IActivityLifeObserver r10);
+}

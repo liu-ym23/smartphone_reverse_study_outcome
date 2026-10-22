@@ -1,0 +1,14 @@
+package com.lynx.serval.svg.model;
+
+import android.graphics.Path;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes32.dex */
+public class Model {
+    public Box boundingBox;
+    public FillPaintModel fillPaintModel;
+    public Path path;
+    public StrokePaintModel strokePaintModel;
+
+    public Model() {
+    }
+}

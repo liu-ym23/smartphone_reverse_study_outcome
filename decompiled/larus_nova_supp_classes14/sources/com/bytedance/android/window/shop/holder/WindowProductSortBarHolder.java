@@ -1,0 +1,24 @@
+package com.bytedance.android.window.shop.holder;
+
+import com.bytedance.android.window.shop.repository.tab.entity.d0;
+import com.bytedance.android.window.shop.repository.tab.entity.f;
+import java.util.ArrayList;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes14.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001¨\u0006\u0003"}, d2 = {"Lcom/bytedance/android/window/shop/holder/WindowProductSortBarHolder;", "Lcom/bytedance/android/window/shop/holder/ShopWindowItemHolder;", "Lcom/bytedance/android/window/shop/repository/tab/entity/d0;", "ec-biz-store-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class WindowProductSortBarHolder extends ShopWindowItemHolder<d0> {
+    @Override // com.bytedance.android.window.shop.holder.ShopWindowItemHolder
+    public final boolean s4() {
+        return true;
+    }
+
+    @Override // com.bytedance.android.window.shop.holder.ShopWindowItemHolder
+    public final void q4(f r2) {
+        d0 r3 = (d0) r2;
+        Intrinsics.checkNotNullParameter(r3, "vo");
+        ((ArrayList) r3.j).size();
+        throw null;
+    }
+}

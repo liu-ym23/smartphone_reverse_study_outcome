@@ -1,0 +1,8 @@
+package kotlin.collections;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata
+class MapsKt__MapsJVMKt extends MapsKt__MapWithDefaultKt {
+}

@@ -1,0 +1,13 @@
+package dk5;
+
+import io.reactivex.functions.Consumer;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes18.dex */
+public final class b implements Consumer<Throwable> {
+    public b() {
+    }
+
+    public final void accept(Object r4) throws Exception {
+        tt5.a.e("NotificationPushObserve", "checkCloseStatus fail", (Throwable) r4, false);
+    }
+}

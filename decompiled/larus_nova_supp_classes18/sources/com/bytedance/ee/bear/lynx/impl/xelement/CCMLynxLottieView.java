@@ -1,0 +1,152 @@
+package com.bytedance.ee.bear.lynx.impl.xelement;
+
+import android.content.Context;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
+import android.view.View;
+import com.bytedance.ee.bear.facade.common.widget.BearLottieView;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import tt5.a;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes18.dex */
+@Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0004\b\u0004\u0010\u0005J\b\u0010\u000b\u001a\u00020\fH\u0016J\u0015\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\tH\u0000¢\u0006\u0002\b\u000fJ\u0015\u0010\u0010\u001a\u00020\f2\u0006\u0010\u0011\u001a\u00020\tH\u0000¢\u0006\u0002\b\u0012J\u0017\u0010\u0013\u001a\u00020\f2\b\u0010\u0014\u001a\u0004\u0018\u00010\u0007H\u0000¢\u0006\u0002\b\u0015J\b\u0010\u0016\u001a\u00020\fH\u0016J\b\u0010\u0017\u001a\u00020\fH\u0002J\u0018\u0010\u0018\u001a\u00020\f2\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0014J(\u0010\u001d\u001a\u00020\f2\u0006\u0010\u001e\u001a\u00020\u001c2\u0006\u0010\u001f\u001a\u00020\u001c2\u0006\u0010 \u001a\u00020\u001c2\u0006\u0010!\u001a\u00020\u001cH\u0014J\b\u0010\"\u001a\u00020\fH\u0014J\b\u0010#\u001a\u00020\tH\u0002J\u0010\u0010$\u001a\u00020\f2\u0006\u0010\u001b\u001a\u00020\u001cH\u0002J\b\u0010%\u001a\u00020\fH\u0014J\u0010\u0010&\u001a\u00020\f2\u0006\u0010'\u001a\u00020(H\u0016J\b\u0010)\u001a\u00020\tH\u0002R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\tX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006*"}, d2 = {"Lcom/bytedance/ee/bear/lynx/impl/xelement/CCMLynxLottieView;", "Lcom/bytedance/ee/bear/facade/common/widget/BearLottieView;", "context", "Landroid/content/Context;", "<init>", "(Landroid/content/Context;)V", "TAG", "", "needPlay", "", "mHasInit", "playAnimation", "", "setAutoplay", "autoplay", "setAutoplay$features_lynx_impl_productionChinaRelease", "setLoop", "loop", "setLoop$features_lynx_impl_productionChinaRelease", "setAnimationAsset", "assetName", "setAnimationAsset$features_lynx_impl_productionChinaRelease", "cancelAnimation", "init", "onVisibilityChanged", "changedView", "Landroid/view/View;", "visibility", "", "onSizeChanged", "w", "h", "oldw", "oldh", "onAttachedToWindow", "isVisible", "checkAnimation", "onDetachedFromWindow", "invalidateDrawable", "dr", "Landroid/graphics/drawable/Drawable;", "isLoadingDrawableRunning", "features-lynx-impl_productionChinaRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class CCMLynxLottieView extends BearLottieView {
+    public final String i;
+    public boolean j;
+    public boolean k;
+
+    public final void playAnimation() {
+        a.h(this.i, "xxx:playAnimation: ");
+        if (isVisible() == false) goto L5;
+        super.playAnimation();
+        return;
+    L5:
+        this.j = true;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    private final boolean isVisible() {
+        if (getVisibility() == 0) goto L5;
+    L9:
+        return false;
+    L5:
+        if (getHeight() <= 0) goto L9;
+        if (getWidth() <= 0) goto L9;
+        return true;
+    }
+
+    public final void cancelAnimation() {
+        super.cancelAnimation();
+        this.j = false;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public final boolean m() {
+        Object r0 = getDrawable();
+        if (isAnimating() == false) goto L5;
+    L10:
+        return true;
+    L5:
+        if ((r0 instanceof Animatable) == true) goto L7;
+    L9:
+        return false;
+    L7:
+        if (((Animatable) r0).isRunning() == false) goto L9;
+        goto L9
+    }
+
+    public final void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        if (m() == false) goto L6;
+        a.h(this.i, "xxx: onAttachedToWindow: cancel animator");
+        super.cancelAnimation();
+        this.j = true;
+        return;
+    }
+
+    public final void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        a.h(this.i, "xxx: onDetachedFromWindow");
+    }
+
+    public CCMLynxLottieView(Context r3) {
+        Intrinsics.checkNotNullParameter(r3, "context");
+        super(r3);
+        if (m() == false) goto L5;
+        a.h(this.i, "xxx:init: cancel animator");
+        super.cancelAnimation();
+        this.j = true;
+    L5:
+        setAnimation(2131820626);
+        this.k = true;
+        this.i = "CCMLynxLottieView";
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    private final void checkAnimation(int r3) {
+        if (this.k == true) goto L5;
+        return;
+    L5:
+        if (r3 != 0) goto L12;
+        if (isVisible() == false) goto L12;
+        if (this.j == false) goto L12;
+        a.h(this.i, "xxx: checkAnimation: play " + hashCode());
+        super.playAnimation();
+        return;
+    L12:
+        if (m() == false) goto L14;
+        this.j = true;
+    L14:
+        a.b(this.i, "xxx: checkAnimation: cancel " + hashCode());
+        super.cancelAnimation();
+    }
+
+    public final void invalidateDrawable(Drawable r2) {
+        Intrinsics.checkNotNullParameter(r2, "dr");
+        if (this.k == true) goto L7;
+        super.invalidateDrawable(r2);
+        return;
+    L7:
+        if (isVisible() == true) goto L13;
+        a.h(this.i, "invalidateDrawable not visible, return");
+        if (m() == false) goto L11;
+        this.j = true;
+    L11:
+        super.cancelAnimation();
+        return;
+    L13:
+        super.invalidateDrawable(r2);
+    }
+
+    public final void setAnimationAsset$features_lynx_impl_productionChinaRelease(String r2) {
+        if (TextUtils.isEmpty(r2) == true) goto L5;
+        setAnimation(r2);
+        return;
+    L5:
+        a.k(this.i, "asset name is empty");
+    }
+
+    public final void setAutoplay$features_lynx_impl_productionChinaRelease(boolean r1) {
+        this.j = r1;
+    }
+
+    public final void setLoop$features_lynx_impl_productionChinaRelease(boolean r1) {
+        if (r1 == false) goto L5;
+        setRepeatCount(-1);
+        return;
+    }
+
+    public final void onVisibilityChanged(View r3, int r4) {
+        Intrinsics.checkNotNullParameter(r3, "changedView");
+        a.h(this.i, "xxx: onVisibilityChanged: " + r4);
+        checkAnimation(r4);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public final void onSizeChanged(int r1, int r2, int r3, int r4) {
+        a.h(this.i, "xxx: onSizeChanged: ");
+        checkAnimation(getVisibility());
+    }
+}

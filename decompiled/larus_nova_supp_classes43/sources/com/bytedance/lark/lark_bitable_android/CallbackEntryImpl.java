@@ -1,0 +1,56 @@
+package com.bytedance.lark.lark_bitable_android;
+
+import java.util.LinkedHashMap;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0000\u0018\u0000 \r2\u00020\u0001:\u0001\rB\u0005¢\u0006\u0002\u0010\u0002J0\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\fH\u0016¨\u0006\u000e"}, d2 = {"Lcom/bytedance/lark/lark_bitable_android/CallbackEntryImpl;", "Lcom/bytedance/lark/lark_bitable_android/CallbackEntry;", "()V", "invoke", "", "sender", "", "instanceId", "methodId", "params", "Lcom/bytedance/lark/lark_bitable_android/RustBuffer$ByValue;", "outBuf", "Lcom/bytedance/lark/lark_bitable_android/RustBufferByReference;", "Companion", "lark_bitable_android_release"}, k = 1, mv = {1, 9, 0}, xi = 48)
+public final class CallbackEntryImpl implements CallbackEntry {
+    public static final a Companion = null;
+    private static final CallbackEntry entry = null;
+
+    public static final class a {
+        public a() {
+        }
+    }
+
+    public CallbackEntryImpl() {
+    }
+
+    static {
+        Companion = new a();
+        entry = new CallbackEntryImpl();
+    }
+
+    public static final CallbackEntry getEntry() {
+        Companion.getClass();
+        return access$getEntry$cp();
+    }
+
+    public static final /* synthetic */ CallbackEntry access$getEntry$cp() {
+        return entry;
+    }
+
+    @Override // com.bytedance.lark.lark_bitable_android.CallbackEntry
+    public int invoke(long r10, long r11, long r12, RustBuffer.ByValue r13, RustBufferByReference r14) {
+        Intrinsics.checkNotNullParameter(r13, "params");
+        Intrinsics.checkNotNullParameter(r14, "outBuf");
+        r r15 = r.a;
+        monitor-enter(r15);
+        q0 r16 = (q0) ((LinkedHashMap) r.c).get(Long.valueOf(r11));     // Catch: Throwable -> L14
+        monitor-exit(r15);
+        if (r16 == null) goto L13;
+        if (r12 != 0) goto L10;
+        r15.b(r11);
+    L10:
+        BufferCallStatus r17 = r16.c(r12, r13);
+        r14.setValue(r17.data);
+        return r17.code;
+    L13:
+        throw new RuntimeException("No registered callback<InstanceId(" + r11 + ")>");
+    L14:
+        th = move-exception;
+        throw th;
+    }
+}

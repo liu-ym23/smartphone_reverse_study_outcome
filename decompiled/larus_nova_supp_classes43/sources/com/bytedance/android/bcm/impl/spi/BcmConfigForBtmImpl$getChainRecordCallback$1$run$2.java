@@ -1,0 +1,29 @@
+package com.bytedance.android.bcm.impl.spi;
+
+import com.byted.cast.sink.api.IAPI;
+import kc.c;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\b\n\u0000\n\u0002\u0010\u000e\n\u0000\u0010\u0000\u001a\u00020\u0001H\n¢\u0006\u0002\b\u0002"}, d2 = {"<anonymous>", "", "invoke"}, k = 3, mv = {1, 1, IAPI.OPTION_PLAYER_TYPE})
+public final class BcmConfigForBtmImpl$getChainRecordCallback$1$run$2 extends Lambda implements Function0<String> {
+    final /* synthetic */ String $btm;
+    final /* synthetic */ c $snapshot;
+
+    public BcmConfigForBtmImpl$getChainRecordCallback$1$run$2(String r1, c r10) {
+        this.$btm = r1;
+        this.$snapshot = r10;
+        super(0);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: collision with other method in class */
+    public final String m522invoke() {
+        return "ChainRecordCallback btm=" + this.$btm + " snapshot=" + this.$snapshot;
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke() {
+        return m522invoke();
+    }
+}

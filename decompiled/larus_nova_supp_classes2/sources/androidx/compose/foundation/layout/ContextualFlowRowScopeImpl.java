@@ -1,0 +1,96 @@
+package androidx.compose.foundation.layout;
+
+import androidx.compose.foundation.layout.internal.InlineClassHelperKt;
+import androidx.compose.material3.MenuKt;
+import androidx.compose.ui.Alignment;
+import androidx.compose.ui.Modifier;
+import androidx.compose.ui.layout.HorizontalAlignmentLine;
+import androidx.compose.ui.layout.Measured;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes2.dex */
+@Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0000\b\u0001\u0018\u00002\u00020\u00012\u00020\u0002B'\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ\u0014\u0010\u0012\u001a\u00020\u0013*\u00020\u00132\u0006\u0010\u0014\u001a\u00020\u0015H\u0016J\u0015\u0010\u0016\u001a\u00020\u0013*\u00020\u00132\u0006\u0010\u0017\u001a\u00020\u0018H\u0097\u0001J\u0015\u0010\u0019\u001a\u00020\u0013*\u00020\u00132\u0006\u0010\u001a\u001a\u00020\u001bH\u0097\u0001J!\u0010\u0019\u001a\u00020\u0013*\u00020\u00132\u0012\u0010\u001c\u001a\u000e\u0012\u0004\u0012\u00020\u001e\u0012\u0004\u0012\u00020\u00040\u001dH\u0097\u0001J\r\u0010\u001f\u001a\u00020\u0013*\u00020\u0013H\u0097\u0001J\u001f\u0010 \u001a\u00020\u0013*\u00020\u00132\b\b\u0001\u0010 \u001a\u00020\u00152\u0006\u0010!\u001a\u00020\"H\u0097\u0001R\u0014\u0010\u0003\u001a\u00020\u0004X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0014\u0010\u0005\u001a\u00020\u0004X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\fR\u0016\u0010\u0006\u001a\u00020\u0007X\u0096\u0004¢\u0006\n\n\u0002\u0010\u0010\u001a\u0004\b\u000e\u0010\u000fR\u0016\u0010\b\u001a\u00020\u0007X\u0096\u0004¢\u0006\n\n\u0002\u0010\u0010\u001a\u0004\b\u0011\u0010\u000f¨\u0006#"}, d2 = {"Landroidx/compose/foundation/layout/ContextualFlowRowScopeImpl;", "Landroidx/compose/foundation/layout/RowScope;", "Landroidx/compose/foundation/layout/ContextualFlowRowScope;", "lineIndex", "", "indexInLine", "maxWidthInLine", "Landroidx/compose/ui/unit/Dp;", "maxHeight", "<init>", "(IIFFLkotlin/jvm/internal/DefaultConstructorMarker;)V", "getLineIndex", "()I", "getIndexInLine", "getMaxWidthInLine-D9Ej5fM", "()F", "F", "getMaxHeight-D9Ej5fM", "fillMaxRowHeight", "Landroidx/compose/ui/Modifier;", "fraction", "", "align", "alignment", "Landroidx/compose/ui/Alignment$Vertical;", "alignBy", "alignmentLine", "Landroidx/compose/ui/layout/HorizontalAlignmentLine;", "alignmentLineBlock", "Lkotlin/Function1;", "Landroidx/compose/ui/layout/Measured;", "alignByBaseline", "weight", "fill", "", "foundation-layout"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public final class ContextualFlowRowScopeImpl implements RowScope, ContextualFlowRowScope {
+    public static final int $stable = 0;
+    private final /* synthetic */ RowScopeInstance $$delegate_0;
+    private final int indexInLine;
+    private final int lineIndex;
+    private final float maxHeight;
+    private final float maxWidthInLine;
+
+    public /* synthetic */ ContextualFlowRowScopeImpl(int r1, int r2, float r3, float r4, DefaultConstructorMarker r5) {
+        this(r1, r2, r3, r4);
+    }
+
+    @Override // androidx.compose.foundation.layout.RowScope
+    public Modifier align(Modifier r2, Alignment.Vertical r3) {
+        return this.$$delegate_0.align(r2, r3);
+    }
+
+    @Override // androidx.compose.foundation.layout.RowScope
+    public Modifier alignBy(Modifier r2, HorizontalAlignmentLine r3) {
+        return this.$$delegate_0.alignBy(r2, r3);
+    }
+
+    @Override // androidx.compose.foundation.layout.RowScope
+    public Modifier alignBy(Modifier r2, Function1<? super Measured, Integer> r3) {
+        return this.$$delegate_0.alignBy(r2, r3);
+    }
+
+    @Override // androidx.compose.foundation.layout.RowScope
+    public Modifier alignByBaseline(Modifier r2) {
+        return this.$$delegate_0.alignByBaseline(r2);
+    }
+
+    @Override // androidx.compose.foundation.layout.RowScope
+    public Modifier weight(Modifier r2, float r3, boolean r4) {
+        return this.$$delegate_0.weight(r2, r3, r4);
+    }
+
+    @Override // androidx.compose.foundation.layout.ContextualFlowRowScope
+    public int getIndexInLine() {
+        return this.indexInLine;
+    }
+
+    @Override // androidx.compose.foundation.layout.ContextualFlowRowScope
+    public int getLineIndex() {
+        return this.lineIndex;
+    }
+
+    @Override // androidx.compose.foundation.layout.ContextualFlowRowScope
+    /* JADX INFO: renamed from: getMaxHeight-D9Ej5fM */
+    public float mo852getMaxHeightD9Ej5fM() {
+        return this.maxHeight;
+    }
+
+    @Override // androidx.compose.foundation.layout.ContextualFlowRowScope
+    /* JADX INFO: renamed from: getMaxWidthInLine-D9Ej5fM */
+    public float mo853getMaxWidthInLineD9Ej5fM() {
+        return this.maxWidthInLine;
+    }
+
+    @Override // androidx.compose.foundation.layout.ContextualFlowRowScope
+    public Modifier fillMaxRowHeight(Modifier r3, float r4) {
+        boolean r1 = false;
+        if (MenuKt.ClosedAlphaTarget <= r4) goto L5;
+    L7:
+        if (r1 == true) goto L10;
+        InlineClassHelperKt.throwIllegalArgumentException("invalid fraction " + r4 + "; must be >= 0 and <= 1.0");
+    L10:
+        return r3.then(new FillCrossAxisSizeElement(r4));
+    L5:
+        if (r4 > 1.0f) goto L7;
+        r1 = true;
+        goto L7
+    }
+
+    private ContextualFlowRowScopeImpl(int r2, int r3, float r4, float r5) {
+        this.$$delegate_0 = RowScopeInstance.INSTANCE;
+        this.lineIndex = r2;
+        this.indexInLine = r3;
+        this.maxWidthInLine = r4;
+        this.maxHeight = r5;
+    }
+}

@@ -1,0 +1,10 @@
+package cf;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+public interface f {
+    void onDestroy();
+
+    void onHide();
+
+    void onShow();
+}

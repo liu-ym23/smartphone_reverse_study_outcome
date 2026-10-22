@@ -1,0 +1,11 @@
+package com.larus.dora.impl.noti_v3.overview.viewmodel;
+
+import java.util.List;
+import kotlin.collections.CollectionsKt;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes27.dex */
+public final class e {
+    public static final List<a> a() {
+        return CollectionsKt.listOf(new a[]{new a("finance_security", true), new a("schedule", true), new a("life_service", true), new a("news_info", false), new a("entertainment_recommendation", false)});
+    }
+}

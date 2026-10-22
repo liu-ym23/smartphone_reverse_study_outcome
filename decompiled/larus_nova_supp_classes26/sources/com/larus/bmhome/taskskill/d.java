@@ -1,0 +1,48 @@
+package com.larus.bmhome.taskskill;
+
+import com.larus.im.bean.bot.BotModel;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes26.dex */
+public final class d {
+    public final BotModel a;
+    public final BotModel b;
+
+    public final boolean equals(Object r5) {
+        if (this != r5) goto L6;
+        return true;
+    L6:
+        if ((r5 instanceof d) == true) goto L8;
+        return false;
+    L8:
+        d r6 = (d) r5;
+        if (Intrinsics.areEqual(this.a, r6.a) == true) goto L12;
+        return false;
+    L12:
+        if (Intrinsics.areEqual(this.b, r6.b) == true) goto L14;
+        return false;
+    L14:
+        return true;
+    }
+
+    public final int hashCode() {
+        BotModel r0 = this.a;
+        if (r0 != null) goto L5;
+        int r1 = 0;
+    L7:
+        return (r1 * 31) + this.b.hashCode();
+    L5:
+        r1 = r0.hashCode();
+        goto L7
+    }
+
+    public final String toString() {
+        return "BotChange(old=" + this.a + ", new=" + this.b + ')';
+    }
+
+    public d(BotModel r2, BotModel r3) {
+        Intrinsics.checkNotNullParameter(r3, "new");
+        this.a = r2;
+        this.b = r3;
+    }
+}

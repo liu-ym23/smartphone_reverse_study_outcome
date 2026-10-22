@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.paneltitlebar.OPanelTitleBar
+        android:id="@+id/pager_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oui_panel_type="regular"/>
+    <com.bytedanceos.common.ui.widget.OrientationAwareRecyclerView
+        android:id="@+id/obric_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"/>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+</LinearLayout>

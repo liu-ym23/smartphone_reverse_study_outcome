@@ -1,0 +1,41 @@
+package com.bytedance.android.live.profit.format.voicechat.rtc;
+
+import com.bytedance.android.live.core.log.ALogger;
+import java.util.Iterator;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\b\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n¢\u0006\u0002\b\u0002"}, d2 = {"<anonymous>", "", "invoke"}, k = 3, mv = {1, 4, 3})
+final class ProfitRTCService$rtcRoomListener$2$1$onLeaveRtcRoomSuccess$1 extends Lambda implements Function0<Unit> {
+    final /* synthetic */ String $reason;
+    final /* synthetic */ ProfitRTCService$rtcRoomListener$2.a this$0;
+
+    public ProfitRTCService$rtcRoomListener$2$1$onLeaveRtcRoomSuccess$1(ProfitRTCService$rtcRoomListener$2.a r1, String r2) {
+        this.this$0 = r1;
+        this.$reason = r2;
+        super(0);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: collision with other method in class */
+    public final void m160invoke() {
+        ALogger.i("ProfitRTCService", "onLeaveRtcRoomSuccess: " + this.$reason);
+        ProfitRTCService r0 = this.this$0.a.this$0;
+        int r1 = ProfitRTCService.i;
+        r0.getClass();
+        ProfitRTCService r2 = this.this$0.a.this$0;
+        r2.e = false;
+        Iterator<T> r3 = r2.b.iterator();
+    L4:
+        if (r3.hasNext() == false) goto L6;
+        ((a) r3.next()).w(this.$reason);
+        goto L4
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke() {
+        m160invoke();
+        return Unit.INSTANCE;
+    }
+}

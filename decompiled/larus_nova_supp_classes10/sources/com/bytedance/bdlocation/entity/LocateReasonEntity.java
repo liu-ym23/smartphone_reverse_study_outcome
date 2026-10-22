@@ -1,0 +1,18 @@
+package com.bytedance.bdlocation.entity;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes10.dex */
+public class LocateReasonEntity {
+    private int mReasonCode;
+
+    public LocateReasonEntity() {
+        this.mReasonCode = -1;
+    }
+
+    public int getReasonCode() {
+        return this.mReasonCode;
+    }
+
+    public void setReasonCode(int r1) {
+        this.mReasonCode = r1;
+    }
+}

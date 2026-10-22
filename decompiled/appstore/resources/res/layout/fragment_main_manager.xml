@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedanceos.common.ui.widget.ParentView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_myapp_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OCTitleBar
+        android:id="@+id/manager_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oui_title_text="@string/myapp"
+        app:oui_useBackIcon="true"/>
+    <com.obric.oui.segmentedtab.OTabSegmentedLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/myapp_tab_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oui_h_m2"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/manager_title_bar"
+        android:layout_marginHorizontal="20dp"
+        app:bar_color="@color/oui_fill_sunken_variable"
+        app:bar_stroke_color="@color/Transparent"
+        app:indicator_anim_enable="true"
+        app:indicator_color="@color/oui_bg_base_3_high_elevation"
+        app:indicator_corner_radius="@dimen/oui_r_m1"
+        app:indicator_height="@dimen/oui_h_m1"
+        app:indicator_spacing="4dp"
+        app:tab_textBold="SELECT"
+        app:tab_textSelectColor="@color/oui_fill_high_contrast_2"
+        app:tab_textSize="14dp"
+        app:tab_textUnselectColor="@color/oui_text_3"/>
+    <com.obric.oui.divider.ODivider
+        android:id="@+id/line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:layout_below="@+id/myapp_tab_radiogroup"/>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"/>
+</com.bytedanceos.common.ui.widget.ParentView>

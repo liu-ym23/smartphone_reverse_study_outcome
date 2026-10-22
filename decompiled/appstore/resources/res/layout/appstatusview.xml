@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/app_navigation_install_btn_width"
+    android:layout_height="@dimen/app_list_height">
+    <TextView
+        android:id="@+id/appCategorySize"
+        android:text="@string/size_text"
+        style="@style/app_list_size_style"/>
+    <TextView
+        android:id="@+id/appStatusTextView"
+        android:layout_marginTop="@dimen/app_status_view_text_margin_top"
+        android:minWidth="@dimen/app_navigation_install_btn_width"
+        android:text="@string/install"
+        style="@style/app_recommend_list_status_text_view_style"/>
+    <obric.widget.DownloadProgressView
+        android:id="@+id/appStatusDownloadView"
+        android:layout_width="match_parent"
+        style="@style/app_recommend_list_status_icon_view_style"/>
+</RelativeLayout>

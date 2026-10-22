@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_comment_rl"
+    style="@style/dialog_comment_style">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_weight="1"
+            style="@style/dialog_cancel_btn_style"/>
+        <TextView
+            android:id="@+id/done_btn"
+            android:layout_weight="1"
+            style="@style/dialog_done_btn_style"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/comment_et"
+        style="@style/dialog_edit_style"/>
+    <RatingBar
+        android:id="@+id/comment_rating"
+        android:clickable="false"
+        android:progressDrawable="@drawable/custom_ratingbar_selector"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1"
+        android:layout_centerHorizontal="true"
+        style="@style/dialog_comment_rate_style"/>
+    <TextView
+        android:id="@+id/comment_desc"
+        android:layout_below="@+id/comment_rating"
+        style="@style/dialog_comment_desc"/>
+</RelativeLayout>

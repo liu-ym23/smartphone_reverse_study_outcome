@@ -1,0 +1,383 @@
+package d.c.i.p;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.Executor;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class s0 implements k0<d.c.i.l.e> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private final Executor f16404a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private final d.c.c.g.i f16405b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private final k0<d.c.i.l.e> f16406c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private final boolean f16407d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    private final d.c.i.s.c f16408e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    private final d.c.i.e.e f16409f;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    private final d.c.i.e.e f16410g;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    private final HashMap<String, d.c.i.e.e> f16411h;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    private final d.c.i.e.f f16412i;
+
+    private class a extends n<d.c.i.l.e, d.c.i.l.e> {
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        private final boolean f16413c;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        private final d.c.i.s.c f16414d;
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        private final l0 f16415e;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        private final d.c.i.e.e f16416f;
+
+        /* JADX INFO: renamed from: g, reason: collision with root package name */
+        private final d.c.i.e.e f16417g;
+
+        /* JADX INFO: renamed from: h, reason: collision with root package name */
+        private final HashMap<String, d.c.i.e.e> f16418h;
+
+        /* JADX INFO: renamed from: i, reason: collision with root package name */
+        private final d.c.i.e.f f16419i;
+
+        /* JADX INFO: renamed from: j, reason: collision with root package name */
+        private boolean f16420j;
+
+        /* JADX INFO: renamed from: k, reason: collision with root package name */
+        private final v f16421k;
+
+        /* JADX INFO: renamed from: l, reason: collision with root package name */
+        final /* synthetic */ s0 f16422l;
+
+        /* JADX INFO: renamed from: d.c.i.p.s0$a$a, reason: collision with other inner class name */
+        class C0434a extends v.h {
+
+            /* JADX INFO: renamed from: b, reason: collision with root package name */
+            final /* synthetic */ a f16423b;
+
+            C0434a(a r1, d.c.i.f.e r2, s0 r3) {
+                this.f16423b = r1;
+                super(r2);
+            }
+
+            @Override // d.c.i.p.v.e
+            public void a(d.c.i.l.e r4, int r5) {
+                a r0 = this.f16423b;
+                d.c.i.s.b r3 = a.r(r0).a(r4.N(), a.q(this.f16423b));
+                d.c.c.d.i.g(r3);
+                a.s(r0, r4, r5, r3);
+            }
+        }
+
+        class b extends e {
+
+            /* JADX INFO: renamed from: a, reason: collision with root package name */
+            final /* synthetic */ k f16424a;
+
+            /* JADX INFO: renamed from: b, reason: collision with root package name */
+            final /* synthetic */ a f16425b;
+
+            b(a r1, s0 r2, k r3) {
+                this.f16425b = r1;
+                this.f16424a = r3;
+            }
+
+            @Override // d.c.i.p.m0
+            public void a() {
+                a.u(this.f16425b).c();
+                a.v(this.f16425b, true);
+                this.f16424a.b();
+            }
+
+            @Override // d.c.i.p.e, d.c.i.p.m0
+            public void b() {
+                if (a.t(this.f16425b).g() == false) goto L6;
+                a.u(this.f16425b).h();
+                return;
+            }
+        }
+
+        a(s0 r2, k<d.c.i.l.e> r3, l0 r4, boolean r5, d.c.i.s.c r6, d.c.i.e.e r7, d.c.i.e.e r8, HashMap<String, d.c.i.e.e> r9, d.c.i.e.f r10) {
+            this.f16422l = r2;
+            super(r3);
+            this.f16420j = false;
+            this.f16415e = r4;
+            this.f16413c = r5;
+            this.f16414d = r6;
+            this.f16416f = r7;
+            this.f16417g = r8;
+            this.f16418h = r9;
+            this.f16419i = r10;
+            C0434a r11 = new C0434a(this, r4.b(), r2);
+            this.f16421k = new v(s0.c(r2), r11, 100);
+            r4.d(new b(this, r2, r3));
+        }
+
+        private void A(d.c.i.l.e r4, int r5) {
+            if (d.c.i.p.b.f(r5) == true) goto L23;
+            if (r4 != null) goto L6;
+            return;
+        L6:
+            if (d.c.i.p.b.m(r5, 10) == false) goto L8;
+            return;
+        L8:
+            if (r4.N() == d.c.h.d.f15831b) goto L28;
+            d.c.i.q.b r6 = this.f16415e.c();
+            if (r6.B() == true) goto L13;
+            return;
+        L13:
+            d.c.b.a.d r0 = this.f16419i.b(r6, this.f16415e.a());
+            if (r6.d() != d.c.i.q.b.a.f16504g) goto L18;
+            d.c.i.e.e r3 = this.f16417g;
+        L16:
+            r3.p(r0, r4);
+            return;
+        L18:
+            if (r6.d() != d.c.i.q.b.a.f16503f) goto L22;
+            r3 = this.f16418h.get(r6.e());
+            if (r3 != null) goto L16;
+            return;
+        L22:
+            r3 = this.f16416f;
+            goto L16
+        L28:
+            return;
+        }
+
+        static /* synthetic */ boolean q(a r0) {
+            return r0.f16413c;
+        }
+
+        static /* synthetic */ d.c.i.s.c r(a r0) {
+            return r0.f16414d;
+        }
+
+        static /* synthetic */ void s(a r0, d.c.i.l.e r1, int r2, d.c.i.s.b r3) {
+            r0.w(r1, r2, r3);
+        }
+
+        static /* synthetic */ l0 t(a r0) {
+            return r0.f16415e;
+        }
+
+        static /* synthetic */ v u(a r0) {
+            return r0.f16421k;
+        }
+
+        static /* synthetic */ boolean v(a r0, boolean r1) {
+            r0.f16420j = r1;
+            return r1;
+        }
+
+        private void w(d.c.i.l.e r12, int r13, d.c.i.s.b r14) {
+            this.f16415e.f().b(this.f16415e.getId(), "ResizedImageDiskCacheWriteProducer");
+            d.c.i.q.b r0 = this.f16415e.c();
+            d.c.c.g.k r1 = s0.e(this.f16422l).a();
+            d.c.i.s.a r3 = r14.c(r12, r1, r0.s(), r0.r(), null, 85);     // Catch: Throwable -> L23 Exception -> L25
+            if (r3.a() == 2) goto L22;
+            Map<String, String> r10 = x(r12, r0.r(), r3, r14.a());     // Catch: Throwable -> L23 Exception -> L25
+            d.c.c.h.a r15 = d.c.c.h.a.V(r1.a());     // Catch: Throwable -> L23 Exception -> L25
+            d.c.i.l.e r16 = new d.c.i.l.e(r15);     // Catch: Throwable -> L18
+            r16.D0(d.c.h.c.f15819a);     // Catch: Throwable -> L18
+            r16.r0();     // Catch: Throwable -> L15
+            A(r16, r13);     // Catch: Throwable -> L15
+            this.f16415e.f().i(this.f16415e.getId(), "ResizedImageDiskCacheWriteProducer", r10);     // Catch: Throwable -> L15
+            if (r3.a() == 1) goto L10;
+            r13 = r13 | 16;     // Catch: Throwable -> L15
+        L10:
+            p().d(r16, r13);     // Catch: Throwable -> L15
+            d.c.i.l.e.g(r16);     // Catch: Throwable -> L18
+            d.c.c.h.a.L(r15);     // Catch: Throwable -> L23 Exception -> L25
+            r1.close();
+            return;
+        L15:
+            th = move-exception;
+            d.c.i.l.e.g(r16);     // Catch: Throwable -> L18
+            throw th;     // Catch: Throwable -> L18
+        L18:
+            th = move-exception;
+            d.c.c.h.a.L(r15);     // Catch: Throwable -> L23 Exception -> L25
+            throw th;     // Catch: Throwable -> L23 Exception -> L25
+        L22:
+            throw new RuntimeException("Error while transcoding the image");     // Catch: Throwable -> L23 Exception -> L25
+        L25:
+            e = move-exception;
+            this.f16415e.f().j(this.f16415e.getId(), "ResizedImageDiskCacheWriteProducer", e, null);     // Catch: Throwable -> L23
+            if (d.c.i.p.b.e(r13) == false) goto L29;
+            p().a(e);     // Catch: Throwable -> L23
+        L29:
+            r1.close();
+            return;
+        L23:
+            th = move-exception;
+            r1.close();
+            throw th;
+        }
+
+        private Map<String, String> x(d.c.i.l.e r5, d.c.i.f.f r6, d.c.i.s.a r7, String r8) {
+            if (this.f16415e.f().f(this.f16415e.getId()) == true) goto L6;
+            return null;
+        L6:
+            String r0 = r5.Y() + "x" + r5.M();
+            if (r6 == null) goto L9;
+            String r9 = r6.f16021a + "x" + r6.f16022b;
+        L10:
+            HashMap r1 = new HashMap();
+            r1.put("Image format", String.valueOf(r5.N()));
+            r1.put("Original size", r0);
+            r1.put("Requested size", r9);
+            r1.put("queueTime", String.valueOf(this.f16421k.f()));
+            r1.put("Transcoder id", r8);
+            r1.put("Transcoding result", String.valueOf(r7));
+            return d.c.c.d.f.a(r1);
+        L9:
+            r9 = "Unspecified";
+            goto L10
+        }
+
+        private d.c.i.l.e y(d.c.i.l.e r1) {
+            d.c.i.l.e r0 = d.c.i.l.e.b(r1);
+            r1.close();
+            return r0;
+        }
+
+        @Override // d.c.i.p.b
+        protected /* bridge */ /* synthetic */ void i(Object r1, int r2) {
+            z((d.c.i.l.e) r1, r2);
+        }
+
+        protected void z(d.c.i.l.e r6, int r7) {
+            if (this.f16420j == false) goto L5;
+            return;
+        L5:
+            boolean r0 = d.c.i.p.b.e(r7);
+            if (r6 != null) goto L10;
+            if (r0 == false) goto L34;
+            p().d(null, 1);
+            return;
+        L34:
+            return;
+        L10:
+            d.c.i.q.b r1 = this.f16415e.c();
+            d.c.i.s.b r2 = this.f16414d.a(r6.N(), this.f16413c);
+            d.c.c.d.i.g(r2);
+            d.c.c.k.e r3 = s0.d(r1, r6, r2);
+            if (r0 == true) goto L16;
+            if (r3 != d.c.c.k.e.f15444h) goto L16;
+            return;
+        L16:
+            if (r3 == d.c.c.k.e.f15442f) goto L27;
+            if (this.f16415e.c().s().c() == false) goto L20;
+        L24:
+            p().d(r6, r7);
+            return;
+        L20:
+            if (r6.S() == 0) goto L24;
+            if (r6.S() == (-1)) goto L24;
+            r6 = y(r6);
+            r6.G0(0);
+            goto L24
+        L27:
+            if (this.f16421k.k(r6, r7) == true) goto L29;
+            return;
+        L29:
+            if (r0 == false) goto L31;
+        L32:
+            this.f16421k.h();
+            return;
+        L31:
+            if (this.f16415e.g() == true) goto L32;
+        }
+    }
+
+    public s0(Executor r1, d.c.c.g.i r2, k0<d.c.i.l.e> r3, boolean r4, d.c.i.s.c r5, d.c.i.e.e r6, d.c.i.e.e r7, HashMap<String, d.c.i.e.e> r8, d.c.i.e.f r9) {
+        d.c.c.d.i.g(r1);
+        this.f16404a = r1;
+        d.c.c.d.i.g(r2);
+        this.f16405b = r2;
+        d.c.c.d.i.g(r3);
+        this.f16406c = r3;
+        d.c.c.d.i.g(r5);
+        this.f16408e = r5;
+        this.f16407d = r4;
+        this.f16409f = r6;
+        this.f16410g = r7;
+        this.f16411h = r8;
+        this.f16412i = r9;
+    }
+
+    static /* synthetic */ Executor c(s0 r0) {
+        return r0.f16404a;
+    }
+
+    static /* synthetic */ d.c.c.k.e d(d.c.i.q.b r0, d.c.i.l.e r1, d.c.i.s.b r2) {
+        return h(r0, r1, r2);
+    }
+
+    static /* synthetic */ d.c.c.g.i e(s0 r0) {
+        return r0.f16405b;
+    }
+
+    private static boolean f(d.c.i.f.g r1, d.c.i.l.e r2) {
+        if (r1.c() == false) goto L5;
+    L9:
+        return false;
+    L5:
+        if (d.c.i.s.d.e(r1, r2) == 0) goto L7;
+    L8:
+        return true;
+    L7:
+        if (g(r1, r2) == false) goto L9;
+        goto L8
+    }
+
+    private static boolean g(d.c.i.f.g r1, d.c.i.l.e r2) {
+        if (r1.f() == true) goto L5;
+    L9:
+        r2.A0(0);
+        return false;
+    L5:
+        if (r1.c() == true) goto L9;
+        return d.c.i.s.d.f16527a.contains(Integer.valueOf(r2.E()));
+    }
+
+    private static d.c.c.k.e h(d.c.i.q.b r2, d.c.i.l.e r3, d.c.i.s.b r4) {
+        if (r3 == null) goto L20;
+        if (r3.N() == d.c.h.d.f15831b) goto L20;
+        if (r4.d(r3.N()) == true) goto L11;
+        return d.c.c.k.e.f15443g;
+    L11:
+        if (f(r2.s(), r3) == false) goto L13;
+    L16:
+        boolean r5 = true;
+    L18:
+        return d.c.c.k.e.a(r5);
+    L13:
+        if (r4.b(r3, r2.s(), r2.r()) == true) goto L16;
+        r5 = false;
+    L20:
+        return d.c.c.k.e.f15444h;
+    }
+
+    @Override // d.c.i.p.k0
+    public void b(k<d.c.i.l.e> r13, l0 r14) {
+        this.f16406c.b(new a(this, r13, r14, this.f16407d, this.f16408e, this.f16409f, this.f16410g, this.f16411h, this.f16412i), r14);
+    }
+}

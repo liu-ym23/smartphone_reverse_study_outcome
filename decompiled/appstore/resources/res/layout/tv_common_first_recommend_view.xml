@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_24"
+    android:paddingRight="@dimen/dp_24"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/welcome_header_desc_size"
+        android:textStyle="bold"
+        android:textColor="@color/welcome_header_desc_color"
+        android:id="@+id/tv_desc"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/welcome_header_desc_top_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_34"/>
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/suppose_app_div_line_height"/>
+    <com.bytedanceos.appstore.buss.widget.recyclerview.CommonRecyclerView
+        android:id="@+id/first_recommend_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/divider_3"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_2"/>
+</LinearLayout>

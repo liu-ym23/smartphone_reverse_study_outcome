@@ -1,0 +1,75 @@
+package com.bytedance.android.ec.core.hybrid.utils;
+
+import android.view.View;
+import java.util.Map;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Ref;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+public final class e implements ti.l {
+    public final View a;
+    public final /* synthetic */ Ref.ObjectRef b;
+
+    public final View b() {
+        return null;
+    }
+
+    public final void loadUrl(String r10) {
+        Intrinsics.checkNotNullParameter(r10, com.bytedance.android.ec.core.event.a.KEY_URL);
+    }
+
+    public final void updateBusinessGlobalProps(Map<String, ? extends Object> r10) {
+        Intrinsics.checkNotNullParameter(r10, "data");
+    }
+
+    public final void updateScreenMetrics(int r1, int r10) {
+    }
+
+    public final void release() {
+        ((pd.b) this.b.element).release();
+    }
+
+    public final View getHybridView() {
+        return this.a;
+    }
+
+    public e(Ref.ObjectRef r1) {
+        this.b = r1;
+        View r10 = ((pd.b) r1.element).getHybridView();
+        Intrinsics.checkNotNull(r10);
+        this.a = r10;
+    }
+
+    public final void updateData(Map<String, ? extends Object> r10) {
+        Intrinsics.checkNotNullParameter(r10, "data");
+        ((pd.b) this.b.element).updateData(r10);
+    }
+
+    public final void updateGlobalProps(Map<String, ? extends Object> r10) {
+        Intrinsics.checkNotNullParameter(r10, "data");
+        ((pd.b) this.b.element).updateGlobalProps(r10);
+    }
+
+    public final void registerMethod(String r10, com.bytedance.ies.web.jsbridge2.f.b r11) {
+        Intrinsics.checkNotNullParameter(r10, com.bytedance.android.ec.core.event.a.KEY_SHOPPING_GUIDE_NAME);
+        Intrinsics.checkNotNullParameter(r11, "provider");
+        ((pd.b) this.b.element).registerMethod(r10, r11);
+    }
+
+    public final void renderTemplate(String r10, Map<String, ? extends Object> r11) {
+        Intrinsics.checkNotNullParameter(r10, com.bytedance.android.ec.core.event.a.KEY_URL);
+        ((pd.b) this.b.element).load(r10, r11);
+    }
+
+    public final <T> void sendJsEvent(String r10, T r11) {
+        Intrinsics.checkNotNullParameter(r10, "event");
+        Intrinsics.checkNotNullParameter(r11, "params");
+        ((pd.b) this.b.element).sendJsEvent(r10, r11);
+    }
+
+    public final <P, R> void registerMethod(String r10, com.bytedance.ies.web.jsbridge2.g<P, R> r11) {
+        Intrinsics.checkNotNullParameter(r10, com.bytedance.android.ec.core.event.a.KEY_SHOPPING_GUIDE_NAME);
+        Intrinsics.checkNotNullParameter(r11, "method");
+        ((pd.b) this.b.element).registerMethod(r10, r11);
+    }
+}

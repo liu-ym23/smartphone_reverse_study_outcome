@@ -1,0 +1,92 @@
+package com.bytedance.frameworks.baselib.network.http.ok3.impl.urldispatcher;
+
+import android.net.Uri;
+import com.bytedance.common.utility.Logger;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class DispatchStrategy {
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public static final String f7470b = "DispatchStrategy";
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public DispatchStrategyType f7471a;
+
+    public static final enum DispatchStrategyType extends Enum<DispatchStrategyType> {
+        private static final /* synthetic */ DispatchStrategyType[] $VALUES = null;
+        public static final DispatchStrategyType CONSERVATIVE_DISPATCH_STRATEGY = null;
+        public static final DispatchStrategyType DISPATCH_STRATEGY_SUPPORTED_LAST = null;
+        public static final DispatchStrategyType OPTIMIZED_DISPATCH_STRATEGY = null;
+        public static final DispatchStrategyType ROUTE_SELECTION_DISPATCH_STRATEGY = null;
+        public static final DispatchStrategyType STATIC_DISPATCH_STRATEGY = null;
+        public static final DispatchStrategyType UNKNOWN_DISPATCH_STRATEGY = null;
+        public static final DispatchStrategyType WRR_DISPATCH_STRATEGY = null;
+
+        static {
+            DispatchStrategyType r10 = new DispatchStrategyType("UNKNOWN_DISPATCH_STRATEGY", 0);
+            UNKNOWN_DISPATCH_STRATEGY = r10;
+            DispatchStrategyType r11 = new DispatchStrategyType("STATIC_DISPATCH_STRATEGY", 1);
+            STATIC_DISPATCH_STRATEGY = r11;
+            DispatchStrategyType r12 = new DispatchStrategyType("WRR_DISPATCH_STRATEGY", 2);
+            WRR_DISPATCH_STRATEGY = r12;
+            DispatchStrategyType r13 = new DispatchStrategyType("CONSERVATIVE_DISPATCH_STRATEGY", 3);
+            CONSERVATIVE_DISPATCH_STRATEGY = r13;
+            DispatchStrategyType r14 = new DispatchStrategyType("OPTIMIZED_DISPATCH_STRATEGY", 4);
+            OPTIMIZED_DISPATCH_STRATEGY = r14;
+            DispatchStrategyType r15 = new DispatchStrategyType("ROUTE_SELECTION_DISPATCH_STRATEGY", 5);
+            ROUTE_SELECTION_DISPATCH_STRATEGY = r15;
+            DispatchStrategyType r16 = new DispatchStrategyType("DISPATCH_STRATEGY_SUPPORTED_LAST", 6);
+            DISPATCH_STRATEGY_SUPPORTED_LAST = r16;
+            $VALUES = new DispatchStrategyType[]{r10, r11, r12, r13, r14, r15, r16};
+        }
+
+        private DispatchStrategyType(String r10, int r11) {
+            super(r10, r11);
+        }
+
+        public static DispatchStrategyType valueOf(String r10) {
+            return (DispatchStrategyType) Enum.valueOf(DispatchStrategyType.class, r10);
+        }
+
+        public static DispatchStrategyType[] values() {
+            return (DispatchStrategyType[]) $VALUES.clone();
+        }
+    }
+
+    public static /* synthetic */ class a {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f7472a = null;
+
+        static {
+            int[] r10 = new int[DispatchStrategyType.values().length];
+            f7472a = r10;
+            r10[DispatchStrategyType.STATIC_DISPATCH_STRATEGY.ordinal()] = 1;     // Catch: NoSuchFieldError -> L5
+            return;
+        }
+    }
+
+    static {
+    }
+
+    public DispatchStrategy(DispatchStrategyType r10) {
+        this.f7471a = r10;
+    }
+
+    public static DispatchStrategy a(DispatchStrategyType r10, JSONObject r11, String r12, long r13, int r14) {
+        if (a.f7472a[r10.ordinal()] == 1) goto L7;
+        Logger.d(f7470b, "dispatch strategy " + r10 + " is not supported, fallback to default strategy");
+        return new com.bytedance.frameworks.baselib.network.http.ok3.impl.urldispatcher.a();
+    L7:
+        return new d(r11);
+    }
+
+    public DispatchStrategyType b() {
+        return this.f7471a;
+    }
+
+    public abstract String c(Uri r10);
+
+    public abstract boolean d();
+}

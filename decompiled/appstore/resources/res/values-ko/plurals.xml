@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="delete_selected_all_title">
+        <item quantity="other">이 %1$d개 항목을 삭제할까요?</item>
+    </plurals>
+    <plurals name="delete_selected_record">
+        <item quantity="other">%1$d개 기록 삭제됨</item>
+    </plurals>
+    <plurals name="header_selected_item">
+        <item quantity="other">%1$d개 선택됨</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">새 알림 %d개</item>
+        <item quantity="other">새 알림 %d개</item>
+    </plurals>
+    <plurals name="myapp_update_count">
+        <item quantity="other">%1$s개 업데이트</item>
+    </plurals>
+    <plurals name="update_footer_hide_apps">
+        <item quantity="other">%1$s개 항목</item>
+    </plurals>
+    <plurals name="update_notification_appstore">
+        <item quantity="other">현재 %1$d 개의 응용 프로그램이 업데이트 가능합니다</item>
+    </plurals>
+    <plurals name="update_notification_gamestore">
+        <item quantity="other">현재 %1$s 개의 게임이 업데이트 가능합니다</item>
+    </plurals>
+</resources>

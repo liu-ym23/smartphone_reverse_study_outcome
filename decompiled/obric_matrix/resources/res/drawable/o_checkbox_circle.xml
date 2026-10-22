@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:state_enabled="true"
+        android:id="@+id/state_indeterminate"
+        android:drawable="@drawable/o_ic_radio_round_indeterminate"
+        app:oui_state_indeterminate="true"/>
+    <item
+        android:state_enabled="true"
+        android:state_checked="true"
+        android:id="@+id/state_checked"
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal"/>
+    <item
+        android:state_enabled="false"
+        android:state_checked="true"
+        android:drawable="@drawable/o_ic_radio_round_checked_disabled"/>
+    <item
+        android:state_enabled="true"
+        android:state_checked="false"
+        android:id="@+id/state_unchecked"
+        android:drawable="@drawable/o_ic_radio_round_unchecked_normal"/>
+    <item
+        android:state_enabled="false"
+        android:state_checked="false"
+        android:drawable="@drawable/o_ic_radio_round_unchecked_disabled"/>
+    <transition
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal"
+        android:toId="@+id/state_checked"
+        android:fromId="@+id/state_unchecked"/>
+    <transition
+        android:drawable="@drawable/o_ic_avd_radio_round_checked_normal"
+        android:toId="@+id/state_checked"
+        android:fromId="@+id/state_indeterminate"/>
+</animated-selector>

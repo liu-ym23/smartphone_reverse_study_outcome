@@ -1,0 +1,52 @@
+package com.bytedance.android.ec.core.imagex;
+
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Intrinsics;
+import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.DelayKt;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u008a@¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;", "invoke", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"}, k = 3, mv = {1, 4, 3})
+@DebugMetadata(c = "com.bytedance.android.ec.core.imagex.FirstScreenStatistic$clear$2", f = "FirstScreenStatistic.kt", i = {}, l = {905}, m = "invokeSuspend", n = {}, s = {})
+public final class FirstScreenStatistic$clear$2 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    int label;
+
+    public FirstScreenStatistic$clear$2(Continuation r10) {
+        super(2, r10);
+    }
+
+    public final Continuation<Unit> create(Object r1, Continuation<?> r10) {
+        Intrinsics.checkNotNullParameter(r10, "completion");
+        return new FirstScreenStatistic$clear$2(r10);
+    }
+
+    public final Object invoke(Object r1, Object r10) {
+        return create(r1, (Continuation) r10).invokeSuspend(Unit.INSTANCE);
+    }
+
+    public final Object invokeSuspend(Object r10) {
+        Object r0 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int r1 = this.label;
+        if (r1 == 0) goto L8;
+        if (r1 != 1) goto L7;
+        ResultKt.throwOnFailure(r10);
+    L11:
+        FirstScreenStatistic.S.getClass();
+        FirstScreenStatistic.o(5);
+        return Unit.INSTANCE;
+    L7:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    L8:
+        ResultKt.throwOnFailure(r10);
+        this.label = 1;
+        if (DelayKt.delay(5000, this) != r0) goto L11;
+        return r0;
+    }
+}

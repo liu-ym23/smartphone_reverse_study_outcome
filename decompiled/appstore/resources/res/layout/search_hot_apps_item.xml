@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="8dp"
+    android:paddingBottom="6dp"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+    <com.bytedanceos.common.network.widget.NetworkImageView
+        android:id="@+id/search_hot_apps_item_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"/>
+    <TextView
+        android:id="@+id/search_hot_apps_item_name"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/search_hot_apps_item_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="4.5dp"
+        style="@style/search_hot_app_name_style"/>
+    <com.bytedanceos.common.ui.widget.oui.OUIAppStatusView
+        android:id="@+id/search_hot_apps_status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:minHeight="32dp"
+        android:layout_below="@+id/search_hot_apps_item_name"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+package com.lark.kmp.rustclient.internal;
+
+import com.bytedance.lark.sdk.InvokeResponse;
+import kotlin.coroutines.Continuation;
+import kotlin.jvm.internal.Intrinsics;
+import kotlinx.coroutines.flow.Flow;
+import kotlinx.coroutines.flow.c1;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+public final class AbsentInterceptor implements com.lark.kmp.rustclient.api.g {
+    public AbsentInterceptor() {
+    }
+
+    public static boolean c(com.lark.kmp.rustclient.api.h r5) {
+        com.lark.kmp.rustclient.api.model.j r0 = r5.c.b;
+        if ((r0 instanceof com.lark.kmp.rustclient.api.model.l) == false) goto L7;
+        String r1 = ((com.lark.kmp.rustclient.api.model.l) r0).a;
+        rpc.a r2 = a.a;
+        Intrinsics.checkNotNullParameter(r1, "userId");
+        if (Intrinsics.areEqual(r1, "absent_user") == false) goto L7;
+        return true;
+    L7:
+        String r6 = r5.c.c;
+        if (r6 == null) goto L12;
+        rpc.a r3 = a.a;
+        Intrinsics.checkNotNullParameter(r6, "userId");
+        if (Intrinsics.areEqual(r6, "absent_user") == false) goto L14;
+        return true;
+    L14:
+        return false;
+    L12:
+        return false;
+    }
+
+    @Override // com.lark.kmp.rustclient.api.g
+    public final <Resp> Flow<com.lark.kmp.rustclient.api.model.g<rpc.a, Resp>> a(com.lark.kmp.rustclient.api.h<Resp> r3) {
+        Intrinsics.checkNotNullParameter(r3, "chain");
+        if (c(r3) == false) goto L6;
+        return new c1(new AbsentInterceptor$interceptEnqueue$1(r3, null));
+    L6:
+        return r3.b(r3.c);
+    }
+
+    @Override // com.lark.kmp.rustclient.api.g
+    public final <T> Object b(com.lark.kmp.rustclient.api.h<T> r5, Continuation<? super com.lark.kmp.rustclient.api.model.g<InvokeResponse, T>> r6) {
+        if (c(r5) == false) goto L7;
+        return new com.lark.kmp.rustclient.api.model.b(com.lark.kmp.rustclient.api.model.i.b(r5.c.a.a(), r5.c.a.d, null, new RuntimeException("User Is Absent.")), a.b, r5.c.b);
+    L7:
+        return r5.a(r5.c, r6);
+    }
+}

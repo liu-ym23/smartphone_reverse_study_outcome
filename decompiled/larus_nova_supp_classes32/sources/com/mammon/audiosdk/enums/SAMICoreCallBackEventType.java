@@ -1,0 +1,266 @@
+package com.mammon.audiosdk.enums;
+
+import com.lynx.canvas.camera.CameraSize;
+import com.lynx.tasm.a0;
+import com.mammon.audiosdk.session.type.ResponseEvent;
+import com.mammon.speechaudiosdk.session.type.SpeechEvent;
+import java.util.HashMap;
+import r27.a;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes32.dex */
+public final enum SAMICoreCallBackEventType extends Enum<SAMICoreCallBackEventType> {
+    private static final /* synthetic */ SAMICoreCallBackEventType[] $VALUES = null;
+    public static final SAMICoreCallBackEventType AIS_Ability = null;
+    public static final SAMICoreCallBackEventType AIS_Data = null;
+    public static final SAMICoreCallBackEventType ASREnded = null;
+    public static final SAMICoreCallBackEventType ASRInfo = null;
+    public static final SAMICoreCallBackEventType ASRResponse = null;
+    public static final SAMICoreCallBackEventType ASR_Failed = null;
+    public static final SAMICoreCallBackEventType ASR_Finished = null;
+    public static final SAMICoreCallBackEventType ASR_GetResulted = null;
+    public static final SAMICoreCallBackEventType ASR_Started = null;
+    public static final SAMICoreCallBackEventType ASR_WebSocketStateChanged = null;
+    public static final SAMICoreCallBackEventType AudioUploadEnded = null;
+    public static final SAMICoreCallBackEventType BSResponse = null;
+    public static final SAMICoreCallBackEventType BotTriggered = null;
+    public static final SAMICoreCallBackEventType CallDisConnectedWithRetry = null;
+    public static final SAMICoreCallBackEventType ChatEnded = null;
+    public static final SAMICoreCallBackEventType ChatResponse = null;
+    public static final SAMICoreCallBackEventType EventReplaceResult = null;
+    public static final SAMICoreCallBackEventType GetResulted = null;
+    public static final SAMICoreCallBackEventType PVadEnded = null;
+    public static final SAMICoreCallBackEventType PVadStarted = null;
+    public static final SAMICoreCallBackEventType PlayerPaused = null;
+    public static final SAMICoreCallBackEventType PlayerResumed = null;
+    public static final SAMICoreCallBackEventType PlayerStarted = null;
+    public static final SAMICoreCallBackEventType PlayerStopped = null;
+    public static final SAMICoreCallBackEventType PostBackAudioConfig = null;
+    public static final SAMICoreCallBackEventType RequestRetried = null;
+    public static final SAMICoreCallBackEventType SA_EngineError = null;
+    public static final SAMICoreCallBackEventType SA_EngineStart = null;
+    public static final SAMICoreCallBackEventType SA_EngineStop = null;
+    public static final SAMICoreCallBackEventType SA_PreWakeupResult = null;
+    public static final SAMICoreCallBackEventType SA_SidEnrollResult = null;
+    public static final SAMICoreCallBackEventType SA_SidLoadResult = null;
+    public static final SAMICoreCallBackEventType SA_SidVerifyFailResult = null;
+    public static final SAMICoreCallBackEventType SA_WakeupEnd = null;
+    public static final SAMICoreCallBackEventType SA_WakeupResult = null;
+    public static final SAMICoreCallBackEventType SA_WakeupTimeout = null;
+    public static final SAMICoreCallBackEventType SendToHost = null;
+    public static final SAMICoreCallBackEventType SessionCanceled = null;
+    public static final SAMICoreCallBackEventType SessionConfResponse = null;
+    public static final SAMICoreCallBackEventType SessionFailed = null;
+    public static final SAMICoreCallBackEventType SessionFinished = null;
+    public static final SAMICoreCallBackEventType SessionStarted = null;
+    public static final SAMICoreCallBackEventType SpeakerSimilarity = null;
+    public static final SAMICoreCallBackEventType SpeechEnded = null;
+    public static final SAMICoreCallBackEventType SpeechStarted = null;
+    public static final SAMICoreCallBackEventType TTSEnded = null;
+    public static final SAMICoreCallBackEventType TTSResponse = null;
+    public static final SAMICoreCallBackEventType TTSSentenceEnd = null;
+    public static final SAMICoreCallBackEventType TTSSentenceStart = null;
+    public static final SAMICoreCallBackEventType TTS_Failed = null;
+    public static final SAMICoreCallBackEventType TTS_Finished = null;
+    public static final SAMICoreCallBackEventType TTS_GetResulted = null;
+    public static final SAMICoreCallBackEventType TTS_Player_Finished = null;
+    public static final SAMICoreCallBackEventType TTS_Started = null;
+    public static final SAMICoreCallBackEventType TTS_WebSocketStateChanged = null;
+    public static final SAMICoreCallBackEventType TaskFailed = null;
+    public static final SAMICoreCallBackEventType TaskFinished = null;
+    public static final SAMICoreCallBackEventType TaskResponse = null;
+    public static final SAMICoreCallBackEventType TaskStarted = null;
+    public static final SAMICoreCallBackEventType VAD_TimeOut = null;
+    public static final SAMICoreCallBackEventType VC_Failed = null;
+    public static final SAMICoreCallBackEventType VC_Finished = null;
+    public static final SAMICoreCallBackEventType VC_GetResulted = null;
+    public static final SAMICoreCallBackEventType VC_Player_Finished = null;
+    public static final SAMICoreCallBackEventType VC_Started = null;
+    public static final SAMICoreCallBackEventType VC_WebSocketStateChanged = null;
+    public static final SAMICoreCallBackEventType VadEnded = null;
+    public static final SAMICoreCallBackEventType VadStarted = null;
+    public static final SAMICoreCallBackEventType VuiReset = null;
+    public static final SAMICoreCallBackEventType WakeUp_Failed = null;
+    public static final SAMICoreCallBackEventType WakeUp_Succeed = null;
+    public static final SAMICoreCallBackEventType WebSocketStateChanged = null;
+    public static final HashMap<Integer, SAMICoreCallBackEventType> intToEnumMap = null;
+    private int value;
+
+    static {
+        SAMICoreCallBackEventType r0 = new SAMICoreCallBackEventType("TTS_Started", 0, 0);
+        TTS_Started = r0;
+        SAMICoreCallBackEventType r1 = new SAMICoreCallBackEventType("TTS_GetResulted", 1, 1);
+        TTS_GetResulted = r1;
+        SAMICoreCallBackEventType r3 = new SAMICoreCallBackEventType("TTS_Finished", 2, 2);
+        TTS_Finished = r3;
+        SAMICoreCallBackEventType r5 = new SAMICoreCallBackEventType("TTS_Failed", 3, 3);
+        TTS_Failed = r5;
+        SAMICoreCallBackEventType r7 = new SAMICoreCallBackEventType("TTS_WebSocketStateChanged", 4, 4);
+        TTS_WebSocketStateChanged = r7;
+        SAMICoreCallBackEventType r9 = new SAMICoreCallBackEventType("ASR_Started", 5, 5);
+        ASR_Started = r9;
+        SAMICoreCallBackEventType r11 = new SAMICoreCallBackEventType("ASR_GetResulted", 6, 6);
+        ASR_GetResulted = r11;
+        SAMICoreCallBackEventType r13 = new SAMICoreCallBackEventType("ASR_Finished", 7, 7);
+        ASR_Finished = r13;
+        SAMICoreCallBackEventType r15 = new SAMICoreCallBackEventType("ASR_Failed", 8, 8);
+        ASR_Failed = r15;
+        SAMICoreCallBackEventType r14 = new SAMICoreCallBackEventType("ASR_WebSocketStateChanged", 9, 9);
+        ASR_WebSocketStateChanged = r14;
+        SAMICoreCallBackEventType r12 = new SAMICoreCallBackEventType("VC_Started", 10, 10);
+        VC_Started = r12;
+        SAMICoreCallBackEventType r10 = new SAMICoreCallBackEventType("VC_GetResulted", 11, 11);
+        VC_GetResulted = r10;
+        SAMICoreCallBackEventType r8 = new SAMICoreCallBackEventType("VC_Finished", 12, 12);
+        VC_Finished = r8;
+        SAMICoreCallBackEventType r6 = new SAMICoreCallBackEventType("VC_Failed", 13, 13);
+        VC_Failed = r6;
+        SAMICoreCallBackEventType r4 = new SAMICoreCallBackEventType("VC_WebSocketStateChanged", 14, 14);
+        VC_WebSocketStateChanged = r4;
+        SAMICoreCallBackEventType r2 = new SAMICoreCallBackEventType("VC_Player_Finished", 15, 15);
+        VC_Player_Finished = r2;
+        SAMICoreCallBackEventType r16 = new SAMICoreCallBackEventType("TTS_Player_Finished", 16, 20);
+        TTS_Player_Finished = r16;
+        SAMICoreCallBackEventType r17 = new SAMICoreCallBackEventType("SA_EngineStart", 17, 50);
+        SA_EngineStart = r17;
+        SAMICoreCallBackEventType r18 = new SAMICoreCallBackEventType("SA_EngineStop", 18, 51);
+        SA_EngineStop = r18;
+        SAMICoreCallBackEventType r19 = new SAMICoreCallBackEventType("SA_EngineError", 19, 52);
+        SA_EngineError = r19;
+        SAMICoreCallBackEventType r20 = new SAMICoreCallBackEventType("SA_WakeupResult", 20, 53);
+        SA_WakeupResult = r20;
+        SAMICoreCallBackEventType r21 = new SAMICoreCallBackEventType("SA_SidEnrollResult", 21, 54);
+        SA_SidEnrollResult = r21;
+        SAMICoreCallBackEventType r22 = new SAMICoreCallBackEventType("SA_SidLoadResult", 22, 55);
+        SA_SidLoadResult = r22;
+        SAMICoreCallBackEventType r23 = new SAMICoreCallBackEventType("SA_PreWakeupResult", 23, 56);
+        SA_PreWakeupResult = r23;
+        SAMICoreCallBackEventType r24 = new SAMICoreCallBackEventType("SA_WakeupTimeout", 24, 57);
+        SA_WakeupTimeout = r24;
+        SAMICoreCallBackEventType r25 = new SAMICoreCallBackEventType("SA_SidVerifyFailResult", 25, 58);
+        SA_SidVerifyFailResult = r25;
+        SAMICoreCallBackEventType r26 = new SAMICoreCallBackEventType("SA_WakeupEnd", 26, 59);
+        SA_WakeupEnd = r26;
+        SAMICoreCallBackEventType r27 = new SAMICoreCallBackEventType(ResponseEvent.TaskStarted, 27, 200);
+        TaskStarted = r27;
+        SAMICoreCallBackEventType r28 = new SAMICoreCallBackEventType(ResponseEvent.TaskFinished, 28, 201);
+        TaskFinished = r28;
+        SAMICoreCallBackEventType r29 = new SAMICoreCallBackEventType(ResponseEvent.TaskFailed, 29, SpeechEvent.SERVER_DOWNLINK_EVENT_TASK_FINISHED);
+        TaskFailed = r29;
+        SAMICoreCallBackEventType r30 = new SAMICoreCallBackEventType("GetResulted", 30, SpeechEvent.SERVER_DOWNLINK_EVENT_TASK_FAILED);
+        GetResulted = r30;
+        SAMICoreCallBackEventType r31 = new SAMICoreCallBackEventType(ResponseEvent.SessionStarted, 31, SpeechEvent.SERVER_DOWNLINK_EVENT_SESSION_STARTED);
+        SessionStarted = r31;
+        SAMICoreCallBackEventType r32 = new SAMICoreCallBackEventType(ResponseEvent.SessionFinished, 32, SpeechEvent.SERVER_DOWNLINK_EVENT_SESSION_FINISHED);
+        SessionFinished = r32;
+        SAMICoreCallBackEventType r33 = new SAMICoreCallBackEventType(ResponseEvent.SessionCanceled, 33, SpeechEvent.SERVER_DOWNLINK_EVENT_SESSION_FAILED);
+        SessionCanceled = r33;
+        SAMICoreCallBackEventType r34 = new SAMICoreCallBackEventType(ResponseEvent.SessionFailed, 34, SpeechEvent.SERVER_DOWNLINK_EVENT_ASR_INFO);
+        SessionFailed = r34;
+        SAMICoreCallBackEventType r35 = new SAMICoreCallBackEventType("TaskResponse", 35, SpeechEvent.SERVER_DOWNLINK_EVENT_ASR_RESPONSE);
+        TaskResponse = r35;
+        SAMICoreCallBackEventType r36 = new SAMICoreCallBackEventType(ResponseEvent.ASRResponse, 36, SpeechEvent.SERVER_DOWNLINK_EVENT_ASR_ENDED);
+        ASRResponse = r36;
+        SAMICoreCallBackEventType r37 = new SAMICoreCallBackEventType(ResponseEvent.ASREnded, 37, SpeechEvent.SERVER_DOWNLINK_EVENT_CHAT_RESPONSE);
+        ASREnded = r37;
+        SAMICoreCallBackEventType r38 = new SAMICoreCallBackEventType(ResponseEvent.ChatResponse, 38, SpeechEvent.SERVER_DOWNLINK_EVENT_CHAT_ENDED);
+        ChatResponse = r38;
+        SAMICoreCallBackEventType r39 = new SAMICoreCallBackEventType(ResponseEvent.ChatEnded, 39, SpeechEvent.SERVER_DOWNLINK_EVENT_TTS_SENTENCE_START);
+        ChatEnded = r39;
+        SAMICoreCallBackEventType r40 = new SAMICoreCallBackEventType(ResponseEvent.TTSSentenceStart, 40, SpeechEvent.SERVER_DOWNLINK_EVENT_TTS_RESPONSE);
+        TTSSentenceStart = r40;
+        SAMICoreCallBackEventType r41 = new SAMICoreCallBackEventType(ResponseEvent.TTSResponse, 41, SpeechEvent.SERVER_DOWNLINK_EVENT_TTS_SENTENCE_END);
+        TTSResponse = r41;
+        SAMICoreCallBackEventType r42 = new SAMICoreCallBackEventType(ResponseEvent.TTSSentenceEnd, 42, SpeechEvent.SERVER_DOWNLINK_EVENT_TTS_ENDED);
+        TTSSentenceEnd = r42;
+        SAMICoreCallBackEventType r43 = new SAMICoreCallBackEventType(ResponseEvent.TTSEnded, 43, SpeechEvent.SERVER_DOWNLINK_EVENT_BOT_TRIGGERED);
+        TTSEnded = r43;
+        SAMICoreCallBackEventType r44 = new SAMICoreCallBackEventType("WebSocketStateChanged", 44, SpeechEvent.SERVER_DOWNLINK_EVENT_UPLINKACK);
+        WebSocketStateChanged = r44;
+        SAMICoreCallBackEventType r45 = new SAMICoreCallBackEventType("CallDisConnectedWithRetry", 45, 218);
+        CallDisConnectedWithRetry = r45;
+        SAMICoreCallBackEventType r46 = new SAMICoreCallBackEventType(ResponseEvent.RequestRetried, 46, 219);
+        RequestRetried = r46;
+        SAMICoreCallBackEventType r47 = new SAMICoreCallBackEventType(ResponseEvent.ASRInfo, 47, 220);
+        ASRInfo = r47;
+        SAMICoreCallBackEventType r48 = new SAMICoreCallBackEventType(ResponseEvent.BSResponse, 48, 221);
+        BSResponse = r48;
+        SAMICoreCallBackEventType r49 = new SAMICoreCallBackEventType(ResponseEvent.BotTriggered, 49, 222);
+        BotTriggered = r49;
+        SAMICoreCallBackEventType r50 = new SAMICoreCallBackEventType(ResponseEvent.AudioUploadEnded, 50, 223);
+        AudioUploadEnded = r50;
+        SAMICoreCallBackEventType r51 = new SAMICoreCallBackEventType("SpeechStarted", 51, 224);
+        SpeechStarted = r51;
+        SAMICoreCallBackEventType r52 = new SAMICoreCallBackEventType("SpeechEnded", 52, 225);
+        SpeechEnded = r52;
+        SAMICoreCallBackEventType r53 = new SAMICoreCallBackEventType("PlayerStarted", 53, 226);
+        PlayerStarted = r53;
+        SAMICoreCallBackEventType r54 = new SAMICoreCallBackEventType("PlayerStopped", 54, 227);
+        PlayerStopped = r54;
+        SAMICoreCallBackEventType r55 = new SAMICoreCallBackEventType("SendToHost", 55, 228);
+        SendToHost = r55;
+        SAMICoreCallBackEventType r56 = new SAMICoreCallBackEventType("SessionConfResponse", 56, 230);
+        SessionConfResponse = r56;
+        SAMICoreCallBackEventType r57 = new SAMICoreCallBackEventType("PostBackAudioConfig", 57, 231);
+        PostBackAudioConfig = r57;
+        SAMICoreCallBackEventType r58 = new SAMICoreCallBackEventType("PlayerPaused", 58, 232);
+        PlayerPaused = r58;
+        SAMICoreCallBackEventType r59 = new SAMICoreCallBackEventType("PlayerResumed", 59, 233);
+        PlayerResumed = r59;
+        SAMICoreCallBackEventType r60 = new SAMICoreCallBackEventType(ResponseEvent.EventReplaceResult, 60, SpeechEvent.SERVER_DOWNLINK_EVENT_EVENT_REPLACE_RESULT);
+        EventReplaceResult = r60;
+        SAMICoreCallBackEventType r61 = new SAMICoreCallBackEventType("VadStarted", 61, 250);
+        VadStarted = r61;
+        SAMICoreCallBackEventType r62 = new SAMICoreCallBackEventType("VadEnded", 62, 251);
+        VadEnded = r62;
+        SAMICoreCallBackEventType r63 = new SAMICoreCallBackEventType("PVadStarted", 63, 252);
+        PVadStarted = r63;
+        SAMICoreCallBackEventType r64 = new SAMICoreCallBackEventType("PVadEnded", 64, 253);
+        PVadEnded = r64;
+        SAMICoreCallBackEventType r65 = new SAMICoreCallBackEventType("SpeakerSimilarity", 65, 254);
+        SpeakerSimilarity = r65;
+        SAMICoreCallBackEventType r66 = new SAMICoreCallBackEventType("VuiReset", 66, 300);
+        VuiReset = r66;
+        SAMICoreCallBackEventType r67 = new SAMICoreCallBackEventType("VAD_TimeOut", 67, CameraSize.lowHeight);
+        VAD_TimeOut = r67;
+        SAMICoreCallBackEventType r68 = new SAMICoreCallBackEventType("WakeUp_Succeed", 68, 353);
+        WakeUp_Succeed = r68;
+        SAMICoreCallBackEventType r69 = new SAMICoreCallBackEventType("WakeUp_Failed", 69, 354);
+        WakeUp_Failed = r69;
+        SAMICoreCallBackEventType r70 = new SAMICoreCallBackEventType("AIS_Data", 70, 400);
+        AIS_Data = r70;
+        SAMICoreCallBackEventType r71 = new SAMICoreCallBackEventType("AIS_Ability", 71, a0.LYNX_ERROR_CODE_UPDATE);
+        AIS_Ability = r71;
+        $VALUES = new SAMICoreCallBackEventType[]{r0, r1, r3, r5, r7, r9, r11, r13, r15, r14, r12, r10, r8, r6, r4, r2, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41, r42, r43, r44, r45, r46, r47, r48, r49, r50, r51, r52, r53, r54, r55, r56, r57, r58, r59, r60, r61, r62, r63, r64, r65, r66, r67, r68, r69, r70, r71};
+        intToEnumMap = new HashMap();
+        SAMICoreCallBackEventType[] r72 = values();
+        int r73 = r72.length;
+        int r74 = 0;
+    L3:
+        if (r74 >= r73) goto L5;
+        SAMICoreCallBackEventType r75 = r72[r74];
+        intToEnumMap.put(Integer.valueOf(r75.getValue()), r75);
+        r74 = r74 + 1;
+        goto L3
+    }
+
+    public static SAMICoreCallBackEventType[] values() {
+        return (SAMICoreCallBackEventType[]) $VALUES.clone();
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+
+    public static SAMICoreCallBackEventType fromInt(int r1) {
+        return intToEnumMap.get(Integer.valueOf(r1));
+    }
+
+    public static SAMICoreCallBackEventType valueOf(String r1) {
+        return (SAMICoreCallBackEventType) a.a(SAMICoreCallBackEventType.class, r1);
+    }
+
+    private SAMICoreCallBackEventType(String r1, int r2, int r3) {
+        super(r1, r2);
+        this.value = r3;
+    }
+}

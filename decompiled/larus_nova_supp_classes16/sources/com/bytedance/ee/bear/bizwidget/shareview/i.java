@@ -1,0 +1,17 @@
+package com.bytedance.ee.bear.bizwidget.shareview;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes16.dex */
+public abstract class i implements b {
+    public i() {
+    }
+
+    @Override // com.bytedance.ee.bear.bizwidget.shareview.b
+    public void s10(ShareType r3) {
+        tt5.a.h("SimpleShareItemClickListener", "doShareTo, not override, shareType: " + r3);
+    }
+
+    @Override // com.bytedance.ee.bear.bizwidget.shareview.b
+    public void xq(ShareType r3, String r4, int r5) {
+        tt5.a.h("SimpleShareItemClickListener", "onCacControlled, not override, shareType: " + r3 + ", token: " + du5.b.i(r4) + ", type: " + r5);
+    }
+}

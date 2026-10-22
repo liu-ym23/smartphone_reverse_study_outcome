@@ -1,0 +1,49 @@
+package com.obric.assistant.view.continuespeech;
+
+import kotlin.Metadata;
+import kotlin.enums.EnumEntries;
+import kotlin.enums.EnumEntriesKt;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes33.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\b\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005j\u0002\b\u0006j\u0002\b\u0007j\u0002\b\b¨\u0006\t"}, d2 = {"Lcom/obric/assistant/view/continuespeech/RealtimeCallLifeState;", "", "<init>", "(Ljava/lang/String;I)V", "SpeechStarted", "Thingking", "QueryRejected", "TTSEnd", "FinishSession", "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final enum RealtimeCallLifeState extends Enum<RealtimeCallLifeState> {
+    public static final RealtimeCallLifeState FinishSession = null;
+    public static final RealtimeCallLifeState QueryRejected = null;
+    public static final RealtimeCallLifeState SpeechStarted = null;
+    public static final RealtimeCallLifeState TTSEnd = null;
+    public static final RealtimeCallLifeState Thingking = null;
+    public static final /* synthetic */ RealtimeCallLifeState[] a = null;
+    public static final /* synthetic */ EnumEntries b = null;
+
+    public static EnumEntries<RealtimeCallLifeState> getEntries() {
+        return b;
+    }
+
+    static {
+        RealtimeCallLifeState r0 = new RealtimeCallLifeState("SpeechStarted", 0);
+        SpeechStarted = r0;
+        RealtimeCallLifeState r1 = new RealtimeCallLifeState("Thingking", 1);
+        Thingking = r1;
+        RealtimeCallLifeState r3 = new RealtimeCallLifeState("QueryRejected", 2);
+        QueryRejected = r3;
+        RealtimeCallLifeState r5 = new RealtimeCallLifeState("TTSEnd", 3);
+        TTSEnd = r5;
+        RealtimeCallLifeState r7 = new RealtimeCallLifeState("FinishSession", 4);
+        FinishSession = r7;
+        RealtimeCallLifeState[] r9 = {r0, r1, r3, r5, r7};
+        a = r9;
+        b = EnumEntriesKt.enumEntries(r9);
+    }
+
+    public static RealtimeCallLifeState[] values() {
+        return (RealtimeCallLifeState[]) a.clone();
+    }
+
+    public static RealtimeCallLifeState valueOf(String r1) {
+        return (RealtimeCallLifeState) r27.a.a(RealtimeCallLifeState.class, r1);
+    }
+
+    public RealtimeCallLifeState(String r1, int r2) {
+        super(r1, r2);
+    }
+}

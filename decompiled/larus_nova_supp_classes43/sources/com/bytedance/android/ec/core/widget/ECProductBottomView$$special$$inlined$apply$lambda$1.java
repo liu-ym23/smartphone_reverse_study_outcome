@@ -1,0 +1,28 @@
+package com.bytedance.android.ec.core.widget;
+
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\u0010\u0006\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005"}, d2 = {"Lcom/bytedance/android/ec/core/widget/price/a;", "it", "", "invoke", "(Lcom/bytedance/android/ec/core/widget/price/a;)V", "com/bytedance/android/ec/core/widget/ECProductBottomView$bindData$5$1$1", "<anonymous>"}, k = 3, mv = {1, 4, 3})
+final class ECProductBottomView$$special$$inlined$apply$lambda$1 extends Lambda implements Function1<com.bytedance.android.ec.core.widget.price.a, Unit> {
+    final /* synthetic */ com.bytedance.android.ec.model.response.t $item$inlined;
+
+    public ECProductBottomView$$special$$inlined$apply$lambda$1(com.bytedance.android.ec.model.response.t r1) {
+        this.$item$inlined = r1;
+        super(1);
+    }
+
+    public final void invoke(com.bytedance.android.ec.core.widget.price.a r10) {
+        Intrinsics.checkNotNullParameter(r10, "it");
+        r10.d = Long.valueOf(this.$item$inlined.b());
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1) {
+        invoke((com.bytedance.android.ec.core.widget.price.a) r1);
+        return Unit.INSTANCE;
+    }
+}

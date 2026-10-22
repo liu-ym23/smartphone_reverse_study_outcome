@@ -1,0 +1,13 @@
+package e70;
+
+import android.view.ViewGroup;
+import h70.b;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+public interface i<T extends h70.b> extends d<T> {
+    f70.b getLayerType();
+
+    ViewGroup q(T r1);
+
+    Integer w(T r1);
+}

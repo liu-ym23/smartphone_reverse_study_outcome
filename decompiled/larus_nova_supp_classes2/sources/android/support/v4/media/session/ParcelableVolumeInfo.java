@@ -1,0 +1,48 @@
+package android.support.v4.media.session;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes2.dex */
+public class ParcelableVolumeInfo implements Parcelable {
+    public static final Parcelable.Creator<ParcelableVolumeInfo> CREATOR = null;
+    public int audioStream;
+    public int controlType;
+    public int currentVolume;
+    public int maxVolume;
+    public int volumeType;
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    static {
+        CREATOR = new AnonymousClass1();
+    }
+
+    public ParcelableVolumeInfo(Parcel r2) {
+        this.volumeType = r2.readInt();
+        this.controlType = r2.readInt();
+        this.maxVolume = r2.readInt();
+        this.currentVolume = r2.readInt();
+        this.audioStream = r2.readInt();
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel r1, int r2) {
+        r1.writeInt(this.volumeType);
+        r1.writeInt(this.controlType);
+        r1.writeInt(this.maxVolume);
+        r1.writeInt(this.currentVolume);
+        r1.writeInt(this.audioStream);
+    }
+
+    public ParcelableVolumeInfo(int r1, int r2, int r3, int r4, int r5) {
+        this.volumeType = r1;
+        this.audioStream = r2;
+        this.controlType = r3;
+        this.maxVolume = r4;
+        this.currentVolume = r5;
+    }
+}

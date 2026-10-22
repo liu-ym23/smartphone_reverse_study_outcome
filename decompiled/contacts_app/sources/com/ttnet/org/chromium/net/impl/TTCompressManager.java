@@ -1,0 +1,58 @@
+package com.ttnet.org.chromium.net.impl;
+
+import com.ttnet.org.chromium.base.annotations.JNINamespace;
+
+/* JADX INFO: loaded from: classes4.dex */
+@JNINamespace("cronet")
+public class TTCompressManager {
+
+    public static final enum CompressType extends Enum<CompressType> {
+        private static final /* synthetic */ CompressType[] $VALUES = null;
+        public static final CompressType BROTLI = null;
+        public static final CompressType GZIP = null;
+        public static final CompressType ZSTD = null;
+        final int mType;
+
+        public static CompressType valueOf(String r1) {
+            return (CompressType) Enum.valueOf(CompressType.class, r1);
+        }
+
+        public static CompressType[] values() {
+            return (CompressType[]) $VALUES.clone();
+        }
+
+        static {
+            CompressType r0 = new CompressType("GZIP", 0, 1);
+            GZIP = r0;
+            CompressType r1 = new CompressType("BROTLI", 1, 2);
+            BROTLI = r1;
+            CompressType r4 = new CompressType("ZSTD", 2, 3);
+            ZSTD = r4;
+            $VALUES = new CompressType[]{r0, r1, r4};
+        }
+
+        private CompressType(String r1, int r2, int r3) {
+            super(r1, r2);
+            this.mType = r3;
+        }
+
+        public int getValue() {
+            return this.mType;
+        }
+    }
+
+    private static native byte[] nativeCompressData(byte[] r0, int r1, int r2, int r3);
+
+    private static native byte[] nativeDecompressData(byte[] r0, int r1, int r2);
+
+    public TTCompressManager() {
+    }
+
+    public static byte[] compressData(byte[] r0, int r1, int r2, CompressType r3) {
+        return nativeCompressData(r0, r1, r2, r3.getValue());
+    }
+
+    public static byte[] decompressData(byte[] r0, int r1, CompressType r2) {
+        return nativeDecompressData(r0, r1, r2.getValue());
+    }
+}

@@ -1,0 +1,49 @@
+package com.bytedance.badger.network;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+public final class f0 extends l0 {
+    public final boolean a;
+
+    public f0() {
+        this(false);
+    }
+
+    @Override // com.bytedance.badger.network.l0
+    public final boolean a() {
+        return this.a;
+    }
+
+    public final int hashCode() {
+        boolean r0 = this.a;
+        if (r0 == false) goto L6;
+        return 1;
+    L6:
+        return r0 ? 1 : 0;
+    }
+
+    public final String toString() {
+        return "FirstTry(isLastAttempt=" + this.a + ")";
+    }
+
+    public f0(boolean r1) {
+        this.a = r1;
+    }
+
+    public final boolean equals(Object r4) {
+        if (this != r4) goto L5;
+    L13:
+        return true;
+    L5:
+        if ((r4 instanceof f0) == true) goto L7;
+    L12:
+        return false;
+    L7:
+        if (this.a != ((f0) r4).a) goto L9;
+        boolean r5 = true;
+    L10:
+        if (r5 == false) goto L12;
+    L9:
+        r5 = false;
+        goto L10
+    }
+}

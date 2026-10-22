@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/video_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="52dp">
+    <Button
+        android:textSize="13.5sp"
+        android:textColor="#ffffff"
+        android:id="@+id/video_back_btn"
+        android:background="@drawable/btn_back_video_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/video_current_time"
+        android:layout_marginLeft="18dp"
+        android:text="@string/video_default_time"
+        android:layout_toRightOf="@+id/video_back_btn"
+        style="@style/video_time_style"/>
+    <TextView
+        android:id="@+id/video_total_time"
+        android:layout_marginRight="18dp"
+        android:text="@string/video_default_time"
+        android:layout_alignParentRight="true"
+        style="@style/video_time_style"/>
+    <SeekBar
+        android:id="@+id/video_seekbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/video_total_time"
+        android:layout_toRightOf="@+id/video_current_time"
+        style="@style/video_seekbar_horizontal"/>
+</RelativeLayout>

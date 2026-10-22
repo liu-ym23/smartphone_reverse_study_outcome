@@ -1,0 +1,164 @@
+package com.bytedance.android.livesdk.livecommerce.view.coupon;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
+import android.text.TextUtils;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
+import com.bytedance.android.livesdk.livecommerce.utils.x;
+import com.bytedance.android.livesdk.livecommerce.view.ECHostDistributeCouponStatusLayout;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import sg2.h;
+import si2.p;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes10.dex */
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\u0018\u00002\u00020\u0001:\u0001\u000eB'\b\u0007\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\b\u0012\b\b\u0002\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\f\u0010\rJ\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002¨\u0006\u000f"}, d2 = {"Lcom/bytedance/android/livesdk/livecommerce/view/coupon/ECNewCouponLayout;", "Lcom/bytedance/android/livesdk/livecommerce/view/coupon/ECNewBaseCouponLayout;", "Lcom/bytedance/android/livesdk/livecommerce/view/coupon/ECNewCouponLayout$a;", "handler", "", "setCouponHandler", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attrs", "", "defStyleAttr", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "a", "livecommerce_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class ECNewCouponLayout extends ECNewBaseCouponLayout {
+    public Map<Integer, View> b;
+    public final ECHostDistributeCouponStatusLayout c;
+    public a d;
+
+    public interface a {
+        void a(ECHostDistributeCouponStatusLayout r1);
+
+        void distributeCoupon(p r1);
+    }
+
+    public static final class b implements ECHostDistributeCouponStatusLayout.b {
+        public final /* synthetic */ ECNewCouponLayout a;
+        public final /* synthetic */ p b;
+
+        public b(ECNewCouponLayout r1, p r2) {
+            this.a = r1;
+            this.b = r2;
+        }
+
+        @Override // com.bytedance.android.livesdk.livecommerce.view.ECHostDistributeCouponStatusLayout.b
+        public final void onClick() {
+            a r0 = this.a.d;
+            if (r0 == null) goto L5;
+            r0.distributeCoupon(this.b);
+        L5:
+            h r1 = h.a.a;
+            r1.d = this.b;
+        }
+    }
+
+    public ECNewCouponLayout(Context r4) {
+        AttributeSet r2 = null;
+        this(r4, r2, 6, 0);
+    }
+
+    public ECNewCouponLayout(Context r3, AttributeSet r4) {
+        this(r3, r4, 4, 0);
+    }
+
+    @Override // com.bytedance.android.livesdk.livecommerce.view.coupon.ECNewBaseCouponLayout
+    public final View a(int r3) {
+        if (this.b != null) goto L5;
+        this.b = new LinkedHashMap();
+    L5:
+        View r0 = this.b.get(Integer.valueOf(r3));
+        if (r0 != null) goto L12;
+        View r1 = findViewById(r3);
+        if (r1 == null) goto L10;
+        this.b.put(Integer.valueOf(r3), r1);
+        return r1;
+    L10:
+        return null;
+    L12:
+        return r0;
+    }
+
+    @Override // com.bytedance.android.livesdk.livecommerce.view.coupon.ECNewBaseCouponLayout
+    public final void b(p r8) {
+        Intrinsics.checkNotNullParameter(r8, "ecuiCoupon");
+        super.b(r8);
+        FrameLayout r0 = (FrameLayout) a(2131370706);
+        r0.removeAllViews();
+        r0.addView(this.c, new FrameLayout.LayoutParams(-1, -1));
+        ((RelativeLayout) a(2131370798)).setAlpha(1.0f);
+        h r1 = h.a.a;
+        boolean r4 = false;
+        if (r8.l != 1) goto L20;
+        this.c.b(getContext().getString(2131896449), true);
+        SharedPreferences r2 = x.b(getContext());
+        if (r2 != null) goto L7;
+    L9:
+        if (r4 == true) goto L27;
+        a r3 = this.d;
+        if (r3 == null) goto L13;
+        r3.a(this.c);
+    L13:
+        SharedPreferences r5 = x.b(getContext());
+        if (r5 == null) goto L27;
+        if (TextUtils.isEmpty("ec_coupon_end_guide") == true) goto L27;
+        SharedPreferences.Editor r6 = r5.edit();
+        if (r6 == null) goto L27;
+        r6.putBoolean("ec_coupon_end_guide", true);
+        r6.apply();
+    L27:
+        this.c.setDistributeCouponButtonAlpha(1.0f);
+        if (r8.k == true) goto L30;
+    L31:
+        this.c.setDistributeCouponButtonAlpha(0.5f);
+    L32:
+        this.c.setDistributeClickListener(new b(this, r8));
+        return;
+    L30:
+        if (r8.i != 0) goto L32;
+    L7:
+        if (TextUtils.isEmpty("ec_coupon_end_guide") == true) goto L9;
+        r4 = r2.getBoolean("ec_coupon_end_guide", false);
+        goto L9
+    L20:
+        this.c.setVisibility(0);
+        if (r8.k == true) goto L23;
+        ECHostDistributeCouponStatusLayout r7 = this.c;
+        r7.g = false;
+        r7.b.setBackground(null);
+        r7.b.setTextColor(r7.c);
+        r7.b.setText(2131896526);
+        r7.b.setTypeface(Typeface.DEFAULT_BOLD);
+        ((RelativeLayout) a(2131370798)).setAlpha(0.6f);
+        goto L27
+    L23:
+        if (r8.i > 0) goto L25;
+        ECHostDistributeCouponStatusLayout r9 = this.c;
+        r9.g = false;
+        r9.b.setBackground(null);
+        r9.b.setTextColor(r9.d);
+        r9.b.setText(2131896660);
+        r9.b.setTypeface(Typeface.DEFAULT_BOLD);
+        ((RelativeLayout) a(2131370798)).setAlpha(0.6f);
+        goto L27
+    L25:
+        this.c.b(getContext().getString(2131896443), r1.e);
+        goto L27
+    }
+
+    public final void setCouponHandler(a r2) {
+        Intrinsics.checkNotNullParameter(r2, "handler");
+        this.d = r2;
+    }
+
+    public ECNewCouponLayout(Context r2, AttributeSet r3, int r4) {
+        Intrinsics.checkNotNullParameter(r2, "context");
+        super(r2, r3, r4);
+        this.b = new LinkedHashMap();
+        this.c = new ECHostDistributeCouponStatusLayout(r2);
+    }
+
+    public /* synthetic */ ECNewCouponLayout(Context r1, AttributeSet r2, int r3, int r4) {
+        if ((r3 & 2) == 0) goto L5;
+        r2 = null;
+    L5:
+        this(r1, r2, 0);
+    }
+}

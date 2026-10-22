@@ -1,0 +1,32 @@
+package com.google.android.material.animation;
+
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.ValueAnimator;
+import androidx.annotation.NonNull;
+import androidx.annotation.RestrictTo;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes2.dex */
+@RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
+public class AnimatorSetCompat {
+    public AnimatorSetCompat() {
+    }
+
+    public static void playTogether(@NonNull AnimatorSet r10, @NonNull List<Animator> r11) {
+        int r0 = r11.size();
+        long r2 = 0;
+        int r4 = 0;
+    L3:
+        if (r4 >= r0) goto L5;
+        Animator r5 = r11.get(r4);
+        r2 = Math.max(r2, r5.getStartDelay() + r5.getDuration());
+        r4 = r4 + 1;
+        goto L3
+    L5:
+        ValueAnimator r1 = ValueAnimator.ofInt(new int[]{0, 0});
+        r1.setDuration(r2);
+        r11.add(0, r1);
+        r10.playTogether(r11);
+    }
+}

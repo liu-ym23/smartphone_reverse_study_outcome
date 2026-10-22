@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<intents>
+    <intent
+        impl="com.smt.obric.appstore.assistant.intent.DownloadAppIntentImpl"
+        name="System_DownloadApp"/>
+</intents>

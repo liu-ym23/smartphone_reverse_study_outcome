@@ -1,0 +1,373 @@
+package com.ttnet.org.chromium.base;
+
+import android.os.Process;
+import android.os.StrictMode;
+import android.os.SystemClock;
+import androidx.annotation.VisibleForTesting;
+import com.ttnet.org.chromium.base.annotations.CalledByNative;
+import com.ttnet.org.chromium.base.annotations.JNINamespace;
+import com.ttnet.org.chromium.base.annotations.MainDex;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import javax.annotation.concurrent.GuardedBy;
+
+/* JADX INFO: loaded from: classes2.dex */
+@JNINamespace("base::android")
+@MainDex
+public class EarlyTraceEvent {
+    static final /* synthetic */ boolean $assertionsDisabled = false;
+    private static final String BACKGROUND_STARTUP_TRACING_ENABLED_KEY = "bg_startup_tracing";
+
+    @VisibleForTesting
+    static final int STATE_DISABLED = 0;
+
+    @VisibleForTesting
+    static final int STATE_ENABLED = 1;
+
+    @VisibleForTesting
+    static final int STATE_FINISHED = 2;
+    private static final String TRACE_CONFIG_FILENAME = "/data/local/chrome-trace-config.json";
+    public static final String TRACE_EARLY_JAVA_IN_CHILD_SWITCH = "trace-early-java-in-child";
+    private static final String TRACE_STARTUP_SWITCH = "trace-startup";
+
+    @GuardedBy
+    @VisibleForTesting
+    static List<AsyncEvent> sAsyncEvents;
+    private static boolean sCachedBackgroundStartupTracingFlag;
+    private static volatile boolean sEnabledInChildProcessBeforeCommandLine;
+
+    @GuardedBy
+    @VisibleForTesting
+    static List<Event> sEvents;
+
+    @VisibleForTesting
+    static final Object sLock = null;
+
+    @VisibleForTesting
+    static volatile int sState;
+
+    @VisibleForTesting
+    public static final class AsyncEvent {
+        final long mId;
+        final boolean mIsStart;
+        final String mName;
+        final long mTimeNanos;
+
+        public AsyncEvent(String r1, long r2, boolean r4) {
+            this.mName = r1;
+            this.mId = r2;
+            this.mIsStart = r4;
+            this.mTimeNanos = System.nanoTime();
+        }
+    }
+
+    @VisibleForTesting
+    public static final class Event {
+        final boolean mIsStart;
+        final boolean mIsToplevel;
+        final String mName;
+        final int mThreadId;
+        final long mThreadTimeMillis;
+        final long mTimeNanos;
+
+        public Event(String r1, boolean r2, boolean r3) {
+            this.mIsStart = r2;
+            this.mIsToplevel = r3;
+            this.mName = r1;
+            this.mThreadId = Process.myTid();
+            this.mTimeNanos = System.nanoTime();
+            this.mThreadTimeMillis = SystemClock.currentThreadTimeMillis();
+        }
+    }
+
+    public interface Natives {
+        void recordEarlyAsyncBeginEvent(String r1, long r2, long r4);
+
+        void recordEarlyAsyncEndEvent(String r1, long r2, long r4);
+
+        void recordEarlyBeginEvent(String r1, long r2, int r4, long r5);
+
+        void recordEarlyEndEvent(String r1, long r2, int r4, long r5);
+
+        void recordEarlyToplevelBeginEvent(String r1, long r2, int r4, long r5);
+
+        void recordEarlyToplevelEndEvent(String r1, long r2, int r4, long r5);
+    }
+
+    static {
+        sLock = new Object();
+    }
+
+    public EarlyTraceEvent() {
+    }
+
+    public static void begin(String r2, boolean r3) {
+        if (enabled() == true) goto L5;
+        return;
+    L5:
+        Event r0 = new Event(r2, true, r3);
+        Object r4 = sLock;
+        monitor-enter(r4);
+    L11:
+        th = move-exception;
+        throw th;
+    L8:
+        if (enabled() == true) goto L13;
+        monitor-exit(r4);     // Catch: Throwable -> L11
+        return;
+    L13:
+        sEvents.add(r0);     // Catch: Throwable -> L11
+        monitor-exit(r4);     // Catch: Throwable -> L11
+    }
+
+    public static void disable() {
+        Object r0 = sLock;
+        monitor-enter(r0);
+    L8:
+        th = move-exception;
+        throw th;
+    L5:
+        if (enabled() == true) goto L11;
+        monitor-exit(r0);     // Catch: Throwable -> L8
+        return;
+    L11:
+        if (sEvents.isEmpty() == true) goto L14;
+        dumpEvents(sEvents);     // Catch: Throwable -> L8
+        sEvents.clear();     // Catch: Throwable -> L8
+    L14:
+        if (sAsyncEvents.isEmpty() == true) goto L16;
+        dumpAsyncEvents(sAsyncEvents);     // Catch: Throwable -> L8
+        sAsyncEvents.clear();     // Catch: Throwable -> L8
+    L16:
+        sState = 2;     // Catch: Throwable -> L8
+        sEvents = null;     // Catch: Throwable -> L8
+        sAsyncEvents = null;     // Catch: Throwable -> L8
+        monitor-exit(r0);     // Catch: Throwable -> L8
+    }
+
+    private static void dumpAsyncEvents(List<AsyncEvent> r14) {
+        Iterator<AsyncEvent> r15 = r14.iterator();
+    L4:
+        if (r15.hasNext() == false) goto L9;
+        AsyncEvent r0 = r15.next();
+        if (r0.mIsStart == true) goto L7;
+        EarlyTraceEventJni.get().recordEarlyAsyncEndEvent(r0.mName, r0.mId, r0.mTimeNanos);
+        goto L4
+    L7:
+        EarlyTraceEventJni.get().recordEarlyAsyncBeginEvent(r0.mName, r0.mId, r0.mTimeNanos);
+        goto L4
+    }
+
+    private static void dumpEvents(List<Event> r17) {
+        Iterator<Event> r0 = r17.iterator();
+    L4:
+        if (r0.hasNext() == false) goto L15;
+        Event r1 = r0.next();
+        if (r1.mIsStart == true) goto L8;
+        if (r1.mIsToplevel == true) goto L13;
+        EarlyTraceEventJni.get().recordEarlyEndEvent(r1.mName, r1.mTimeNanos, r1.mThreadId, r1.mThreadTimeMillis);
+        goto L4
+    L13:
+        EarlyTraceEventJni.get().recordEarlyToplevelEndEvent(r1.mName, r1.mTimeNanos, r1.mThreadId, r1.mThreadTimeMillis);
+        goto L4
+    L8:
+        if (r1.mIsToplevel == true) goto L9;
+        EarlyTraceEventJni.get().recordEarlyBeginEvent(r1.mName, r1.mTimeNanos, r1.mThreadId, r1.mThreadTimeMillis);
+        goto L4
+    L9:
+        EarlyTraceEventJni.get().recordEarlyToplevelBeginEvent(r1.mName, r1.mTimeNanos, r1.mThreadId, r1.mThreadTimeMillis);
+        goto L4
+    }
+
+    public static void earlyEnableInChildWithoutCommandLine() {
+        sEnabledInChildProcessBeforeCommandLine = true;
+        enable();
+    }
+
+    public static void enable() {
+        Object r0 = sLock;
+        monitor-enter(r0);
+    L8:
+        th = move-exception;
+        throw th;
+    L5:
+        if (sState == 0) goto L10;
+        monitor-exit(r0);     // Catch: Throwable -> L8
+        return;
+    L10:
+        sEvents = new ArrayList();     // Catch: Throwable -> L8
+        sAsyncEvents = new ArrayList();     // Catch: Throwable -> L8
+        sState = 1;     // Catch: Throwable -> L8
+        monitor-exit(r0);     // Catch: Throwable -> L8
+    }
+
+    public static boolean enabled() {
+        if (sState == 1) goto L7;
+        return false;
+    L7:
+        return true;
+    }
+
+    public static void end(String r2, boolean r3) {
+        if (enabled() == true) goto L5;
+        return;
+    L5:
+        Event r0 = new Event(r2, false, r3);
+        Object r4 = sLock;
+        monitor-enter(r4);
+    L11:
+        th = move-exception;
+        throw th;
+    L8:
+        if (enabled() == true) goto L13;
+        monitor-exit(r4);     // Catch: Throwable -> L11
+        return;
+    L13:
+        sEvents.add(r0);     // Catch: Throwable -> L11
+        monitor-exit(r4);     // Catch: Throwable -> L11
+    }
+
+    public static void finishAsync(String r2, long r3) {
+        if (enabled() == true) goto L5;
+        return;
+    L5:
+        AsyncEvent r0 = new AsyncEvent(r2, r3, false);
+        Object r4 = sLock;
+        monitor-enter(r4);
+    L11:
+        th = move-exception;
+        throw th;
+    L8:
+        if (enabled() == true) goto L13;
+        monitor-exit(r4);     // Catch: Throwable -> L11
+        return;
+    L13:
+        sAsyncEvents.add(r0);     // Catch: Throwable -> L11
+        monitor-exit(r4);     // Catch: Throwable -> L11
+    }
+
+    @CalledByNative
+    public static boolean getBackgroundStartupTracingFlag() {
+        return sCachedBackgroundStartupTracingFlag;
+    }
+
+    @VisibleForTesting
+    public static List<Event> getMatchingCompletedEventsForTesting(String r5) {
+        Object r0 = sLock;
+        monitor-enter(r0);
+        ArrayList r1 = new ArrayList();     // Catch: Throwable -> L10
+        Iterator<Event> r2 = sEvents.iterator();     // Catch: Throwable -> L10
+    L6:
+        if (r2.hasNext() == false) goto L12;
+        Event r3 = r2.next();     // Catch: Throwable -> L10
+        if (r3.mName.equals(r5) == false) goto L6;
+        r1.add(r3);     // Catch: Throwable -> L10
+        goto L6
+    L12:
+        monitor-exit(r0);     // Catch: Throwable -> L10
+        return r1;
+    L10:
+        th = move-exception;
+        throw th;
+    }
+
+    public static void maybeEnableInBrowserProcess() {
+        ThreadUtils.assertOnUiThread();
+        if (sState == 0) goto L5;
+        return;
+    L5:
+        StrictMode.ThreadPolicy r0 = StrictMode.allowThreadDiskReads();
+    L12:
+        th = move-exception;
+        StrictMode.setThreadPolicy(r0);
+        throw th;
+    L7:
+        boolean r2 = true;
+        if (CommandLine.getInstance().hasSwitch(TRACE_STARTUP_SWITCH) == false) goto L29;
+        boolean r1 = true;
+    L16:
+        if (ContextUtils.getAppSharedPreferences().getBoolean(BACKGROUND_STARTUP_TRACING_ENABLED_KEY, false) == false) goto L21;
+        if (r1 == false) goto L19;
+        setBackgroundStartupTracingFlag(false);     // Catch: Throwable -> L12
+        sCachedBackgroundStartupTracingFlag = false;     // Catch: Throwable -> L12
+        goto L21
+    L19:
+        sCachedBackgroundStartupTracingFlag = true;     // Catch: Throwable -> L12
+    L22:
+        StrictMode.setThreadPolicy(r0);
+        if (r2 == false) goto L31;
+        enable();
+        return;
+    L31:
+        return;
+    L21:
+        r2 = r1;
+        goto L22
+    L29:
+        r1 = new File(TRACE_CONFIG_FILENAME).exists();     // Catch: Throwable -> L12 SecurityException -> L14
+    L14:
+        r1 = false;
+        goto L16
+    }
+
+    public static void onCommandLineAvailableInChildProcess() {
+        if (sEnabledInChildProcessBeforeCommandLine == true) goto L5;
+        return;
+    L5:
+        Object r0 = sLock;
+        monitor-enter(r0);
+    L12:
+        th = move-exception;
+        throw th;
+    L8:
+        if (CommandLine.getInstance().hasSwitch(TRACE_EARLY_JAVA_IN_CHILD_SWITCH) == true) goto L15;
+        reset();     // Catch: Throwable -> L12
+        monitor-exit(r0);     // Catch: Throwable -> L12
+        return;
+    L15:
+        if (sState != 0) goto L17;
+        enable();     // Catch: Throwable -> L12
+    L17:
+        monitor-exit(r0);     // Catch: Throwable -> L12
+    }
+
+    @VisibleForTesting
+    public static void reset() {
+        Object r0 = sLock;
+        monitor-enter(r0);
+        sState = 0;     // Catch: Throwable -> L8
+        sEvents = null;     // Catch: Throwable -> L8
+        sAsyncEvents = null;     // Catch: Throwable -> L8
+        monitor-exit(r0);     // Catch: Throwable -> L8
+        return;
+    L8:
+        th = move-exception;
+        throw th;
+    }
+
+    @CalledByNative
+    public static void setBackgroundStartupTracingFlag(boolean r2) {
+        ContextUtils.getAppSharedPreferences().edit().putBoolean(BACKGROUND_STARTUP_TRACING_ENABLED_KEY, r2).apply();
+    }
+
+    public static void startAsync(String r2, long r3) {
+        if (enabled() == true) goto L5;
+        return;
+    L5:
+        AsyncEvent r0 = new AsyncEvent(r2, r3, true);
+        Object r4 = sLock;
+        monitor-enter(r4);
+    L11:
+        th = move-exception;
+        throw th;
+    L8:
+        if (enabled() == true) goto L13;
+        monitor-exit(r4);     // Catch: Throwable -> L11
+        return;
+    L13:
+        sAsyncEvents.add(r0);     // Catch: Throwable -> L11
+        monitor-exit(r4);     // Catch: Throwable -> L11
+    }
+}

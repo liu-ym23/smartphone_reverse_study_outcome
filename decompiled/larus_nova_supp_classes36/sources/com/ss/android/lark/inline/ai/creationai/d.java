@@ -1,0 +1,67 @@
+package com.ss.android.lark.inline.ai.creationai;
+
+import android.animation.ValueAnimator;
+import android.view.ViewGroup;
+import com.ss.android.lark.log.Log;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes36.dex */
+public final class d implements ValueAnimator.AnimatorUpdateListener {
+    public final /* synthetic */ int a;
+    public final /* synthetic */ int b;
+    public final /* synthetic */ CreationAIDragView c;
+    public final /* synthetic */ int d;
+    public final /* synthetic */ int e;
+
+    public d(int r1, int r2, CreationAIDragView r3, int r4, int r5) {
+        this.a = r1;
+        this.b = r2;
+        this.c = r3;
+        this.d = r4;
+        this.e = r5;
+    }
+
+    @Override // android.animation.ValueAnimator.AnimatorUpdateListener
+    public final void onAnimationUpdate(ValueAnimator r5) {
+        Intrinsics.checkNotNullParameter(r5, "it");
+        Object r6 = r5.getAnimatedValue();
+        Intrinsics.checkNotNull(r6, "null cannot be cast to non-null type kotlin.Float");
+        float r7 = ((Float) r6).floatValue();
+        int r0 = this.a;
+        float r1 = r0 + ((this.b - r0) * r7);
+        ViewGroup r2 = this.c.c;
+        ViewGroup.LayoutParams r3 = r2.getLayoutParams();
+        if (this.c.j != null) goto L5;
+        int r4 = -2;
+    L6:
+        r3.height = r4;
+        r2.setLayoutParams(r3);
+        int r8 = this.d;
+        float r9 = r8 + ((this.e - r8) * r7);
+        ViewGroup r10 = this.c.c;
+        ViewGroup.LayoutParams r11 = r10.getLayoutParams();
+        Intrinsics.checkNotNull(r11, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+        ViewGroup.MarginLayoutParams r12 = (ViewGroup.MarginLayoutParams) r11;
+        r12.bottomMargin = (int) r9;
+        r10.setLayoutParams(r12);
+        CreationAIDragView r13 = this.c;
+        int r14 = r13.m;
+        int r15 = r13.n;
+        if (r14 >= r15) goto L9;
+        float r16 = r15 - (r15 * r7);
+    L10:
+        Log.i("CreationAIDragView", "doKeyboardAnimation, real keyboard height: " + r16);
+        if (r16 >= 1.0f) goto L13;
+        this.c.n();
+        return;
+    L13:
+        this.c.s();
+        return;
+    L9:
+        r16 = r15 * r7;
+        goto L10
+    L5:
+        r4 = (int) r1;
+        goto L6
+    }
+}

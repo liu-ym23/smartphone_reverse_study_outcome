@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_topic"
+    android:fitsSystemWindows="true"
+    style="@style/appstore_bg_style">
+    <include layout="@layout/abc_toolbar"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"/>
+</RelativeLayout>

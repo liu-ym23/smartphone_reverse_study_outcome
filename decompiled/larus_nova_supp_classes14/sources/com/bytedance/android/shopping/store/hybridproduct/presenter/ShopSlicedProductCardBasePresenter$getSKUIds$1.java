@@ -1,0 +1,33 @@
+package com.bytedance.android.shopping.store.hybridproduct.presenter;
+
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes14.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\r\n\u0002\b\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lcom/bytedance/android/ec/store/repository/dto/j;", "it", "", "invoke", "(Lcom/bytedance/android/ec/store/repository/dto/j;)Ljava/lang/CharSequence;", "<anonymous>"}, k = 3, mv = {1, 4, 3})
+final class ShopSlicedProductCardBasePresenter$getSKUIds$1 extends Lambda implements Function1<com.bytedance.android.ec.store.repository.dto.j, CharSequence> {
+    public static final ShopSlicedProductCardBasePresenter$getSKUIds$1 INSTANCE = null;
+
+    static {
+        INSTANCE = new ShopSlicedProductCardBasePresenter$getSKUIds$1();
+    }
+
+    public ShopSlicedProductCardBasePresenter$getSKUIds$1() {
+        super(1);
+    }
+
+    public final CharSequence invoke(com.bytedance.android.ec.store.repository.dto.j r2) {
+        Intrinsics.checkNotNullParameter(r2, "it");
+        String r3 = r2.b();
+        if (r3 != null) goto L7;
+        return "";
+    L7:
+        return r3;
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1) {
+        return invoke((com.bytedance.android.ec.store.repository.dto.j) r1);
+    }
+}

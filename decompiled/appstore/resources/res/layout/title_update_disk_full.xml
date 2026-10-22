@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clear_cache"
+    android:background="@drawable/disk_full_bg"
+    android:layout_width="match_parent"
+    android:layout_height="76dp">
+    <Button
+        android:textColor="#80622f"
+        android:id="@+id/clear_cache_btn"
+        android:background="@drawable/btn_clear_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_btn"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"/>
+    <TextView
+        android:textSize="13.5sp"
+        android:textColor="#80622f"
+        android:gravity="center"
+        android:id="@+id/clear_cache_des"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:maxWidth="234dp"
+        android:text="@string/clear_disk_space"
+        android:layout_toLeftOf="@+id/clear_cache_btn"
+        android:layout_alignParentLeft="true"/>
+    <ImageView
+        android:id="@+id/divider_line"
+        android:background="@drawable/line"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

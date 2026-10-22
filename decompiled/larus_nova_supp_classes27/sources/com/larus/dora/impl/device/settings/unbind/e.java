@@ -1,0 +1,13 @@
+package com.larus.dora.impl.device.settings.unbind;
+
+import com.larus.common_ui.dialog.u;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes27.dex */
+public final class e implements u {
+    public e() {
+    }
+
+    @Override // com.larus.common_ui.dialog.u
+    public final void cancel() {
+    }
+}

@@ -1,0 +1,174 @@
+package com.google.android.material.floatingactionbutton;
+
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
+import android.animation.StateListAnimator;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
+import android.graphics.drawable.RippleDrawable;
+import android.view.View;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
+import androidx.core.util.Preconditions;
+import com.google.android.material.R;
+import com.google.android.material.ripple.RippleUtils;
+import com.google.android.material.shadow.ShadowViewDelegate;
+import com.google.android.material.shape.MaterialShapeDrawable;
+import com.google.android.material.shape.ShapeAppearanceModel;
+import java.util.ArrayList;
+
+/* JADX INFO: loaded from: classes.dex */
+@RequiresApi(21)
+class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl {
+
+    public static class AlwaysStatefulMaterialShapeDrawable extends MaterialShapeDrawable {
+        public AlwaysStatefulMaterialShapeDrawable(ShapeAppearanceModel r1) {
+            super(r1);
+        }
+
+        @Override // com.google.android.material.shape.MaterialShapeDrawable, android.graphics.drawable.Drawable
+        public boolean isStateful() {
+            return true;
+        }
+    }
+
+    public FloatingActionButtonImplLollipop(FloatingActionButton r1, ShadowViewDelegate r2) {
+        super(r1, r2);
+    }
+
+    @NonNull
+    private Animator createElevationAnimator(float r7, float r8) {
+        AnimatorSet r0 = new AnimatorSet();
+        r0.play(ObjectAnimator.ofFloat(this.view, "elevation", new float[]{r7}).setDuration(0)).with(ObjectAnimator.ofFloat(this.view, View.TRANSLATION_Z, new float[]{r8}).setDuration(100));
+        r0.setInterpolator(FloatingActionButtonImpl.ELEVATION_ANIM_INTERPOLATOR);
+        return r0;
+    }
+
+    @NonNull
+    public BorderDrawable createBorderDrawable(int r6, ColorStateList r7) {
+        Context r0 = this.view.getContext();
+        BorderDrawable r1 = new BorderDrawable((ShapeAppearanceModel) Preconditions.checkNotNull(this.shapeAppearance));
+        r1.setGradientColors(ContextCompat.getColor(r0, R.color.design_fab_stroke_top_outer_color), ContextCompat.getColor(r0, R.color.design_fab_stroke_top_inner_color), ContextCompat.getColor(r0, R.color.design_fab_stroke_end_inner_color), ContextCompat.getColor(r0, R.color.design_fab_stroke_end_outer_color));
+        r1.setBorderWidth(r6);
+        r1.setBorderTint(r7);
+        return r1;
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    @NonNull
+    public MaterialShapeDrawable createShapeDrawable() {
+        return new AlwaysStatefulMaterialShapeDrawable((ShapeAppearanceModel) Preconditions.checkNotNull(this.shapeAppearance));
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public float getElevation() {
+        return this.view.getElevation();
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public void getPadding(@NonNull Rect r2) {
+        if (this.shadowViewDelegate.isCompatPaddingEnabled() == false) goto L6;
+        super.getPadding(r2);
+        return;
+    L6:
+        if (shouldExpandBoundsForA11y() == true) goto L8;
+        int r0 = (this.minTouchTargetSize - this.view.getSizeDimension()) / 2;
+        r2.set(r0, r0, r0, r0);
+        return;
+    L8:
+        r2.set(0, 0, 0, 0);
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public void initializeBackgroundDrawable(ColorStateList r2, @Nullable PorterDuff.Mode r3, ColorStateList r4, int r5) {
+        MaterialShapeDrawable r0 = createShapeDrawable();
+        this.shapeDrawable = r0;
+        r0.setTintList(r2);
+        if (r3 == null) goto L5;
+        this.shapeDrawable.setTintMode(r3);
+    L5:
+        this.shapeDrawable.initializeElevationOverlay(this.view.getContext());
+        if (r5 <= 0) goto L8;
+        this.borderDrawable = createBorderDrawable(r5, r2);
+        Drawable r6 = new LayerDrawable(new Drawable[]{(Drawable) Preconditions.checkNotNull(this.borderDrawable), (Drawable) Preconditions.checkNotNull(this.shapeDrawable)});
+    L9:
+        RippleDrawable r7 = new RippleDrawable(RippleUtils.sanitizeRippleDrawableColor(r4), r6, null);
+        this.rippleDrawable = r7;
+        this.contentBackground = r7;
+        return;
+    L8:
+        this.borderDrawable = null;
+        r6 = this.shapeDrawable;
+        goto L9
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public void jumpDrawableToCurrentState() {
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public void onCompatShadowChanged() {
+        updatePadding();
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public void onDrawableStateChanged(int[] r1) {
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public void onElevationsChanged(float r8, float r9, float r10) {
+        StateListAnimator r2 = new StateListAnimator();
+        r2.addState(FloatingActionButtonImpl.PRESSED_ENABLED_STATE_SET, createElevationAnimator(r8, r10));
+        r2.addState(FloatingActionButtonImpl.HOVERED_FOCUSED_ENABLED_STATE_SET, createElevationAnimator(r8, r9));
+        r2.addState(FloatingActionButtonImpl.FOCUSED_ENABLED_STATE_SET, createElevationAnimator(r8, r9));
+        r2.addState(FloatingActionButtonImpl.HOVERED_ENABLED_STATE_SET, createElevationAnimator(r8, r9));
+        AnimatorSet r11 = new AnimatorSet();
+        ArrayList r12 = new ArrayList();
+        r12.add(ObjectAnimator.ofFloat(this.view, "elevation", new float[]{r8}).setDuration(0));
+        r12.add(ObjectAnimator.ofFloat(this.view, View.TRANSLATION_Z, new float[]{0.0f}).setDuration(100));
+        r11.playSequentially((Animator[]) r12.toArray(new Animator[0]));
+        r11.setInterpolator(FloatingActionButtonImpl.ELEVATION_ANIM_INTERPOLATOR);
+        r2.addState(FloatingActionButtonImpl.ENABLED_STATE_SET, r11);
+        r2.addState(FloatingActionButtonImpl.EMPTY_STATE_SET, createElevationAnimator(0.0f, 0.0f));
+        this.view.setStateListAnimator(r2);
+        if (shouldAddPadding() == false) goto L6;
+        updatePadding();
+        return;
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public boolean requirePreDrawListener() {
+        return false;
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public void setRippleColor(@Nullable ColorStateList r3) {
+        Drawable r0 = this.rippleDrawable;
+        if ((r0 instanceof RippleDrawable) == false) goto L5;
+        ((RippleDrawable) r0).setColor(RippleUtils.sanitizeRippleDrawableColor(r3));
+        return;
+    L5:
+        super.setRippleColor(r3);
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public boolean shouldAddPadding() {
+        if (this.shadowViewDelegate.isCompatPaddingEnabled() == false) goto L5;
+    L8:
+        return true;
+    L5:
+        if (shouldExpandBoundsForA11y() == false) goto L8;
+        return false;
+    }
+
+    @Override // com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
+    public void updateFromViewRotation() {
+    }
+}

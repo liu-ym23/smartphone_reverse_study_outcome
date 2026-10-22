@@ -1,0 +1,8 @@
+package com.larksuite.component.ignition.widget.blur;
+
+import android.graphics.drawable.Drawable;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+public interface a {
+    void a(Drawable r1);
+}

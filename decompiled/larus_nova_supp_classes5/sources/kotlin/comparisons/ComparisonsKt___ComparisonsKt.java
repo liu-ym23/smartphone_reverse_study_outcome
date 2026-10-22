@@ -1,0 +1,73 @@
+package kotlin.comparisons;
+
+import com.obric.assistant.interaction.api.service.IInteractionStateService;
+import java.util.Comparator;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes5.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\b\u0003\u001aG\u0010\u0000\u001a\u0002H\u0001\"\u0004\b\u0000\u0010\u00012\u0006\u0010\u0002\u001a\u0002H\u00012\u0006\u0010\u0003\u001a\u0002H\u00012\u0006\u0010\u0004\u001a\u0002H\u00012\u001a\u0010\u0005\u001a\u0016\u0012\u0006\b\u0000\u0012\u0002H\u00010\u0006j\n\u0012\u0006\b\u0000\u0012\u0002H\u0001`\u0007H\u0007¢\u0006\u0002\u0010\b\u001a?\u0010\u0000\u001a\u0002H\u0001\"\u0004\b\u0000\u0010\u00012\u0006\u0010\u0002\u001a\u0002H\u00012\u0006\u0010\u0003\u001a\u0002H\u00012\u001a\u0010\u0005\u001a\u0016\u0012\u0006\b\u0000\u0012\u0002H\u00010\u0006j\n\u0012\u0006\b\u0000\u0012\u0002H\u0001`\u0007H\u0007¢\u0006\u0002\u0010\t\u001aK\u0010\u0000\u001a\u0002H\u0001\"\u0004\b\u0000\u0010\u00012\u0006\u0010\u0002\u001a\u0002H\u00012\u0012\u0010\n\u001a\n\u0012\u0006\b\u0001\u0012\u0002H\u00010\u000b\"\u0002H\u00012\u001a\u0010\u0005\u001a\u0016\u0012\u0006\b\u0000\u0012\u0002H\u00010\u0006j\n\u0012\u0006\b\u0000\u0012\u0002H\u0001`\u0007H\u0007¢\u0006\u0002\u0010\f\u001aG\u0010\r\u001a\u0002H\u0001\"\u0004\b\u0000\u0010\u00012\u0006\u0010\u0002\u001a\u0002H\u00012\u0006\u0010\u0003\u001a\u0002H\u00012\u0006\u0010\u0004\u001a\u0002H\u00012\u001a\u0010\u0005\u001a\u0016\u0012\u0006\b\u0000\u0012\u0002H\u00010\u0006j\n\u0012\u0006\b\u0000\u0012\u0002H\u0001`\u0007H\u0007¢\u0006\u0002\u0010\b\u001a?\u0010\r\u001a\u0002H\u0001\"\u0004\b\u0000\u0010\u00012\u0006\u0010\u0002\u001a\u0002H\u00012\u0006\u0010\u0003\u001a\u0002H\u00012\u001a\u0010\u0005\u001a\u0016\u0012\u0006\b\u0000\u0012\u0002H\u00010\u0006j\n\u0012\u0006\b\u0000\u0012\u0002H\u0001`\u0007H\u0007¢\u0006\u0002\u0010\t\u001aK\u0010\r\u001a\u0002H\u0001\"\u0004\b\u0000\u0010\u00012\u0006\u0010\u0002\u001a\u0002H\u00012\u0012\u0010\n\u001a\n\u0012\u0006\b\u0001\u0012\u0002H\u00010\u000b\"\u0002H\u00012\u001a\u0010\u0005\u001a\u0016\u0012\u0006\b\u0000\u0012\u0002H\u00010\u0006j\n\u0012\u0006\b\u0000\u0012\u0002H\u0001`\u0007H\u0007¢\u0006\u0002\u0010\f¨\u0006\u000e"}, d2 = {"maxOf", "T", "a", "b", "c", "comparator", "Ljava/util/Comparator;", "Lkotlin/Comparator;", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;", IInteractionStateService.WAKE_UP_SOURCE_OTHER, "", "(Ljava/lang/Object;[Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;", "minOf", "kotlin-stdlib"}, k = 5, mv = {1, 9, 0}, xi = 49, xs = "kotlin/comparisons/ComparisonsKt")
+class ComparisonsKt___ComparisonsKt extends ComparisonsKt___ComparisonsJvmKt {
+    public ComparisonsKt___ComparisonsKt() {
+    }
+
+    public static final <T> T maxOf(T r4, T[] r5, Comparator<? super T> r6) {
+        Intrinsics.checkNotNullParameter(r5, IInteractionStateService.WAKE_UP_SOURCE_OTHER);
+        Intrinsics.checkNotNullParameter(r6, "comparator");
+        int r0 = r5.length;
+        int r1 = 0;
+    L3:
+        if (r1 >= r0) goto L8;
+        T r2 = r5[r1];
+        if (r6.compare(r4, r2) >= 0) goto L7;
+        r4 = r2;
+    L7:
+        r1 = r1 + 1;
+        goto L3
+    L8:
+        return r4;
+    }
+
+    public static final <T> T minOf(T r4, T[] r5, Comparator<? super T> r6) {
+        Intrinsics.checkNotNullParameter(r5, IInteractionStateService.WAKE_UP_SOURCE_OTHER);
+        Intrinsics.checkNotNullParameter(r6, "comparator");
+        int r0 = r5.length;
+        int r1 = 0;
+    L3:
+        if (r1 >= r0) goto L8;
+        T r2 = r5[r1];
+        if (r6.compare(r4, r2) <= 0) goto L7;
+        r4 = r2;
+    L7:
+        r1 = r1 + 1;
+        goto L3
+    L8:
+        return r4;
+    }
+
+    public static final <T> T maxOf(T r1, T r2, Comparator<? super T> r3) {
+        Intrinsics.checkNotNullParameter(r3, "comparator");
+        if (r3.compare(r1, r2) < 0) goto L6;
+        return r1;
+    L6:
+        return r2;
+    }
+
+    public static <T> T minOf(T r1, T r2, Comparator<? super T> r3) {
+        Intrinsics.checkNotNullParameter(r3, "comparator");
+        if (r3.compare(r1, r2) > 0) goto L6;
+        return r1;
+    L6:
+        return r2;
+    }
+
+    public static final <T> T maxOf(T r1, T r2, T r3, Comparator<? super T> r4) {
+        Intrinsics.checkNotNullParameter(r4, "comparator");
+        return (T) maxOf(r1, maxOf(r2, r3, r4), r4);
+    }
+
+    public static <T> T minOf(T r1, T r2, T r3, Comparator<? super T> r4) {
+        Intrinsics.checkNotNullParameter(r4, "comparator");
+        return (T) minOf(r1, minOf(r2, r3, r4), r4);
+    }
+}

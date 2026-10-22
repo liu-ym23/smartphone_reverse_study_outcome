@@ -1,0 +1,18 @@
+package w20;
+
+import com.bytedance.android.live.browser.jsbridge.base.OpenPaidRightsFullViewResultModel;
+import com.bytedance.ies.web.jsbridge2.PermissionGroup;
+import w20.pc;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+public abstract class q4<P extends pc, R extends OpenPaidRightsFullViewResultModel> extends com.bytedance.ies.web.jsbridge2.f<P, R> {
+    public final void onTerminate() {
+    }
+
+    public q4() {
+    }
+
+    public final PermissionGroup getPermissionGroup() {
+        return PermissionGroup.PRIVATE;
+    }
+}

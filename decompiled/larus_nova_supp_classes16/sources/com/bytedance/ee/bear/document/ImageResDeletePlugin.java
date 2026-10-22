@@ -1,0 +1,66 @@
+package com.bytedance.ee.bear.document;
+
+import com.bytedance.ee.bear.browser.plugin.PluginHost;
+import com.bytedance.ee.bear.document.security.DeleteImageData;
+import com.bytedance.ee.bear.jsbridge.BridgeHandlerV2$CC;
+import com.bytedance.ee.bear.jsbridge.auth.BridgeAuthType;
+import io.reactivex.Flowable;
+import java.util.Map;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes16.dex */
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000 \r2\u00020\u0001:\u0002\r\u000eB\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0012\u0010\u0004\u001a\u00020\u00052\b\u0010\u0006\u001a\u0004\u0018\u00010\u0007H\u0016J \u0010\b\u001a\u00020\u00052\u0016\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u000b\u0012\b\u0012\u0006\u0012\u0002\b\u00030\f0\nH\u0016¨\u0006\u000f"}, d2 = {"Lcom/bytedance/ee/bear/document/ImageResDeletePlugin;", "Lcom/bytedance/ee/bear/document/DocumentPluginV2;", "<init>", "()V", "onAttachToHost", "", "host", "Lcom/bytedance/ee/bear/browser/plugin/PluginHost;", "getBridgeHandlers", "handlersHolder", "", "", "Lcom/bytedance/ee/bear/jsbridge/BridgeHandlerV2;", "Companion", "DeleteImageHandler", "docs-document-impl_productionChinaRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class ImageResDeletePlugin extends DocumentPluginV2 {
+    public static final a Companion = null;
+    public static final String TAG = "ImageResDeletePlugin";
+
+    public static final class a {
+        public a() {
+        }
+    }
+
+    public final class b implements tb5.i<DeleteImageData> {
+        @Override // tb5.i, tb5.o
+        public final /* bridge */ /* synthetic */ BridgeAuthType authType() {
+            return BridgeHandlerV2$CC.$default$authType(this);
+        }
+
+        public b() {
+        }
+
+        @Override // tb5.i, tb5.o
+        public final void handle(Object r3, tb5.m r4) {
+            DeleteImageData r5 = (DeleteImageData) r3;
+            if (r5 == null) goto L8;
+            ((cj5.b) org.koin.java.a.c(cj5.b.class, null, null, 6)).getConfig();
+            if (jg5.e.a.a.d() == false) goto L8;
+            Flowable.just("").observeOn(fo5.d.c()).subscribe(new e5(r5), f5.a);
+            return;
+        L8:
+            tt5.a.d(ImageResDeletePlugin.TAG, "DeleteImageHandler exit");
+        }
+    }
+
+    static {
+        Companion = new a();
+    }
+
+    @Override // com.bytedance.ee.bear.document.DocumentPluginV2, com.bytedance.ee.bear.browser.plugin.BasePluginV2, com.bytedance.ee.bear.browser.plugin.BasePlugin, com.bytedance.ee.bear.browser.plugin.f
+    public /* bridge */ /* synthetic */ void onPause(PluginHost r1) {
+    }
+
+    public ImageResDeletePlugin() {
+    }
+
+    @Override // com.bytedance.ee.bear.document.DocumentPluginV2, yv4.a
+    public void getBridgeHandlers(Map<String, tb5.i<?>> r3) {
+        Intrinsics.checkNotNullParameter(r3, "handlersHolder");
+        r3.put("biz.util.deleteFileCache", new b());
+    }
+
+    @Override // com.bytedance.ee.bear.browser.plugin.BasePlugin, com.bytedance.ee.bear.browser.plugin.f
+    public void onAttachToHost(PluginHost r1) {
+        super.onAttachToHost(r1);
+    }
+}

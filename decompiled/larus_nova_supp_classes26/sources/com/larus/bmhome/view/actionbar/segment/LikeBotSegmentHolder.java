@@ -1,0 +1,11 @@
+package com.larus.bmhome.view.actionbar.segment;
+
+import com.larus.bmhome.view.actionbar.BaseActionBarHolder;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes26.dex */
+@Metadata(d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0004\b\u0006\u0010\u0007J\b\u0010\u000e\u001a\u00020\u000fH\u0002J\u0016\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u00132\u0006\u0010\u0014\u001a\u00020\u0015J\u0010\u0010\u0016\u001a\u00020\u00112\u0006\u0010\u0017\u001a\u00020\u0018H\u0002J\u0010\u0010\u0019\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0013H\u0002R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0004\u0010\nR\u000e\u0010\u000b\u001a\u00020\fX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0005X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u001a"}, d2 = {"Lcom/larus/bmhome/view/actionbar/segment/LikeBotSegmentHolder;", "Lcom/larus/bmhome/view/actionbar/BaseActionBarHolder;", "binding", "Lcom/larus/bmhome/databinding/LarusItemCustomActionbarPanelLikeHolderBinding;", "isImmerseStyle", "", "<init>", "(Lcom/larus/bmhome/databinding/LarusItemCustomActionbarPanelLikeHolderBinding;Z)V", "getBinding", "()Lcom/larus/bmhome/databinding/LarusItemCustomActionbarPanelLikeHolderBinding;", "()Z", "currentImageSrc", "", "modelSyncFlow", "createAnimatorSet", "Landroid/view/animation/AnimationSet;", "bind", "", "vm", "Lcom/larus/bmhome/view/actionbar/segment/vm/LikeBotViewModel;", "vContext", "Lcom/larus/ui/arch/context/external/VContext;", "updateByState", "attachedState", "Lcom/larus/bmhome/view/actionbar/segment/vm/LikeBotState;", "updateWithVm", "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class LikeBotSegmentHolder extends BaseActionBarHolder {
+    public static final /* synthetic */ int b = 0;
+    public int a;
+}

@@ -1,0 +1,97 @@
+package com.bytedance.android.live.liveinteract.plantform.dynamicframe;
+
+import com.bytedance.android.live.liveinteract.plantform.dynamic.DynamicGetType;
+import com.bytedance.android.live.liveinteract.plantform.dynamic.DynamicUpdateType;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes46.dex */
+public final /* synthetic */ class k {
+    public static final /* synthetic */ int[] a = null;
+    public static final /* synthetic */ int[] b = null;
+
+    static {
+        int[] r0 = new int[DynamicUpdateType.values().length];
+        a = r0;
+        r0[DynamicUpdateType.LOAD.ordinal()] = 1;
+        r0[DynamicUpdateType.UNLOAD.ordinal()] = 2;
+        r0[DynamicUpdateType.LAYER_ELEMENT.ordinal()] = 3;
+        r0[DynamicUpdateType.ANIM.ordinal()] = 4;
+        r0[DynamicUpdateType.SET_DATA.ordinal()] = 5;
+        r0[DynamicUpdateType.COMMON_SET_DATA.ordinal()] = 6;
+        r0[DynamicUpdateType.EFFECT.ordinal()] = 7;
+        r0[DynamicUpdateType.PLAYMODE.ordinal()] = 8;
+        r0[DynamicUpdateType.LOG.ordinal()] = 9;
+        r0[DynamicUpdateType.CHECK_PERMISSION.ordinal()] = 10;
+        r0[DynamicUpdateType.UPDATE_TRACKER.ordinal()] = 11;
+        r0[DynamicUpdateType.SEAT_ANIMATE.ordinal()] = 12;
+        r0[DynamicUpdateType.REQUEST_ANIMATE_QUEUE.ordinal()] = 13;
+        r0[DynamicUpdateType.PUBLIC_SCREEN_AVOID_FRAME.ordinal()] = 14;
+        r0[DynamicUpdateType.SEAT.ordinal()] = 15;
+        r0[DynamicUpdateType.SNAPSHOT.ordinal()] = 16;
+        r0[DynamicUpdateType.ICON_MOVE.ordinal()] = 17;
+        r0[DynamicUpdateType.UPDATE_LAYOUT_CONFIG.ordinal()] = 18;
+        r0[DynamicUpdateType.UPDATE_SEATLIST_OFFSET.ordinal()] = 19;
+        r0[DynamicUpdateType.RELOAD_LAYOUT.ordinal()] = 20;
+        r0[DynamicUpdateType.SET_DYNAMIC_UI_FEATURES.ordinal()] = 21;
+        r0[DynamicUpdateType.SEAT_CLICK.ordinal()] = 22;
+        r0[DynamicUpdateType.ITEM_LOAD_DURATION.ordinal()] = 23;
+        r0[DynamicUpdateType.ROOM_BATTLE.ordinal()] = 24;
+        r0[DynamicUpdateType.TEAM_FIGHT.ordinal()] = 25;
+        r0[DynamicUpdateType.BARRAGE_GAME.ordinal()] = 26;
+        r0[DynamicUpdateType.AUDIOCHAT_STAGE.ordinal()] = 27;
+        r0[DynamicUpdateType.SUBTITLE.ordinal()] = 28;
+        r0[DynamicUpdateType.PERF_STRATEGY.ordinal()] = 29;
+        r0[DynamicUpdateType.AVATAR.ordinal()] = 30;
+        r0[DynamicUpdateType.GUEST_LINK.ordinal()] = 31;
+        r0[DynamicUpdateType.APPLY.ordinal()] = 32;
+        r0[DynamicUpdateType.APPLY_FAST_MATCH.ordinal()] = 33;
+        r0[DynamicUpdateType.APPLY_PAID_PRIORITY.ordinal()] = 34;
+        r0[DynamicUpdateType.FAST_MATCH_JUMP.ordinal()] = 35;
+        r0[DynamicUpdateType.UPDATE_WAITING_LIST_DATA.ordinal()] = 36;
+        r0[DynamicUpdateType.AUDIENCE_APPLY_PANEL_LIFE_CYCLE.ordinal()] = 37;
+        r0[DynamicUpdateType.LINK_SERVICE.ordinal()] = 38;
+        r0[DynamicUpdateType.GET_CLIENT_SETTINGS.ordinal()] = 39;
+        r0[DynamicUpdateType.SWITCH_LAYOUT.ordinal()] = 40;
+        r0[DynamicUpdateType.LINKMIC_SETTING_UPDATE.ordinal()] = 41;
+        r0[DynamicUpdateType.SETTING_PANEL_CLICK.ordinal()] = 42;
+        r0[DynamicUpdateType.EDIT_MIC_POSITION.ordinal()] = 43;
+        r0[DynamicUpdateType.FAST_MATCH.ordinal()] = 44;
+        r0[DynamicUpdateType.OPEN_BEAUTY_PANEL.ordinal()] = 45;
+        r0[DynamicUpdateType.UPDATE_ENLARGE_STATUS.ordinal()] = 46;
+        r0[DynamicUpdateType.OPEN_CONTRIBUTION_LIST_PANEL.ordinal()] = 47;
+        r0[DynamicUpdateType.INTERACT_PANEL_CLICK.ordinal()] = 48;
+        r0[DynamicUpdateType.OPEN_SETTING_DIALOG.ordinal()] = 49;
+        r0[DynamicUpdateType.MULTI_LINK_PANEL_LIFE_CYCLE.ordinal()] = 50;
+        r0[DynamicUpdateType.CHORUS.ordinal()] = 51;
+        r0[DynamicUpdateType.OPEN_EMOJI_PANEL.ordinal()] = 52;
+        r0[DynamicUpdateType.INTERACTIVE_ORDER_SONG.ordinal()] = 53;
+        r0[DynamicUpdateType.UPDATE_STAGE_LYRIC_FONT_STYLE.ordinal()] = 54;
+        r0[DynamicUpdateType.KARAOKE.ordinal()] = 55;
+        r0[DynamicUpdateType.MODIFY_RTC_NETWORK_STATUS_REPORT.ordinal()] = 56;
+        r0[DynamicUpdateType.CELLULAR_ENHANCEMENT.ordinal()] = 57;
+        r0[DynamicUpdateType.RTC_METHOD.ordinal()] = 58;
+        int[] r1 = new int[DynamicGetType.values().length];
+        b = r1;
+        r1[DynamicGetType.LINKMIC.ordinal()] = 1;
+        r1[DynamicGetType.SEAT.ordinal()] = 2;
+        r1[DynamicGetType.FRAME_INFO.ordinal()] = 3;
+        r1[DynamicGetType.PLAYMODE.ordinal()] = 4;
+        r1[DynamicGetType.GET_DATA.ordinal()] = 5;
+        r1[DynamicGetType.COMMON_GET_DATA.ordinal()] = 6;
+        r1[DynamicGetType.DRESS.ordinal()] = 7;
+        r1[DynamicGetType.ENTER_INFO.ordinal()] = 8;
+        r1[DynamicGetType.ROOM.ordinal()] = 9;
+        r1[DynamicGetType.LIVE_STREAM_DELAY_TIME.ordinal()] = 10;
+        r1[DynamicGetType.CHANNEL_INFO.ordinal()] = 11;
+        r1[DynamicGetType.TEAM_FIGHT.ordinal()] = 12;
+        r1[DynamicGetType.CREATE_CHECK.ordinal()] = 13;
+        r1[DynamicGetType.LINK_SERVICE.ordinal()] = 14;
+        r1[DynamicGetType.SETTING_PANEL_CONFIG.ordinal()] = 15;
+        r1[DynamicGetType.INTERACT_PANEL_CONFIG.ordinal()] = 16;
+        r1[DynamicGetType.KTV_ORDER_INFO.ordinal()] = 17;
+        r1[DynamicGetType.SUBTITLE.ordinal()] = 18;
+        r1[DynamicGetType.AVATAR.ordinal()] = 19;
+        r1[DynamicGetType.CHORUS.ordinal()] = 20;
+        r1[DynamicGetType.KARAOKE.ordinal()] = 21;
+        r1[DynamicGetType.INTERACTIVE_ORDER_SONG.ordinal()] = 22;
+    }
+}

@@ -1,0 +1,6 @@
+package com.byted.cast.sink.api;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+public interface IOnLogMonitor {
+    void onLogMonitor(String r1, String[][] r10);
+}

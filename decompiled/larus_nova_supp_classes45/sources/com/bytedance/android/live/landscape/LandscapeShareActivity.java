@@ -1,0 +1,237 @@
+package com.bytedance.android.live.landscape;
+
+import android.R;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.os.SystemClock;
+import android.view.View;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.MutableLiveData;
+import com.bytedance.android.live.ShareBaseActivity;
+import com.bytedance.android.live.core.log.ALogger;
+import com.bytedance.android.live.core.utils.statusbar.RomUtils;
+import com.bytedance.android.livehostapi.business.depend.share.MatchShareViewModel;
+import com.bytedance.android.livehostapi.business.depend.share.ShareScreenOrientation;
+import com.bytedance.android.livesdk.vs.model.MatchShareParam;
+import com.bytedance.sysoptimizer.EnterTransitionCrashOptimizer;
+import com.larus.home.impl.utils.c;
+import com.larus.platform.service.z2;
+import com.larus.utils.logger.FLogger;
+import com.obric.assistant.interaction.impl.window.ChatWindowActivity;
+import com.obric.assistant.interaction.impl.window.behaviors.ActivityStartBehavior;
+import com.obric.assistant.interaction.impl.window.helpers.ActivityLancet;
+import com.obric.assistant.interaction.impl.window.helpers.PopupOrDialogVisibilityTracker;
+import com.obric.assistant.interaction.impl.window.helpers.WindowUtils;
+import com.ss.android.ugc.aweme.compat.nullable.Observer;
+import com.ss.android.ugc.bytex.pthread.base.convergence.hook.ThreadMethodProxy;
+import dc9.d;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
+import kotlin.jvm.internal.Intrinsics;
+import v19.f;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+public class LandscapeShareActivity extends ShareBaseActivity {
+
+    public class a implements Observer {
+        public final /* synthetic */ LandscapeShareActivity a;
+
+        public a(LandscapeShareActivity r1) {
+            this.a = r1;
+        }
+
+        public final void onChanged(Object r2) {
+            if ((r2 instanceof Boolean) == true) goto L5;
+            return;
+        L5:
+            if (((Boolean) r2).booleanValue() == false) goto L9;
+            this.a.finish();
+            return;
+        }
+    }
+
+    public class b implements Observer {
+        public final /* synthetic */ LandscapeShareActivity a;
+
+        public b(LandscapeShareActivity r1) {
+            this.a = r1;
+        }
+
+        public final void onChanged(Object r3) {
+            LandscapeShareActivity r4 = this.a;
+            r4.c = new AtomicBoolean(true);
+        }
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.bytedance.android.live.ShareBaseActivity
+    public final void finish() {
+        super.finish();
+        overridePendingTransition(0, 2130772779);
+        if ((this instanceof ChatWindowActivity) == true) goto L56;
+        FLogger r2 = FLogger.a;
+        r2.i("ActivityLancet", "finish ".concat(getClass().getName()));
+        long r3 = SystemClock.uptimeMillis();
+        Map r5 = ActivityLancet.LAST_FINISH_HANDLED_MS;
+        monitor-enter(r5);
+        Long r6 = (Long) r5.get(this);     // Catch: Throwable -> L45
+        if (r6 != null) goto L10;
+    L13:
+        r5.put(this, Long.valueOf(r3));     // Catch: Throwable -> L45
+        monitor-exit(r5);     // Catch: Throwable -> L45
+    L42:
+        th = move-exception;
+        FLogger.a.e("ActivityLancet", "handle onBackPressed strategy failed", th);
+    L53:
+        return;
+    L16:
+        if (getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED) == true) goto L19;
+        r2.i("ActivityLancet", "quit !resume, current state = " + getLifecycle().getCurrentState());     // Catch: Throwable -> L42
+    L48:
+        goto L53
+    L19:
+        if (isFinishing() == true) goto L22;
+        r2.i("ActivityLancet", "quit !isFinishing");     // Catch: Throwable -> L42
+        goto L48
+    L22:
+        if (ActivityStartBehavior.isInternalActivityConsumed(this) == true) goto L25;
+        r2.i("ActivityLancet", "quit !isInternalActivityConsumed");     // Catch: Throwable -> L42
+        goto L48
+    L25:
+        if (ActivityLancet.isOnlyActivityInTask(this) == true) goto L28;
+        r2.i("ActivityLancet", "quit !isOnlyActivityInTask");     // Catch: Throwable -> L42
+        goto L48
+    L28:
+        if (ActivityLancet.isExcludedActivity(this) == false) goto L31;
+        r2.i("ActivityLancet", "quit isExcludedActivity");     // Catch: Throwable -> L42
+        goto L48
+    L31:
+        if (WindowUtils.INSTANCE.backToWindow() == false) goto L33;
+        ActivityLancet.postPopWindowAfterInternalActivityFinish();     // Catch: Throwable -> L42
+        goto L48
+    L33:
+        Intent r1 = getPackageManager().getLaunchIntentForPackage(getPackageName());     // Catch: Throwable -> L42
+        if (r1 == null) goto L48;
+        r1.addFlags(268435456);     // Catch: Throwable -> L42
+        r1.addFlags(2097152);     // Catch: Throwable -> L42
+        r2.i("ActivityLancet", "start launcher intent after backPressed, activity=" + this);     // Catch: Throwable -> L42
+        startActivity(r1);     // Catch: Throwable -> L39
+        overridePendingTransition(R.anim.fade_in, R.anim.slide_out_right);     // Catch: Throwable -> L39
+    L39:
+        th = move-exception;
+        FLogger.a.e("ActivityLancet", "startActivity launcher intent failed", th);     // Catch: Throwable -> L42
+        goto L48
+    L10:
+        if ((r3 - r6.longValue()) >= 800) goto L13;
+        monitor-exit(r5);     // Catch: Throwable -> L45
+    L45:
+        th = move-exception;
+        throw th;
+    }
+
+    @Override // com.bytedance.android.live.ShareBaseActivity
+    public final void onDestroy() {
+        if (WindowUtils.INSTANCE.isMainBotActivity(this) == false) goto L5;
+        PopupOrDialogVisibilityTracker.clearTrackedOverlays(this);
+        FLogger.a.i("ActivityLancet", "clear tracked overlays onDestroy activity = ".concat(getClass().getName()));
+    L5:
+        super.onDestroy();
+    }
+
+    public final void onResume() {
+        super/*androidx.fragment.app.FragmentActivity*/.onResume();
+        int r0 = LandscapeShareFragment.m;
+        MatchShareParam r1 = this.d;
+        LandscapeShareFragment r2 = new LandscapeShareFragment();
+        r2.d = r1;
+        this.a = r2;
+        y1(Boolean.TRUE, r2);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.bytedance.android.live.ShareBaseActivity
+    public final void onStop() {
+        super.onStop();
+        if (EnterTransitionCrashOptimizer.getContext() == null) goto L14;
+        View r0 = getWindow().getDecorView();     // Catch: Throwable -> L11
+        if (c.e == false) goto L9;
+        FLogger.a.i("DecorViewLancet", "getDecorView");     // Catch: Throwable -> L11
+        Thread r1 = ThreadMethodProxy.currentThread();     // Catch: Throwable -> L11
+        if (r1 == c.a) goto L9;
+        c.a(r1, "getDecorView");     // Catch: Throwable -> L11
+    L9:
+        r0.getViewTreeObserver().dispatchOnPreDraw();     // Catch: Throwable -> L11
+        return;
+    L15:
+        return;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.bytedance.android.live.ShareBaseActivity
+    public final MatchShareViewModel z1() {
+        MatchShareViewModel r0 = MatchShareViewModel.get(this);
+        MutableLiveData r1 = new MutableLiveData();
+        r1.setValue(Integer.valueOf(ShareScreenOrientation.Landscape.getStatus()));
+        r0.setScreenOrientationChange(r1);
+        r0.getCloseSharePageData().observe(this, new a(this));
+        r0.getSetScreenOrientationVertical().observe(this, new b(this));
+        return r0;
+    }
+
+    public LandscapeShareActivity() {
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.bytedance.android.live.ShareBaseActivity
+    public final void onConfigurationChanged(Configuration r5) {
+        super.onConfigurationChanged(r5);
+        Intrinsics.checkNotNull(this, "null cannot be cast to non-null type android.app.Activity");     // Catch: Throwable -> L17
+        if (d.a() == true) goto L19;
+        int r2 = getRequestedOrientation();     // Catch: Throwable -> L17
+        if (r5 == null) goto L8;
+        Integer r6 = Integer.valueOf(r5.orientation);     // Catch: Throwable -> L17
+    L9:
+        if (r6 != null) goto L12;
+    L14:
+        if (r2 != 3) goto L19;
+        setRequestedOrientation(1);     // Catch: Throwable -> L17
+        FLogger.a.i("PadLancet", "onConfigurationChanged, phone reset page:" + getClass().getSimpleName() + " portrait");     // Catch: Throwable -> L17
+        goto L19
+    L12:
+        if (r6.intValue() == r2) goto L19;
+    L8:
+        r6 = null;
+    L19:
+        int r7 = LandscapeShareFragment.m;
+        MatchShareParam r8 = this.d;
+        LandscapeShareFragment r0 = new LandscapeShareFragment();
+        r0.d = r8;
+        this.a = r0;
+        y1(Boolean.TRUE, r0);
+        return;
+    L17:
+        th = move-exception;
+        FLogger.a.e("PadLancet", "hook onConfigurationChanged error:" + th, th);
+        goto L19
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.bytedance.android.live.ShareBaseActivity
+    public final void onCreate(Bundle r3) {
+        if (z2.a.enableGlobalActivityTheme() == false) goto L6;
+        f.a(getTheme());     // Catch: Throwable -> L14
+    L6:
+        if (f.f(this) == false) goto L8;
+        f.c(getTheme());     // Catch: Throwable -> L14
+    L8:
+        getWindow().addFlags(RomUtils.SZ);
+        super.onCreate(r3);
+        setContentView(2131567981);     // Catch: Exception -> L11
+        return;
+    L11:
+        e = move-exception;
+        ALogger.e("LiveShareActivity", e.getMessage());
+        finish();
+    }
+}

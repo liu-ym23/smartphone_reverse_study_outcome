@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.status.OPageStatus xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/status_loading_s"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:opagestatus_loadingResult="@string/obric_loading"
+    app:opagestatus_messageColor="@color/oui_basic_text_3"
+    app:opagestatus_showLoading="true"
+    app:opagestatus_titleColor="@color/oui_basic_text_3"
+    app:opagestatus_type="vertical_loading"/>

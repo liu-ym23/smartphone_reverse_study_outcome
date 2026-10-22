@@ -1,0 +1,27 @@
+package kotlin.comparisons;
+
+import java.util.Comparator;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes6.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\b\n\u0002\b\u0007\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002\"\u0004\b\u0001\u0010\u00032\u000e\u0010\u0004\u001a\n \u0005*\u0004\u0018\u0001H\u0002H\u00022\u000e\u0010\u0006\u001a\n \u0005*\u0004\u0018\u0001H\u0002H\u0002H\n¢\u0006\u0004\b\u0007\u0010\b"}, d2 = {"<anonymous>", "", "T", "K", "a", "kotlin.jvm.PlatformType", "b", "compare", "(Ljava/lang/Object;Ljava/lang/Object;)I"}, k = 3, mv = {1, 9, 0}, xi = 176)
+public final class ComparisonsKt__ComparisonsKt$compareByDescending$2<T> implements Comparator {
+    final /* synthetic */ Comparator<? super K> $comparator;
+    final /* synthetic */ Function1<T, K> $selector;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public ComparisonsKt__ComparisonsKt$compareByDescending$2(Comparator<? super K> r1, Function1<? super T, ? extends K> r2) {
+        this.$comparator = r1;
+        this.$selector = r2;
+    }
+
+    /* JADX WARN: Type inference incomplete: some casts might be missing */
+    @Override // java.util.Comparator
+    public final int compare(T r3, T r4) {
+        Comparator<? super K> r0 = this.$comparator;
+        Function1<T, K> r1 = this.$selector;
+        Object r5 = r1.invoke(r4);
+        return r0.compare((Object) r5, (Object) r1.invoke(r3));
+    }
+}

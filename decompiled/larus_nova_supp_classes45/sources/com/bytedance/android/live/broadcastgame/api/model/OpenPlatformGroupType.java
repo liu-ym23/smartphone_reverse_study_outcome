@@ -1,0 +1,39 @@
+package com.bytedance.android.live.broadcastgame.api.model;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import kotlin.Metadata;
+import kotlin.annotation.AnnotationRetention;
+import kotlin.annotation.AnnotationTarget;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes45.dex */
+@Target({ElementType.PARAMETER})
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0002\b\u0003\b\u0087\u0002\u0018\u0000 \u00022\u00020\u0001:\u0001\u0003B\u0000¨\u0006\u0004"}, d2 = {"Lcom/bytedance/android/live/broadcastgame/api/model/OpenPlatformGroupType;", "", "Companion", "a", "livebroadcastgame-api_saasRelease"}, k = 1, mv = {1, 4, 3})
+@kotlin.annotation.Target(allowedTargets = {AnnotationTarget.PROPERTY, AnnotationTarget.VALUE_PARAMETER})
+@Retention(RetentionPolicy.SOURCE)
+@kotlin.annotation.Retention(AnnotationRetention.SOURCE)
+public @interface OpenPlatformGroupType {
+    public static final a Companion = null;
+    public static final int GROUP_TYPE_UNKNOWN = 0;
+    public static final int INTERACT = 0;
+    public static final int RECENTLY = 0;
+    public static final int RECOMMEND = 0;
+    public static final int TOP = 0;
+
+    public static final class a {
+        public static final /* synthetic */ a a = null;
+
+        public a() {
+        }
+
+        static {
+            a = new a();
+        }
+    }
+
+    static {
+        Companion = a.a;
+    }
+}

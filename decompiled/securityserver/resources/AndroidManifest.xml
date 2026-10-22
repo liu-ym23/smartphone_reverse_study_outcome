@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="110"
+    android:versionName="1.1.0"
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="15"
+    package="com.bytedance.securityserver"
+    platformBuildVersionCode="35"
+    platformBuildVersionName="15">
+    <uses-sdk
+        android:minSdkVersion="34"
+        android:targetSdkVersion="35"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <permission
+        android:name="com.bytedance.securityserver.ACCESS_OAID"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.bytedance.securityserver.ACCESS_UDID"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.obric.account.NAVIGATE"/>
+    <uses-permission android:name="com.obric.matrix.permission.RECEIVE_SETTINGS_UPDATE"/>
+    <uses-permission android:name="com.obric.matrix.dataanalysis.permission.USE_DATA_SERVICE"/>
+    <queries>
+        <package android:name="com.obric.matrix"/>
+        <provider android:authorities="com.bytedance.securityserver.oaidprovider"/>
+        <provider android:authorities="com.bytedance.securityserver.udidprovider"/>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.bytedance.securityserver.ACCESS_UDID"/>
+    <uses-permission android:name="com.bytedance.securityserver.ACCESS_OAID"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.bytedance.securityserver.SecurityApplication"
+        android:persistent="true"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules">
+        <service
+            android:name="com.bytedance.securityserver.BDSecurityGuardService"
+            android:exported="false"/>
+        <service
+            android:name="com.bytedance.securityserver.trustcircle.LockEventService"
+            android:exported="false"/>
+        <provider
+            android:name="com.bytedance.securityserver.sdid.OAIDProvider"
+            android:permission="com.bytedance.securityserver.ACCESS_OAID"
+            android:exported="true"
+            android:authorities="com.bytedance.securityserver.oaidprovider"/>
+        <provider
+            android:name="com.bytedance.securityserver.sdid.UDIDProvider"
+            android:permission="com.bytedance.securityserver.ACCESS_UDID"
+            android:exported="true"
+            android:authorities="com.bytedance.securityserver.udidprovider"/>
+        <provider
+            android:name="com.bytedance.securityserver.robotspolicy.RobotsPolicyProvider"
+            android:exported="true"
+            android:authorities="com.obric.agentrobots.provider"/>
+        <provider
+            android:name="com.obric.matrix.platform.sdk.ones.ws.WsMsgProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.obric.matrix.platform.sdk.ones.provider.com.bytedance.securityserver"/>
+        <provider
+            android:name="com.bytedance.apm.battery.dao.MonitorContentProvider"
+            android:exported="false"
+            android:authorities="com.bytedance.securityserver.apm"/>
+        <service
+            android:name="com.bytedance.common.wschannel.server.WsChannelService"
+            android:exported="false"
+            android:process=":push"
+            android:stopWithTask="true"/>
+        <service
+            android:name="com.bytedance.common.wschannel.client.WsClientService"
+            android:exported="false"
+            android:stopWithTask="true"/>
+        <provider
+            android:name="com.bytedance.common.wschannel.WsChannelMultiProcessSharedProvider"
+            android:exported="false"
+            android:authorities="com.bytedance.securityserver.WsChannelMultiProcessSharedProvider"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name="com.obric.oui.window.permission.PrivacyStatementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/PrivacyWebActivityTheme"
+            android:name="com.obric.oui.window.permission.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

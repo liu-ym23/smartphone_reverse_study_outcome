@@ -1,0 +1,68 @@
+package com.google.gson.internal.bind;
+
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.ToNumberPolicy;
+import com.google.gson.ToNumberStrategy;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes.dex */
+public final class NumberTypeAdapter extends TypeAdapter<Number> {
+    private static final TypeAdapterFactory LAZILY_PARSED_NUMBER_FACTORY = null;
+    private final ToNumberStrategy toNumberStrategy;
+
+    static {
+        LAZILY_PARSED_NUMBER_FACTORY = newFactory(ToNumberPolicy.LAZILY_PARSED_NUMBER);
+    }
+
+    private NumberTypeAdapter(ToNumberStrategy r1) {
+        this.toNumberStrategy = r1;
+    }
+
+    public static TypeAdapterFactory getFactory(ToNumberStrategy r1) {
+        if (r1 != ToNumberPolicy.LAZILY_PARSED_NUMBER) goto L7;
+        return LAZILY_PARSED_NUMBER_FACTORY;
+    L7:
+        return newFactory(r1);
+    }
+
+    private static TypeAdapterFactory newFactory(ToNumberStrategy r1) {
+        final NumberTypeAdapter r0 = new NumberTypeAdapter(r1);
+        return new AnonymousClass1(r0);
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // com.google.gson.TypeAdapter
+    public Number read(JsonReader r5) throws IOException {
+        JsonToken r0 = r5.peek();
+        int r1 = 2.$SwitchMap$com$google$gson$stream$JsonToken[r0.ordinal()];
+        if (r1 != 1) goto L5;
+        r5.nextNull();
+        return null;
+    L5:
+        if (r1 == 2) goto L12;
+        if (r1 == 3) goto L12;
+        throw new JsonSyntaxException("Expecting number, got: " + r0 + "; at path " + r5.getPath());
+    L12:
+        return this.toNumberStrategy.readNumber(r5);
+    }
+
+    @Override // com.google.gson.TypeAdapter
+    public /* bridge */ /* synthetic */ Number read(JsonReader r1) throws IOException {
+        return read(r1);
+    }
+
+    @Override // com.google.gson.TypeAdapter
+    public /* bridge */ /* synthetic */ void write(JsonWriter r1, Number r2) throws IOException {
+        write2(r1, r2);
+    }
+
+    /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+    public void write2(JsonWriter r1, Number r2) throws IOException {
+        r1.value(r2);
+    }
+}

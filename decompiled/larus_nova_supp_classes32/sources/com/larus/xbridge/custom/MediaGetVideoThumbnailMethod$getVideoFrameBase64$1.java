@@ -1,0 +1,28 @@
+package com.larus.xbridge.custom;
+
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes32.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.larus.xbridge.custom.MediaGetVideoThumbnailMethod", f = "MediaGetVideoThumbnailMethod.kt", i = {0, 0}, l = {87}, m = "getVideoFrameBase64", n = {"compressedBitmap", "outputFile"}, s = {"L$0", "L$1"})
+final class MediaGetVideoThumbnailMethod$getVideoFrameBase64$1 extends ContinuationImpl {
+    Object L$0;
+    Object L$1;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ s1 this$0;
+
+    public MediaGetVideoThumbnailMethod$getVideoFrameBase64$1(s1 r1, Continuation<? super MediaGetVideoThumbnailMethod$getVideoFrameBase64$1> r2) {
+        this.this$0 = r1;
+        super(r2);
+    }
+
+    public final Object invokeSuspend(Object r2) {
+        this.result = r2;
+        this.label |= Integer.MIN_VALUE;
+        return s1.f(this.this$0, null, this);
+    }
+}

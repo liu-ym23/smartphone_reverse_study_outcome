@@ -1,0 +1,57 @@
+package com.larus.common_ui.view;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.widget.ScrollView;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes27.dex */
+@Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0011\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0004\b\u0004\u0010\u0005B\u0019\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0004\b\u0004\u0010\bB!\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\t\u001a\u00020\n¢\u0006\u0004\b\u0004\u0010\u000bJ\u0012\u0010\u000f\u001a\u00020\u00102\b\u0010\u0011\u001a\u0004\u0018\u00010\u0012H\u0016R\u000e\u0010\f\u001a\u00020\rX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\rX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u0013"}, d2 = {"Lcom/larus/common_ui/view/ChatSettingScrollView;", "Landroid/widget/ScrollView;", "context", "Landroid/content/Context;", "<init>", "(Landroid/content/Context;)V", "attrs", "Landroid/util/AttributeSet;", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "startX", "", "startY", "dispatchTouchEvent", "", "ev", "Landroid/view/MotionEvent;", "common-ui_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class ChatSettingScrollView extends ScrollView {
+    public float a;
+    public float b;
+
+    public ChatSettingScrollView(Context r2) {
+        Intrinsics.checkNotNullParameter(r2, "context");
+        super(r2);
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public final boolean dispatchTouchEvent(MotionEvent r8) {
+        if (r8 == null) goto L4;
+        Integer r0 = Integer.valueOf(r8.getActionMasked());
+    L5:
+        if (r0 != null) goto L8;
+    L10:
+        if (r0 != null) goto L13;
+    L18:
+        return super.dispatchTouchEvent(r8);
+    L13:
+        if (r0.intValue() != 2) goto L18;
+        if (Math.abs(r8.getY() - this.b) <= (((double) Math.abs(r8.getX() - this.a)) * 0.5d)) goto L18;
+        getParent().requestDisallowInterceptTouchEvent(true);
+        goto L18
+    L8:
+        if (r0.intValue() != 0) goto L10;
+        this.a = r8.getX();
+        this.b = r8.getY();
+        goto L18
+    L4:
+        r0 = null;
+        goto L5
+    }
+
+    public ChatSettingScrollView(Context r2, AttributeSet r3) {
+        Intrinsics.checkNotNullParameter(r2, "context");
+        Intrinsics.checkNotNullParameter(r3, "attrs");
+        super(r2, r3);
+    }
+
+    public ChatSettingScrollView(Context r2, AttributeSet r3, int r4) {
+        Intrinsics.checkNotNullParameter(r2, "context");
+        Intrinsics.checkNotNullParameter(r3, "attrs");
+        super(r2, r3, r4);
+    }
+}

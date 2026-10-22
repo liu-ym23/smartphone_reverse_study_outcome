@@ -1,0 +1,89 @@
+package com.obric.oui.titlebar.behavior;
+
+import android.view.View;
+import androidx.core.view.ViewCompat;
+
+/* JADX INFO: loaded from: classes4.dex */
+class ViewOffsetHelper {
+    private boolean horizontalOffsetEnabled;
+    private int layoutLeft;
+    private int layoutTop;
+    private int offsetLeft;
+    private int offsetTop;
+    private boolean verticalOffsetEnabled;
+    private final View view;
+
+    public ViewOffsetHelper(View r2) {
+        this.verticalOffsetEnabled = true;
+        this.horizontalOffsetEnabled = true;
+        this.view = r2;
+    }
+
+    void onViewLayout() {
+        this.layoutTop = this.view.getTop();
+        this.layoutLeft = this.view.getLeft();
+    }
+
+    void applyOffsets() {
+        View r0 = this.view;
+        ViewCompat.offsetTopAndBottom(r0, this.offsetTop - (r0.getTop() - this.layoutTop));
+        View r1 = this.view;
+        ViewCompat.offsetLeftAndRight(r1, this.offsetLeft - (r1.getLeft() - this.layoutLeft));
+    }
+
+    public boolean setTopAndBottomOffset(int r2) {
+        if (this.verticalOffsetEnabled == true) goto L5;
+        return false;
+    L5:
+        if (this.offsetTop == r2) goto L10;
+        this.offsetTop = r2;
+        applyOffsets();
+        return true;
+    L10:
+        return false;
+    }
+
+    public boolean setLeftAndRightOffset(int r2) {
+        if (this.horizontalOffsetEnabled == true) goto L5;
+        return false;
+    L5:
+        if (this.offsetLeft == r2) goto L10;
+        this.offsetLeft = r2;
+        applyOffsets();
+        return true;
+    L10:
+        return false;
+    }
+
+    public int getTopAndBottomOffset() {
+        return this.offsetTop;
+    }
+
+    public int getLeftAndRightOffset() {
+        return this.offsetLeft;
+    }
+
+    public int getLayoutTop() {
+        return this.layoutTop;
+    }
+
+    public int getLayoutLeft() {
+        return this.layoutLeft;
+    }
+
+    public void setVerticalOffsetEnabled(boolean r1) {
+        this.verticalOffsetEnabled = r1;
+    }
+
+    public boolean isVerticalOffsetEnabled() {
+        return this.verticalOffsetEnabled;
+    }
+
+    public void setHorizontalOffsetEnabled(boolean r1) {
+        this.horizontalOffsetEnabled = r1;
+    }
+
+    public boolean isHorizontalOffsetEnabled() {
+        return this.horizontalOffsetEnabled;
+    }
+}

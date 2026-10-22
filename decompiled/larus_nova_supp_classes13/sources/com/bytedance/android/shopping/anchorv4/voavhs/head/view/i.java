@@ -1,0 +1,20 @@
+package com.bytedance.android.shopping.anchorv4.voavhs.head.view;
+
+import android.view.View;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes13.dex */
+public final class i extends com.bytedance.android.ec.core.widget.d {
+    public final /* synthetic */ Function0 g;
+
+    public i(Function0 r2) {
+        this.g = r2;
+        super(null, null, 3);
+    }
+
+    public final void a(View r2) {
+        Intrinsics.checkNotNullParameter(r2, "v");
+        this.g.invoke();
+    }
+}

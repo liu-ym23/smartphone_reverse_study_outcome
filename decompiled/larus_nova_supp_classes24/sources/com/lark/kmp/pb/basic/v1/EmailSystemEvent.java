@@ -1,0 +1,181 @@
+package com.lark.kmp.pb.basic.v1;
+
+import com.lark.wire.FieldEncoding;
+import com.lark.wire.ProtoAdapter;
+import com.lark.wire.Syntax;
+import com.lark.wire.g0;
+import com.lark.wire.j0;
+import com.lark.wire.n0;
+import com.larksuite.component.universe_design.timepicker.impl.base.WheelView;
+import java.util.ArrayList;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Reflection;
+import kotlin.reflect.KClass;
+import okio.ByteString;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\t\u0018\u0000 \u00162\u000e\u0012\u0004\u0012\u00020\u0000\u0012\u0004\u0012\u00020\u00020\u0001:\u0002\u0015\u0016B\u001b\b\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0005¢\u0006\u0004\b\u0006\u0010\u0007J\b\u0010\u0013\u001a\u00020\u0002H\u0016J\b\u0010\u0014\u001a\u00020\tH\u0016R\u0013\u0010\b\u001a\u0004\u0018\u00010\t¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u0017\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000e0\r¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0017\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u000e0\r¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0010¨\u0006\u0017"}, d2 = {"Lcom/lark/kmp/pb/basic/v1/EmailSystemEvent;", "Lcom/lark/wire/Message;", "Lcom/lark/kmp/pb/basic/v1/EmailSystemEvent$Builder;", "builder", "unknownFields", "Lokio/ByteString;", "<init>", "(Lcom/lark/kmp/pb/basic/v1/EmailSystemEvent$Builder;Lokio/ByteString;)V", "operator_id", "", "getOperator_id", "()Ljava/lang/String;", "to", "", "Lcom/lark/kmp/pb/basic/v1/EmailMember;", "getTo", "()Ljava/util/List;", "cc", "getCc", "newBuilder", "toString", "Builder", "Companion", "rust-sdk-kotlin-pb_release"}, k = 1, mv = {2, 1, 0}, xi = WheelView.WHEEL_ITEM_HEIGHT)
+public final class EmailSystemEvent extends com.lark.wire.Message<EmailSystemEvent, a> {
+    public static final ProtoAdapter<EmailSystemEvent> ADAPTER = null;
+    public static final c Companion = null;
+    private static final long serialVersionUID = 0;
+    private final List<EmailMember> cc;
+    private final String operator_id;
+    private final List<EmailMember> to;
+
+    public static final class a extends com.lark.wire.Message.a<EmailSystemEvent, a> {
+        public String d;
+        public List<EmailMember> e;
+        public List<EmailMember> f;
+
+        @Override // com.lark.wire.Message.a
+        public final com.lark.wire.Message b() {
+            return new EmailSystemEvent(this, c(), null);
+        }
+
+        public a() {
+            this.e = CollectionsKt.emptyList();
+            this.f = CollectionsKt.emptyList();
+        }
+    }
+
+    public static final class b extends ProtoAdapter<EmailSystemEvent> {
+        @Override // com.lark.wire.ProtoAdapter
+        public final EmailSystemEvent c(g0 r9) {
+            Intrinsics.checkNotNullParameter(r9, "reader");
+            a r1 = new a();
+            ArrayList r2 = new ArrayList();
+            ArrayList r3 = new ArrayList();
+            long r4 = r9.c();
+        L3:
+            int r6 = r9.e();
+            if (r6 == (-1)) goto L15;
+            if (r6 != 1) goto L8;
+            ProtoAdapter.q.getClass();
+            Intrinsics.checkNotNullParameter(r9, "reader");
+            r1.d = r9.i();
+            goto L3
+        L8:
+            if (r6 != 2) goto L10;
+            r2.add(EmailMember.ADAPTER.c(r9));
+            goto L3
+        L10:
+            if (r6 != 3) goto L11;
+            r3.add(EmailMember.ADAPTER.c(r9));
+            goto L3
+        L11:
+            r9.j(r6);
+            goto L3
+        L15:
+            ByteString r10 = r9.d(r4);
+            Intrinsics.checkNotNullParameter(r2, "to");
+            com.lark.wire.internal.a.a(r2);
+            r1.e = r2;
+            Intrinsics.checkNotNullParameter(r3, "cc");
+            com.lark.wire.internal.a.a(r3);
+            r1.f = r3;
+            return new EmailSystemEvent(r1, r10, null);
+        }
+
+        @Override // com.lark.wire.ProtoAdapter
+        public final int k(EmailSystemEvent r6) {
+            EmailSystemEvent r7 = r6;
+            Intrinsics.checkNotNullParameter(r7, "value");
+            int r0 = r7.unknownFields().size() + ProtoAdapter.q.l(1, r7.getOperator_id());
+            ProtoAdapter<EmailMember> r1 = EmailMember.ADAPTER;
+            return (r0 + r1.a().l(2, r7.getTo())) + r1.a().l(3, r7.getCc());
+        }
+
+        @Override // com.lark.wire.ProtoAdapter
+        public final void f(j0 r5, EmailSystemEvent r6) {
+            EmailSystemEvent r7 = r6;
+            Intrinsics.checkNotNullParameter(r5, "writer");
+            Intrinsics.checkNotNullParameter(r7, "value");
+            ProtoAdapter.q.i(r5, 1, r7.getOperator_id());
+            ProtoAdapter<EmailMember> r0 = EmailMember.ADAPTER;
+            r0.a().i(r5, 2, r7.getTo());
+            r0.a().i(r5, 3, r7.getCc());
+            r5.a(r7.unknownFields());
+        }
+
+        @Override // com.lark.wire.ProtoAdapter
+        public final void g(n0 r5, EmailSystemEvent r6) {
+            EmailSystemEvent r7 = r6;
+            Intrinsics.checkNotNullParameter(r5, "writer");
+            Intrinsics.checkNotNullParameter(r7, "value");
+            r5.d(r7.unknownFields());
+            ProtoAdapter<EmailMember> r0 = EmailMember.ADAPTER;
+            r0.a().j(r5, 3, r7.getCc());
+            r0.a().j(r5, 2, r7.getTo());
+            ProtoAdapter.q.j(r5, 1, r7.getOperator_id());
+        }
+
+        public b(FieldEncoding r7, KClass<EmailSystemEvent> r8, Syntax r9) {
+            super(r7, r8, "type.googleapis.com/basic.v1.EmailSystemEvent", r9, null);
+        }
+    }
+
+    public static final class c {
+        public c() {
+        }
+    }
+
+    public /* synthetic */ EmailSystemEvent(a r1, ByteString r2, DefaultConstructorMarker r3) {
+        this(r1, r2);
+    }
+
+    static {
+        Companion = new c();
+        ADAPTER = new b(FieldEncoding.LENGTH_DELIMITED, Reflection.getOrCreateKotlinClass(EmailSystemEvent.class), Syntax.PROTO_2);
+    }
+
+    @Override // com.lark.wire.Message
+    public a newBuilder() {
+        a r0 = new a();
+        r0.d = this.operator_id;
+        r0.e = this.to;
+        r0.f = this.cc;
+        r0.a(unknownFields());
+        return r0;
+    }
+
+    @Override // com.lark.wire.Message
+    public String toString() {
+        return Reflection.getOrCreateKotlinClass(EmailSystemEvent.class).getSimpleName() + '@' + hashCode();
+    }
+
+    public final List<EmailMember> getCc() {
+        return this.cc;
+    }
+
+    public final String getOperator_id() {
+        return this.operator_id;
+    }
+
+    public final List<EmailMember> getTo() {
+        return this.to;
+    }
+
+    @Override // com.lark.wire.Message
+    public /* bridge */ /* synthetic */ com.lark.wire.Message.a newBuilder() {
+        return newBuilder();
+    }
+
+    public EmailSystemEvent(a r2, ByteString r3) {
+        super(ADAPTER, r3);
+        this.operator_id = r2.d;
+        this.to = com.lark.wire.internal.a.c("to", r2.e);
+        this.cc = com.lark.wire.internal.a.c("cc", r2.f);
+    }
+
+    public /* synthetic */ EmailSystemEvent(a r1, ByteString r2, int r3, DefaultConstructorMarker r4) {
+        if ((r3 & 2) == 0) goto L5;
+        r2 = ByteString.EMPTY;
+    L5:
+        this(r1, r2);
+    }
+}

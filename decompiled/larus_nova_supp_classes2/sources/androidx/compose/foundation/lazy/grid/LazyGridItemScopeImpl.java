@@ -1,0 +1,36 @@
+package androidx.compose.foundation.lazy.grid;
+
+import androidx.compose.animation.core.FiniteAnimationSpec;
+import androidx.compose.foundation.lazy.layout.LazyLayoutAnimateItemElement;
+import androidx.compose.ui.Modifier;
+import androidx.compose.ui.unit.IntOffset;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes2.dex */
+@Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\bÁ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J<\u0010\u0004\u001a\u00020\u0005*\u00020\u00052\u000e\u0010\u0006\u001a\n\u0012\u0004\u0012\u00020\b\u0018\u00010\u00072\u000e\u0010\t\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010\u00072\u000e\u0010\u000b\u001a\n\u0012\u0004\u0012\u00020\b\u0018\u00010\u0007H\u0016¨\u0006\f"}, d2 = {"Landroidx/compose/foundation/lazy/grid/LazyGridItemScopeImpl;", "Landroidx/compose/foundation/lazy/grid/LazyGridItemScope;", "<init>", "()V", "animateItem", "Landroidx/compose/ui/Modifier;", "fadeInSpec", "Landroidx/compose/animation/core/FiniteAnimationSpec;", "", "placementSpec", "Landroidx/compose/ui/unit/IntOffset;", "fadeOutSpec", "foundation_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public final class LazyGridItemScopeImpl implements LazyGridItemScope {
+    public static final int $stable = 0;
+    public static final LazyGridItemScopeImpl INSTANCE = null;
+
+    static {
+        INSTANCE = new LazyGridItemScopeImpl();
+    }
+
+    private LazyGridItemScopeImpl() {
+    }
+
+    @Override // androidx.compose.foundation.lazy.grid.LazyGridItemScope
+    public final /* synthetic */ Modifier animateItemPlacement(Modifier r1, FiniteAnimationSpec r2) {
+        return LazyGridItemScope.CC.$default$animateItemPlacement(this, r1, r2);
+    }
+
+    @Override // androidx.compose.foundation.lazy.grid.LazyGridItemScope
+    public Modifier animateItem(Modifier r2, FiniteAnimationSpec<Float> r3, FiniteAnimationSpec<IntOffset> r4, FiniteAnimationSpec<Float> r5) {
+        if (r3 != null) goto L7;
+        if (r4 != null) goto L7;
+        if (r5 != null) goto L7;
+        return r2;
+    L7:
+        return r2.then(new LazyLayoutAnimateItemElement(r3, r4, r5));
+    }
+}

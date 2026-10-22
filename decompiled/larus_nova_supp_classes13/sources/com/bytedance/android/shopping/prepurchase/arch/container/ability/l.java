@@ -1,0 +1,16 @@
+package com.bytedance.android.shopping.prepurchase.arch.container.ability;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes13.dex */
+public interface l extends a {
+    void C0();
+
+    void U();
+
+    boolean e0();
+
+    void e1(b r1);
+
+    void n0(b r1);
+
+    void s1(b r1);
+}

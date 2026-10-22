@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/oui_app_navigation_item_height">
+    <com.bytedanceos.common.network.widget.NetworkImageView
+        android:id="@+id/app_icon"
+        android:layout_width="@dimen/oui_app_navigation_icon_size"
+        android:layout_height="@dimen/oui_app_navigation_icon_size"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/oui_default_app_icon"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:layout_marginHorizontal="12dp"/>
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/oui_text_1"
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oui_app_navigation_txt_margin"
+        android:maxWidth="@dimen/oui_status_view_txt_max_width"
+        android:includeFontPadding="false"
+        android:layout_below="@+id/app_icon"
+        android:layout_centerHorizontal="true"
+        style="@style/Label_M"/>
+    <com.bytedanceos.common.ui.widget.oui.OUIAppStatusView
+        android:id="@+id/appStatusLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_below="@+id/app_name"
+        android:layout_centerHorizontal="true"/>
+</merge>

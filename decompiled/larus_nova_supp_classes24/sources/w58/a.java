@@ -1,0 +1,19 @@
+package w58;
+
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+public abstract class a {
+
+    /* JADX INFO: renamed from: w58.a$a, reason: collision with other inner class name */
+    public static final class C0135a {
+    }
+
+    static {
+    }
+
+    public a(String r2, String r3) {
+        Intrinsics.checkNotNullParameter(r2, "format");
+        Intrinsics.checkNotNullParameter(r3, "extraJsonConfig");
+    }
+}

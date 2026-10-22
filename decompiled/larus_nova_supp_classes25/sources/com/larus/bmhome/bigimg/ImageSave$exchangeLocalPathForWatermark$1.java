@@ -1,0 +1,29 @@
+package com.larus.bmhome.bigimg;
+
+import com.larus.bmhome.chat.cell.MessageCellStateTransformerType;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes25.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = MessageCellStateTransformerType.Z_LOTTERY_GUIDE_CELL)
+@DebugMetadata(c = "com.larus.bmhome.bigimg.ImageSave", f = "ImageSave.kt", i = {}, l = {1064}, m = "exchangeLocalPathForWatermark", n = {}, s = {})
+public final class ImageSave$exchangeLocalPathForWatermark$1 extends ContinuationImpl {
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ ImageSave this$0;
+
+    public ImageSave$exchangeLocalPathForWatermark$1(ImageSave r1, Continuation<? super ImageSave$exchangeLocalPathForWatermark$1> r2) {
+        this.this$0 = r1;
+        super(r2);
+    }
+
+    public final Object invokeSuspend(Object r2) {
+        this.result = r2;
+        this.label |= Integer.MIN_VALUE;
+        ImageSave r3 = this.this$0;
+        ImageSave r0 = ImageSave.a;
+        return r3.k(null, null, this);
+    }
+}

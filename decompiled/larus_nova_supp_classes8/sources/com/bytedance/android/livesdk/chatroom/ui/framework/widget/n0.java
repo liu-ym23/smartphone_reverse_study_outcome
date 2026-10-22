@@ -1,0 +1,23 @@
+package com.bytedance.android.livesdk.chatroom.ui.framework.widget;
+
+import android.content.DialogInterface;
+import com.bytedance.ies.sdk.widgets.DataCenter;
+import com.bytedance.ies.sdk.widgets.Widget;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes8.dex */
+public final class n0 implements DialogInterface.OnDismissListener {
+    public final /* synthetic */ PlatformGuideMessageServiceWidget a;
+
+    public n0(PlatformGuideMessageServiceWidget r1) {
+        this.a = r1;
+    }
+
+    @Override // android.content.DialogInterface.OnDismissListener
+    public final void onDismiss(DialogInterface r3) {
+        com.bytedance.android.livesdk.f.d().f();
+        DataCenter r4 = ((Widget) this.a).dataCenter;
+        if (r4 == null) goto L6;
+        r4.put("cmd_start_count_authorization", Boolean.TRUE);
+        return;
+    }
+}

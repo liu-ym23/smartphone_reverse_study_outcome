@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_topic"
+    android:fitsSystemWindows="true"
+    style="@style/appstore_bg_style">
+    <include layout="@layout/abc_toolbar"/>
+    <com.bytedanceos.common.ui.widget.ParentView
+        android:id="@+id/topic_parent_view"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+        <ViewStub
+            android:id="@+id/second_category_container_stub"
+            android:visibility="gone"
+            android:layout="@layout/base_multi_line_radio_group"
+            android:inflatedId="@+id/second_category_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="12dp"/>
+    </com.bytedanceos.common.ui.widget.ParentView>
+</RelativeLayout>

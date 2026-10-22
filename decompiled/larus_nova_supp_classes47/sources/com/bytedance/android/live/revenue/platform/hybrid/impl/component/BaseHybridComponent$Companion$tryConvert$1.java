@@ -1,0 +1,30 @@
+package com.bytedance.android.live.revenue.platform.hybrid.impl.component;
+
+import com.bytedance.android.annie.card.base.BaseHybridComponent;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0010\u0007\u001a\u00020\u0004\"\b\b\u0000\u0010\u0001*\u00020\u00002\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0005\u0010\u0006"}, d2 = {"Landroid/view/View;", "VIEW", "Lcom/bytedance/android/annie/card/base/BaseHybridComponent;", "p1", "Lcom/bytedance/android/live/revenue/platform/hybrid/impl/component/f;", "invoke", "(Lcom/bytedance/android/annie/card/base/BaseHybridComponent;)Lcom/bytedance/android/live/revenue/platform/hybrid/impl/component/f;", "<anonymous>"}, k = 3, mv = {1, 5, 1})
+final /* synthetic */ class BaseHybridComponent$Companion$tryConvert$1 extends FunctionReferenceImpl implements Function1<BaseHybridComponent, f> {
+    public static final BaseHybridComponent$Companion$tryConvert$1 INSTANCE = null;
+
+    static {
+        INSTANCE = new BaseHybridComponent$Companion$tryConvert$1();
+    }
+
+    public BaseHybridComponent$Companion$tryConvert$1() {
+        super(1, f.class, "<init>", "<init>(Lcom/bytedance/android/annie/card/base/BaseHybridComponent;)V", 0);
+    }
+
+    public final f invoke(BaseHybridComponent r2) {
+        Intrinsics.checkNotNullParameter(r2, "p1");
+        return new f(r2);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1) {
+        return invoke((BaseHybridComponent) r1);
+    }
+}

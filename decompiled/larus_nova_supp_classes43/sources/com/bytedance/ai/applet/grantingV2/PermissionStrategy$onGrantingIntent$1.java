@@ -1,0 +1,31 @@
+package com.bytedance.ai.applet.grantingV2;
+
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes43.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.bytedance.ai.applet.grantingV2.PermissionStrategy", f = "PermissionStrategy.kt", i = {0, 0, 0, 0, 0, 1, 1, 1, 1, 1}, l = {73, 77, 92}, m = "onGrantingIntent", n = {"context", "meta", "scopeName", "granted", "isHistory", "context", "meta", "scopeName", "granted", "isHistory"}, s = {"L$0", "L$1", "L$2", "Z$0", "Z$1", "L$0", "L$1", "L$2", "Z$0", "Z$1"})
+public final class PermissionStrategy$onGrantingIntent$1 extends ContinuationImpl {
+    Object L$0;
+    Object L$1;
+    Object L$2;
+    boolean Z$0;
+    boolean Z$1;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ PermissionStrategy this$0;
+
+    public PermissionStrategy$onGrantingIntent$1(PermissionStrategy r1, Continuation<? super PermissionStrategy$onGrantingIntent$1> r10) {
+        this.this$0 = r1;
+        super(r10);
+    }
+
+    public final Object invokeSuspend(Object r10) {
+        this.result = r10;
+        this.label |= Integer.MIN_VALUE;
+        return this.this$0.d(null, false, false, this);
+    }
+}

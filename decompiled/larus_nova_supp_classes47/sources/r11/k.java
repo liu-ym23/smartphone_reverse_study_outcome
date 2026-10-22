@@ -1,0 +1,27 @@
+package r11;
+
+import com.bytedance.android.live.revlink.impl.config.LiveGiftAsyncSortConfigSerializableObjectImpl;
+import com.bytedance.tools.kcp.modelx.runtime.FieldName;
+import com.google.gson.annotations.JsonAdapter;
+import java.util.List;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+@JsonAdapter(LiveGiftAsyncSortConfigSerializableObjectImpl.Adapter.class)
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001¨\u0006\u0002"}, d2 = {"Lr11/k;", "Lvh7/j;", "liverevlink-impl_saasRelease"}, k = 1, mv = {1, 5, 1})
+public interface k extends vh7.j<k> {
+
+    @JsonAdapter(LiveGiftAsyncSortConfigSerializableObjectImpl.Adapter.class)
+    @Metadata(k = 3, mv = {1, 5, 1})
+    public static final class a {
+    }
+
+    @FieldName(name = "pk_time_to_end")
+    List<Long> A();
+
+    @FieldName(name = "enable_pk")
+    boolean K6();
+
+    @FieldName(name = "enable_pk_reset")
+    boolean u3();
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bytedance="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appinfo_header_smart"
+    android:layout_width="match_parent"
+    android:layout_height="56dp">
+    <com.bytedanceos.common.network.widget.NetworkImageView
+        android:id="@+id/appIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/oui_default_app_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_toLeftOf="@+id/appStatusLay"
+        android:layout_toRightOf="@+id/appIcon"
+        android:layout_centerVertical="true">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/oui_text_1"
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Label_L"/>
+        <ImageView
+            android:id="@+id/appRate"
+            android:layout_width="60dp"
+            android:layout_height="12dp"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+    <com.bytedanceos.common.ui.widget.oui.OUIAppStatusView
+        android:id="@+id/appStatusLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:minHeight="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

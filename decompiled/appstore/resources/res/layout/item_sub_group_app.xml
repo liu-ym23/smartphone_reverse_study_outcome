@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/app_list_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/group_padding_ver"
+        android:layout_marginBottom="@dimen/group_padding_ver">
+        <include
+            android:layout_width="@dimen/group_app_icon_width"
+            android:layout_height="@dimen/group_app_icon_height"
+            android:layout_marginLeft="@dimen/item_padding_hor"
+            layout="@layout/app_group_banner"/>
+        <include layout="@layout/layout_app_content"/>
+        <com.bytedanceos.common.ui.widget.SubButton
+            android:id="@+id/btn_sub"
+            android:layout_width="@dimen/app_navigation_install_btn_width"
+            android:layout_marginLeft="@dimen/item_btn_margin_hor"
+            android:layout_marginRight="@dimen/item_btn_margin_hor"
+            style="@style/normal_app_btn_style"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/div_line"
+        android:background="@drawable/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

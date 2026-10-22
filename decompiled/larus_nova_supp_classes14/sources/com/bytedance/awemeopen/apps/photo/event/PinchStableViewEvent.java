@@ -1,0 +1,47 @@
+package com.bytedance.awemeopen.apps.photo.event;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import kotlin.Metadata;
+import kotlin.annotation.AnnotationRetention;
+import kotlin.annotation.AnnotationTarget;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes14.dex */
+public final class PinchStableViewEvent {
+
+    @Target({ElementType.PARAMETER})
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0002\b\u0003\b\u0087\u0002\u0018\u0000 \u00022\u00020\u0001:\u0001\u0003B\u0000¨\u0006\u0004"}, d2 = {"Lcom/bytedance/awemeopen/apps/photo/event/PinchStableViewEvent$State;", "", "Companion", "a", "ao_apps_photo_release"}, k = 1, mv = {1, 7, 1})
+    @kotlin.annotation.Target(allowedTargets = {AnnotationTarget.VALUE_PARAMETER})
+    @Retention(RetentionPolicy.SOURCE)
+    @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
+    public @interface State {
+        public static final a Companion = null;
+        public static final String ENTER_END = "enter_end";
+        public static final String ENTER_START = "enter_start";
+        public static final String EXIT_END = "exit_done";
+        public static final String EXIT_START = "exit_start";
+
+        public static final class a {
+            public static final /* synthetic */ a a = null;
+
+            static {
+                a = new a();
+            }
+
+            public a() {
+            }
+        }
+
+        static {
+            Companion = a.a;
+        }
+    }
+
+    public PinchStableViewEvent(String r2, String r3) {
+        Intrinsics.checkNotNullParameter(r2, "id");
+        Intrinsics.checkNotNullParameter(r3, "state");
+    }
+}

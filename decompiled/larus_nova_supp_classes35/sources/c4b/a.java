@@ -1,0 +1,5 @@
+package c4b;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes35.dex */
+public interface a extends com.ss.android.lark.chat.chatwindow.chat.v2.component.message.features.a {
+}

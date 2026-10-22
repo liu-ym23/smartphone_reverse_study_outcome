@@ -1,0 +1,30 @@
+package com.ss.android.lark.keyboard.plugin.tool.voice.advance;
+
+import android.text.SpannableStringBuilder;
+import com.ss.android.lark.guide.ui.common.popup.AnchorFit;
+import com.ss.android.lark.keyboard.plugin.tool.voice.audio2.utils.SpannableStringUtils;
+import kotlin.Lazy;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes36.dex */
+@Metadata(d1 = {"\u0000\u0014\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\u0010\u0000\u001a\u0004\u0018\u00010\u00012\b\u0010\u0002\u001a\u0004\u0018\u00010\u00032\u0006\u0010\u0004\u001a\u00020\u0005H\n¢\u0006\u0002\b\u0006"}, d2 = {"<anonymous>", "Landroid/text/SpannableStringBuilder;", "rawText", "", "partIndex", "", "invoke"}, k = 3, mv = {2, 1, 0}, xi = AnchorFit.END)
+final class AdvanceVoiceInputComponent$asrListener$1$onUpdateAsrResult$result$1 extends Lambda implements Function2<String, Integer, SpannableStringBuilder> {
+    final /* synthetic */ b this$0;
+
+    public AdvanceVoiceInputComponent$asrListener$1$onUpdateAsrResult$result$1(b r1) {
+        this.this$0 = r1;
+        super(2);
+    }
+
+    public /* bridge */ /* synthetic */ Object invoke(Object r1, Object r2) {
+        return invoke((String) r1, ((Number) r2).intValue());
+    }
+
+    public final SpannableStringBuilder invoke(String r1, int r2) {
+        Lazy r3 = SpannableStringUtils.a;
+        this.this$0.getClass();
+        throw null;
+    }
+}

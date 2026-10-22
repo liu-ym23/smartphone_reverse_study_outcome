@@ -1,0 +1,6 @@
+package kotlin.s0.w.d.l0.e.a.n0;
+
+/* JADX INFO: loaded from: classes2.dex */
+public interface v extends x {
+    kotlin.s0.w.d.l0.b.i b();
+}

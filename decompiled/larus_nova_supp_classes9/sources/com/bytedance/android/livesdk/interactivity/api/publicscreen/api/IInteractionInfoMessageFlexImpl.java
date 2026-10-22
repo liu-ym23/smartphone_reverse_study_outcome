@@ -1,0 +1,348 @@
+package com.bytedance.android.livesdk.interactivity.api.publicscreen.api;
+
+import com.bytedance.android.live.base.model.message.d3;
+import com.bytedance.android.live.base.model.message.g6;
+import com.bytedance.android.live.base.model.message.m0;
+import com.bytedance.android.tools.pbadapter.annotation.ProtoMessage;
+import com.bytedance.bdlocation.BuildConfig;
+import com.bytedance.tools.kcp.modelx.runtime.FlexModelBase;
+import com.bytedance.tools.kcp.modelx.runtime.internal.decode.FlexModelJsonAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes9.dex */
+@ProtoMessage("webcast.im.InteractionInfoMessage")
+@JsonAdapter(FlexModelJsonAdapter.class)
+@Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\t\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0014\n\u0002\u0010%\n\u0002\b\u0005\n\u0002\u0010\u0012\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010 \n\u0002\b\u000e\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u00022\u00020\u0003B\u0007¢\u0006\u0004\bf\u0010gJ\t\u0010\u0005\u001a\u00020\u0004H\u0096\u0001J\t\u0010\u0006\u001a\u00020\u0004H\u0096\u0001J\t\u0010\u0007\u001a\u00020\u0004H\u0096\u0001J\t\u0010\b\u001a\u00020\u0004H\u0096\u0001J\t\u0010\t\u001a\u00020\u0004H\u0096\u0001J\t\u0010\u000b\u001a\u00020\nH\u0096\u0001J\t\u0010\f\u001a\u00020\u0004H\u0096\u0001J\t\u0010\r\u001a\u00020\nH\u0096\u0001J\t\u0010\u000e\u001a\u00020\nH\u0096\u0001J\t\u0010\u000f\u001a\u00020\u0004H\u0096\u0001J\u0011\u0010\u0012\u001a\n \u0011*\u0004\u0018\u00010\u00100\u0010H\u0096\u0001J\t\u0010\u0013\u001a\u00020\nH\u0096\u0001J\t\u0010\u0014\u001a\u00020\u0004H\u0096\u0001J\t\u0010\u0015\u001a\u00020\u0004H\u0096\u0001J\t\u0010\u0016\u001a\u00020\u0004H\u0096\u0001J\u0011\u0010\u0017\u001a\n \u0011*\u0004\u0018\u00010\u00100\u0010H\u0096\u0001J\u0011\u0010\u0018\u001a\n \u0011*\u0004\u0018\u00010\u00100\u0010H\u0096\u0001J\t\u0010\u0019\u001a\u00020\u0004H\u0096\u0001J\t\u0010\u001b\u001a\u00020\u001aH\u0096\u0001J\t\u0010\u001c\u001a\u00020\u001aH\u0096\u0001J\t\u0010\u001d\u001a\u00020\u001aH\u0096\u0001J\t\u0010\u001e\u001a\u00020\u001aH\u0096\u0001J\t\u0010\u001f\u001a\u00020\u001aH\u0096\u0001J\u0013\u0010#\u001a\u00020\"2\b\u0010!\u001a\u0004\u0018\u00010 H\u0096\u0001J\u0011\u0010%\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0004H\u0096\u0001J\u0011\u0010&\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0004H\u0096\u0001J\u0011\u0010'\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0004H\u0096\u0001J\u0011\u0010(\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0004H\u0096\u0001J\u0011\u0010*\u001a\u00020\"2\u0006\u0010)\u001a\u00020\nH\u0096\u0001J\u0011\u0010+\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0004H\u0096\u0001J\u0011\u0010,\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u001aH\u0096\u0001J\u0011\u0010-\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u001aH\u0096\u0001J\u0011\u0010/\u001a\u00020\"2\u0006\u0010.\u001a\u00020\nH\u0096\u0001J\u0019\u00100\u001a\u00020\"2\u000e\u0010$\u001a\n \u0011*\u0004\u0018\u00010\u00100\u0010H\u0096\u0001J\u0011\u00101\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0004H\u0096\u0001J\u0011\u00103\u001a\u00020\"2\u0006\u00102\u001a\u00020\u0004H\u0096\u0001J\u0011\u00104\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u001aH\u0096\u0001J\u0019\u00105\u001a\u00020\"2\u000e\u0010$\u001a\n \u0011*\u0004\u0018\u00010\u00100\u0010H\u0096\u0001J\u0011\u00106\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0004H\u0096\u0001R*\u0010<\u001a\u0010\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u0010\u0018\u0001078\u0016@\u0016X\u0096\u000f¢\u0006\f\u001a\u0004\b8\u00109\"\u0004\b:\u0010;R\u001e\u0010B\u001a\u0004\u0018\u00010=8\u0016@\u0016X\u0096\u000f¢\u0006\f\u001a\u0004\b>\u0010?\"\u0004\b@\u0010AR/\u0010K\u001a\u0004\u0018\u00010C2\b\u0010D\u001a\u0004\u0018\u00010C8V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\bE\u0010F\u001a\u0004\bG\u0010H\"\u0004\bI\u0010JR/\u0010R\u001a\u0004\u0018\u00010L2\b\u0010D\u001a\u0004\u0018\u00010L8V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\bM\u0010F\u001a\u0004\bN\u0010O\"\u0004\bP\u0010QR/\u0010Y\u001a\u0004\u0018\u00010S2\b\u0010D\u001a\u0004\u0018\u00010S8V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\bT\u0010F\u001a\u0004\bU\u0010V\"\u0004\bW\u0010XR;\u0010`\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010Z2\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010Z8V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\b[\u0010F\u001a\u0004\b\\\u0010]\"\u0004\b^\u0010_R/\u0010!\u001a\u0004\u0018\u00010 2\b\u0010D\u001a\u0004\u0018\u00010 8V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\ba\u0010F\u001a\u0004\bb\u0010c\"\u0004\bd\u0010e¨\u0006h"}, d2 = {"Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/IInteractionInfoMessageFlexImpl;", "Lcom/bytedance/tools/kcp/modelx/runtime/FlexModelBase;", "Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/i;", "Lcom/bytedance/android/live/base/model/message/d3;", BuildConfig.FLAVOR, "getConsumeTime", "getDecodeEndTime", "getDecodeStartTime", "getDelayDispatchMs", "getEnqueueDispatchTime", BuildConfig.FLAVOR, "getGeneralMessageType", "getHttpSendTime", "getIntType", "getMessageFrom", "getMessageId", BuildConfig.FLAVOR, "kotlin.jvm.PlatformType", "getMessageMethod", "getPriority", "getReceiveTime", "getRoomId", "getTimestamp", "getWRDSKey", "getWRDSSubKey", "getWRDSVersion", BuildConfig.FLAVOR, "isFromFirstRequest", "isGlobalMessage", "isTimeCostCanUse", "isWRDSMessage", "needMonitor", "Lcom/bytedance/android/live/base/model/message/m0;", "common", BuildConfig.FLAVOR, "setCommonMessageData", "p0", "setConsumeTime", "setDecodeEndTime", "setDecodeStartTime", "setEnqueueDispatchTime", "generalMessageType", "setGeneralMessageType", "setHttpSendTime", "setIsFromFirstRequest", "setIsInsert", "messageFrom", "setMessageFrom", "setMessageMethod", "setReceiveTime", "timestamp", "setTimestamp", "setWRDSMessage", "setWRDSSubKey", "setWRDSVersion", BuildConfig.FLAVOR, "getMessageExtra", "()Ljava/util/Map;", "setMessageExtra", "(Ljava/util/Map;)V", "messageExtra", BuildConfig.FLAVOR, "getRawPayload", "()[B", "setRawPayload", "([B)V", "rawPayload", "Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/r;", "<set-?>", "likeIconInfo$delegate", "Ljava/lang/Object;", "getLikeIconInfo", "()Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/r;", "setLikeIconInfo", "(Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/r;)V", "likeIconInfo", "Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/c;", "chatEmojiGuideInfo$delegate", "getChatEmojiGuideInfo", "()Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/c;", "setChatEmojiGuideInfo", "(Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/c;)V", "chatEmojiGuideInfo", "Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/d;", "chatImageGuideInfo$delegate", "getChatImageGuideInfo", "()Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/d;", "setChatImageGuideInfo", "(Lcom/bytedance/android/livesdk/interactivity/api/publicscreen/api/d;)V", "chatImageGuideInfo", BuildConfig.FLAVOR, "updateInfoType$delegate", "getUpdateInfoType", "()Ljava/util/List;", "setUpdateInfoType", "(Ljava/util/List;)V", "updateInfoType", "common$delegate", "getCommon", "()Lcom/bytedance/android/live/base/model/message/m0;", "setCommon", "(Lcom/bytedance/android/live/base/model/message/m0;)V", "<init>", "()V", "interactivity-platform-api_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class IInteractionInfoMessageFlexImpl extends FlexModelBase<i> implements i, d3, vh7.h {
+    private final /* synthetic */ g6 $$delegate_0;
+
+    @SerializedName("chat_emoji_guide_info")
+    protected c _$$chatEmojiGuideInfo;
+
+    @SerializedName("chat_image_guide_info")
+    protected d _$$chatImageGuideInfo;
+
+    @SerializedName("common")
+    protected m0 _$$common;
+
+    @SerializedName("like_icon_info")
+    protected r _$$likeIconInfo;
+
+    @SerializedName("update_info_type")
+    protected List<Integer> _$$updateInfoType;
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getDelayDispatchMs() {
+        return this.$$delegate_0.getDelayDispatchMs();
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public int getIntType() {
+        this.$$delegate_0.getClass();
+        return -1;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getMessageId() {
+        return this.$$delegate_0.getMessageId();
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public int getPriority() {
+        this.$$delegate_0.getClass();
+        return 0;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getRoomId() {
+        return this.$$delegate_0.getRoomId();
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public String getWRDSKey() {
+        return this.$$delegate_0.getWRDSKey();
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public boolean isGlobalMessage() {
+        return this.$$delegate_0.isGlobalMessage();
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public boolean isTimeCostCanUse() {
+        return this.$$delegate_0.isTimeCostCanUse();
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public boolean needMonitor() {
+        return this.$$delegate_0.needMonitor();
+    }
+
+    public IInteractionInfoMessageFlexImpl() {
+        super(i.class);
+        this.$$delegate_0 = new g6();
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getConsumeTime() {
+        return this.$$delegate_0.m;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getDecodeEndTime() {
+        return this.$$delegate_0.k;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getDecodeStartTime() {
+        return this.$$delegate_0.j;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getEnqueueDispatchTime() {
+        return this.$$delegate_0.l;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public int getGeneralMessageType() {
+        return this.$$delegate_0.d;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getHttpSendTime() {
+        return this.$$delegate_0.h;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public Map<String, String> getMessageExtra() {
+        return this.$$delegate_0.r;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public int getMessageFrom() {
+        return this.$$delegate_0.b;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public String getMessageMethod() {
+        return this.$$delegate_0.c;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public byte[] getRawPayload() {
+        return this.$$delegate_0.q;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getReceiveTime() {
+        return this.$$delegate_0.i;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getTimestamp() {
+        return this.$$delegate_0.e;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public String getWRDSSubKey() {
+        return this.$$delegate_0.p;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public long getWRDSVersion() {
+        return this.$$delegate_0.o;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public boolean isFromFirstRequest() {
+        return this.$$delegate_0.g;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public boolean isWRDSMessage() {
+        return this.$$delegate_0.n;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final c getChatEmojiGuideInfo() {
+        return this._$$chatEmojiGuideInfo;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final d getChatImageGuideInfo() {
+        return this._$$chatImageGuideInfo;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final m0 getCommon() {
+        return this._$$common;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final r getLikeIconInfo() {
+        return this._$$likeIconInfo;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final List<Integer> getUpdateInfoType() {
+        return this._$$updateInfoType;
+    }
+
+    /* JADX WARN: Type inference failed for: r2v6, types: [com.bytedance.android.live.base.model.message.m0, java.lang.Object] */
+    public IInteractionInfoMessageFlexImpl(am3.g r6) {
+        super(i.class);
+        this.$$delegate_0 = new g6();
+        this._$$updateInfoType = new ArrayList();
+        setThreadSafe(false);
+        long r0 = r6.c();
+    L3:
+        int r2 = r6.f();
+        if (r2 == (-1)) goto L21;
+        am3.g.a r3 = decodeExtensionFields(r2, r6);
+        if (r2 != 1) goto L8;
+        this._$$common = vh7.f.a(r6, m0.class);
+        goto L3
+    L8:
+        if (r2 != 2) goto L10;
+        this._$$likeIconInfo = new r(r6);
+        goto L3
+    L10:
+        if (r2 != 3) goto L12;
+        this._$$chatEmojiGuideInfo = new c(r6);
+        goto L3
+    L12:
+        if (r2 != 4) goto L14;
+        this._$$chatImageGuideInfo = new d(r6);
+        goto L3
+    L14:
+        if (r2 != 50) goto L15;
+        this._$$updateInfoType.add(Integer.valueOf(r6.i()));
+        goto L3
+    L15:
+        am3.h.d(r3, r6);
+        goto L3
+    L21:
+        r6.d(r0);
+        setThreadSafe(true);
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final void setChatEmojiGuideInfo(c r1) {
+        this._$$chatEmojiGuideInfo = r1;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final void setChatImageGuideInfo(d r1) {
+        this._$$chatImageGuideInfo = r1;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final void setCommon(m0 r1) {
+        this._$$common = r1;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setCommonMessageData(m0 r2) {
+        this.$$delegate_0.a = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setConsumeTime(long r2) {
+        this.$$delegate_0.m = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setDecodeEndTime(long r2) {
+        this.$$delegate_0.k = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setDecodeStartTime(long r2) {
+        this.$$delegate_0.j = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setEnqueueDispatchTime(long r2) {
+        this.$$delegate_0.l = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setGeneralMessageType(int r2) {
+        this.$$delegate_0.d = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setHttpSendTime(long r2) {
+        this.$$delegate_0.h = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setIsFromFirstRequest(boolean r2) {
+        this.$$delegate_0.g = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setIsInsert(boolean r2) {
+        this.$$delegate_0.f = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final void setLikeIconInfo(r r1) {
+        this._$$likeIconInfo = r1;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setMessageExtra(Map<String, String> r2) {
+        this.$$delegate_0.r = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setMessageFrom(int r2) {
+        this.$$delegate_0.b = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setMessageMethod(String r2) {
+        this.$$delegate_0.c = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setRawPayload(byte[] r2) {
+        this.$$delegate_0.q = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setReceiveTime(long r2) {
+        this.$$delegate_0.i = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setTimestamp(long r2) {
+        this.$$delegate_0.e = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public final void setUpdateInfoType(List<Integer> r1) {
+        this._$$updateInfoType = r1;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setWRDSMessage(boolean r2) {
+        this.$$delegate_0.n = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setWRDSSubKey(String r2) {
+        this.$$delegate_0.p = r2;
+    }
+
+    @Override // com.bytedance.android.livesdk.interactivity.api.publicscreen.api.i
+    public void setWRDSVersion(long r2) {
+        this.$$delegate_0.o = r2;
+    }
+}

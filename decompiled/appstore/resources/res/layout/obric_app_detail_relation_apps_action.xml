@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.text.OTextView
+        android:textColor="@color/oui_text_3"
+        android:id="@+id/action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/obric_all"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="2dp"
+        style="@style/BtnLabel_M1_Thin"/>
+    <ImageView
+        android:id="@+id/action_icon"
+        android:layout_width="8dp"
+        android:layout_height="16dp"
+        android:src="@drawable/icon_right_text3"
+        android:layout_marginEnd="8dp"/>
+</LinearLayout>

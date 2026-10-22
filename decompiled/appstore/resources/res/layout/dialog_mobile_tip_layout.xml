@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <CheckBox
+        android:textColor="@color/oui_basic_text_1"
+        android:gravity="center"
+        android:id="@+id/check_record"
+        android:background="@null"
+        android:padding="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@drawable/dialog_checkbox_bg_selector"
+        android:text="@string/alert_data_flow_tip"
+        style="@style/Body_1_Regular"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/positive_btn"
+        android:background="@color/oui_accent_6_bg"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:text="@string/alert_dataflow_continue"
+        android:layout_below="@+id/check_record"
+        app:oui_radius="@dimen/oui_r_l1"
+        style="@style/OButton.L1.Standard.Primary"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/negative_btn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:text="@string/alert_wifi_continue"
+        android:layout_below="@+id/positive_btn"
+        app:oui_radius="@dimen/oui_r_l1"
+        style="@style/OButton.L1.Standard.Neutral"/>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+    <TextView
+        android:textColor="@color/oui_text_3b"
+        android:id="@+id/nodata_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_alert"
+        android:layout_centerHorizontal="true"
+        style="@style/Title_Title_L_Alt"/>
+    <TextView
+        android:textColor="@color/oui_text_3b"
+        android:id="@+id/retry_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/retry_connection"
+        android:layout_below="@+id/nodata_alert"
+        android:layout_centerHorizontal="true"
+        style="@style/Title_Title_M_Thin"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/refresh_btn"
+        android:layout_marginTop="24dp"
+        android:text="@string/refresh"
+        android:layout_below="@+id/retry_connection"
+        android:layout_centerHorizontal="true"
+        style="@style/OButton.M2.Standard.Neutral"/>
+</RelativeLayout>

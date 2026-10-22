@@ -1,0 +1,51 @@
+package com.bytedance.android.shopping.inflow.common.viewmodel;
+
+import com.bytedance.jedi.arch.JediViewModel;
+import com.bytedance.jedi.arch.State;
+import fa3.b;
+import fa3.d;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes13.dex */
+@Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0016\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003B\u0007¢\u0006\u0004\b\u000b\u0010\fJ\b\u0010\u0004\u001a\u00020\u0002H\u0014J\u0011\u0010\u0007\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0005H\u0096\u0001J\t\u0010\t\u001a\u00020\bH\u0096\u0001J\u0011\u0010\n\u001a\u00020\b2\u0006\u0010\u0006\u001a\u00020\u0005H\u0096\u0001¨\u0006\r"}, d2 = {"Lcom/bytedance/android/shopping/inflow/common/viewmodel/UselessJediViewModel;", "Lcom/bytedance/jedi/arch/JediViewModel;", "Lcom/bytedance/android/shopping/inflow/common/viewmodel/UselessState;", "Lfa3/d;", "defaultState", "Lio/reactivex/disposables/Disposable;", "disposable", "add", "", "doClear", "remove", "<init>", "()V", "ec-shopping-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public class UselessJediViewModel extends JediViewModel<UselessState> implements d {
+    private final /* synthetic */ b $$delegate_0;
+
+    @Override // fa3.d
+    public Disposable add(Disposable r2) {
+        Intrinsics.checkNotNullParameter(r2, "disposable");
+        this.$$delegate_0.add(r2);
+        return r2;
+    }
+
+    public void doClear() {
+        this.$$delegate_0.a();
+    }
+
+    public UselessState defaultState() {
+        return new UselessState();
+    }
+
+    public UselessJediViewModel() {
+        this.$$delegate_0 = new b();
+    }
+
+    /* JADX INFO: renamed from: defaultState, reason: collision with other method in class */
+    public /* bridge */ /* synthetic */ State m928defaultState() {
+        return defaultState();
+    }
+
+    public void remove(Disposable r3) {
+        Intrinsics.checkNotNullParameter(r3, "disposable");
+        b r1 = this.$$delegate_0;
+        r1.getClass();
+        Intrinsics.checkNotNullParameter(r3, "disposable");
+        CompositeDisposable r0 = r1.a;
+        if (r0 == null) goto L6;
+        r0.remove(r3);
+        return;
+    }
+}

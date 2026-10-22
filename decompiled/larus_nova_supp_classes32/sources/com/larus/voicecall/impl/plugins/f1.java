@@ -1,0 +1,175 @@
+package com.larus.voicecall.impl.plugins;
+
+import com.larus.audio.call.RealtimeCallParam;
+import com.larus.audio.call.mgr.MajorState;
+import com.larus.audio.call.mgr.StateTriggerEvent;
+import com.larus.audio.call.tracer.IRealtimeCallTracer;
+import com.larus.im.service.audio.cmd.TriggerMode;
+import com.lynx.tasm.eventreport.LynxEventReporter;
+import java.util.Map;
+import kotlin.Unit;
+import kotlin.jvm.internal.Intrinsics;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes32.dex */
+public final class f1 extends com.larus.audio.call.arch.a<r> implements o {
+    public final String f;
+
+    public final String T2() {
+        return this.f;
+    }
+
+    public f1(r r2) {
+        Intrinsics.checkNotNullParameter(r2, "context");
+        super(r2);
+        this.f = "RealtimeCallSuggestPlugin";
+    }
+
+    @Override // com.larus.voicecall.impl.plugins.o
+    public final void H2(String r58, e3a.a r59) {
+        Intrinsics.checkNotNullParameter(r58, "suggest");
+        Intrinsics.checkNotNullParameter(r59, "argument");
+        id9.d r2 = ((r) getContext()).j();
+        if (r2 == null) goto L5;
+        TriggerMode r3 = TriggerMode.SUGGEST;
+        JSONObject r4 = new JSONObject();
+        r4.put("query_content", r58);
+        r4.put("call_enter_method", ((h88.a) r59).k);
+        r4.put("chat_type", ((h88.a) r59).t);
+        Unit r1 = Unit.INSTANCE;
+        r2.p(r3, r4.toString());
+    L5:
+        ((r) getContext()).a().a1(new MajorState.i(), "send_suggest");
+        ((r) getContext()).a().n2(StateTriggerEvent.RequestThinking.a);
+        IRealtimeCallTracer r5 = ((r) getContext()).k();
+        RealtimeCallParam r6 = ((r) getContext()).params();
+        r6.getClass();
+        RealtimeCallParam r7 = new RealtimeCallParam();
+        r7.e = r6.e;
+        r7.d = r6.d;
+        r7.i = r6.i;
+        RealtimeCallParam.h r8 = r6.k;
+        String r9 = r8.a;
+        String r15 = r8.b;
+        String r14 = r8.c;
+        String r13 = r8.d;
+        int r10 = r8.e;
+        String r12 = r8.f;
+        String r0 = r8.g;
+        String r11 = r8.h;
+        int r16 = r8.i;
+        int r17 = r8.j;
+        int r18 = r8.k;
+        RealtimeCallParam.f r19 = r8.l;
+        int r20 = r8.m;
+        int r21 = r8.n;
+        String r22 = r8.o;
+        boolean r110 = r8.p;
+        String r111 = r8.q;
+        String r112 = r8.r;
+        int r113 = r8.s;
+        String r114 = r8.t;
+        Integer r115 = r8.u;
+        boolean r116 = r8.v;
+        boolean r117 = r8.w;
+        String r118 = r8.x;
+        String r119 = r8.y;
+        String r120 = r8.z;
+        boolean r121 = r8.A;
+        boolean r23 = r8.B;
+        Intrinsics.checkNotNullParameter(r9, LynxEventReporter.PROP_NAME_URL);
+        Intrinsics.checkNotNullParameter(r15, "appKey");
+        Intrinsics.checkNotNullParameter(r14, "token");
+        Intrinsics.checkNotNullParameter(r13, "header");
+        Intrinsics.checkNotNullParameter(r12, "uid");
+        Intrinsics.checkNotNullParameter(r0, "did");
+        Intrinsics.checkNotNullParameter(r11, "appVersion");
+        Intrinsics.checkNotNullParameter(r19, "retransmitStrategy");
+        Intrinsics.checkNotNullParameter(r22, "requestType");
+        Intrinsics.checkNotNullParameter(r111, "subConvFirstMetType");
+        Intrinsics.checkNotNullParameter(r112, "subConvSourceMessage");
+        Intrinsics.checkNotNullParameter(r114, "sceneMode");
+        Intrinsics.checkNotNullParameter(r118, "namespace");
+        Intrinsics.checkNotNullParameter(r119, "origin");
+        Intrinsics.checkNotNullParameter(r120, "streamApp");
+        r7.k = new RealtimeCallParam.h(r9, r15, r14, r13, r10, r12, r0, r11, r16, r17, r18, r19, r20, r21, r22, r110, r111, r112, r113, r114, r115, r116, r117, r118, r119, r120, r121, r23);
+        RealtimeCallParam.d r24 = r6.l;
+        int r25 = RealtimeCallParam.d.v;
+        String r26 = r24.a;
+        String r27 = r24.b;
+        String r122 = r24.c;
+        String r123 = r24.d;
+        int r28 = r24.e;
+        int r124 = r24.f;
+        String r125 = r24.g;
+        int r126 = r24.h;
+        int r127 = r24.i;
+        int r128 = r24.j;
+        int r129 = r24.k;
+        int r29 = r24.l;
+        boolean r30 = r24.m;
+        boolean r31 = r24.n;
+        String r32 = r24.o;
+        String r33 = r24.p;
+        boolean r34 = r24.q;
+        String r35 = r24.r;
+        String r36 = r24.s;
+        boolean r130 = r24.t;
+        String r37 = r24.u;
+        Intrinsics.checkNotNullParameter(r26, "taskId");
+        Intrinsics.checkNotNullParameter(r27, "sessionId");
+        Intrinsics.checkNotNullParameter(r122, "conversationId");
+        Intrinsics.checkNotNullParameter(r123, "language");
+        Intrinsics.checkNotNullParameter(r125, "format");
+        Intrinsics.checkNotNullParameter(r32, "extra");
+        Intrinsics.checkNotNullParameter(r33, "model");
+        Intrinsics.checkNotNullParameter(r35, "isNewDoraOnboarding");
+        Intrinsics.checkNotNullParameter(r36, "isNewUser");
+        Intrinsics.checkNotNullParameter(r37, "asrTwoPassNonStreamModel");
+        r7.l = new RealtimeCallParam.d(r26, r27, r122, r123, r28, r124, r125, r126, r127, r128, r129, r29, r30, r31, r32, r33, r34, r35, r36, r130, r37);
+        RealtimeCallParam.p r38 = r6.o;
+        int r39 = RealtimeCallParam.p.x;
+        String r40 = r38.a;
+        String r41 = r38.b;
+        String r42 = r38.c;
+        String r43 = r38.d;
+        String r131 = r38.e;
+        String r132 = r38.f;
+        String r133 = r38.g;
+        String r134 = r38.h;
+        String r135 = r38.i;
+        int r136 = r38.j;
+        String r137 = r38.k;
+        boolean r44 = r38.l;
+        int r45 = r38.m;
+        String r46 = r38.n;
+        boolean r47 = r38.o;
+        boolean r48 = r38.p;
+        String r49 = r38.q;
+        boolean r50 = r38.r;
+        Map r51 = r38.s;
+        String r52 = r38.t;
+        float r53 = r38.u;
+        int r54 = r38.v;
+        Intrinsics.checkNotNullParameter(r40, "taskId");
+        Intrinsics.checkNotNullParameter(r41, "sessionId");
+        Intrinsics.checkNotNullParameter(r42, "conversationId");
+        Intrinsics.checkNotNullParameter(r43, "styleName");
+        Intrinsics.checkNotNullParameter(r131, "llModelName");
+        Intrinsics.checkNotNullParameter(r132, "voiceId");
+        Intrinsics.checkNotNullParameter(r133, "speakerName");
+        Intrinsics.checkNotNullParameter(r134, "botId");
+        Intrinsics.checkNotNullParameter(r135, "botName");
+        Intrinsics.checkNotNullParameter(r137, "format");
+        Intrinsics.checkNotNullParameter(r46, "extra");
+        Intrinsics.checkNotNullParameter(r49, "sessionExtra");
+        Intrinsics.checkNotNullParameter(r52, "audioMetrics");
+        r7.o = new RealtimeCallParam.p(r40, r41, r42, r43, r131, r132, r133, r134, r135, r136, r137, r44, r45, r46, r47, r48, r49, r50, r51, r52, r53, r54);
+        RealtimeCallParam.k r55 = r6.p;
+        r7.p = r55;
+        r7.a = r6.a;
+        r7.a0 = r6.a0;
+        r55.k = "click_call_suggested_prompt";
+        r5.n(r7, r58);
+    }
+}

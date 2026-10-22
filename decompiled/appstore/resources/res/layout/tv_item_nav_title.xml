@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_6"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_30">
+    <ImageView
+        android:id="@+id/iv_nav_dot"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:src="@drawable/shape_nav_dot_p"/>
+    <TextView
+        android:textSize="@dimen/tv_nav_title_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/tv_nav_selector"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_nav_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <TextView
+        android:textSize="@dimen/textSize10"
+        android:textStyle="bold"
+        android:textColor="#4d000000"
+        android:gravity="center"
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"/>
+    <ImageView
+        android:id="@+id/iv_dotted_line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_dotted_line"/>
+</LinearLayout>

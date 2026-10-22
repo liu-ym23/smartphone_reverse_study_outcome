@@ -1,0 +1,9 @@
+package com.larksuite.framework.apiplugin.model.location;
+
+import com.larksuite.framework.apiplugin.common.LKBaseRequestModel;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes24.dex */
+public class GetLocationStatusPluginModel$GetLocationStatusRequestModel extends LKBaseRequestModel {
+    public GetLocationStatusPluginModel$GetLocationStatusRequestModel() {
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedanceos.common.ui.widget.FlowLayout
+        android:textColor="@android:color/white"
+        android:id="@+id/flow_pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="15dp"
+        app:flChildSpacing="4dp"
+        app:flChildSpacingForLastRow="align"
+        app:flMaxRows="1"
+        app:flMinChildSpacing="4dp"
+        app:flRowSpacing="8dp"/>
+</LinearLayout>

@@ -1,0 +1,41 @@
+package jhb;
+
+import android.view.View;
+import com.bytedance.lark.pb.feed.v1.AppFeedCardType;
+import com.ss.android.lark.biz.im.api.FeedCard;
+import com.ss.android.lark.feed.export.feedcard.d;
+import com.ss.android.lark.feed.export.feedcard.e;
+import com.ss.android.lark.feed.export.feedcard.f;
+import com.ss.android.lark.feed.export.feedcard.h;
+import com.ss.android.lark.flow.feed.action.FlowFeedActionMode;
+import com.ss.android.lark.flow.feed.cell.doc.FlowDocAction;
+import com.ss.android.lark.flow.feed.cell.doc.c;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes36.dex */
+public final class b implements e {
+    public b() {
+    }
+
+    public final f a() {
+        return new c();
+    }
+
+    public final AppFeedCardType bizType() {
+        return AppFeedCardType.UNKNOWN_APP_FEED_CARD_TYPE;
+    }
+
+    public final FeedCard.Type type() {
+        return FeedCard.Type.DOC;
+    }
+
+    public final h b(View r2) {
+        Intrinsics.checkNotNullParameter(r2, "itemView");
+        return new a();
+    }
+
+    public final aeb.f c(d r3) {
+        Intrinsics.checkNotNullParameter(r3, "feedCardContext");
+        return new FlowDocAction(r3, FlowFeedActionMode.SIDEBAR);
+    }
+}

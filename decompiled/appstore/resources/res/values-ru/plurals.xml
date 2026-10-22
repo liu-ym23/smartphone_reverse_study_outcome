@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="delete_selected_all_title">
+        <item quantity="one">Удалить всю историю %1$d ?</item>
+        <item quantity="few">Удалить все истории %1$d ?</item>
+        <item quantity="many">Удалить все истории %1$d ?</item>
+        <item quantity="other">Удалить все истории %1$d ?</item>
+    </plurals>
+    <plurals name="delete_selected_record">
+        <item quantity="one">Запись %1$d успешно удалена</item>
+        <item quantity="few">Записи %1$d успешно удалены</item>
+        <item quantity="many">Записи %1$d успешно удалены</item>
+        <item quantity="other">Записи %1$d успешно удалены</item>
+    </plurals>
+    <plurals name="header_selected_item">
+        <item quantity="one">Выбрано %1$d</item>
+        <item quantity="few">Выбрано %1$d</item>
+        <item quantity="many">Выбрано %1$d</item>
+        <item quantity="other">Выбрано %1$d</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d новое уведомление</item>
+        <item quantity="few">%d новых уведомления</item>
+        <item quantity="many">%d новых уведомлений</item>
+        <item quantity="other">%d нового уведомления</item>
+    </plurals>
+    <plurals name="myapp_update_count">
+        <item quantity="one">%1$s обновление</item>
+        <item quantity="few">%1$s обновление</item>
+        <item quantity="many">Обновлений: %1$s</item>
+        <item quantity="other">Обновлений: %1$s</item>
+    </plurals>
+</resources>

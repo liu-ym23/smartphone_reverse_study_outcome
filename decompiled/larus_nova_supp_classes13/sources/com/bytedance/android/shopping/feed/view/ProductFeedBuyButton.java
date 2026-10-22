@@ -1,0 +1,48 @@
+package com.bytedance.android.shopping.feed.view;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.Button;
+import androidx.appcompat.widget.AppCompatButton;
+import kotlin.Deprecated;
+import kotlin.Metadata;
+import kotlin.NotImplementedError;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes13.dex */
+@Deprecated(message = "use ProductFlowCardBuyButton instead")
+@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u00012\u00020\u0002B'\b\u0007\u0012\u0006\u0010\f\u001a\u00020\u000b\u0012\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\r\u0012\b\b\u0002\u0010\u000f\u001a\u00020\t¢\u0006\u0004\b\u0010\u0010\u0011J\b\u0010\u0004\u001a\u00020\u0003H\u0016J\u0010\u0010\b\u001a\u00020\u00072\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\b\u0010\n\u001a\u00020\tH\u0016¨\u0006\u0012"}, d2 = {"Lcom/bytedance/android/shopping/feed/view/ProductFeedBuyButton;", "Landroidx/appcompat/widget/AppCompatButton;", "", "Landroid/widget/Button;", "getView", "", "float", "", "setRadius", "", "getBuyButtonActivityType", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attrs", "defStyleAttr", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "ec-biz-inner-flow-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class ProductFeedBuyButton extends AppCompatButton {
+    public ProductFeedBuyButton(Context r4) {
+        AttributeSet r2 = null;
+        this(r4, r2, 6, 0);
+    }
+
+    public ProductFeedBuyButton(Context r3, AttributeSet r4) {
+        this(r3, r4, 4, 0);
+    }
+
+    public int getBuyButtonActivityType() {
+        throw new NotImplementedError("An operation is not implemented: Not yet implemented");
+    }
+
+    public Button getView() {
+        throw new NotImplementedError("An operation is not implemented: Not yet implemented");
+    }
+
+    public void setRadius(float r2) {
+        throw new NotImplementedError("An operation is not implemented: Not yet implemented");
+    }
+
+    public ProductFeedBuyButton(Context r2, AttributeSet r3, int r4) {
+        Intrinsics.checkNotNullParameter(r2, "context");
+        super(r2, r3, r4);
+    }
+
+    public /* synthetic */ ProductFeedBuyButton(Context r1, AttributeSet r2, int r3, int r4) {
+        if ((r3 & 2) == 0) goto L5;
+        r2 = null;
+    L5:
+        this(r1, r2, 0);
+    }
+}

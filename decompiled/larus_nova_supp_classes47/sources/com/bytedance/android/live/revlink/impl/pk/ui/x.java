@@ -1,0 +1,6 @@
+package com.bytedance.android.live.revlink.impl.pk.ui;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes47.dex */
+public interface x {
+    void Fy(String r1);
+}

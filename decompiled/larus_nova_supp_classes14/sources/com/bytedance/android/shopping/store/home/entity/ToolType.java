@@ -1,0 +1,59 @@
+package com.bytedance.android.shopping.store.home.entity;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes14.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\b\n\u0002\b\u000e\b\u0086\u0001\u0018\u0000 \u00072\b\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\bR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006j\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\rj\u0002\b\u000ej\u0002\b\u000f¨\u0006\u0010"}, d2 = {"Lcom/bytedance/android/shopping/store/home/entity/ToolType;", "", "", "type", "I", "getType", "()I", "Companion", "a", "UNKNOWN", "CUSTOM_SERVICE", "SHARE", "CART", "ORDER", "COUPON_RED_PACK", "MEMBER", "ec-biz-store-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final enum ToolType extends Enum<ToolType> {
+    public static final ToolType CART = null;
+    public static final ToolType COUPON_RED_PACK = null;
+    public static final ToolType CUSTOM_SERVICE = null;
+    public static final a Companion = null;
+    public static final ToolType MEMBER = null;
+    public static final ToolType ORDER = null;
+    public static final ToolType SHARE = null;
+    public static final ToolType UNKNOWN = null;
+    public static final /* synthetic */ ToolType[] a = null;
+    private final int type;
+
+    public static final class a {
+        public a() {
+        }
+    }
+
+    static {
+        ToolType r1 = new ToolType("UNKNOWN", 0, 0);
+        UNKNOWN = r1;
+        ToolType r2 = new ToolType("CUSTOM_SERVICE", 1, 1);
+        CUSTOM_SERVICE = r2;
+        ToolType r3 = new ToolType("SHARE", 2, 2);
+        SHARE = r3;
+        ToolType r4 = new ToolType("CART", 3, 3);
+        CART = r4;
+        ToolType r5 = new ToolType("ORDER", 4, 4);
+        ORDER = r5;
+        ToolType r6 = new ToolType("COUPON_RED_PACK", 5, 5);
+        COUPON_RED_PACK = r6;
+        ToolType r7 = new ToolType("MEMBER", 6, 6);
+        MEMBER = r7;
+        a = new ToolType[]{r1, r2, r3, r4, r5, r6, r7};
+        Companion = new a();
+    }
+
+    public static ToolType valueOf(String r1) {
+        return (ToolType) r27.a.a(ToolType.class, r1);
+    }
+
+    public static ToolType[] values() {
+        return (ToolType[]) a.clone();
+    }
+
+    public final int getType() {
+        return this.type;
+    }
+
+    public ToolType(String r1, int r2, int r3) {
+        super(r1, r2);
+        this.type = r3;
+    }
+}

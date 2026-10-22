@@ -1,0 +1,19 @@
+package com.bytedance.applog.priority;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: /private/tmp/nixiang/classes6.dex */
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\bf\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/bytedance/applog/priority/PriorityEventMetaFactory;", "", "priority_release"}, k = 1, mv = {1, 6, 0})
+public interface PriorityEventMetaFactory {
+    String abSdkVersion();
+
+    long eventId();
+
+    long eventIndex();
+
+    int nt();
+
+    int sentryStainedValue(String r1);
+
+    j user();
+}
