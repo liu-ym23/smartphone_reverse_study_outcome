@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/ttlive_ic_room_channel_landscape"
+    android:layout_width="36dp"
+    android:layout_height="36dp">
+    <TextView
+        android:textSize="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/unread_tv"
+        android:background="@drawable/ttlive_toolbar_room_channel_landscape_unread_bg"
+        android:paddingLeft="3dp"
+        android:paddingTop="1dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

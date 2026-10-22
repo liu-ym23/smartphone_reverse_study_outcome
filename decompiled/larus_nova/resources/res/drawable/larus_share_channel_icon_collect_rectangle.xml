@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="56dp"
+    android:width="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+    <path
+        android:fillColor="@drawable/_larus_share_channel_icon_collect_rectangle__0_res_0x7f0800bd"
+        android:pathData="M14,0L42,0A14,14 0,0 1,56 14L56,42A14,14 0,0 1,42 56L14,56A14,14 0,0 1,0 42L0,14A14,14 0,0 1,14 0z"/>
+    <group>
+        <clip-path android:pathData="M12,12h32v32h-32z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M16.928,38.1V19.107C16.928,16.742 18.846,14.824 21.212,14.824H34.789C37.154,14.824 39.071,16.742 39.071,19.107V38.1C39.071,40.883 35.653,42.215 33.771,40.165L28.417,34.334C28.193,34.089 27.807,34.089 27.583,34.334L22.229,40.165C20.347,42.215 16.928,40.883 16.928,38.1Z"
+            android:fillType="evenOdd"/>
+    </group>
+</vector>

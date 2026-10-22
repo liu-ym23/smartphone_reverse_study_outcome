@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LarkAppTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textColor">@color/ud_N500</item>
+        <item name="android:colorPrimary">@color/ud_N900</item>
+        <item name="android:statusBarColor">@color/ud_N900</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">1</item>
+        <item name="editTextStyle">@style/App_EditTextStyle</item>
+    </style>
+    <style name="ab_microapp_i_mini_app_activity" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/ab_microapp_i_mini_app_activity_anim</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">1</item>
+    </style>
+    <style name="photo_pager_transparent_activity" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">1</item>
+    </style>
+</resources>

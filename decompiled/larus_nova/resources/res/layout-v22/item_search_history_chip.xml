@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/history_chip_container"
+    android:background="@drawable/bg_history_chip"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/larus_dp_36"
+    android:paddingStart="12dp"
+    android:paddingEnd="10dp">
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/larus_neutral_100"
+        android:ellipsize="end"
+        android:id="@+id/history_chip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
+    <View
+        android:textSize="14sp"
+        android:id="@+id/history_chip_delete"
+        android:background="@drawable/larus_ic_close"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_12"
+        android:layout_height="?attr/larus_dp_12"
+        android:layout_marginStart="?attr/larus_dp_4"
+        android:backgroundTint="@color/larus_neutral_50"
+        android:textFontWeight="400"/>
+</LinearLayout>

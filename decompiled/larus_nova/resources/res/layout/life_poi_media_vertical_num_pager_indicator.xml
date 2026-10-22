@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.locallife.poi.media.ui.indicator.PoiRecyclerPagerIndicator
+        android:layout_gravity="center_vertical"
+        android:id="@+id/poi_pager_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:poiIndicatorCenterAlign="true"
+        app:poiIndicatorColor="@color/white"
+        app:poiIndicatorCornerRadius="22dp"
+        app:poiIndicatorEdgeAlpha="0.25"
+        app:poiIndicatorEdgeAlphaCount="1"
+        app:poiIndicatorOrientation="VERTICAL"
+        app:poiIndicatorSelectedColor="@color/white"
+        app:poiIndicatorSelectedSize="16dp"
+        app:poiIndicatorSize="5dp"
+        app:poiIndicatorSpacing="6dp"
+        app:poiIndicatorVisibleCount="7"/>
+    <com.bytedance.locallife.poi.media.ui.indicator.VerticalScrollTextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/poi_pager_indicator_scroll_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginStart="9dp"
+        app:poiTextColor="@color/white"
+        app:poiTextSize="14sp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/poi_pager_indicator_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/poi_slash_symbol"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/poi_pager_indicator_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</merge>

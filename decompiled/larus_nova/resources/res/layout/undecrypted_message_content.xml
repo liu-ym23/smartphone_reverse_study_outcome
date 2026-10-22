@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.ss.android.lark.widget.linked_emojicon.widget.LinkEmojiTextView
+        android:textSize="17sp"
+        android:textColor="@color/text_caption"
+        android:id="@+id/undecrypt_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

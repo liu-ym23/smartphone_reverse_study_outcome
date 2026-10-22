@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:id="@+id/google_login_loading_bar"
+    android:background="@drawable/account_saas_bg_loading"
+    android:visibility="visible"
+    android:layout_width="@dimen/account_saas_dp_80"
+    android:layout_height="@dimen/account_saas_dp_80">
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/loading_page"
+        android:layout_width="@dimen/account_saas_dp_30"
+        android:layout_height="@dimen/account_saas_dp_30"
+        android:indeterminateTint="@color/account_saas_neutral_50"/>
+</FrameLayout>

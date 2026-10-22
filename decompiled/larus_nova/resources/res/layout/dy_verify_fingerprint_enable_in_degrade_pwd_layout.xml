@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/switch_fingerprint_enable_layout"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_60"
+        android:gravity="left"
+        android:id="@+id/switch_fingerprint_enable_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="@string/dy_verify_fingerprint_enable_tip"
+        android:layout_toLeftOf="@+id/switch_fingerprint_enable"
+        android:layout_centerVertical="true"/>
+    <com.android.ttcjpaysdk.base.ui.component.CJSwitchView
+        android:id="@+id/switch_fingerprint_enable"
+        android:layout_width="24dp"
+        android:layout_height="14dp"
+        android:layout_centerVertical="true"
+        app:cjSwitchThumbDiameter="12dp"
+        app:switchPadding="1dp"/>
+</RelativeLayout>

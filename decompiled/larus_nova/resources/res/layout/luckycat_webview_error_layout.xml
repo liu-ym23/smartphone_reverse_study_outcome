@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/retry_view"
+        android:background="#fff8f8f8"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="15sp"
+            android:textColor="#999999"
+            android:gravity="center"
+            android:id="@+id/no_network_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="@string/polaris_webview_net_error_tips"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/no_network_tips"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/polaris_ic_not_network_loading"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/loading_view"
+        android:background="#fff8f8f8"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progress_view"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:indeterminateDrawable="@drawable/luckycat_loading_anim"
+            android:indeterminateDuration="1000"
+            android:indeterminateBehavior="repeat"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</merge>

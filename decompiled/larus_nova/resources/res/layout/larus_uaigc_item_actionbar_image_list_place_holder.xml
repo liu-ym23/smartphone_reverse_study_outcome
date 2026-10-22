@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.roundlayout.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/skeleton"
+    android:layout_width="?attr/larus_dp_84"
+    android:layout_height="?attr/larus_dp_112"
+    app:rv_backgroundColor="?attr/larus_base_3_overlay"
+    app:rv_cornerRadius="?attr/larus_dp_8">
+    <View
+        android:id="@+id/light"
+        android:background="?attr/larus_bg_actionbar_placeholder_skeleton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.larus.common_ui.widget.roundlayout.RoundFrameLayout>

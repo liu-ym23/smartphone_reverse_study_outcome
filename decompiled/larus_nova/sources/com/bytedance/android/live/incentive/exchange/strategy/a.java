@@ -1,0 +1,5 @@
+package com.bytedance.android.live.incentive.exchange.strategy;
+
+/* JADX INFO: loaded from: classes45.dex */
+public final class a implements c {
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/exchange_confirm_select_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ttlive_recharge_balance_exchange_unselect"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/ttlive_balance_exchange_confirm_text"
+        android:id="@+id/exchange_confirm_select_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:text="@string/ttlive_balance_exchange_confirm_default_use_text"
+        android:layout_marginStart="6dp"/>
+</LinearLayout>

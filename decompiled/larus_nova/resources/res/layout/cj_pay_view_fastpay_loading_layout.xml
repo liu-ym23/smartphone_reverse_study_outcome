@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cj_pay_loading_layout"
+    android:background="@color/cj_pay_color_white"
+    android:paddingTop="@dimen/cj_pay_height_100"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/cj_pay_titlebar_root_view">
+    <ProgressBar
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/cj_pay_loading_view"
+        android:background="@color/cj_pay_color_trans"
+        android:layout_width="@dimen/cj_pay_height_60"
+        android:layout_height="@dimen/cj_pay_height_60"
+        android:indeterminateOnly="true"
+        android:indeterminateDrawable="@drawable/cj_pay_bg_loading_circle"
+        android:indeterminateDuration="500"
+        android:indeterminateBehavior="repeat"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_failed_icon"
+        android:visibility="gone"
+        android:layout_width="@dimen/cj_pay_height_60"
+        android:layout_height="@dimen/cj_pay_height_60"
+        android:src="@drawable/cj_pay_cry_face_icon"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_75"
+        android:gravity="center"
+        android:id="@+id/tv_msg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:includeFontPadding="false"
+        android:layout_below="@+id/iv_failed_icon"
+        android:lineSpacingExtra="2dp"/>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+package com.ttnet.org.chromium.net;
+
+import java.io.IOException;
+
+/* JADX INFO: loaded from: classes5.dex */
+public abstract class CronetException extends IOException {
+    public CronetException(String r100, Throwable r101) {
+        super(r100, r101);
+    }
+}

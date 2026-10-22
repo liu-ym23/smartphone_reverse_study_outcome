@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_gravity="left"
+        android:id="@+id/left_live_fans_club_container"
+        android:layout_width="38dp"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:layout_gravity="left"
+        android:id="@+id/left_ecom_fans_club_container"
+        android:layout_width="38dp"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:layout_gravity="right"
+        android:id="@+id/right_vip_container"
+        android:layout_width="38dp"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:layout_gravity="right"
+        android:id="@+id/right_common_vip_container"
+        android:layout_width="38dp"
+        android:layout_height="match_parent"/>
+</merge>

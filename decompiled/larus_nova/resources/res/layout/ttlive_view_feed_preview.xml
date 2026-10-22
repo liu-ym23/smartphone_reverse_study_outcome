@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdkapi.view.TextureRenderView
+        android:id="@+id/renderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.feed.ui.FeedLiveCoverInfoView
+        android:id="@+id/preview_cover"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</merge>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ec.core.widget.RoundedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/ec_color_white"
+    android:paddingBottom="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:rounded_radius="16dp">
+    <include
+        android:id="@+id/ec_shop_inner_flow_video_module_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ec_shop_layout_inner_flow_element_video"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ec_shop_inner_flow_recommend_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/ec_shop_inner_flow_recommend_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"/>
+        <com.bytedance.android.window.shop.innerflow.widget.ECExpandableTextView
+            android:textSize="15dp"
+            android:textColor="@color/shopping_color_161823"
+            android:id="@+id/ec_shop_inner_flow_expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"/>
+    </LinearLayout>
+    <ViewStub
+        android:id="@+id/ec_shop_inner_flow_tags_module_container"
+        android:layout="@layout/ec_shop_layout_inner_flow_element_tag_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"/>
+</com.bytedance.android.ec.core.widget.RoundedLinearLayout>

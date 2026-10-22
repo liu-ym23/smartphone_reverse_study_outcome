@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="20dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="@color/bg_chat_title_max_count_badge"
+        android:pathData="M6,0L18,0A6,6 0,0 1,24 6L24,14A6,6 0,0 1,18 20L6,20A6,6 0,0 1,0 14L0,6A6,6 0,0 1,6 0z"/>
+    <path
+        android:fillColor="@color/icon_n1"
+        android:pathData="M6.583,9.792C6.583,10.597 5.931,11.25 5.125,11.25C4.32,11.25 3.667,10.597 3.667,9.792C3.667,8.986 4.32,8.333 5.125,8.333C5.931,8.333 6.583,8.986 6.583,9.792Z"/>
+    <path
+        android:fillColor="@color/icon_n1"
+        android:pathData="M13.438,9.792C13.438,10.597 12.785,11.25 11.98,11.25C11.174,11.25 10.521,10.597 10.521,9.792C10.521,8.986 11.174,8.333 11.98,8.333C12.785,8.333 13.438,8.986 13.438,9.792Z"/>
+    <path
+        android:fillColor="@color/icon_n1"
+        android:pathData="M20.333,9.792C20.333,10.597 19.681,11.25 18.875,11.25C18.07,11.25 17.417,10.597 17.417,9.792C17.417,8.986 18.07,8.333 18.875,8.333C19.681,8.333 20.333,8.986 20.333,9.792Z"/>
+</vector>

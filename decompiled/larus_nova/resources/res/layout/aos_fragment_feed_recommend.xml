@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/aos_const_bg_inverse"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/aos_component_feed"/>
+    <View
+        android:id="@+id/aos_feed_top_linear_gradient"
+        android:background="@drawable/aos_feed_top_linear_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"/>
+    <include layout="@layout/aos_tab_common_loading"/>
+    <include layout="@layout/aos_feed_first_init_loading"/>
+    <com.bytedance.awemeopen.apps.framework.base.view.refresh.DmtStatusView
+        android:id="@+id/status_view"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:id="@+id/feed_back_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp">
+        <com.bytedance.awemeopen.apps.framework.base.view.AutoRTLImageView
+            android:id="@+id/feed_back_btn"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/aos_icon_feed_back"/>
+        <ImageView
+            android:id="@+id/aweme_icon"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aos_douyin_top_water_mark"
+            android:layout_centerInParent="true"/>
+        <RelativeLayout
+            android:gravity="end"
+            android:id="@+id/right_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/aweme_icon"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <include
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        layout="@layout/aos_bottom_write_comment_view"/>
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/profile_tag_view"
+    android:background="@drawable/ttlive_bg_profile_pink_bg_color"
+    android:layout_width="wrap_content"
+    android:layout_height="18dp">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/profile_tag_image_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#e5a66237"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/profile_tag_view_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:maxLines="1"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="6dp"/>
+</LinearLayout>

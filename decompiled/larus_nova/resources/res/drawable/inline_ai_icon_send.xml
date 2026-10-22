@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <vector
+            android:height="20dp"
+            android:width="20dp"
+            android:viewportWidth="20"
+            android:viewportHeight="20">
+            <path
+                android:fillColor="@color/icon_disable"
+                android:pathData="M18.08,11.129C18.492,10.904 18.75,10.472 18.75,10C18.75,9.527 18.492,9.097 18.08,8.873L3.135,0.781C2.736,0.564 2.266,0.574 1.875,0.806C1.484,1.039 1.25,1.451 1.25,1.908L2.899,8.348L9.91,9.375C10.311,9.375 10.636,9.654 10.636,10C10.636,10.345 10.311,10.625 9.91,10.625C5.959,11.204 3.623,11.544 2.902,11.644L1.25,18.092C1.25,18.549 1.484,18.961 1.875,19.195C2.266,19.427 2.736,19.437 3.135,19.221L18.08,11.129Z"/>
+        </vector>
+    </item>
+    <item android:drawable="@drawable/ud_icon_send_ai_colorful"/>
+</selector>

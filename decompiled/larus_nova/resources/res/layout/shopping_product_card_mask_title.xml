@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:id="@+id/sdv_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginRight="3dp"
+            app:layoutMode="width_self_adjust"/>
+        <TextView
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/commerce_color_161823"
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:includeFontPadding="false"
+            android:layout_centerVertical="true"/>
+    </LinearLayout>
+    <View
+        android:layout_gravity="center"
+        android:background="@drawable/commerce_bg_product_feed_title_arrow"
+        android:layout_width="50dp"
+        android:layout_height="24dp"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/commerce_ic_product_feed_title_arrow"
+        android:layout_marginEnd="12dp"/>
+</merge>

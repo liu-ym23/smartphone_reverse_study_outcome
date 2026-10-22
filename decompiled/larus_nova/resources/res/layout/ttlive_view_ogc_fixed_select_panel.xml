@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ogc_fixed_emoji_list"
+        android:paddingBottom="52dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:overScrollMode="never"/>
+</RelativeLayout>

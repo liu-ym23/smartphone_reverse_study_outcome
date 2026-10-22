@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cj_pay_outer_root_layout"
+    android:background="@color/cj_pay_color_gray_393B44"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ll_dy_loading"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp">
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/fl_loading_gif_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cj_pay_brand_pay_label"/>
+    </LinearLayout>
+</FrameLayout>

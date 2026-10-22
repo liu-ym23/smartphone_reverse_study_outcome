@@ -1,0 +1,23 @@
+package zg1;
+
+/* JADX INFO: loaded from: classes7.dex */
+public final class c1 {
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L4;
+        return true;
+    L4:
+        if ((r100 instanceof c1) == false) goto L6;
+        ((c1) r100).getClass();
+        return true;
+    L6:
+        return false;
+    }
+
+    public final int hashCode() {
+        return 0;
+    }
+
+    public final String toString() {
+        return "LiveAnchorAudioFocusGetEvent(get=false)";
+    }
+}

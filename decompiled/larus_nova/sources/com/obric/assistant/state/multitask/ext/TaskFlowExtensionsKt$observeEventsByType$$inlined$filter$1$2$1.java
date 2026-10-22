@@ -1,0 +1,28 @@
+package com.obric.assistant.state.multitask.ext;
+
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes33.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 176)
+@DebugMetadata(c = "com.obric.assistant.state.multitask.ext.TaskFlowExtensionsKt$observeEventsByType$$inlined$filter$1$2", f = "TaskFlowExtensions.kt", i = {}, l = {219}, m = "emit", n = {}, s = {})
+public final class TaskFlowExtensionsKt$observeEventsByType$$inlined$filter$1$2$1 extends ContinuationImpl {
+    Object L$0;
+    Object L$1;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ a this$0;
+
+    public TaskFlowExtensionsKt$observeEventsByType$$inlined$filter$1$2$1(a r100, Continuation r101) {
+        super(r101);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        this.result = r100;
+        this.label |= Integer.MIN_VALUE;
+        throw null;
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.videoweb.sdk.view.VideoWebScroller
+        android:orientation="vertical"
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+        <FrameLayout
+            android:id="@+id/adWebLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.ss.android.videoweb.sdk.view.VideoWebScroller>
+    <com.ss.android.videoweb.sdk.fragment.VideoTitleBar
+        android:id="@+id/video_title_bar"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+</FrameLayout>

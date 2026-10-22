@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/comment_header_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/top_rail"
+        android:background="@color/shopping_color_08161823"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/new_comment_head_container"
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+        <View
+            android:id="@+id/left_divider_line"
+            android:background="@drawable/comment_bg_truth_left_divider_line"
+            android:layout_width="25dp"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="13.5dp"/>
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:id="@+id/comment_iv_tip_icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="3dp"
+            app:layoutMode="square"/>
+        <TextView
+            android:textSize="11sp"
+            android:textColor="@color/shopping_color_73161823"
+            android:id="@+id/comment_tv_comment_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/right_divider_line"
+            android:background="@drawable/comment_bg_truth_right_divider_line"
+            android:layout_width="25dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="13.5dp"/>
+    </LinearLayout>
+</LinearLayout>

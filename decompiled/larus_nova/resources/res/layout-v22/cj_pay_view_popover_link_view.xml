@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/cj_pay_color_pop_view_toast_default"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.android.ttcjpaysdk.base.ui.component.pop.CJImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/iv_icon"
+        android:visibility="gone"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        app:tint="@color/cj_pay_color_pop_view_const_text_inverse"/>
+    <com.android.ttcjpaysdk.base.ui.component.CJTextView
+        android:textColor="@color/cj_pay_color_pop_view_const_text_inverse"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textFontWeight="400"
+        app:textSpec="P3S"/>
+    <com.android.ttcjpaysdk.base.ui.component.pop.CJImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/iv_arrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="2dp"
+        app:srcCompat="@drawable/cj_pay_icon_pop_right"
+        app:tint="@color/cj_pay_color_pop_view_const_text_inverse"/>
+</merge>

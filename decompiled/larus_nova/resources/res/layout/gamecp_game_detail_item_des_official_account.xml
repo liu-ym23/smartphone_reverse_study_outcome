@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="16dp">
+    <com.bytedance.android.gamecp.common.ui.HSImageView
+        android:id="@+id/gamecp_detail_des_official_account_icon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/gamecp_game_avatar_placeholder"
+        app:failureImage="@drawable/gamecp_game_avatar_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/gamecp_game_avatar_placeholder"
+        app:roundedCornerRadius="12dp"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#bf161823"
+        android:gravity="center_vertical"
+        android:id="@+id/gamecp_detail_des_official_account_name"
+        android:paddingTop="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginLeft="2dp"
+        android:text="官方账号"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/gamecp_detail_des_official_account_icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:layout_width="8sp"
+        android:layout_height="8sp"
+        android:layout_marginRight="2dp"
+        android:src="@drawable/gamecp_ic_game_rank_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/gamecp_detail_des_official_account_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

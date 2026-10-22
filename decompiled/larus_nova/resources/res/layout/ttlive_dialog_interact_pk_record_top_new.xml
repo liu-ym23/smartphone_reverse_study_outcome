@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/ttlive_bg_interact_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ttlive_ic_pk_back_icon_new"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:textSize="17dp"
+            android:textColor="@color/ttlive_douyin_const_ConstLineInverse3"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/ttlive_interact_pk_record"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:textSize="17dp"
+            android:textColor="@color/ttlive_douyin_const_ConstLineInverse3"
+            android:id="@+id/tv_title_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="PK邀约记录"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/default_background"
+        android:background="@drawable/ttlive_bg_interact_dialog_default_background"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+</RelativeLayout>

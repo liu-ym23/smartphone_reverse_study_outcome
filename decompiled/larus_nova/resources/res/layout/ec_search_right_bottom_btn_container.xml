@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="end"
+    android:layout_gravity="end|bottom"
+    android:orientation="vertical"
+    android:id="@+id/right_bottom_btn_container"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="35dp"
+    android:layout_marginEnd="20dp">
+    <include layout="@layout/saas_search_view_commodity_cart"/>
+    <FrameLayout
+        android:id="@+id/animation_container"
+        android:paddingTop="@dimen/search_right_bottom_btn_gap"
+        android:visibility="gone"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/back_to_top_container"
+            android:layout_width="@dimen/search_right_bottom_btn_size"
+            android:layout_height="@dimen/search_right_bottom_btn_size">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/back_to_top_icon"
+                android:layout_width="15dp"
+                android:layout_height="16.5dp"
+                android:scaleType="centerCrop"/>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

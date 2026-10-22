@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textSize="?attr/larus_dp_14"
+    android:textColor="?attr/larus_neutral_70"
+    android:gravity="center_vertical"
+    android:id="@+id/edu_continue_shot_btn"
+    android:background="?attr/larus_bg_prompt_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/larus_dp_38"
+    android:text="@string/larus_homework_label_askAnother"
+    android:drawablePadding="?attr/larus_dp_4"
+    android:paddingStart="?attr/larus_dp_12"
+    android:paddingEnd="?attr/larus_dp_12"
+    app:drawableEndCompat="?attr/larus_arow_right"/>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/doubao_picker_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.lark.widget.recyclerview.CommonRecyclerView
+        android:id="@+id/more_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"/>
+    <View
+        android:id="@+id/ai_bottom_bar_top_divider"
+        android:background="@color/larus_neutral_transparent_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <Button
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="right"
+        android:id="@+id/selected_more_bottom_bar_confirm_button"
+        android:background="@drawable/bg_mobile_ai_office_bottom_button"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:minHeight="44dp"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.gallery.tracker.GalleryRoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rounded_layout"
+    android:layout_width="?attr/larus_dp_23"
+    android:layout_height="?attr/larus_dp_30"
+    android:contentDescription="@string/larus_accessibility_message_photo">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@color/larus_neutral_transparent_80"
+        app:roundedCornerRadius="?attr/larus_dp_3"/>
+    <ImageView
+        android:id="@+id/blocked_placeholder"
+        android:background="@drawable/larus_bg_gallery_thumbnail_blocked"
+        android:padding="?attr/larus_dp_6"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/larus_ic_gallery_lock"
+        android:contentDescription="@string/larus_accessibility_message_photo"/>
+</com.larus.gallery.tracker.GalleryRoundedFrameLayout>

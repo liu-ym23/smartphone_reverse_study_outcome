@@ -1,0 +1,70 @@
+package j96;
+
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes19.dex */
+public final class a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final String f497788a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public final boolean f497789b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final long f497790c;
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L4;
+        return true;
+    L4:
+        if ((r100 instanceof a) == false) goto L12;
+        a r101 = (a) r100;
+        if (Intrinsics.areEqual(this.f497788a, r101.f497788a) == true) goto L8;
+        return false;
+    L8:
+        if (this.f497789b == r101.f497789b) goto L10;
+        return false;
+    L10:
+        if (this.f497790c == r101.f497790c) goto L19;
+        return false;
+    L19:
+        return true;
+    L12:
+        return false;
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    public final int hashCode() {
+        String r100 = this.f497788a;
+        if (r100 == null) goto L5;
+        int r101 = r100.hashCode();
+    L6:
+        int r102 = r101 * 31;
+        boolean r103 = this.f497789b;
+        ?? r104 = r103;
+        if (r103 == false) goto L9;
+        r104 = 1;
+    L9:
+        int r105 = (r102 + r104) * 31;
+        long r106 = this.f497790c;
+        return r105 + ((int) (r106 ^ (r106 >>> 32)));
+    L5:
+        r101 = 0;
+        goto L6
+    }
+
+    public final String toString() {
+        return "JSFileCacheModel(filePath=" + this.f497788a + ", fromOffline=" + this.f497789b + ", loadDuration=" + this.f497790c + ")";
+    }
+
+    public a(String r100, boolean r101, long r102) {
+        this.f497788a = r100;
+        this.f497789b = r101;
+        this.f497790c = r102;
+    }
+}

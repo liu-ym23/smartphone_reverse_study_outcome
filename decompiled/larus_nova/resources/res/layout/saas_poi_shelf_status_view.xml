@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.locallife.dito.baseview.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/status_container"
+    android:background="@color/POIBgPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:rounded_radius="12dp">
+    <com.bytedance.ies.dmt.ui.widget.DmtStatusView
+        android:id="@+id/status_view"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/status_shelf_img"
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:layout_marginTop="16dp"/>
+    </FrameLayout>
+    <com.bytedance.dux.widget.RadiusLayout
+        android:layout_gravity="top|center_horizontal"
+        android:id="@+id/status_line"
+        android:background="@color/LineReverse"
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="6dp"
+        app:cornerRadius="4dp"/>
+</com.bytedance.locallife.dito.baseview.RoundFrameLayout>

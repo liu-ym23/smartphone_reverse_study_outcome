@@ -1,0 +1,7 @@
+package com.bytedance.android.livesdk.livecommerce.promotion.cardV2;
+
+/* JADX INFO: loaded from: classes10.dex */
+public final class c implements w83.c {
+    public c() {
+    }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ktv_component_midi_view_cl"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ttlive_ktv_component_new_midi_height">
+    <com.bytedance.android.live.ktv.common.midi.v2.KtvMidiViewV2
+        android:id="@+id/component_midi_view"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/ktv_midi_bg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.live.ktv.common.midi.KtvMidiHitDisplayView
+        android:id="@+id/component_hit_type_display"
+        android:layout_width="90dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.live.ktv.common.midi.v2.KtvHitAnimationViewV2
+        android:id="@+id/component_hit_animation"
+        android:layout_width="94dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

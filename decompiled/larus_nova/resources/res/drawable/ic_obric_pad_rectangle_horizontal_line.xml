@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/obric_guide_text_1"
+        android:pathData="M19 4C20.6569 4 22 5.34315 22 7V17C22 18.6051 20.7394 19.9158 19.1543 19.9961L19 20H5L4.8457 19.9961C3.26055 19.9158 2 18.6051 2 17V7C2 5.34315 3.34315 4 5 4H19ZM5 6C4.44772 6 4 6.44772 4 7V17C4 17.5523 4.44772 18 5 18H19C19.5523 18 20 17.5523 20 17V7C20 6.44771 19.5523 6 19 6H5ZM13.4004 16C13.7315 16.0002 13.9998 16.2685 14 16.5996C14 16.9309 13.7316 17.2 13.4004 17.2002H10.5996C10.2684 17.2 10 16.9309 10 16.5996C10.0002 16.2685 10.2685 16.0002 10.5996 16H13.4004Z"/>
+</vector>

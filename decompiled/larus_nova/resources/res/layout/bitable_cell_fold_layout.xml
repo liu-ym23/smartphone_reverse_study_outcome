@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:background="@drawable/bitable_record_fold_btn_bg_selector"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fold_arrow_icon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:tint="@color/icon_n1"
+        app:srcCompat="@drawable/ud_icon_expand_right_filled"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="14sp"
+        android:textColor="@color/text_title"
+        android:id="@+id/fold_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/error_view"
+    android:background="#161822"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.ktv.common.view.CommomKtvButton
+        android:id="@+id/btn_update"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:text="刷新"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#8a8b91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="请检查网络连接后重试"
+        android:layout_below="@+id/btn_update"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

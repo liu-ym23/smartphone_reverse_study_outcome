@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/volume_container_fl"
+    android:background="@drawable/commerce_bg_330000_radius_10"
+    android:layout_width="33dp"
+    android:layout_height="20dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/volume_iv"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/commerce_volume_mute"/>
+</FrameLayout>

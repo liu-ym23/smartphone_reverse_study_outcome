@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/anim_center"
+        android:layout_width="90dp"
+        android:layout_height="90dp"/>
+    <LinearLayout
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="12dp"
+            android:textColor="#e1e2e2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_live_dialog_loading"/>
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/anim_point"
+            android:layout_width="30dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+</merge>

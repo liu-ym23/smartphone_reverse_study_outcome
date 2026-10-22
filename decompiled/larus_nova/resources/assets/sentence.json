@@ -1,0 +1,52 @@
+{
+  "name": "enrollment",
+  "version": "0.0.1",
+  "size" : 5,
+  "teams": [
+    {
+      "index" : 0,
+      "title" : "“豆包豆包 ",
+      "query" : "豆包豆包定一个早上8点起床的闹钟",
+      "text_similarity" : 3,
+      "subtitle_content" : "定一个早上 8 点$ 起床的闹钟”",
+      "subtitle_lines": 2,
+      "subtitle_small" : false
+    },
+    {
+      "index" : 1,
+      "title" : "“豆包豆包 ",
+      "query" : "豆包豆包把刚才那个广告推销的电话拉黑",
+      "text_similarity" : 3,
+      "subtitle_content" : "把刚才那个广告推销$ 的电话拉黑”",
+      "subtitle_lines": 2,
+      "subtitle_small" : false
+    },
+    {
+      "index" : 2,
+      "title" : "“豆包豆包 ",
+      "query" : "豆包豆包我昨天收藏的四川火锅店在商场几层",
+      "text_similarity" : 3,
+      "subtitle_content" : "我昨天收藏的$四川火锅店在商场$ 几层？”",
+      "subtitle_lines": 3,
+      "subtitle_small" : false
+    },
+    {
+      "index" : 3,
+      "title" : "“豆包豆包 ",
+      "query" : "豆包豆包最近有什么高分电影吗",
+      "text_similarity" : 3,
+      "subtitle_content" : "最近有什么高分$ 电影吗？”",
+      "subtitle_lines": 2,
+      "subtitle_small" : true
+    },
+    {
+      "index" : 4,
+      "title" : "“豆包豆包 ",
+      "query" : "豆包豆包萤火虫为什么能发光",
+      "text_similarity" : 2,
+      "subtitle_content" : "萤火虫为什么能$ 发光？”",
+      "subtitle_lines": 2,
+      "subtitle_small" : false
+    }
+  ]
+}

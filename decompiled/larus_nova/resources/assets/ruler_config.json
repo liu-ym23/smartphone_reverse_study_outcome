@@ -1,0 +1,65 @@
+{
+  "version": 0,
+  "strategy_set": {
+      "guard_fuse": {
+          "policies": {
+              "disable_for_privacy_alert": {
+                  "title": "隐私弹窗前拦截",
+                  "cel": "(has_agreed_privacy == false)",
+                  "conf": {
+                      "action": "fuse"
+                  },
+                  "type": 0
+              },
+              "disable_anyway": {
+                  "title": "任何情况下都禁止",
+                  "cel": "true",
+                  "conf": {
+                      "action": "fuse"
+                  },
+                  "type": 0
+              }
+          },
+          "strategy_map": {
+              "keys": [
+                  "api_id",
+                  "extra_parameter_key"
+              ],
+              "rules": [
+                  {
+                      "title": "AndroidID",
+                      "cel": "(extra_parameter_key in [\"android_id\"]) && (api_id in [102003,102004])",
+                      "conf": {
+                          "strategy": "doubao_android_id"
+                      },
+                      "type": 1
+                  },
+                  {
+                      "title": "Build.serial",
+                      "cel": "(api_id in [101200,102002])",
+                      "conf": {
+                          "strategy": "doubao_serial"
+                      },
+                      "type": 1
+                  }
+              ]
+          },
+          "strategies": {
+              "doubao_android_id": {
+                  "rules": [
+                      "disable_for_privacy_alert"
+                  ]
+              },
+              "doubao_serial": {
+                  "rules": [
+                      "disable_anyway"
+                  ]
+              }
+          },
+          "strategy_select_break": false,
+          "rule_exec_break": true,
+          "const_pool": {}
+      }
+  },
+  "signature": "0d616c4cd7f7a3659309231ca2ea73a3"
+}

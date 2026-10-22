@@ -1,0 +1,47 @@
+package com.bytedance.android.accessibilityLib_Core.config.remote.step;
+
+import android.content.Context;
+import com.bytedance.android.accessibilityLib_Core.config.base.IBaseConfig;
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import java.util.ArrayList;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes43.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u00012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003H\n¢\u0006\u0002\b\u0004"}, d2 = {"<anonymous>", "", "it", "Lcom/bytedance/android/accessibilityLib_Core/config/base/IBaseConfig;", AbsMethodDelegate.TAG_INVOKE}, k = 3, mv = {1, 4, 1})
+final class ApplyStep$collectConfig$1 extends Lambda implements Function1<IBaseConfig, Unit> {
+    final /* synthetic */ ApplyStep this$0;
+
+    public ApplyStep$collectConfig$1(ApplyStep r100) {
+        this.this$0 = r100;
+        super(1);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final void invoke2(IBaseConfig r100) {
+        StringBuilder r101 = new StringBuilder("ApplyStep >>> configName = ");
+        if (r100 == null) goto L5;
+        String r102 = r100.name();
+    L6:
+        r101.append(r102);
+        if (r101.toString() == null) goto L9;
+        Context r103 = com.bytedance.android.accessibilityLib_Core.helper.a.f38277a;
+    L9:
+        if (r100 == null) goto L12;
+        ((ArrayList) this.this$0.f38214b).add(r100);
+        return;
+    L12:
+        return;
+    L5:
+        r102 = null;
+        goto L6
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ Unit invoke(IBaseConfig r100) {
+        invoke2(r100);
+        return Unit.INSTANCE;
+    }
+}

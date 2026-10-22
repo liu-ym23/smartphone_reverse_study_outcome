@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ttlive_empty_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/ttlive_empty_bg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/ttlive_empty_content"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ttlive_empty_avatar"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ttlive_icon_apply_plus_new"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:textSize="12dp"
+            android:textColor="#87ffffff"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ttlive_empty_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_live_radio_interact_waiting"
+            android:includeFontPadding="false"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

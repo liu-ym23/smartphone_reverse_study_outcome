@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.decoration.avatar.DecoratedAvatar
+        android:id="@+id/flow_avatar_view"
+        android:visibility="visible"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:decoratedAvatar_avatarLayout="@layout/message_common_avatar_lark_avatar"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="end|bottom"
+        android:id="@+id/flow_avatar_ai_badge"
+        android:visibility="gone"
+        android:layout_width="10dp"
+        android:layout_height="8dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/flow_bg_avatar_ai_badge"/>
+</FrameLayout>

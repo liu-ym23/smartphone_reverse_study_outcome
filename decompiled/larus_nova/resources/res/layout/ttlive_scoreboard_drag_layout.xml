@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Space
+        android:id="@+id/entry_anim_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <Space
+        android:id="@+id/region_a"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/entry_anim_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Space
+        android:id="@+id/region_b"
+        android:layout_width="118dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="-86dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/overlap_space"/>
+    <Space
+        android:id="@+id/overlap_space"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="86dp"
+        app:layout_constraintBottom_toBottomOf="@+id/region_a"/>
+    <com.bytedance.android.live.profit.scoreboard.ScoreboardBannerView
+        android:id="@+id/banner_view"
+        android:layout_width="118dp"
+        android:layout_height="86dp"
+        app:layout_constraintBottom_toBottomOf="@+id/region_b"
+        app:layout_constraintEnd_toEndOf="@+id/region_b"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ec.core.widget.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:rounded_radius="4dp">
+    <com.bytedance.android.ui.ec.widget.loading.ECDuxLoadingAnimationView
+        android:layout_gravity="center"
+        android:id="@+id/shopping_view_double_loading"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="36dp"/>
+    <com.bytedance.android.ec.core.widget.ECLottieAnimationView
+        android:layout_gravity="center"
+        android:id="@+id/shopping_lav_hotsoon_loading_lottie"
+        android:background="@color/shopping_color_21000000"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/shopping_fl_xg_or_tt_loading_lottie"
+        android:background="@color/shopping_color_85000000"
+        android:visibility="gone"
+        android:layout_width="56dp"
+        android:layout_height="56dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/shopping_iv_xg_or_tt_loading_lottie"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/shopping_ic_xg_or_tt_loading"
+            android:scaleType="centerCrop"/>
+    </FrameLayout>
+</com.bytedance.android.ec.core.widget.RoundedFrameLayout>

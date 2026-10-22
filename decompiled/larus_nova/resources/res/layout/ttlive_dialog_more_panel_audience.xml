@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.widget.roundcorner.RoundCornerLinearlayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/panel_container"
+    android:background="@drawable/ttlive_bg_broadcast_more_action"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ttlive_leftTopRadius="10dp"
+    app:ttlive_rightTopRadius="10dp"/>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.ugc.aweme.views.CircleDraweeView
+        android:id="@+id/effect_resource_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:id="@+id/iv_edit_icon"
+        android:background="@drawable/av_bg_editable_icon"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_panel_edit"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

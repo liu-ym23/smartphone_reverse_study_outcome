@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:state_pressed="true"
+        android:drawable="@drawable/larus_ic_flow_redo_pressed_night"/>
+    <item
+        android:state_enabled="true"
+        android:drawable="@drawable/larus_ic_flow_redo_default_night"/>
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/larus_ic_flow_redo_unabled_night"/>
+</selector>

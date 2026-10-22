@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/screen_tab_container"
+    android:background="@color/ttlive_white"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="196dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/ttlive_screen_chat_privilege"
+        android:layout_marginStart="100dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_gravity="bottom"
+            android:id="@+id/screen_chat_tab"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"/>
+    </FrameLayout>
+</LinearLayout>

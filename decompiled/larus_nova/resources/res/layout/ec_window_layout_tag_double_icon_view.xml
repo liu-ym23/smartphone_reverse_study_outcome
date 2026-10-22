@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/ec_tag_double_icon_special_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        app:layoutMode="width_self_adjust"/>
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/ec_tag_double_icon_normal_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        app:layoutMode="width_self_adjust"/>
+</merge>

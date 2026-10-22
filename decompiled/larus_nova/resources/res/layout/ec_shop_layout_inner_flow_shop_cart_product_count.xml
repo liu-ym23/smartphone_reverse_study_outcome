@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="10dp"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:layout_gravity="end|top"
+    android:id="@+id/add_cart_dot_count"
+    android:background="@drawable/ec_window_shopping_bg_add_cart_dot"
+    android:layout_width="wrap_content"
+    android:layout_height="14dp"
+    android:minWidth="14dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"/>

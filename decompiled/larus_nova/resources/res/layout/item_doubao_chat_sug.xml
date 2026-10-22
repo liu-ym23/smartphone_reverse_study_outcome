@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sug_left_icon"
+        android:visibility="visible"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:tint="@color/icon_n3"
+        android:layout_marginEnd="8dp"
+        app:srcCompat="@drawable/doubao_search_icon_clock"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:id="@+id/sug_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sug_right_icon"
+        android:padding="3dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:tint="@color/icon_n3"
+        android:layout_marginStart="16dp"
+        app:srcCompat="@drawable/ud_icon_close_outlined"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

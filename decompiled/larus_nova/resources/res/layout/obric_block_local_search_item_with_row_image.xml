@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.roundlayout.RoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_40"
+    android:layout_height="@dimen/dp_40"
+    app:actualImageScaleType="centerCrop"
+    app:rv_backgroundColor="@color/neutral_transparent_1"
+    app:rv_cornerRadius="@dimen/dp_4">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="centerCrop"
+        app:roundedCornerRadius="@dimen/dp_4"/>
+    <View
+        android:id="@+id/video_tag"
+        android:background="@drawable/obric_ic_card_video_icon_v2"
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:textSize="@dimen/dp_13"
+        android:textColor="@color/neutral_50"
+        android:gravity="center"
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.larus.common_ui.widget.roundlayout.RoundRelativeLayout>

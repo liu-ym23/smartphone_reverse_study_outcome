@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/file_resource_parse_failed_bottom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_28">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/file_resource_parse_failed_icon"
+        android:layout_width="?attr/larus_dp_14"
+        android:layout_height="?attr/larus_dp_14"
+        android:src="?attr/larus_resource_item_failed"
+        android:layout_marginStart="?attr/larus_dp_7"
+        android:layout_marginEnd="?attr/larus_dp_2"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_sp_12"
+        android:textColor="?attr/larus_neutral_50"
+        android:ellipsize="end"
+        android:id="@+id/file_resource_parse_failed_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_multi_file_uploading_status_parsing_failed"
+        android:maxLines="1"
+        android:includeFontPadding="false"/>
+</LinearLayout>

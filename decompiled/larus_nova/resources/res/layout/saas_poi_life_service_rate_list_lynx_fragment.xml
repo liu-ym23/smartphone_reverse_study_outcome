@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_life_service_rate_list_lynx_fragment_2141106753"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ies.bullet.ui.common.BulletContainerView
+        android:id="@+id/bullet_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.ies.dmt.ui.widget.DmtStatusView
+        android:id="@+id/status_view"
+        android:background="@color/POIBgPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

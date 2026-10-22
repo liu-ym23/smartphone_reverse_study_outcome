@@ -1,0 +1,31 @@
+package com.bytedance.android.gamecp.base.gamedetail;
+
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import com.larus.nova.R;
+import com.ss.android.lark.utils.statistics.PerfLog;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes44.dex */
+public final class t0 implements y {
+    public t0() {
+    }
+
+    @Override // com.bytedance.android.gamecp.base.gamedetail.y
+    public final Drawable a(Context r100) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        return y0.f51681a.b(R.drawable.shape_bg_14fe2c55_corner_8);
+    }
+
+    @Override // com.bytedance.android.gamecp.base.gamedetail.y
+    public final Integer b(Context r100) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        return Integer.valueOf(y0.f51681a.a(R.color.gamecp_game_FE2C55));
+    }
+
+    @Override // com.bytedance.android.gamecp.base.gamedetail.y
+    public final Integer c(Context r100) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        return Integer.valueOf(y0.f51681a.a(R.color.gamecp_game_FE2C55));
+    }
+}

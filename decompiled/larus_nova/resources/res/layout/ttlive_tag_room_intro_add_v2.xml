@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/add_button_root"
+    android:background="@drawable/ttlive_bg_tag_room_intro_v2"
+    android:layout_width="wrap_content"
+    android:layout_height="24dp">
+    <ImageView
+        android:id="@+id/add_button_short"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ttlive_broadcast_tag_add_v2_pancil"
+        android:scaleType="center"/>
+    <ImageView
+        android:id="@+id/add_button_long"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/ttlive_broadcast_tag_add_v2"
+        android:scaleType="center"
+        android:alpha="0.6"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_room_intro_add_button_color"
+        android:id="@+id/add_button_long_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="6dp"
+        android:text="@string/ttlive_live_room_intro_add_tag"
+        android:includeFontPadding="false"/>
+</LinearLayout>

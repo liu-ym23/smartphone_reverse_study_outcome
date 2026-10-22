@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/bgView"
+        android:background="@color/larus_static_black_transparent_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"/>
+    <com.larus.login.impl.view.DragCloseLinearLayout
+        android:gravity="center_horizontal"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:id="@+id/contentLayout"
+        android:background="@drawable/larus_bg_panel_rounder"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/divider"
+            android:background="@drawable/larus_bg_divider_rounder"
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:textSize="17sp"
+            android:textColor="@color/larus_neutral_100"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Log in with another method"
+            android:fontFamily="sans-serif-medium"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="50dp"
+            android:overScrollMode="never"/>
+    </com.larus.login.impl.view.DragCloseLinearLayout>
+</FrameLayout>

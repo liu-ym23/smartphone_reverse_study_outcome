@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:paddingRight="8dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="72dp"
+    android:layout_height="64dp"
+    android:paddingEnd="8dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/video_cover"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+    <include layout="@layout/larus_tools_media_import_selection_item_view_included"/>
+</RelativeLayout>

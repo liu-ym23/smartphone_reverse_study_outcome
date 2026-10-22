@@ -1,0 +1,20 @@
+package com.bytedance.ee.bear.list.folder;
+
+import com.bytedance.ee.bear.contract.Result;
+import java.util.HashMap;
+
+/* JADX INFO: loaded from: classes18.dex */
+public class GetDocumentExternalPermResult extends Result {
+    private HashMap<String, Boolean> permMap;
+
+    public GetDocumentExternalPermResult() {
+    }
+
+    public HashMap<String, Boolean> getPermMap() {
+        return this.permMap;
+    }
+
+    public void setPermMap(HashMap<String, Boolean> r100) {
+        this.permMap = r100;
+    }
+}

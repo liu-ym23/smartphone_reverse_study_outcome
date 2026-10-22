@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="?attr/larus_dp_2"/>
+            <solid android:color="@color/larus_neutral_transparent_2_night"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="?attr/larus_dp_2"/>
+                <gradient
+                    android:startColor="#0066ff"
+                    android:endColor="#ff8d4d"
+                    android:angle="0"
+                    android:centerColor="#ff73e8"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

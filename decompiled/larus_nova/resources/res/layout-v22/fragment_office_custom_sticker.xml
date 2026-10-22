@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:paddingLeft="8dp"
+        android:paddingTop="6dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="6dp"
+        android:visibility="invisible"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="6dp"/>
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/addLayout"
+        android:background="@drawable/bg_office_custom_sticker_add"
+        android:visibility="gone"
+        android:layout_width="85dp"
+        android:layout_height="85dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:tint="@color/flow_ud_neutral_70"
+            app:srcCompat="@drawable/ud_icon_add_outlined"/>
+    </FrameLayout>
+</FrameLayout>

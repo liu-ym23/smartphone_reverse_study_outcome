@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_kit_len_52"
+    android:backgroundTint="@color/facade_selector_item_float">
+    <com.larksuite.component.universe_design.checkbox.UDCheckBox
+        android:id="@+id/defined_range_checker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        app:ud_checkbox_type="check_mark"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/defined_range_checker"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:textSize="@dimen/space_kit_font_16"
+            android:textColor="@color/text_title"
+            android:id="@+id/select_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_kit_len_16"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:textSize="@dimen/space_kit_font_16"
+            android:textColor="@color/text_placeholder"
+            android:id="@+id/select_tip"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_kit_len_16"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</RelativeLayout>

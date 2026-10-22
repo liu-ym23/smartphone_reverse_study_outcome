@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/larus_base_3"
+        android:paddingTop="?attr/larus_dp_13"
+        android:paddingBottom="?attr/larus_dp_13"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_50"
+        android:paddingStart="?attr/larus_dp_16"
+        android:paddingEnd="?attr/larus_dp_20">
+        <ImageView
+            android:id="@+id/icon_device"
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24"
+            android:src="@null"
+            app:tint="@color/larus_neutral_100"/>
+        <com.larus.dora.impl.view.DoraTextView
+            android:textSize="?attr/larus_sp_16"
+            android:textColor="@color/larus_neutral_100"
+            android:ellipsize="end"
+            android:id="@+id/device_name"
+            android:layout_width="?attr/larus_dp_0"
+            android:layout_height="wrap_content"
+            android:text="我的眼镜"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:layout_marginStart="?attr/larus_dp_12"/>
+        <ImageView
+            android:id="@+id/icon_check"
+            android:visibility="gone"
+            android:layout_width="?attr/larus_dp_20"
+            android:layout_height="?attr/larus_dp_20"
+            android:src="@drawable/larus_dora_g_device_management_switch_check_icon"
+            android:layout_marginStart="?attr/larus_dp_12"
+            app:tint="@color/larus_neutral_100"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:background="@color/larus_neutral_transparent_1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_1"/>
+</LinearLayout>

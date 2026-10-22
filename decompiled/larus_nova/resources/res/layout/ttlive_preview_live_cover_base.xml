@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/riv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/video_talk_cover"
+        android:background="@drawable/ttlive_video_talk_bg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.7"/>
+    <FrameLayout
+        android:id="@+id/player_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/ttlive_preview_audio_live"/>
+    <include layout="@layout/ttlive_preview_video_talkroom"/>
+</FrameLayout>

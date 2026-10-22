@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/ttlive_iv_player_lock"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:translationY="-1px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImageScaleType="none"/>
+    <com.bytedance.android.uicomponent.popover.PopLayout
+        android:id="@+id/ttlive_vs_player_lock_pop"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:translationX="-3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ttlive_iv_player_lock"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.bytedance.android.uicomponent.popover.PopTextView
+            android:textColor="@color/ttlive_std_text_tooltip"
+            android:layout_gravity="start|center_vertical"
+            android:id="@+id/ttlive_vs_player_lock_pop_text"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </com.bytedance.android.uicomponent.popover.PopLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

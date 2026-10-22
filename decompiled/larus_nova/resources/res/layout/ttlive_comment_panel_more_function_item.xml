@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:background="@drawable/ttlive_bg_161823_round_20_btn"
+        android:layout_width="@dimen/ttlive_more_panel_button_size"
+        android:layout_height="@dimen/ttlive_more_panel_button_size">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/button_pic"
+            android:background="@drawable/ttlive_comment_panel_interest_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"/>
+        <ImageView
+            android:layout_gravity="top|right"
+            android:id="@+id/red_dot"
+            android:background="@drawable/ttlive_new_portrait_control_red_dot"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/ttlive_color_161823"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/button_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ttlive_more_panel_interest"/>
+</LinearLayout>

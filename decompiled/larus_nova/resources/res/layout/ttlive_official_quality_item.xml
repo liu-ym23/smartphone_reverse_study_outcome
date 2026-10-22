@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <Button
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_barrage_setting_normal_color"
+        android:id="@+id/bt_switch_video"
+        android:background="#0000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_live_quality_SD"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/switch_divider"
+        android:background="#4cffffff"
+        android:visibility="gone"
+        android:layout_width="0.5dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_toRightOf="@+id/bt_switch_video"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

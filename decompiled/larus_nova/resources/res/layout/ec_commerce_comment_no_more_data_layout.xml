@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="13dp"
+    android:textColor="@color/commerce_color_FFFFFF"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:id="@+id/ec_comment_no_more_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/shopping_tip_no_more_data"/>

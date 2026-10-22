@@ -1,0 +1,93 @@
+package org.bouncycastle.asn1.nsri;
+
+import com.bytedance.bdlocation.exception.BDLocationException;
+import com.tencent.connect.common.Constants;
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+
+/* JADX INFO: loaded from: classes42.dex */
+public interface NSRIObjectIdentifiers {
+    public static final ASN1ObjectIdentifier id_algorithm = null;
+    public static final ASN1ObjectIdentifier id_aria128_cbc = null;
+    public static final ASN1ObjectIdentifier id_aria128_ccm = null;
+    public static final ASN1ObjectIdentifier id_aria128_cfb = null;
+    public static final ASN1ObjectIdentifier id_aria128_cmac = null;
+    public static final ASN1ObjectIdentifier id_aria128_ctr = null;
+    public static final ASN1ObjectIdentifier id_aria128_ecb = null;
+    public static final ASN1ObjectIdentifier id_aria128_gcm = null;
+    public static final ASN1ObjectIdentifier id_aria128_kw = null;
+    public static final ASN1ObjectIdentifier id_aria128_kwp = null;
+    public static final ASN1ObjectIdentifier id_aria128_ocb2 = null;
+    public static final ASN1ObjectIdentifier id_aria128_ofb = null;
+    public static final ASN1ObjectIdentifier id_aria192_cbc = null;
+    public static final ASN1ObjectIdentifier id_aria192_ccm = null;
+    public static final ASN1ObjectIdentifier id_aria192_cfb = null;
+    public static final ASN1ObjectIdentifier id_aria192_cmac = null;
+    public static final ASN1ObjectIdentifier id_aria192_ctr = null;
+    public static final ASN1ObjectIdentifier id_aria192_ecb = null;
+    public static final ASN1ObjectIdentifier id_aria192_gcm = null;
+    public static final ASN1ObjectIdentifier id_aria192_kw = null;
+    public static final ASN1ObjectIdentifier id_aria192_kwp = null;
+    public static final ASN1ObjectIdentifier id_aria192_ocb2 = null;
+    public static final ASN1ObjectIdentifier id_aria192_ofb = null;
+    public static final ASN1ObjectIdentifier id_aria256_cbc = null;
+    public static final ASN1ObjectIdentifier id_aria256_ccm = null;
+    public static final ASN1ObjectIdentifier id_aria256_cfb = null;
+    public static final ASN1ObjectIdentifier id_aria256_cmac = null;
+    public static final ASN1ObjectIdentifier id_aria256_ctr = null;
+    public static final ASN1ObjectIdentifier id_aria256_ecb = null;
+    public static final ASN1ObjectIdentifier id_aria256_gcm = null;
+    public static final ASN1ObjectIdentifier id_aria256_kw = null;
+    public static final ASN1ObjectIdentifier id_aria256_kwp = null;
+    public static final ASN1ObjectIdentifier id_aria256_ocb2 = null;
+    public static final ASN1ObjectIdentifier id_aria256_ofb = null;
+    public static final ASN1ObjectIdentifier id_pad = null;
+    public static final ASN1ObjectIdentifier id_pad_1 = null;
+    public static final ASN1ObjectIdentifier id_pad_null = null;
+    public static final ASN1ObjectIdentifier id_sea = null;
+    public static final ASN1ObjectIdentifier nsri = null;
+
+    static {
+        ASN1ObjectIdentifier r100 = new ASN1ObjectIdentifier("1.2.410.200046");
+        nsri = r100;
+        ASN1ObjectIdentifier r101 = r100.branch("1");
+        id_algorithm = r101;
+        ASN1ObjectIdentifier r102 = r101.branch("1");
+        id_sea = r102;
+        id_pad = r101.branch("2");
+        id_pad_null = r101.branch("0");
+        id_pad_1 = r101.branch("1");
+        id_aria128_ecb = r102.branch("1");
+        id_aria128_cbc = r102.branch("2");
+        id_aria128_cfb = r102.branch("3");
+        id_aria128_ofb = r102.branch("4");
+        id_aria128_ctr = r102.branch("5");
+        id_aria192_ecb = r102.branch("6");
+        id_aria192_cbc = r102.branch("7");
+        id_aria192_cfb = r102.branch("8");
+        id_aria192_ofb = r102.branch(Constants.VIA_SHARE_TYPE_MINI_PROGRAM);
+        id_aria192_ctr = r102.branch(Constants.VIA_REPORT_TYPE_SHARE_TO_QQ);
+        id_aria256_ecb = r102.branch("11");
+        id_aria256_cbc = r102.branch("12");
+        id_aria256_cfb = r102.branch("13");
+        id_aria256_ofb = r102.branch(Constants.VIA_REPORT_TYPE_MAKE_FRIEND);
+        id_aria256_ctr = r102.branch(Constants.VIA_REPORT_TYPE_WPA_STATE);
+        id_aria128_cmac = r102.branch("21");
+        id_aria192_cmac = r102.branch("22");
+        id_aria256_cmac = r102.branch(Constants.VIA_REPORT_TYPE_SHARE_TO_TROOPBAR);
+        id_aria128_ocb2 = r102.branch("31");
+        id_aria192_ocb2 = r102.branch(BDLocationException.ERROR_CONNECT_GOOGLE_FAIL);
+        id_aria256_ocb2 = r102.branch("33");
+        id_aria128_gcm = r102.branch(BDLocationException.ERROR_ABNORMAL_NETWORK);
+        id_aria192_gcm = r102.branch("35");
+        id_aria256_gcm = r102.branch(BDLocationException.ERROR_BACKGROUND_LOCATE);
+        id_aria128_ccm = r102.branch("37");
+        id_aria192_ccm = r102.branch(BDLocationException.ERROR_DISPUTED_AREA);
+        id_aria256_ccm = r102.branch("39");
+        id_aria128_kw = r102.branch(BDLocationException.ERROR_MULTI_THREAD_LOCATE);
+        id_aria192_kw = r102.branch("41");
+        id_aria256_kw = r102.branch("42");
+        id_aria128_kwp = r102.branch("43");
+        id_aria192_kwp = r102.branch(BDLocationException.ERROR_BYTE_DISABLE_USE_WIFI);
+        id_aria256_kwp = r102.branch("45");
+    }
+}

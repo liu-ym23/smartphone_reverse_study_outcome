@@ -1,0 +1,8 @@
+package com.bytedance.android.livesdkapi.depend.websocket;
+
+import py.m;
+
+/* JADX INFO: loaded from: classes12.dex */
+public interface IWSMessage {
+    m getMessageType();
+}

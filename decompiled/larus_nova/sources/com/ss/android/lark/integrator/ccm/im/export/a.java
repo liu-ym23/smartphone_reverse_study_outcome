@@ -1,0 +1,110 @@
+package com.ss.android.lark.integrator.ccm.im.export;
+
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.view.View;
+import com.bytedance.ee.bear.unbundle.BenefitManagerAPI;
+import com.larksuite.component.universe_design.icon.UDIconUtils;
+import com.larus.nova.R;
+import com.ss.android.lark.biz.im.extension.message_action.MessageActionType;
+import com.ss.android.lark.ccm_api.ICCMApi;
+import com.ss.android.lark.chat.message.menu.c;
+import com.ss.android.lark.log.Log;
+import com.ss.android.lark.picker.base.widget.reporter.PickerReporterConstants;
+import com.ss.android.lark.utils.ApiUtils;
+import com.ss.android.lark.utils.statistics.PerfLog;
+import java.util.Map;
+import kotlin.Pair;
+import kotlin.TuplesKt;
+import kotlin.collections.MapsKt;
+import kotlin.jvm.internal.Intrinsics;
+import s5c.d;
+import yya.i;
+
+/* JADX INFO: loaded from: classes36.dex */
+public final class a implements i {
+    @Override // yya.i
+    public final Map<String, Object> R4() {
+        return MapsKt.mutableMapOf(new Pair[]{TuplesKt.to("click", "export_doc"), TuplesKt.to(PickerReporterConstants.KEY.TARGET, "none")});
+    }
+
+    @Override // yya.i
+    public final boolean c() {
+        return false;
+    }
+
+    @Override // yya.i
+    public final Integer e() {
+        return null;
+    }
+
+    @Override // yya.i
+    public final boolean f() {
+        return false;
+    }
+
+    @Override // yya.i
+    public final d g() {
+        return null;
+    }
+
+    @Override // yya.i
+    public final void onHide() {
+    }
+
+    @Override // yya.i
+    public final void onShow() {
+    }
+
+    @Override // yya.i
+    public final boolean isVisible() {
+        ICCMApi r100 = (ICCMApi) ApiUtils.getApi(ICCMApi.class);
+        if (r100 == null) goto L6;
+        r100.checkAndInit();
+    L6:
+        if (((BenefitManagerAPI) org.koin.java.a.c(BenefitManagerAPI.class, null, null, 6)).n1().hasBenefit("ccm_create_doc") == true) goto L9;
+        Log.i("CcmChatExportDocActionProvider", "don't has benefit");
+        return false;
+    L9:
+        throw null;
+    }
+
+    @Override // yya.i
+    public MessageActionType getType() {
+        return MessageActionType.EXPORT_MESSAGE_TO_DOC;
+    }
+
+    @Override // yya.i
+    public final boolean isEnable() {
+        throw null;
+    }
+
+    @Override // yya.i
+    public final void d(c r100) {
+        Intrinsics.checkNotNullParameter(r100, "actionControl");
+    }
+
+    @Override // yya.i
+    public final Drawable getIcon(Context r100) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        return UDIconUtils.getIconDrawable(r100, kac.a.b(R.drawable.ud_icon_file_link_word_outlined));
+    }
+
+    @Override // yya.i
+    public final String getLabel(Context r100) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        throw null;
+    }
+
+    @Override // yya.i
+    public final View getView(Context r100) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        return null;
+    }
+
+    @Override // yya.i
+    public final void b(View r100, boolean r101) {
+        Intrinsics.checkNotNullParameter(r100, "view");
+        throw null;
+    }
+}

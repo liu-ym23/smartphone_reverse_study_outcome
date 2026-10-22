@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ViewStub
+        android:id="@+id/deep_feed_no_shop_ability_container_stub"
+        android:layout="@layout/deep_feed_ability_no_shop_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <ViewStub
+        android:id="@+id/deep_feed_shop_ability_container_stub"
+        android:layout="@layout/deep_feed_ability_with_shop_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <com.bytedance.android.shopping.deepfeed.weights.DeepFeedProductAbilityBuyAndCart
+        android:id="@+id/infeed_product_buy_and_cart"
+        android:layout_width="225dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/ad_dot"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:src="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/infeed_product_buy_and_cart"
+        app:layout_constraintRight_toRightOf="parent"/>
+</merge>

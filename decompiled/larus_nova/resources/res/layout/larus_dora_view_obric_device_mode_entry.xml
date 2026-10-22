@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.layout.OUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    app:OUI_alpha_pressed="@color/Transparent">
+    <com.obric.oui.layout.OUIFrameLayout
+        android:id="@+id/dora_obric_device_mode_entry_dot"
+        android:background="@drawable/larus_dora_obric_device_mode_entry_indicator_disabled"
+        android:layout_width="8dp"
+        android:layout_height="8dp"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="?attr/larus_sp_14"
+        android:textColor="@color/oui_basic_text_1"
+        android:ellipsize="end"
+        android:id="@+id/dora_obric_device_mode_entry_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:layout_marginStart="6dp"/>
+    <com.obric.oui.image.OImage
+        android:id="@+id/dora_obric_device_mode_entry_chevron"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/larus_dora_obric_device_mode_entry_chevron"
+        android:contentDescription="@null"
+        android:layout_marginStart="2dp"
+        app:oui_imageStrokeEnabled="false"/>
+</com.obric.oui.layout.OUILinearLayout>

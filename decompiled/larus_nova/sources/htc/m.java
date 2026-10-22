@@ -1,0 +1,11 @@
+package htc;
+
+import com.bytedance.ee.bear.sheet.inputbar.editor.SheetInputData;
+import com.bytedance.mt.protector.impl.PatternProtector;
+
+/* JADX INFO: loaded from: classes41.dex */
+public final class m {
+    public static gtc.c a() {
+        return gtc.g.a("yaml", new gtc.g.f[]{gtc.g.i("scalar", new gtc.g.c[]{gtc.g.f(PatternProtector.compile("([\\-:]\\s*(?:![^\\s]+)?[ \\t]*[|>])[ \\t]*(?:((?:\\r?\\n|\\r)[ \\t]+)[^\\r\\n]+(?:\\2[^\\r\\n]+)*)"), true, false, "string")}), gtc.g.i("comment", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("#.*"))}), gtc.g.i("key", new gtc.g.c[]{gtc.g.f(PatternProtector.compile("(\\s*(?:^|[:\\-,\\[{\\r\\n?])[ \\t]*(?:![^\\s]+)?[ \\t]*)[^\\r\\n{\\[\\]},#\\s]+?(?=\\s*:\\s)"), true, false, "atrule")}), gtc.g.i("directive", new gtc.g.c[]{gtc.g.f(PatternProtector.compile("(^[ \\t]*)%.+", 8), true, false, "important")}), gtc.g.i(SheetInputData.InputData.DateType.DATETIME, new gtc.g.c[]{gtc.g.f(PatternProtector.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)(?:\\d{4}-\\d\\d?-\\d\\d?(?:[tT]|[ \\t]+)\\d\\d?:\\d{2}:\\d{2}(?:\\.\\d*)?[ \\t]*(?:Z|[-+]\\d\\d?(?::\\d{2})?)?|\\d{4}-\\d{2}-\\d{2}|\\d\\d?:\\d{2}(?::\\d{2}(?:\\.\\d*)?)?)(?=[ \\t]*(?:$|,|]|\\}))", 8), true, false, "number")}), gtc.g.i("boolean", new gtc.g.c[]{gtc.g.f(PatternProtector.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)(?:true|false)[ \\t]*(?=$|,|]|\\})", 10), true, false, "important")}), gtc.g.i("null", new gtc.g.c[]{gtc.g.f(PatternProtector.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)(?:null|~)[ \\t]*(?=$|,|]|\\})", 10), true, false, "important")}), gtc.g.i("string", new gtc.g.c[]{gtc.g.e(PatternProtector.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)(\"|')(?:(?!\\2)[^\\\\\\r\\n]|\\\\.)*\\2(?=[ \\t]*(?:$|,|]|\\}))", 8), true)}), gtc.g.i("number", new gtc.g.c[]{gtc.g.h(PatternProtector.compile("([:\\-,\\[{]\\s*(?:![^\\s]+)?[ \\t]*)[+-]?(?:0x[\\da-f]+|0o[0-7]+|(?:\\d+\\.?\\d*|\\.?\\d+)(?:e[+-]?\\d+)?|\\.inf|\\.nan)[ \\t]*(?=$|,|]|\\})", 10))}), gtc.g.i("tag", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("![^\\s]+"))}), gtc.g.i("important", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("[&*][\\w]+"))}), gtc.g.i("punctuation", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("---|[:\\[\\]{}\\-,|>?]|\\.\\.\\."))})});
+    }
+}

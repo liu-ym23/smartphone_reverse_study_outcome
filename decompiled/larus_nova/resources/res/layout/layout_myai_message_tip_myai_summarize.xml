@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.ui.layout.LKUIRoundableLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_ai_button_summarize"
+    android:background="@drawable/myai_message_tip_summarize_bg"
+    android:paddingLeft="8dp"
+    android:paddingTop="4dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:rl_radius="26dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_myai_icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ud_icon_myai_colorful"/>
+        <com.ss.android.lark.chatwindow.view.tip.MessageTipUDGradientTextView
+            android:textSize="14sp"
+            android:id="@+id/tv_myai_summarize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="@string/MyAI_IM_SummarizeUnread_Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ic_myai_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.larksuite.component.ui.layout.LKUIRoundableLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_float_base"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_kit_len_16">
+            <com.bytedance.ee.bear.widgets.universedesign.SpaceSettingGroupLayout
+                android:orientation="vertical"
+                android:id="@+id/subTiltleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/BitableSettingGroupLayoutStyle"/>
+            <com.bytedance.ee.bear.widgets.universedesign.SpaceSettingGroupLayout
+                android:orientation="vertical"
+                android:id="@+id/contentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/BitableSettingGroupLayoutStyle"/>
+        </LinearLayout>
+        <FrameLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/empty_layout"
+            android:background="@color/bg_body"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="344dp">
+            <com.bytedance.ee.bear.widgets.universedesign.SpaceEmptyState
+                android:id="@+id/emptyView"
+                android:paddingTop="@dimen/space_kit_len_16"
+                android:paddingBottom="@dimen/space_kit_len_16"
+                android:layout_height="match_parent"
+                app:ud_empty_desc="@string/Bitable_Mobile_CannotEditOption"
+                app:ud_empty_imageRes="@drawable/empty_search"
+                style="@style/SpaceEmptyStatusStyle"/>
+        </FrameLayout>
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

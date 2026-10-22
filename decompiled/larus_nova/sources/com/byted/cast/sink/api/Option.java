@@ -1,0 +1,84 @@
+package com.byted.cast.sink.api;
+
+/* JADX INFO: loaded from: classes43.dex */
+class Option {
+    public static final int BYTE_LINK_OPTION_1 = 393217;
+    public static final int BYTE_LINK_OPTION_10 = 393232;
+    public static final int BYTE_LINK_OPTION_11 = 393233;
+    public static final int BYTE_LINK_OPTION_12 = 393234;
+    public static final int BYTE_LINK_OPTION_13 = 393235;
+    public static final int BYTE_LINK_OPTION_14 = 393236;
+    public static final int BYTE_LINK_OPTION_15 = 393237;
+    public static final int BYTE_LINK_OPTION_16 = 393238;
+    public static final int BYTE_LINK_OPTION_17 = 393239;
+    public static final int BYTE_LINK_OPTION_18 = 393240;
+    public static final int BYTE_LINK_OPTION_19 = 393241;
+    public static final int BYTE_LINK_OPTION_2 = 393218;
+    public static final int BYTE_LINK_OPTION_20 = 393248;
+    public static final int BYTE_LINK_OPTION_21 = 393249;
+    public static final int BYTE_LINK_OPTION_22 = 393250;
+    public static final int BYTE_LINK_OPTION_23 = 393251;
+    public static final int BYTE_LINK_OPTION_24 = 393252;
+    public static final int BYTE_LINK_OPTION_25 = 393253;
+    public static final int BYTE_LINK_OPTION_26 = 393254;
+    public static final int BYTE_LINK_OPTION_27 = 393255;
+    public static final int BYTE_LINK_OPTION_28 = 393256;
+    public static final int BYTE_LINK_OPTION_29 = 393257;
+    public static final int BYTE_LINK_OPTION_3 = 393219;
+    public static final int BYTE_LINK_OPTION_30 = 393264;
+    public static final int BYTE_LINK_OPTION_31 = 393265;
+    public static final int BYTE_LINK_OPTION_32 = 393266;
+    public static final int BYTE_LINK_OPTION_33 = 393267;
+    public static final int BYTE_LINK_OPTION_34 = 393268;
+    public static final int BYTE_LINK_OPTION_35 = 393269;
+    public static final int BYTE_LINK_OPTION_36 = 393270;
+    public static final int BYTE_LINK_OPTION_37 = 393271;
+    public static final int BYTE_LINK_OPTION_38 = 393272;
+    public static final int BYTE_LINK_OPTION_39 = 393273;
+    public static final int BYTE_LINK_OPTION_4 = 393220;
+    public static final int BYTE_LINK_OPTION_40 = 393280;
+    public static final int BYTE_LINK_OPTION_41 = 393281;
+    public static final int BYTE_LINK_OPTION_42 = 393282;
+    public static final int BYTE_LINK_OPTION_43 = 393283;
+    public static final int BYTE_LINK_OPTION_44 = 393284;
+    public static final int BYTE_LINK_OPTION_45 = 393285;
+    public static final int BYTE_LINK_OPTION_46 = 393286;
+    public static final int BYTE_LINK_OPTION_47 = 393287;
+    public static final int BYTE_LINK_OPTION_48 = 393288;
+    public static final int BYTE_LINK_OPTION_49 = 393289;
+    public static final int BYTE_LINK_OPTION_5 = 393221;
+    public static final int BYTE_LINK_OPTION_50 = 393296;
+    public static final int BYTE_LINK_OPTION_52 = 393298;
+    public static final int BYTE_LINK_OPTION_53 = 393299;
+    public static final int BYTE_LINK_OPTION_54 = 393300;
+    public static final int BYTE_LINK_OPTION_55 = 393301;
+    public static final int BYTE_LINK_OPTION_57 = 393303;
+    public static final int BYTE_LINK_OPTION_58 = 393304;
+    public static final int BYTE_LINK_OPTION_59 = 393305;
+    public static final int BYTE_LINK_OPTION_6 = 393222;
+    public static final int BYTE_LINK_OPTION_60 = 393312;
+    public static final int BYTE_LINK_OPTION_61 = 393313;
+    public static final int BYTE_LINK_OPTION_62 = 393314;
+    public static final int BYTE_LINK_OPTION_63 = 393315;
+    public static final int BYTE_LINK_OPTION_64 = 393316;
+    public static final int BYTE_LINK_OPTION_7 = 393223;
+    public static final int BYTE_LINK_OPTION_8 = 393224;
+    public static final int BYTE_LINK_OPTION_9 = 393225;
+    public static final int DID_TYPE_CPUID = 3;
+    public static final int DID_TYPE_DEFAULT = 0;
+    public static final int DID_TYPE_ETHERNET = 2;
+    public static final int DID_TYPE_OPTION = 4;
+    public static final int DID_TYPE_WIFI = 1;
+    public static final int ETH_IP_TYPE = 0;
+    public static final int PERMISSION_MODE_IP = 3;
+    public static final int PERMISSION_MODE_PRESN = 1;
+    public static final int PERMISSION_MODE_SN = 2;
+    public static final int PIN_ALL = 100;
+    public static final int PIN_CLOUD = 1;
+    public static final int PIN_LOCAL = 2;
+    public static final int PIN_NONE = 0;
+    public static final int WIFI_IP_TYPE = 1;
+
+    public Option() {
+    }
+}

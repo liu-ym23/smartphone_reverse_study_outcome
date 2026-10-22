@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/expand_reference_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="?attr/larus_dp_15"
+        android:textColor="?attr/larus_neutral_50"
+        android:gravity="top|center_horizontal"
+        android:id="@+id/expand_all_think"
+        android:background="@drawable/larus_bg_expand_all_think_mask"
+        android:paddingTop="?attr/larus_dp_25"
+        android:paddingBottom="?attr/larus_dp_12"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"
+        android:text="@string/larus_deepThink_chat_label_expand"
+        app:layout_constraintBottom_toTopOf="@+id/view_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view_divider"
+        android:background="?attr/larus_base_2_overlay"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:srcCompat="?attr/larus_bg_line_divider"/>
+</merge>

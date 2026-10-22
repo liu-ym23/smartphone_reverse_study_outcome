@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="@+id/message_content_wrapper"
+    app:layout_constraintTop_toBottomOf="@+id/message_content_wrapper">
+    <FrameLayout
+        android:id="@+id/msg_edit_status_icon_wrapper"
+        android:layout_width="14dp"
+        android:layout_height="14dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_msg_edit_status_failed"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            app:srcCompat="@drawable/ud_icon_warning_red_colorful"/>
+        <com.ss.android.lark.chatwindow.view.widget.DelayDisplayProgressbar
+            android:layout_gravity="bottom"
+            android:id="@+id/progressbar_msg_edit_status"
+            android:visibility="gone"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/primary_fill_default"
+            android:indeterminateTintMode="src_atop"/>
+    </FrameLayout>
+    <TextView
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_msg_edit_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

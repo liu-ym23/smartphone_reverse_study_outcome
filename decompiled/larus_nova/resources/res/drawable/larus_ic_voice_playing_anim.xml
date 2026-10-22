@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="21dp"
+    android:width="20dp"
+    android:autoMirrored="true"
+    android:viewportWidth="20"
+    android:viewportHeight="21">
+    <path
+        android:fillColor="@color/larus_primary_50_day"
+        android:pathData="M3.5,7L3.5,7A1,1 0,0 1,4.5 8L4.5,13A1,1 0,0 1,3.5 14L3.5,14A1,1 0,0 1,2.5 13L2.5,8A1,1 0,0 1,3.5 7z"/>
+    <path
+        android:fillColor="@color/larus_primary_50_day"
+        android:pathData="M8,4.5L8,4.5A1,1 0,0 1,9 5.5L9,15.5A1,1 0,0 1,8 16.5L8,16.5A1,1 0,0 1,7 15.5L7,5.5A1,1 0,0 1,8 4.5z"/>
+    <path
+        android:fillColor="@color/larus_primary_50_day"
+        android:pathData="M12.5,2.5L12.5,2.5A1,1 0,0 1,13.5 3.5L13.5,17.5A1,1 0,0 1,12.5 18.5L12.5,18.5A1,1 0,0 1,11.5 17.5L11.5,3.5A1,1 0,0 1,12.5 2.5z"/>
+    <path
+        android:fillColor="@color/larus_primary_50_day"
+        android:pathData="M17,6.5L17,6.5A1,1 0,0 1,18 7.5L18,13.5A1,1 0,0 1,17 14.5L17,14.5A1,1 0,0 1,16 13.5L16,7.5A1,1 0,0 1,17 6.5z"/>
+</vector>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/ttlive_ktv_seat_list_root"
+    android:paddingTop="4dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="68dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/ktv_seat_list"
+        android:fadingEdgeLength="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:requiresFadingEdge="horizontal"/>
+</LinearLayout>

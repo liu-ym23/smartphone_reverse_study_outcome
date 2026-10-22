@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frequent_button_container"
+    android:visibility="visible"
+    android:layout_width="@dimen/ttlive_input_dialog_new_input_container_height"
+    android:layout_height="@dimen/ttlive_input_dialog_new_input_container_height">
+    <TextView
+        android:id="@+id/control_button"
+        android:background="@drawable/ttlive_input_frequently_used_comment_entrance"
+        android:layout_width="@dimen/ttlive_input_dialog_new_input_container_height"
+        android:layout_height="@dimen/ttlive_input_dialog_new_input_container_height"/>
+    <ImageView
+        android:id="@+id/red_dot"
+        android:background="@drawable/ttlive_new_portrait_control_red_dot"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="34dp"/>
+</FrameLayout>

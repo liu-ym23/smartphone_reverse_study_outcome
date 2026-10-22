@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.widget.photopickernew.PhotoInsertToInputView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/photo_picker_insert_to_input_overlay"
+    android:paddingTop="8dp"
+    android:paddingBottom="10dp"
+    android:visibility="gone"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:importantForAccessibility="no"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/layout_photo_insert_message_action"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ud_icon_add_outlined"
+            app:tint="@color/static_white"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/static_white"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text="@string/Lark_IM_Attach_InsertIntoMessage_Button"
+            android:maxLines="1"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</com.ss.android.lark.widget.photopickernew.PhotoInsertToInputView>

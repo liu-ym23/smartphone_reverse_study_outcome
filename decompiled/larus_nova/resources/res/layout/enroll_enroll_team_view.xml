@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/stage_group_area"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/neutral_100"
+        android:gravity="center"
+        android:id="@+id/stage_main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/enroll_MAIN_TEXT_STYLE"/>
+    <TextView
+        android:textColor="@color/neutral_100"
+        android:id="@+id/stage_sub_text_line1"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:EnrollSubIndex="1"
+        style="@style/enroll_SUB_TEXT_STYLE_SMALL"/>
+    <TextView
+        android:textColor="@color/neutral_100"
+        android:id="@+id/stage_sub_text_line2"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:EnrollSubIndex="2"
+        style="@style/enroll_SUB_TEXT_STYLE_SMALL"/>
+    <TextView
+        android:textColor="@color/neutral_100"
+        android:id="@+id/stage_sub_text_line3"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:EnrollSubIndex="3"
+        style="@style/enroll_SUB_TEXT_STYLE_SMALL"/>
+</FrameLayout>

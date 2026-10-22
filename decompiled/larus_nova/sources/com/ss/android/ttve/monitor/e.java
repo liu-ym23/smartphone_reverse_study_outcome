@@ -1,0 +1,71 @@
+package com.ss.android.ttve.monitor;
+
+import com.bytedance.mira.exception.PluginClassNotFoundException;
+import com.larus.mirabridge.impl.lancet.FastClassNotFoundHandler;
+import com.larus.mirabridge.impl.lancet.MiraPluginFix;
+import com.ss.android.socialbase.downloader.constants.MonitorConstants;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.concurrent.ConcurrentHashMap;
+import me.ele.lancet.base.annotations.Skip;
+
+/* JADX INFO: loaded from: classes38.dex */
+public final class e {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static String f449934a;
+
+    @Skip({"com.larus.mirabridge.impl.lancet+", "com.bytedance.mira.hook.delegate.DyMiraClassLoader", "com.bytedance.mira.hook.delegate.MiraClassLoader", "com.bytedance.ies.stark.util.NReflectUtils", "-com.bytedance.mira.core.PluginClassLoader", "com.bytedance.common.jato.util.DeviceInfoUtils", "com.bytedance.mira.helper.ClassLoaderHelper", "com.bytedance.mira.core.opt.res+"})
+    public static Class a() throws ClassNotFoundException {
+        ConcurrentHashMap<String, FastClassNotFoundHandler.Status> r100 = FastClassNotFoundHandler.f359329a;
+        FastClassNotFoundHandler.Status r101 = FastClassNotFoundHandler.Status.STATUS_NOTING;
+        if (el9.a.a() == true) goto L34;
+        Class<?> r102 = Class.forName("android.os.SystemProperties");     // Catch: Throwable -> L8
+        if (r101 != FastClassNotFoundHandler.Status.STATUS_NEED_CHECK) goto L7;
+        FastClassNotFoundHandler.a("android.os.SystemProperties");     // Catch: Throwable -> L8
+    L7:
+        return r102;
+    L8:
+        th = move-exception;
+        if (r101 != FastClassNotFoundHandler.Status.STATUS_NEED_CHECK) goto L12;
+        FastClassNotFoundHandler.b("android.os.SystemProperties");
+    L12:
+        throw th;
+    L34:
+        Class<?> r103 = Class.forName("android.os.SystemProperties");     // Catch: Throwable -> L17
+        if (r101 != FastClassNotFoundHandler.Status.STATUS_NEED_CHECK) goto L16;
+        FastClassNotFoundHandler.a("android.os.SystemProperties");     // Catch: Throwable -> L17
+    L16:
+        return r103;
+    L17:
+        th = move-exception;
+        if (r101 != FastClassNotFoundHandler.Status.STATUS_NEED_CHECK) goto L22;
+        FastClassNotFoundHandler.b("android.os.SystemProperties");
+    L22:
+        if ((th instanceof PluginClassNotFoundException) == false) goto L24;
+        throw th;
+    L24:
+        if ((th instanceof ClassNotFoundException) == true) goto L30;
+        if ((th instanceof NoClassDefFoundError) == true) goto L30;
+        throw th;
+    L30:
+        return MiraPluginFix.forName("android.os.SystemProperties");
+    }
+
+    public static String c() {
+        Class r100 = a();     // Catch: Exception -> L6
+        return (String) r100.getMethod(MonitorConstants.CONNECT_TYPE_GET, new Class[]{String.class, String.class}).invoke(r100, new Object[]{"ro.board.platform", "unknown"});
+    L9:
+        return "unknown";
+    }
+
+    public static void b(Reader r100) {
+        if (r100 == null) goto L10;
+        r100.close();     // Catch: IOException -> L5
+        return;
+    L5:
+        e = move-exception;
+        e.printStackTrace();
+        return;
+    }
+}

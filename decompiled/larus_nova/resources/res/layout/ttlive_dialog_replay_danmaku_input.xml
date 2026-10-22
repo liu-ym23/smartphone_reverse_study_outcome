@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.chatroom.vs_base.base.view.InputLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <FrameLayout
+        android:id="@+id/send_danmu_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.bytedance.android.livesdk.chatroom.vs_base.base.view.InputLinearLayout>

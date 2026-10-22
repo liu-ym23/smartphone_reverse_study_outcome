@@ -1,0 +1,30 @@
+package com.bytedance.android.live.effect.sticker.ui.stickerdialogv2;
+
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes45.dex */
+public class x0 implements b {
+    public x0() {
+    }
+
+    @Override // com.bytedance.android.live.effect.sticker.ui.stickerdialogv2.b
+    public final void a(f0 r100) {
+        Intrinsics.checkNotNullParameter(r100, "status");
+    }
+
+    @Override // com.bytedance.android.live.effect.sticker.ui.stickerdialogv2.b
+    public final void b() {
+    }
+
+    @Override // com.bytedance.android.live.effect.sticker.ui.stickerdialogv2.b
+    public final void c() {
+    }
+
+    @Override // com.bytedance.android.live.effect.sticker.ui.stickerdialogv2.b
+    public final void g() {
+    }
+
+    @Override // com.bytedance.android.live.effect.sticker.ui.stickerdialogv2.b
+    public final void h() {
+    }
+}

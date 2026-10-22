@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ai_note_list"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/text_placeholder"
+        android:gravity="start|top"
+        android:id="@+id/ai_note_empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/View_PersonalNotes_RecordIdeasAIComplete_Placeholder"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:lineHeight="24dp"/>
+</FrameLayout>

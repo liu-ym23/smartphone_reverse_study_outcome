@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.widgets.BaseTitleBar
+        android:id="@+id/vote_option_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:widget_widgets_tb_divider_visible="false"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/vote_option_members_refresh_layout"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableLoadMore="false"
+            app:srlEnableOverScrollBounce="false"
+            app:srlEnableOverScrollDrag="false"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlEnableRefresh="true">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vote_option_members_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <com.bytedance.ee.bear.facade.common.empty.EmptyView
+            android:id="@+id/vote_option_member_ev"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

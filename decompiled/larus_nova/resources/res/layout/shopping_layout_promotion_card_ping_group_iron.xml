@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root_view"
+    android:background="@drawable/ec_bg_pin_group_background"
+    android:paddingRight="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="16dp"
+    android:paddingEnd="4dp">
+    <RelativeLayout
+        android:id="@+id/rl_group_people"
+        android:layout_width="50dp"
+        android:layout_height="14dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="1dp"/>
+    <ImageView
+        android:id="@+id/iv_tag"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/ec_icon_ping_group"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="1dp"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/shopping_color_FF6A00"
+        android:gravity="center"
+        android:id="@+id/tv_group_people_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

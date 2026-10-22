@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_tab_root"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/view_tab_indicator"
+        android:background="@drawable/aos_feed_top_tab_indicator_bg"
+        android:layout_width="@dimen/homepage_common_tab_indicator_width"
+        android:layout_height="2dp"
+        android:layout_marginTop="9dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="2dp"/>
+</RelativeLayout>

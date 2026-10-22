@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.ugc.aweme.discover.commodity.holder.guidesearch.customview.OverScrollLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/gsOverScrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_vertical"
+            android:id="@+id/gsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.ss.android.ugc.aweme.discover.commodity.holder.guidesearch.customview.OverScrollLayout>
+</FrameLayout>

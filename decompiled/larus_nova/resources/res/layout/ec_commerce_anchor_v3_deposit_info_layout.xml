@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@color/shopping_color_9B2DF5"
+        android:id="@+id/anchor_v3_tv_presale_deposit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/commerce_color_57161823"
+        android:id="@+id/anchor_v3_tv_presale_start_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

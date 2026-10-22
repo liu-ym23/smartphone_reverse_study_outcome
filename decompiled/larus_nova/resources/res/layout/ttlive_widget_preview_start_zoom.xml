@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="36dp"
+    android:layout_height="88dp"
+    android:layout_marginRight="12dp">
+    <TextView
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/zoom_tv_upper"
+        android:background="@drawable/ttlive_bg_start_zoom_focus"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:text="1.0x"/>
+    <TextView
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/zoom_tv2_lower"
+        android:background="@drawable/ttlive_bg_start_zoom_focus"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:text="0.5x"/>
+</LinearLayout>

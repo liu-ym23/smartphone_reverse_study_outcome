@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_goods_detail_status_view_skeleton_view_native"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="52dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/poi_goods_detail_status_view_skeleton_view_native_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"/>
+        <com.bytedance.locallife.pdp.view.ShimmerView
+            android:id="@+id/poi_goods_detail_status_view_skeleton_view_native_view"
+            android:background="@drawable/poi_goods_detail_status_view_skeleton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"/>
+    </LinearLayout>
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:id="@+id/poi_goods_detail_status_view_skeleton_view_native_footer"
+        android:background="@drawable/poi_goods_detail_status_view_skeleton_footer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        android:text="立即购买"
+        android:alpha="0.5"/>
+</FrameLayout>

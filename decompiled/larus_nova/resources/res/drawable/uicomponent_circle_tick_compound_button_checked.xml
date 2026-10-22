@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:height="@dimen/uicomponent_circle_tick_compound_button_height"
+                android:width="@dimen/uicomponent_circle_tick_compound_button_width"/>
+            <solid android:color="@color/ttlive_std_brand"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/uicomponent_tick_small"
+            android:antialias="true"
+            android:dither="true"/>
+    </item>
+</layer-list>

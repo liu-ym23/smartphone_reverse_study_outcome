@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/order_list_error_cl_root"
+    android:background="@color/order_list_F5F6F9"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/order_list_error_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/shopping_ic_net_error"/>
+        <TextView
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/order_list_161823"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/order_list_net_error_hint"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/order_list_99161823"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/order_list_net_error_desc"/>
+        <TextView
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/order_list_161823"
+            android:gravity="center"
+            android:id="@+id/order_list_error_retry"
+            android:background="@drawable/shopping_bg_reconnect"
+            android:layout_width="165dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/order_list_retry"/>
+    </LinearLayout>
+</FrameLayout>

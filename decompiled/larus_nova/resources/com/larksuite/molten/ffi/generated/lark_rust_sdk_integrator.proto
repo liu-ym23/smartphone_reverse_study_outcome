@@ -1,0 +1,58 @@
+/* Generated code, DO NOT EDIT.
+ * source: lark_rust_sdk_integrator.yaml
+ */
+
+syntax = "proto2";
+
+package lark_rust_sdk_integrator.proto;
+
+message CommandParam {
+    required string command_key = 1;
+}
+
+message CommandResult {
+    required string command_result = 1;
+}
+
+message UserForegroundScope {
+    required uint64 container_id = 1;
+}
+
+
+
+
+
+
+
+message FuncParamsX70b96d98d2317b24 
+{
+    required CommandParam param = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX925422bfc7fd1ded 
+{
+    required UserForegroundScope arg_0 = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX0f29c4ea054a0819 
+{
+    required CommandResult ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX719a06426a131feb 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXbb91683c8a1151f8 
+{
+     optional int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXbdb74b4af0435ac5 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXc0aaa36386691e99 
+{
+     optional int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

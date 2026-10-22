@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ec.core.widget.RoundedRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/anchor_v3_guess_u_like_coupon_area"
+    android:background="@drawable/commerce_anchor_v3_coupon_bg_small"
+    android:padding="0dp"
+    android:layout_width="wrap_content"
+    android:layout_height="18dp"
+    app:rounded_radius="4dp">
+    <TextView
+        android:textColor="@color/commerce_color_bf_brand"
+        android:id="@+id/anchor_v3_coupon"
+        android:padding="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="14dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="14dp"
+        style="@style/font_size_22"/>
+</com.bytedance.android.ec.core.widget.RoundedRelativeLayout>

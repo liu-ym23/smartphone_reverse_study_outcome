@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "nodes": [
+        {
+          "nodes": [],
+          "config": {
+            "title": {
+              "type": "string_type",
+              "value": "dora_device_list_lite_title_cn"
+            },
+            "__id__": 785327663345733,
+            "action": {
+              "action_url": "sslocal://flow/dora/bind_device?page_key=bind_device_v2&product_id=1",
+              "action_type": "internal_jump"
+            },
+            "subtitle": {
+              "type": "string_type",
+              "value": "dora_device_list_lite_subtitle_cn"
+            },
+            "image_link": {
+              "remote_info": {
+                "dark_url": [
+                  "https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_dora_lite_device_list_light.png"
+                ],
+                "light_url": [
+                  "https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_dora_lite_device_list_light.png"
+                ]
+              }
+            },
+            "__card_id__": 5967360002,
+            "__version__": "0.1.3",
+            "__card_instance_id__": "6938113794"
+          },
+          "node_key": "dora_card_lite_item",
+          "node_name": "Lite Device List Entry V2",
+          "node_type": "card",
+          "template_type": "product_item"
+        }
+      ],
+      "config": {
+        "__id__": 785327599976517
+      },
+      "node_name": "layer_1",
+      "node_type": "layer"
+    }
+  ],
+  "config": {
+    "__id__": 785327157489733,
+    "__branch__": "master",
+    "__global_node_index_map__": {
+      "tab": 1,
+      "card": 3,
+      "page": 1,
+      "tabs": 1,
+      "layer": 4,
+      "nav_bar": 1,
+      "subpage": 1,
+      "subpages": 1
+    }
+  },
+  "node_key": "device_list_p_v2",
+  "node_name": "P Device List Page",
+  "node_type": "page",
+  "dsl_version": "2.0.0"
+}

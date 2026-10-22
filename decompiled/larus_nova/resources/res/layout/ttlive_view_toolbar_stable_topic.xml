@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ttlive_vs_stable_topic_icon_container"
+    android:clipChildren="false"
+    android:layout_width="36dp"
+    android:layout_height="51dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/ttlive_vs_topic_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:actualImageScaleType="centerCrop"
+        app:fadeDuration="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:placeholderImage="@drawable/ttlive_vs_ic_action_btn_topic"/>
+    <View
+        android:id="@+id/ttlive_vs_topic_view_red_dot"
+        android:background="@drawable/ttlive_ic_filter_red_point"
+        android:visibility="gone"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        app:layout_constraintRight_toRightOf="@+id/ttlive_vs_topic_icon"
+        app:layout_constraintTop_toTopOf="@+id/ttlive_vs_topic_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

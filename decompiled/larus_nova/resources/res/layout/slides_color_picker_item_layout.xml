@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.ee.bear.slides.toolbar.factory.picker.colorpicker.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_gravity="center"
+        android:id="@+id/view_selected_border"
+        android:background="@drawable/slides_color_picker_selected_border"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.ee.bear.slides.toolbar.factory.picker.colorpicker.CircleColorView
+        android:layout_gravity="center"
+        android:id="@+id/circle_color_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"/>
+</com.bytedance.ee.bear.slides.toolbar.factory.picker.colorpicker.SquareFrameLayout>

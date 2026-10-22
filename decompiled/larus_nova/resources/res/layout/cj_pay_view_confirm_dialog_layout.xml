@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/cj_pay_bg_common_dialog_radius_12"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/dialog_close_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/cj_pay_icon_titlebar_left_close_noise_reduction"/>
+    <TextView
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/cj_pay_color_black_161823"
+        android:gravity="center"
+        android:id="@+id/dialog_title"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+    <com.android.ttcjpaysdk.base.ui.widget.LoadingButton
+        android:gravity="center"
+        android:id="@+id/dialog_btn"
+        android:layout_width="240dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/dialog_title"
+        android:layout_centerHorizontal="true"
+        app:btnTextColor="@color/cj_pay_color_white"
+        app:btnTextSize="15sp"
+        app:loadingHeight="20dp"
+        app:loadingWidth="20dp"/>
+</RelativeLayout>

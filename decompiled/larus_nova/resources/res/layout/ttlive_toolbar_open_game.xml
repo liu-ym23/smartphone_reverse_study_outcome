@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/game_exit"
+    android:background="@drawable/ttlive_bg_game_exit"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_guess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        fresco:actualImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/ttlive_ic_mini_game"/>
+</FrameLayout>

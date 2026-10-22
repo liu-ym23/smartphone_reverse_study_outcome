@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.button.OButton xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:visibility="gone"
+    android:layout_width="0dp"
+    android:layout_height="?attr/larus_dp_52"
+    android:layout_marginLeft="?attr/larus_dp_24"
+    android:layout_marginRight="?attr/larus_dp_24"
+    android:text="@string/larus_dora_onboarding_connect_cn"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/dora_onboarding_dialog_mv_layout"
+    app:layout_constraintWidth_max="?attr/larus_dp_420"
+    style="@style/OStyleV2.OButton.L.Standard.Primary"/>

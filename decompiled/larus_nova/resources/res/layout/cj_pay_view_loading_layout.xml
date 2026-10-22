@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cj_pay_loading_root_layout"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/cj_pay_loading_view"
+        android:background="@color/cj_pay_color_trans"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:indeterminateOnly="true"
+        android:indeterminateDrawable="@drawable/cj_pay_bg_loading_circle"
+        android:indeterminateDuration="500"
+        android:indeterminateBehavior="repeat"/>
+</FrameLayout>

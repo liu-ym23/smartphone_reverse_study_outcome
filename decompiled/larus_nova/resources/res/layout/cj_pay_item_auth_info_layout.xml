@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cj_pay_auth_info_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/cj_pay_auth_info_icon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="@dimen/cj_pay_padding_3"
+        android:layout_marginBottom="@dimen/cj_pay_padding_3"
+        android:src="@drawable/cj_pay_icon_authorization_correct"/>
+    <TextView
+        android:textSize="@dimen/cj_pay_font_size_13"
+        android:textColor="@color/cj_pay_color_gray_8a8b91"
+        android:id="@+id/cj_pay_auth_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cj_pay_padding_8"
+        android:layout_toRightOf="@+id/cj_pay_auth_info_icon"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="52dp">
+    <View
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/photo_search_indicator_bar"
+        android:background="@drawable/search_photo_bg_sheet_line"
+        android:visibility="invisible"
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="6dp"/>
+    <TextView
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#161823"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/photo_search_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/photo_search_title_close"
+        android:visibility="invisible"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/photo_search_round_close"/>
+</FrameLayout>

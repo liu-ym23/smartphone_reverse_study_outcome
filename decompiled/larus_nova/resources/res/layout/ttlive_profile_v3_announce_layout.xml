@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/new_profile_button_root"
+    android:layout_width="match_parent"
+    android:layout_height="19dp"
+    android:layout_marginTop="4dp">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/new_profile_button_left"
+        android:background="@drawable/ttlive_bg_red_round"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="4dp"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_new_profile_black"
+        android:gravity="center"
+        android:id="@+id/tv_announce_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="直播预告："
+        android:includeFontPadding="false"
+        android:layout_marginStart="6.5dp"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_new_profile_black"
+        android:gravity="center"
+        android:id="@+id/tv_announce_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="预约"
+        android:layout_marginStart="7dp"/>
+</LinearLayout>

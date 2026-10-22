@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/larus_video_data_model_setting_1575666243"
+    android:background="@color/larus_base_1_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/larus_layout_common_padding"
+        android:paddingEnd="@dimen/larus_layout_common_padding">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/root_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.larus.bmhome.view.item.ItemGroup
+                android:id="@+id/video_search_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

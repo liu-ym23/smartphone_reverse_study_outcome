@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.uaigc.createpage.bussiness.remove.widget.PaintSizeControllerView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/paint_size_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_44"
+        android:layout_weight="1"/>
+    <View
+        android:layout_gravity="center_vertical"
+        android:background="?attr/larus_neutral_transparent_2"
+        android:layout_width="?attr/larus_dp_1"
+        android:layout_height="?attr/larus_dp_20"
+        android:layout_marginLeft="?attr/larus_dp_16"
+        android:layout_marginRight="?attr/larus_dp_16"
+        android:layout_marginHorizontal="?attr/larus_dp_16"/>
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/undo_btn"
+        android:layout_width="?attr/larus_dp_44"
+        android:layout_height="?attr/larus_dp_44"
+        android:alpha="0.3">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:enabled="false"
+            android:layout_gravity="center"
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24"
+            app:srcCompat="?attr/larus_ic_flow_undo_default"
+            app:tint="?attr/larus_neutral_100"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/redo_btn"
+        android:layout_width="?attr/larus_dp_44"
+        android:layout_height="?attr/larus_dp_44"
+        android:alpha="0.3">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:enabled="false"
+            android:layout_gravity="center"
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24"
+            app:srcCompat="?attr/larus_ic_flow_redo_default"
+            app:tint="?attr/larus_neutral_100"/>
+    </FrameLayout>
+</merge>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.venus.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingTop="14dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="18dp"
+    android:layout_width="wrap_content"
+    android:layout_height="68dp"
+    app:larus_sc_cornerRadius="18dp"
+    app:larus_sc_fillColor="@color/white"
+    app:larus_sc_shadow_blur_radius="16dp"
+    app:larus_sc_shadow_color="@color/live_tutor_restart_pop_shadow"
+    app:larus_sc_shadow_dy="2dp">
+    <TextView
+        android:textSize="@dimen/dp_14"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_tip"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/larus_tutor_continuing_from_left_cn"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:layout_marginStart="14dp"/>
+    <View
+        android:background="@color/larus_neutral_transparent_3_day"
+        android:layout_width="1dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"/>
+    <TextView
+        android:textSize="@dimen/dp_14"
+        android:textColor="@color/larus_primary_50_day"
+        android:gravity="center"
+        android:id="@+id/tb_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_tutor_restart_explanation_cn"
+        android:layout_marginEnd="@dimen/dp_16"/>
+</com.larus.common_ui.venus.ShapeLinearLayout>

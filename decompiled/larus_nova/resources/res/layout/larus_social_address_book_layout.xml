@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/larus_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:larus_status_bar_allow_zero="false">
+    <androidx.legacy.widget.Space
+        android:id="@+id/side_bar_margin"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_0"/>
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/title"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"/>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

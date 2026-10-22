@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"/>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:paddingTop="?attr/larus_dp_8"
+        android:paddingBottom="?attr/larus_dp_8"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/larus_layout_common_padding"
+        android:paddingEnd="@dimen/larus_layout_common_padding"
+        android:paddingVertical="?attr/larus_dp_8">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/container"
+            android:paddingBottom="?attr/larus_dp_56"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.larus.bmhome.view.item.ItemGroupTitle
+                android:id="@+id/prompt_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prompt Info"/>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:id="@+id/prompt_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/prompt_debug"
+                    android:background="?attr/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prompt Detail"
+                    android:textFontWeight="500"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroupTitle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message Info"/>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:id="@+id/message_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/message_id"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message Id"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/message_create_time_ts"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create Timestamp"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/message_create_time_date"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create Time"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/message_is_new_block"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New Block"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/message_is_block"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Is Block"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/message_log_id"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log id"
+                    android:textFontWeight="500"
+                    app:larus_describe_text=""/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/message_asr_log_id"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ASR Log ID"
+                    android:textFontWeight="500"
+                    app:larus_describe_text=""/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/message_content"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message Content"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/message_think_content"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message Thinking Content"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/message_content_block"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message Content Block"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/agent_id"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agent Id"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/agent_name"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agent Name"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/message_info"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message Info"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/message_extra"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message Extra"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/message_search_reference"
+                    android:background="?attr/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message_Search_Reference"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/message_biz_info"
+                    android:background="?attr/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message_Biz_Info"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/message_transformer"
+                    android:background="@drawable/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Transformer Type"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroupTitle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conversation Info"/>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:id="@+id/conversation_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/conversation_id"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Conversation Id"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/conversation_info"
+                    android:background="?attr/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Conversation Info"
+                    android:textFontWeight="500"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroupTitle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bot Info"/>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:id="@+id/bot_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/bot_id"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bot Id"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/bot_language"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bot Language"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/bot_voice"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bot Voice"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/bot_model"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bot Model"
+                    android:textFontWeight="500"
+                    app:larus_describe_text="1314520"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/bot_info"
+                    android:background="?attr/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bot Info"
+                    android:textFontWeight="500"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroupTitle
+                android:id="@+id/audio_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Audio Info"/>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:id="@+id/audio_group"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <com.larus.bmhome.view.item.ItemTextDescView
+                    android:id="@+id/vui_session_type"
+                    android:background="@drawable/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Session Type"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/vui_task_id"
+                    android:background="?attr/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Audio Debug Tool"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/vui_current_task"
+                    android:background="?attr/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="最新VUI信息"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemGroup
+                    android:id="@+id/asr_group"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.larus.bmhome.view.item.ItemGroupTitle
+                        android:id="@+id/asr_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ASR"/>
+                    <com.larus.bmhome.view.item.ItemTextArrow
+                        android:id="@+id/asr_task_id"
+                        android:background="?attr/larus_bg_item_selector_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ASR Task ID"
+                        android:textFontWeight="500"
+                        app:larus_describe_text="1314520"/>
+                    <com.larus.bmhome.view.item.ItemTextArrow
+                        android:id="@+id/asr_task_params"
+                        android:background="?attr/larus_bg_item_selector_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ASR Task Params"
+                        android:textFontWeight="500"
+                        app:larus_describe_text="1314520"/>
+                    <com.larus.bmhome.view.item.ItemTextArrow
+                        android:id="@+id/asr_audio_file"
+                        android:background="?attr/larus_bg_item_selector_last"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ASR File Location"
+                        android:textFontWeight="500"/>
+                </com.larus.bmhome.view.item.ItemGroup>
+                <com.larus.bmhome.view.item.ItemGroup
+                    android:id="@+id/tts_group"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.larus.bmhome.view.item.ItemGroupTitle
+                        android:id="@+id/tts_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TTS"/>
+                    <com.larus.bmhome.view.item.ItemTextArrow
+                        android:id="@+id/tts_task_id"
+                        android:background="?attr/larus_bg_item_selector_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TTS Task ID"
+                        android:textFontWeight="500"
+                        app:larus_describe_text="1314520"/>
+                    <com.larus.bmhome.view.item.ItemTextArrow
+                        android:id="@+id/tts_task_params"
+                        android:background="?attr/larus_bg_item_selector_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TTS Task Params"
+                        android:textFontWeight="500"
+                        app:larus_describe_text="1314520"/>
+                    <com.larus.bmhome.view.item.ItemTextArrow
+                        android:id="@+id/tts_audio_file"
+                        android:background="?attr/larus_bg_item_selector_last"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TTS File Location"
+                        android:textFontWeight="500"/>
+                    <com.larus.bmhome.view.item.ItemTextArrow
+                        android:id="@+id/tts_play_file"
+                        android:background="?attr/larus_bg_item_selector_last"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TTS Play File Location"
+                        android:textFontWeight="500"/>
+                </com.larus.bmhome.view.item.ItemGroup>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroupTitle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"/>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <com.larus.bmhome.view.item.ItemTextToggle
+                    android:id="@+id/typewriter_switch"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Typewriter Switch"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/insert_local_creation_mock"
+                    android:background="?attr/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Insert Local Creation Mock Messages"
+                    android:textFontWeight="500"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/develop_tool"
+                    android:background="?attr/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Develop Tool"
+                    android:textFontWeight="500"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <TextView
+                    android:id="@+id/prompt_cahce_info"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Typewriter Switch"
+                    android:textFontWeight="500"/>
+                <TextView
+                    android:id="@+id/welcome_info"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textFontWeight="500"/>
+                <TextView
+                    android:textSize="?attr/larus_dp_15"
+                    android:textColor="@color/larus_danger_50"
+                    android:id="@+id/clear_cache"
+                    android:background="?attr/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/larus_clear_context"
+                    android:textFontWeight="500"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

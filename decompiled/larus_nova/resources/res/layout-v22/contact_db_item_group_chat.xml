@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/group_item_root"
+    android:background="@drawable/contact_db_contact_item_bg_selector"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.ui.imageview.LKUIRoundedImageView2
+        android:id="@+id/group_avatar_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/Lark_Legacy_GroupChat"
+        app:border_width="0dp"
+        app:oval="true"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/flow_ud_neutral_100"
+        android:ellipsize="end"
+        android:id="@+id/group_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:textFontWeight="500"/>
+</LinearLayout>

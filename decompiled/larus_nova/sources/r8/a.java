@@ -1,0 +1,26 @@
+package r8;
+
+/* JADX INFO: loaded from: classes43.dex */
+public final class a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public int f536487a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public String f536488b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public String f536489c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public String f536490d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public long f536491e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public String f536492f;
+
+    public a() {
+    }
+}

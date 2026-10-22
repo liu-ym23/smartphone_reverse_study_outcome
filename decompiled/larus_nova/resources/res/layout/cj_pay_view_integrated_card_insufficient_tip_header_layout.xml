@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_card_insufficient_tip_layout"
+    android:background="#0ffe2c55"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.android.ttcjpaysdk.base.theme.widget.CJPayLightTextView
+        android:textSize="12sp"
+        android:gravity="left"
+        android:id="@+id/cj_pay_card_insufficient_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cj_pay_padding_16"
+        android:layout_marginTop="@dimen/cj_pay_padding_10"
+        android:layout_marginRight="@dimen/cj_pay_padding_16"
+        android:layout_marginBottom="@dimen/cj_pay_padding_10"
+        android:text="@string/cj_pay_card_insufficient_tip"
+        android:maxLines="2"/>
+</LinearLayout>

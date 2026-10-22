@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larus.ugc.feed.impl.widget.UnresponsiveRecyclerView
+        android:id="@+id/loading_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/retry_view"
+        android:paddingTop="?attr/larus_dp_170"
+        android:paddingBottom="?attr/larus_dp_170"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="?attr/larus_dp_60"
+            android:layout_height="?attr/larus_dp_60"
+            android:src="@drawable/larus_ic_refresh"/>
+        <TextView
+            android:textSize="?attr/larus_dp_14"
+            android:textColor="@color/larus_neutral_100"
+            android:id="@+id/refresh_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_24"
+            android:text="@string/larus_chat_list_load_failed"/>
+    </LinearLayout>
+</merge>

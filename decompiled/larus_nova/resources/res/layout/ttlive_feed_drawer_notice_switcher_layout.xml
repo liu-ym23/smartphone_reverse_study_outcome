@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+    <FrameLayout
+        android:background="@drawable/ttlive_feed_drawer_bg_notice"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+        <com.bytedance.android.livesdk.feed.ui.NoticeViewSwitcher
+            android:id="@+id/switcher_notice"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"/>
+    </FrameLayout>
+</FrameLayout>

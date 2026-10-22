@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/more_function_container"
+    android:background="@drawable/ttlive_bg_interactivity_share_panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/function_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/ttlive_more_panel_button_left_and_right_margin"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="@dimen/ttlive_more_panel_button_left_and_right_margin"
+        android:layout_marginBottom="12dp"
+        android:overScrollMode="never"/>
+</LinearLayout>

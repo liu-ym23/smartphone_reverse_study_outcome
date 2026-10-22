@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:orientation="horizontal"
+        android:id="@+id/sticker_beauty_recycle_view"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <com.bytedance.android.live.uikit.recyclerview.LoadingStatusView
+        android:id="@+id/sticker_beauty_loading_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sticker_beauty_recycle_view"
+        app:layout_constraintEnd_toEndOf="@+id/sticker_beauty_recycle_view"
+        app:layout_constraintStart_toStartOf="@+id/sticker_beauty_recycle_view"
+        app:layout_constraintTop_toTopOf="@+id/sticker_beauty_recycle_view"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

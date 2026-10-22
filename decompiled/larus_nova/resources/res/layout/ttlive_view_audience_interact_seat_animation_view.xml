@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/emoji_mask_layer"
+        android:background="@drawable/ttlive_bg_emoji_mask_layer"
+        android:visibility="gone"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+    <com.bytedance.android.livesdk.chatroom.ui.DynamicEmojiView
+        android:layout_gravity="center"
+        android:id="@+id/dynamic_emoji_view"
+        android:visibility="visible"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+</FrameLayout>

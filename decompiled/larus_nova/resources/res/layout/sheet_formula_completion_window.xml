@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/formula_shadow_view"
+        android:background="@drawable/toolbar_top_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:translationY="16dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/formula_completion_card"
+        android:background="@drawable/sheet_bottom_dialog_bg"
+        android:paddingTop="@dimen/dp_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:backgroundTint="@color/bg_body">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/formula_completion_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

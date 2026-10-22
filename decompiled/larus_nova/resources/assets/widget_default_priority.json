@@ -1,0 +1,194 @@
+{
+  "splitFrame": true,
+  "scenes": [
+    {
+      "sceneName": "multi2",
+      "opportunity": [
+        {
+          "opName": "p0",
+          "groups": [
+            {
+              "groupName": "group0",
+              "showTogether": true,
+              "widgets": [
+                {"widget":"AnimationLayerWidget"},
+                {"widget":"LiveRoomUserInfoWidget"},
+                {"widget":"LiveRoomWatchUserWidget"},
+                {"widget":"DigAccessibilityWidget"},
+                {"widget":"TextMessageWidget"},
+                {"widget":"QuickCommentWidget"},
+                {"widget":"LightPublicScreenFeedbackWidget"},
+                {"widget":"PublicScreenBottomPlaceHolder"},
+                {"widget":"ShadowPlayerWidget"},
+                {"widget":"FansRankListAnimationWidget"},
+                {"widget":"CommentWidget"},
+                {"widget":"LiveToolbarWidget"},
+                {"widget":"FirstChargeDaemonWidget"},
+                {"widget":"ClearScreenWaterMarkWidget"},
+                {"widget":"RightCardPlaceHolder"},
+                {"widget":"P0EndWidget"}
+              ]
+            }
+          ]
+        },
+        {
+          "opName": "p1",
+          "groups": [
+            {
+              "groupName": "group1",
+              "showTogether": false,
+              "widgets": [
+                {"widget":"LiveSceneWidget"},
+                {"widget":"LiveHotSpotWidget"},
+                {"widget":"GuardWidget"},
+                {"widget":"TopLeftActivityBannerWidget"},
+                {"widget":"LynxRankEntrance"},
+                {"widget":"LynxRankEntrancePlaceholderWidget"},
+                {"widget":"NewLiveDrawerEntranceWidget"},
+                {"widget":"GiftWidgetKt"},
+                {"widget":"GiftTrayWidget"},
+                {"widget":"VideoGiftWidgetV2"},
+                {"widget":"InteractGiftWidget"},
+                {"widget":"LinkMultiControlWidget"},
+                {"widget":"LinkRevControlWidget"},
+                {"widget":"ProfitInteractionDataWidget"},
+                {"widget":"ScreenLiveControlWidget"},
+                {"widget":"MultiLinkAudienceControlWidget"},
+                {"widget":"GuestRtcLinkerWidget"},
+                {"widget":"PkAudienceControlWidget"},
+                {"widget":"P1EndWidget"}
+              ]
+            }
+          ]
+        },
+        {
+          "opName": "p2",
+          "groups": [
+            {
+              "groupName": "group2",
+              "showTogether": false,
+              "widgets": [
+                {"widget":"PortraitShortTermIndicatorWidget"},
+                {"widget":"TopRightBannerWidget"},
+                {"widget":"ActivityTopBannerWidget"},
+                {"widget":"BottomRightBannerContainerWidget"},
+                {"widget":"LiveInteractiveWidget"},
+                {"widget":"LightRoomBottomRightCardFeedback"},
+                {"widget":"P2EndWidget"}
+              ]
+            }
+          ]
+        },
+        {
+          "opName": "other",
+          "groups": [
+            {
+              "groupName": "group3",
+              "showTogether": false,
+              "widgets": [
+                {"widget":"VipIMWidget"},
+                {"widget":"CeremonyBorderWidget"},
+                {"widget":"UserPermissionCheckWidget"},
+                {"widget":"BridgeSupportWidget"},
+                {"widget":"LynxRankInteractionWidget"},
+                {"widget":"AudienceStickerWrapperWidget"},
+                {"widget":"CommonToastWidget"},
+                {"widget":"LiveShareWidget"},
+                {"widget":"CommonGuideWidget"},
+                {"widget":"RecommendDialogWidget"},
+                {"widget":"AnchorGameStateWidget"},
+                {"widget":"PermissionCheckSyncWidget"},
+                {"widget":"MicRoomEnterOfficialWidget"},
+                {"widget":"PortraitCommonCardServiceWidget"},
+                {"widget":"PortraitCastScreenServiceWidgetForByteCast"},
+                {"widget":"ShadowPlayerWidget"},
+                {"widget":"ShadowPlayerBottomWidget"},
+                {"widget":"MultiPlayerWidget"},
+                {"widget":"SingleViewPlaceHolder"},
+                {"widget":"TopRightRow4thPlaceHolder"},
+                {"widget":"DragPlayerWidget"},
+                {"widget":"RoomcatWidget"},
+                {"widget":"SingleViewPlaceHolder"},
+                {"widget":"InteractivityResourceServiceWidget"},
+                {"widget":"WelfareAudienceWelfareServiceWidget"},
+                {"widget":"ProfileServiceWidget"},
+                {"widget":"ClearMonitorServiceWidget"},
+                {"widget":"XBridgeServiceWidget"},
+                {"widget":"ShareFansWidget"},
+                {"widget":"NormalXsgGuideServiceWidget"},
+                {"widget":"VideoOrLinkShellCardWidget"},
+                {"widget":"PortraitZDanmakuWidget"},
+                {"widget":"CarnivalDanmakuWidget"},
+                {"widget":"RoomPushWidget"},
+                {"widget":"EnterAnimWidget"},
+                {"widget":"DiggWidget"},
+                {"widget":"LiveRoomNotifyWidget"},
+                {"widget":"CeremonyPrizeNoticeWidget"},
+                {"widget":"LiveRecordPublishProgressWidget"},
+                {"widget":"LiveRecordWidget"},
+                {"widget":"LiveBacktrackWidget"},
+                {"widget":"CommonLottieAnimationWidget"},
+                {"widget":"CommonPopupMessageWidget"},
+                {"widget":"PaidLiveTicketSaleCardWidget"},
+                {"widget":"IllegalLoadingWidget"},
+                {"widget":"AudienceGameWidget"},
+                {"widget":"AudienceMiniAppWidget"},
+                {"widget":"VSLiveDetailWidget"},
+                {"widget":"ShareGuideWidget"},
+                {"widget":"MagicGestureActivityAudienceWidget"},
+                {"widget":"LightRoomBottomFeedbackWidget"},
+                {"widget":"LiveAwemeVideoPlayWidget"},
+                {"widget":"VerifyCodeWidget"},
+                {"widget":"CommonShortTouchWidget"},
+                {"widget":"KtvControlWidget"},
+                {"widget":"KtvComponentAudienceLogicWidget"},
+                {"widget":"PlayTogetherWidget"},
+                {"widget":"KtvVideoChallengeWidget"},
+                {"widget":"GiftAnchorTicketWidget"},
+                {"widget":"VideoTalkRoomGuestWidget"},
+                {"widget":"PaidProfileCardControlWidget"},
+                {"widget":"VideoTalkLinkIntegrationWidget"},
+                {"widget":"BottomRightBannerWidget"},
+                {"widget":"LotteryHelperWidget"},
+                {"widget":"EndWidget"}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sceneName": "ec2",
+      "opportunity": [
+        {
+          "opName": "p0",
+          "groups": [
+            {
+              "groupName": "group0",
+              "priority": 100,
+              "showTogether": true,
+              "widgets": [
+                {"widget":"AnimationLayerWidget"},
+                {"widget":"LiveRoomUserInfoWidget"},
+                {"widget":"LiveRoomWatchUserWidget"},
+                {"widget":"DigAccessibilityWidget"},
+                {"widget":"TextMessageWidget"},
+                {"widget":"QuickCommentWidget"},
+                {"widget":"LightPublicScreenFeedbackWidget"},
+                {"widget":"PublicScreenBottomPlaceHolder"},
+                {"widget":"ShadowPlayerWidget"},
+                {"widget":"FansRankListAnimationWidget"},
+                {"widget":"CommentWidget"},
+                {"widget":"LiveToolbarWidget"},
+                {"widget":"FirstChargeDaemonWidget"},
+                {"widget":"ClearScreenWaterMarkWidget"},
+                {"widget":"RightCardPlaceHolder"},
+                {"widget":"P0EndWidget"}
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

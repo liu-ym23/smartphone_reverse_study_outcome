@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/decor"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.wikiv2.wikitreev2.widget.view.WikiTreeCtrlView
+        android:id="@+id/wikiTreeCtrlView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/list_home_title_bar_height_min"/>
+    <com.bytedance.ee.bear.wikiv2.mylib.HomeLibraryEmptyContentView
+        android:id="@+id/wikiEmptyContentView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.ee.bear.list.homepage.title.HomeMainTitleBar
+        android:orientation="vertical"
+        android:id="@+id/wikiTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_home_title_bar_height_min"
+        app:largeHeight="@dimen/list_home_title_bar_height_min"
+        app:smallHeight="@dimen/list_home_title_bar_height_min"/>
+    <com.bytedance.ee.bear.widgets.button.CommonCreateButton
+        android:layout_gravity="end|bottom"
+        android:id="@+id/wikiCreateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.ee.bear.wikiv2.searchv2.WikiSearchPickerView
+        android:id="@+id/wiki_search_view"
+        android:background="@color/bg_body"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

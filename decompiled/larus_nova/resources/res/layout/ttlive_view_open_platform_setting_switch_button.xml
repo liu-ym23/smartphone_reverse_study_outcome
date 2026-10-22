@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.chatroom.ui.LiveSwitchButton xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/display_switch"
+    android:layout_width="43dp"
+    android:layout_height="25dp"
+    app:lsb_background="#33161823"
+    app:lsb_button_color="#ffffff"
+    app:lsb_checked_color="@color/ttlive_setting_switch_button_color"
+    app:lsb_effect_duration="50"
+    app:lsb_shadow_radius="0dp"
+    app:lsb_show_indicator="false"/>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/verticalLineOfDeepThink"
+        android:background="?attr/larus_bg_text_source_verticle_line"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="?attr/larus_dp_16"/>
+    <com.larus.bmhome.chat.layout.widget.AtMostHeightRecyclerView
+        android:orientation="vertical"
+        android:id="@+id/thinkingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

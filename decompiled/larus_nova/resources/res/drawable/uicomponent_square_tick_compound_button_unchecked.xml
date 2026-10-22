@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:height="@dimen/uicomponent_square_tick_compound_button_height"
+        android:width="@dimen/uicomponent_square_tick_compound_button_width"/>
+    <stroke
+        android:width="@dimen/uicomponent_square_tick_compound_button_stroke_width"
+        android:color="@color/ttlive_std_line_1"/>
+    <solid android:color="@android:color/transparent"/>
+    <corners android:radius="@dimen/uicomponent_square_tick_compound_button_corner_radius"/>
+</shape>

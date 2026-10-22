@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ec_commerce_anchor_v4_combine_detail_page_content_1723181429"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/subproduct_info"
+        android:background="@drawable/shopping_bg_detail_combine_product_name_count_bg"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:textSize="13sp"
+            android:textColor="@color/commerce_color_161823"
+            android:ellipsize="end"
+            android:id="@+id/detail_product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/commerce_color_161823"
+            android:id="@+id/detail_product_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"/>
+    </LinearLayout>
+    <com.bytedance.android.shopping.anchorv4.voavhs.detailhead.ExpandableLinearLayoutV4
+        android:id="@+id/expandable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

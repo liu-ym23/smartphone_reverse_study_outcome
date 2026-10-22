@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/transparent_title_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/ttlive_browser_transparent_title_bar"/>
+    <ImageView
+        android:id="@+id/ttlive_activity_back"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ttlive_webview_back"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"/>
+    <ImageView
+        android:id="@+id/ttlive_activity_close"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ttlive_icon_bottom_close"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"/>
+    <ImageView
+        android:id="@+id/ttlive_activity_share"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ttlive_ic_webview_share"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+package org.bouncycastle.pqc.crypto;
+
+import org.bouncycastle.crypto.params.AsymmetricKeyParameter;
+import org.bouncycastle.util.Arrays;
+
+/* JADX INFO: loaded from: classes42.dex */
+public class ExchangePair {
+    private final AsymmetricKeyParameter publicKey;
+    private final byte[] shared;
+
+    public ExchangePair(AsymmetricKeyParameter r100, byte[] r101) {
+        this.publicKey = r100;
+        this.shared = Arrays.clone(r101);
+    }
+
+    public AsymmetricKeyParameter getPublicKey() {
+        return this.publicKey;
+    }
+
+    public byte[] getSharedValue() {
+        return Arrays.clone(this.shared);
+    }
+}

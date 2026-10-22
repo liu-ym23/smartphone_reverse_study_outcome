@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/larus_dora_dynamic_fragment_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.dora.impl.dynamic.widget.HistoryDeviceNavigationBar
+        android:id="@+id/device_nav_bar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.larus.dora.impl.dynamic.widget.NestedDynamicPageView
+        android:id="@+id/page_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/device_nav_bar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

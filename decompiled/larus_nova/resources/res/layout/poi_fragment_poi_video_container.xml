@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_fragment_poi_video_page_650869094"
+    android:background="@color/POIBgPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_recycle_view"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:id="@+id/partial_mask_01"
+        android:background="@color/transparent"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"/>
+    <View
+        android:id="@+id/partial_mask_02"
+        android:background="@color/transparent"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="106dp"/>
+    <com.bytedance.ies.dmt.ui.widget.DmtStatusView
+        android:id="@+id/fragment_status_view"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/vs_gesture_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.livesdk.widget.gesture.BrightnessView
+            android:id="@+id/vs_brightness_view"
+            android:background="@drawable/ttlive_bg_live_interaction_brightness_volume"
+            android:visibility="invisible"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"/>
+        <com.bytedance.android.livesdk.widget.gesture.VolumeView
+            android:id="@+id/vs_volume_view"
+            android:background="@drawable/ttlive_bg_live_interaction_brightness_volume"
+            android:visibility="invisible"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

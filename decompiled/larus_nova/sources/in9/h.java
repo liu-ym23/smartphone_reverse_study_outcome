@@ -1,0 +1,37 @@
+package in9;
+
+import com.bytedance.ee.bear.bitable.fieldedit.BitableFieldEditAnalytic;
+import com.google.gson.annotations.SerializedName;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes29.dex */
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u000e\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003R \u0010\u0004\u001a\u0004\u0018\u00010\u00058\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\tR \u0010\n\u001a\u0004\u0018\u00010\u00058\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\u0007\"\u0004\b\f\u0010\tR \u0010\r\u001a\u0004\u0018\u00010\u00058\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000e\u0010\u0007\"\u0004\b\u000f\u0010\tR \u0010\u0010\u001a\u0004\u0018\u00010\u00058\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0007\"\u0004\b\u0012\u0010\t¨\u0006\u0013"}, d2 = {"Lcom/larus/office/base/plugins/toolbar/model/FontSizeItem;", "", "<init>", "()V", "value", "", "getValue", "()Ljava/lang/String;", "setValue", "(Ljava/lang/String;)V", BitableFieldEditAnalytic.ProgressFieldEditScene.MIN, "getMin", "setMin", BitableFieldEditAnalytic.ProgressFieldEditScene.MAX, "getMax", "setMax", "extra", "getExtra", "setExtra", "base_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class h {
+
+    @SerializedName("extra")
+    private String extra;
+
+    @SerializedName(BitableFieldEditAnalytic.ProgressFieldEditScene.MAX)
+    private String max;
+
+    @SerializedName(BitableFieldEditAnalytic.ProgressFieldEditScene.MIN)
+    private String min;
+
+    @SerializedName("value")
+    private String value;
+
+    public h() {
+    }
+
+    public final String a() {
+        return this.max;
+    }
+
+    public final String b() {
+        return this.min;
+    }
+
+    public final String c() {
+        return this.value;
+    }
+}

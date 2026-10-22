@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:layout_width="56dp"
+    android:layout_height="52dp"
+    android:paddingHorizontal="2dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/sdv_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        fresco:roundedCornerRadius="4dp"/>
+    <View
+        android:layout_gravity="center"
+        android:id="@+id/border_select"
+        android:background="@drawable/ttlive_effect_border_image_item"
+        android:visibility="invisible"
+        android:layout_width="52dp"
+        android:layout_height="52dp"/>
+    <FrameLayout
+        android:id="@+id/under_review_cover"
+        android:background="@drawable/ttlive_effect_bg_image_under_review"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_effect_sticker_image_selector_under_review"
+            android:shadowColor="#99000000"
+            android:shadowDx="0"
+            android:shadowDy="2"/>
+    </FrameLayout>
+</FrameLayout>

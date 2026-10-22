@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:topLeftRadius="?attr/larus_dp_16"
+        android:topRightRadius="?attr/larus_dp_16"/>
+    <gradient
+        android:startColor="@color/obric_action_bar_input_bg_color"
+        android:endColor="@color/obric_transparent"
+        android:angle="270"/>
+</shape>

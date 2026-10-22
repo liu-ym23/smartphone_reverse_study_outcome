@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Wiki">
+        <CheckBoxPreference
+            android:title="打开wiki目录树协同"
+            android:key="wikitree_collab_enable"
+            android:defaultValue="true"
+            android:summaryOn="打开"
+            android:summaryOff="关闭"/>
+        <CheckBoxPreference
+            android:title="显示wiki目录树areaId"
+            android:key="wikitree_show_areaId"
+            android:defaultValue="true"
+            android:summaryOn="打开"
+            android:summaryOff="关闭"/>
+        <CheckBoxPreference
+            android:title="显示wiki目录树status"
+            android:key="wikitree_show_status"
+            android:defaultValue="true"
+            android:summaryOn="打开"
+            android:summaryOff="关闭"/>
+    </PreferenceCategory>
+</PreferenceScreen>

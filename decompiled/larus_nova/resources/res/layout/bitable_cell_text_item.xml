@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusableInTouchMode="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.bitable.card.view.cell.text.BitableTextFieldEditor
+        android:textSize="16sp"
+        android:textColor="@color/text_title"
+        android:textColorHint="@color/text_placeholder"
+        android:id="@+id/text_editor"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0.5dp"
+        android:hint="@string/Bitable_Common_PleaseEnterMobileVer"
+        android:maxLength="10000"
+        android:lineSpacingMultiplier="1.2"
+        android:inputType="textMultiLine"
+        android:imeOptions="actionNext"/>
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ProgressBar
+        android:layout_gravity="center_vertical"
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_18"
+        android:layout_height="?attr/larus_dp_18"
+        android:indeterminateTint="?attr/larus_neutral_50"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/retry"
+        android:visibility="visible"
+        android:layout_width="?attr/larus_dp_18"
+        android:layout_height="?attr/larus_dp_18"
+        android:src="@drawable/larus_ic_message_failed_retry"/>
+</merge>

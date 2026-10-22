@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/progress_content_layout"
+        android:background="@drawable/bitable_card_field_item_bg_selector"
+        android:paddingTop="@dimen/space_kit_len_9"
+        android:paddingBottom="@dimen/space_kit_len_9"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/bitable_cell_min_height">
+        <ImageView
+            android:id="@+id/bitable_cell_progress_drop_triangle"
+            android:visibility="gone"
+            android:layout_width="@dimen/space_kit_len_16"
+            android:layout_height="@dimen/space_kit_len_16"
+            android:layout_marginTop="@dimen/space_kit_len_12"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_kit_len_10"
+            android:layout_marginEnd="@dimen/space_kit_len_13"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/icon_global_droptriangle_nor"/>
+        <com.bytedance.ee.bear.bitable.common.widgets.flex.InnerRecyclerView
+            android:id="@+id/progress_items_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/bitable_cell_progress_drop_triangle"/>
+    </RelativeLayout>
+</LinearLayout>

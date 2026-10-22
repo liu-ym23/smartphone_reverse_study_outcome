@@ -1,0 +1,31 @@
+package com.bytedance.android.livesdk.ktvimpl.realtimechorus.midi;
+
+import com.bytedance.android.livesdk.ktvimpl.ktvroom.view.midi.KtvComponentMidiView;
+import com.larus.apm.impl.protector.RunnableProtector;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function2;
+
+/* JADX INFO: loaded from: classes10.dex */
+public final class l implements Runnable {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ com.bytedance.android.live.ktv.common.util.c f146829a;
+
+    public l(KtvComponentMidiView r100) {
+        this.f146829a = r100;
+    }
+
+    @Override // java.lang.Runnable
+    public final void run() {
+        Function2<Boolean, Long, Unit> r100 = this.f146829a.getOneDrawCallback();     // Catch: Throwable -> L6
+        if (r100 == null) goto L9;
+        Unit r101 = r100.invoke(Boolean.TRUE, Long.valueOf(System.currentTimeMillis()));     // Catch: Throwable -> L6
+        return;
+    L9:
+        return;
+    L6:
+        th = move-exception;
+        if (RunnableProtector.intercept(th) == true) goto L13;
+        throw th;
+    }
+}

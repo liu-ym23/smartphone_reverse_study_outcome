@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ecommerce_store_ic_goods_empty"/>
+        <TextView
+            android:textSize="13dp"
+            android:textColor="@color/ec_store_9A161823"
+            android:gravity="center"
+            android:id="@+id/store_tv_new_product_comming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/ec_shop_no_product_preparing"/>
+    </LinearLayout>
+</FrameLayout>

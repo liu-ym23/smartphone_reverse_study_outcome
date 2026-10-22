@@ -1,0 +1,75 @@
+package d11;
+
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes47.dex */
+public final class m {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final Integer f466335a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public final Integer f466336b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final Integer f466337c;
+
+    public m() {
+        this(null, null, null);
+    }
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L4;
+        return true;
+    L4:
+        if ((r100 instanceof m) == false) goto L12;
+        m r101 = (m) r100;
+        if (Intrinsics.areEqual(this.f466335a, r101.f466335a) == true) goto L8;
+        return false;
+    L8:
+        if (Intrinsics.areEqual(this.f466336b, r101.f466336b) == true) goto L10;
+        return false;
+    L10:
+        if (Intrinsics.areEqual(this.f466337c, r101.f466337c) == true) goto L19;
+        return false;
+    L19:
+        return true;
+    L12:
+        return false;
+    }
+
+    public final int hashCode() {
+        Integer r100 = this.f466335a;
+        int r101 = 0;
+        if (r100 == null) goto L5;
+        int r102 = r100.hashCode();
+    L6:
+        int r103 = r102 * 31;
+        Integer r104 = this.f466336b;
+        if (r104 == null) goto L9;
+        int r105 = r104.hashCode();
+    L10:
+        int r106 = (r103 + r105) * 31;
+        Integer r107 = this.f466337c;
+        if (r107 == null) goto L14;
+        r101 = r107.hashCode();
+    L14:
+        return r106 + r101;
+    L9:
+        r105 = 0;
+        goto L10
+    L5:
+        r102 = 0;
+        goto L6
+    }
+
+    public final String toString() {
+        return "StreamInfoParams(biteRateKpbs=" + this.f466335a + ", resolutionWidth=" + this.f466336b + ", resolutionHeight=" + this.f466337c + ")";
+    }
+
+    public m(Integer r100, Integer r101, Integer r102) {
+        this.f466335a = r100;
+        this.f466336b = r101;
+        this.f466337c = r102;
+    }
+}

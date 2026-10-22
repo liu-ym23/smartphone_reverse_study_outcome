@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.bitable.itemview.record.ScrollToSelectUDTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ud_tab_bottomDividerEnabled="false"
+        app:ud_tab_gravity="start"
+        app:ud_tab_indicatorAnimationDuration="0"
+        app:ud_tab_indicatorFullWidth="false"
+        app:ud_tab_layoutPaddingStart="0dp"
+        app:ud_tab_maxWidth="160dp"
+        app:ud_tab_minWidth="0dp"
+        app:ud_tab_mode="scrollable"
+        app:ud_tab_paddingEnd="10dp"
+        app:ud_tab_paddingStart="10dp"
+        app:ud_tab_tabMargin="8dp"/>
+    <View
+        android:id="@+id/divider"
+        android:background="@color/line_border_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_divider"/>
+</merge>

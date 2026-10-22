@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.ee.bear.middleground.comment.widget.CommentVoiceBarLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/bg_body_overlay"
+    android:padding="@dimen/dp_8"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:layout_marginBottom="@dimen/dp_4">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/switch_im_keyboard"
+        android:background="@drawable/comment_voice_bar_switch_keyboard_bg"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ud_icon_menu_display_outlined"
+        app:tint="@color/icon_n1"/>
+    <com.larksuite.component.universe_design.button.UDButton
+        android:textSize="16sp"
+        android:textColor="@color/ud_N900"
+        android:gravity="center"
+        android:id="@+id/entrance_audio_record"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:text="@string/Lark_IM_AudioMsg_HoldToRecord_Button"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        app:ud_backgroundColor="@color/space_selector_voice_record_bg"
+        app:ud_radius="l"/>
+</com.bytedance.ee.bear.middleground.comment.widget.CommentVoiceBarLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/anchor_v4_ll_coupon_view"
+    android:layout_width="wrap_content"
+    android:layout_height="17dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/anchor_v4_coupon_image"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0.5dp"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextWithOneIconElementView
+        android:gravity="center"
+        android:id="@+id/anchor_v4_tv_coupon_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/anchor_v4_coupon_divider"
+        android:visibility="gone"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ecommerce_coupon_divider"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextWithOneIconElementView
+        android:gravity="center"
+        android:id="@+id/anchor_v4_tv_coupon_post"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</LinearLayout>

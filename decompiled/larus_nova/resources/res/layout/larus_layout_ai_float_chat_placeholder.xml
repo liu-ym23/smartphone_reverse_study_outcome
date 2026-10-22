@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.bmhome.view.ShadowChatConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_86">
+    <View
+        android:background="?attr/larus_base_1"
+        android:layout_width="?attr/larus_dp_0"
+        android:layout_height="?attr/larus_dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <FrameLayout
+        android:id="@+id/placeholder_top_handle_container"
+        android:layout_width="?attr/larus_dp_0"
+        android:layout_height="?attr/larus_dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="top|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_6"
+            app:srcCompat="?attr/larus_icon_top_handle"/>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/placeholder_input_host"
+        android:layout_width="?attr/larus_dp_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder_top_handle_container"/>
+</com.larus.bmhome.view.ShadowChatConstraintLayout>

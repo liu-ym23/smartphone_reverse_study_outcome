@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dora_o_bg_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.lisitem.OCardListItem
+        android:id="@+id/timbre_clone_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_108"
+        android:layout_marginStart="?attr/larus_dp_12"
+        android:layout_marginEnd="?attr/larus_dp_12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ocardlistitem_cardPosition="position_single"
+        app:ocardlistitem_cardType="type_normal"
+        app:ocardlistitem_defaultCustomEnd="end_switch"
+        app:ocardlistitem_showCardBg="true"
+        app:ocardlistitem_showCustomEnd="true"
+        app:ocardlistitem_showSubTitle="true"
+        app:ocardlistitem_showTitle="true"
+        app:ocardlistitem_subTitle="@string/larus_dora_o_timbre_clone_switch_desc"
+        app:ocardlistitem_title="@string/larus_dora_o_timbre_clone_switch_title"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/timbre_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp"
+    android:minWidth="34dp">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:layout_gravity="top|center_horizontal"
+        android:id="@+id/entry_img"
+        android:visibility="visible"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="2dp"/>
+    <com.bytedance.android.livesdk.livecommerce.view.ECLottieAnimationView
+        android:layout_gravity="top|center_horizontal"
+        android:id="@+id/entry_lottie"
+        android:visibility="visible"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="-1dp"
+        app:lottie_fileName="ec_live_add_cart_motion_vertical_opt.json"
+        app:lottie_imageAssetsFolder="images"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/ec_color_black_161823"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/entry_text"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="18dp"/>
+</FrameLayout>

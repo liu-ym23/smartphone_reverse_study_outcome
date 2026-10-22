@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/picker_top_container"
+    style="@style/uicomponent_picker_top_bar_container">
+    <TextView
+        android:id="@+id/picker_left_action_tv"
+        android:text="@string/uicomponent_cancel"
+        style="@style/uicomponent_picker_left_action_tv"/>
+    <TextView
+        android:id="@+id/picker_title"
+        style="@style/uicomponent_picker_title"/>
+    <TextView
+        android:id="@+id/picker_right_action_tv"
+        android:text="@string/uicomponent_confirm"
+        style="@style/uicomponent_picker_right_action_tv"/>
+</RelativeLayout>

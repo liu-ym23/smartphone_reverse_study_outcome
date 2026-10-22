@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="24sp"
+        android:textColor="?attr/cj_pay_text_primary"
+        android:gravity="bottom"
+        android:id="@+id/amount_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="-1.5dp"
+        android:text="@string/cj_pay_currency_unit"/>
+    <com.android.ttcjpaysdk.base.ui.widget.ScrollAnimTextView
+        android:textSize="32sp"
+        android:textColor="?attr/cj_pay_text_primary"
+        android:id="@+id/amount"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.android.ttcjpaysdk.base.ui.component.money.CJMoneyTextComponent
+        android:textSize="32sp"
+        android:id="@+id/amount_std"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

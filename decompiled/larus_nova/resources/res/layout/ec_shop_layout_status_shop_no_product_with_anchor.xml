@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ecommerce_store_ic_goods_empty"/>
+    <TextView
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/ec_shop_100161823"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ec_shop_no_product_preparing_with_anchor"
+        android:alpha="0.6"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ec_shop_99161823"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/ec_shop_no_product_preparing_with_anchor_sub_title"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ec_shop_100161823"
+        android:gravity="center"
+        android:id="@+id/ec_window_anchor_full_category_tv"
+        android:background="@drawable/ec_shop_window_anchor_full_category_bg"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/ec_shop_no_product_preparing_with_anchor_notice_watch_all"
+        android:paddingStart="51dp"
+        android:paddingEnd="51dp"/>
+</LinearLayout>

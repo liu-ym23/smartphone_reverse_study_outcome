@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="16sp"
+    android:textColor="@color/flow_feed_action_gray"
+    android:gravity="center_vertical"
+    android:id="@+id/sidebar_load_more_text"
+    android:background="@drawable/bg_flow_sidebar_item_default_shape"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:text="@string/LarkIM_Feed_ViewMore_Button"
+    android:includeFontPadding="false"
+    android:paddingEnd="12dp"/>

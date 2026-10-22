@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/divider"
+        android:background="@color/ud_divider_color"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ud_divider_size"
+        android:layout_margin="12dp"/>
+    <ViewStub
+        android:id="@+id/plain_text_stub"
+        android:layout="@layout/my_ai_mock_message_item_plain_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_ai_mock_item_preview_height"/>
+    <ViewStub
+        android:id="@+id/preview_stub"
+        android:visibility="gone"
+        android:layout="@layout/my_ai_mock_message_item_preview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_ai_mock_item_preview_height"/>
+    <ViewStub
+        android:id="@+id/load_more_stub"
+        android:visibility="gone"
+        android:layout="@layout/my_ai_mock_message_item_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_ai_mock_item_load_more_height"/>
+</FrameLayout>

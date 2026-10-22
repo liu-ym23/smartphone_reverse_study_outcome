@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_diary_card_container"
+    android:layout_width="?attr/larus_dp_72"
+    android:layout_height="?attr/larus_dp_96"
+    android:elevation="?attr/larus_dp_2">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/diary_rotate_image"
+        android:layout_width="?attr/larus_dp_72"
+        android:layout_height="?attr/larus_dp_96"
+        app:placeholderImage="@drawable/larus_bg_diary_placeholder"
+        app:roundedCornerRadius="?attr/larus_dp_8"
+        app:roundingBorderColor="@color/larus_base_4"
+        app:roundingBorderWidth="?attr/larus_dp_2"/>
+    <TextView
+        android:textSize="?attr/larus_sp_12"
+        android:textColor="@color/static_white"
+        android:gravity="center"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/diary_rotate_image_count"
+        android:background="@drawable/larus_bg_dora_diary_image_count"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_24"
+        android:layout_height="?attr/larus_dp_24"
+        android:layout_marginBottom="?attr/larus_dp_5"
+        android:layout_marginEnd="?attr/larus_dp_5"/>
+</FrameLayout>

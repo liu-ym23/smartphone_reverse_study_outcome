@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.list.homepage.tab.HomeViewPager
+        android:id="@+id/home_view_pager"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-60dp"
+        android:layout_below="@+id/base_header"/>
+    <include
+        android:id="@+id/base_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/fragment_base_pad_header"/>
+    <com.bytedance.ee.bear.widgets.button.CommonCreateButton
+        android:id="@+id/pad_home_create_btn"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

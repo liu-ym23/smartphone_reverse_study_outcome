@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/open_card_menu_item"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16">
+    <com.larksuite.component.ui.imageview.LKUIRoundedImageView2
+        android:id="@+id/ud_dialog_icon"
+        android:visibility="gone"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_4"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:id="@+id/ud_dialog_content_item_tv"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:singleLine="true"
+        android:layout_weight="1"/>
+    <com.larksuite.component.universe_design.checkbox.UDCheckBox
+        android:id="@+id/ud_dialog_content_item_cb"
+        android:padding="0dp"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        app:ud_checkbox_size="small"
+        app:ud_checkbox_type="check_mark"/>
+</LinearLayout>

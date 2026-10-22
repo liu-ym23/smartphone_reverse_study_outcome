@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.sheet.common.SheetDragView
+        android:layout_gravity="bottom"
+        android:id="@+id/formula_picker_dragview"
+        android:background="@color/ccm_widget_common_action_panel_bg_default"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:panel_max_height_percent="0.9"
+        app:panel_show_drag_handler="true"
+        app:panel_show_titlebar="false">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/sheet_subfragment_title_layout"/>
+            <include layout="@layout/sheet_formula_search_bar"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/formula_picker_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never"/>
+        </LinearLayout>
+    </com.bytedance.ee.bear.sheet.common.SheetDragView>
+</FrameLayout>

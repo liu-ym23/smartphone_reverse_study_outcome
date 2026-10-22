@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/file_resource_inspect_failed_root"
+    android:background="?attr/larus_bg_resource_inspect_failed_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="?attr/larus_bg_resource_inspect_failed"
+        android:paddingLeft="?attr/larus_dp_8"
+        android:paddingTop="?attr/larus_dp_4"
+        android:paddingRight="?attr/larus_dp_8"
+        android:paddingBottom="?attr/larus_dp_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24"
+            android:src="?attr/larus_resource_item_failed"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textColor="?attr/larus_neutral_50"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/file_resource_inspect_failed_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_file_upload_safety_reject"
+            android:maxLines="3"
+            app:autoSizeMaxTextSize="12sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"/>
+    </LinearLayout>
+</FrameLayout>

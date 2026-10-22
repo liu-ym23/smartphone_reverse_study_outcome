@@ -1,0 +1,27 @@
+package com.bytedance.android.bcm.impl2;
+
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes43.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001H\n¢\u0006\u0002\b\u0002¨\u0006\u0003"}, d2 = {"<anonymous>", "", AbsMethodDelegate.TAG_INVOKE, "com/bytedance/android/bcm/impl2/ScopedBcmConfigManager$parseGecko$3$callback$2$1"}, k = 3, mv = {1, 1, 16})
+final class ScopedBcmConfigManager$parseGecko$3$callback$$inlined$let$lambda$1 extends Lambda implements Function0<String> {
+    final /* synthetic */ c this$0;
+
+    public ScopedBcmConfigManager$parseGecko$3$callback$$inlined$let$lambda$1(c r100) {
+        super(0);
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    public /* bridge */ /* synthetic */ String invoke() {
+        return invoke2();
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final String invoke2() {
+        throw null;
+    }
+}

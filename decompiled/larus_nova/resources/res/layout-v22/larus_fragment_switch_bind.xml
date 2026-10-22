@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="?attr/larus_dp_16"
+    android:paddingTop="?attr/larus_dp_20"
+    android:paddingRight="?attr/larus_dp_16"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="?attr/larus_dp_16">
+    <com.larus.login.impl.switchbind.view.AccountCardView
+        android:id="@+id/conflict_account_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:larus_card_title="@string/larus_rebind_douyin_available_boundAccount_cn"
+        app:layout_constraintBottom_toTopOf="@+id/conflict_account_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.larus.login.impl.switchbind.view.AccountCardView
+        android:id="@+id/current_account_card"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:larus_card_title="@string/larus_rebind_douyin_available_bindToAccount_cn"
+        app:larus_show_bind_button="true"
+        app:layout_constraintEnd_toEndOf="@+id/conflict_account_card"
+        app:layout_constraintStart_toStartOf="@+id/conflict_account_card"
+        app:layout_constraintTop_toBottomOf="@+id/conflict_account_card"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ttlive_bg_user_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="12dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/water_mark_avatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="2dp"
+        app:actualImageResource="@drawable/ttlive_bg_circle_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:id="@+id/tv_water_mark_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="13dp"
+        android:maxLines="1"
+        android:maxEms="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/water_mark_avatar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

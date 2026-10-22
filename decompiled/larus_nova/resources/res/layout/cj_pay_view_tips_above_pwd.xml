@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_above_pwd_tips_layout"
+    android:paddingBottom="@dimen/cj_pay_padding_10"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginRight="20dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="?attr/cj_pay_text_tertiary"
+        android:id="@+id/cj_pay_pwd_input_text"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cj_pay_input_pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <LinearLayout
+        android:id="@+id/cj_pay_view_pwd_verify_error_tips_container"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <include
+            android:id="@+id/cj_pay_view_pwd_verify_error_tips_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/cj_pay_view_verify_error_tips_layout"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

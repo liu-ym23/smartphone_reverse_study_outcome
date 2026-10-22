@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.button.OButton
+        android:textSize="?attr/larus_sp_16"
+        android:textStyle="bold"
+        android:gravity="start|center_vertical"
+        android:id="@+id/lang_side_top"
+        android:layout_width="?attr/larus_dp_146"
+        android:layout_height="?attr/larus_dp_48"
+        android:maxLines="1"
+        android:paddingStart="?attr/larus_dp_10"
+        android:paddingEnd="?attr/larus_dp_16"
+        style="@style/OStyleV2.OButton.M.Standard.HighLight"/>
+    <com.obric.oui.button.OButton
+        android:id="@+id/lang_swap"
+        android:paddingLeft="?attr/larus_dp_0"
+        android:paddingRight="?attr/larus_dp_0"
+        android:layout_width="?attr/larus_dp_32"
+        android:layout_height="?attr/larus_dp_32"
+        android:minWidth="?attr/larus_dp_0"
+        android:minHeight="?attr/larus_dp_0"
+        android:layout_marginStart="?attr/larus_dp_6"
+        android:layout_marginEnd="?attr/larus_dp_6"
+        app:icon="@drawable/dora_o_ic_lang_swap_18"
+        style="@style/OStyleV2.OButton.S.Standard.HighLight"/>
+    <com.obric.oui.button.OButton
+        android:textSize="?attr/larus_sp_16"
+        android:textStyle="bold"
+        android:gravity="start|center_vertical"
+        android:id="@+id/lang_side_bottom"
+        android:layout_width="?attr/larus_dp_146"
+        android:layout_height="?attr/larus_dp_48"
+        android:maxLines="1"
+        android:paddingStart="?attr/larus_dp_10"
+        android:paddingEnd="?attr/larus_dp_16"
+        style="@style/OStyleV2.OButton.M.Standard.HighLight"/>
+</LinearLayout>

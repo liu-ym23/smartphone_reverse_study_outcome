@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/bitable_cell_min_height">
+    <com.bytedance.ee.bear.bitable.common.widgets.flex.InnerRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_kit_len_5"
+        android:layout_marginBottom="@dimen/space_kit_len_5"
+        android:layout_toLeftOf="@+id/drop_triangle"
+        android:layout_marginStart="@dimen/space_kit_len_10"
+        android:layout_marginEnd="@dimen/space_kit_len_10"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/drop_triangle"
+        android:visibility="visible"
+        android:layout_width="@dimen/space_kit_len_16"
+        android:layout_height="@dimen/space_kit_len_16"
+        android:layout_marginTop="@dimen/space_kit_len_13"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/space_kit_len_12"
+        app:srcCompat="@drawable/icon_global_droptriangle_nor"/>
+</RelativeLayout>

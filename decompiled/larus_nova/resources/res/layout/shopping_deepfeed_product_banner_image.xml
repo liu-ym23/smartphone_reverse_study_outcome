@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/blur_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImage="@drawable/product_deep_feed_placeholder_skeleton"
+        app:placeholderImageScaleType="centerCrop"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/blur_iv_black"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImage="@drawable/product_deep_feed_placeholder_skeleton_black"
+        app:placeholderImageScaleType="centerCrop"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="top"
+        android:id="@+id/content_iv"
+        android:layout_width="match_parent"
+        android:layout_height="376dp"
+        android:layout_marginTop="138dp"
+        android:scaleType="fitCenter"
+        app:actualImageScaleType="fitCenter"
+        app:placeholderImageScaleType="fitCenter"/>
+</FrameLayout>

@@ -1,0 +1,18 @@
+package r52;
+
+import com.bytedance.android.live.core.setting.SettingKey;
+
+/* JADX INFO: loaded from: classes9.dex */
+public final class w2 extends SettingKey<Integer> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final w2 f536279a = null;
+
+    static {
+        f536279a = new w2();
+    }
+
+    public w2() {
+        super("live_public_screen_audience_list_buffer_size", "公屏观众侧平铺消息缓存量", 100, 100);
+    }
+}

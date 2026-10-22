@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ec_commerce_anchor_v4_sku_image_item_layout_77254297"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.shopping.anchorv4.voavhs.head.base.LengthenedCompatDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/sku_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

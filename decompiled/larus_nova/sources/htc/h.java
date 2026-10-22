@@ -1,0 +1,11 @@
+package htc;
+
+import com.bytedance.mt.protector.impl.PatternProtector;
+import com.bytedance.sdk.account.platform.base.OnekeyLoginConstants;
+
+/* JADX INFO: loaded from: classes41.dex */
+public final class h {
+    public static gtc.c a() {
+        return gtc.g.a("python", new gtc.g.f[]{gtc.g.i("comment", new gtc.g.c[]{gtc.g.h(PatternProtector.compile("(^|[^\\\\])#.*"))}), gtc.g.i("triple-quoted-string", new gtc.g.c[]{gtc.g.f(PatternProtector.compile("(\"\"\"|''')[\\s\\S]+?\\1"), false, true, "string")}), gtc.g.i("string", new gtc.g.c[]{gtc.g.e(PatternProtector.compile("(\"|')(?:\\\\.|(?!\\1)[^\\\\\\r\\n])*\\1"), false)}), gtc.g.i("function", new gtc.g.c[]{gtc.g.h(PatternProtector.compile("((?:^|\\s)def[ \\t]+)[a-zA-Z_]\\w*(?=\\s*\\()"))}), gtc.g.i("class-name", new gtc.g.c[]{gtc.g.h(PatternProtector.compile("(\\bclass\\s+)\\w+", 2))}), gtc.g.i("keyword", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("\\b(?:as|assert|async|await|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|nonlocal|pass|print|raise|return|try|while|with|yield)\\b"))}), gtc.g.i("builtin", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("\\b(?:__import__|abs|all|any|apply|ascii|basestring|bin|bool|buffer|bytearray|bytes|callable|chr|classmethod|cmp|coerce|compile|complex|delattr|dict|dir|divmod|enumerate|eval|execfile|file|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|intern|isinstance|issubclass|iter|len|list|locals|long|map|max|memoryview|min|next|object|oct|open|ord|pow|property|range|raw_input|reduce|reload|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|unichr|unicode|vars|xrange|zip)\\b"))}), gtc.g.i("boolean", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("\\b(?:True|False|None)\\b"))}), gtc.g.i("number", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("(?:\\b(?=\\d)|\\B(?=\\.))(?:0[bo])?(?:(?:\\d|0x[\\da-f])[\\da-f]*\\.?\\d*|\\.\\d+)(?:e[+-]?\\d+)?j?\\b", 2))}), gtc.g.i(OnekeyLoginConstants.CU_KEY_OPERATOR, new gtc.g.c[]{gtc.g.d(PatternProtector.compile("[-+%=]=?|!=|\\*\\*?=?|\\/\\/?=?|<[<=>]?|>[=>]?|[&|^~]|\\b(?:or|and|not)\\b"))}), gtc.g.i("punctuation", new gtc.g.c[]{gtc.g.d(PatternProtector.compile("[{}\\[\\];(),.:]"))})});
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.bmhome.view.item.ItemTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:background="@drawable/selector_obric_custom_action_bar_photo_secondary_menu_item_top"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:layout_margin="@dimen/dp_0"
+    android:paddingStart="@dimen/dp_16"
+    android:textFontWeight="500"/>

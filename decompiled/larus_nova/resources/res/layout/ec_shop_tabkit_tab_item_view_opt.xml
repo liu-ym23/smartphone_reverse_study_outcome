@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.shopping.store.home.view.ECBubbleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_above="@+id/tabkit_tab_bar_item_title"
+        android:layout_centerHorizontal="true">
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:id="@+id/tabkit_tab_bar_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fadeDuration="100"/>
+        <com.bytedance.android.shopping.store.tabkit.view.RedDotView
+            android:id="@+id/tabkit_tab_bar_item_red_dot"
+            android:background="@drawable/ec_tabkit_red_number_dot"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:id="@+id/tabkit_tab_bar_item_red_bubble"
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            app:layoutMode="self_adjust_3X"/>
+    </com.bytedance.android.shopping.store.home.view.ECBubbleLayout>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#fffdfc"
+        android:id="@+id/tabkit_tab_bar_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

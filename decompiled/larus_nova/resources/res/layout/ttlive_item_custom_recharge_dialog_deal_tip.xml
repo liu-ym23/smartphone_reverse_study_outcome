@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="13dp"
+    android:textStyle="bold"
+    android:textColor="@color/ttlive_custom_recahrge_tip_color_black"
+    android:gravity="center"
+    android:id="@+id/tip_text"
+    android:background="@drawable/ttlive_bg_custom_recharge_deal_tip"
+    android:layout_width="69dp"
+    android:layout_height="24dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="8dp"/>

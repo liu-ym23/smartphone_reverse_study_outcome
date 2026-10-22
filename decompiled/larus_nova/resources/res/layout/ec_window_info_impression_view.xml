@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/shopping_color_33000000"
+        android:id="@+id/ec_window_impression_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ec_shop_inner_flow_comment_wrapper_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/shopping_color_80000000"
+        android:id="@+id/ec_window_impression_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ec_window_impression_left"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/commerce_color_E5161823"
+        android:id="@+id/ec_window_impression_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ec_window_impression_text"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/shopping_color_33000000"
+        android:id="@+id/ec_window_impression_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:text="@string/ec_shop_inner_flow_comment_wrapper_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ec_window_impression_amount"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

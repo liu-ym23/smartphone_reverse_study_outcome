@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="2000dp">
+    <TextView
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="@color/ttlive_std_text_black_1"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/ttlive_lynx_history"/>
+    <androidx.recyclerview.widget.RecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:name="com.bytedance.android.live.browser.debug.mock.HistroyListFragment"
+        android:id="@+id/list"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"/>
+</LinearLayout>

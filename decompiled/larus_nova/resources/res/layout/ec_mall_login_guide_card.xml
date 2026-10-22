@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/ec_mall_login_guide_card_container"
+    android:paddingTop="20dp"
+    android:paddingBottom="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ec_mall_login_guide_card_banner"
+        android:layout_width="match_parent"
+        android:layout_height="139dp"
+        android:layout_marginBottom="20dp"
+        app:actualImageScaleType="fitCenter"/>
+    <TextView
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/ec_mall_login_guide_card_button"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
+        android:text="@string/ec_mall_goto_login"/>
+</LinearLayout>

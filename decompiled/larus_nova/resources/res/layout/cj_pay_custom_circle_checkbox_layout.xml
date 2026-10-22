@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <CheckBox
+        android:id="@+id/cj_pay_custom_checkbox"
+        android:background="@drawable/cj_pay_icon_check_box_pressed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:button="@android:color/transparent"/>
+</merge>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.dux.widget.RadiusLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="15sp"
+        android:textColor="@color/POITextPrimary"
+        android:id="@+id/grid_video_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="18dp"
+        android:textFontWeight="500"/>
+</com.bytedance.dux.widget.RadiusLayout>

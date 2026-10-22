@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/lucky_common_pendant_tips_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/lucky_common_pendant_left_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lucky_common_pendant_left_arrow"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/luckydog_C35C21"
+        android:id="@+id/lucky_common_pendant_tips_tv"
+        android:background="@drawable/lucky_common_pendant_tips_bg"
+        android:padding="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="180dp"
+        android:maxLines="1"/>
+    <ImageView
+        android:id="@+id/lucky_common_pendant_right_arrow"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lucky_common_pendant_right_arrow"/>
+</LinearLayout>

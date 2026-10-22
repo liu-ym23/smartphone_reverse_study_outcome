@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.locallife.poi.newdetail.widget.contentplayer.PoiContentPlayerScrollContainer
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.bytedance.locallife.poi.newdetail.widget.lynx.PoiSimpleLynxView
+                android:id="@+id/poi_lynx_head_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.bytedance.locallife.poi.newdetail.widget.contentplayer.PoiContentPlayerScrollContainer>
+        <com.bytedance.locallife.poi.newdetail.widget.PoiDetailBgView
+            android:id="@+id/poi_content_player_bg_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</RelativeLayout>

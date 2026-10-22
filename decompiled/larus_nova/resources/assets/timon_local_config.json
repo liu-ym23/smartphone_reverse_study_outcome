@@ -1,0 +1,243 @@
+{
+  "timon_config": {
+    "data_collect_config": {
+      "app_log": {
+        "timon_call_event": {
+          "tags": [
+            "method",
+            "privacyType"
+          ],
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "rule_engine_execute_result": {
+          "tags": [
+            "source"
+          ],
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "timon_init": {
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "timon_api_call": {
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "timon_read_pasteboard_event": {
+          "sample_rate": {
+            "default": 1
+          }
+        },
+        "timon_service_init": {
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "timon_network_compliance": {
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "timon_privacy_action_data_log": {
+          "sample_rate": {
+            "default": 0
+          },
+          "tags": [
+            "source"
+          ]
+        },
+        "timon_pipeline_apm": {
+          "sample_rate": {
+            "default": 0,
+            "is_intercept=1": 100,
+            "hit_report=1": 10000
+          },
+          "tags": [
+            "is_intercept",
+            "hit_report"
+          ]
+        },
+        "timon_setting_fetcher": {
+          "sample_rate": {
+            "default": 0
+          }
+        }
+      },
+      "user_exception": {
+        "Privacy-API-Call": {
+          "tags": [
+            "method",
+            "privacyType"
+          ],
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "SensitiveApiException": {
+          "tags": [
+            "api_type",
+            "api"
+          ],
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "RulerChecker": {
+          "tags": [
+            ""
+          ],
+          "sample_rate": {
+            "default": 0
+          }
+        }
+      },
+      "monitor": {
+        "api_call_perfomance": {
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "timon_api_control_performance": {
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "api_intercept_rate": {
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "rule_engine_execute_result": {
+          "tags": [
+            "source"
+          ],
+          "sample_rate": {
+            "default": 0
+          }
+        },
+        "event_expr_execute": {
+          "sample_rate": {
+            "default": 0
+          },
+          "tags": [
+            "source"
+          ]
+        },
+        "bpea_cover_rate": {
+          "sample_rate": {
+            "default": 0
+          }
+        }
+      },
+      "mark": [
+        "app_mode"
+      ],
+      "log": {
+        "enable": false,
+        "memory_cache_size": 262144,
+        "serializer_name": "json",
+        "enable_params": [
+          "app_mode"
+        ]
+      }
+    },
+    "bpea": {
+      "enable": false,
+      "modules": {
+        "dataCollection": {
+          "enable": true,
+          "pipeline": [
+            "BDLegalStrategyUnit",
+            "BDRuleStrategyUnit",
+            "BDLimitStrategyUnit"
+          ]
+        },
+        "hybrid": {
+          "enable": true,
+          "pipeline": [
+            "BDLegalStrategyUnit",
+            "BDRuleStrategyUnit",
+            "BDLimitStrategyUnit"
+          ]
+        }
+      }
+    },
+    "timon_cache": {
+      "cache_groups": [],
+      "enable": false
+    },
+    "monitor_dynamic": {
+      "enable": false
+    },
+    "scene_config": {
+      "foreground_use_broadcast": false,
+      "multi_process_enable": false,
+      "silent_scene_enable": false,
+      "silent_scene_threshold": 60000
+    },
+    "rule_engine_config": {
+      "expression_cache_size": 1000,
+      "enable_rule_engine_for_bpea_block": true,
+      "enable_instruction_list": true,
+      "enable_jobs_collecting": true,
+      "enable": true,
+      "enable_rule_engine": true,
+      "enable_app_log": true,
+      "enable_rule_engine_for_bpea": true,
+      "const_pool_optimize": true,
+      "global_sample_rate": {
+        "network_common_params": 0,
+        "expr": 0,
+        "bpea": 0,
+        "guard": 0,
+        "guard_fuse": 0,
+        "api_control_guard": 0,
+        "api_control_fuse": 0
+      }
+    },
+    "monitor": {
+      "version": "1",
+      "enable": true,
+      "alog_enable": true,
+      "alog_duration": 7200,
+      "alog_upload_time_delay": 2,
+      "alog_max_upload_count": 5,
+      "permission_check_report": false,
+      "alog_level": 1,
+      "optimize_timon": false,
+      "engine_type": "rule_engine",
+      "enable_parameter_checker": true,
+      "network_config": {
+        "enabled": false
+      },
+      "sample_rate_config": {
+        "enable_monitor": false,
+        "app_ops_config": 0.00001,
+        "auto_start_config": 0.00001,
+        "default_low_priority_config": {
+          "monitor_error": 0.0001,
+          "intercept_error": 0.0001,
+          "normal_rate": 0,
+          "monitor_normal": 0
+        },
+        "resource_medium_priority_configs": {
+          "monitor_error": {
+            "cp": 0.00001
+          },
+          "intercept_error": {
+            "cp": 0.00001,
+            "cr": 0.01,
+            "ar": 0.01,
+            "nar": 1
+          }
+        }
+      }
+    }
+  }
+}

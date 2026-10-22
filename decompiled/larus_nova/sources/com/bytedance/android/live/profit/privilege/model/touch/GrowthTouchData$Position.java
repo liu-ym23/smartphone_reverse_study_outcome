@@ -1,0 +1,45 @@
+package com.bytedance.android.live.profit.privilege.model.touch;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes47.dex */
+@Metadata(d1 = {"\u0000\u0016\n\u0000\n\u0002\u0010\u0010\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\u0018\u0002\n\u0002\b\t\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001R\u001b\u0010\u0005\u001a\u00060\u0003j\u0002`\u00048\u0006¢\u0006\f\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\f¨\u0006\r"}, d2 = {"com/bytedance/android/live/profit/privilege/model/touch/GrowthTouchData$Position", "", "Lcom/bytedance/android/live/profit/privilege/model/touch/GrowthTouchData$Position;", "", "Lcom/bytedance/revenue/platform/api/core/UnsafeLong;", "value", "J", "getValue", "()J", "PositionUnknown", "PositionGiftPanelTop", "PositionDiamondListBanner", "PositionGiftPanelEntrance", "revenue-api_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final enum GrowthTouchData$Position extends Enum<GrowthTouchData$Position> {
+    public static final GrowthTouchData$Position PositionDiamondListBanner = null;
+    public static final GrowthTouchData$Position PositionGiftPanelEntrance = null;
+    public static final GrowthTouchData$Position PositionGiftPanelTop = null;
+    public static final GrowthTouchData$Position PositionUnknown = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ GrowthTouchData$Position[] f88422a = null;
+    private final long value;
+
+    static {
+        GrowthTouchData$Position r100 = new GrowthTouchData$Position("PositionUnknown", 0, 0);
+        PositionUnknown = r100;
+        GrowthTouchData$Position r101 = new GrowthTouchData$Position("PositionGiftPanelTop", 1, 1);
+        PositionGiftPanelTop = r101;
+        GrowthTouchData$Position r102 = new GrowthTouchData$Position("PositionDiamondListBanner", 2, 2);
+        PositionDiamondListBanner = r102;
+        GrowthTouchData$Position r103 = new GrowthTouchData$Position("PositionGiftPanelEntrance", 3, 22);
+        PositionGiftPanelEntrance = r103;
+        f88422a = new GrowthTouchData$Position[]{r100, r101, r102, r103};
+    }
+
+    public static GrowthTouchData$Position valueOf(String r100) {
+        return (GrowthTouchData$Position) r27.a.a(GrowthTouchData$Position.class, r100);
+    }
+
+    public static GrowthTouchData$Position[] values() {
+        return (GrowthTouchData$Position[]) f88422a.clone();
+    }
+
+    public final long getValue() {
+        return this.value;
+    }
+
+    public GrowthTouchData$Position(String r100, int r101, long r102) {
+        super(r100, r101);
+        this.value = r102;
+    }
+}

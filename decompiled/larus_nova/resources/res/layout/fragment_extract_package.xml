@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/extract_package_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/view_extract_package"/>
+    <include layout="@layout/view_extract_package_fail"/>
+    <include layout="@layout/view_extract_package_retry"/>
+    <include layout="@layout/view_fetch_loading"/>
+    <include layout="@layout/view_extract_package_cleaned"/>
+</FrameLayout>

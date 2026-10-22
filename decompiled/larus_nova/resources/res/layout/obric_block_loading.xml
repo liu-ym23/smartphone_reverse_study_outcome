@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/icon"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_24"
+        android:layout_height="?attr/larus_dp_24"
+        android:layout_marginEnd="?attr/larus_dp_8"/>
+    <com.larus.bmhome.chat.layout.widget.ShimmerTextView
+        android:textSize="?attr/larus_dp_15"
+        android:textColor="?attr/larus_neutral_70"
+        android:ellipsize="end"
+        android:id="@+id/text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true"/>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/cj_pay_color_trans"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/cj_pay_layout_input_spinner_dialog_list_container"
+        android:background="@drawable/cj_pay_std_ui_input_left_list_dialog_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <ListView
+            android:id="@+id/cj_pay_layout_input_spinner_dialog_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="0.5dp"/>
+        <View
+            android:id="@+id/cj_pay_layout_input_spinner_dialog_divider"
+            android:background="@color/cj_pay_color_gray_161823_opacity_5"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+        <TextView
+            android:textSize="17sp"
+            android:textColor="@color/cj_pay_color_gray_161823_opacity_100"
+            android:gravity="center"
+            android:id="@+id/cj_pay_layout_input_spinner_dialog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/cj_pay_layout_input_spinner_dialog_cancel"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+package com.ss.android.lark.todo.impl.features.messagecard.dailyremind.mvvm;
+
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.recyclerview.widget.RecyclerView;
+import com.bytedance.android.live.core.monitor.NewBroadcastMonitor;
+import com.ss.android.lark.notification.export.offline.IOfflineExtraParser;
+import com.ss.android.lark.utils.statistics.PerfLog;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes38.dex */
+@Metadata(d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u00012\u00020\u0002B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bJ\u000e\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0005\u001a\u00020\u0006J\u0006\u0010\u0011\u001a\u00020\u0010J\b\u0010\u0012\u001a\u00020\u0010H\u0002J\b\u0010\u0013\u001a\u00020\u0010H\u0002J\u0006\u0010\u0014\u001a\u00020\u0010J\b\u0010\u0015\u001a\u00020\u0010H\u0002J \u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u00192\u0006\u0010\u001a\u001a\u00020\u001b2\u0006\u0010\u001c\u001a\u00020\u001dH\u0002J\u001a\u0010\u001e\u001a\u0004\u0018\u00010\u001f2\u0006\u0010\u0018\u001a\u00020\u00192\u0006\u0010\u001a\u001a\u00020\u001bH\u0002J\u0012\u0010 \u001a\u00020\u00042\b\u0010\u0018\u001a\u0004\u0018\u00010\u0019H\u0002J\b\u0010!\u001a\u00020\u0010H\u0002J\b\u0010\"\u001a\u00020\u0010H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\t\u001a\u00020\n8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\r\u0010\u000e\u001a\u0004\b\u000b\u0010\fR\u0014\u0010#\u001a\u00020$8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b%\u0010&¨\u0006'"}, d2 = {"Lcom/ss/android/lark/todo/impl/features/messagecard/dailyremind/mvvm/TodoDailyRemindCardView;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "Landroidx/lifecycle/LifecycleOwner;", "holderView", "Landroid/view/View;", "viewModel", "Lcom/ss/android/lark/todo/impl/features/messagecard/dailyremind/mvvm/TodoDailyRemindCardViewModel;", "<init>", "(Landroid/view/View;Lcom/ss/android/lark/todo/impl/features/messagecard/dailyremind/mvvm/TodoDailyRemindCardViewModel;)V", "mLifecycleRegistry", "Landroidx/lifecycle/LifecycleRegistry;", "getMLifecycleRegistry", "()Landroidx/lifecycle/LifecycleRegistry;", "mLifecycleRegistry$delegate", "Lkotlin/Lazy;", "setViewModel", "", "bindCardContent", "bindLiveData", "registerLifeCycle", "unRegisterLifeCycle", "bindCardItemView", "getSummaryRichTextView", "Lcom/ss/android/lark/widget/light/LKUILightTextView;", PerfLog.PARAM_KEY_CONTEXT_ID, "Landroid/content/Context;", IOfflineExtraParser.ParserType.TODO, "Lcom/bytedance/lark/pb/basic/v1/TodoDetail;", "matchParentHeight", "", "getTimeTextView", "Landroid/widget/TextView;", "getDividerView", "bindCardButton", "bindViewMoreIcon", NewBroadcastMonitor.STAGE.LIFECYCLE, "Landroidx/lifecycle/Lifecycle;", "getLifecycle", "()Landroidx/lifecycle/Lifecycle;", "todo_productionChinaRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class TodoDailyRemindCardView extends RecyclerView.ViewHolder implements LifecycleOwner {
+    @Override // androidx.lifecycle.LifecycleOwner
+    public final Lifecycle getLifecycle() {
+        throw null;
+    }
+}

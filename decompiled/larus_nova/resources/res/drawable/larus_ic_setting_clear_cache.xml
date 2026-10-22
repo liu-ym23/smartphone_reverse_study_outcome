@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@drawable/_larus_ic_setting_clear_cache__0_res_0x7f0800b1"
+        android:pathData="M10,0H22C27.523,0 32,4.477 32,10V22C32,27.523 27.523,32 22,32H10C4.477,32 0,27.523 0,22V10C0,4.477 4.477,0 10,0Z"/>
+    <group
+        android:translateX="6"
+        android:translateY="6">
+        <path
+            android:fillColor="#ffffffff"
+            android:pathData="M8.5,3C8.5,1.895 9.395,1 10.5,1C11.605,1 12.5,1.895 12.5,3V7H8.5V3Z"/>
+        <path
+            android:fillColor="#ffffffff"
+            android:pathData="M5.709,6.686C5.889,6.384 6.215,6.2 6.566,6.2H14.434C14.785,6.2 15.111,6.384 15.291,6.686L17.091,9.686C17.491,10.352 17.011,11.2 16.234,11.2H4.766C3.989,11.2 3.509,10.352 3.909,9.686L5.709,6.686Z"/>
+        <path
+            android:fillColor="#ffffffff"
+            android:pathData="M15.992,12.4C16.237,12.4 16.447,12.578 16.486,12.82L17.137,16.824C17.137,16.824 17.378,17.957 16.56,18.581C16.283,18.792 15.92,18.828 15.572,18.828H9.417C9.275,18.828 9.178,18.683 9.225,18.548C10.07,16.108 8.872,13.643 8.5,15.872C8.254,17.35 7.363,18.272 6.481,18.801C6.451,18.819 6.416,18.828 6.38,18.828H4.264C3.911,18.828 3.543,18.797 3.269,18.576C3.014,18.371 2.75,18.017 2.75,17.43C2.787,16.771 3.219,16.319 3.633,15.885L3.639,15.879C4.023,15.479 4.599,14.867 4.626,12.918C4.63,12.636 4.855,12.4 5.138,12.4H15.992Z"/>
+    </group>
+</vector>

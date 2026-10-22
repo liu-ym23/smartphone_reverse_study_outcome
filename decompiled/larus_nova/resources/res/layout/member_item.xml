@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingTop="13dp"
+    android:paddingRight="@dimen/dp_16"
+    android:paddingBottom="13dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.ui.imageview.LKUIRoundedImageView2
+        android:id="@+id/avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:oval="true"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/text_title"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/user_name"
+        android:paddingLeft="@dimen/dp_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

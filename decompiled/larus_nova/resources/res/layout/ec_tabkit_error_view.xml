@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_tabkit_error"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ecommerce_common_error"/>
+    <TextView
+        android:textColor="@color/shopping_std_bg_primary_1"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_tabkit_error_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/shopping_network_error"
+        style="@style/font_size_34"/>
+    <TextView
+        android:textColor="@color/shopping_std_text_black_3"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_tabkit_error_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/shopping_fail_and_please_retry"
+        style="@style/font_size_28"/>
+</LinearLayout>

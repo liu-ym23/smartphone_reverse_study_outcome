@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="12dp"
+        android:textColor="#cbffffff"
+        android:gravity="center_vertical"
+        android:id="@+id/guard_view"
+        android:background="@drawable/ttlive_bg_guard_enter"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:text="@string/live_room_guard"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"/>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.bigimg.download.CommonDownLoadLayout
+        android:id="@+id/download_layout"
+        android:background="@drawable/larus_bg_big_image_icon3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/larus_accessibility_save"/>
+</FrameLayout>

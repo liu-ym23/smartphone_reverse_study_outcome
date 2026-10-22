@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/comment_video_container"
+    android:layout_width="112dp"
+    android:layout_height="112dp"
+    app:bg_cornerRadius="10dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/comment_video_play_button"
+        android:background="@drawable/commerce_ic_play_block_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"/>
+    <com.bytedance.android.ec.core.widget.ECStatusView
+        android:layout_gravity="center"
+        android:id="@+id/comment_video_load_status_view"
+        android:layout_width="36dp"
+        android:layout_height="36dp"/>
+    <com.bytedance.android.ui.base.widget.round.RoundFrameLayout
+        android:id="@+id/comment_image_tag_container"
+        android:visibility="gone"
+        android:layout_width="42dp"
+        android:layout_height="18dp"
+        app:bg_color="#99161823"
+        app:bg_cornerRadius_BR="10dp"
+        app:bg_cornerRadius_TL="10dp">
+        <TextView
+            android:textSize="10sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:id="@+id/comment_image_tag"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </com.bytedance.android.ui.base.widget.round.RoundFrameLayout>
+</com.bytedance.android.ui.base.widget.round.RoundFrameLayout>

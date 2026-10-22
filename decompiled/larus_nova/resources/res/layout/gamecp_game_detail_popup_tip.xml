@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/gamecp_game_detail_popup_tip_arrow"
+        android:background="@drawable/gamecp_game_detail_popup_tip_arrow"
+        android:layout_width="20dp"
+        android:layout_height="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/gamecp_game_detail_popup_tip_textView"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/gamecp_game_detail_popup_tip_textView"
+        android:background="@drawable/gamecp_bg_popup_radius"
+        android:layout_width="167dp"
+        android:layout_height="42dp"
+        android:text="@string/gamecp_game_popup_tips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gamecp_game_detail_popup_tip_arrow"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

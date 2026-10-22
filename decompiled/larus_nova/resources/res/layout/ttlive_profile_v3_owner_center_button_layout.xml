@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/new_profile_owner_center_button_root"
+    android:background="@drawable/ttlive_bg_profile_anchor_followed"
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/ttlive_new_profile_black"
+        android:ellipsize="none"
+        android:gravity="start|center_vertical"
+        android:id="@+id/new_profile_owner_center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_live_profile_owner_center"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:layout_marginStart="4dp"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/new_profile_owner_center_arrow"
+        android:layout_width="5dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ttlive_shop_component_vector"
+        android:layout_marginStart="9dp"/>
+</LinearLayout>

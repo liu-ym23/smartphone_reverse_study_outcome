@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_live_profile_header_drak"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/title_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@color/ttlive_white_70"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_setting"/>
+        <View
+            android:layout_gravity="bottom"
+            android:background="#1affffff"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+    </FrameLayout>
+    <com.bytedance.android.livesdk.widget.MaxHeightScrollView
+        android:id="@+id/scroll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/ttlive_dialog_live_profile_setting_drak"/>
+    </com.bytedance.android.livesdk.widget.MaxHeightScrollView>
+</LinearLayout>

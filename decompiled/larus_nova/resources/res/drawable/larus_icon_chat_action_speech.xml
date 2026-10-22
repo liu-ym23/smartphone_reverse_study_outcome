@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M4.09,13.537C4.09,12.802 4.685,12.207 5.42,12.207V12.207C6.154,12.207 6.749,12.802 6.749,13.537V18.461C6.749,19.195 6.154,19.79 5.42,19.79V19.79C4.685,19.79 4.09,19.195 4.09,18.461V13.537Z"/>
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M9.349,6.494C9.349,5.759 9.944,5.164 10.679,5.164V5.164C11.413,5.164 12.008,5.759 12.008,6.494V25.501C12.008,26.236 11.413,26.831 10.679,26.831V26.831C9.944,26.831 9.349,26.236 9.349,25.501V6.494Z"/>
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M14.608,11.099C14.608,10.365 15.203,9.77 15.938,9.77V9.77C16.672,9.77 17.267,10.365 17.267,11.099V20.898C17.267,21.633 16.672,22.228 15.938,22.228V22.228C15.203,22.228 14.608,21.633 14.608,20.898V11.099Z"/>
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M19.867,9.744C19.867,9.009 20.463,8.414 21.197,8.414V8.414C21.931,8.414 22.527,9.009 22.527,9.744V22.251C22.527,22.986 21.931,23.581 21.197,23.581V23.581C20.463,23.581 19.867,22.986 19.867,22.251V9.744Z"/>
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M25.126,13.537C25.126,12.802 25.722,12.207 26.456,12.207V12.207C27.19,12.207 27.786,12.802 27.786,13.537V18.461C27.786,19.195 27.19,19.79 26.456,19.79V19.79C25.722,19.79 25.126,19.195 25.126,18.461V13.537Z"/>
+</vector>

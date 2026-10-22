@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="33dp"
+    android:layout_height="33dp">
+    <com.bytedance.android.live.core.view.LiveCircleView
+        android:layout_gravity="center"
+        android:id="@+id/live_end_guide_circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/skylight_avatar"
+        android:layout_width="28dp"
+        android:layout_height="28dp"/>
+</FrameLayout>

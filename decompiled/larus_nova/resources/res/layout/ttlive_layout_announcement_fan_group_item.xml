@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="64dp"
+    android:layout_height="86dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/iv_fan_group_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundAsCircle="true"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/iv_fan_group_select"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_fan_group_icon"
+        app:layout_constraintEnd_toEndOf="@+id/iv_fan_group_icon"/>
+    <TextView
+        android:textSize="11dp"
+        android:textColor="@color/ttlive_std_text_white_2"
+        android:gravity="center"
+        android:id="@+id/tv_fan_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fan_group_select"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

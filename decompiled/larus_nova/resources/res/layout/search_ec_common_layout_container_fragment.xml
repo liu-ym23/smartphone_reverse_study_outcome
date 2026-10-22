@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/tab_viewpager_root_layout"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.ss.android.ugc.aweme.search.common.view.tablayout.DmtTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabBackground="@null"
+            app:tabIndicatorColor="@color/search_tab_indicator_color_light"
+            app:tabIndicatorHeight="2dp"
+            app:tabMinWidth="0dp"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="6dp"
+            app:tabPaddingStart="6dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.ss.android.ugc.aweme.search.common.viewpager.customview.ECLazyRtlViewPager
+        android:id="@+id/viewpager_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

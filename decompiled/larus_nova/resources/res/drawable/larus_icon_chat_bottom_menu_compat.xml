@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/larus_icon_chat_bottom_menu_entrance_disable_compat"/>
+    <item android:drawable="@drawable/larus_icon_chat_bottom_menu_entrance_compat"/>
+</selector>

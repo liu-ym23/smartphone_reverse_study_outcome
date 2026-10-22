@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/buy_ticket_tray_container"
+    android:background="@drawable/ttlive_wind_screen_common_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/wind_screen_common_tray_icon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="4.5dp"
+        android:layout_marginBottom="4.5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buy_ticket_tray_container"
+        app:layout_constraintStart_toStartOf="@+id/buy_ticket_tray_container"
+        app:layout_constraintTop_toTopOf="@+id/buy_ticket_tray_container"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:id="@+id/wind_screen_common_tray_text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buy_ticket_tray_container"
+        app:layout_constraintEnd_toEndOf="@+id/buy_ticket_tray_container"
+        app:layout_constraintStart_toEndOf="@+id/wind_screen_common_tray_icon"
+        app:layout_constraintTop_toTopOf="@+id/buy_ticket_tray_container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

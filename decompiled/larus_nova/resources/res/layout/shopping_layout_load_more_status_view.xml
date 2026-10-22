@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ec.core.widget.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ec.core.widget.ECLottieAnimationView
+        android:id="@+id/shopping_load_more_lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_imageAssetsFolder="images"/>
+</com.bytedance.android.ec.core.widget.RoundedFrameLayout>

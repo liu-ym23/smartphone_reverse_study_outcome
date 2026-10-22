@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:insetTop="?attr/larus_dp_14">
+    <layer-list>
+        <item android:width="?attr/larus_dp_4">
+            <shape>
+                <corners android:radius="?attr/larus_dp_4"/>
+                <solid android:color="@color/larus_neutral_transparent_3"/>
+            </shape>
+        </item>
+    </layer-list>
+</inset>

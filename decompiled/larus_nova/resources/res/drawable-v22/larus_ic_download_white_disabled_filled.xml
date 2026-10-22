@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <vector
+            android:height="@dimen/larus_dp_20"
+            android:width="@dimen/larus_dp_20"
+            android:alpha="0.3"
+            android:viewportWidth="20"
+            android:viewportHeight="20">
+            <path
+                android:fillColor="#ffffff"
+                android:pathData="M9.583,1.041C10.159,1.041 10.625,1.507 10.625,2.083V12.62L14.293,9.234C14.716,8.844 15.375,8.87 15.765,9.293C16.156,9.716 16.129,10.375 15.707,10.765L9.583,16.417L3.46,10.765C3.037,10.375 3.011,9.716 3.401,9.293C3.791,8.87 4.45,8.844 4.873,9.234L8.542,12.62V2.083C8.542,1.507 9.008,1.041 9.583,1.041Z"
+                android:fillType="evenOdd"/>
+            <path
+                android:fillColor="#ffffff"
+                android:pathData="M2.292,17.083C2.292,16.507 2.758,16.041 3.333,16.041H16.25C16.825,16.041 17.292,16.507 17.292,17.083C17.292,17.658 16.825,18.124 16.25,18.124H3.333C2.758,18.124 2.292,17.658 2.292,17.083Z"
+                android:fillType="evenOdd"/>
+        </vector>
+    </item>
+</layer-list>

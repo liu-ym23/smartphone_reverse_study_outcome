@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.ies.dmt.ui.widget.DmtStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:id="@+id/status_view"
+    android:background="@color/BGPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>

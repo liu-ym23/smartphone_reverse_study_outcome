@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#5059c9"
+        android:pathData="M23 10.9v4.4a3.3 3.3 0 1 1-6.6 0V9.8h5.5a1.1 1.1 0 0 1 1.1 1.1zm-3.3-3.3a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4z"/>
+    <path
+        android:fillColor="#7b83eb"
+        android:pathData="M18.05 10.9v6.05a5.5 5.5 0 0 1-5.867 5.488c-2.923-0.19-5.133-2.747-5.133-5.677v-6.96h9.9a1.1 1.1 0 0 1 1.1 1.099zm-5.5-2.75a3.3 3.3 0 1 0 0-6.6 3.3 3.3 0 0 0 0 6.6z"/>
+    <path
+        android:fillColor="#7b83eb"
+        android:pathData="M12.55 8.15a3.3 3.3 0 1 0 0-6.6 3.3 3.3 0 0 0 0 6.6z"/>
+    <path
+        android:fillColor="#000"
+        android:pathData="M13.1 17.125V9.8H7.05v6.961c0 0.844 0.188 1.655 0.519 2.389h3.506a2.025 2.025 0 0 0 2.025-2.024z"
+        android:strokeAlpha="0.05"
+        android:fillAlpha="0.05"/>
+    <path
+        android:fillColor="#000"
+        android:pathData="M7.05 9.8v6.961c0 0.638 0.11 1.257 0.304 1.839h3.662c0.949 0 1.717-0.768 1.717-1.716V9.8H7.05z"
+        android:strokeAlpha="0.07"
+        android:fillAlpha="0.07"/>
+    <path
+        android:fillColor="#000"
+        android:pathData="M12.367 9.8H7.05v6.961c0 0.442 0.055 0.872 0.15 1.289h3.758c0.778 0 1.408-0.63 1.408-1.408V9.8z"
+        android:strokeAlpha="0.09"
+        android:fillAlpha="0.09"/>
+    <path
+        android:fillColor="@drawable/_ud_icon_calendar_teams_colorful__0_res_0x7f080146"
+        android:pathData="M10.9 17.5H2.1A1.1 1.1 0 0 1 1 16.4V7.6a1.1 1.1 0 0 1 1.1-1.1h8.8A1.1 1.1 0 0 1 12 7.6v8.8a1.1 1.1 0 0 1-1.1 1.1z"/>
+    <path
+        android:fillColor="#fff"
+        android:pathData="M8.737 9.25H4.262v0.945h1.676v4.554h1.123v-4.554h1.676V9.25z"/>
+</vector>

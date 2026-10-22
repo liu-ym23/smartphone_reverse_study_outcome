@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/dp_16"
+    android:width="@dimen/dp_16"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:fillColor="@color/larus_dora_function_introduction_query_text_color"
+        android:pathData="M4.57655 14.0002C2.85031 14.0002 1.33331 12.5879 1.33331 10.0247C1.33331 7.02533 3.42873 3.54152 5.6787 1.74383C5.92111 1.55015 6.26855 1.58841 6.4807 1.81483C6.74597 2.09794 6.69423 2.55522 6.40588 2.81479C4.79801 4.26219 2.85919 7.38499 2.97055 8.8519C3.11367 8.77613 3.82203 8.50766 4.8381 8.50766C6.30278 8.50766 7.4013 9.65848 7.4013 11.1755C7.4013 12.7448 6.14585 14.0002 4.57655 14.0002Z"
+        android:fillAlpha="0.5"/>
+    <path
+        android:fillColor="@color/larus_dora_function_introduction_query_text_color"
+        android:pathData="M11.8419 14.0002C10.1157 14.0002 8.59869 12.5879 8.59869 10.0247C8.59869 7.02533 10.6941 3.54152 12.9441 1.74383C13.1865 1.55015 13.5339 1.58841 13.7461 1.81483C14.0113 2.09794 13.9596 2.55522 13.6713 2.81479C12.0634 4.26219 10.1246 7.38499 10.2359 8.8519C10.379 8.77613 11.0874 8.50766 12.1035 8.50766C13.5682 8.50766 14.6667 9.65848 14.6667 11.1755C14.6667 12.7448 13.4112 14.0002 11.8419 14.0002Z"
+        android:fillAlpha="0.5"/>
+</vector>

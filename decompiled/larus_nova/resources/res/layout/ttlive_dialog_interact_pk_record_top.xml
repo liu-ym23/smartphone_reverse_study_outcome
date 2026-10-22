@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/ttlive_bg_interact_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ttlive_ic_pk_back"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/liveuikit_black"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_interact_pk_record"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_link_text_color"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_filter"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/ttlive_interact_pk_record_filter_all"
+        android:drawableRight="@drawable/ttlive_ic_polygon"
+        android:drawablePadding="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:alpha="0.75"/>
+</RelativeLayout>

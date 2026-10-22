@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_live_profile_header_drak"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+        <com.bytedance.android.livesdk.chatroom.roommanage.common.LiveRoomTabLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tab_layout"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:layout_gravity="left"
+            android:id="@+id/back"
+            android:layout_width="52dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ttlive_ic_live_room_manage_back"/>
+        </FrameLayout>
+        <View
+            android:layout_gravity="bottom"
+            android:background="#1affffff"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+    </FrameLayout>
+    <com.bytedance.android.live.uikit.viewpager.SSViewPager
+        android:id="@+id/room_manage_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"/>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.bitable.uikit.search.SearchBar
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_40"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+    <com.bytedance.ee.bear.bitable.uikit.empty.EmptyView
+        android:id="@+id/search_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_list"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

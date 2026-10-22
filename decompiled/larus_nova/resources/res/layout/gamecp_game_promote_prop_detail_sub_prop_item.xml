@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="48dp"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/bg_icon"
+        android:background="@drawable/shape_bg_0dffffff_corner_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.gamecp.common.ui.HSImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:actualImageScaleType="fitXY"
+        app:layout_constraintCircle="@+id/bg_icon"
+        app:roundedCornerRadius="4dp"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#80ffffff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

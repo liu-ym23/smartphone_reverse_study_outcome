@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item app:state_drag_error="true">
+        <shape>
+            <corners android:radius="8dp"/>
+            <solid android:color="@color/ud_R50"/>
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/ud_R500"
+                android:dashWidth="2dp"
+                android:dashGap="2dp"/>
+        </shape>
+    </item>
+    <item app:state_drag_parent_selected="true">
+        <shape>
+            <corners android:radius="8dp"/>
+            <solid android:color="@color/ud_B500_10"/>
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/ud_B500"
+                android:dashWidth="2dp"
+                android:dashGap="2dp"/>
+        </shape>
+    </item>
+    <item app:state_dragging="true">
+        <shape>
+            <corners android:radius="8dp"/>
+            <solid android:color="@color/ud_N00"/>
+        </shape>
+    </item>
+    <item android:state_activated="true">
+        <shape>
+            <corners android:radius="8dp"/>
+            <solid android:color="@color/ud_N00"/>
+        </shape>
+    </item>
+    <item
+        android:state_selected="true"
+        android:state_pressed="true">
+        <shape>
+            <corners android:radius="8dp"/>
+            <solid android:color="@color/primary_fill_transparent_03"/>
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape>
+            <corners android:radius="8dp"/>
+            <solid android:color="@color/fill_selected"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="8dp"/>
+            <solid android:color="@color/fill_pressed"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="8dp"/>
+            <solid android:color="@color/transparent"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_window_video_view_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:bg_cornerRadius="8dp">
+    <com.bytedance.android.ec.window.base.view.ECWindowRemoteVideoView
+        android:id="@+id/ec_window_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:paused_icon_height="0dp"
+        app:paused_icon_width="0dp"/>
+</com.bytedance.android.ui.base.widget.round.RoundFrameLayout>

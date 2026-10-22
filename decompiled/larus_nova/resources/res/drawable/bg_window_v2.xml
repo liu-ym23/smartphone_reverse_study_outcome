@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.material.OMaterialDrawable xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:shape="rectangle"
+    app:oui_widgetEnableShadow="true"
+    app:oui_widgetMaterial="DoubaoV2_Bg_Modal"
+    app:oui_widgetMaterialApiVersion="3"
+    app:oui_widgetMaterialSrcType="backdrop_window">
+    <corners
+        android:topLeftRadius="36dp"
+        android:topRightRadius="36dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp"/>
+    <solid android:color="@color/obric_window_bg_fallback_color"/>
+</com.obric.oui.material.OMaterialDrawable>

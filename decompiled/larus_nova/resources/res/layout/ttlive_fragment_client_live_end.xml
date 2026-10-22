@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/live_end_play_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        custom:placeholderImageScaleType="centerCrop"/>
+    <View
+        android:id="@+id/user_avatar_bg"
+        android:background="@drawable/ttlive_bg_ending_page"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"/>
+    <View
+        android:background="@color/ttlive_live_end_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user_avatar_bg"/>
+    <View
+        android:background="@drawable/ttlive_bg_audience_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/live_end_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="330dp"/>
+    <FrameLayout
+        android:id="@+id/live_end_recommend_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/live_end_title_container"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

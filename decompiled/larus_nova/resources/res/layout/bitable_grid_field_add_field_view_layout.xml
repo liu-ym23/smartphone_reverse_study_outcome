@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@drawable/bitable_grid_field_view_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/desc_icon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:tint="@color/primary_content_default"
+        app:srcCompat="@drawable/ud_icon_add_outlined"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/primary_content_default"
+        android:ellipsize="end"
+        android:gravity="top"
+        android:id="@+id/text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="@string/Bitable_AdvancedPermission_AddRecordButtonAdd"
+        android:lines="1"
+        android:lineSpacingExtra="1sp"
+        android:translationY="-0.6sp"/>
+</LinearLayout>

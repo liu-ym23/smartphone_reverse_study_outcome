@@ -1,0 +1,19 @@
+package com.larksuite.framework.launch.task;
+
+import android.content.Context;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes24.dex */
+public interface ILaunchTask<T> {
+    void a(Context r100);
+
+    int c();
+
+    Period d();
+
+    List<Class<? extends ILaunchTask>> e();
+
+    String f();
+
+    boolean g();
+}

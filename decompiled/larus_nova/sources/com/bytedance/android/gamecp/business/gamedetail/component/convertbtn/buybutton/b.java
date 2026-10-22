@@ -1,0 +1,19 @@
+package com.bytedance.android.gamecp.business.gamedetail.component.convertbtn.buybutton;
+
+import com.bytedance.android.gamecp.common.track.TrackRegisterStrategy;
+
+/* JADX INFO: loaded from: classes44.dex */
+public final class b extends TrackRegisterStrategy {
+    @Override // com.bytedance.android.gamecp.common.track.TrackRegisterStrategy
+    public final int getAutoReportStrategy() {
+        return 7;
+    }
+
+    @Override // com.bytedance.android.gamecp.common.track.TrackRegisterStrategy
+    public final yu.a getGPTrackShowConfig() {
+        return new yu.a(true, 2);
+    }
+
+    public b() {
+    }
+}

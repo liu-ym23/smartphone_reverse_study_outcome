@@ -1,0 +1,31 @@
+package com.larus.bmhome.chat.component.bottom.attachment;
+
+import com.facebook.imagepipeline.common.SimplayerImageStrategy;
+import com.ss.ttm.player.MediaPlayer;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes25.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.larus.bmhome.chat.component.bottom.attachment.AlbumEduIntentSuggestController", f = "AlbumEduIntentSuggestController.kt", i = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4}, l = {327, 330, 335, 346, MediaPlayer.MEDIA_PLAYER_OPTION_QUIC_MAX_RETRANSMISSION_TIME_MS}, m = "detect", n = {"snapshot", "config", "snapshot", "config", "snapshot", "config", "snapshot", "config", "snapshot", SimplayerImageStrategy.RESULT_BITMAP}, s = {"L$0", "L$1", "L$0", "L$1", "L$0", "L$1", "L$0", "L$1", "L$0", "L$1"})
+final class AlbumEduIntentSuggestController$detect$1 extends ContinuationImpl {
+    Object L$0;
+    Object L$1;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ AlbumEduIntentSuggestController this$0;
+
+    public AlbumEduIntentSuggestController$detect$1(AlbumEduIntentSuggestController r100, Continuation<? super AlbumEduIntentSuggestController$detect$1> r101) {
+        this.this$0 = r100;
+        super(r101);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        this.result = r100;
+        this.label |= Integer.MIN_VALUE;
+        return AlbumEduIntentSuggestController.b(this.this$0, null, this);
+    }
+}

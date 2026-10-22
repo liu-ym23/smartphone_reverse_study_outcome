@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.shopping.deepfeed.weights.common.DeepFeedCountdownView
+        android:textSize="11sp"
+        android:textColor="#ff003c"
+        android:gravity="center_vertical"
+        android:id="@+id/deep_feed_coupon_count_down"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:includeFontPadding="false"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deep_feed_coupon_count_down_prefix"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/deep_feed_coupon_count_down_prefix"
+        android:visibility="gone"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deep_feed_coupon_count_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</merge>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.document.link.LinkEditText
+        android:id="@+id/et_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/LarkCCM_Docx_EnterText4Link_Placeholder_Mob"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:ud_backgroundColor="@color/ud_edittext_white_bg"
+        app:ud_editText_clearBtnEnabled="true"
+        app:ud_radius="m"
+        app:ud_strokeColor="@color/ud_edittext_stroke"
+        app:ud_strokeWidth="1dp"
+        style="@style/UDEditText.Normal"/>
+    <com.bytedance.ee.bear.document.link.LinkEditText
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:hint="@string/LarkCCM_Docx_PasteLink_Placeholder_Mob"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:inputType="textUri"
+        app:ud_backgroundColor="@color/ud_edittext_white_bg"
+        app:ud_editText_clearBtnEnabled="true"
+        app:ud_radius="m"
+        app:ud_strokeColor="@color/ud_edittext_stroke"
+        app:ud_strokeWidth="1dp"
+        style="@style/UDEditText.Normal"/>
+</LinearLayout>

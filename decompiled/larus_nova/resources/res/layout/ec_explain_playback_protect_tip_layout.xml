@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/ll_protect_tip"
+    android:paddingLeft="10dp"
+    android:paddingTop="4dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:bg_color="@color/ec_color_black_34"
+    app:bg_cornerRadius="50dp">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/iv_protect_tip"
+        android:layout_width="13dp"
+        android:layout_height="14dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        app:actualImageScaleType="fitXY"
+        app:placeholderImage="@drawable/ec_explain_playback_ic_playback_tip"
+        app:placeholderImageScaleType="fitXY"/>
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_protect_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ec_explain_playback_protect_tip"
+        style="@style/font_size_24"/>
+</com.bytedance.android.ui.base.widget.round.RoundLinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipChildren="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.interactivity.api.publicscreen.viewpager.PublicScreenAreaPagerLayout
+        android:id="@+id/public_screen_area_pager"
+        android:clipChildren="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentBottom="true"
+        android:importantForAccessibility="no"/>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/dp_12"
+    android:paddingTop="@dimen/dp_6"
+    android:paddingRight="@dimen/dp_12"
+    android:paddingBottom="@dimen/dp_6"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/sp_22"
+        android:textColor="@color/icon_n1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/sub_toolbar_item_font_size"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_36"/>
+</FrameLayout>

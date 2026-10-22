@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="16dp"
+    android:width="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:fillColor="@color/larus_mask_overlay_50_day"
+        android:pathData="M2,5.83H13.827C14.008,5.83 14.096,5.608 13.964,5.484L11.133,2.83"
+        android:strokeColor="@color/larus_neutral_100_day"
+        android:strokeWidth="1.3333"
+        android:strokeLineCap="round"/>
+    <path
+        android:fillColor="@color/larus_mask_overlay_50_day"
+        android:pathData="M13.999,10.17H2.172C1.99,10.17 1.903,10.392 2.035,10.516L4.866,13.17"
+        android:strokeColor="@color/larus_neutral_100_day"
+        android:strokeWidth="1.3333"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.3"/>
+</vector>

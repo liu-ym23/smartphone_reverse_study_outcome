@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.liveinteract.revenue.guestlink.ui.GiftMarqueeView
+        android:id="@+id/marquee_view_1"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+    <com.bytedance.android.live.liveinteract.revenue.guestlink.ui.GiftMarqueeView
+        android:id="@+id/marquee_view_2"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+</merge>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingBottom="@dimen/dp_12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_30"
+    android:paddingEnd="@dimen/dp_30">
+    <com.ss.android.lark.widget.linked_emojicon.widget.LinkEmojiTextView
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_placeholder"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/recall_system_msg"
+        android:paddingLeft="@dimen/dp_4"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"/>
+</FrameLayout>

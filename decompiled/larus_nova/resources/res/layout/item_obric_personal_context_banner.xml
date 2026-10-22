@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bg_obric_personal_context_banner_outline"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp">
+    <ImageView
+        android:id="@+id/personal_context_banner"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:src="@drawable/obric_personal_context_banner"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/neutral_50"
+        android:id="@+id/personal_context_banner_desc"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/obric_fragment_personal_context_setting_banner_desc"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:bg_color="@color/explain_playback_color_3D000000"
+    app:bg_cornerRadius="10dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_avatar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp">
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_avatar_1"
+            android:background="@drawable/ec_explain_playback_interaction_avatar_bg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="2dp"
+            app:cornerRadius="10dp"/>
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_avatar_2"
+            android:background="@drawable/ec_explain_playback_interaction_avatar_bg"
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="-6dp"
+            app:cornerRadius="10dp"/>
+    </LinearLayout>
+    <com.bytedance.android.ui.base.widget.round.RoundLinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bg_color="@color/explain_playback_color_3D000000"
+        app:bg_cornerRadius="10dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"/>
+</com.bytedance.android.ui.base.widget.round.RoundFrameLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_album_video_detail_info"
+    android:background="@drawable/poi_bg_album_spot_detail"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <com.bytedance.lighten.loader.SmartImageView
+        android:id="@+id/poi_album_spot_tag"
+        android:visibility="gone"
+        android:layout_width="25dp"
+        android:layout_height="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/poi_album_spot_title"
+        app:layout_constraintEnd_toStartOf="@+id/poi_album_spot_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/poi_album_spot_title"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="16sp"
+        android:textColor="@color/ConstTextInverse"
+        android:id="@+id/poi_album_spot_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/poi_album_spot_subtitle"
+        app:layout_constraintLeft_toRightOf="@+id/poi_album_spot_tag"
+        app:layout_goneMarginLeft="0dp"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="12sp"
+        android:textColor="#ffc17a"
+        android:ellipsize="end"
+        android:id="@+id/poi_album_spot_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="55dp"
+        android:maxLines="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</merge>

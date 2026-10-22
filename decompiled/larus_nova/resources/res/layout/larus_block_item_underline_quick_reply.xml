@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/quick_reply_underline_container"
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/larus_dp_26">
+    <com.larus.bmhome.chat.standarduikit.quickreply.view.QuickReplyUnderlineTextView
+        android:textSize="?attr/larus_sp_17"
+        android:textColor="?attr/larus_neutral_100"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/quick_reply_underline_text"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_26"
+        android:maxLines="1"
+        android:singleLine="true"/>
+</LinearLayout>

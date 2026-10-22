@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tv_reply_content_container"
+    android:background="@drawable/ec_commerce_comment_item_reply_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv3.commentv2.view.CommentExpandableTextView
+        android:textSize="14sp"
+        android:textColor="@color/shopping_color_161823"
+        android:id="@+id/expandable_reply_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

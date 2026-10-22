@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.view.LivePlaceHolderView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    app:real_view_name="@string/ttlive_placeholder_fastgift"
+    app:service_name="@string/ttlive_placeholder_gift_service"/>

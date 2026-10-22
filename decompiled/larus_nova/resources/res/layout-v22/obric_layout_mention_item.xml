@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_48"
+        android:paddingStart="?attr/larus_dp_16"
+        android:paddingEnd="?attr/larus_dp_16">
+        <FrameLayout
+            android:background="@drawable/obric_bg_mention_item_icon"
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/obric_mention_item_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1px"
+                app:actualImageScaleType="centerCrop"
+                app:roundedCornerRadius="?attr/larus_dp_6"/>
+        </FrameLayout>
+        <TextView
+            android:textSize="?attr/larus_sp_16"
+            android:textStyle="normal"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:id="@+id/obric_mention_item_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:includeFontPadding="false"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="?attr/larus_dp_12"
+            android:letterSpacing="0"
+            android:textFontWeight="500"/>
+    </LinearLayout>
+    <View
+        android:layout_gravity="bottom"
+        android:id="@+id/obric_mention_item_divider"
+        android:background="@color/obric_mention_item_divider_color"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_1"/>
+</FrameLayout>

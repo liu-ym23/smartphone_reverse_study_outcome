@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:divider="?attr/larus_message_menu_divider"
+    app:showDividers="middle">
+    <FrameLayout
+        android:id="@android:id/copy"
+        android:paddingTop="?attr/larus_dp_12"
+        android:paddingBottom="?attr/larus_dp_12"
+        android:layout_width="?attr/larus_dp_0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingStart="?attr/larus_dp_16"
+        android:paddingEnd="?attr/larus_dp_16">
+        <TextView
+            android:textSize="?attr/larus_dp_16"
+            android:textColor="?attr/larus_base_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_message_long_press_copy"/>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/modify"
+        android:paddingTop="?attr/larus_dp_12"
+        android:paddingBottom="?attr/larus_dp_12"
+        android:layout_width="?attr/larus_dp_0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingStart="?attr/larus_dp_16"
+        android:paddingEnd="?attr/larus_dp_16">
+        <TextView
+            android:textSize="?attr/larus_dp_16"
+            android:textColor="?attr/larus_base_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_message_long_press_edit"/>
+    </FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

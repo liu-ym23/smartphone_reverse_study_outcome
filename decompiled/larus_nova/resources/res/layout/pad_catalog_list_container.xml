@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.bytedance.ee.bear.doc.structure.pad.RightShadowView
+        android:id="@+id/right_shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/catalog_recycler_view"
+        android:paddingLeft="@dimen/space_kit_len_8"
+        android:paddingRight="@dimen/space_kit_len_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"/>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ll_no_data"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.ee.bear.widgets.universedesign.SpaceEmptyState
+            app:ud_empty_desc="@string/Doc_Doc_StructureEmtpyTips"
+            app:ud_empty_imageRes="@drawable/ccm_empty_neutral_no_content"
+            style="@style/SpaceEmptyStatusStyle"/>
+    </LinearLayout>
+</merge>

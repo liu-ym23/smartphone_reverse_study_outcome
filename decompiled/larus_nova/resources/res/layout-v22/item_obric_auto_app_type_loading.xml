@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/sp_16"
+    android:gravity="center"
+    android:id="@+id/app_list_loading_hint"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingRight="@dimen/dp_20"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_70"
+    android:text="@string/obric_setting_auto_gui_app_list_loading_hint"
+    android:paddingHorizontal="@dimen/dp_20"
+    android:textFontWeight="400"/>

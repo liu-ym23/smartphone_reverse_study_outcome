@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_kit_len_8">
+    <com.larksuite.component.universe_design.checkbox.UDCheckBox
+        android:id="@+id/check_box"
+        android:paddingLeft="@dimen/space_kit_len_16"
+        android:paddingTop="0dp"
+        android:paddingRight="@dimen/space_kit_len_12"
+        android:paddingBottom="0dp"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:ud_checkbox_size="normal"/>
+    <TextView
+        android:textSize="@dimen/space_kit_font_14"
+        android:textColor="@color/text_title"
+        android:textColorHint="@color/text_placeholder"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/title_tv"
+        android:background="@drawable/facade_round_around_s"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_36"
+        android:hint="@string/Bitable_BTModule_UnnamedRecord"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:paddingStart="@dimen/space_kit_len_12"
+        android:paddingEnd="@dimen/space_kit_len_12"
+        android:layout_marginEnd="@dimen/space_kit_len_16"
+        android:backgroundTint="@color/bg_float"/>
+</LinearLayout>

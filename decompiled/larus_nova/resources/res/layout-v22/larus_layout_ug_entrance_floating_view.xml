@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shadow_container"
+    android:background="@drawable/larus_bg_ug_return_floating_view"
+    android:paddingTop="?attr/larus_dp_10"
+    android:paddingBottom="?attr/larus_dp_10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:alpha="0.95"
+    android:paddingEnd="?attr/larus_dp_10"
+    android:paddingVertical="?attr/larus_dp_10">
+    <com.larus.common_ui.widget.roundlayout.RoundLinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rv_backgroundColor="@color/larus_static_white"
+        app:rv_cornerRadius_BR="?attr/larus_dp_12"
+        app:rv_cornerRadius_TR="?attr/larus_dp_12"
+        app:rv_strokeColor="@color/larus_neutral_transparent_2"
+        app:rv_strokeWidth="?attr/larus_dp_1">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/icon"
+            android:layout_width="?attr/larus_dp_16"
+            android:layout_height="?attr/larus_dp_16"
+            android:src="@drawable/larus_ic_ug_return_button"
+            android:layout_marginStart="?attr/larus_dp_11"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="?attr/larus_sp_14"
+            android:textColor="@color/larus_neutral_100"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_6"
+            android:layout_marginBottom="?attr/larus_dp_6"
+            android:text="抖音"
+            android:layout_marginStart="?attr/larus_dp_3"
+            android:layout_marginEnd="?attr/larus_dp_10"
+            android:layout_marginVertical="?attr/larus_dp_6"
+            android:textFontWeight="500"/>
+    </com.larus.common_ui.widget.roundlayout.RoundLinearLayout>
+</FrameLayout>

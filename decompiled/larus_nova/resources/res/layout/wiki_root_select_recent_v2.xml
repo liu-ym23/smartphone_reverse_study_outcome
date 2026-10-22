@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/wiki_select_recent_v2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_8"/>
+    <View
+        android:background="@color/bg_body_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_8"/>
+    <TextView
+        android:textSize="@dimen/space_kit_font_14"
+        android:textColor="@color/text_caption"
+        android:id="@+id/wiki_select_recent_title_v2"
+        android:paddingTop="10dp"
+        android:paddingBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/LarkCCM_Wiki_Location_RecentlyUsed"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wiki_select_recent_recycler_v2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="?attr/larus_sp_16"
+        android:textColor="?attr/larus_primary_50"
+        android:gravity="center_vertical"
+        android:id="@+id/diary_style_add"
+        android:background="@drawable/larus_bg_diary_style_item_container"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_56"
+        android:text="@string/larus_dora_personal_diary_add_cn"
+        android:paddingHorizontal="?attr/larus_dp_16"
+        app:drawableEndCompat="@drawable/larus_ic_add_diary_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="?attr/larus_sp_14"
+        android:textColor="?attr/larus_neutral_50"
+        android:id="@+id/diary_style_add_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_8"
+        android:text="@string/larus_dora_personal_diary_add_desc_cn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diary_style_add"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

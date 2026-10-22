@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="horizontal"
+        android:id="@+id/item_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/del_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tint="@color/function_danger_fill_default"
+            app:srcCompat="@drawable/ud_icon_stop_outlined"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="14sp"
+            android:textColor="@color/colorful_red"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="146dp"
+            android:text="@string/Bitable_Flow_RecordCard_EndStep_Text"
+            android:maxLines="2"
+            android:layout_marginStart="12dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

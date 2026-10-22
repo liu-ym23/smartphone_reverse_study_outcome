@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/layout_parent"
+    android:paddingLeft="@dimen/empty_page_padding"
+    android:paddingRight="@dimen/empty_page_padding"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <include layout="@layout/view_default_text"/>
+</LinearLayout>

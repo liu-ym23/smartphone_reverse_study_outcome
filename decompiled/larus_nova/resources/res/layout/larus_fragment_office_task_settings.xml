@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/larus_base_1_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/office_task_settings_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"/>
+    <com.larus.bmhome.view.item.ItemGroup
+        android:id="@+id/office_task_settings_group"
+        android:background="@drawable/larus_bg_office_task_setting_item_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/larus_dp_16"
+        android:layout_marginTop="?attr/larus_dp_4"
+        android:layout_marginRight="?attr/larus_dp_16">
+        <com.larus.bmhome.view.item.ItemTextArrow
+            android:id="@+id/office_task_preference_instruction"
+            android:background="@drawable/larus_bg_office_task_setting_item"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/larus_dp_64"
+            android:text="@string/larus_agents_md_office_task_preference_instructions_cn"
+            app:larus_image_height="?attr/larus_dp_32"
+            app:larus_image_src="@drawable/larus_ic_office_task_settings"
+            app:larus_image_width="?attr/larus_dp_32"
+            app:larus_sub_text="@string/larus_agents_md_edit_cn"/>
+        <com.larus.bmhome.view.item.ItemTextArrow
+            android:id="@+id/work_experience"
+            android:background="@drawable/larus_bg_office_task_setting_item"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/larus_dp_64"
+            android:text="@string/larus_moa_work_experience_cn"
+            app:larus_image_height="?attr/larus_dp_32"
+            app:larus_image_src="@drawable/larus_ic_work_experience_entry"
+            app:larus_image_width="?attr/larus_dp_32"/>
+    </com.larus.bmhome.view.item.ItemGroup>
+</LinearLayout>

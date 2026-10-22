@@ -1,0 +1,107 @@
+{
+    "type": "View",
+     "style": {
+        "width": "stretch",
+         "height": "36",
+         "padding": ["0",
+         "16",
+         "0",
+         "16"],
+         ":display": "option(data.show_invalid_bar, 'flex', 'none')",
+         "bg_color": "#FFF2E0",
+         "align_items": "center",
+         "justify_content": "space-between"
+    },
+     "elements": [{
+        "attr": {
+            "role": "text",
+             ":aria_label": "data.description"
+        },
+         "type": "View",
+         "style": {
+            "width": "auto",
+             "height": "auto",
+             "align_items": "center",
+             "justify_content": "space-between"
+        },
+         "elements": [{
+            "attr": {
+                "src": "https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/30380079b8fc40b889840c54a4c61ec5~tplv-8jisjyls3a-3:0:0:q75.png"
+            },
+             "type": "Image",
+             "style": {
+                "width": "16",
+                 "height": "16",
+                 "margin": ["0",
+                 "8",
+                 "0",
+                 "0"]
+            }
+        },
+         {
+            "attr": {
+                ":text": "data.description"
+            },
+             "type": "Text",
+             "style": {
+                "font_size": 13,
+                 "font_color": "#FF6F00"
+            }
+        }]
+    },
+     {
+        "type": "View",
+         "style": {
+            "width": "auto",
+             "height": "100%",
+             "align_items": "center",
+             "justify_content": "space-between"
+        },
+         "elements": [{
+            "attr": {
+                "role": "button",
+                 ":text": "data.open_invalid_panel_button.text",
+                 ":aria_label": "data.open_invalid_panel_button.text"
+            },
+             "type": "Text",
+             "style": {
+                "font_size": 13,
+                 "font_color": "#FF6F00",
+                 "font_weight": 600
+            },
+             "click_action": {
+                "type": "openInvalidPanel"
+            }
+        },
+         {
+            "attr": {
+                "role": "button",
+                 "aria_label": "关闭"
+            },
+             "type": "View",
+             "style": {
+                "width": "24",
+                 "height": "100%",
+                 "margin": ["0",
+                 "0",
+                 "0",
+                 "8"],
+                 "align_items": "center",
+                 "justify_content": "center"
+            },
+             "elements": [{
+                "attr": {
+                    "src": "https://p6-piu.byteimg.com/tos-cn-i-8jisjyls3a/473d907e9e6544ada52ff9974a7eaf73~tplv-8jisjyls3a-3:0:0:q75.png"
+                },
+                 "type": "Image",
+                 "style": {
+                    "width": "12",
+                     "height": "12"
+                }
+            }],
+             "click_action": {
+                "type": "hideInvalidBar"
+            }
+        }]
+    }]
+}

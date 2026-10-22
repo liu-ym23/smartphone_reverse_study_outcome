@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/creation_info_avatar"
+        android:layout_width="?attr/larus_dp_40"
+        android:layout_height="?attr/larus_dp_40"
+        android:src="@drawable/larus_icon_profile_creation_list_empty"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_sp_17"
+        android:textColor="@color/larus_neutral_50"
+        android:gravity="center"
+        android:id="@+id/creation_info_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_20"
+        android:layout_marginStart="?attr/larus_dp_24"
+        android:layout_marginEnd="?attr/larus_dp_24"/>
+    <TextView
+        android:textSize="?attr/larus_sp_16"
+        android:textStyle="bold"
+        android:textColor="@color/larus_static_white"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/creation_empty_action_button"
+        android:background="@drawable/larus_bg_empty_action_button"
+        android:layout_width="?attr/larus_dp_96"
+        android:layout_height="?attr/larus_dp_44"
+        android:layout_marginTop="?attr/larus_dp_20"
+        android:text="@string/larus_profileScreen_creationTab_btn_create"
+        android:includeFontPadding="false"/>
+</LinearLayout>

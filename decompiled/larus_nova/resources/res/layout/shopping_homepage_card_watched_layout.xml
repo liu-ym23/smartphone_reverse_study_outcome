@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shopping_homepage_card_watched_layout_175253178"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.ui.base.widget.round.RoundLinearLayout
+        android:gravity="center_vertical"
+        android:id="@+id/shopping_homepage_card_watched_layout"
+        android:paddingLeft="6dp"
+        android:paddingRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="8dp"
+        app:bg_color="#ff002a"
+        app:bg_cornerRadius_BR="9dp">
+        <ImageView
+            android:id="@+id/shopping_mall_card_ic_watched"
+            android:layout_width="10dp"
+            android:layout_height="9dp"
+            android:src="@drawable/shopping_homepage_ic_live_watched"/>
+        <TextView
+            android:textSize="12dp"
+            android:textColor="@color/shopping_home_color_FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="@string/shopping_mall_watched_rightnow"
+            android:layout_marginStart="3dp"/>
+    </com.bytedance.android.ui.base.widget.round.RoundLinearLayout>
+    <ImageView
+        android:id="@+id/shopping_homepage_ic_live_card_watched_douyin"
+        android:visibility="gone"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:src="@drawable/shopping_homepage_ic_card_watched_douyin"/>
+</FrameLayout>

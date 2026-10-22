@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_message_item_above_ps_panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.chatroom.ui.NoMoreSpaceTextView
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_gravity="start"
+        android:id="@+id/message_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="3dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="24dp"
+        android:lineSpacingExtra="3dp"
+        android:textIsSelectable="false"
+        android:textAlignment="viewStart"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"/>
+</LinearLayout>

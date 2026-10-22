@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.common_ui.widget.roundlayout.RoundFrameLayout
+        android:id="@+id/goToChangeIconSetting"
+        android:paddingTop="?attr/larus_dp_16"
+        android:paddingBottom="?attr/larus_dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/larus_dp_12"
+        android:layout_marginRight="?attr/larus_dp_12"
+        android:layout_marginBottom="?attr/larus_dp_46"
+        android:layout_marginHorizontal="?attr/larus_dp_12"
+        android:paddingVertical="?attr/larus_dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rv_backgroundColor="@color/static_white_transparent_2"
+        app:rv_cornerRadius="?attr/larus_dp_16">
+        <TextView
+            android:textSize="?attr/larus_sp_17"
+            android:textColor="@color/larus_static_white"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_change_app_avatar_setting"/>
+    </com.larus.common_ui.widget.roundlayout.RoundFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

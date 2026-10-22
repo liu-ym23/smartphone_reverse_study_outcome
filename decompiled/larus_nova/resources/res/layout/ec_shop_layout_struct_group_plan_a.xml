@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ec_shop_struct_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ec_shop_layout_struct_view_sort_bar"
+        android:adjustViewBounds="true"/>
+    <com.bytedance.android.window.shop.widget.ECStructViewPlanA
+        android:id="@+id/ec_window_status_normal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.window.shop.widget.WindowStatusView
+        android:id="@+id/ec_window_status_double_ball"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

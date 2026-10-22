@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:background="@drawable/uicomponent_bg_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="28dp">
+        <EditText
+            android:id="@+id/input_view_et"
+            android:background="@null"
+            style="@style/uicomponent_input_view_multi_et"/>
+    </ScrollView>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_std_error"
+        android:id="@+id/input_view_hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_std_line_black_3"
+        android:id="@+id/input_view_max_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

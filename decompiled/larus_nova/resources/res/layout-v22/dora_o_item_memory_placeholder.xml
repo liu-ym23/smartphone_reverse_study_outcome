@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dora_o_bg_memory_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="?attr/larus_dp_12"
+    android:layout_marginRight="?attr/larus_dp_12"
+    android:layout_marginBottom="?attr/larus_dp_16"
+    android:layout_marginHorizontal="?attr/larus_dp_12">
+    <TextView
+        android:textSize="?attr/larus_sp_16"
+        android:textColor="@color/dora_o_text_tertiary"
+        android:id="@+id/memory_placeholder_text"
+        android:paddingTop="?attr/larus_dp_16"
+        android:paddingBottom="?attr/larus_dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="?attr/larus_dp_6"
+        android:paddingStart="?attr/larus_dp_20"
+        android:paddingEnd="?attr/larus_dp_12"
+        android:paddingVertical="?attr/larus_dp_16"/>
+</FrameLayout>

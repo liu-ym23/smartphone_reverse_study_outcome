@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="@dimen/account_saas_dp_12"/>
+            <solid android:color="@color/account_saas_primary_60"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="@dimen/account_saas_dp_12"/>
+            <solid android:color="@color/account_saas_primary_50"/>
+        </shape>
+    </item>
+</selector>

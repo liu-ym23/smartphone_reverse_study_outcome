@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/structure_layout"
+    android:background="@drawable/doc_list_item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+    <RelativeLayout
+        android:id="@+id/paragraph_icon_layout"
+        android:layout_width="24dp"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/paragraph_icon"
+            android:paddingLeft="@dimen/space_kit_len_8"
+            android:paddingRight="@dimen/space_kit_len_8"
+            android:visibility="gone"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ud_icon_expand_down_filled"
+            app:tint="@color/icon_n2"/>
+    </RelativeLayout>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/selector_pad_catalog_structure_paragraph"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/paragraph_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/space_kit_len_16"
+        android:layout_marginRight="@dimen/space_kit_len_16"
+        android:lines="1"/>
+</LinearLayout>

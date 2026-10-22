@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="44dp">
+    <FrameLayout
+        android:id="@+id/left_widget_container"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:minWidth="28dp"
+        android:layout_toLeftOf="@+id/watch_user_container"
+        android:layout_centerVertical="true"/>
+    <com.bytedance.android.livesdk.chatroom.view.MaxWidthSupportLayout
+        android:id="@+id/watch_user_container"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="19dp"
+        android:minWidth="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="19dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

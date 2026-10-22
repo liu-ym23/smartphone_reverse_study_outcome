@@ -1,0 +1,55 @@
+package mm;
+
+import androidx.room.EntityDeletionOrUpdateAdapter;
+import androidx.sqlite.db.SupportSQLiteStatement;
+import com.bytedance.android.ec.store.db.StoreDatabase;
+
+/* JADX INFO: loaded from: classes44.dex */
+public final class g extends EntityDeletionOrUpdateAdapter<nm.b> {
+    @Override // androidx.room.EntityDeletionOrUpdateAdapter, androidx.room.SharedSQLiteStatement
+    public final String createQuery() {
+        return "UPDATE OR ABORT `store_float_layout` SET `id` = ?,`component_name` = ?,`user_id` = ?,`scope_key` = ?,`action` = ?,`time` = ?,`count` = ? WHERE `id` = ?";
+    }
+
+    public g(StoreDatabase r100) {
+        super(r100);
+    }
+
+    @Override // androidx.room.EntityDeletionOrUpdateAdapter
+    public final void bind(SupportSQLiteStatement r100, nm.b r101) {
+        nm.b r102 = r101;
+        r100.bindLong(1, r102.f519590a);
+        String r103 = r102.f519591b;
+        if (r103 != null) goto L5;
+        r100.bindNull(2);
+    L6:
+        String r104 = r102.f519592c;
+        if (r104 != null) goto L9;
+        r100.bindNull(3);
+    L10:
+        String r105 = r102.f519593d;
+        if (r105 != null) goto L13;
+        r100.bindNull(4);
+    L14:
+        r100.bindLong(5, r102.f519594e);
+        String r106 = r102.f519595f;
+        if (r106 != null) goto L17;
+        r100.bindNull(6);
+    L18:
+        r100.bindLong(7, r102.f519596g);
+        r100.bindLong(8, r102.f519590a);
+        return;
+    L17:
+        r100.bindString(6, r106);
+        goto L18
+    L13:
+        r100.bindString(4, r105);
+        goto L14
+    L9:
+        r100.bindString(3, r104);
+        goto L10
+    L5:
+        r100.bindString(2, r103);
+        goto L6
+    }
+}

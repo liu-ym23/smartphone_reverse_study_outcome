@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="?attr/larus_dp_12"
+        android:top="?attr/larus_dp_12"
+        android:right="?attr/larus_dp_12"
+        android:bottom="?attr/larus_dp_12">
+        <vector
+            android:height="@dimen/larus_dp_20"
+            android:width="@dimen/larus_dp_20"
+            android:alpha="0.3"
+            android:viewportWidth="20"
+            android:viewportHeight="20">
+            <path
+                android:fillColor="#ffffff"
+                android:pathData="M18.586,10.011C18.459,10.267 18.173,10.488 17.6,10.928L10.828,16.132L10.828,16.132C10.266,16.564 9.984,16.781 9.751,16.804C9.441,16.834 9.14,16.686 8.975,16.421C8.851,16.223 8.851,15.867 8.851,15.155V13.145C5.763,13.317 3.888,14.415 2.572,16.919C2.354,17.334 2.245,17.541 2.171,17.611C1.85,17.915 1.326,17.793 1.172,17.379C1.137,17.284 1.132,17.101 1.122,16.735C0.983,11.485 3.535,6.724 8.851,5.773V3.765C8.851,3.055 8.851,2.7 8.975,2.501C9.14,2.237 9.441,2.088 9.752,2.119C9.985,2.143 10.266,2.359 10.83,2.793L17.601,8.007C18.174,8.448 18.46,8.669 18.587,8.925C18.755,9.268 18.755,9.669 18.586,10.011Z"
+                android:fillType="evenOdd"/>
+        </vector>
+    </item>
+</layer-list>

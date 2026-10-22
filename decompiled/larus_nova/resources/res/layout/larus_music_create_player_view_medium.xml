@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/player_container"
+    android:layout_width="?attr/larus_dp_52"
+    android:layout_height="?attr/larus_dp_52">
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="?attr/larus_dp_28"
+        android:layout_height="?attr/larus_dp_28">
+        <com.larus.common_ui.widget.CircleProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progress_bar"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:progress="2"
+            app:larus_maxProgress="100"
+            app:larus_progressbarBackgroundColor="@color/static_white_transparent_2"
+            app:larus_progressbarColor="@color/larus_static_white"
+            app:larus_radius="3dp"
+            app:larus_strokeWidth="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:id="@+id/play_image"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="?attr/larus_dp_1"
+            app:srcCompat="@drawable/larus_music_play_img"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:id="@+id/pause_image"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/larus_music_pause_img_medium"/>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="45"
+    android:pivotX="85%"
+    android:pivotY="134.9976%">
+    <shape android:shape="rectangle">
+        <size
+            android:height="12dp"
+            android:width="12dp"/>
+        <solid android:color="@color/luckydog_FFE2A7"/>
+    </shape>
+</rotate>

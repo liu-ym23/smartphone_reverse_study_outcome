@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <size
+                android:height="36dp"
+                android:width="36dp"/>
+            <corners android:radius="18dp"/>
+            <solid android:color="#3d000000"/>
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ttlive_ic_record_unfolded"
+        android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp"/>
+</layer-list>

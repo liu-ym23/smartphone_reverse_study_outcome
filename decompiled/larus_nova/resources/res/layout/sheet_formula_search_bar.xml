@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/formula_search_box"
+        android:background="@drawable/sheet_formula_search_bar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/formula_search_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ud_icon_search_outlined"
+            app:tint="@color/text_placeholder"/>
+        <com.bytedance.ee.bear.widgets.universedesign.SpaceEditText
+            android:textSize="14sp"
+            android:textColor="@color/text_title"
+            android:textColorHint="@color/text_placeholder"
+            android:gravity="center_vertical"
+            android:id="@+id/formula_search_input"
+            android:background="@null"
+            android:padding="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:imeOptions="actionSearch"
+            style="@style/UDEditText"/>
+    </LinearLayout>
+</FrameLayout>

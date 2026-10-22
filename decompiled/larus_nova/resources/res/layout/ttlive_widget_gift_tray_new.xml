@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.gift.platform.business.tray2.GiftTrayAnimationViewNew xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:id="@+id/gift"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ttlive_gift_anim_widget_height"
+    android:layout_marginBottom="@dimen/ttlive_gift_anim_widget_padding_bottom"/>

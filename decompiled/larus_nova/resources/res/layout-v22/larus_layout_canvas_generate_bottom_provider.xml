@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="start|bottom"
+    android:id="@+id/bottom_container"
+    android:background="@color/larus_static_black_transparent_2"
+    android:paddingLeft="?attr/larus_dp_12"
+    android:paddingTop="?attr/larus_dp_12"
+    android:paddingRight="?attr/larus_dp_12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="?attr/larus_dp_12">
+    <com.larus.bmhome.bigimg.aibeautify.CommonAiBeautifyLayout
+        android:id="@+id/ai_beautify_layout"
+        android:background="@drawable/larus_bg_big_image_icon"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_44"
+        android:layout_marginEnd="?attr/larus_dp_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/download_layout"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.larus.bmhome.bigimg.download.CommonDownLoadLayout
+        android:id="@+id/download_layout"
+        android:background="@drawable/larus_bg_big_image_icon"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_44"
+        android:layout_marginEnd="?attr/larus_dp_8"
+        app:layout_constraintEnd_toStartOf="@+id/creation_view"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/ai_beautify_layout"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.larus.bmhome.view.CreationOperateContainerView
+        android:id="@+id/creation_view"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_44"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/download_layout"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

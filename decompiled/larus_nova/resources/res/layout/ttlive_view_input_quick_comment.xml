@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/quick_comment_container_v3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.interactivity.common.business.quickcomment.QuickCommentView
+        android:id="@+id/view_quick_comment"
+        android:paddingLeft="12dp"
+        android:paddingTop="4dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

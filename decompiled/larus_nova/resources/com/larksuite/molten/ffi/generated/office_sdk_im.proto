@@ -1,0 +1,92 @@
+/* Generated code, DO NOT EDIT.
+ * source: office_sdk_im.yaml
+ */
+
+syntax = "proto2";
+
+package office_sdk_im.proto;
+
+//  消息类型
+enum MessageType {
+    VAR_MESSAGE_TYPE_DOUBAO = 0;
+}
+//  支持的feed类型
+enum SupportFeedType {
+    VAR_SUPPORT_FEED_TYPE_DOUBAO_CUSTOM = 0;
+}
+
+
+
+
+
+
+
+
+
+
+message FuncParamsX07a0ac2d8fc4de33 
+{
+    required MoltenFfiInstanceMsg notice_setting_handler = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX0eb96a96bc04d5fb 
+{
+    required MoltenFfiInstanceMsg notifier = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX444f30b092ff365b 
+{
+    required MoltenFfiInstanceMsg provider = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX81ee3b6540a0ad37 
+{
+    required uint64 sdk_session = 1;
+    required bytes payload = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX9bb45bc1f44db3d7 
+{
+    required bytes payload = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXa107628d4fee1944 
+{
+    required uint64 uid = 1;
+    required uint64 sdk_session = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb352c1b9784e5637 
+{
+    required bytes payload = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXbda86bcd25a76436 
+{
+    required MoltenFfiInstanceMsg message_operator = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXc958e052a3333abb 
+{
+    required MoltenFfiInstanceMsg setting = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX31709008a17eb2c2 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3dc8b8542df1cbb1 
+{
+    required bool ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX64f631e704f0fdef 
+{
+    required MessageType ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX65957134eb5cd850 
+{
+    required SupportFeedType ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXb05c0e03c1bfe022 
+{
+    required bytes ret = 1;
+    optional bytes _molten_ctx = 255;
+}message MoltenFfiInstanceMsg {
+  required int64 type_id = 1;
+  required int64 instance_id = 2;
+}
+message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.ee.bear.widgets.BaseTitleBar
+        android:id="@+id/home_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_home_title_bar_height_min"
+        app:widget_widgets_tb_divider_visible="false"
+        app:widget_widgets_tb_title="@string/Bitable_Common_AppNameBitable"/>
+</FrameLayout>

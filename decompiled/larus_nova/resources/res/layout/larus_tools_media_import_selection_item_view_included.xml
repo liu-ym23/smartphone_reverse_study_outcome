@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/included_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_gravity="end|top"
+        android:id="@+id/delete_layout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/larus_accessibility_delete"
+        style="@style/larus_PreviewBottomListDelete">
+        <com.ss.android.ugc.tools.view.style.StyleImageView
+            android:layout_gravity="end|top"
+            android:id="@+id/delete_img"
+            android:background="@drawable/larus_tools_media_import_bg_mixed_item_delete"
+            android:padding="3dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/larus_flow_media_import_icon_mixed_item_delete"/>
+    </FrameLayout>
+    <com.ss.android.ugc.tools.view.style.StyleTextView
+        android:textStyle="bold"
+        android:textColor="@color/tools_std_const_text_inverse"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/duration_text"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="2dp"
+        android:shadowColor="#4c000000"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:layout_marginEnd="4dp"
+        app:ts_enable_text_color="false"
+        app:ts_font_type="medium"
+        style="@style/tools_font_size_24"/>
+    <View
+        android:id="@+id/selection_border_view"
+        android:background="?attr/larus_tools_media_import_bg_mixed_item_selected_border"
+        android:visibility="gone"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+</FrameLayout>

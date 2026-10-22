@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/cj_pay_coupon_and_payment_item_layout"
+    android:paddingLeft="@dimen/cj_pay_padding_15"
+    android:paddingTop="@dimen/cj_pay_padding_6"
+    android:paddingRight="@dimen/cj_pay_padding_15"
+    android:paddingBottom="@dimen/cj_pay_padding_6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/cj_pay_font_size_14"
+        android:textColor="@color/cj_pay_color_gray_153"
+        android:gravity="center"
+        android:id="@+id/cj_pay_left_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
+    <TextView
+        android:textSize="@dimen/cj_pay_font_size_14"
+        android:textColor="@color/cj_pay_color_black_34"
+        android:gravity="center"
+        android:layout_gravity="right"
+        android:id="@+id/cj_pay_right_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
+</FrameLayout>

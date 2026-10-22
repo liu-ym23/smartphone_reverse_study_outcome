@@ -1,0 +1,65 @@
+package io.ktor.utils.io;
+
+import java.util.concurrent.atomic.AtomicLongFieldUpdater;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes41.dex */
+@Metadata(k = 3, mv = {1, 8, 0}, xi = 48)
+@DebugMetadata(c = "io.ktor.utils.io.ByteChannelSequentialBase", f = "ByteChannelSequential.kt", i = {0}, l = {570, 572}, m = "readBooleanSlow", n = {"this"}, s = {"L$0"})
+final class ByteChannelSequentialBase$readBooleanSlow$1 extends ContinuationImpl {
+    Object L$0;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ ByteChannelSequentialBase this$0;
+
+    public ByteChannelSequentialBase$readBooleanSlow$1(ByteChannelSequentialBase r100, Continuation<? super ByteChannelSequentialBase$readBooleanSlow$1> r101) {
+        this.this$0 = r100;
+        super(r101);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        this.result = r100;
+        this.label |= Integer.MIN_VALUE;
+        ByteChannelSequentialBase r101 = this.this$0;
+        AtomicLongFieldUpdater r102 = ByteChannelSequentialBase.f492003b;
+        r101.getClass();
+        int r103 = this.label;
+        if ((r103 & Integer.MIN_VALUE) == 0) goto L5;
+        this.label = r103 - Integer.MIN_VALUE;
+        ByteChannelSequentialBase$readBooleanSlow$1 r104 = this;
+    L6:
+        Object r105 = r104.result;
+        Object r106 = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int r107 = r104.label;
+        if (r107 == 0) goto L14;
+        if (r107 == 1) goto L13;
+        if (r107 != 2) goto L12;
+        ResultKt.throwOnFailure(r105);
+        return r105;
+    L12:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    L13:
+        r101 = (ByteChannelSequentialBase) r104.L$0;
+        ResultKt.throwOnFailure(r105);
+    L18:
+        r101.R(1, null);
+        r104.L$0 = null;
+        r104.label = 2;
+        throw null;
+    L14:
+        ResultKt.throwOnFailure(r105);
+        r104.L$0 = r101;
+        r104.label = 1;
+        if (r101.Q(1, r104) != r106) goto L18;
+        return r106;
+    L5:
+        r104 = new ByteChannelSequentialBase$readBooleanSlow$1(r101, this);
+        goto L6
+    }
+}

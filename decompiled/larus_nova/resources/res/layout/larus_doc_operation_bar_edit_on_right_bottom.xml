@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_operation_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="?attr/larus_dp_4">
+    <com.larus.common_ui.venus.ShapeLinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:gravity="center_horizontal"
+        android:layout_gravity="end"
+        android:id="@+id/doc_edit_all"
+        android:layout_width="?attr/larus_dp_72"
+        android:layout_height="?attr/larus_dp_72"
+        app:larus_sc_cornerRadius="?attr/larus_dp_16"
+        app:larus_sc_fillColor="@color/larus_base_3"
+        app:larus_sc_shadow_blur_radius="?attr/larus_dp_8"
+        app:larus_sc_shadow_color="#0f000000"
+        app:larus_sc_shadow_dx="?attr/larus_dp_0"
+        app:larus_sc_shadow_dy="?attr/larus_dp_2"
+        app:larus_sc_strokeColor="@color/neutral_transparent_1"
+        app:larus_sc_strokeWidth="?attr/larus_dp_1">
+        <ImageView
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24"
+            android:layout_marginTop="?attr/larus_dp_22"
+            android:src="@drawable/larus_doc_ic_edit"
+            android:scaleType="centerInside"
+            android:tintMode="src_in"
+            app:tint="@color/primary_50"/>
+    </com.larus.common_ui.venus.ShapeLinearLayout>
+</FrameLayout>

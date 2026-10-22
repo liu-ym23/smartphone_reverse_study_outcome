@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/collection_layout">
+    <com.larus.bmhome.view.BottomMenuGridLayout
+        android:id="@+id/bottom_menu"
+        android:background="?attr/larus_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_0"
+        app:layout_constraintVertical_weight="0"/>
+</FrameLayout>

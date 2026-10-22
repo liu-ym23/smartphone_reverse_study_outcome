@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/continuous_talk_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.voicecall.impl.ui.VoiceCallVideoView
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/call_video_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:larus_is_circle="true"/>
+    <com.larus.voicecall.impl.continue_talk.ChatContinuousTalkLayout
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:id="@+id/continuous_talk_controller"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/larus_dp_34"
+        android:layout_marginRight="?attr/larus_dp_34"
+        android:layout_marginBottom="?attr/larus_dp_18"
+        android:layout_marginHorizontal="?attr/larus_dp_34"/>
+    <View
+        android:layout_gravity="top|center_horizontal"
+        android:id="@+id/realtime_call_top_mask"
+        android:background="@drawable/larus_chat_continuous_top_bg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_36"/>
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:id="@+id/fl_root_realtime_call_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

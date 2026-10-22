@@ -1,0 +1,7 @@
+package com.bytedance.ee.bear.middleground.comment;
+
+/* JADX INFO: loaded from: classes18.dex */
+public final class h {
+    public h() {
+    }
+}

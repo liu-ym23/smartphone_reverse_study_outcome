@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.awemeopen.apps.photo.pinch.PinchStableView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:id="@+id/pinch_stable_view"
+    android:background="@color/aos_transparent"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fl_display_container"
+        android:background="@color/ConstBGInverse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp">
+        <FrameLayout
+            android:id="@+id/fl_pinch_photos_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:id="@+id/fl_pinch_double_digg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <include
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        layout="@layout/aos_photos_flow_page_pinch_btm_bar"/>
+</com.bytedance.awemeopen.apps.photo.pinch.PinchStableView>

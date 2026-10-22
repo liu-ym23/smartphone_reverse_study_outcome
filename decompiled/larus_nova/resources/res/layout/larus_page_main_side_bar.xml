@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.home.impl.main.side_bar.layout.drawer_impl.DrawerSideBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/side_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.home.impl.main.side_bar.layout.drawer_impl.FullDraggableContainer
+        android:id="@+id/draggable_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/page_container"
+            android:background="@color/larus_base_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.larus.home.impl.main.side_bar.layout.drawer_impl.FullDraggableContainer>
+    <FrameLayout
+        android:layout_gravity="start"
+        android:id="@+id/side_bar_container"
+        android:background="@color/larus_base_1"
+        android:layout_width="?attr/larus_dp_326"
+        android:layout_height="match_parent"/>
+</com.larus.home.impl.main.side_bar.layout.drawer_impl.DrawerSideBarLayout>

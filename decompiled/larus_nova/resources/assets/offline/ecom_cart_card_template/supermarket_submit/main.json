@@ -1,0 +1,286 @@
+{
+    "type": "View",
+     "style": {
+        "width": "stretch",
+         "height": "auto",
+         ":padding": "['0', '0', data.custom.padding_bottom, '0']",
+         "bg_color": "#ffffff",
+         "flex_direction": "column"
+    },
+     "elements": [{
+        "type": "View",
+         "style": {
+            "width": "stretch",
+             "height": "0.5",
+             "bg_color": "#1F161823"
+        }
+    },
+     {
+        "type": "View",
+         "style": {
+            "width": "stretch",
+             "height": "64",
+             "padding": ["10",
+             "12",
+             "10",
+             "12"],
+             "align_items": "center",
+             "flex_direction": "row",
+             "justify_content": "space-between"
+        },
+         "elements": [{
+            "attr": {
+                "role": "button",
+                 ":aria_label": "strcat('全选,', option(data.can_select, option(data.selected, '已选中,', '未选中,'), '已停用'))"
+            },
+             "type": "View",
+             "style": {
+                "height": "44",
+                 "align_items": "center",
+                 "flex_direction": "row"
+            },
+             "elements": [{
+                "attr": {
+                    ":src": "option(data.selected, 'https://p3-piu.byteimg.com/tos-cn-i-8jisjyls3a/35eb5eca5ad144e2b5c9c03a67b65052~tplv-8jisjyls3a-3:0:0:q75.png','https://p6-piu.byteimg.com/tos-cn-i-8jisjyls3a/9e3360c39736409c879fa78e105836da~tplv-8jisjyls3a-3:0:0:q75.png')"
+                },
+                 "type": "Image",
+                 "style": {
+                    "width": "20",
+                     "height": "20",
+                     "margin": ["0",
+                     "2",
+                     "0",
+                     "0"],
+                     ":display": "option(data.can_select, 'flex', 'none')"
+                }
+            },
+             {
+                "attr": {
+                    "src": "https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/3ff773cd12324a51b860be828265f1b8~tplv-8jisjyls3a-image.image"
+                },
+                 "type": "Image",
+                 "style": {
+                    "width": "20",
+                     "height": "20",
+                     "margin": ["0",
+                     "2",
+                     "0",
+                     "0"],
+                     ":display": "option(data.can_select, 'none', 'flex')"
+                }
+            },
+             {
+                "attr": {
+                    "text": "全选"
+                },
+                 "type": "Text",
+                 "style": {
+                    "font_size": 14,
+                     "font_color": "#99161823"
+                }
+            }],
+             "click_action": {
+                "type": "checkClick"
+            }
+        },
+         {
+            "type": "View",
+             "style": {
+                "font_color": "#99161823",
+                 "align_items": "center",
+                 "flex_direction": "row"
+            },
+             "elements": [{
+                "type": "View",
+                 "style": {
+                    ":display": "option(data.is_managed, 'none', 'flex')",
+                     ":visibility": "option(data.is_managed, 'hidden', 'visible')",
+                     "align_items": "flex-end",
+                     "flex_direction": "column"
+                },
+                 "elements": [{
+                    "attr": {
+                        "role": "text",
+                         ":aria_label": "strcat('合计:¥', data.price_info.total_price_integer, option(data.price_info.total_price_decimal, strcat('.', data.price_info.total_price_decimal), ''), option(data.cut_info, strcat(',', data.cut_info), ''))"
+                    },
+                     "type": "View",
+                     "style": {
+                        "align_items": "baseline"
+                    },
+                     "elements": [{
+                        "attr": {
+                            "text": "合计:"
+                        },
+                         "type": "Text",
+                         "style": {
+                            "margin": ["0",
+                             "4",
+                             "0",
+                             "0"],
+                             "font_size": 14,
+                             "font_color": "#161823",
+                             "line_height": 1,
+                             ":font_weight": "data.price_desc.font_weight"
+                        }
+                    },
+                     {
+                        "attr": {
+                            "text": "¥"
+                        },
+                         "type": "Text",
+                         "style": {
+                            "font_size": 16,
+                             "font_color": "#FF1C49",
+                             "font_weight": 600,
+                             "line_height": 1
+                        }
+                    },
+                     {
+                        "attr": {
+                            ":text": "data.price_info.total_price_integer"
+                        },
+                         "type": "Text",
+                         "style": {
+                            "font_size": 19,
+                             "font_color": "#FF1C49",
+                             "align_items": "flex-end",
+                             "font_weight": 600,
+                             "line_height": 1
+                        }
+                    },
+                     {
+                        "attr": {
+                            ":text": "strcat('.', data.price_info.total_price_decimal)"
+                        },
+                         "type": "Text",
+                         "style": {
+                            ":display": "option(data.price_info.total_price_decimal, 'flex', 'none')",
+                             "font_size": 16,
+                             "font_color": "#FF1C49",
+                             "font_weight": 600,
+                             "line_height": 1
+                        }
+                    }]
+                },
+                 {
+                    "type": "View",
+                     "style": {
+                        "margin": ["3",
+                         "0",
+                         "0",
+                         "0"],
+                         ":display": "option(data.cut_info, 'flex', 'none')",
+                         "align_items": "center"
+                    },
+                     "elements": [{
+                        "attr": {
+                            ":text": "data.cut_info",
+                             "aria_hidden": true
+                        },
+                         "type": "Text",
+                         "style": {
+                            "margin": ["0",
+                             "4",
+                             "0",
+                             "0"],
+                             "font_size": 14,
+                             "font_color": "#FF3B52"
+                        }
+                    },
+                     {
+                        "attr": {
+                            "role": "button",
+                             "aria_label": "明细"
+                        },
+                         "type": "View",
+                         "style": {
+                            "align_items": "center"
+                        },
+                         "elements": [{
+                            "attr": {
+                                "text": "明细"
+                            },
+                             "type": "Text",
+                             "style": {
+                                "font_size": 14,
+                                 "font_color": "#FF3B52"
+                            }
+                        },
+                         {
+                            "attr": {
+                                "src": "https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/8b21683232d6481c8a6365b4863c5b01~tplv-8jisjyls3a-3:0:0:q75.png",
+                                 "_experimental_base64_src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAGFBMVEVHcEz/OlH/OlL/OFD/QFD/O1H/O1L/O1Jbkjo2AAAACHRSTlMAYOIiEM2f/85p830AAABdSURBVDiN7crLDsAgCERRFNH//+M+aGMrIyTdNfGuJplDtPoU11pCk1uTQB0mUmp8dZqUXKWGyFO38VQ3c/U0M/U2WI0GKWusQsYoaAbF2KjiaxfJ0OwqCz5Wf2kD1CMDGeB+QecAAAAASUVORK5CYII="
+                            },
+                             "type": "Image",
+                             "style": {
+                                "width": "12",
+                                 "height": "12",
+                                 "margin": ["0",
+                                 "0",
+                                 "0",
+                                 "2"]
+                            }
+                        }]
+                    }]
+                }],
+                 "click_action": {
+                    "type": "openDiscountPanel"
+                }
+            },
+             {
+                "attr": {
+                    "role": "button",
+                     "text": "删除",
+                     "aria_label": "删除"
+                },
+                 "type": "Text",
+                 "style": {
+                    "width": "100",
+                     "bg_img": "https://p26-piu.byteimg.com/tos-cn-i-8jisjyls3a/1e7cf9a7f485402b963682b04f5e2d54~tplv-8jisjyls3a-3:0:0:q75.png",
+                     "height": "44",
+                     "margin": ["0",
+                     "0",
+                     "0",
+                     "8"],
+                     "radius": ["8"],
+                     ":display": "option(data.is_managed, 'flex', 'none')",
+                     "font_size": 15,
+                     "font_color": "#ffffff",
+                     "align_items": "center",
+                     "font_weight": 500,
+                     "justify_content": "center"
+                },
+                 "click_action": {
+                    "type": "compactDelete"
+                }
+            },
+             {
+                "attr": {
+                    "role": "button",
+                     ":text": "data.order_button.text",
+                     ":aria_label": "data.order_button.text"
+                },
+                 "type": "Text",
+                 "style": {
+                    "width": "100",
+                     "bg_img": "https://p26-piu.byteimg.com/tos-cn-i-8jisjyls3a/1e7cf9a7f485402b963682b04f5e2d54~tplv-8jisjyls3a-3:0:0:q75.png",
+                     "height": "44",
+                     "margin": ["0",
+                     "0",
+                     "0",
+                     "8"],
+                     "radius": ["8"],
+                     ":display": "option(data.is_managed, 'none', 'flex')",
+                     "font_size": 15,
+                     "font_color": "#ffffff",
+                     "align_items": "center",
+                     "font_weight": 500,
+                     "justify_content": "center"
+                },
+                 "click_action": {
+                    "type": "buyRender"
+                }
+            }]
+        }]
+    }]
+}

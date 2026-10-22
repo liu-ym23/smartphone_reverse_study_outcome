@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/diary_scroll_image"
+    android:layout_width="?attr/larus_dp_72"
+    android:layout_height="?attr/larus_dp_96"
+    android:layout_marginEnd="?attr/larus_dp_8"
+    app:placeholderImage="@drawable/larus_bg_diary_placeholder"
+    app:roundedCornerRadius="?attr/larus_dp_8"/>

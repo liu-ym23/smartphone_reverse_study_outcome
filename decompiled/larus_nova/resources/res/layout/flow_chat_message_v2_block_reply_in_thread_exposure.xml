@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/root_reply_in_thread_exposure"
+    android:paddingBottom="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/divider"
+        android:background="@color/flow_ud_primary_transparent_3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/flow_ud_neutral_70"
+        android:id="@+id/thread_reply_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+    <com.ss.android.lark.chat.chatwindow.chat.message.cell.mergeforward.ThreadReplyExposureView
+        android:id="@+id/replies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/flow_ud_neutral_70"
+        android:id="@+id/reply_thread_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/LarkIM_Thread_Reply_Placeholder"
+        android:maxLines="1"
+        android:drawablePadding="6dp"
+        android:paddingStart="2dp"/>
+</LinearLayout>

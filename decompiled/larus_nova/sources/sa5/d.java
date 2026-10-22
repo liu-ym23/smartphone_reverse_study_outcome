@@ -1,0 +1,6 @@
+package sa5;
+
+/* JADX INFO: loaded from: classes16.dex */
+public interface d {
+    boolean onBackPressed();
+}

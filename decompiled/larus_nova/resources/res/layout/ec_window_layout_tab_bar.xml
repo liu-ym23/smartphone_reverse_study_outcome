@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ec_window_tab_layout_container"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ec_window_layout_tab_bar_container"/>
+    <com.bytedance.android.window.shop.widget.ECWindowTabLayout
+        android:id="@+id/ec_window_tab_layout"
+        android:background="@color/ec_shop_transparent"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
+        app:tabBackground="@color/ec_shop_transparent"
+        app:tabIndicatorColor="@color/ec_window_common_red"
+        app:tabMinWidth="20dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="12dp"
+        app:tabPaddingStart="12dp"
+        app:tabRippleColor="@color/ec_shop_transparent"
+        app:tabSelectedTextColor="@color/shopping_color_161823"
+        app:tabTextAppearance="@style/ShopTabLayoutTextStyle"
+        app:tabTextColor="@color/shopping_color_99161823"/>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_dialog_inroom_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/ttlive_interact_cancel_apply_waiting_count_tips_layout"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_black"
+        android:gravity="center"
+        android:id="@+id/video_talk_room_apply"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/ttlive_interact_apply_link"/>
+    <View
+        android:background="#14000000"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_black"
+        android:gravity="center"
+        android:id="@+id/cancel_apply"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/ttlive_live_video_talk_room_cancel_apply"/>
+    <View
+        android:background="#f1f1f2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_black"
+        android:gravity="center"
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/ttlive_cancel"/>
+</LinearLayout>

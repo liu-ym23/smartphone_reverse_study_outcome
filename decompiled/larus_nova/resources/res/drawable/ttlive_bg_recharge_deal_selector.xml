@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/ttlive_bg_recharge_deal_selected_item"/>
+    <item
+        android:state_selected="false"
+        android:drawable="@drawable/ttlive_bg_recharge_deal_unselected_item"/>
+</selector>

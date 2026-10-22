@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/SDQuaternary"
+    android:layout_width="108dp"
+    android:layout_height="wrap_content">
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textColor="#ffffff"
+        android:id="@+id/consult"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/live_local_life_top_bar_more_consult"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/live_local_life_shelf_bar_more_consult"
+        android:paddingStart="16dp"
+        style="@style/font_size_26"/>
+    <View
+        android:id="@+id/divider"
+        android:background="#33ffffff"
+        android:layout_width="84dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="12dp"/>
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textColor="#ffffff"
+        android:id="@+id/member"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/live_local_life_top_bar_more_member"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/live_local_life_shelf_bar_more_member"
+        android:paddingStart="16dp"
+        style="@style/font_size_26"/>
+</LinearLayout>

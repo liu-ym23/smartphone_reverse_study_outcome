@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.locallife.dito.baseview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_mall_shops_title_view_144092056"
+    android:background="@color/POIBgPrimary"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:rounded_radius="4dp">
+    <com.bytedance.lighten.loader.SmartImageView
+        android:id="@+id/tv_poi_mall_shops_title"
+        android:layout_width="64dp"
+        android:layout_height="21dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
+</com.bytedance.locallife.dito.baseview.RoundLinearLayout>

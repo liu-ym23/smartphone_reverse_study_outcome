@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="30dp"
+    android:width="30dp"
+    android:viewportWidth="30"
+    android:viewportHeight="30">
+    <path
+        android:fillColor="@color/larus_neutral_transparent_1"
+        android:pathData="M15,15m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"/>
+    <path
+        android:fillColor="@color/larus_neutral_100"
+        android:pathData="M10.286,10.286L10.286,10.286A0.833,0.833 90,0 1,11.465 10.286L19.714,18.535A0.833,0.833 0,0 1,19.714 19.714L19.714,19.714A0.833,0.833 90,0 1,18.536 19.714L10.286,11.464A0.833,0.833 90,0 1,10.286 10.286z"
+        android:strokeColor="@color/larus_neutral_100"
+        android:strokeWidth="0.5"
+        android:strokeAlpha="0.5"
+        android:fillAlpha="0.5"/>
+    <path
+        android:fillColor="@color/larus_neutral_100"
+        android:pathData="M19.714,10.286L19.714,10.286A0.833,0.833 0,0 1,19.714 11.464L11.465,19.714A0.833,0.833 90,0 1,10.286 19.714L10.286,19.714A0.833,0.833 90,0 1,10.286 18.535L18.536,10.286A0.833,0.833 90,0 1,19.714 10.286z"
+        android:strokeColor="@color/larus_neutral_100"
+        android:strokeWidth="0.5"
+        android:strokeAlpha="0.5"
+        android:fillAlpha="0.5"/>
+</vector>

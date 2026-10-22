@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/larus_dp_24"
+    android:width="@dimen/larus_dp_24"
+    android:autoMirrored="true"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group>
+        <clip-path android:pathData="M2,2h20v20h-20z"/>
+        <path
+            android:fillColor="@color/larus_neutral_100"
+            android:pathData="M12,2.417C17.293,2.417 21.583,6.707 21.583,12C21.583,17.293 17.293,21.583 12,21.583C6.707,21.583 2.417,17.293 2.417,12C2.417,6.707 6.707,2.417 12,2.417ZM12,4.083C7.628,4.083 4.083,7.628 4.083,12C4.083,16.372 7.628,19.917 12,19.917C16.372,19.917 19.917,16.372 19.917,12C19.917,7.628 16.372,4.083 12,4.083ZM15.473,8.039C15.729,7.656 16.246,7.553 16.629,7.808C17.012,8.063 17.115,8.581 16.86,8.964L12.238,15.896C11.738,16.646 10.653,16.694 10.089,15.991L7.183,12.37C6.895,12.01 6.953,11.486 7.312,11.198C7.671,10.91 8.196,10.967 8.484,11.326L11.104,14.592L15.473,8.039Z"/>
+    </group>
+</vector>

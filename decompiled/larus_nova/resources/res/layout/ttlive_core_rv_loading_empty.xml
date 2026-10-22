@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#b0b0b0"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/empty_tv"
+        android:paddingTop="16.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_core_location_feed_empty_text"
+        android:drawableTop="@drawable/ttlive_core_ic_item_null"
+        android:drawablePadding="10dp"
+        android:layout_centerInParent="true"/>
+</FrameLayout>

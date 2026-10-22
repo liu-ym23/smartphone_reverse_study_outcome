@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/facade_round_top_xxl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:backgroundTint="@color/bg_float_base">
+    <com.bytedance.ee.bear.widgets.universedesign.SpaceSettingGroupLayout
+        android:orientation="vertical"
+        android:id="@+id/action_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:itemBackgroundColor="@color/facade_selector_item_float"/>
+    <com.larksuite.component.universe_design.button.UDButton
+        android:textSize="16sp"
+        android:textColor="@color/text_title"
+        android:gravity="center"
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/Doc_Facade_Cancel"
+        app:ud_backgroundColor="@color/bg_float"
+        app:ud_radius="xl"/>
+</LinearLayout>

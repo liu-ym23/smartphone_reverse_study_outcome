@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="20dp">
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/TextReverse"
+        android:ellipsize="end"
+        android:id="@+id/product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:lines="1"
+        android:textFontWeight="600"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/commerce_color_99161823"
+        android:ellipsize="end"
+        android:id="@+id/sku_select_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="307dp"
+        android:lines="1"/>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/new_style_replay_entrance_layout"
+    android:layout_width="56dp"
+    android:layout_height="56dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/new_style_replay_entrance_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="centerInside"/>
+    <TextView
+        android:textSize="11dp"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/new_style_replay_entrance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+</FrameLayout>

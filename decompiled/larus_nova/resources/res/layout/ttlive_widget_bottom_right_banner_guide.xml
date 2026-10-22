@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/ttlive_top_left_large_banner_width"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ttlive_widget_ic_guide_arrow_down"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp"
+        android:layout_centerHorizontal="true"
+        app:failureImage="@drawable/ttlive_ic_guide_arrow_down"/>
+    <include
+        android:id="@+id/bottom_right_banner_container"
+        android:layout_width="@dimen/ttlive_top_left_large_banner_width"
+        android:layout_height="@dimen/ttlive_top_left_large_banner_height"
+        android:layout_below="@+id/ttlive_widget_ic_guide_arrow_down"
+        android:layout_alignWithParentIfMissing="true"
+        layout="@layout/ttlive_widget_bottom_right_banner"/>
+    <com.bytedance.android.livesdk.widget.roundcorner.RoundCornerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@+id/bottom_right_banner_container"
+        android:layout_alignStart="@+id/bottom_right_banner_container"
+        app:ttlive_allRadius="5dp">
+        <View
+            android:id="@+id/ttlive_ic_swipe_view"
+            android:background="@drawable/ttlive_ic_guide_banner_swipe"
+            android:visibility="gone"
+            android:layout_width="104dp"
+            android:layout_height="48dp"
+            android:alpha="0.5"/>
+    </com.bytedance.android.livesdk.widget.roundcorner.RoundCornerFrameLayout>
+</RelativeLayout>

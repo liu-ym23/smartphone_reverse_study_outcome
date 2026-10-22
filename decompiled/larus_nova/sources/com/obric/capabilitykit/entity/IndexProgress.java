@@ -1,0 +1,70 @@
+package com.obric.capabilitykit.entity;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\t\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\b\u0087\b\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0002\u0010\u0005J\t\u0010\t\u001a\u00020\u0003HÆ\u0003J\t\u0010\n\u001a\u00020\u0003HÆ\u0003J\u001d\u0010\u000b\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u0003HÆ\u0001J\u0013\u0010\f\u001a\u00020\r2\b\u0010\u000e\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u000f\u001a\u00020\u0003HÖ\u0001J\t\u0010\u0010\u001a\u00020\u0011HÖ\u0001R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007R\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\u0007¨\u0006\u0012"}, d2 = {"Lcom/obric/capabilitykit/entity/IndexProgress;", "", "left", "", "total", "(II)V", "getLeft", "()I", "getTotal", "component1", "component2", "copy", "equals", "", "other", "hashCode", "toString", "", "capabilitykitcommon_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+public final class IndexProgress {
+    private final int left;
+    private final int total;
+
+    public IndexProgress(int r100, int r101) {
+        this.left = r100;
+        this.total = r101;
+    }
+
+    public static /* synthetic */ IndexProgress copy$default(IndexProgress r100, int r101, int r102, int r103, Object r104) {
+        if ((r103 & 1) == 0) goto L6;
+        r101 = r100.left;
+    L6:
+        if ((r103 & 2) == 0) goto L9;
+        r102 = r100.total;
+    L9:
+        return r100.copy(r101, r102);
+    }
+
+    public final int component1() {
+        return this.left;
+    }
+
+    public final int component2() {
+        return this.total;
+    }
+
+    public final IndexProgress copy(int r100, int r101) {
+        return new IndexProgress(r100, r101);
+    }
+
+    public boolean equals(Object r100) {
+        if (this != r100) goto L6;
+        return true;
+    L6:
+        if ((r100 instanceof IndexProgress) == true) goto L8;
+        return false;
+    L8:
+        IndexProgress r101 = (IndexProgress) r100;
+        if (this.left == r101.left) goto L12;
+        return false;
+    L12:
+        if (this.total == r101.total) goto L14;
+        return false;
+    L14:
+        return true;
+    }
+
+    public final int getLeft() {
+        return this.left;
+    }
+
+    public final int getTotal() {
+        return this.total;
+    }
+
+    public int hashCode() {
+        return (this.left * 31) + this.total;
+    }
+
+    public String toString() {
+        return "IndexProgress(left=" + this.left + ", total=" + this.total + ')';
+    }
+}

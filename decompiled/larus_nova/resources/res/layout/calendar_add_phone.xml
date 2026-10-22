@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phone_container"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/phone_icon_container"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ud_icon_cellphone_outlined"
+            app:tint="@color/primary_pri_500"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@color/text_title"
+            android:ellipsize="end"
+            android:id="@+id/phone_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/phone_icon_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/phone_icon_container"
+            app:layout_constraintTop_toTopOf="@+id/phone_icon_container"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:background="@color/bg_base"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textSize="13sp"
+        android:textColor="@color/POIBgPrimary"
+        android:gravity="center"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/poi_enter_album_page"
+        android:ems="1"/>
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/poi_ic_img_look_more"/>
+</LinearLayout>

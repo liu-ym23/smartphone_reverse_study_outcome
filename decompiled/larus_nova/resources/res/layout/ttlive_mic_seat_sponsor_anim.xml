@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="40dp"
+    android:layout_height="18dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/img_mic_seat_sponsor_avatar"
+        android:background="@drawable/ttlive_profile_avatar_bg_oval_black"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/ttlive_img_avatar_empty"
+        app:actualImageScaleType="fitCenter"
+        app:overlayImage="@drawable/ttlive_profile_avatar_overlay_mask"
+        app:placeholderImage="@drawable/ttlive_img_avatar_empty"
+        app:roundAsCircle="true"/>
+    <TextView
+        android:textSize="9dp"
+        android:textColor="#52311d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:text="冠名"
+        android:includeFontPadding="false"/>
+</merge>

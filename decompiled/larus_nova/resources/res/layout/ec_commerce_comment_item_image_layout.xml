@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ec_comment_image_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ec_commerce_comment_sv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"/>
+    <com.bytedance.android.ec.core.widget.DoubleColorBallStatusView
+        android:layout_gravity="center"
+        android:id="@+id/ec_commerce_comment_image_loading"
+        android:visibility="gone"
+        android:layout_width="28dp"
+        android:layout_height="28dp"/>
+    <View
+        android:layout_gravity="bottom"
+        android:id="@+id/ec_comment_image_maxheight_shadow"
+        android:background="@drawable/commerce_comment_bg_top_shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="321dp"/>
+</FrameLayout>

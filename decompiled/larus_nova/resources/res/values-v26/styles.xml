@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat">
+    </style>
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light">
+    </style>
+    <style name="Base.V26.Theme.AppCompat" parent="@style/Base.V23.Theme.AppCompat">
+        <item name="colorError">?android:attr/colorError</item>
+    </style>
+    <style name="Base.V26.Theme.AppCompat.Light" parent="@style/Base.V23.Theme.AppCompat.Light">
+        <item name="colorError">?android:attr/colorError</item>
+    </style>
+    <style name="Base.V26.Widget.AppCompat.Toolbar" parent="@style/Base.V7.Widget.AppCompat.Toolbar">
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+    <style name="Base.Widget.AppCompat.Toolbar" parent="@style/Base.V26.Widget.AppCompat.Toolbar">
+    </style>
+    <style name="BottomActionImgButton" parent="@style/OButton.M1.Trans.Neutral">
+        <item name="android:paddingHorizontal">10dp</item>
+    </style>
+    <style name="OButton.M1" parent="@style/OButton">
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">@dimen/oui_h_m1</item>
+        <item name="android:minWidth">@dimen/oui_h_m1</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:paddingHorizontal">@dimen/oui_p_button_m1</item>
+        <item name="oui_buttonTextStyle">@style/BtnLabel_M1</item>
+        <item name="oui_radius">@dimen/oui_r_m1</item>
+        <item name="strokeColor">@color/Transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="OButton.M2" parent="@style/OButton">
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">@dimen/oui_h_m2</item>
+        <item name="android:minWidth">@dimen/oui_h_m2</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:paddingHorizontal">@dimen/oui_p_button_m2</item>
+        <item name="oui_buttonTextStyle">@style/BtnLabel_M2</item>
+        <item name="oui_radius">@dimen/oui_r_m2</item>
+        <item name="strokeColor">@color/Transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="OButton.SwipeButton.L1" parent="@style/OButton.SwipeButton">
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-1</item>
+        <item name="android:minWidth">65dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:layout_marginVertical">4dp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="oui_buttonTextStyle">@style/BtnLabel_M1</item>
+        <item name="oui_radius">@dimen/oui_r_l1_rect</item>
+        <item name="strokeColor">@color/Transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="OButton.SwipeButton.M2" parent="@style/OButton.SwipeButton">
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-1</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:layout_marginVertical">4dp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="oui_buttonTextStyle">@style/BtnLabel_M1</item>
+        <item name="oui_radius">12dp</item>
+        <item name="strokeColor">@color/Transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="OIconButton.M1" parent="@style/OIconButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">0x1</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">@dimen/oui_h_m1</item>
+        <item name="android:paddingHorizontal">@dimen/oui_p_button_m1</item>
+        <item name="android:paddingVertical">6dp</item>
+        <item name="android:lineHeight">20dp</item>
+        <item name="oui_radius">@dimen/oui_r_m1</item>
+        <item name="strokeColor">@color/Transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="OIconButton.M1.Trans" parent="@style/OIconButton.M1">
+        <item name="android:background">@color/Transparent</item>
+        <item name="android:paddingHorizontal">@dimen/oui_p_button_icon_trans_m1</item>
+        <item name="android:paddingVertical">4dp</item>
+    </style>
+    <style name="OIconButton.M2" parent="@style/OIconButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">0x1</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">@dimen/oui_h_m2</item>
+        <item name="android:paddingHorizontal">@dimen/oui_p_button_icon_m2</item>
+        <item name="android:lineHeight">22dp</item>
+        <item name="oui_radius">@dimen/oui_r_m2</item>
+        <item name="strokeColor">@color/Transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="OIconButton.M2.Trans" parent="@style/OIconButton.M2">
+        <item name="android:background">@color/Transparent</item>
+        <item name="android:paddingHorizontal">17dp</item>
+    </style>
+    <style name="SwipeButtonContainer" parent="">
+        <item name="android:gravity">0x10</item>
+        <item name="android:orientation">left</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-1</item>
+        <item name="android:paddingHorizontal">8dp</item>
+    </style>
+    <style name="larus_WidgetInputTextStyle" parent="@style/larus_EditTextStyle">
+        <item name="android:textSize">?attr/larus_dp_17</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">0x800013</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:visibility">0</item>
+        <item name="android:scrollbars">0x200</item>
+        <item name="android:maxHeight">?attr/larus_dp_122</item>
+        <item name="android:hint">@string/larus_send_message</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:lineSpacingMultiplier">1.25</item>
+        <item name="android:inputType">0x20001</item>
+        <item name="android:imeOptions">0x10000000</item>
+        <item name="android:textDirection">5</item>
+        <item name="android:textAlignment">5</item>
+        <item name="android:layoutDirection">3</item>
+        <item name="android:paddingHorizontal">?attr/larus_dp_12</item>
+        <item name="android:paddingVertical">?attr/larus_dp_12</item>
+    </style>
+</resources>

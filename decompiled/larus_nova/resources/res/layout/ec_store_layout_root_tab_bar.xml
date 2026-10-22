@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.tabs.TabLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_store_root_tab_layout"
+    android:background="@color/ec_shop_07161823"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:tabGravity="center"
+    app:tabIndicatorFullWidth="false"
+    app:tabIndicatorHeight="0dp"
+    app:tabMinWidth="0dp"
+    app:tabMode="fixed"
+    app:tabPaddingBottom="0dp"
+    app:tabPaddingEnd="0dp"
+    app:tabPaddingStart="0dp"
+    app:tabPaddingTop="0dp"
+    app:tabRippleColor="@color/transparent"/>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ec_commerce_anchor_v3_item_comment_append_1615553863"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="11dp"
+        android:textColor="@color/commerce_color_brand"
+        android:ellipsize="end"
+        android:id="@+id/append_comment_time"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#bf161823"
+        android:ellipsize="end"
+        android:id="@+id/append_comment_content"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:lineSpacingExtra="2dp"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/commerce_color_161823"
+        android:id="@+id/comment_append_tv_content_info"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.shopping.anchorv3.comment.widget.CommentMediaView
+        android:id="@+id/comment_media_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>

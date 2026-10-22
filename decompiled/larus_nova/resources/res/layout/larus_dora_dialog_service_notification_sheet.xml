@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/larus_dora_bg_notification_broadcast_mode_sheet"
+    android:paddingBottom="?attr/larus_dp_24"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="?attr/larus_dp_12"
+    android:paddingEnd="?attr/larus_dp_12">
+    <com.larus.dora.impl.view.DoraTextView
+        android:textSize="?attr/larus_sp_18"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/dora_noti_v3_service_sheet_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_dora_broadcast_v3_service_notification_title_cn"
+        app:layout_constraintBottom_toBottomOf="@+id/dora_noti_v3_service_sheet_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dora_noti_v3_service_sheet_close"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dora_noti_v3_service_sheet_close"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="?attr/larus_dp_2"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="?attr/larus_dp_32"
+        android:layout_height="?attr/larus_dp_32"
+        android:layout_marginTop="?attr/larus_dp_16"
+        android:src="@drawable/larus_dora_ic_notification_broadcast_close"
+        android:contentDescription="@string/larus_broadcast_app_turnoff_cn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dora_noti_v3_service_list"
+        android:background="@drawable/larus_dora_bg_notification_broadcast_mode_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_20"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@+id/dora_noti_v3_service_sheet_close"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

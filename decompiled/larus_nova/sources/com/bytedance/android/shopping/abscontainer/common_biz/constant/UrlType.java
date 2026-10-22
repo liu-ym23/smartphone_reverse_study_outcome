@@ -1,0 +1,47 @@
+package com.bytedance.android.shopping.abscontainer.common_biz.constant;
+
+import com.bytedance.android.shopping.buynow.data.model.BuyNowUrlType;
+import kotlin.Metadata;
+import r27.a;
+
+/* JADX INFO: loaded from: classes12.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\u000e\n\u0002\b\t\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\n¨\u0006\u000b"}, d2 = {"Lcom/bytedance/android/shopping/abscontainer/common_biz/constant/UrlType;", "", "", "value", "Ljava/lang/String;", "getValue", "()Ljava/lang/String;", "PAY_SUCCESS", "XTAB_MALL_HOMEPAGE", "ORDER_LIST", "ORDER_DETAIL", "ec-shopping-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final enum UrlType extends Enum<UrlType> {
+    public static final UrlType ORDER_DETAIL = null;
+    public static final UrlType ORDER_LIST = null;
+    public static final UrlType PAY_SUCCESS = null;
+    public static final UrlType XTAB_MALL_HOMEPAGE = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ UrlType[] f164228a = null;
+    private final String value;
+
+    static {
+        UrlType r100 = new UrlType("PAY_SUCCESS", 0, "pay_success");
+        PAY_SUCCESS = r100;
+        UrlType r101 = new UrlType("XTAB_MALL_HOMEPAGE", 1, BuyNowUrlType.XTAB_MALL_HOMEPAGE);
+        XTAB_MALL_HOMEPAGE = r101;
+        UrlType r102 = new UrlType("ORDER_LIST", 2, BuyNowUrlType.ORDER_LIST);
+        ORDER_LIST = r102;
+        UrlType r103 = new UrlType("ORDER_DETAIL", 3, "order_detail");
+        ORDER_DETAIL = r103;
+        f164228a = new UrlType[]{r100, r101, r102, r103};
+    }
+
+    public static UrlType valueOf(String r100) {
+        return (UrlType) a.a(UrlType.class, r100);
+    }
+
+    public static UrlType[] values() {
+        return (UrlType[]) f164228a.clone();
+    }
+
+    public final String getValue() {
+        return this.value;
+    }
+
+    public UrlType(String r100, int r101, String r102) {
+        super(r100, r101);
+        this.value = r102;
+    }
+}

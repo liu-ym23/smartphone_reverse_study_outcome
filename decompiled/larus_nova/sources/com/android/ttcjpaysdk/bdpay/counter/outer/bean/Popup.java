@@ -1,0 +1,20 @@
+package com.android.ttcjpaysdk.bdpay.counter.outer.bean;
+
+import com.android.ttcjpaysdk.base.json.CJPayObject;
+import com.bytedance.kmp.ec.yata.view.render.controller.common.ContainerPosition;
+import java.io.Serializable;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes28.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\u0018\u00002\u00020\u00012\u00020\u0002B\u0005¢\u0006\u0002\u0010\u0003R\u0012\u0010\u0004\u001a\u00020\u00058\u0006@\u0006X\u0087\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u0006\u001a\u00020\u00058\u0006@\u0006X\u0087\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u0007\u001a\u00020\u00058\u0006@\u0006X\u0087\u000e¢\u0006\u0002\n\u0000¨\u0006\b"}, d2 = {"Lcom/android/ttcjpaysdk/bdpay/counter/outer/bean/Popup;", "Lcom/android/ttcjpaysdk/base/json/CJPayObject;", "Ljava/io/Serializable;", "()V", ContainerPosition.BODY, "", "button_desc", "title", "bdpay-counter-outer_release"}, k = 1, mv = {1, 6, 0}, xi = 48)
+public final class Popup implements CJPayObject, Serializable {
+    public String body;
+    public String button_desc;
+    public String title;
+
+    public Popup() {
+        this.title = "";
+        this.body = "";
+        this.button_desc = "";
+    }
+}

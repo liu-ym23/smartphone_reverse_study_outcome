@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    android:background="#99000000"
+    android:paddingLeft="20dp"
+    android:paddingTop="18dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="12dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+    <ProgressBar
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/progress_bar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/uikit_loading_anim"/>
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textColor="#ffffffff"
+        android:id="@+id/loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11.5dp"
+        android:text="正在加载"/>
+</LinearLayout>

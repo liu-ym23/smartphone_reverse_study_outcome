@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/deepResearchBanner"
+    android:background="?attr/larus_bg_deep_reseach_banner"
+    android:paddingTop="?attr/larus_dp_8"
+    android:paddingBottom="?attr/larus_dp_8"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/larus_dp_16"
+    android:paddingStart="?attr/larus_dp_12"
+    android:paddingEnd="?attr/larus_dp_12">
+    <TextView
+        android:textSize="?attr/larus_dp_15"
+        android:textStyle="bold"
+        android:textColor="?attr/larus_neutral_70"
+        android:ellipsize="end"
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/iv_arrow"
+        android:paddingLeft="?attr/larus_dp_4"
+        android:paddingTop="?attr/larus_dp_4"
+        android:paddingRight="?attr/larus_dp_4"
+        android:paddingBottom="?attr/larus_dp_4"
+        android:layout_width="?attr/larus_dp_17"
+        android:layout_height="?attr/larus_dp_23"
+        android:layout_marginStart="6dp"
+        app:srcCompat="?attr/larus_deep_search_progress_card_enter_icon"/>
+</LinearLayout>

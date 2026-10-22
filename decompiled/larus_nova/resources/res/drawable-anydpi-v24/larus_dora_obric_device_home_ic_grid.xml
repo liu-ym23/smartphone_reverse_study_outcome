@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="#7f8a9e"
+        android:pathData="M10,0L22,0A10,10 0,0 1,32 10L32,22A10,10 0,0 1,22 32L10,32A10,10 0,0 1,0 22L0,10A10,10 0,0 1,10 0z"/>
+    <path
+        android:fillColor="@drawable/_larus_dora_obric_device_home_ic_grid__0_res_0x7f080092"
+        android:pathData="M10,0L22,0A10,10 0,0 1,32 10L32,22A10,10 0,0 1,22 32L10,32A10,10 0,0 1,0 22L0,10A10,10 0,0 1,10 0z"
+        android:fillAlpha="0.3"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M12.25,16.75C13.907,16.75 15.25,18.093 15.25,19.75C15.25,21.407 13.907,22.75 12.25,22.75C10.593,22.75 9.25,21.407 9.25,19.75C9.25,18.093 10.593,16.75 12.25,16.75ZM19.75,16.75C21.407,16.75 22.75,18.093 22.75,19.75C22.75,21.407 21.407,22.75 19.75,22.75C18.093,22.75 16.75,21.407 16.75,19.75C16.75,18.093 18.093,16.75 19.75,16.75ZM12.25,9.25C13.907,9.25 15.25,10.593 15.25,12.25C15.25,13.907 13.907,15.25 12.25,15.25C10.593,15.25 9.25,13.907 9.25,12.25C9.25,10.593 10.593,9.25 12.25,9.25ZM19.75,9.25C21.407,9.25 22.75,10.593 22.75,12.25C22.75,13.907 21.407,15.25 19.75,15.25C18.093,15.25 16.75,13.907 16.75,12.25C16.75,10.593 18.093,9.25 19.75,9.25Z"/>
+</vector>

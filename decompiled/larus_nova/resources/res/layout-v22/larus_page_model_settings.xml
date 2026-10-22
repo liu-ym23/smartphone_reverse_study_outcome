@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/model_list"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:paddingBottom="?attr/larus_dp_16"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:paddingHorizontal="?attr/larus_dp_16"/>
+</LinearLayout>

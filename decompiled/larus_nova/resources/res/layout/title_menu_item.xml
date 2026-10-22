@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_item_container"
+    android:paddingTop="2dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="2dp"
+    android:clipToPadding="false"
+    android:layout_width="@dimen/space_kit_len_44"
+    android:layout_height="@dimen/space_kit_len_36">
+    <com.larksuite.component.ui.imageview.LKUIRoundedImageView2
+        android:layout_gravity="center"
+        android:id="@+id/widgetTitleMenuImgBg"
+        android:background="@color/N900_5"
+        android:layout_width="@dimen/space_kit_len_32"
+        android:layout_height="@dimen/space_kit_len_32"
+        app:oval="true"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/widgetTitleMenuImg"
+        android:layout_width="18dp"
+        android:layout_height="18dp"/>
+    <com.larksuite.component.universe_design.badge.UDBadgeView
+        android:id="@+id/widgetTitleMenuBadgePoint"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="22dp"
+        style="@style/UDBadge.Dot.StrongReminder.Medium"/>
+    <com.larksuite.component.universe_design.badge.UDBadgeView
+        android:id="@+id/widgetTitleMenuBadgeNumFrame"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:layout_marginStart="18dp"
+        app:ud_badge_text="99"
+        app:ud_badge_textMaxLength="2"
+        app:ud_badge_textSize="12dp"
+        style="@style/UDBadge.Text.Red"/>
+</FrameLayout>

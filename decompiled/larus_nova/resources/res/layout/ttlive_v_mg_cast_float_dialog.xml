@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/root_ll"
+    android:background="@drawable/ttlive_bg_mg_anchor_cast_float_dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cast_icon_iv_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ttlive_bg_mg_anchor_cast_float_icon_mask"
+        android:layout_marginStart="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/cast_icon_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="centerCrop"
+            app:actualImageScaleType="centerInside"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:id="@+id/cast_tips_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启游戏投屏"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="10dp"/>
+</LinearLayout>

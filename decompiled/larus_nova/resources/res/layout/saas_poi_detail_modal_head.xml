@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.dux.widget.RadiusLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_detail_modal_head_2092032661"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cornerRadiusLeftTop="12dp"
+    app:cornerRadiusRightTop="12dp">
+    <com.bytedance.locallife.poi.newdetail.widget.PoiRepeatTextureBgView
+        android:id="@+id/texture_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.dux.widget.RadiusLayout
+        android:layout_gravity="center_horizontal"
+        android:background="@color/POILineReverse"
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="6dp"
+        app:cornerRadius="4dp"/>
+</com.bytedance.dux.widget.RadiusLayout>

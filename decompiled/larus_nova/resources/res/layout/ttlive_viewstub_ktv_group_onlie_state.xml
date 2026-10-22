@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="125dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#80ffffff"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ktv_group_join_tips"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/ttlive_live_ktv_audience_group_join_tips"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ktv_group_join_bg"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"/>
+</LinearLayout>

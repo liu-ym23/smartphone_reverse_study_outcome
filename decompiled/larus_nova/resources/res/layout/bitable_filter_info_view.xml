@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.bitable.filter.view.FilterConjunctionView
+        android:id="@+id/conjunction_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_kit_len_16"/>
+    <com.bytedance.ee.bear.bitable.common.widgets.conditioncard.ConditionListView
+        android:id="@+id/condition_list_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</merge>

@@ -1,0 +1,23 @@
+package bk0;
+
+import com.baidu.platform.comapi.map.MapController;
+import com.bytedance.android.live.liveinteract.voicechat.emoji.panel.i0;
+import com.bytedance.android.live.liveinteract.voicechat.emoji.panel.j0;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes46.dex */
+public final class n extends b {
+    public n() {
+    }
+
+    @Override // bk0.b, bk0.e
+    public final boolean a(com.bytedance.android.live.liveinteract.voicechat.emoji.panel.g r100) {
+        Intrinsics.checkNotNullParameter(r100, MapController.ITEM_LAYER_TAG);
+        if ((r100 instanceof i0) == false) goto L6;
+    L7:
+        return true;
+    L6:
+        if ((r100 instanceof j0) == true) goto L7;
+        return super.a(r100);
+    }
+}

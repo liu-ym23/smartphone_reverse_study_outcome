@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_marginLeft="8dp"
+    android:animateLayoutChanges="false"
+    android:layout_marginStart="8dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/open_platform_small_card_animation"
+        android:layout_width="130dp"
+        android:layout_height="130dp"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/open_platform_static_icon"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        app:actualImageScaleType="fitXY"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/open_platform_enter_joystick_animation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        app:actualImageScaleType="fitXY"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/open_platform_animated_icon"
+        android:layout_width="130dp"
+        android:layout_height="130dp"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/open_platform_animated_icon_v2"
+        android:visibility="gone"
+        android:layout_width="66dp"
+        android:layout_height="66dp"/>
+</FrameLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/fl_set_order_rooter_view"
+    android:background="@drawable/cj_pay_bg_fragment_container"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="470dp">
+    <com.android.ttcjpaysdk.base.ui.widget.LabelTextLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <TextView
+        android:textSize="13sp"
+        android:textColor="#80161823"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_settings"
+        android:background="#f8f8f8"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:singleLine="true"/>
+    <ScrollView
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+</LinearLayout>

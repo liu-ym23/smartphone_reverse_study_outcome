@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/ll_gpt4_switch"
+    android:background="?attr/larus_rounder_border"
+    android:paddingLeft="?attr/larus_dp_12"
+    android:paddingRight="?attr/larus_dp_12"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginStart="?attr/larus_dp_12"
+    android:layout_marginEnd="?attr/larus_dp_0">
+    <TextView
+        android:textSize="?attr/larus_dp_14"
+        android:textStyle="bold"
+        android:textColor="?attr/larus_neutral_100"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_gpt4_switch"
+        android:paddingTop="?attr/larus_dp_9"
+        android:paddingBottom="?attr/larus_dp_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_gpt_switch_text"
+        android:maxLines="1"
+        android:drawablePadding="?attr/larus_dp_4"
+        app:drawableStartCompat="?attr/larus_icon_gpt4_switch"/>
+    <Switch
+        android:enabled="false"
+        android:id="@+id/switch_gpt4"
+        android:background="@null"
+        android:padding="0dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:thumb="@drawable/larus_icon_gpt4_switch_thumb"
+        android:track="?attr/larus_bg_selector_gpt4_switch_track"
+        android:switchMinWidth="31dp"
+        android:layout_marginStart="?attr/larus_dp_8"/>
+</LinearLayout>

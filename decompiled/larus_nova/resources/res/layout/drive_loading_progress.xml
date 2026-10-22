@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.ee.bear.widgets.universedesign.SpaceLoadingImage
+            android:layout_gravity="center"
+            android:id="@+id/image_loading"
+            android:layout_width="@dimen/space_kit_len_20"
+            android:layout_height="@dimen/space_kit_len_20"/>
+        <com.larksuite.component.universe_design.progress.UDProgress
+            android:layout_gravity="center"
+            android:id="@+id/progress"
+            android:visibility="gone"
+            android:layout_width="@dimen/space_kit_len_20"
+            android:layout_height="@dimen/space_kit_len_20"
+            android:progress="0"
+            app:ud_progress_indicatorColor="@color/colorful_blue"
+            app:ud_progress_indicatorCornerRadius="2dp"
+            app:ud_progress_thickness="4dp"
+            app:ud_progress_trackColor="@color/ud_N300"
+            app:ud_progress_type="circular"/>
+    </LinearLayout>
+</FrameLayout>

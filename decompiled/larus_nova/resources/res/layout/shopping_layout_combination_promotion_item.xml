@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ec.core.widget.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="42dp"
+    android:layout_height="42dp"
+    app:rounded_radius="8dp">
+    <com.bytedance.android.ec.core.widget.ECNetImageView
+        android:id="@+id/iv_promotion_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/fl_promotion_price"
+        android:background="@color/ec_color_60_black"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="14dp">
+        <com.bytedance.android.ec.core.widget.price.PriceView
+            android:textSize="10sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/pv_promotion_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pv_autoResize="true"
+            app:pv_priceBold="true"
+            app:pv_priceDecimalTextSizeRatio="0.85"
+            app:pv_priceTextColor="@color/ec_color_white"
+            app:pv_yuanSymbolBold="true"
+            app:pv_yuanSymbolRatioOfPriceTextSize="0.85"/>
+    </FrameLayout>
+</com.bytedance.android.ec.core.widget.RoundedFrameLayout>

@@ -1,0 +1,134 @@
+package com.ttnet.org.chromium.net;
+
+import java.nio.ByteBuffer;
+import java.util.concurrent.Executor;
+
+/* JADX INFO: loaded from: classes5.dex */
+public abstract class UrlRequest {
+
+    public static abstract class Builder {
+        public static final int REQUEST_PRIORITY_HIGHEST = 4;
+        public static final int REQUEST_PRIORITY_IDLE = 0;
+        public static final int REQUEST_PRIORITY_LOW = 2;
+        public static final int REQUEST_PRIORITY_LOWEST = 1;
+        public static final int REQUEST_PRIORITY_MEDIUM = 3;
+
+        public Builder() {
+        }
+
+        public abstract Builder addHeader(String r100, String r101);
+
+        public abstract Builder allowDirectExecutor();
+
+        public abstract UrlRequest build();
+
+        public abstract Builder disableCache();
+
+        public abstract Builder setHttpMethod(String r100);
+
+        public abstract Builder setPriority(int r100);
+
+        public abstract Builder setRequestTimeout(int r100);
+
+        public abstract Builder setSocketConnectTimeout(int r100);
+
+        public abstract Builder setSocketReadTimeout(int r100);
+
+        public abstract Builder setSocketWriteTimeout(int r100);
+
+        public abstract Builder setUploadDataProvider(UploadDataProvider r100, Executor r101);
+    }
+
+    public static abstract class Callback {
+        public Callback() {
+        }
+
+        public void onCanceled(UrlRequest r100, UrlResponseInfo r101) {
+        }
+
+        public abstract void onFailed(UrlRequest r100, UrlResponseInfo r101, CronetException r102);
+
+        public abstract void onReadCompleted(UrlRequest r100, UrlResponseInfo r101, ByteBuffer r102) throws Exception;
+
+        public abstract void onRedirectReceived(UrlRequest r100, UrlResponseInfo r101, String r102, String r103) throws Exception;
+
+        public abstract void onResponseStarted(UrlRequest r100, UrlResponseInfo r101, String r102) throws Exception;
+
+        public abstract void onSucceeded(UrlRequest r100, UrlResponseInfo r101);
+    }
+
+    /* JADX INFO: loaded from: classes41.dex */
+    public static class Status {
+        public static final int CONNECTING = 10;
+        public static final int DOWNLOADING_PAC_FILE = 5;
+        public static final int ESTABLISHING_PROXY_TUNNEL = 8;
+        public static final int IDLE = 0;
+        public static final int INVALID = -1;
+        public static final int READING_RESPONSE = 14;
+        public static final int RESOLVING_HOST = 9;
+        public static final int RESOLVING_HOST_IN_PAC_FILE = 7;
+        public static final int RESOLVING_PROXY_FOR_URL = 6;
+        public static final int SENDING_REQUEST = 12;
+        public static final int SSL_HANDSHAKE = 11;
+        public static final int WAITING_FOR_AVAILABLE_SOCKET = 2;
+        public static final int WAITING_FOR_CACHE = 4;
+        public static final int WAITING_FOR_DELEGATE = 3;
+        public static final int WAITING_FOR_RESPONSE = 13;
+        public static final int WAITING_FOR_STALLED_SOCKET_POOL = 1;
+
+        private Status() {
+        }
+    }
+
+    /* JADX INFO: loaded from: classes6.dex */
+    public static abstract class StatusListener {
+        public StatusListener() {
+        }
+
+        public abstract void onStatus(int r100);
+    }
+
+    public UrlRequest() {
+    }
+
+    public abstract void AddRequestCookieHeader(String r100, String r101);
+
+    public abstract void RemoveRequestCookieHeader();
+
+    public void appTimeout() {
+    }
+
+    public abstract void cancel();
+
+    public void cancelWithException(String r100, Throwable r101) {
+    }
+
+    public abstract void followRedirect();
+
+    public abstract String getFinalUrl();
+
+    public abstract void getStatus(StatusListener r100);
+
+    public abstract boolean isDone();
+
+    public abstract void read(ByteBuffer r100);
+
+    public abstract void setAddCookieCostUs(long r100);
+
+    public abstract void setAuthCredentials(String r100, String r101);
+
+    public abstract void setCookieRelMetric(String r100);
+
+    public abstract void setRequestCookieSource(int r100);
+
+    public void setRequestFlag(int r100) {
+    }
+
+    public abstract void setRequestTypeFlags(int r100);
+
+    public abstract void setSaveCookieCostUs(long r100);
+
+    public abstract void setThrottleNetSpeed(long r100);
+
+    public abstract void start();
+}

@@ -1,0 +1,13 @@
+package com.obric.memorydata.sdk.intent;
+
+import com.google.gson.reflect.TypeToken;
+import com.obric.memorydata.sdk.entity.search.BertQUAction;
+import java.util.List;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes33.dex */
+@Metadata(d1 = {"\u0000\u0013\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000*\u0001\u0000\b\n\u0018\u00002\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u0001¨\u0006\u0004"}, d2 = {"com/obric/memorydata/sdk/intent/InAppSearchIntentExecutor$doAction$quResults$1", "Lcom/google/gson/reflect/TypeToken;", "", "Lcom/obric/memorydata/sdk/entity/search/BertQUAction;", "memoryDataSDK_obricRelease"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public final class a extends TypeToken<List<? extends BertQUAction>> {
+    public a() {
+    }
+}

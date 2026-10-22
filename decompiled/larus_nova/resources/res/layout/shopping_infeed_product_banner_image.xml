@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/blur_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImage="@drawable/shopping_bg_blur_placeholder"
+        app:placeholderImageScaleType="centerCrop"/>
+    <View
+        android:background="@drawable/shopping_infeed_product_banner_image_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="top"
+        android:id="@+id/content_iv"
+        android:layout_width="match_parent"
+        android:layout_height="376dp"
+        android:layout_marginTop="138dp"
+        android:scaleType="fitCenter"
+        app:actualImageScaleType="fitCenter"
+        app:placeholderImage="@drawable/ec_ecommerce_slogan_product_bg"
+        app:placeholderImageScaleType="centerCrop"/>
+</FrameLayout>

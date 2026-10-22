@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.keyboard.plugin.tool.voice.audio2.AudioPanelContainer xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_body_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.lark.widget.DisallowScrollEventViewPager
+        android:id="@+id/audio_panel_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.ss.android.lark.keyboard.plugin.tool.voice.audio2.widget.AudioScrollableTabLayout
+        android:id="@+id/audio_panel_tab_layout"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:stl_clickable="false"
+        app:stl_defaultTabTextColor="@color/text_title"
+        app:stl_defaultTabTextHorizontalPadding="26dp"
+        app:stl_defaultTabTextSize="14sp"
+        app:stl_dividerColor="@color/transparent"
+        app:stl_dividerThickness="0dp"
+        app:stl_indicatorAlwaysInCenter="true"
+        app:stl_indicatorColor="@color/bg_body"
+        app:stl_indicatorCornerRadius="15dp"
+        app:stl_indicatorGravity="center"
+        app:stl_indicatorInterpolation="linear"
+        app:stl_indicatorThickness="30dp"
+        app:stl_underlineColor="@color/transparent"
+        app:stl_underlineThickness="0dp"/>
+</com.ss.android.lark.keyboard.plugin.tool.voice.audio2.AudioPanelContainer>

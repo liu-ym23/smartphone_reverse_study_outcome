@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ToolbarEditToolbarTopLevelFrame">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/toolbarItemContent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toolbarItemImg"
+            android:padding="@dimen/space_kit_len_6"
+            android:layout_width="@dimen/space_kit_len_36"
+            android:layout_height="@dimen/space_kit_len_36"
+            android:maxWidth="@dimen/space_kit_len_36"
+            android:maxHeight="@dimen/space_kit_len_36"
+            style="@style/ToolbarEditToolbarV2TopLevelIcon"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/text_title"
+            android:ellipsize="end"
+            android:id="@+id/toolbarItemText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="2dp"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/separator"
+        android:background="@color/ud_N400"
+        android:layout_width="0.5dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

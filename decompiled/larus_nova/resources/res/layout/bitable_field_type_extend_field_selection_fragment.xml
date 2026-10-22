@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/rootView"
+    android:background="@color/bg_float_base"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.widgets.BaseTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:widget_widgets_tb_back_tint="@color/icon_n1"
+        app:widget_widgets_tb_background="@color/bg_float_base"
+        app:widget_widgets_tb_divider_visible="false"
+        app:widget_widgets_tb_title="@string/Bitable_BTModule_FieldType"/>
+    <androidx.core.widget.NestedScrollView
+        android:background="@color/bg_float_base"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <com.bytedance.ee.bear.bitable.fieldedit.view.edit.extendfield.ExtendFieldTypeExtendFieldSelectionView
+            android:id="@+id/extendFieldsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/space_kit_len_14"
+            android:layout_marginStart="@dimen/space_kit_len_16"
+            android:layout_marginEnd="@dimen/space_kit_len_16"/>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

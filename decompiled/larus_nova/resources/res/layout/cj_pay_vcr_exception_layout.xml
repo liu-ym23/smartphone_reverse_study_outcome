@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_verification_code_received_exception_root_view"
+    android:background="@drawable/cj_pay_bg_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cj_pay_height_470">
+    <include
+        android:id="@+id/cj_pay_titlebar_root_view"
+        layout="@layout/cj_pay_view_titlebar_layout"/>
+    <TextView
+        android:textSize="?attr/cj_pay_page_size_16"
+        android:textColor="@color/cj_pay_color_black_34"
+        android:id="@+id/cj_pay_verification_code_received_exception_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cj_pay_padding_15"
+        android:layout_marginTop="@dimen/cj_pay_padding_20"
+        android:layout_marginRight="@dimen/cj_pay_padding_15"
+        android:includeFontPadding="false"/>
+    <com.android.ttcjpaysdk.base.ui.CJPayAutoAlignmentTextView
+        android:textSize="?attr/cj_pay_page_size_14"
+        android:textColor="@color/cj_pay_color_gray_80"
+        android:id="@+id/cj_pay_verification_code_received_exception_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cj_pay_padding_15"
+        android:layout_marginTop="@dimen/cj_pay_padding_20"
+        android:layout_marginRight="@dimen/cj_pay_padding_15"
+        android:text="@string/cj_pay_bind_card_vcr_exception_content"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="@dimen/cj_pay_padding_10"/>
+</LinearLayout>

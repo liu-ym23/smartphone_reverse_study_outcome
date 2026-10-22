@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="2dp">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/pin_vote_option_icon"
+        android:background="@drawable/lark_vote_icon_pin_vote_option"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:id="@+id/vote_option_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:maxLines="1"/>
+</LinearLayout>

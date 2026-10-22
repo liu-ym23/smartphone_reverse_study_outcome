@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="160dp"
+    android:width="390dp"
+    android:viewportWidth="390"
+    android:viewportHeight="160">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M46,40m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"
+        android:fillAlpha="0.06"/>
+    <path
+        android:fillColor="@drawable/_icon_flow_feed_loading_view__0_res_0x7f080068"
+        android:pathData="M96,18L188,18A4,4 0,0 1,192 22L192,34A4,4 0,0 1,188 38L96,38A4,4 0,0 1,92 34L92,22A4,4 0,0 1,96 18z"/>
+    <path
+        android:fillColor="@drawable/_icon_flow_feed_loading_view__1_res_0x7f080069"
+        android:pathData="M92,52.4C92,50.16 92,49.04 92.44,48.18C92.82,47.43 93.43,46.82 94.18,46.44C95.04,46 96.16,46 98.4,46H325.6C327.84,46 328.96,46 329.82,46.44C330.57,46.82 331.18,47.43 331.56,48.18C332,49.04 332,50.16 332,52.4V55.6C332,57.84 332,58.96 331.56,59.82C331.18,60.57 330.57,61.18 329.82,61.56C328.96,62 327.84,62 325.6,62H98.4C96.16,62 95.04,62 94.18,61.56C93.43,61.18 92.82,60.57 92.44,59.82C92,58.96 92,57.84 92,55.6V52.4Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M46,120m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"
+        android:fillAlpha="0.06"/>
+    <path
+        android:fillColor="@drawable/_icon_flow_feed_loading_view__2_res_0x7f08006a"
+        android:pathData="M96,98L188,98A4,4 0,0 1,192 102L192,114A4,4 0,0 1,188 118L96,118A4,4 0,0 1,92 114L92,102A4,4 0,0 1,96 98z"/>
+    <path
+        android:fillColor="@drawable/_icon_flow_feed_loading_view__3_res_0x7f08006b"
+        android:pathData="M92,132.4C92,130.16 92,129.04 92.44,128.18C92.82,127.43 93.43,126.82 94.18,126.44C95.04,126 96.16,126 98.4,126H325.6C327.84,126 328.96,126 329.82,126.44C330.57,126.82 331.18,127.43 331.56,128.18C332,129.04 332,130.16 332,132.4V135.6C332,137.84 332,138.96 331.56,139.82C331.18,140.57 330.57,141.18 329.82,141.56C328.96,142 327.84,142 325.6,142H98.4C96.16,142 95.04,142 94.18,141.56C93.43,141.18 92.82,140.57 92.44,139.82C92,138.96 92,137.84 92,135.6V132.4Z"/>
+</vector>

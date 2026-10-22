@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_finance_item_credit_pay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/cj_pay_finance_item_base_layout"/>
+    <HorizontalScrollView
+        android:id="@+id/credit_pay_voucher_horizontal_scroll_view"
+        android:paddingRight="16dp"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="@dimen/cj_pay_padding_12">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/credit_pay_voucher_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </HorizontalScrollView>
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_50"
+        android:id="@+id/credit_pay_footer_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="@dimen/cj_pay_padding_6"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="@color/cj_pay_color_red"
+        android:gravity="center"
+        android:id="@+id/credit_pay_self_voucher_Icon"
+        android:background="@drawable/cj_pay_bg_payment_method_recommend_way"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="4dp"
+        android:singleLine="true"
+        android:includeFontPadding="false"/>
+</LinearLayout>

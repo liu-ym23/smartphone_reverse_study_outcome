@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.ui.imageview.LKUIRoundedImageView2
+        android:id="@+id/iv_title"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:scaleType="centerInside"
+        app:radius="@dimen/dp_2"/>
+    <com.ss.android.lark.chat.preview.components.view.TailDrawableTextView
+        android:textSize="14dp"
+        android:textColor="@color/lkui_N900"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:includeFontPadding="false"
+        android:layout_weight="1"/>
+    <FrameLayout
+        android:id="@+id/custom_container"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/btn_more"
+        android:visibility="gone"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_svg_preview_title_close"/>
+</LinearLayout>

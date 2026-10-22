@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_sp_14"
+        android:textColor="?attr/larus_neutral_100"
+        android:gravity="center"
+        android:id="@+id/prompt_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-1dp"
+        android:text="@string/larus_create_bot_settings_toggle"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/prompt_expand_button"
+        android:padding="?attr/larus_dp_2"
+        android:layout_width="?attr/larus_dp_16"
+        android:layout_height="?attr/larus_dp_16"
+        android:src="?attr/larus_ic_arrow_down"
+        android:layout_marginStart="?attr/larus_dp_6"/>
+</merge>

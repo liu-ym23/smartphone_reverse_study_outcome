@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingLeft="9dp"
+    android:paddingTop="8dp"
+    android:paddingRight="14dp"
+    android:paddingBottom="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.dux.image.DuxImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/iv_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="6dp"
+        app:srcCompat="@drawable/dux_lucky_icon"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="14dp"
+        android:textColor="@color/LuckyConstTextInverse"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.dux.image.DuxImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/iv_close"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="2dp"
+        app:srcCompat="@drawable/dux_lucky_close"/>
+</merge>

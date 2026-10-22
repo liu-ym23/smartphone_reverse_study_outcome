@@ -1,0 +1,137 @@
+{
+  "page_key": "device_manage",
+  "nav_bar": {
+    "template_type": "history_device_list",
+    "template_data": "{\"center_item\":{\"title\":{\"type\":\"string_type\",\"value\":\"\"},\"image_link\":{\"type\":\"local\",\"value\":\"icon_${product}_dm_bar_black\"}},\"right_item\":{\"image_link\":{\"type\":\"local\",\"value\":\"icon_common_add\",\"dark_value\":\"icon_common_add_dark\"},\"action_url\":\"sslocal://flow/dora/device_list?page_key=device_list&product_id=1&previous_page=device_management&enter_method=click_button\"}}"
+  },
+  "layers": [
+    {
+      "name": "layer1",
+      "card_key": "dora_card_lite_product_display",
+      "card": {
+        "name": "card1",
+        "card_instance_id": "",
+        "card_data": {
+          "template_type": "product_display",
+          "template_data": ""
+        },
+        "biz_data": ""
+      }
+    },
+    {
+        "name": "layer2",
+        "card_key": "dora_card_lite_device_reconnect",
+        "card": {
+            "name": "card1",
+            "card_instance_id": "",
+            "card_data": {
+                    "template_type": "device_reconnect",
+                    "template_data": "{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_reconnect_btn_cn\"},\"action_url\":\"\"}"
+            },
+            "biz_data": ""
+        }
+    },
+    {
+      "name": "layer3",
+      "card": {
+        "name": "card1",
+        "card_instance_id": "",
+        "card_key": "dora_card_lite_luna_banner",
+        "card_data": {
+          "template_type": "banner",
+          "template_data": "{\"title\":{\"type\":\"string_type\",\"value\":\"dora_soda_membership_title_cn\"},\"subtitle\":{\"type\":\"string_type\",\"value\":\"dora_soda_membership_detail_cn\"},\"image_link\":{\"type\":\"local\",\"value\":\"image_device_manage_banner\"},\"action_url\":\"sslocal://flow/dora/luna_music_page?page_key=luna_music_page&product_id=1\"}"
+        },
+        "biz_data": ""
+      }
+    },
+    {
+      "name": "layer4",
+      "card": {
+        "name": "card1",
+        "card_instance_id": "",
+        "card_key": "dora_card_lite_device_name",
+        "card_data": {
+          "template_type": "device_name",
+          "template_data": "{\"connection\":{\"items\":[{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_name_cn\"},\"right_icon\":\"arrow\",\"action_url\":\"sslocal://flow/dora/device_rename?page_key=device_rename&product_id=1&previous_page=device_management&enter_method=click_button\"}]},\"disconnection\":{\"items\":[{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_name_cn\"},\"right_icon\":\"\",\"action_url\":\"\"}]}}"
+        },
+        "biz_data": ""
+      }
+    },
+    {
+      "name": "layer5",
+      "card": {
+        "name": "card1",
+        "card_instance_id": "",
+        "card_key": "dora_card_lite_base_settings",
+        "card_data": {
+          "template_type": "general_group",
+          "template_data": "{\"items\":[{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_sound_settings_cn\"},\"right_icon\":\"arrow\",\"action_url\":\"sslocal://flow/dora/voice_settings?page_key=voice_settings&product_id=1&previous_page=device_management&enter_method=click_button\"},{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_gesture_settings_cn\"},\"right_icon\":\"arrow\",\"action_url\":\"sslocal://flow/dora/gesture_settings?page_key=gesture_settings&product_id=1&previous_page=device_management&enter_method=click_button\"},{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_general_settings_cn\"},\"right_icon\":\"arrow\",\"action_url\":\"sslocal://flow/dora/general_settings?page_key=general_settings&product_id=1&previous_page=device_management&enter_method=click_button\",\"red_dot\":[\"firmware_upgrade\"]}]}"
+        },
+        "biz_data": ""
+      }
+    },
+    {
+      "name": "layer6",
+      "card": {
+        "name": "card1",
+        "card_instance_id": "",
+        "card_key": "dora_card_lite_proactive_notification",
+        "card_data": {
+          "template_type": "general_group",
+          "template_data": "{\"items\":[{\"title\":{\"type\":\"string_type\",\"value\":\"doubao_active_notification_entrance_cn\"},\"right_icon\":\"arrow\",\"action_url\":\"sslocal://flow/dora/proactive_settings?page_key=proactive_settings&product_id=1&previous_page=device_management&enter_method=click_button\"}]}"
+        },
+        "biz_data": ""
+      }
+    },
+    {
+      "name": "layer7",
+      "card": {
+        "name": "card1",
+        "card_instance_id": "",
+        "card_key": "dora_card_lite_ai_lab",
+        "card_data": {
+          "template_type": "general_group",
+          "template_data": "{\"items\":[{\"title\":{\"type\":\"string_type\",\"value\":\"dora_ai_lab_title_cn\"},\"right_icon\":\"arrow\",\"action_url\":\"sslocal://flow/dora/ai_lab?page_key=ai_lab&product_id=1&previous_page=device_management&enter_method=click_button\"}],\"desc\":{\"type\":\"string_type\",\"value\":\"dora_device_ai_lab_tips_cn\"}}"
+        },
+        "biz_data": ""
+      }
+    },
+    {
+        "name": "layer8",
+        "card": {
+            "name": "device_attribute",
+            "card_instance_id": "",
+            "card_key": "dora_card_lite_device_attribute",
+            "card_data": {
+                "template_type": "device_attribute",
+                "template_data": "{\"disconnection\":{\"items\":[{\"item_type\":\"firmware_version\",\"title\":{\"type\":\"string_type\",\"value\":\"dora_ota_firmware_version_cn\"},\"right_icon\":\"\",\"action_url\":\"\",\"right_content_type\":\"firmware_version\"},{\"item_type\":\"device_sn\",\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_sn_cn\"},\"right_icon\":\"\",\"action_url\":\"\",\"right_content_type\":\"device_sn\"}]}}"
+            },
+            "biz_data": ""
+        }
+    },
+    {
+        "name": "layer9",
+        "card": {
+            "name": "device_unbind",
+            "card_instance_id": "",
+            "card_key": "dora_card_lite_unbind_button",
+            "card_data": {
+                "template_type": "unbind_button",
+                "template_data": "{\"title\":{\"type\":\"string_type\",\"value\":\"dora_btn_unbind_buds_cn\"},\"dialog\":{\"title\":{\"type\":\"string_type\",\"value\":\"dora_device_unbind_dialog_title_cn\"},\"message\":{\"type\":\"string_type\",\"value\":\"dora_device_unbind_dialog_msg_cn\"},\"cancel\":{\"type\":\"string_type\",\"value\":\"dora_dialog_btn_cancel_cn\"},\"confirm\":{\"type\":\"string_type\",\"value\":\"dora_device_btn_unbind_cn\"}}}"
+            },
+            "biz_data": ""
+        }
+    },
+    {
+      "name": "layer10",
+      "card": {
+        "name": "card1",
+        "card_key": "dora_card_lite_keep_alive",
+        "card_data": {
+          "template_type": "keep_alive",
+          "template_data": "{\"items\":[{\"title\":{\"type\":\"string_type\",\"value\":\"dora_keep_alive_settings_cn\"},\"right_icon\":\"arrow\",\"action_url\":\"sslocal://flow/dora/keep_alive?product_id=1&model=xxx&page_key=dora_camera_settings&page_title=xxx\"}],\"desc\":{\"type\":\"string_type\",\"value\":\"dora_keep_alive_settings_hint_cn\"}}"
+        }
+      }
+    }
+  ]
+}

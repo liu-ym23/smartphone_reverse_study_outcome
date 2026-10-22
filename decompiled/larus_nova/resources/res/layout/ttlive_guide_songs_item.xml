@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/singing_anim"
+        android:visibility="gone"
+        android:layout_width="15dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="#40ffffff"
+        android:ellipsize="end"
+        android:id="@+id/song_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/singing_anim"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/choose_song"
+        android:background="@drawable/ttlive_bg_preview_choose_song"
+        android:layout_width="42dp"
+        android:layout_height="22dp"
+        android:text="@string/ttlive_ktv_tab_select"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

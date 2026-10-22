@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="@dimen/ud_dialog_padding_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <view
+        android:id="@+id/ud_dialog_auto_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        class="com.larksuite.component.universe_design.dialog.UDDialogController$DialogFooter"/>
+</FrameLayout>

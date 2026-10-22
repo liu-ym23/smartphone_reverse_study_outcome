@@ -1,0 +1,66 @@
+package com.bytedance.android.live.broadcastgame.opengame.message;
+
+import com.google.gson.annotations.SerializedName;
+import java.util.Map;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes45.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u0001B\u0019\u0012\u0012\u0010\u0002\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040\u0003¢\u0006\u0002\u0010\u0005J\u0015\u0010\b\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040\u0003HÆ\u0003J\u001f\u0010\t\u001a\u00020\u00002\u0014\b\u0002\u0010\u0002\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040\u0003HÆ\u0001J\u0013\u0010\n\u001a\u00020\u000b2\b\u0010\f\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\r\u001a\u00020\u000eHÖ\u0001J\t\u0010\u000f\u001a\u00020\u0004HÖ\u0001R\"\u0010\u0002\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007¨\u0006\u0010"}, d2 = {"Lcom/bytedance/android/live/broadcastgame/opengame/message/UploadCheckRsp;", "", "rs", "", "", "(Ljava/util/Map;)V", "getRs", "()Ljava/util/Map;", "component1", "copy", "equals", "", "other", "hashCode", "", "toString", "livebroadcastgame-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class UploadCheckRsp {
+
+    /* JADX INFO: renamed from: rs, reason: collision with root package name */
+    @SerializedName("exist_etags")
+    private final Map<String, String> f60185rs;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public static /* synthetic */ UploadCheckRsp copy$default(UploadCheckRsp r100, Map r101, int r102, Object r103) {
+        if ((r102 & 1) == 0) goto L6;
+        r101 = r100.f60185rs;
+    L6:
+        return r100.copy(r101);
+    }
+
+    public final Map<String, String> component1() {
+        return this.f60185rs;
+    }
+
+    public final UploadCheckRsp copy(Map<String, String> r100) {
+        Intrinsics.checkNotNullParameter(r100, "rs");
+        return new UploadCheckRsp(r100);
+    }
+
+    public boolean equals(Object r100) {
+        if (this != r100) goto L4;
+        return true;
+    L4:
+        if ((r100 instanceof UploadCheckRsp) == true) goto L6;
+        return false;
+    L6:
+        if (Intrinsics.areEqual(this.f60185rs, ((UploadCheckRsp) r100).f60185rs) == true) goto L13;
+        return false;
+    L13:
+        return true;
+    }
+
+    public int hashCode() {
+        Map<String, String> r100 = this.f60185rs;
+        if (r100 != null) goto L7;
+        return 0;
+    L7:
+        return r100.hashCode();
+    }
+
+    public String toString() {
+        return "UploadCheckRsp(rs=" + this.f60185rs + ")";
+    }
+
+    public final Map<String, String> getRs() {
+        return this.f60185rs;
+    }
+
+    public UploadCheckRsp(Map<String, String> r100) {
+        Intrinsics.checkNotNullParameter(r100, "rs");
+        this.f60185rs = r100;
+    }
+}

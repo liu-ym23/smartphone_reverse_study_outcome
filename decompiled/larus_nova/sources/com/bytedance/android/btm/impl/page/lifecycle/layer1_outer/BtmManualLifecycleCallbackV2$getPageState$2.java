@@ -1,0 +1,28 @@
+package com.bytedance.android.btm.impl.page.lifecycle.layer1_outer;
+
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes43.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\u0010\u0000\u001a\n \u0002*\u0004\u0018\u00010\u00010\u0001H\n¢\u0006\u0002\b\u0003"}, d2 = {"<anonymous>", "", "kotlin.jvm.PlatformType", AbsMethodDelegate.TAG_INVOKE}, k = 3, mv = {1, 1, 16})
+final class BtmManualLifecycleCallbackV2$getPageState$2 extends Lambda implements Function0<String> {
+    final /* synthetic */ String $pageClassName;
+
+    public BtmManualLifecycleCallbackV2$getPageState$2(String r100) {
+        this.$pageClassName = r100;
+        super(0);
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    public /* bridge */ /* synthetic */ String invoke() {
+        return invoke2();
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final String invoke2() {
+        return this.$pageClassName;
+    }
+}

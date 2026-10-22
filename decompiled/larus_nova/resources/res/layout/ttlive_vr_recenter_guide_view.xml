@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ttlive_night_mode_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/ttlive_vr_recenter_guide"
+    android:importantForAccessibility="yes">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/lavGuide"
+            android:layout_width="160dp"
+            android:layout_height="160dp"/>
+        <com.bytedance.android.live.uikit.rtl.AutoRTLTextView
+            android:textSize="20dp"
+            android:textColor="@color/ttlive_white"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="@string/ttlive_vr_recenter_guide"
+            android:includeFontPadding="false"
+            android:contentDescription="@string/ttlive_vr_recenter_guide"/>
+    </LinearLayout>
+</FrameLayout>

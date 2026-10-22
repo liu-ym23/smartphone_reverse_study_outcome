@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearlayout_container"
+        android:background="@drawable/ttlive_bg_room_channel_link_float_tips_bubble_view"
+        android:focusable="true"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:id="@+id/tips_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_chat_channel_link_float_tip_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/right_arrow"
+        android:layout_width="7dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ttlive_dialog_room_channel_link_float_bubble_view_right_arrow"
+        android:layout_marginStart="138dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearlayout_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearlayout_container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

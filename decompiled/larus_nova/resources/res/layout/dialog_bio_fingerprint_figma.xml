@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_dialog_white_radius_12"
+    android:paddingBottom="24dp"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/figma_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_close_20"/>
+    <ImageView
+        android:id="@+id/figma_fp_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/cj_fingerprint_red"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="#161823"
+        android:gravity="center"
+        android:id="@+id/figma_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="请验证指纹"
+        android:layout_below="@+id/figma_fp_icon"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

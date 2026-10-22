@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="top|center_horizontal"
+    android:id="@+id/title_handler"
+    android:paddingLeft="@dimen/oui_p_container_2"
+    android:paddingTop="@dimen/oui_p_container_tiny_2"
+    android:paddingRight="@dimen/oui_p_container_2"
+    android:paddingBottom="@dimen/oui_p_container_tiny_2"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/oui_h_s1"
+    android:src="@drawable/o_handler_bar"
+    android:paddingHorizontal="@dimen/oui_p_container_2"
+    android:paddingVertical="@dimen/oui_p_container_tiny_2"
+    app:layout_constraintEnd_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>

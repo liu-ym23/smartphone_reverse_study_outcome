@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp">
+    <com.bytedance.dux.widget.DuxCheckBox
+        android:layout_gravity="center_vertical"
+        android:id="@+id/checkbox_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adaptLargeFontMode="true"
+        app:dux_checkBoxAlwaysLight="true"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="14sp"
+        android:textColor="#99161823"
+        android:id="@+id/checkbox_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="@string/dux_not_show_hint"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

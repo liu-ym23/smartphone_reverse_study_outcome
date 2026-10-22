@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/suggest_prompt_container"
+    android:background="?attr/larus_bg_prompt_vertical"
+    android:paddingLeft="@dimen/larus_prompt_content_horizontal_padding_expand"
+    android:paddingTop="@dimen/larus_prompt_content_vertical_padding_new"
+    android:paddingRight="@dimen/larus_prompt_content_horizontal_padding_expand"
+    android:paddingBottom="@dimen/larus_prompt_content_vertical_padding_new"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/larus_prompt_content_horizontal_padding_expand"
+    android:paddingVertical="@dimen/larus_prompt_content_vertical_padding_new">
+    <TextView
+        android:textSize="14dp"
+        android:textColor="?attr/larus_primary_50"
+        android:ellipsize="end"
+        android:id="@+id/entry_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:lineSpacingMultiplier="1.1"
+        android:textFontWeight="400"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/entry_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="6dp"/>
+</LinearLayout>

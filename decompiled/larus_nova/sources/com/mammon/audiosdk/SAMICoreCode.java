@@ -1,0 +1,82 @@
+package com.mammon.audiosdk;
+
+/* JADX INFO: loaded from: classes32.dex */
+public class SAMICoreCode {
+    public static final int SAMI_BASE = 100000;
+    public static final int SAMI_BLOCK_ERROR = 100014;
+    public static final int SAMI_CONTEXT_NOT_INIT = 100010;
+    public static final int SAMI_CREATE_CLIENT_CONNECT_ERROR = 185003;
+    public static final int SAMI_CREATE_CLIENT_ERROR = 185001;
+    public static final int SAMI_CREATE_CLIENT_INIT_ERROR = 185002;
+    public static final int SAMI_CREATE_EXTRACTOR_FAIL = 120001;
+    public static final int SAMI_CREATE_PROCESSOR_FAIL = 110001;
+    public static final int SAMI_ENGINE_BASE = 150000;
+    public static final int SAMI_ENGINE_CREATE_ERROR = 150001;
+    public static final int SAMI_ENGINE_FLUSH_ERROR = 150011;
+    public static final int SAMI_ENGINE_FORWARD_ERROR = 150003;
+    public static final int SAMI_ENGINE_GETOUTPUT_ERROR = 150002;
+    public static final int SAMI_ENGINE_GETOUTPUT_NO_OUTPUT = 150006;
+    public static final int SAMI_ENGINE_GETOUTPUT_PARAM_ERROR = 150008;
+    public static final int SAMI_ENGINE_INPUT_NEED_MORE_DATA = 150009;
+    public static final int SAMI_ENGINE_INPUT_UNCOMPATIBLE_ERROR = 150007;
+    public static final int SAMI_ENGINE_PREPARE_ERROR = 150012;
+    public static final int SAMI_ENGINE_QUERY_PARAM_ERROR = 150010;
+    public static final int SAMI_ENGINE_START_EXECUTOR_ERROR = 150004;
+    public static final int SAMI_ENGINE_UNSUPPORTED_BLOCK_ERROR = 150005;
+    public static final int SAMI_EXTRACTOR_BASE = 120000;
+    public static final int SAMI_FINGERPRINT_AUTH_REGISTER_AUDIO_LOAD_FROM_DB_FAILED = 220014;
+    public static final int SAMI_FINGERPRINT_AUTH_SID_LOAD_FROM_DB_FAILED = 220013;
+    public static final int SAMI_FINGERPRINT_AUTH_SID_MODEL_MD5_MISMATCH_ERROR = 220012;
+    public static final int SAMI_FINGERPRINT_ENROLL_BASE = 220000;
+    public static final int SAMI_FINGERPRINT_SID_LOAD_FAILED = 220011;
+    public static final int SAMI_IDENTIFI_NO_METHODID = 100015;
+    public static final int SAMI_JNI_PARSE_ERROR = 100004;
+    public static final int SAMI_MDSP_CONTEXT_INPUT_CONTEXT_IS_NULL = 130004;
+    public static final int SAMI_MDSP_CONTEXT_INVALID_JSON = 130002;
+    public static final int SAMI_MDSP_CONTEXT_INVALID_PATH = 130003;
+    public static final int SAMI_MSDP_CONTEXT_BASE = 130000;
+    public static final int SAMI_MSDP_CONTEXT_NOT_PREPARED = 130001;
+    public static final int SAMI_NOT_ENOUGH_BUFFER_ERROR = 100013;
+    public static final int SAMI_NOT_ENOUGH_BUFFER_WARN = 100025;
+    public static final int SAMI_NOT_IMPLEMENTATION = 100003;
+    public static final int SAMI_NOT_SUPPORT = 100002;
+    public static final int SAMI_NOT_SUPPORTED_CHANNEL_LAYOUT = 100006;
+    public static final int SAMI_NOT_SUPPORTED_SAMPLE_RATE = 100005;
+    public static final int SAMI_NOT_SUPPORT_PARAM = 100017;
+    public static final int SAMI_OK = 0;
+    public static final int SAMI_PARAM_ERROR = 100001;
+    public static final int SAMI_PROCESSOR_BASE = 110000;
+    public static final int SAMI_PROCESSOR_IN_OUT_NOT_EQUAL = 110003;
+    public static final int SAMI_PROCESSOR_JNI_BUFFER_NOT_EQUAL_IN = 110005;
+    public static final int SAMI_PROCESSOR_JNI_OUT_BUFFER_LESS_NEED = 110006;
+    public static final int SAMI_PROCESSOR_NOT_PREPARED = 110002;
+    public static final int SAMI_PROCESSOR_SET_STATE_FAIL = 110004;
+    public static final int SAMI_PROCESS_3A_BASE = 140000;
+    public static final int SAMI_READ_FILE_FAILED = 100012;
+    public static final int SAMI_RELEASE_EXTRACTOR_FAIL = 120002;
+    public static final int SAMI_SERVER_REQUEST_FAILED = 100011;
+    public static final int SAMI_TOB_AUTH_FAIL = 160001;
+    public static final int SAMI_TOB_BASE = 160000;
+    public static final int SAMI_TOKEN_APPKEY_NOT_MATCH = 100009;
+    public static final int SAMI_TOKEN_EXPIRED = 100007;
+    public static final int SAMI_TOKEN_NOT_SUPPORT_PACKAGE_NAME = 100019;
+    public static final int SAMI_TOKEN_NOT_SUPPORT_PLATFORM = 100018;
+    public static final int SAMI_TOKEN_ON_FIND_METHODID = 100016;
+    public static final int SAMI_TOKEN_PARSE_FAILED = 100008;
+    public static final int SAMI_VOICE_ASSISTANT_ADD_SESSION_ID_REPEAT = 185012;
+    public static final int SAMI_VOICE_ASSISTANT_BASE = 185000;
+    public static final int SAMI_VOICE_ASSISTANT_CREATE_SESSION_ERROR = 185014;
+    public static final int SAMI_VOICE_ASSISTANT_NORMAL_SEND_FAILED = 185008;
+    public static final int SAMI_VOICE_ASSISTANT_PROCESS_WHEN_DISCONNECT = 185011;
+    public static final int SAMI_VOICE_ASSISTANT_PROCESS_WHEN_EXIT = 185013;
+    public static final int SAMI_VOICE_ASSISTANT_RETRY_SEND_FAILED = 185009;
+    public static final int SAMI_VOICE_ASSISTANT_SEND_BUFFER_FULL = 185006;
+    public static final int SAMI_VOICE_ASSISTANT_SEND_EVENT_ERROR_ORDER = 185007;
+    public static final int SAMI_VOICE_ASSISTANT_SESSION_NOT_FOUND = 185010;
+    public static final int SAMI_VOICE_ASSISTANT_START_TASK_ERROR = 185004;
+    public static final int SAMI_VOICE_ASSISTANT_START_TASK_ID_REPEAT = 185005;
+    public static final int pubSAMI_PROCESS_RNNOISE_ERROR = 140001;
+
+    public SAMICoreCode() {
+    }
+}

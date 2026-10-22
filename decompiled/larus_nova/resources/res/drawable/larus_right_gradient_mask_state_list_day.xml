@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/larus_base_3_day"
+                android:endColor="@android:color/transparent"
+                android:angle="180"/>
+        </shape>
+    </item>
+    <item
+        android:state_selected="true"
+        android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/larus_base_2_overlay_day"
+                android:endColor="@android:color/transparent"
+                android:angle="180"/>
+        </shape>
+    </item>
+    <item
+        android:state_pressed="true"
+        android:drawable="@android:color/transparent"/>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/larus_base_2_overlay_day"
+                android:endColor="@android:color/transparent"
+                android:angle="180"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/larus_base_1_day"
+                android:endColor="@android:color/transparent"
+                android:angle="180"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/toolbar_divider"
+    android:background="@drawable/ttlive_toolbar_divider_bg"
+    android:layout_width="2dp"
+    android:layout_height="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="8dp"/>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="26dp"
+    android:layout_height="35.93dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/background"
+        android:background="@drawable/ttlive_lucky_box_sti"
+        android:layout_width="26dp"
+        android:layout_height="35.93dp"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/iv_user_avatar"
+        android:layout_width="12.83dp"
+        android:layout_height="12.83dp"
+        android:layout_marginLeft="6.78dp"
+        android:layout_marginTop="5.05dp"
+        android:layout_marginRight="6.39dp"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="#faedcd"
+        fresco:roundingBorderWidth="1dp"/>
+</FrameLayout>

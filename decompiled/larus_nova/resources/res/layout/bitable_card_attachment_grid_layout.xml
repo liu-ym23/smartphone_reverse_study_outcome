@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.bitable.common.widgets.flex.InnerRecyclerView
+        android:id="@+id/attachment_grid_view_root_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_kit_len_8"
+        android:layout_marginBottom="@dimen/space_kit_len_8"
+        android:layout_marginStart="@dimen/space_kit_len_7"
+        android:layout_marginEnd="@dimen/space_kit_len_7"/>
+</LinearLayout>

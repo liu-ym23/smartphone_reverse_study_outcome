@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/dot"
+        android:background="@drawable/life_pdp_groupon_detail_dot"
+        android:layout_width="3.5dp"
+        android:layout_height="3.5dp"
+        android:layout_marginEnd="9dp"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="13sp"
+        android:textColor="#ff161823"
+        android:ellipsize="end"
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"/>
+    <android.widget.FrameLayout
+        android:id="@+id/tag_container"
+        android:background="@drawable/life_pdp_groupon_detail_tag_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="2dp">
+        <com.bytedance.dux.text.DuxTextView
+            android:textSize="10sp"
+            android:textColor="#d37d18"
+            android:layout_gravity="center"
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"/>
+    </android.widget.FrameLayout>
+</merge>

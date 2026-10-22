@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.venus.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shape_layout"
+    android:background="?attr/larus_base_2"
+    android:layout_width="?attr/larus_dp_195"
+    android:layout_height="?attr/larus_dp_298"
+    app:larus_sc_cornerRadius="?attr/larus_dp_8"
+    app:larus_sc_fillColor="?attr/larus_base_2"
+    app:larus_sc_shadow_blur_radius="?attr/larus_dp_6"
+    app:larus_sc_shadow_color="#14000000"/>

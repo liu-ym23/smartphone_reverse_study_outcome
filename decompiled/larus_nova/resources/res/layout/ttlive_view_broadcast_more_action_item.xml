@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/action_area"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/ttlive_broadcast_more_action_root_height"
+    android:minHeight="@dimen/ttlive_broadcast_more_action_root_height">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <FrameLayout
+            android:id="@+id/icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:id="@+id/red_dot"
+            android:background="@drawable/ttlive_ic_red_point_tip"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/icon"
+            app:layout_constraintTop_toTopOf="@+id/icon"/>
+        <TextView
+            android:textSize="13dp"
+            android:textColor="#b3ffffff"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ttlive_broadcast_more_action_hint_margin_top"
+            android:maxLines="1"
+            android:layout_below="@+id/icon"
+            app:layout_constraintTop_toBottomOf="@+id/icon"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

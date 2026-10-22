@@ -1,0 +1,34 @@
+{
+  "product_infos": [
+  {
+      "name": "DoraLite",
+      "product_id": "1",
+      "category": "headphones",
+      "vendor_id": 0,
+      "tenant_id": 1,
+      "device_type": 0,
+      "protocol_name": "com.bytedance.dora",
+      "models": [{
+        "model_code": "test_mode",
+        "uuid": "test2",
+        "feature": "voice",
+        "tenant_id": 1
+      }]
+   },
+   {
+      "name": "H",
+      "product_id": "1048576",
+      "category": "headphones",
+      "vendor_id": 4096,
+      "tenant_id": 1,
+      "device_type": 0,
+      "protocol_name": "h",
+      "models": [{
+        "model_code": "test_mode",
+        "uuid": "test",
+        "feature": "voice",
+        "tenant_id": 1
+      }]
+    }
+  ]
+}

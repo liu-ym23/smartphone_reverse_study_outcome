@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/variety_end_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/vs_end_hybrid_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:id="@+id/variety_end_close"
+        android:background="@drawable/ttlive_replay_liveroom_close"
+        android:focusable="true"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="关闭"
+        android:importantForAccessibility="yes"/>
+</RelativeLayout>

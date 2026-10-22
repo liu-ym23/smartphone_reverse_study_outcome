@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/video_talk_bg"
+        android:background="@color/liveuikit_black"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:layout_width="49dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp"
+        android:layout_alignParentEnd="true">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/video_talk_container"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</RelativeLayout>

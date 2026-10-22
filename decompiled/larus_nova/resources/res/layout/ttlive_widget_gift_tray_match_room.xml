@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.gift.platform.business.tray2.MatchRoomGiftTrayAnimationView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gift"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ttlive_gift_tray_match_room_height"/>

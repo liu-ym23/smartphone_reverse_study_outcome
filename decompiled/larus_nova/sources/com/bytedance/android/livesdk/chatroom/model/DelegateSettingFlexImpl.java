@@ -1,0 +1,132 @@
+package com.bytedance.android.livesdk.chatroom.model;
+
+import com.bytedance.android.tools.pbadapter.annotation.ProtoMessage;
+import com.bytedance.tools.kcp.modelx.runtime.FlexModelBase;
+import com.bytedance.tools.kcp.modelx.runtime.internal.decode.FlexModelJsonAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.ss.android.cert.manager.constants.EventConstant;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes7.dex */
+@ProtoMessage("webcast.api.linkmic_audience.JoinChannelResponse.DelegateSetting")
+@JsonAdapter(FlexModelJsonAdapter.class)
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\f\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\b\n\u0002\b\t\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0002B\u0007¢\u0006\u0004\b%\u0010&R+\u0010\u000b\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00038V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR+\u0010\u000f\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00038V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\b\f\u0010\u0006\u001a\u0004\b\r\u0010\b\"\u0004\b\u000e\u0010\nR/\u0010\u0016\u001a\u0004\u0018\u00010\u00102\b\u0010\u0004\u001a\u0004\u0018\u00010\u00108V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\b\u0011\u0010\u0006\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015R/\u0010\u001d\u001a\u0004\u0018\u00010\u00172\b\u0010\u0004\u001a\u0004\u0018\u00010\u00178V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\b\u0018\u0010\u0006\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR/\u0010$\u001a\u0004\u0018\u00010\u001e2\b\u0010\u0004\u001a\u0004\u0018\u00010\u001e8V@VX\u0096\u008e\u0002¢\u0006\u0012\n\u0004\b\u001f\u0010\u0006\u001a\u0004\b \u0010!\"\u0004\b\"\u0010#¨\u0006'"}, d2 = {"Lcom/bytedance/android/livesdk/chatroom/model/DelegateSettingFlexImpl;", "Lcom/bytedance/tools/kcp/modelx/runtime/FlexModelBase;", "Lcom/bytedance/android/livesdk/chatroom/model/a0;", "", "<set-?>", "showPanel$delegate", "Ljava/lang/Object;", "getShowPanel", "()Z", "setShowPanel", "(Z)V", "showPanel", "enableDelegate$delegate", "getEnableDelegate", "setEnableDelegate", "enableDelegate", "Lpy/k;", "tagImageUrl$delegate", "getTagImageUrl", "()Lpy/k;", "setTagImageUrl", "(Lpy/k;)V", "tagImageUrl", "", "prompt$delegate", "getPrompt", "()Ljava/lang/String;", "setPrompt", "(Ljava/lang/String;)V", EventConstant.Key.RETAIN_PROMPT, "", "status$delegate", "getStatus", "()Ljava/lang/Integer;", "setStatus", "(Ljava/lang/Integer;)V", "status", "<init>", "()V", "multilink-base_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final class DelegateSettingFlexImpl extends FlexModelBase<a0> implements a0, vh7.h {
+
+    @SerializedName("enable_delegate")
+    protected boolean _$$enableDelegate;
+
+    @SerializedName(EventConstant.Key.RETAIN_PROMPT)
+    protected String _$$prompt;
+
+    @SerializedName("show_panel")
+    protected boolean _$$showPanel;
+
+    @SerializedName("status")
+    protected Integer _$$status;
+
+    @SerializedName("tag_image_url")
+    protected py.k _$$tagImageUrl;
+
+    public DelegateSettingFlexImpl() {
+        super(a0.class);
+        this._$$showPanel = false;
+        this._$$enableDelegate = false;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final boolean getEnableDelegate() {
+        return this._$$enableDelegate;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final String getPrompt() {
+        return this._$$prompt;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final boolean getShowPanel() {
+        return this._$$showPanel;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final Integer getStatus() {
+        return this._$$status;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final py.k getTagImageUrl() {
+        return this._$$tagImageUrl;
+    }
+
+    /* JADX WARN: Type inference failed for: r4v5, types: [java.lang.Object, py.k] */
+    public DelegateSettingFlexImpl(am3.g r100) {
+        super(a0.class);
+        setThreadSafe(false);
+        long r101 = r100.c();
+        int r102 = 0;
+    L3:
+        int r103 = r100.f();
+        if (r103 == (-1)) goto L20;
+        am3.g.a r104 = decodeExtensionFields(r103, r100);
+        if (r103 != 1) goto L7;
+        this._$$showPanel = am3.h.a(r100);
+        r102 = r102 | 1;
+        goto L3
+    L7:
+        if (r103 != 2) goto L9;
+        this._$$enableDelegate = am3.h.a(r100);
+        r102 = r102 | 2;
+        goto L3
+    L9:
+        if (r103 != 3) goto L11;
+        this._$$tagImageUrl = vh7.f.a(r100, py.k.class);
+        goto L3
+    L11:
+        if (r103 != 4) goto L13;
+        this._$$prompt = am3.h.c(r100);
+        goto L3
+    L13:
+        if (r103 != 5) goto L14;
+        this._$$status = Integer.valueOf(r100.i());
+        goto L3
+    L14:
+        am3.h.d(r104, r100);
+        goto L3
+    L20:
+        r100.d(r101);
+        setThreadSafe(true);
+        if ((r102 & 1) != 0) goto L24;
+        this._$$showPanel = false;
+    L24:
+        if ((r102 & 2) != 0) goto L45;
+        this._$$enableDelegate = false;
+        return;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final void setEnableDelegate(boolean r100) {
+        this._$$enableDelegate = r100;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final void setPrompt(String r100) {
+        this._$$prompt = r100;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final void setShowPanel(boolean r100) {
+        this._$$showPanel = r100;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final void setStatus(Integer r100) {
+        this._$$status = r100;
+    }
+
+    @Override // com.bytedance.android.livesdk.chatroom.model.a0
+    public final void setTagImageUrl(py.k r100) {
+        this._$$tagImageUrl = r100;
+    }
+}

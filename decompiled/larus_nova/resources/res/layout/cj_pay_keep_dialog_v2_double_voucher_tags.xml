@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/keep_dialog_v2_middle_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.android.ttcjpaysdk.base.ui.dialog.nativev2.CJPayVoucherTag
+        android:id="@+id/voucher_tag_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.android.ttcjpaysdk.base.ui.dialog.nativev2.CJPayVoucherTag
+        android:id="@+id/voucher_tag_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

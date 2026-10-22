@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/message_action_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/message_action_label"
+        app:layout_constraintEnd_toStartOf="@+id/message_action_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/message_action_label"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/message_action_item_text_color_selector"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:id="@+id/message_action_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:maxLines="2"
+        android:layout_marginStart="12dp"
+        android:layout_marginVertical="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/message_action_icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/red_dot_view"
+        android:visibility="visible"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        app:layout_constraintCircle="@+id/message_action_icon"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="18dp"
+        app:srcCompat="@drawable/update_red_dot"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

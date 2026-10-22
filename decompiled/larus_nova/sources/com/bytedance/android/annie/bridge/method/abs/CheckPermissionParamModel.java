@@ -1,0 +1,164 @@
+package com.bytedance.android.annie.bridge.method.abs;
+
+import com.bytedance.android.annie.bridge.method.util.EnumJsonAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
+import com.ss.android.cert.manager.constants.BytedCertConstant;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.text.StringsKt;
+
+/* JADX INFO: loaded from: classes43.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u000b\u0018\u00002\u00020\u0001:\u0002\u000b\fB\u0007¢\u0006\u0004\b\t\u0010\nR$\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\b¨\u0006\r"}, d2 = {"Lcom/bytedance/android/annie/bridge/method/abs/CheckPermissionParamModel;", "", "Lcom/bytedance/android/annie/bridge/method/abs/CheckPermissionParamModel$Permission;", "permission", "Lcom/bytedance/android/annie/bridge/method/abs/CheckPermissionParamModel$Permission;", BytedCertConstant.ReflectionConfigKey.COLOR_ARRAY, "()Lcom/bytedance/android/annie/bridge/method/abs/CheckPermissionParamModel$Permission;", "setPermission", "(Lcom/bytedance/android/annie/bridge/method/abs/CheckPermissionParamModel$Permission;)V", "<init>", "()V", "Permission", "PermissionAdapter", "annie_release"}, k = 1, mv = {1, 4, 3})
+public final class CheckPermissionParamModel {
+
+    @SerializedName("permission")
+    @JsonAdapter(PermissionAdapter.class)
+    private Permission permission;
+
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\u000e\n\u0002\b\r\b\u0086\u0001\u0018\u0000 \u00042\b\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\u0005J\b\u0010\u0003\u001a\u00020\u0002H\u0016j\u0002\b\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\rj\u0002\b\u000e¨\u0006\u000f"}, d2 = {"Lcom/bytedance/android/annie/bridge/method/abs/CheckPermissionParamModel$Permission;", "", "", "toString", "Companion", BytedCertConstant.ReflectionConfigKey.COLOR_ARRAY, "Camera", "Microphone", "PhotoAlbum", "Vibrate", "Notification", "Location", "Calendar", "ReadCalendar", "WriteCalendar", "annie_release"}, k = 1, mv = {1, 4, 3})
+    public static final enum Permission extends Enum<Permission> {
+        public static final Permission Calendar = null;
+        public static final Permission Camera = null;
+        public static final a Companion = null;
+        public static final Permission Location = null;
+        public static final Permission Microphone = null;
+        public static final Permission Notification = null;
+        public static final Permission PhotoAlbum = null;
+        public static final Permission ReadCalendar = null;
+        public static final Permission Vibrate = null;
+        public static final Permission WriteCalendar = null;
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ Permission[] f38506a = null;
+
+        public static final class a {
+            public a() {
+            }
+        }
+
+        public static Permission valueOf(String r100) {
+            return (Permission) r27.a.a(Permission.class, r100);
+        }
+
+        public static Permission[] values() {
+            return (Permission[]) f38506a.clone();
+        }
+
+        static {
+            Permission r100 = new Permission("Camera", 0);
+            Camera = r100;
+            Permission r101 = new Permission("Microphone", 1);
+            Microphone = r101;
+            Permission r102 = new Permission("PhotoAlbum", 2);
+            PhotoAlbum = r102;
+            Permission r103 = new Permission("Vibrate", 3);
+            Vibrate = r103;
+            Permission r104 = new Permission("Notification", 4);
+            Notification = r104;
+            Permission r105 = new Permission("Location", 5);
+            Location = r105;
+            Permission r110 = new Permission("Calendar", 6);
+            Calendar = r110;
+            Permission r111 = new Permission("ReadCalendar", 7);
+            ReadCalendar = r111;
+            Permission r112 = new Permission("WriteCalendar", 8);
+            WriteCalendar = r112;
+            f38506a = new Permission[]{r100, r101, r102, r103, r104, r105, r110, r111, r112};
+            Companion = new a();
+        }
+
+        @Override // java.lang.Enum
+        public String toString() {
+            if (this != Camera) goto L6;
+            return "camera";
+        L6:
+            if (this != Microphone) goto L9;
+            return "microphone";
+        L9:
+            if (this != PhotoAlbum) goto L12;
+            return "photoAlbum";
+        L12:
+            if (this != Vibrate) goto L15;
+            return "vibrate";
+        L15:
+            if (this != Notification) goto L18;
+            return "notification";
+        L18:
+            if (this != Location) goto L21;
+            return "location";
+        L21:
+            if (this != Calendar) goto L24;
+            return "calendar";
+        L24:
+            if (this != ReadCalendar) goto L27;
+            return "read_calendar";
+        L27:
+            if (this != WriteCalendar) goto L29;
+            return "write_calendar";
+        L29:
+            return "";
+        }
+
+        public Permission(String r100, int r101) {
+            super(r100, r101);
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005"}, d2 = {"Lcom/bytedance/android/annie/bridge/method/abs/CheckPermissionParamModel$PermissionAdapter;", "Lcom/bytedance/android/annie/bridge/method/util/EnumJsonAdapter;", "Lcom/bytedance/android/annie/bridge/method/abs/CheckPermissionParamModel$Permission;", "<init>", "()V", "annie_release"}, k = 1, mv = {1, 4, 3})
+    public static final class PermissionAdapter extends EnumJsonAdapter<Permission> {
+        public PermissionAdapter() {
+        }
+
+        @Override // com.google.gson.TypeAdapter
+        public final Object read(JsonReader r100) {
+            if (r100 != null) goto L5;
+            return null;
+        L5:
+            if (r100.peek() != JsonToken.NULL) goto L7;
+            r100.nextNull();
+            return null;
+        L7:
+            String r101 = r100.nextString();
+            Permission.Companion.getClass();
+            Intrinsics.checkNotNullParameter(r101, "permission");
+            if (StringsKt.equals(r101, "camera", true) == false) goto L11;
+            return Permission.Camera;
+        L11:
+            if (StringsKt.equals(r101, "microphone", true) == false) goto L14;
+            return Permission.Microphone;
+        L14:
+            if (StringsKt.equals(r101, "photoAlbum", true) == false) goto L17;
+            return Permission.PhotoAlbum;
+        L17:
+            if (StringsKt.equals(r101, "vibrate", true) == false) goto L20;
+            return Permission.Vibrate;
+        L20:
+            if (StringsKt.equals(r101, "notification", true) == false) goto L23;
+            return Permission.Notification;
+        L23:
+            if (StringsKt.equals(r101, "location", true) == false) goto L26;
+            return Permission.Location;
+        L26:
+            if (StringsKt.equals(r101, "calendar", true) == false) goto L29;
+            return Permission.Calendar;
+        L29:
+            if (StringsKt.equals(r101, "read_calendar", true) == false) goto L32;
+            return Permission.ReadCalendar;
+        L32:
+            if (StringsKt.equals(r101, "write_calendar", true) == true) goto L34;
+            return null;
+        L34:
+            return Permission.WriteCalendar;
+        }
+    }
+
+    public CheckPermissionParamModel() {
+    }
+
+    public final Permission a() {
+        return this.permission;
+    }
+}

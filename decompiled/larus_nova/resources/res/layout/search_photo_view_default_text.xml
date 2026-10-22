@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textColor="@color/reverse_tPrimary"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:fontType="medium"
+        style="@style/font_size_34_sp"/>
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textColor="@color/reverse_tTertiary"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        style="@style/font_size_28_sp"/>
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textSize="15sp"
+        android:textColor="@color/search_Primary2_light"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_refresh"
+        android:background="@drawable/photo_search_shape_bg_error_button"
+        android:visibility="gone"
+        android:layout_width="160dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        app:fontType="medium"/>
+</merge>

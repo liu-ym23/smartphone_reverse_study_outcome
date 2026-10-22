@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gallery_item_holder_view"
+    android:layout_width="37dp"
+    android:layout_height="50dp">
+    <com.bytedance.awemeopen.infra.base.image.AoImageView
+        android:layout_gravity="center"
+        android:id="@+id/gallery_item_view"
+        android:padding="2dp"
+        android:layout_width="33dp"
+        android:layout_height="44dp"/>
+</FrameLayout>

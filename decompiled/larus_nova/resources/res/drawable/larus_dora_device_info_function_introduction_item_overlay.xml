@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/dp_16"/>
+    <gradient
+        android:startColor="@color/larus_dora_function_introduction_overlay_color0"
+        android:endColor="@color/larus_dora_function_introduction_overlay_color1"
+        android:angle="270"
+        android:type="linear"/>
+</shape>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no">
+    <com.bytedance.android.livesdk.widget.roundcorner.RoundCornerImageView
+        android:id="@+id/avatar"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        app:roundAsCircle="true"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="#e6ffffff"
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_alignTop="@+id/avatar"
+        android:importantForAccessibility="no"
+        android:layout_toEndOf="@+id/avatar"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#ffffff"
+        android:gravity="center_vertical"
+        android:id="@+id/text_content"
+        android:background="@drawable/ttlive_chat_channel_item_chat_bg"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:minHeight="28dp"
+        android:layout_below="@+id/nick_name"
+        android:layout_alignLeft="@+id/nick_name"/>
+</RelativeLayout>

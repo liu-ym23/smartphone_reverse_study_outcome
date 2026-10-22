@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/product_feed_search_card_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/search_word_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:textSize="13dp"
+            android:textColor="#000000"
+            android:ellipsize="end"
+            android:id="@+id/search_word_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="92dp"
+            android:maxLines="1"
+            android:includeFontPadding="false"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/search_word_icon"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="1dp"
+            app:srcCompat="@drawable/ec_inflow_search_card_arrow"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_container"
+    style="@style/uicomponent_common_alert_dialog_content_container">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/content_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/uicomponent_common_alert_dialog_sub_container">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:actualImageScaleType="centerCrop"
+            style="@style/uicomponent_common_alert_dialog_title_icon"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/uicomponent_common_alert_dialog_title_tv"/>
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/uicomponent_common_alert_dialog_content_tv"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:background="@color/ttlive_std_line_modal"
+        android:layout_width="match_parent"
+        style="@style/uicomponent_common_alert_dialog_divider"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/uicomponent_common_alert_dialog_action_container"/>
+</LinearLayout>

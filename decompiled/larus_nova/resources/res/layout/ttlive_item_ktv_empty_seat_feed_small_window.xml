@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="26dp"
+    android:layout_height="26dp">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="#b3ffffff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/empty_num_tv"
+        android:background="@drawable/ttlive_bg_default_anchor_avatar"
+        android:layout_width="17dp"
+        android:layout_height="17dp"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/join_icon"
+        android:background="@drawable/ttlive_ic_interact_guest_add"
+        android:visibility="gone"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:src="@drawable/ttlive_bg_default_anchor_avatar"/>
+</FrameLayout>

@@ -1,0 +1,43 @@
+{
+  "meta": { "name": "LogisticsTitle", "version": "1" },
+  "type": "View",
+  "style": { "bg_color": "#FFFFFF" },
+  "elements": [
+    {
+      "attr": { ":text": "data.header_text" },
+      "type": "Text",
+      "style": {
+        ":margin": "option(len(data.header_text)>0,[0,16,0,0],[8,44,0,0])",
+        "font_size": 14,
+        "font_color": "#99161823",
+        "flex_shrink": 0
+      }
+    },
+    {
+      "type": "Text",
+      "style": {
+        "line": 2,
+        "font_size": 14,
+        "font_color": "#161823",
+        "end_ellipse": true
+      },
+      "elements": [
+        {
+          "attr": { ":src": "data.content_icon.url" },
+          "type": "InlineImage",
+          "style": {
+            ":width": "data.content_icon.width",
+            "margin": ["0", "4", "1", "0"],
+            ":height": "data.content_icon.height",
+            ":display": "option(data.content_icon,null, 'none')"
+          }
+        },
+        {
+          "for": { "items": "data.content_list" },
+          "attr": { ":text": "item.text" },
+          "type": "InlineText"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/ec_shop_inner_flow_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/ec_shop_inner_flow_status_bar_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ec_shop_top_bar_back_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/ec_shop_inner_flow_ic_back"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="@color/shopping_color_161823"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ec_shop_inner_flow_title"/>
+        <com.bytedance.android.window.shop.innerflow.widget.ECWindowInnerFlowAddShopCartView
+            android:layout_gravity="end|center_vertical"
+            android:id="@+id/ec_shop_top_bar_shop_cart"
+            android:visibility="invisible"
+            android:layout_width="34dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="9dp"/>
+    </FrameLayout>
+</LinearLayout>

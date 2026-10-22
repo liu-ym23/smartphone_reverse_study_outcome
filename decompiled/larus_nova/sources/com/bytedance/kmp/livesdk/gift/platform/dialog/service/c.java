@@ -1,0 +1,5 @@
+package com.bytedance.kmp.livesdk.gift.platform.dialog.service;
+
+/* JADX INFO: loaded from: classes19.dex */
+public interface c extends com.bytedance.live.kmp.core.d {
+}

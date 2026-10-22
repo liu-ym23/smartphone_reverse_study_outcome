@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="20dp"
+    android:width="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="@color/office_screen_menu_text"
+        android:pathData="M15.67,12.85C15.36,13.16 14.86,13.16 14.55,12.85L10,8.3L5.45,12.85C5.14,13.16 4.64,13.16 4.33,12.85C4.02,12.54 4.02,12.04 4.33,11.73L9.44,6.62C9.75,6.31 10.25,6.31 10.56,6.62L15.67,11.73C15.98,12.04 15.98,12.54 15.67,12.85Z"
+        android:fillType="evenOdd"/>
+</vector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.window.shop.widget.category.CategoryScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/window_category"
+    android:tag="ec_window_category"
+    android:background="@color/commerce_color_FFFFFF"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+    <com.bytedance.android.window.shop.widget.category.CategoryBarView
+        android:layout_gravity="bottom"
+        android:id="@+id/category_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+</com.bytedance.android.window.shop.widget.category.CategoryScrollView>

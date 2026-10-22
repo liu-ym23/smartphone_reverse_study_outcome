@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ec.core.widget.RoundedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/ec_commerce_search_edit_view_in_flow_1098495416"
+    android:background="@color/shopping_color_0D161823"
+    android:paddingLeft="4dp"
+    android:paddingRight="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="12dp"
+    app:rounded_radius="2dp">
+    <ImageView
+        android:id="@+id/ec_commerce_search_edit_view_in_flow_1005417520"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/commerce_anchor_v3_edit_ic_search"/>
+    <TextView
+        android:textColor="@color/shopping_color_99161823"
+        android:ellipsize="end"
+        android:id="@+id/anchor_v3_tv_search_word"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="@string/shopping_anchor_v3_tip_search_hint"
+        android:singleLine="true"
+        android:layout_weight="1"
+        android:layout_marginStart="2dp"/>
+</com.bytedance.android.ec.core.widget.RoundedLinearLayout>

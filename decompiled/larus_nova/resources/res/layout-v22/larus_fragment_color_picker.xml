@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    aandroid:background="@color/bg_body">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_color_picker"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="28dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"/>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_white_round_corner_rect"
+    android:layout_width="match_parent"
+    android:layout_height="210dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/time_choose_cancel"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        app:actualImageResource="@drawable/ttlive_ic_pk_setting_duration_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/ttlive_ic_pk_setting_duration_back"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_pk_time_choose_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/ttlive_interact_pk_duration_setting_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/time_choose_confirm"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        app:actualImageResource="@drawable/ttlive_ic_pk_setting_duration_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/ttlive_ic_pk_setting_duration_confirm"/>
+    <FrameLayout
+        android:id="@+id/wheelpicker_container"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_choose_cancel"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

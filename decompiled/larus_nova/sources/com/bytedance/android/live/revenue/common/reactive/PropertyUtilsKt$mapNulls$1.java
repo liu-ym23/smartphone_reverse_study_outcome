@@ -1,0 +1,27 @@
+package com.bytedance.android.live.revenue.common.reactive;
+
+import androidx.exifinterface.media.ExifInterface;
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes47.dex */
+@Metadata(d1 = {"\u0000\u0004\n\u0002\b\u0005\u0010\u0000\u001a\u0002H\u0001\"\u0004\b\u0000\u0010\u00012\b\u0010\u0002\u001a\u0004\u0018\u0001H\u0001H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"<anonymous>", ExifInterface.GPS_DIRECTION_TRUE, "it", AbsMethodDelegate.TAG_INVOKE, "(Ljava/lang/Object;)Ljava/lang/Object;"}, k = 3, mv = {1, 5, 1})
+final class PropertyUtilsKt$mapNulls$1 extends Lambda implements Function1<Object, Object> {
+    final /* synthetic */ Function0 $valueForNull;
+
+    public PropertyUtilsKt$mapNulls$1(Function0 r100) {
+        this.$valueForNull = r100;
+        super(1);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public final Object invoke(Object r100) {
+        if (r100 == null) goto L4;
+        return r100;
+    L4:
+        return this.$valueForNull.invoke();
+    }
+}

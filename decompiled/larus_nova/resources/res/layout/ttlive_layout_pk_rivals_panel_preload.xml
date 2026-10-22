@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.chatroom.ui.LiveDoubleColorBallAnimationView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/double_loading_view_double_ball"
+        android:visibility="gone"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="135dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/ttlive_pk_userlist_refresh_progress_anim"
+        android:indeterminateBehavior="repeat"/>
+    <ProgressBar
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/double_loading_view_normal"
+        android:visibility="gone"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="135dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/ttlive_pk_userlist_refresh_progress_anim"
+        android:indeterminateBehavior="repeat"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#80161823"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_result_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ttlive_pk_rivals_search_result_loading"/>
+</LinearLayout>

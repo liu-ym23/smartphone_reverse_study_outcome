@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.widget.roundcorner.RoundCornerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:ttlive_allRadius="16dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/preview_pic"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="centerCrop"/>
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_container"
+        android:background="@drawable/ttlive_view_input_highlight_bottom_bg"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <TextView
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:id="@+id/main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+        <ImageView
+            android:id="@+id/highlight_check"
+            android:background="@drawable/ttlive_mark_highlight_video_unchecked"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</com.bytedance.android.livesdk.widget.roundcorner.RoundCornerFrameLayout>

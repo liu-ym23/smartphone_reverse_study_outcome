@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Rust"
+        android:key="rust">
+        <CheckBoxPreference
+            android:title="rust网络通道"
+            android:key="rust_net_enable"
+            android:defaultValue="true"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="请求header中添加参数">
+        <CheckBoxPreference
+            android:title="是否在请求header中添加参数"
+            android:key="header_append_params_enable"
+            android:defaultValue="false"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+        <CheckBoxPreference
+            android:title="是否在RN请求header中添加参数"
+            android:key="header_append_params_enable_rn"
+            android:defaultValue="true"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+        <PreferenceScreen
+            android:title="添加/修改参数"
+            android:key="header_append_params"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="网络请求记录">
+        <CheckBoxPreference
+            android:title="是否记录网络请求"
+            android:key="net_interceptable"
+            android:defaultValue="false"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+        <PreferenceScreen
+            android:title="主进程网络请求"
+            android:key="net_main_process"/>
+    </PreferenceCategory>
+</PreferenceScreen>

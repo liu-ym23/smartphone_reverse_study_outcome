@@ -1,0 +1,12 @@
+package com.aiassistant.security.robots;
+
+/* JADX INFO: loaded from: classes28.dex */
+public final class RobotsProtocolHelper {
+    public static boolean isRobotsEnabled() {
+        throw new RuntimeException("Stub!!");
+    }
+
+    private RobotsProtocolHelper() {
+        throw new RuntimeException("Stub!!");
+    }
+}

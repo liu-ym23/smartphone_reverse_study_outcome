@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path
+        name="image_files_1"
+        path="DCIM"/>
+    <external-path
+        name="image_files_2"
+        path="DCIM"/>
+    <external-path
+        name="download_files"
+        path="Download"/>
+    <cache-path
+        name="image_cache"
+        path="nova_image"/>
+    <cache-path
+        name="fresco_image_cache"
+        path="image_cache"/>
+    <cache-path
+        name="nova_export_file"
+        path="nova_export_file"/>
+    <external-files-path
+        name="doc_export_files"
+        path="export"/>
+    <external-path
+        name="doc_lark_export_files"
+        path="Documents/Lark"/>
+    <files-path
+        name="audio_pcm_files"
+        path="record/asr/pcm_o/"/>
+    <files-path
+        name="dora_e"
+        path="doraE"/>
+</paths>

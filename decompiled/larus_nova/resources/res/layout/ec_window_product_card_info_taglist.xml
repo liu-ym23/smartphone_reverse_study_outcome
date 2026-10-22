@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/store_product_card_extra_info_area"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp">
+    <com.bytedance.android.ec.window.base.product.widget.ECWindowTagFlowLayout
+        android:id="@+id/store_product_card_tags_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tag_maxline="1"
+        app:tag_space_horizontal="4dp"/>
+</LinearLayout>

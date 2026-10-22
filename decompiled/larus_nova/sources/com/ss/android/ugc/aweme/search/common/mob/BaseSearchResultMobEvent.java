@@ -1,0 +1,30 @@
+package com.ss.android.ugc.aweme.search.common.mob;
+
+import androidx.exifinterface.media.ExifInterface;
+import com.ss.android.ugc.aweme.search.mob.base.BaseSearchMobEvent;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes40.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0016\u0018\u0000*\u000e\b\u0000\u0010\u0002*\b\u0012\u0004\u0012\u00028\u00000\u00012\b\u0012\u0004\u0012\u00028\u00000\u0001:\u0001\u0003¨\u0006\u0004"}, d2 = {"Lcom/ss/android/ugc/aweme/search/common/mob/BaseSearchResultMobEvent;", "Lcom/ss/android/ugc/aweme/search/mob/base/BaseSearchMobEvent;", ExifInterface.GPS_DIRECTION_TRUE, "Companion", "ec-search-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public class BaseSearchResultMobEvent<T extends BaseSearchMobEvent<T>> extends BaseSearchMobEvent<T> {
+
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b+\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010 \u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010'\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010(\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010)\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010*\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010+\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000¨\u0006/"}, d2 = {"Lcom/ss/android/ugc/aweme/search/common/mob/BaseSearchResultMobEvent$Companion;", "", "()V", "ALADDIN_ID_LIST", "", "ALADDIN_RANK", "ALADDIN_WORDS", "BOOK_STATUS", "BST_TAG", "CARD_TYPE", "CARD_TYPE_NORMAL", "CARD_TYPE_WEAK", "EC_CARD_STATUS", "IS_ALADDIN", "IS_SELLING_PT", "IS_STRONG_STYLE", "IS_WATCH_BUTTON", "IS_WITH_PRODUCT", "ITEM_RANK", "LIST_ITEM_ID", "LIST_RESULT_TYPE", "LIVE_COUNT", "LIVE_ID", "MAIN_PICTURE_LABEL", "MOVIE_IS_VIP", "MUSIC_NUM", "MUSIC_TAG", "ORIGIN_FORMAT", "PAY_TYPE", "RANK", "RELATION_TAG", "RESULT_SOURCE", "SEARCH_LABEL_NAME", "SEARCH_RESULT_ID", "SECOND_TOKEN_TYPE", "SELLING_PT_INFO", "SENTENCE_ID", "SHOW_FORMAT", "STORE_ID", "TOKEN_TAG", "TOKEN_TYPE", "TOKEN_URL", "TRENDING_MEASURE", "TRENDING_MEASURE_HIGHLIGHT", "TRENDING_MEASURE_NORMAL", "TV_SOURCE_ORIGINAL", "WITH_FEATURE", "ec-search-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+    public static final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(int r100) {
+            this();
+        }
+    }
+
+    static {
+        new Companion(0);
+    }
+
+    public BaseSearchResultMobEvent(String r100) {
+        Intrinsics.checkNotNullParameter(r100, "eventName");
+        super(r100);
+    }
+}

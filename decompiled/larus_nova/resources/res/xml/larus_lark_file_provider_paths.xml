@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path
+        name="image_files_1"
+        path="DCIM"/>
+    <external-path
+        name="image_files_2"
+        path="DCIM"/>
+    <cache-path
+        name="image_cache"
+        path="nova_image"/>
+    <cache-path
+        name="nova_export_file"
+        path="nova_export_file"/>
+</paths>

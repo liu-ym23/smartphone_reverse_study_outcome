@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_item_root"
+    android:clipChildren="false"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/content_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.bytedance.lighten.loader.SmartImageView
+            android:id="@+id/prefix_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="0.5dp"/>
+        <com.bytedance.dux.text.DuxTextView
+            android:textSize="15sp"
+            android:textColor="#b0161823"
+            android:id="@+id/tab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/tab_indicator"
+        android:background="@drawable/search_components_filter_tab_indicator_bg"
+        android:visibility="gone"
+        android:layout_width="14dp"
+        android:layout_height="2dp"/>
+    <ViewStub
+        android:id="@+id/red_dot_guide_stub"
+        android:clipChildren="false"
+        android:layout="@layout/ec_search_components_commodity_tab_red_dot_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/content_container"
+        android:layout_alignTop="@+id/content_container"/>
+</RelativeLayout>

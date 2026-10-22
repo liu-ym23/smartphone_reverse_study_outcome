@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.av_call.view.RealtimeCallSuggestText xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textSize="?attr/larus_dp_15"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:layout_marginStart="?attr/larus_dp_12"
+    android:layout_marginEnd="?attr/larus_dp_12"
+    app:larus_endColor="@color/larus_realtime_call_suggest_text_end_color"
+    app:larus_startColor="@color/larus_realtime_call_suggest_text_start_color"/>

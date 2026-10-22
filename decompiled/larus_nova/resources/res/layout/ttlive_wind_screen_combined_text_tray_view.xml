@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/anim_tray_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/combined_text_render_view_container"
+        android:background="@drawable/ttlive_wind_screen_common_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.bytedance.android.livesdk.interactivity.common.combinedtext.CombinedTextRenderView
+            android:id="@+id/combined_text_render_view"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.bytedance.android.livesdk.interactivity.common.enterAnim.RadiusHSImageView
+        android:id="@+id/background_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"/>
+</FrameLayout>

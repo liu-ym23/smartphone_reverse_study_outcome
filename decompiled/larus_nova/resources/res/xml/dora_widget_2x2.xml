@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="@dimen/larus_dp_110"
+    android:minHeight="@dimen/larus_dp_120"
+    android:updatePeriodMillis="1800000"
+    android:initialLayout="@layout/layout_dora_widget_2x2"
+    android:previewImage="@drawable/larus_dora_widget_preview_2x2"
+    android:widgetCategory="home_screen"/>

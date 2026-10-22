@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_gravity="top|left"
+        android:orientation="horizontal"
+        android:id="@+id/static_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/iv_animation"
+        android:visibility="gone"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_broadcast_task_banner_hint_color"
+        android:gravity="bottom|center_horizontal"
+        android:layout_gravity="left"
+        android:id="@+id/common_banner_hint_view"
+        android:background="@drawable/ttlive_bg_top_left_banner_guide"
+        android:paddingBottom="6dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="66dp"
+        android:minWidth="100dp"
+        android:text="@string/ttlive_top_left_banner_show_hint"/>
+</FrameLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="4dp"
+    android:paddingRight="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="4dp"
+    android:paddingEnd="8dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/head_clear_screen"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/name_clear_screen"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:maxWidth="68dp"
+        android:singleLine="true"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"/>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="28dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:background="@drawable/ttlive_live_message_load_more_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:roundedCornerRadius="5dp"/>
+    <com.bytedance.android.livesdk.chatroom.ui.NoMoreSpaceTextView
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_gravity="start"
+        android:id="@+id/text"
+        android:paddingLeft="8dp"
+        android:paddingTop="3dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:textIsSelectable="false"
+        android:textAlignment="viewStart"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"/>
+</RelativeLayout>

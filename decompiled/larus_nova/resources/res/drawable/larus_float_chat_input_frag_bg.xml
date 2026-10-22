@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="?attr/larus_dp_16">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/larus_base_1"/>
+            <corners
+                android:topLeftRadius="?attr/larus_dp_24"
+                android:topRightRadius="?attr/larus_dp_24"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+        </shape>
+    </item>
+</layer-list>

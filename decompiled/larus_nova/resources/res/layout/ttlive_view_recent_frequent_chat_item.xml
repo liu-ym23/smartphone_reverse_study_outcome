@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/ttlive_bg_recent_frequent_chat_item"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.widget.EmojiTextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_color_161823"
+        android:gravity="left"
+        android:id="@+id/recent_chat_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="������欢迎宝子们进入直播间！喜欢的点点关注点点赞！每晚九点半直播！感谢宝子们支持！感谢感谢感谢感谢����～～"/>
+</FrameLayout>

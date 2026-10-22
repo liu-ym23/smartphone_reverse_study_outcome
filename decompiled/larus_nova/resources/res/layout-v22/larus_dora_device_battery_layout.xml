@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dora_onboarding_battery"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="?attr/larus_dp_32"
+        android:layout_height="?attr/larus_dp_32">
+        <com.lynx.lottieadapter.LottieAdapterView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/dora_onboarding_battery_progress"
+            android:layout_width="?attr/larus_dp_32"
+            android:layout_height="?attr/larus_dp_32"/>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/dora_onboarding_battery_progress_none"
+            android:visibility="gone"
+            android:layout_width="?attr/larus_dp_32"
+            android:layout_height="?attr/larus_dp_32"
+            android:src="@drawable/larus_dora_onboarding_battery_none"/>
+    </FrameLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_sp_14"
+        android:textColor="@color/larus_neutral_100"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/dora_onboarding_battery_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_6"
+        android:textFontWeight="500"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

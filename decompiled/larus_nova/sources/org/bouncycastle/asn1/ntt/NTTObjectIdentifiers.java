@@ -1,0 +1,22 @@
+package org.bouncycastle.asn1.ntt;
+
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+
+/* JADX INFO: loaded from: classes42.dex */
+public interface NTTObjectIdentifiers {
+    public static final ASN1ObjectIdentifier id_camellia128_cbc = null;
+    public static final ASN1ObjectIdentifier id_camellia128_wrap = null;
+    public static final ASN1ObjectIdentifier id_camellia192_cbc = null;
+    public static final ASN1ObjectIdentifier id_camellia192_wrap = null;
+    public static final ASN1ObjectIdentifier id_camellia256_cbc = null;
+    public static final ASN1ObjectIdentifier id_camellia256_wrap = null;
+
+    static {
+        id_camellia128_cbc = new ASN1ObjectIdentifier("1.2.392.200011.61.1.1.1.2");
+        id_camellia192_cbc = new ASN1ObjectIdentifier("1.2.392.200011.61.1.1.1.3");
+        id_camellia256_cbc = new ASN1ObjectIdentifier("1.2.392.200011.61.1.1.1.4");
+        id_camellia128_wrap = new ASN1ObjectIdentifier("1.2.392.200011.61.1.1.3.2");
+        id_camellia192_wrap = new ASN1ObjectIdentifier("1.2.392.200011.61.1.1.3.3");
+        id_camellia256_wrap = new ASN1ObjectIdentifier("1.2.392.200011.61.1.1.3.4");
+    }
+}

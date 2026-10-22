@@ -1,0 +1,11 @@
+package com.bytedance.apm.agent.helper;
+
+/* JADX INFO: loaded from: classes14.dex */
+public class ApmAgentHelper {
+    public static final int VIEW_DATA_KEY_1 = -16777215;
+    public static final int VIEW_DATA_KEY_2 = -16777214;
+    public static final int VIEW_DATA_KEY_MAP = -16777213;
+
+    public ApmAgentHelper() {
+    }
+}

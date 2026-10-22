@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/action_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/title_container"
+        layout="@layout/dux_extension_action_sheet_new"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="17sp"
+        android:gravity="center"
+        android:id="@+id/cancel_action"
+        android:background="?attr/selectableItemBackground"
+        android:paddingLeft="24dp"
+        android:paddingTop="16dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        app:lineHeight="23.8sp"/>
+</LinearLayout>

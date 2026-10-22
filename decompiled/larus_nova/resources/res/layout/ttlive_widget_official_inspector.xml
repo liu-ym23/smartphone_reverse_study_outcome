@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="end|center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/inspector_container"
+    android:background="@drawable/ttlive_bg_official_inspector"
+    android:layout_width="match_parent"
+    android:layout_height="21dp"
+    android:alpha="0">
+    <ImageView
+        android:id="@+id/inspector_icon_hsiv"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:scaleType="fitCenter"
+        android:layout_marginEnd="6dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/inspector_anim_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginEnd="2dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/inspector_suffix_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/larus_bg_task_mode_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/task_skill_header"
+        layout="@layout/larus_layout_bottom_sheet_header"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/task_skill_recycler"
+            android:background="@drawable/larus_bg_task_skill_recycler"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="?attr/larus_dp_16"
+            android:layout_marginTop="?attr/larus_dp_10"
+            android:layout_marginRight="?attr/larus_dp_16"
+            android:layout_marginBottom="?attr/larus_dp_20"
+            android:overScrollMode="never"/>
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/task_skill_loading"
+            android:layout_width="?attr/larus_dp_32"
+            android:layout_height="?attr/larus_dp_32"/>
+        <include
+            android:id="@+id/task_skill_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_84"
+            layout="@layout/larus_layout_task_skill_state"/>
+    </FrameLayout>
+</LinearLayout>

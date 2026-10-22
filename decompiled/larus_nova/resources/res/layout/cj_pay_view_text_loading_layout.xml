@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cj_pay_text_loading_layout"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/cj_pay_bg_loading"
+        android:paddingTop="@dimen/cj_pay_padding_12"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/cj_pay_height_68"
+        android:minWidth="79dp">
+        <ProgressBar
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/cj_pay_height_24"
+            android:layout_height="@dimen/cj_pay_height_24"
+            android:indeterminateOnly="true"
+            android:indeterminateDrawable="@drawable/cj_pay_bg_loading_circle"
+            android:indeterminateDuration="500"
+            android:indeterminateBehavior="repeat"/>
+        <TextView
+            android:textSize="@dimen/cj_pay_font_size_12"
+            android:textColor="@color/cj_pay_color_white"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_loading_text"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cj_pay_padding_8"
+            android:text="@string/cj_pay_h5_loading_tip"
+            android:includeFontPadding="false"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,65 @@
+package kotlin.coroutines.jvm.internal;
+
+import com.ss.android.lark.utils.statistics.PerfLog;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.ContinuationInterceptor;
+import kotlin.coroutines.CoroutineContext;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\b!\u0018\u00002\u00020\u0001B\u0019\b\u0016\u0012\u0010\u0010\u0002\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0004\u0018\u00010\u0003¢\u0006\u0002\u0010\u0005B!\u0012\u0010\u0010\u0002\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0004\u0018\u00010\u0003\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0007¢\u0006\u0002\u0010\bJ\u000e\u0010\f\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u0003J\b\u0010\r\u001a\u00020\u000eH\u0014R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u00020\u00078VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\n\u0010\u000bR\u0018\u0010\f\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0004\u0018\u00010\u0003X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u000f"}, d2 = {"Lkotlin/coroutines/jvm/internal/ContinuationImpl;", "Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;", "completion", "Lkotlin/coroutines/Continuation;", "", "(Lkotlin/coroutines/Continuation;)V", "_context", "Lkotlin/coroutines/CoroutineContext;", "(Lkotlin/coroutines/Continuation;Lkotlin/coroutines/CoroutineContext;)V", PerfLog.PARAM_KEY_CONTEXT_ID, "getContext", "()Lkotlin/coroutines/CoroutineContext;", "intercepted", "releaseIntercepted", "", "kotlin-stdlib"}, k = 1, mv = {1, 9, 0}, xi = 48)
+public abstract class ContinuationImpl extends BaseContinuationImpl {
+    private final CoroutineContext _context;
+    private transient Continuation<Object> intercepted;
+
+    @Override // kotlin.coroutines.Continuation
+    public CoroutineContext getContext() {
+        CoroutineContext r100 = this._context;
+        Intrinsics.checkNotNull(r100);
+        return r100;
+    }
+
+    public final Continuation<Object> intercepted() {
+        Continuation<Object> r100 = this.intercepted;
+        if (r100 != null) goto L10;
+        ContinuationInterceptor r101 = (ContinuationInterceptor) getContext().get(ContinuationInterceptor.Key);
+        if (r101 == null) goto L8;
+        r100 = r101.interceptContinuation(this);
+        if (r100 == null) goto L8;
+    L9:
+        this.intercepted = r100;
+    L8:
+        r100 = this;
+    L10:
+        return r100;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public void releaseIntercepted() {
+        Continuation<?> r100 = this.intercepted;
+        if (r100 == null) goto L6;
+        if (r100 == this) goto L6;
+        CoroutineContext.Element r101 = getContext().get(ContinuationInterceptor.Key);
+        Intrinsics.checkNotNull(r101);
+        ((ContinuationInterceptor) r101).releaseInterceptedContinuation(r100);
+    L6:
+        this.intercepted = CompletedContinuation.INSTANCE;
+    }
+
+    public ContinuationImpl(Continuation<Object> r100) {
+        if (r100 == null) goto L4;
+        CoroutineContext r101 = r100.getContext();
+    L5:
+        this(r100, r101);
+        return;
+    L4:
+        r101 = null;
+        goto L5
+    }
+
+    public ContinuationImpl(Continuation<Object> r100, CoroutineContext r101) {
+        super(r100);
+        this._context = r101;
+    }
+}

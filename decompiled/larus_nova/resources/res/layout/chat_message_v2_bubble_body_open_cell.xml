@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.ui.layout.LKUIRoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/bubble_layout_header_slot"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"/>
+    <com.ss.android.lark.chat.chatwindow.chat.message.cellv2.layout.slot.StackSlot
+        android:orientation="vertical"
+        android:id="@+id/bubble_layout_content_slot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/bubble_layout_footer_slot"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"/>
+</com.larksuite.component.ui.layout.LKUIRoundLinearLayout>

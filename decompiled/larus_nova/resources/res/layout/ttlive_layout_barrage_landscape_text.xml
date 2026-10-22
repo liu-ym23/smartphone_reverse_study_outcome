@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.interactivity.barrage.view.StrokeColorTextView
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tv_danmaku_text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:minHeight="16dp"
+        android:includeFontPadding="false"
+        android:shadowColor="#14000000"
+        android:shadowDx="0"
+        android:shadowDy="1"/>
+</FrameLayout>

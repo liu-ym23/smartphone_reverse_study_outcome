@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:paddingTop="16dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.awemeopen.apps.framework.card.view.widget.PullToRefreshRecyclerView
+        android:id="@+id/horRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:textSize="12sp"
+            android:textColor="#59161823"
+            android:id="@+id/aos_card_hor_scroll_video_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精彩小视频"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_alignParentStart="true"/>
+        <ImageView
+            android:id="@+id/aos_card_hor_scroll_video_close_btn"
+            android:paddingLeft="8dp"
+            android:paddingRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aos_middle_video_card_close_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

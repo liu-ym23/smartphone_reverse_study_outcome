@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="16dp"
+    android:width="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:fillColor="@color/obric_task_center_main_text_color"
+        android:pathData="M3.667,2.696C3.667,1.833 4.633,1.309 5.372,1.772L13.819,7.076C14.505,7.506 14.504,8.493 13.819,8.923L5.372,14.227C4.634,14.69 3.667,14.167 3.667,13.304V2.696Z"
+        android:fillAlpha="0.9"/>
+</vector>

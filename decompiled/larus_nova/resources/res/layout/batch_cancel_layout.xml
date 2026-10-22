@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:background="@color/color_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.larksuite.component.universe_design.button.UDButton
+            android:enabled="true"
+            android:textSize="16sp"
+            android:textColor="@color/text_title"
+            android:id="@+id/cancel_auth_btn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/CreationMobile_Docs_EmbeddedFiles_AccessDetails_RevokeAll"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:ud_backgroundColor="@color/bg_body"
+            app:ud_radius="l"
+            style="@style/UDButton.Small.Primary"/>
+        <com.larksuite.component.universe_design.button.UDButton
+            android:enabled="true"
+            android:textSize="16sp"
+            android:textColor="@color/text_title"
+            android:id="@+id/cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="44dp"
+            android:text="@string/Doc_Reminder_Button_Cancel"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:ud_backgroundColor="@color/bg_body"
+            app:ud_radius="l"
+            style="@style/UDButton.Small.Primary"/>
+    </LinearLayout>
+</LinearLayout>

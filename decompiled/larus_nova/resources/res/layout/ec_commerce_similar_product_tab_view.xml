@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/ec_commerce_similar_product_tab_view_449236721"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="14dp"
+        android:textStyle="normal"
+        android:textColor="@color/shopping_color_99161823"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tab_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tab_image_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"/>
+</LinearLayout>

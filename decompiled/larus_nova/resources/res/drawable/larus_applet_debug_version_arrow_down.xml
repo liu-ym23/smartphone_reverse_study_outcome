@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="8dp"
+    android:width="14dp"
+    android:viewportWidth="14"
+    android:viewportHeight="8">
+    <path
+        android:fillColor="@color/applet_debug_version_icon_tint"
+        android:pathData="M0.234,1.366C-0.078,1.054 -0.078,0.547 0.234,0.234C0.547,-0.078 1.053,-0.078 1.366,0.234L6.779,5.648L12.193,0.234C12.505,-0.078 13.012,-0.078 13.324,0.234C13.637,0.547 13.637,1.054 13.324,1.366L7.911,6.779C7.286,7.404 6.273,7.404 5.648,6.779L0.234,1.366Z"/>
+</vector>

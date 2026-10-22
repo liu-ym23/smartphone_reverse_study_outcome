@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dux_info_panel_content_switch_view_bg"
+    android:paddingLeft="16dp"
+    android:paddingTop="13dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="13dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="15sp"
+        android:textColor="@color/TextReverse"
+        android:gravity="start"
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dux_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.dux.duxswitch.DuxSwitch
+        android:id="@+id/dux_switch"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adaptLargeFontMode="true"
+        app:isAlwaysLight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</merge>

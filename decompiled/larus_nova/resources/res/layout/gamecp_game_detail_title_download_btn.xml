@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_bg_f8f8f8_corner_4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.gamecp.business.gamedetail.view.TitleDownloadView
+        android:textSize="13dp"
+        android:textColor="@color/gamecp_white"
+        android:gravity="center"
+        android:id="@+id/game_detail_title_game_download"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:minWidth="70dp"/>
+</FrameLayout>

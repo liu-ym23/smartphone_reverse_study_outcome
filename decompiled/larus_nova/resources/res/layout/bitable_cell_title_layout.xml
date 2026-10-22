@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+    <TextView
+        android:textSize="@dimen/space_kit_font_13"
+        android:textColor="@color/text_caption"
+        android:gravity="center_vertical"
+        android:id="@+id/cell_title_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_kit_len_22"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="@dimen/space_kit_font_13"
+        android:textColor="@color/text_caption"
+        android:id="@+id/single_line_temp"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginStart="@dimen/space_kit_len_22"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.ee.bear.bitable.common.widgets.SyncIconImageView
+        android:id="@+id/cell_title_icon"
+        android:layout_width="@dimen/space_kit_len_16"
+        android:layout_height="@dimen/space_kit_len_16"
+        android:tint="@color/icon_n2"
+        app:layout_constraintBottom_toBottomOf="@+id/single_line_temp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/single_line_temp"
+        app:srcCompat="@drawable/ud_icon_maybe_outlined"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

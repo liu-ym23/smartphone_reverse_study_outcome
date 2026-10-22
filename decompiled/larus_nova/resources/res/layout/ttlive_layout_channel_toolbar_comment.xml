@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/comment_input_layout"
+    android:background="@drawable/ttlive_chat_channel_fake_comment_input_bg"
+    android:layout_width="match_parent"
+    android:layout_height="38dp">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="#b2ffffff"
+        android:id="@+id/comment_input_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="@string/ttlive_chat_channel_input_hint_text"
+        android:layout_weight="1"
+        android:importantForAccessibility="no"/>
+    <View
+        android:id="@+id/comment_input_emoji_view"
+        android:background="@drawable/ttlive_room_channel_fake_comment_input_emoji"
+        android:layout_width="38dp"
+        android:layout_height="38dp"/>、 
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:id="@+id/imemoji_container"
+        android:paddingRight="2dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</LinearLayout>

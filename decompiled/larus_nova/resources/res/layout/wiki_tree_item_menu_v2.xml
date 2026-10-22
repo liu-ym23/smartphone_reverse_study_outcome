@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/bg_body"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/swipe_menu_more"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ud_icon_more_outlined"
+        android:scaleType="centerInside"
+        android:tint="@color/static_white"
+        android:layout_weight="1"
+        android:backgroundTint="@color/icon_n3"/>
+    <ImageView
+        android:id="@+id/swipe_menu_add"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ud_icon_add_outlined"
+        android:scaleType="centerInside"
+        android:tint="@color/static_white"
+        android:layout_weight="1"
+        android:backgroundTint="@color/function_info_content_default"/>
+</LinearLayout>

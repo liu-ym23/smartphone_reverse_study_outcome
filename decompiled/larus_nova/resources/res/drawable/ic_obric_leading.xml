@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="18dp"
+    android:width="18dp"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+    <path
+        android:fillColor="@color/obric_guide_text_1"
+        android:pathData="M9,12.938C9.725,12.938 10.313,13.525 10.313,14.25C10.313,14.975 9.725,15.563 9,15.563C8.275,15.563 7.688,14.975 7.688,14.25C7.688,13.525 8.275,12.938 9,12.938ZM9,7.688C9.725,7.688 10.313,8.275 10.313,9C10.313,9.725 9.725,10.313 9,10.313C8.275,10.313 7.688,9.725 7.688,9C7.688,8.275 8.275,7.688 9,7.688ZM9,2.438C9.725,2.438 10.313,3.025 10.313,3.75C10.313,4.475 9.725,5.063 9,5.063C8.275,5.063 7.688,4.475 7.688,3.75C7.688,3.025 8.275,2.438 9,2.438Z"/>
+</vector>

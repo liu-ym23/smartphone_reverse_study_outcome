@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_detail_tag_item_v2_container"
+    android:layout_width="wrap_content"
+    android:layout_height="54dp">
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="17dp"
+        android:id="@+id/poi_detail_tag_text_place_holder"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="17dp"
+        android:textColor="@color/TextPrimary_light"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/poi_detail_tag_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="PingFangSC"/>
+</FrameLayout>

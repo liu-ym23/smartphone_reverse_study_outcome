@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@+id/sub_toolbar_item_font_color_layout"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/sub_toolbar_item_font_color_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="1dp"
+        app:srcCompat="@drawable/slides_doc_toolbar_font_icon"
+        app:tint="@color/icon_n1"/>
+    <com.bytedance.ee.bear.slides.toolbar.factory.picker.colorpicker.RoundedView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/sub_toolbar_item_font_color_indicator"
+        android:layout_width="22dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+</LinearLayout>

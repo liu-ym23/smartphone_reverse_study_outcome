@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ec_coupon_fragment_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ec_page_title_height">
+        <com.bytedance.android.ui.base.widget.icon.IconImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ec_dux_ic_s_s_arrowleft_outlined"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            app:icon_color="@color/ec_dux_black_161823"/>
+        <TextView
+            android:textSize="@dimen/ec_dialog_title_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/ec_color_black_text_level1"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <View
+        android:background="@color/ec_color_black_161823_8"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <WebView
+        android:id="@+id/wv_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

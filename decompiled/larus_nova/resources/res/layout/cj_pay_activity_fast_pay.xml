@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cj_pay_single_fragment_activity_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="374dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/cj_pay_layout_fast_pay_result"/>
+    <FrameLayout
+        android:id="@+id/cj_pay_single_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

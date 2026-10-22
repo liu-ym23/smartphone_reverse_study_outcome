@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.feed.drawerfeed.widget.FixedRatioRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/card_live_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:placeholderImage="@drawable/ttlive_feed_cover_loading"
+        app:placeholderImageScaleType="fitXY"
+        app:roundedCornerRadius="2dp"/>
+    <com.bytedance.android.livesdk.widget.LiveCoverOptView
+        android:id="@+id/live_cover_opt_view"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"/>
+    <TextView
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/ttlive_feed_open_d2_75"
+        android:gravity="center"
+        android:id="@+id/tv_douyin_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/ttlive_feed_title_tag"
+        android:shadowColor="@color/ttlive_feed_open_d2_74"
+        android:shadowRadius="4"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentEnd="true"/>
+</com.bytedance.android.livesdk.feed.drawerfeed.widget.FixedRatioRelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:id="@+id/ec_commerce_anchor_v3_expandable_bottom_layout_v4c_957047595"
+    android:background="@drawable/shopping_detail_image_more_info_button_bg"
+    android:paddingLeft="10dp"
+    android:paddingTop="4dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="4dp">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#161823"
+        android:id="@+id/tv_title_v4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/more_params"/>
+    <ImageView
+        android:id="@+id/iv_arrow_v4"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/shopping_icon_detail_image_more_info"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

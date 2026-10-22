@@ -1,0 +1,32 @@
+package kotlin.sequences;
+
+import java.util.Iterator;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: Add missing generic type declarations: [R] */
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(k = 3, mv = {1, 9, 0}, xi = 48)
+public /* synthetic */ class SequencesKt___SequencesKt$flatMapIndexed$1<R> extends FunctionReferenceImpl implements Function1<Iterable<? extends R>, Iterator<? extends R>> {
+    public static final SequencesKt___SequencesKt$flatMapIndexed$1 INSTANCE = null;
+
+    static {
+        INSTANCE = new SequencesKt___SequencesKt$flatMapIndexed$1();
+    }
+
+    public SequencesKt___SequencesKt$flatMapIndexed$1() {
+        super(1, Iterable.class, "iterator", "iterator()Ljava/util/Iterator;", 0);
+    }
+
+    public final Iterator<R> invoke(Iterable<? extends R> r100) {
+        Intrinsics.checkNotNullParameter(r100, "p0");
+        return r100.iterator();
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ Object invoke(Object r100) {
+        return invoke((Iterable) r100);
+    }
+}

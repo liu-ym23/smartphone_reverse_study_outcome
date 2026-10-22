@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/larus_dp_20">
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="?attr/larus_dp_16"
+        android:layout_marginEnd="?attr/larus_dp_16"/>
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:textColor="?attr/larus_neutral_50"
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_8"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="?attr/larus_dp_16"
+        android:layout_marginEnd="?attr/larus_dp_16"/>
+    <com.larus.bmhome.chat.standarduikit.clarification.view.InteractionAskAttachmentView
+        android:id="@+id/attachmentView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_4"/>
+</LinearLayout>

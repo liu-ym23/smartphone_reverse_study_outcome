@@ -1,0 +1,43 @@
+package com.bytedance.android.live.broadcastgame.openplatform.feature_panel.view;
+
+import android.content.Context;
+import android.widget.LinearLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.bytedance.android.live.broadcastgame.openplatform.feature_panel.adapter.v3.OpenFeatureRecentUsedGroupListAdapterV3;
+import com.bytedance.android.livesdk.chatroom.RoomContext;
+import com.bytedance.android.livesdkapi.depend.model.live.Room;
+import com.bytedance.live.datacontext.m;
+import com.ss.android.lark.utils.statistics.PerfLog;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes45.dex */
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/bytedance/android/live/broadcastgame/openplatform/feature_panel/view/OpenFeatureRecentUsedListRecyclerViewV3;", "Landroidx/recyclerview/widget/RecyclerView;", "livebroadcastgame-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class OpenFeatureRecentUsedListRecyclerViewV3 extends RecyclerView {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final OpenFeatureRecentUsedGroupListAdapterV3 f61455a;
+
+    public OpenFeatureRecentUsedListRecyclerViewV3(Context r100, OpenFeatureRecentUsedGroupListAdapterV3 r101) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        Intrinsics.checkNotNullParameter(r101, "recentUsedAdapter");
+        super(r100);
+        this.f61455a = r101;
+        LinearLayoutManager r102 = new LinearLayoutManager(r100);
+        r102.setOrientation(0);
+        Unit r103 = Unit.INSTANCE;
+        setLayoutManager(r102);
+        setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
+        setAdapter(r101);
+        setOverScrollMode(2);
+        RoomContext r104 = RoomContext.a.c(RoomContext.Companion, null, 0, 3);
+        if (r104 == null) goto L7;
+        m<Room> r105 = r104.getRoom();
+        if (r105 == null) goto L7;
+        Room r106 = r105.getValue();
+    L7:
+        addItemDecoration(new AnonymousClass2());
+    }
+}

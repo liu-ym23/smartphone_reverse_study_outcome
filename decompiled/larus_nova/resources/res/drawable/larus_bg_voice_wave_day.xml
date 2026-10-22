@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="16dp"
+    android:width="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M2.037,6.485C2.037,6.083 2.363,5.758 2.764,5.758C3.166,5.758 3.492,6.083 3.492,6.485V9.515C3.492,9.917 3.166,10.242 2.764,10.242C2.363,10.242 2.037,9.917 2.037,9.515V6.485Z"/>
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M5.527,4.424C5.527,4.023 5.853,3.697 6.255,3.697C6.656,3.697 6.982,4.023 6.982,4.424V11.576C6.982,11.977 6.656,12.303 6.255,12.303C5.853,12.303 5.527,11.977 5.527,11.576V4.424Z"/>
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M9.02,2.97C9.02,2.568 9.345,2.242 9.747,2.242C10.149,2.242 10.474,2.568 10.474,2.97V13.03C10.474,13.432 10.149,13.758 9.747,13.758C9.345,13.758 9.02,13.432 9.02,13.03V2.97Z"/>
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M12.51,5.758C12.51,5.356 12.835,5.03 13.237,5.03C13.639,5.03 13.964,5.356 13.964,5.758V10.242C13.964,10.644 13.639,10.97 13.237,10.97C12.835,10.97 12.51,10.644 12.51,10.242V5.758Z"/>
+</vector>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/coupon_image"
+        android:layout_width="80dp"
+        android:layout_height="16dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/shopping_color_FF3B52"
+        android:gravity="center"
+        android:id="@+id/coupon_header"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:lineSpacingExtra="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <ImageView
+        android:id="@+id/coupon_divider"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:src="@drawable/ecommerce_coupon_divider_v2"
+        android:scaleType="fitXY"
+        app:layout_constraintRight_toRightOf="@+id/coupon_header"/>
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/shopping_color_FF3B52"
+        android:gravity="center"
+        android:id="@+id/coupon_tag"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:lineSpacingExtra="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/coupon_divider"/>
+    <View
+        android:id="@+id/coupon_stroke"
+        android:background="@drawable/ecommerce_coupon_item_border"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="@+id/coupon_header"
+        app:layout_constraintRight_toRightOf="@+id/coupon_tag"/>
+</merge>

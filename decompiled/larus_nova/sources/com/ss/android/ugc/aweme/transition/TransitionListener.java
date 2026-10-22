@@ -1,0 +1,34 @@
+package com.ss.android.ugc.aweme.transition;
+
+/* JADX INFO: loaded from: classes40.dex */
+public interface TransitionListener extends ITransition {
+
+    public static class DefaultTransitionListener implements TransitionListener {
+        public DefaultTransitionListener() {
+        }
+
+        @Override // com.ss.android.ugc.aweme.transition.ITransition
+        public void b() {
+        }
+
+        @Override // com.ss.android.ugc.aweme.transition.ITransition
+        public final void c() {
+        }
+
+        @Override // com.ss.android.ugc.aweme.transition.ITransition
+        public void e() {
+        }
+
+        @Override // com.ss.android.ugc.aweme.transition.ITransition
+        public void f() {
+        }
+
+        @Override // com.ss.android.ugc.aweme.transition.ITransition
+        public final void h() {
+        }
+
+        @Override // com.ss.android.ugc.aweme.transition.ITransition
+        public void onShowEnd() {
+        }
+    }
+}

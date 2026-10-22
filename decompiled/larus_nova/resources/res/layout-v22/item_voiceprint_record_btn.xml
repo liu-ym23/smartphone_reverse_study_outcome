@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.text.OTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="14sp"
+    android:textColor="@color/obric_custom_action_bar_blue_icon_and_text_color"
+    android:gravity="center"
+    android:id="@+id/btn_record_voiceprint"
+    android:background="@drawable/bg_obric_voiceprint_record_btn"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/obric_setting_voice_print_management_record_new"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:textFontWeight="500"/>

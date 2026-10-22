@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.universe_design.shadow.UDShadowLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/at_content_shadowLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:background="@drawable/pop_window_circle_float_bg"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/bg_body">
+        <com.bytedance.ee.bear.widgets.MaxHeightLayout
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:id="@+id/at_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.bytedance.ee.bear.widget.AtFinderView
+                android:layout_gravity="top"
+                android:id="@+id/at_finder_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="8dp"/>
+        </com.bytedance.ee.bear.widgets.MaxHeightLayout>
+    </FrameLayout>
+</com.larksuite.component.universe_design.shadow.UDShadowLayout>

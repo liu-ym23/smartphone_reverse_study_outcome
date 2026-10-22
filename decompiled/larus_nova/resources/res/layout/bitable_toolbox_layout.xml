@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/toolbox_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:id="@+id/fab_container"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_kit_len_16"
+        android:layout_marginEnd="@dimen/space_kit_len_16"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/toolbar_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bitable_toolbar_height">
+        <View
+            android:background="@color/line_divider_default"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_kit_len_half"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toolbar_menu_rv"
+            android:background="@color/bg_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

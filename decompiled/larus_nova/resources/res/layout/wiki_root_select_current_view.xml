@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wiki_select_current"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_kit_len_64">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/wiki_select_current_icon"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_12"
+        android:tint="@color/colorful_blue"
+        android:layout_marginStart="@dimen/space_kit_len_16"
+        app:srcCompat="@drawable/ud_icon_copy_filled"/>
+    <TextView
+        android:textSize="@dimen/space_kit_font_16"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:id="@+id/wiki_select_current_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="@string/LarkCCM_Workspace_Copyto_CurrentLocation_Mob"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/space_kit_len_12"
+        android:layout_marginEnd="@dimen/space_kit_len_16"
+        android:layout_toEndOf="@+id/wiki_select_current_icon"/>
+    <View
+        android:background="@color/bg_body_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_above="@+id/margin"/>
+    <View
+        android:id="@+id/margin"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

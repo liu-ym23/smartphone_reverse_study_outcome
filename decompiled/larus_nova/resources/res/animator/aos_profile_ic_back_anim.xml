@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:shareInterpolator="true">
+    <objectAnimator
+        android:duration="300"
+        android:repeatCount="0"
+        android:repeatMode="restart"
+        android:valueFrom="M18.5,9 L11.5,16 L18.5,23.0445"
+        android:valueTo="M11,8 L3,15.8707 L11,24"
+        android:valueType="pathType"
+        android:propertyName="pathData"/>
+    <objectAnimator
+        android:duration="300"
+        android:repeatCount="0"
+        android:repeatMode="restart"
+        android:valueFrom="@color/aos_const_text_inverse2"
+        android:valueTo="@color/aos_text_primary"
+        android:valueType="colorType"
+        android:propertyName="strokeColor"/>
+</set>

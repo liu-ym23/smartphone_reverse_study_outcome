@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/onboarding_small_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larus.common_ui.widget.CircleSimpleDraweeView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/onboarding"
+        android:visibility="visible"
+        android:layout_width="?attr/larus_dp_64"
+        android:layout_height="?attr/larus_dp_64"
+        android:src="@drawable/larus_common_ui_avatar_placeholder"
+        app:placeholderImage="@drawable/larus_common_ui_avatar_placeholder"
+        app:placeholderImageScaleType="centerCrop"/>
+    <TextView
+        android:textSize="17dp"
+        android:textColor="?attr/larus_neutral_50"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/onboarding_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_16"
+        android:layout_marginStart="?attr/larus_dp_10"
+        android:layout_marginEnd="?attr/larus_dp_10"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_127"/>
+</LinearLayout>

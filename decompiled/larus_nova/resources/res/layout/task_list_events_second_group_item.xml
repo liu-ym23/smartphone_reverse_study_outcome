@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:anndroid="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    anndroid:background="@color/bg_base">
+    <View
+        android:background="@color/line_divider_default"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        anndroid:layout_constraintBottom_toBottomOf="parent"
+        anndroid:layout_constraintTop_toTopOf="parent"/>
+    <com.larksuite.component.universe_design.button.UDButton
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_caption"
+        android:ellipsize="middle"
+        android:id="@+id/task_event_second_group_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_8"
+        anndroid:layout_constraintBottom_toBottomOf="parent"
+        anndroid:layout_constraintStart_toStartOf="parent"
+        anndroid:layout_constraintTop_toTopOf="parent"
+        anndroid:layout_constraintWidth_percent="0.7"
+        anndroid:ud_backgroundColor="@color/task_event_second_ground_ud_button"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

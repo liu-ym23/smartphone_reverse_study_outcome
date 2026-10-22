@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/responsive_root_view_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.lark.forseti.widget.ForsetiStackChainBackgroundView
+        android:id="@+id/stack_chain_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.ss.android.lark.forseti.widget.ForsetiStackChainViewGroup
+        android:id="@+id/stack_chain_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.ForsetiStackChainBottomSheetBehaviorV2"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

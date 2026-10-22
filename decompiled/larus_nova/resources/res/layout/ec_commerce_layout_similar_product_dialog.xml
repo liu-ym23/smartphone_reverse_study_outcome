@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_commerce_layout_similar_product_dialog_1891776562"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/touch_outside"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:soundEffectsEnabled="false"
+            android:importantForAccessibility="no"/>
+        <com.bytedance.android.shopping.anchorv3.compat.CompatFrameLayout
+            android:layout_gravity="top|center_horizontal"
+            android:id="@+id/commerce_design_bottom_sheet"
+            android:background="@drawable/ec_commerce_similar_product_bottom_sheet_behavior_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.bytedance.android.shopping.anchorv3.compat.ToggleBottomSheetBehavior"
+            style="?attr/bottomSheetStyle"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

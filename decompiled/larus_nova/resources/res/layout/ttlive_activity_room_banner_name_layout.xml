@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="9sp"
+    android:gravity="center"
+    android:layout_gravity="right"
+    android:id="@+id/activity_indicator_banner_name_tv"
+    android:visibility="gone"
+    android:layout_width="13dp"
+    android:layout_height="@dimen/ttlive_room_top_right_banner_height"
+    android:ems="1"/>

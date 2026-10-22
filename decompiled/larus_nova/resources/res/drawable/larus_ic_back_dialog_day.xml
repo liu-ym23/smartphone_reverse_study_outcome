@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@color/larus_neutral_transparent_1_day"
+        android:pathData="M15,15m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"/>
+    <path
+        android:fillColor="@color/larus_neutral_100_day"
+        android:pathData="M16.311,9.617C15.916,9.216 15.269,9.21 14.868,9.606L10.201,14.197C10.008,14.387 9.898,14.646 9.896,14.916C9.894,15.187 9.999,15.448 10.189,15.641L14.856,20.383C15.251,20.785 15.898,20.79 16.299,20.394C16.701,19.999 16.706,19.353 16.311,18.951L12.361,14.936L16.299,11.061C16.701,10.666 16.707,10.019 16.311,9.617Z"
+        android:strokeAlpha="0.5"
+        android:fillAlpha="0.5"
+        android:fillType="evenOdd"/>
+</vector>

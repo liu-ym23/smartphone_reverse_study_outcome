@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/root_view"
+        android:background="@drawable/o_bg_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/o_popup_toast_layout">
+        <com.obric.oui.text.OBaseTextView
+            android:textSize="14dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="加载中"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@+id/close_btn"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/root_view"
+        android:layout_alignEnd="@+id/root_view">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/ic_s_s_xmark_outlined_12"
+            app:tint="@color/ConstTextInverse5"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/midi_feed_back_container"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="26dp"
+    app:layout_constraintBottom_toBottomOf="@+id/ktv_float_ball_placeholder"
+    app:layout_constraintEnd_toStartOf="@+id/ktv_float_ball_placeholder"
+    app:layout_constraintHorizontal_bias="1"
+    app:layout_constraintRight_toLeftOf="@+id/ktv_float_ball_placeholder"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/ktv_float_ball_placeholder">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/feed_back_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/feed_back_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:layout_marginStart="2dp"/>
+</LinearLayout>

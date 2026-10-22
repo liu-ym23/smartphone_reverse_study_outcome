@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="11sp"
+    android:textColor="#80000000"
+    android:gravity="center"
+    android:id="@+id/tag_item_tv"
+    android:background="@drawable/ttlive_bg_f5f6f7_radius_4"
+    android:paddingLeft="4dp"
+    android:paddingTop="2dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="2dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="4dp"
+    android:layout_marginEnd="4dp"/>

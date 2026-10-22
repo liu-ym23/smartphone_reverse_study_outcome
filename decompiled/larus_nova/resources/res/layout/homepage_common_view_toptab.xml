@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homepage_common_view_toptab_643838314"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_toptab_title"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/homepage_common_main_tab_strip_style"/>
+    <ViewStub
+        android:id="@+id/view_stub_toptab_badge"
+        android:visibility="invisible"
+        android:layout="@layout/homepage_common_stub_toptab_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_toptab_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_toptab_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_toptab_title"/>
+    <View
+        android:id="@+id/view_stub_toptab_badge_stub"
+        android:visibility="invisible"
+        android:layout_width="28dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_toptab_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_toptab_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_toptab_title"/>
+</merge>

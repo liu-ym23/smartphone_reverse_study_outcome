@@ -1,0 +1,53 @@
+package com.obric.sva.sdk.utils;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes34.dex */
+@Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b#\n\u0002\u0010\b\n\u0002\b\u0002\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u000e\u0010\u0004\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010 \u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010'\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010(\u001a\u00020)X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010*\u001a\u00020)X\u0086T¢\u0006\u0002\n\u0000¨\u0006+"}, d2 = {"Lcom/obric/sva/sdk/utils/TrackerConstant;", "", "<init>", "()V", "TRACKER_EVENT_WAKEUP_STAGE1_DURATION", "", "TRACKER_EVENT_WAKEUP_ADSP_REPORT_DURATION", "TRACKER_EVENT_WAKEUP_NATIVE_PROCESS_DURATION", "TRACKER_EVENT_WAKEUP_STAGE2_DURATION", "TRACKER_EVENT_WAKEUP_STAGE2_0_INIT_TIME", "TRACKER_EVENT_WAKEUP_STAGE2_1_ON_RECOGNITION", "TRACKER_EVENT_WAKEUP_STAGE2_2_PROCESS_EVENT", "TRACKER_EVENT_WAKEUP_STAGE2_3_BEFORE_PARSE_OPAQUE_DATA", "TRACKER_EVENT_WAKEUP_STAGE2_4_AFTER_PARSE_OPAQUE_DATA", "TRACKER_EVENT_WAKEUP_STAGE2_5_LAB_DO_BACK_GROUND", "TRACKER_EVENT_WAKEUP_STAGE2_6_LAB_START_PROCESS", "TRACKER_EVENT_WAKEUP_STAGE2_7_LAB_START_RECORDING", "TRACKER_EVENT_WAKEUP_STAGE2_8_LAB_START_READING_HISTORY_BUFFER", "TRACKER_EVENT_WAKEUP_STAGE2_9_LAB_AFTER_READING_HISTORY_BUFFER", "TRACKER_EVENT_WAKEUP_STAGE2_10_LAB_START_CALCULATE_SCORE", "TRACKER_EVENT_WAKEUP_STAGE2_11_LAB_AFTER_CALCULATE_SCORE", "TRACKER_EVENT_WAKEUP_STAGE2_8_LAB_START_READING_ADDITIONAL_HISTORY_BUFFER_X", "TRACKER_EVENT_WAKEUP_STAGE2_9_LAB_AFTER_READING_ADDITIONAL_HISTORY_BUFFER_X", "TRACKER_EVENT_WAKEUP_STAGE2_10_LAB_START_CALCULATE_SCORE_ADDITIONAL_X", "TRACKER_EVENT_WAKEUP_STAGE2_11_LAB_AFTER_CALCULATE_SCORE_ADDITIONAL_X", "TRACKER_EVENT_WAKEUP_STAGE2_12_LAB_PULL_UP", "TRACKER_EVENT_WAKEUP_STAGE2_13_LAB_MISC", "TRACKER_EVENT_WAKEUP_STAGE2_14_SUSPECT_WAKEUP", "TRACKER_INTERNAL_RAW_START_TIME", "TRACKER_INTERNAL_STAGE2_RAW_START_TIME", "TRACKER_WAKEUP_INTERRUPTED_STAGE2", "TRACKER_EVENT_WAKEUP_STAGE2_SCREEN_STATE", "TRACKER_INTERNAL_STAGE2_RAW_END_TIME", "TRACKER_INTERNAL_RAW_STOP_TIME", "TRACKER_EVENT_ONESHOT_PARAMS", "TRACKER_EVENT_ONESHOT_WAKEUP_WORDS", "TRACKER_EVENT_ONESHOT_OFFSET_TIME", "TRACKER_EVENT_ONESHOT_SESSION_ID", "KEY_WAKEUP_MSG", "KEY_UNIQUE_WAKEUP_ID", "SCREEN_ON", "", "SCREEN_OFF", "libs_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class TrackerConstant {
+    public static final TrackerConstant INSTANCE = null;
+    public static final String KEY_UNIQUE_WAKEUP_ID = "unique_wakeup_id";
+    public static final String KEY_WAKEUP_MSG = "error_message";
+    public static final int SCREEN_OFF = 2;
+    public static final int SCREEN_ON = 1;
+    public static final String TRACKER_EVENT_ONESHOT_OFFSET_TIME = "oneshot_offset";
+    public static final String TRACKER_EVENT_ONESHOT_PARAMS = "oneshot_params";
+    public static final String TRACKER_EVENT_ONESHOT_SESSION_ID = "oneshot_session_id";
+    public static final String TRACKER_EVENT_ONESHOT_WAKEUP_WORDS = "oneshot_words";
+    public static final String TRACKER_EVENT_WAKEUP_ADSP_REPORT_DURATION = "wakeup_adsp_report_duration";
+    public static final String TRACKER_EVENT_WAKEUP_NATIVE_PROCESS_DURATION = "wakeup_native_process_duration";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE1_DURATION = "wakeup_stage1_duration";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_0_INIT_TIME = "wakeup_stage2_0_init_time";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_10_LAB_START_CALCULATE_SCORE = "wakeup_stage2_10_lab_start_calculate_score";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_10_LAB_START_CALCULATE_SCORE_ADDITIONAL_X = "wakeup_stage2_10_lab_start_calculate_score_additional_";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_11_LAB_AFTER_CALCULATE_SCORE = "wakeup_stage2_11_lab_after_calculate_score";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_11_LAB_AFTER_CALCULATE_SCORE_ADDITIONAL_X = "wakeup_stage2_11_lab_start_calculate_score_additional_";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_12_LAB_PULL_UP = "wakeup_stage2_12_lab_pull_up";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_13_LAB_MISC = "wakeup_stage2_13_lab_misc";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_14_SUSPECT_WAKEUP = "wakeup_stage2_14_suspect_wakeup";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_1_ON_RECOGNITION = "wakeup_stage2_1_on_recognition";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_2_PROCESS_EVENT = "wakeup_stage2_2_process_event";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_3_BEFORE_PARSE_OPAQUE_DATA = "wakeup_stage2_3_before_parse_opaque_data";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_4_AFTER_PARSE_OPAQUE_DATA = "wakeup_stage2_4_after_parse_opaque_data";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_5_LAB_DO_BACK_GROUND = "wakeup_stage2_5_lab_do_back_ground";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_6_LAB_START_PROCESS = "wakeup_stage2_6_lab_start_process";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_7_LAB_START_RECORDING = "wakeup_stage2_7_lab_start_recording";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_8_LAB_START_READING_ADDITIONAL_HISTORY_BUFFER_X = "wakeup_stage2_8_lab_start_reading_additional_history_buffer_";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_8_LAB_START_READING_HISTORY_BUFFER = "wakeup_stage2_8_lab_start_reading_history_buffer";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_9_LAB_AFTER_READING_ADDITIONAL_HISTORY_BUFFER_X = "wakeup_stage2_9_lab_after_reading_additional_history_buffer_";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_9_LAB_AFTER_READING_HISTORY_BUFFER = "wakeup_stage2_9_lab_after_reading_history_buffer";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_DURATION = "wakeup_stage2_duration";
+    public static final String TRACKER_EVENT_WAKEUP_STAGE2_SCREEN_STATE = "wakeup_stage2_screen_state";
+    public static final String TRACKER_INTERNAL_RAW_START_TIME = "raw_start_time";
+    public static final String TRACKER_INTERNAL_RAW_STOP_TIME = "raw_stop_time";
+    public static final String TRACKER_INTERNAL_STAGE2_RAW_END_TIME = "stage2_raw_end_time";
+    public static final String TRACKER_INTERNAL_STAGE2_RAW_START_TIME = "stage2_raw_start_time";
+    public static final String TRACKER_WAKEUP_INTERRUPTED_STAGE2 = "wakeup_flow_interrupted";
+
+    static {
+        INSTANCE = new TrackerConstant();
+    }
+
+    private TrackerConstant() {
+    }
+}

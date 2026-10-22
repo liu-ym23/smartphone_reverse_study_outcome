@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_admin_record_anchor_preview"
+    android:layout_width="match_parent"
+    android:layout_height="305dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/back"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ttlive_ic_live_room_manage_back"
+            android:contentDescription="@string/ttlive_label_back"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@color/ttlive_white_70"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:text="@string/ttlive_media_intro_example_title"/>
+    </FrameLayout>
+    <include layout="@layout/ttlive_item_horizon_divider"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#7fffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/ttlive_media_intro_example_sub_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/ttlive_media_intro_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+</LinearLayout>

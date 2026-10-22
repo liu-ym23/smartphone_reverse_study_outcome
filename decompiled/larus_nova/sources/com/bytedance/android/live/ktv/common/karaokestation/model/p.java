@@ -1,0 +1,27 @@
+package com.bytedance.android.live.ktv.common.karaokestation.model;
+
+import com.bytedance.android.live.liveinteract.api.fulllink.LinkMonitorData;
+import io.reactivex.functions.Consumer;
+import kotlin.jvm.functions.Function1;
+
+/* JADX INFO: loaded from: classes45.dex */
+public final class p<T> implements Consumer {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ long f69543a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public final /* synthetic */ Function1 f69544b;
+
+    public p(long r100, Function1 r101) {
+        this.f69543a = r100;
+        this.f69544b = r101;
+    }
+
+    @Override // io.reactivex.functions.Consumer
+    public final void accept(Object r100) {
+        com.bytedance.android.live.network.response.a r101 = (com.bytedance.android.live.network.response.a) r100;
+        mb0.d.b(LinkMonitorData.ApiPinSong, System.currentTimeMillis() - this.f69543a, r101.logId);
+        this.f69544b.invoke(r101);
+    }
+}

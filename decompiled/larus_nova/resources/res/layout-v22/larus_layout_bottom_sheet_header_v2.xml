@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="?attr/larus_dp_16"
+    android:paddingTop="?attr/larus_dp_8"
+    android:paddingRight="?attr/larus_dp_16"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_56"
+    android:paddingHorizontal="?attr/larus_dp_16">
+    <View
+        android:id="@+id/bottom_sheet_handle"
+        android:background="?attr/larus_bg_sheet_handle"
+        android:layout_width="?attr/larus_dp_36"
+        android:layout_height="?attr/larus_dp_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bottom_sheet_close"
+        android:layout_width="?attr/larus_dp_36"
+        android:layout_height="?attr/larus_dp_36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/larus_icon_dialog_close_v3"/>
+    <TextView
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="?attr/larus_neutral_100"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/bottom_sheet_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:maxLines="1"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="?attr/larus_dp_8"
+        android:layout_marginEnd="?attr/larus_dp_44"
+        android:textFontWeight="500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottom_sheet_close"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

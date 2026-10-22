@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?attr/larus_dp_5"
+    android:paddingStart="?attr/larus_dp_5"
+    android:paddingEnd="?attr/larus_dp_10">
+    <androidx.appcompat.widget.SwitchCompat
+        android:textSize="?attr/larus_sp_16"
+        android:id="@+id/entrance_switch"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_50"/>
+</LinearLayout>

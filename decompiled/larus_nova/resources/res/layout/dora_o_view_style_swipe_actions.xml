@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="?attr/larus_dp_8"
+    android:paddingEnd="?attr/larus_dp_8">
+    <ImageView
+        android:id="@+id/style_swipe_edit"
+        android:background="@drawable/dora_o_bg_style_swipe_button"
+        android:padding="?attr/larus_dp_9"
+        android:layout_width="?attr/larus_dp_40"
+        android:layout_height="?attr/larus_dp_40"
+        android:src="@drawable/dora_o_ic_memory_swipe_edit"
+        android:contentDescription="@string/larus_dora_ai_active_task_action_edit_cn"/>
+    <ImageView
+        android:id="@+id/style_swipe_delete"
+        android:background="@drawable/dora_o_bg_style_swipe_button"
+        android:padding="?attr/larus_dp_9"
+        android:layout_width="?attr/larus_dp_40"
+        android:layout_height="?attr/larus_dp_40"
+        android:src="@drawable/dora_o_ic_memory_swipe_delete"
+        android:contentDescription="@string/larus_dora_ai_active_task_action_delete_cn"
+        android:layout_marginStart="?attr/larus_dp_8"/>
+</LinearLayout>

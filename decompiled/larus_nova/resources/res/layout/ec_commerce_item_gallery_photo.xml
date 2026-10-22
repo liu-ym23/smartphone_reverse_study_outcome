@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ec_commerce_item_gallery_photo_705114568"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.ui.ec.widget.photodraweeview.transition.TransitionPhotoDraweeView
+        android:id="@+id/photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.ec.core.widget.ECStatusView
+        android:layout_gravity="center"
+        android:id="@+id/ec_status_view"
+        android:layout_width="36dp"
+        android:layout_height="36dp"/>
+</FrameLayout>

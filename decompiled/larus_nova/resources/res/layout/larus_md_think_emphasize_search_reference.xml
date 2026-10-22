@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.bmhome.chat.layout.widget.AtMostHeightLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_think_search_reference"
+    android:background="?attr/larus_bg_markdown_emphasize_reference_radius_8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.larus.bmhome.chat.markdown.view.DeepThinkCommonToolHeader
+        android:id="@+id/common_tool_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/search_key_words"
+        android:paddingTop="?attr/larus_dp_4"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_10"
+        android:layout_marginEnd="?attr/larus_dp_10"/>
+    <com.larus.bmhome.chat.layout.widget.AtMostHeightRecyclerView
+        android:id="@+id/search_reference_list"
+        android:paddingTop="?attr/larus_dp_7"
+        android:paddingBottom="?attr/larus_dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_12"
+        android:layout_marginEnd="?attr/larus_dp_12"/>
+</com.larus.bmhome.chat.layout.widget.AtMostHeightLinearLayout>

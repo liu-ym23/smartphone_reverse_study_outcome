@@ -1,0 +1,47 @@
+package com.bytedance.android.ec.core.hybrid.bridges;
+
+import com.bytedance.android.ec.host.api.hybrid.ECBaseBridgeMethod;
+import com.ss.android.cert.manager.constants.BytedCertConstant;
+import java.lang.ref.WeakReference;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes43.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0001\u0004B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0005"}, d2 = {"Lcom/bytedance/android/ec/core/hybrid/bridges/ECMallBackViewAnimMethod;", "Lcom/bytedance/android/ec/host/api/hybrid/ECBaseBridgeMethod;", "<init>", "()V", BytedCertConstant.ReflectionConfigKey.COLOR_ARRAY, "ec-core_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class ECMallBackViewAnimMethod extends ECBaseBridgeMethod {
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static WeakReference<Function1<Boolean, Unit>> f44116e;
+
+    public static final class a {
+    }
+
+    static {
+    }
+
+    @Override // com.bytedance.android.ec.model.hybrid.IECBridgeMethod
+    public final String getName() {
+        return "ec.mallBackViewAnim";
+    }
+
+    public ECMallBackViewAnimMethod() {
+    }
+
+    @Override // com.bytedance.android.ec.host.api.hybrid.ECBaseBridgeMethod
+    public final void c(JSONObject r100, ECBaseBridgeMethod.a r101) {
+        Intrinsics.checkNotNullParameter(r100, "params");
+        Intrinsics.checkNotNullParameter(r101, "iReturn");
+        boolean r102 = r100.optBoolean("isExpand", false);
+        WeakReference<Function1<Boolean, Unit>> r103 = f44116e;
+        if (r103 == null) goto L8;
+        Function1<Boolean, Unit> r104 = r103.get();
+        if (r104 == null) goto L9;
+        Unit r105 = r104.invoke(Boolean.valueOf(r102));
+        return;
+    L9:
+        return;
+    }
+}

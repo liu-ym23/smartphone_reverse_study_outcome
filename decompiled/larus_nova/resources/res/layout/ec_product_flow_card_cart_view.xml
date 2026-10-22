@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/commerce_product_feed_card_cart_container"
+    android:background="@drawable/ec_product_flow_cart_cart_bg"
+    android:layout_width="50dp"
+    android:layout_height="40dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/commerce_product_feed_card_cart_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/commerce_inflow_card_cart"/>
+</FrameLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.larus.bmhome.view.item.ItemTextArrow
+        android:id="@+id/obric_contact_permission_item"
+        android:background="@drawable/larus_bg_item_selector_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.larus.bmhome.view.item.ItemTextArrow
+        android:id="@+id/obric_call_log_permission_item"
+        android:background="@drawable/larus_bg_item_selector_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.larus.bmhome.view.item.ItemTextArrow
+        android:id="@+id/obric_sms_permission_item"
+        android:background="@drawable/larus_bg_item_selector_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.larus.bmhome.view.item.ItemTextArrow
+        android:id="@+id/obric_calendar_permission_item"
+        android:background="@drawable/larus_bg_item_selector_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</merge>

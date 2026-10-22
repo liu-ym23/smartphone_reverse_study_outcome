@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/creation_detail_header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larus.community.impl.detail.image.CreationDetailImageView
+        android:id="@+id/creation_detail_image_view"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.larus.community.impl.detail.video.CreationDetailVideoView
+        android:id="@+id/creation_detail_video_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.larus.community.impl.detail.prompt.CreationDetailPromptView
+        android:id="@+id/creation_detail_prompt_view"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingTop="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="?attr/larus_sp_15"
+        android:textColor="@color/larus_neutral_100"
+        android:id="@+id/more_products_title"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingTop="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:paddingBottom="?attr/larus_dp_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_creation_detail_label_more_creations"
+        android:fontFamily="sans-serif-medium"/>
+</LinearLayout>

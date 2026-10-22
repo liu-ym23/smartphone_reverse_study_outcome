@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="0dp"
+    android:layout_height="?attr/larus_dp_56"
+    app:layout_constraintBottom_toBottomOf="@+id/fl_audio_visualizer"
+    app:layout_constraintEnd_toEndOf="@+id/fl_audio_visualizer"
+    app:layout_constraintStart_toStartOf="@+id/fl_audio_visualizer">
+    <FrameLayout
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/hands_free_left_cluster"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="?attr/larus_dp_56"
+        android:layout_height="?attr/larus_dp_56"
+        android:layout_marginStart="?attr/larus_dp_40">
+        <ImageView
+            android:id="@+id/functionBg"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/handsFreeFunction"
+            android:background="@drawable/larus_ic_hands_free_unlock_v1"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/hands_free_send_bg"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_56"
+        android:layout_height="?attr/larus_dp_56"
+        android:layout_marginEnd="?attr/larus_dp_40">
+        <ImageView
+            android:id="@+id/hands_free_send"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/larus_ic_handsfree_send"/>
+    </FrameLayout>
+</FrameLayout>

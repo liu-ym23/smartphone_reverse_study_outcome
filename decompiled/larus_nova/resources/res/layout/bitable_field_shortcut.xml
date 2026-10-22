@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="start|center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/fieldShortcutContainer"
+    android:background="@drawable/bitable_field_shortcut_bg"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:visibility="gone"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <com.larksuite.component.ui.imageview.LKUIRoundedImageView2
+        android:id="@+id/shortcutLogo"
+        android:background="@color/bitable_field_shortcut_icon_bg"
+        android:layout_width="@dimen/space_kit_len_20"
+        android:layout_height="@dimen/space_kit_len_20"
+        app:radius="@dimen/space_kit_len_4"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:id="@+id/shortcutName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="12dp"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/primary_pri_600"
+        android:id="@+id/shortcutTag"
+        android:background="@drawable/bitable_field_shortcut_tag_bg"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Bitable_ShortcutCenter_Shortcut_Tag_Mob"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:layout_marginStart="12dp"/>
+</LinearLayout>

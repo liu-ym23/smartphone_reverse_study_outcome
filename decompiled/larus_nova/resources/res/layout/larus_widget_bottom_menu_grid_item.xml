@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/layout_menu_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_columnWeight="1">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/layout_menu_item_icon_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_6"
+        android:layout_marginStart="?attr/larus_dp_6"
+        android:layout_marginEnd="?attr/larus_dp_6">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/layout_menu_item_icon"
+            android:background="?attr/larus_bg_bottom_menu_background"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/larus_dp_80"
+            android:layout_marginBottom="?attr/larus_dp_8"
+            android:scaleType="centerInside"
+            app:srcCompat="?attr/larus_icon_chat_bottom_menu_camera"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="?attr/larus_dp_13"
+            android:textColor="?attr/larus_neutral_70"
+            android:gravity="center_vertical"
+            android:id="@+id/layout_menu_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/larus_dp_17"
+            android:text="@string/larus_camera"/>
+    </LinearLayout>
+</LinearLayout>

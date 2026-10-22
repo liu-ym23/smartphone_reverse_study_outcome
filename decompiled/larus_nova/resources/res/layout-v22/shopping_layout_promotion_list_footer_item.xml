@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.livecommerce.promotionlist.base.LivePromotionListFooterView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_space">
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/tv_footer_load_error"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/shopping_fail_and_please_retry"/>
+        <com.bytedance.android.ec.core.widget.LoadMoreStatusView
+            android:layout_gravity="center"
+            android:id="@+id/sv_footer_loading"
+            android:visibility="gone"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginVertical="18dp"/>
+        <include
+            android:id="@+id/fv_footer_view"
+            android:visibility="gone"
+            layout="@layout/ec_item_iron_footer"/>
+    </FrameLayout>
+    <Space
+        android:id="@+id/bottom_space"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</com.bytedance.android.livesdk.livecommerce.promotionlist.base.LivePromotionListFooterView>

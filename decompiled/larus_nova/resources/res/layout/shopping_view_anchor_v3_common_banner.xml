@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/anchor_v3_common_banner_box"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/anchor_v3_common_banner_icon"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layoutMode="self_adjust_3X"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/anchor_v3_banner_items_layout"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@color/shopping_color_35AAFF"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/anchor_v3_common_banner_description"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:includeFontPadding="false"
+        android:layout_weight="1"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/anchor_v3_common_arrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ec_commerce_product_banner_arrow"
+        android:alpha="0.6"/>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ec_no_promotion_host"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@color/ec_color_black_161823_50"
+            android:id="@+id/tv_no_promotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/ec_no_promotion_in_live"
+            android:maxLines="1"/>
+        <com.bytedance.android.ui.ec.widget.button.ECButton
+            android:id="@+id/tv_add_promotion"
+            android:layout_width="165dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/ec_add_promotion"
+            android:maxLines="1"
+            style="@style/ECButton.Rectangle.Primary.Large"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

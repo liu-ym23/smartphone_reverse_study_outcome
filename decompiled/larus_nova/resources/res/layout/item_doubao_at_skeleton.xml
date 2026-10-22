@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+    <View
+        android:id="@+id/skeleton_avatar"
+        android:background="@drawable/bg_skeleton_circle"
+        android:layout_width="32dp"
+        android:layout_height="32dp"/>
+    <View
+        android:id="@+id/skeleton_text"
+        android:background="@drawable/bg_skeleton_rect"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"/>
+</LinearLayout>

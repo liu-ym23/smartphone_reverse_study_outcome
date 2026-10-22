@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_recharge_rebate_toast"
+    android:paddingLeft="21dp"
+    android:paddingTop="11dp"
+    android:paddingRight="21dp"
+    android:paddingBottom="11dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="21dp"
+    android:paddingEnd="21dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_pay_success"/>
+    <TextView
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/recharge_rebate_amount"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#ffffff"
+        android:id="@+id/recharge_rebate_hint"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"/>
+</LinearLayout>

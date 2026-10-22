@@ -1,0 +1,10 @@
+package com.mammon.audiosdk.structures;
+
+/* JADX INFO: loaded from: classes32.dex */
+public class SpeechFingerprintDumpAudioDataParameter {
+    public String outputDir;
+    public String uid;
+
+    public SpeechFingerprintDumpAudioDataParameter() {
+    }
+}

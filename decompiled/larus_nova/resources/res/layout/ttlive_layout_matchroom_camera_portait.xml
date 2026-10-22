@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.vscore_impl.component.multicamera.linkedroom.ui.MultiCameraLinkerRoomTagView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/match_room_muticamera_widget"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="100dp"
+    android:layout_height="38dp"/>

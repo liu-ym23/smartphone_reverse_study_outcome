@@ -1,0 +1,50 @@
+package com.bytedance.android.live.profit.fansclub;
+
+import com.ss.android.cert.manager.constants.BytedCertConstant;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes47.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\b\n\u0002\b\n\b\u0086\u0001\u0018\u0000 \u00072\b\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\bR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006j\u0002\b\tj\u0002\b\nj\u0002\b\u000b¨\u0006\f"}, d2 = {"Lcom/bytedance/android/live/profit/fansclub/FansClubUserStatus;", "", "", "value", "I", "getValue", "()I", "Companion", BytedCertConstant.ReflectionConfigKey.COLOR_ARRAY, "Unknown", "Active", "Inactive", "revenue-api_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final enum FansClubUserStatus extends Enum<FansClubUserStatus> {
+    public static final FansClubUserStatus Active = null;
+    public static final a Companion = null;
+    public static final FansClubUserStatus Inactive = null;
+    public static final FansClubUserStatus Unknown = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ FansClubUserStatus[] f87272a = null;
+    private final int value;
+
+    public static final class a {
+        public a() {
+        }
+    }
+
+    static {
+        FansClubUserStatus r100 = new FansClubUserStatus("Unknown", 0, 0);
+        Unknown = r100;
+        FansClubUserStatus r101 = new FansClubUserStatus("Active", 1, 1);
+        Active = r101;
+        FansClubUserStatus r102 = new FansClubUserStatus("Inactive", 2, 2);
+        Inactive = r102;
+        f87272a = new FansClubUserStatus[]{r100, r101, r102};
+        Companion = new a();
+    }
+
+    public static FansClubUserStatus valueOf(String r100) {
+        return (FansClubUserStatus) r27.a.a(FansClubUserStatus.class, r100);
+    }
+
+    public static FansClubUserStatus[] values() {
+        return (FansClubUserStatus[]) f87272a.clone();
+    }
+
+    public final int getValue() {
+        return this.value;
+    }
+
+    public FansClubUserStatus(String r100, int r101, int r102) {
+        super(r100, r101);
+        this.value = r102;
+    }
+}

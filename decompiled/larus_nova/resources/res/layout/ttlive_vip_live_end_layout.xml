@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.chatroom.end.vip.view.CountDownProgressView
+        android:id="@+id/count_down_view"
+        android:visibility="gone"
+        android:layout_width="108dp"
+        android:layout_height="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/open_vip_button"
+        android:background="@drawable/ttlive_open_vip_btn_bg"
+        android:visibility="gone"
+        android:layout_width="106dp"
+        android:layout_height="32dp"
+        android:text="@string/ttlive_vip_join_text"
+        app:layout_constraintEnd_toEndOf="@+id/count_down_view"
+        app:layout_constraintStart_toStartOf="@+id/count_down_view"
+        app:layout_constraintTop_toBottomOf="@+id/count_down_view"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="#80ffffff"
+        android:id="@+id/vip_main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open_vip_button"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="#80ffffff"
+        android:id="@+id/vip_sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vip_main_text"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

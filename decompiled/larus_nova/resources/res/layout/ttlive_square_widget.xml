@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/square_message_view"
+        android:fadingEdgeLength="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:requiresFadingEdge="vertical"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/square_hint_container"
+        android:background="@drawable/ttlive_bg_square_message_hint"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true">
+        <com.bytedance.android.livesdk.chatroom.ui.NoMoreSpaceTextView
+            android:textSize="13dp"
+            android:textColor="@color/ttlive_message_counts_color"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/hint_text"
+            android:paddingRight="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:paddingEnd="6dp"
+            android:layout_marginStart="6dp"/>
+    </LinearLayout>
+</RelativeLayout>

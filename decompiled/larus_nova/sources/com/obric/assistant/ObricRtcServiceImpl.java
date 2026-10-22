@@ -1,0 +1,22 @@
+package com.obric.assistant;
+
+import com.obric.assistant.realtimecall.plugin.RealtimeCallAssistStatePlugin;
+import com.obric.assistant.spi.rtc.IObricRtcService;
+import com.ss.android.lark.utils.statistics.PerfLog;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes32.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0010\u0000\n\u0002\b\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0018\u0010\u0004\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u00052\u0006\u0010\u0007\u001a\u00020\u0006H\u0016¨\u0006\b"}, d2 = {"Lcom/obric/assistant/ObricRtcServiceImpl;", "Lcom/obric/assistant/spi/rtc/IObricRtcService;", "<init>", "()V", "collectRealtimeCallServicePlugins", "", "", PerfLog.PARAM_KEY_CONTEXT_ID, "base_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class ObricRtcServiceImpl implements IObricRtcService {
+    public ObricRtcServiceImpl() {
+    }
+
+    @Override // com.obric.assistant.spi.rtc.IObricRtcService
+    public final List<Object> a(Object r100) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        return CollectionsKt.listOf(new RealtimeCallAssistStatePlugin((com.larus.audio.call.arch.c) r100));
+    }
+}

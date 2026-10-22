@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.deepfeed.ui.view.AdapterScreenSimpleDraweeView
+        android:id="@+id/display_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="13dp"
+        app:customBg="#E1E4E8"
+        app:customRadius="8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/display_image_dance_image"
+        android:visibility="gone"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toBottomOf="@+id/display_image"
+        app:layout_constraintEnd_toEndOf="@+id/display_image"
+        app:layout_constraintStart_toStartOf="@+id/display_image"
+        app:layout_constraintTop_toTopOf="@+id/display_image"/>
+    <com.bytedance.android.shopping.deepfeed.weights.DeepFeedProductTitleView
+        android:id="@+id/infeed_product_title_view"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        app:layout_constraintLeft_toRightOf="@+id/display_image"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <com.bytedance.android.shopping.deepfeed.weights.DeepFeedProductInfoExtraView
+        android:id="@+id/infeed_product_info_extra_view"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/display_image"
+        app:layout_constraintRight_toRightOf="parent"/>
+</merge>

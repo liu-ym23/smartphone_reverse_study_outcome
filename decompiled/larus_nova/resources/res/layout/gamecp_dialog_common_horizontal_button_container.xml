@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="end"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="24dp"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <LinearLayout
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:id="@+id/live_dialog_container"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.bytedance.android.gamecp.common.ui.FitButton
+            android:id="@+id/live_dialog_btn_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/gamecp_live_dialog_horizontal_button2"/>
+        <com.bytedance.android.gamecp.common.ui.FitButton
+            android:id="@+id/live_dialog_btn_1"
+            android:layout_width="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="1dp"
+            style="@style/gamecp_live_dialog_horizontal_button1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+</FrameLayout>

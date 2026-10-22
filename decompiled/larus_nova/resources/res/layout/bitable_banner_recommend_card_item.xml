@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.shadow.ShadowLinearLayout
+        android:id="@+id/card_layout"
+        android:background="@color/bg_float"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        app:radius="8dp"
+        app:shadowAlpha="0.5"
+        app:shadowElevation="2dp">
+        <ImageView
+            android:id="@+id/card_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+    </com.bytedance.ee.bear.shadow.ShadowLinearLayout>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:id="@+id/card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="3"/>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.visibilityproxy.FrameLayoutVisibilityProxy xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_top_right_content_fl"
+    android:layout_width="@dimen/ttlive_multi_top_right_banner_width"
+    android:layout_height="@dimen/ttlive_room_top_right_banner_height">
+    <com.bytedance.android.livesdk.chatroom.ui.ProhibitDoubleMeasureBannerFrameLayout
+        android:id="@+id/activity_top_right_banner_widget_container"
+        android:layout_width="@dimen/ttlive_multi_top_right_banner_width"
+        android:layout_height="@dimen/ttlive_room_top_right_banner_height">
+        <com.bytedance.android.livesdk.chatroom.view.LiveBannerNameView
+            android:textSize="9dp"
+            android:gravity="center"
+            android:id="@+id/activity_indicator_banner_name_tv"
+            android:visibility="gone"
+            android:layout_width="13dp"
+            android:layout_height="@dimen/ttlive_room_top_right_banner_height"
+            android:ems="1"
+            android:layout_marginStart="10dp"/>
+    </com.bytedance.android.livesdk.chatroom.ui.ProhibitDoubleMeasureBannerFrameLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/top_right_activity_vp2"
+        android:visibility="gone"
+        android:layout_width="@dimen/ttlive_multi_top_right_banner_width"
+        android:layout_height="36dp"/>
+</com.bytedance.android.livesdk.visibilityproxy.FrameLayoutVisibilityProxy>

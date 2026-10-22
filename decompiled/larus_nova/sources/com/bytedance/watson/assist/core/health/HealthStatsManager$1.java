@@ -1,0 +1,88 @@
+package com.bytedance.watson.assist.core.health;
+
+import com.byted.cast.common.CommonOptionConstants;
+import com.byted.cast.mediacommon.MediaCaptureError;
+import com.ss.ttvideoengine.TTVideoEngineInterface;
+import java.util.HashMap;
+
+/* JADX INFO: loaded from: classes22.dex */
+final class HealthStatsManager$1 extends HashMap<Integer, String> {
+    public HealthStatsManager$1() {
+        put(40002, "MEASUREMENTS_WAKEUP_ALARMS_COUNT");
+        put(40001, "STATS_SERVICES");
+        put(20001, "MEASUREMENT_WAKE_NESTING_COUNT");
+        put(20003, "MEASUREMENT_WAKE_START_MS");
+        put(20002, "MEASUREMENT_WAKE_SUM_MS");
+        put(30005, "MEASUREMENT_ANR_COUNT");
+        put(30004, "MEASUREMENT_CRASHES_COUNT");
+        put(Integer.valueOf(MediaCaptureError.ERROR_CAST_CONNECTION_NOT_BUILT), "MEASUREMENT_FOREGROUND_MS");
+        put(30003, "MEASUREMENT_STARTS_COUNT");
+        put(30002, "MEASUREMENT_SYSTEM_TIME_MS");
+        put(30001, "MEASUREMENT_USER_TIME_MS");
+        put(Integer.valueOf(TTVideoEngineInterface.ALGO_OPTION_INT_STOP_TASK_END_PLAY), "MEASUREMENT_LAUNCH_COUNT");
+        put(Integer.valueOf(TTVideoEngineInterface.ALGO_OPTION_INT_STOP_BACKGROUND), "MEASUREMENT_START_SERVICE_COUNT");
+        put(10020, "MEASUREMENT_BLUETOOTH_IDLE_MS");
+        put(10023, "MEASUREMENT_BLUETOOTH_POWER_MAMS");
+        put(10052, "MEASUREMENT_BLUETOOTH_RX_BYTES");
+        put(10021, "MEASUREMENT_BLUETOOTH_RX_MS");
+        put(10058, "MEASUREMENT_BLUETOOTH_RX_PACKETS");
+        put(10053, "MEASUREMENT_BLUETOOTH_TX_BYTES");
+        put(10022, "MEASUREMENT_BLUETOOTH_TX_MS");
+        put(10059, "MEASUREMENT_BLUETOOTH_TX_PACKETS");
+        put(10046, "MEASUREMENT_BUTTON_USER_ACTIVITY_COUNT");
+        put(10064, "MEASUREMENT_CPU_POWER_MAMS");
+        put(10024, "MEASUREMENT_MOBILE_IDLE_MS");
+        put(10027, "MEASUREMENT_MOBILE_POWER_MAMS");
+        put(10048, "MEASUREMENT_MOBILE_RX_BYTES");
+        put(Integer.valueOf(CommonOptionConstants.OPTION_SET_SINK_DATA_LISTENER_AUDIO), "MEASUREMENT_MOBILE_RX_MS");
+        put(Integer.valueOf(CommonOptionConstants.OPTION_SEND_DRAMA_INFO), "MEASUREMENT_MOBILE_RX_PACKETS");
+        put(10049, "MEASUREMENT_MOBILE_TX_BYTES");
+        put(10026, "MEASUREMENT_MOBILE_TX_MS");
+        put(10055, "MEASUREMENT_MOBILE_TX_PACKETS");
+        put(10045, "MEASUREMENT_OTHER_USER_ACTIVITY_COUNT");
+        put(10001, "MEASUREMENT_REALTIME_BATTERY_MS");
+        put(10003, "MEASUREMENT_REALTIME_SCREEN_OFF_BATTERY_MS");
+        put(10063, "MEASUREMENT_SYSTEM_CPU_TIME_MS");
+        put(10047, "MEASUREMENT_TOUCH_USER_ACTIVITY_COUNT");
+        put(10002, "MEASUREMENT_UPTIME_BATTERY_MS");
+        put(10004, "MEASUREMENT_UPTIME_SCREEN_OFF_BATTERY_MS");
+        put(10062, "MEASUREMENT_USER_CPU_TIME_MS");
+        put(10029, "MEASUREMENT_WIFI_FULL_LOCK_MS");
+        put(10016, "MEASUREMENT_WIFI_IDLE_MS");
+        put(10031, "MEASUREMENT_WIFI_MULTICAST_MS");
+        put(10019, "MEASUREMENT_WIFI_POWER_MAMS");
+        put(10028, "MEASUREMENT_WIFI_RUNNING_MS");
+        put(10050, "MEASUREMENT_WIFI_RX_BYTES");
+        put(10017, "MEASUREMENT_WIFI_RX_MS");
+        put(10056, "MEASUREMENT_WIFI_RX_PACKETS");
+        put(10051, "MEASUREMENT_WIFI_TX_BYTES");
+        put(10018, "MEASUREMENT_WIFI_TX_MS");
+        put(10057, "MEASUREMENT_WIFI_TX_PACKETS");
+        put(10015, "STATS_PACKAGES");
+        put(10013, "STATS_PIDS");
+        put(10014, "STATS_PROCESSES");
+        put(10010, "TIMERS_JOBS");
+        put(10012, "TIMERS_SENSORS");
+        put(10009, "TIMERS_SYNCS");
+        put(10008, "TIMERS_WAKELOCKS_DRAW");
+        put(10005, "TIMERS_WAKELOCKS_FULL");
+        put(10006, "TIMERS_WAKELOCKS_PARTIAL");
+        put(10007, "TIMERS_WAKELOCKS_WINDOW");
+        put(10032, "TIMER_AUDIO");
+        put(10037, "TIMER_BLUETOOTH_SCAN");
+        put(Integer.valueOf(CommonOptionConstants.OPTION_SEND_MESSAGE), "TIMER_CAMERA");
+        put(10034, "TIMER_FLASHLIGHT");
+        put(Integer.valueOf(CommonOptionConstants.OPTION_SET_AUDIO_SAMPLE_RATE), "TIMER_FOREGROUND_ACTIVITY");
+        put(10011, "TIMER_GPS_SENSOR");
+        put(10061, "TIMER_MOBILE_RADIO_ACTIVE");
+        put(10042, "TIMER_PROCESS_STATE_BACKGROUND_MS");
+        put(10043, "TIMER_PROCESS_STATE_CACHED_MS");
+        put(10041, "TIMER_PROCESS_STATE_FOREGROUND_MS");
+        put(10039, "TIMER_PROCESS_STATE_FOREGROUND_SERVICE_MS");
+        put(10038, "TIMER_PROCESS_STATE_TOP_MS");
+        put(10040, "TIMER_PROCESS_STATE_TOP_SLEEPING_MS");
+        put(Integer.valueOf(CommonOptionConstants.OPTION_DLNA_SET_MANUFACTURER), "TIMER_VIBRATOR");
+        put(10033, "TIMER_VIDEO");
+        put(10030, "TIMER_WIFI_SCAN");
+    }
+}

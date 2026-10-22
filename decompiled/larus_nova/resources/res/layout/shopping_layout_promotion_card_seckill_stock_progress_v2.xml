@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.livecommerce.view.roundcorner.RoundCornerFrameLayout
+        android:id="@+id/ec_bg_seckill_stock_progress"
+        android:background="@drawable/ec_bg_stock_progress_2"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:ec_allRadius="10dp">
+        <View
+            android:layout_gravity="right"
+            android:background="@drawable/ec_bg_seckill_progress_tail"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@color/transparent"/>
+        <com.bytedance.android.livesdk.livecommerce.view.ECLottieAnimationView
+            android:layout_gravity="right"
+            android:id="@+id/lottie_ec_bg_seckill_stock_progress_tail"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+    </com.bytedance.android.livesdk.livecommerce.view.roundcorner.RoundCornerFrameLayout>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/shopping_std_text_black_4"
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/ec_ic_seckill_stock_label"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/ec_color_white"
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/ec_tv_seckill_progress_des"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"/>
+</merge>

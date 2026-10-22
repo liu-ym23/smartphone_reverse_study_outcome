@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="appease_text">
+        <item>我想一想啊，稍后告诉你</item>
+        <item>嗯，我要想想呢，等会儿发给你</item>
+        <item>我要想想呢，等会儿回答你</item>
+        <item>我思考一下，过会儿告诉你</item>
+    </array>
+    <array name="assume_strong_biometrics_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="audio2text_option_array">
+        <item>@string/Lark_Chat_AudioToChinese</item>
+        <item>@string/Lark_Chat_AudioToEnglish</item>
+    </array>
+    <array name="branch_integer_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </array>
+    <array name="branch_string_array">
+        <item>酉</item>
+        <item>戌</item>
+        <item>亥</item>
+        <item>子</item>
+        <item>丑</item>
+        <item>寅</item>
+        <item>卯</item>
+        <item>辰</item>
+        <item>巳</item>
+        <item>午</item>
+        <item>未</item>
+        <item>申</item>
+    </array>
+    <array name="byted_liveness_actions">
+        <item>Blink your eyes</item>
+        <item>Open your mouth</item>
+        <item>Nod your head</item>
+        <item>Shake your head</item>
+        <item>Please move your head up or down</item>
+        <item>Please turn your head to the left or right</item>
+        <item />
+    </array>
+    <array name="byted_liveness_cycle_tips">
+        <item />
+        <item />
+        <item>Without any cover</item>
+        <item>Move closer</item>
+        <item />
+        <item>Show whole face</item>
+        <item />
+        <item>One person only</item>
+        <item />
+        <item>Move further</item>
+        <item>Show whole face</item>
+        <item>Insufficient light</item>
+        <item>Excessive light</item>
+        <item />
+        <item />
+        <item />
+    </array>
+    <array name="byted_liveness_prompt_info">
+        <item>Verification failed</item>
+        <item>Verifying…</item>
+        <item>Look at the screen without any cover on your face</item>
+        <item>Move your face closer to the screen</item>
+        <item>Move slower</item>
+        <item>Look at the screen without any cover on your face</item>
+        <item />
+        <item>Make sure there\'s only one face in the frame</item>
+        <item>Look at the screen with your eyes open</item>
+        <item>Move your face further away from the screen</item>
+        <item>Position your face within the frame</item>
+        <item>Make sure you\'re under bright light</item>
+        <item>Avoid overexposing your face to the light</item>
+        <item>Keep your mouth closed</item>
+        <item />
+        <item>Make sure to position your real face in the frame</item>
+        <item>Move your face closer to the screen</item>
+    </array>
+    <array name="byted_reflection_liveness_prompt_info">
+        <item />
+        <item />
+        <item>Make sure you\'re looking at the screen</item>
+        <item>Make sure there\'s only one face in the frame</item>
+        <item>Look at the screen without any cover on your face</item>
+        <item>Make sure you\'re under bright light</item>
+        <item>Position your face within the frame</item>
+        <item />
+        <item>Move your face closer to the screen</item>
+        <item />
+        <item>Move your face further away from the screen</item>
+        <item />
+    </array>
+    <array name="crypto_fingerprint_fallback_prefixes">
+    </array>
+    <array name="crypto_fingerprint_fallback_vendors">
+        <item>samsung</item>
+    </array>
+    <array name="custom_repeat_days">
+        <item>@string/Calendar_StandardTime_Day1</item>
+        <item>@string/Calendar_StandardTime_Day2</item>
+        <item>@string/Calendar_StandardTime_Day3</item>
+        <item>@string/Calendar_StandardTime_Day4</item>
+        <item>@string/Calendar_StandardTime_Day5</item>
+        <item>@string/Calendar_StandardTime_Day6</item>
+        <item>@string/Calendar_StandardTime_Day7</item>
+        <item>@string/Calendar_StandardTime_Day8</item>
+        <item>@string/Calendar_StandardTime_Day9</item>
+        <item>@string/Calendar_StandardTime_Day10</item>
+        <item>@string/Calendar_StandardTime_Day11</item>
+        <item>@string/Calendar_StandardTime_Day12</item>
+        <item>@string/Calendar_StandardTime_Day13</item>
+        <item>@string/Calendar_StandardTime_Day14</item>
+        <item>@string/Calendar_StandardTime_Day15</item>
+        <item>@string/Calendar_StandardTime_Day16</item>
+        <item>@string/Calendar_StandardTime_Day17</item>
+        <item>@string/Calendar_StandardTime_Day18</item>
+        <item>@string/Calendar_StandardTime_Day19</item>
+        <item>@string/Calendar_StandardTime_Day20</item>
+        <item>@string/Calendar_StandardTime_Day21</item>
+        <item>@string/Calendar_StandardTime_Day22</item>
+        <item>@string/Calendar_StandardTime_Day23</item>
+        <item>@string/Calendar_StandardTime_Day24</item>
+        <item>@string/Calendar_StandardTime_Day25</item>
+        <item>@string/Calendar_StandardTime_Day26</item>
+        <item>@string/Calendar_StandardTime_Day27</item>
+        <item>@string/Calendar_StandardTime_Day28</item>
+        <item>@string/Calendar_StandardTime_Day29</item>
+        <item>@string/Calendar_StandardTime_Day30</item>
+        <item>@string/Calendar_StandardTime_Day31</item>
+    </array>
+    <array name="custom_repeat_weekly">
+        <item>@string/Calendar_StandardTime_WeekdayMonFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriFull</item>
+        <item>@string/Calendar_StandardTime_WeekdaySatFull</item>
+        <item>@string/Calendar_StandardTime_WeekdaySunFull</item>
+        <item>@string/Calendar_RRule_Weekday</item>
+        <item>@string/Calendar_Edit_Weekend</item>
+    </array>
+    <array name="delay_showing_prompt_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="doc_types">
+        <item>doc</item>
+        <item>sheet</item>
+        <item>bitable</item>
+        <item>mindnote</item>
+        <item>file</item>
+        <item>slide</item>
+    </array>
+    <array name="hide_fingerprint_instantly_prefixes">
+        <item>SM-A50</item>
+        <item>SM-G973</item>
+        <item>SM-G975</item>
+        <item>SM-G977</item>
+        <item>SM-G770</item>
+        <item>SM-N970</item>
+        <item>SM-N971</item>
+        <item>SM-N975</item>
+        <item>SM-N976</item>
+        <item>SM-N770</item>
+        <item>SC-03L</item>
+        <item>SC-04L</item>
+        <item>SC-05L</item>
+        <item>SC-01M</item>
+        <item>SCV41</item>
+        <item>SCV42</item>
+        <item>SCV45</item>
+    </array>
+    <array name="icon_3d_list">
+        <item>@drawable/icon_3d_top</item>
+        <item>@drawable/icon_3d_bottom</item>
+    </array>
+    <array name="im_emoji_index_name">
+        <item>1|[微笑]</item>
+        <item>2|[色]</item>
+        <item>2|[爱慕]</item>
+        <item>3|[发呆]</item>
+        <item>3|[惊呆]</item>
+        <item>4|[酷拽]</item>
+        <item>5|[抠鼻]</item>
+        <item>6|[流泪]</item>
+        <item>7|[发怒]</item>
+        <item>8|[呲牙]</item>
+        <item>9|[睡]</item>
+        <item>9|[鼾睡]</item>
+        <item>10|[害羞]</item>
+        <item>11|[调皮]</item>
+        <item>11|[可爱]</item>
+        <item>12|[晕]</item>
+        <item>13|[衰]</item>
+        <item>14|[闭嘴]</item>
+        <item>15|[机智]</item>
+        <item>16|[来看我]</item>
+        <item>17|[灵机一动]</item>
+        <item>17|[灵光一闪]</item>
+        <item>18|[耶]</item>
+        <item>19|[捂脸]</item>
+        <item>20|[打脸]</item>
+        <item>21|[大笑]</item>
+        <item>22|[哈欠]</item>
+        <item>23|[震惊]</item>
+        <item>24|[送心]</item>
+        <item>25|[困]</item>
+        <item>26|[疑问]</item>
+        <item>26|[what]</item>
+        <item>27|[泣不成声]</item>
+        <item>28|[小鼓掌]</item>
+        <item>29|[大金牙]</item>
+        <item>30|[偷笑]</item>
+    </array>
+    <array name="larus_month_name">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+    <array name="launcher_icons_by_day_of_month">
+        <item>@drawable/ic_launcher_calendar_day_1</item>
+        <item>@drawable/ic_launcher_calendar_day_2</item>
+        <item>@drawable/ic_launcher_calendar_day_3</item>
+        <item>@drawable/ic_launcher_calendar_day_4</item>
+        <item>@drawable/ic_launcher_calendar_day_5</item>
+        <item>@drawable/ic_launcher_calendar_day_6</item>
+        <item>@drawable/ic_launcher_calendar_day_7</item>
+        <item>@drawable/ic_launcher_calendar_day_8</item>
+        <item>@drawable/ic_launcher_calendar_day_9</item>
+        <item>@drawable/ic_launcher_calendar_day_10</item>
+        <item>@drawable/ic_launcher_calendar_day_11</item>
+        <item>@drawable/ic_launcher_calendar_day_12</item>
+        <item>@drawable/ic_launcher_calendar_day_13</item>
+        <item>@drawable/ic_launcher_calendar_day_14</item>
+        <item>@drawable/ic_launcher_calendar_day_15</item>
+        <item>@drawable/ic_launcher_calendar_day_16</item>
+        <item>@drawable/ic_launcher_calendar_day_17</item>
+        <item>@drawable/ic_launcher_calendar_day_18</item>
+        <item>@drawable/ic_launcher_calendar_day_19</item>
+        <item>@drawable/ic_launcher_calendar_day_20</item>
+        <item>@drawable/ic_launcher_calendar_day_21</item>
+        <item>@drawable/ic_launcher_calendar_day_22</item>
+        <item>@drawable/ic_launcher_calendar_day_23</item>
+        <item>@drawable/ic_launcher_calendar_day_24</item>
+        <item>@drawable/ic_launcher_calendar_day_25</item>
+        <item>@drawable/ic_launcher_calendar_day_26</item>
+        <item>@drawable/ic_launcher_calendar_day_27</item>
+        <item>@drawable/ic_launcher_calendar_day_28</item>
+        <item>@drawable/ic_launcher_calendar_day_29</item>
+        <item>@drawable/ic_launcher_calendar_day_30</item>
+        <item>@drawable/ic_launcher_calendar_day_31</item>
+    </array>
+    <array name="launcher_icons_by_day_of_month_square">
+        <item>@drawable/ic_launcher_squaer_calendar_day_1</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_2</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_3</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_4</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_5</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_6</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_7</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_8</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_9</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_10</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_11</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_12</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_13</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_14</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_15</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_16</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_17</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_18</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_19</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_20</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_21</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_22</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_23</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_24</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_25</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_26</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_27</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_28</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_29</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_30</item>
+        <item>@drawable/ic_launcher_squaer_calendar_day_31</item>
+    </array>
+    <array name="launcher_icons_weekday_des">
+        <item>@string/dynamic_icon_sunday</item>
+        <item>@string/dynamic_icon_monday</item>
+        <item>@string/dynamic_icon_tuesday</item>
+        <item>@string/dynamic_icon_wednesday</item>
+        <item>@string/dynamic_icon_thursday</item>
+        <item>@string/dynamic_icon_friday</item>
+        <item>@string/dynamic_icon_saturday</item>
+    </array>
+    <array name="lunar_first_of_month">
+        <item>春节</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>冬月</item>
+        <item>腊月</item>
+    </array>
+    <array name="lunar_str">
+        <item>初一</item>
+        <item>初二</item>
+        <item>初三</item>
+        <item>初四</item>
+        <item>初五</item>
+        <item>初六</item>
+        <item>初七</item>
+        <item>初八</item>
+        <item>初九</item>
+        <item>初十</item>
+        <item>十一</item>
+        <item>十二</item>
+        <item>十三</item>
+        <item>十四</item>
+        <item>十五</item>
+        <item>十六</item>
+        <item>十七</item>
+        <item>十八</item>
+        <item>十九</item>
+        <item>二十</item>
+        <item>廿一</item>
+        <item>廿二</item>
+        <item>廿三</item>
+        <item>廿四</item>
+        <item>廿五</item>
+        <item>廿六</item>
+        <item>廿七</item>
+        <item>廿八</item>
+        <item>廿九</item>
+        <item>三十</item>
+    </array>
+    <array name="mitra_chain_fragment_container_ids">
+        <item>@id/forseti_nav_host_fragment_container1</item>
+        <item>@id/forseti_nav_host_fragment_container2</item>
+        <item>@id/forseti_nav_host_fragment_container3</item>
+    </array>
+    <array name="month_long">
+        <item>@string/Calendar_StandardTime_MonthJanFull</item>
+        <item>@string/Calendar_StandardTime_MonthFebFull</item>
+        <item>@string/Calendar_StandardTime_MonthMarFull</item>
+        <item>@string/Calendar_StandardTime_MonthAprFull</item>
+        <item>@string/Calendar_StandardTime_MonthMayFull</item>
+        <item>@string/Calendar_StandardTime_MonthJuneFull</item>
+        <item>@string/Calendar_StandardTime_MonthJulyFull</item>
+        <item>@string/Calendar_StandardTime_MonthAugFull</item>
+        <item>@string/Calendar_StandardTime_MonthSeptFull</item>
+        <item>@string/Calendar_StandardTime_MonthOctFull</item>
+        <item>@string/Calendar_StandardTime_MonthNovFull</item>
+        <item>@string/Calendar_StandardTime_MonthDecFull</item>
+    </array>
+    <array name="month_name">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </array>
+    <array name="month_short">
+        <item>@string/Calendar_StandardTime_MonthJanAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthFebAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthMarAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthAprAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthMayAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthJuneAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthJulyAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthAugAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthSeptAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthOctAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthNovAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthDecAbbr</item>
+    </array>
+    <array name="month_string_array">
+        <item>JAN</item>
+        <item>FEB</item>
+        <item>MAR</item>
+        <item>APR</item>
+        <item>MAY</item>
+        <item>JUN</item>
+        <item>JUL</item>
+        <item>AUG</item>
+        <item>SEP</item>
+        <item>OCT</item>
+        <item>NOV</item>
+        <item>DEC</item>
+    </array>
+    <array name="msg_card_month">
+        <item>@string/Lark_Legacy_MsgCardJan</item>
+        <item>@string/Lark_Legacy_MsgCardFeb</item>
+        <item>@string/Lark_Legacy_MsgCardMar</item>
+        <item>@string/Lark_Legacy_MsgCardApr</item>
+        <item>@string/Lark_Legacy_MsgCardMay</item>
+        <item>@string/Lark_Legacy_MsgCardJune</item>
+        <item>@string/Lark_Legacy_MsgCardJuly</item>
+        <item>@string/Lark_Legacy_MsgCardAug</item>
+        <item>@string/Lark_Legacy_MsgCardSept</item>
+        <item>@string/Lark_Legacy_MsgCardOct</item>
+        <item>@string/Lark_Legacy_MsgCardNov</item>
+        <item>@string/Lark_Legacy_MsgCardDec</item>
+    </array>
+    <array name="msg_card_month_abbr">
+        <item>@string/Lark_Legacy_MsgCardJanAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardFebAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardMarAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardAprAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardMayAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardJuneAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardJulyAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardAugAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardSeptAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardOctAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardNovAbbr</item>
+        <item>@string/Lark_Legacy_MsgCardDecAbbr</item>
+    </array>
+    <array name="msg_card_week_abbr">
+        <item>@string/Lark_Legacy_MsgCard_SundayAbbr</item>
+        <item>@string/Lark_Legacy_MsgCard_MondayAbbr</item>
+        <item>@string/Lark_Legacy_MsgCard_TuesdayAbbr</item>
+        <item>@string/Lark_Legacy_MsgCard_WednesdayAbbr</item>
+        <item>@string/Lark_Legacy_MsgCard_TimeFormat_Thursday</item>
+        <item>@string/Lark_Legacy_MsgCard_FridayAbbr</item>
+        <item>@string/Lark_Legacy_MsgCard_SaturdayAbbr</item>
+    </array>
+    <array name="obric_days_of_week">
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+        <item>周日</item>
+    </array>
+    <array name="one_wheel_entries">
+        <item>��️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️</item>
+        <item>����️️</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x4d000000</item>
+    </array>
+    <array name="oui_bottom_actionbar_blur_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_bottom_navbar_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>28</item>
+        <item>0x4df7f7f7</item>
+        <item>18</item>
+        <item>0x4df7f7f7</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_bottom_navbar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_no_gradient_blur_blend_modes">
+        <item>3</item>
+    </array>
+    <array name="oui_no_gradient_blur_colors">
+        <item>0x0</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_dark">
+        <item>0x99292929</item>
+        <item>0x0</item>
+        <item>0x4d292929</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x4df7f7f7</item>
+        <item>0x4df7f7f7</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_bottom_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_dark">
+        <item>0x99292929</item>
+        <item>0x0</item>
+        <item>0x99292929</item>
+    </array>
+    <array name="oui_sheet_top_blend_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_sheet_top_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes_dark">
+        <item>28</item>
+        <item>19</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_blend_modes_light">
+        <item>28</item>
+        <item>18</item>
+        <item>3</item>
+    </array>
+    <array name="oui_titlebar_blur_colors">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_dark">
+        <item>0x99000000</item>
+        <item>0x0</item>
+        <item>0x99000000</item>
+    </array>
+    <array name="oui_titlebar_blur_colors_light">
+        <item>0x66f7f7f7</item>
+        <item>0x99f7f7f7</item>
+        <item>0x99f7f7f7</item>
+    </array>
+    <array name="quickSideBarLetters">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </array>
+    <array name="saturday_first_repeat_weekly">
+        <item>@string/Calendar_StandardTime_WeekdaySatFull</item>
+        <item>@string/Calendar_StandardTime_WeekdaySunFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayMonFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriFull</item>
+        <item>@string/Calendar_RRule_Weekday</item>
+        <item>@string/Calendar_Edit_Weekend</item>
+    </array>
+    <array name="shielded_post_title">
+        <item>无标题帖子</item>
+        <item>无标题</item>
+        <item>Untitled Post</item>
+        <item>Untitled post</item>
+        <item>タイトル</item>
+        <item>タイトルなし</item>
+    </array>
+    <array name="solar_festival">
+        <item>0101元旦</item>
+        <item>0214情人节</item>
+        <item>0308妇女节</item>
+        <item>0312植树节</item>
+        <item>0315消权日</item>
+        <item>0401愚人节</item>
+        <item>0422地球日</item>
+        <item>0501劳动节</item>
+        <item>0504青年节</item>
+        <item>0601儿童节</item>
+        <item>0701建党节</item>
+        <item>0801建军节</item>
+        <item>0910教师节</item>
+        <item>1001国庆节</item>
+        <item>1031万圣节</item>
+        <item>1111光棍节</item>
+        <item>1224平安夜</item>
+        <item>1225圣诞节</item>
+    </array>
+    <array name="solar_term">
+        <item>春分</item>
+        <item>清明</item>
+        <item>谷雨</item>
+        <item>立夏</item>
+        <item>小满</item>
+        <item>芒种</item>
+        <item>夏至</item>
+        <item>小暑</item>
+        <item>大暑</item>
+        <item>立秋</item>
+        <item>处暑</item>
+        <item>白露</item>
+        <item>秋分</item>
+        <item>寒露</item>
+        <item>霜降</item>
+        <item>立冬</item>
+        <item>小雪</item>
+        <item>大雪</item>
+        <item>冬至</item>
+        <item>小寒</item>
+        <item>大寒</item>
+        <item>立春</item>
+        <item>雨水</item>
+        <item>惊蛰</item>
+    </array>
+    <array name="special_festivals">
+        <item>母亲节</item>
+        <item>父亲节</item>
+        <item>感恩节</item>
+    </array>
+    <array name="sunday_first_repeat_weekly">
+        <item>@string/Calendar_StandardTime_WeekdaySunFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayMonFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriFull</item>
+        <item>@string/Calendar_StandardTime_WeekdaySatFull</item>
+        <item>@string/Calendar_RRule_Weekday</item>
+        <item>@string/Calendar_Edit_Weekend</item>
+    </array>
+    <array name="tradition_festival">
+        <item>除夕</item>
+        <item>0101春节</item>
+        <item>0115元宵</item>
+        <item>0505端午</item>
+        <item>0707七夕</item>
+        <item>0815中秋</item>
+        <item>0909重阳</item>
+    </array>
+    <array name="trial_hint">
+        <item>出镜在画面中心能让观看体验更好</item>
+        <item>设置直播间介绍，能让进房观众快速认识你</item>
+        <item>PK能让更多人看到你，为你带来人气</item>
+        <item>人气较高时发个福袋，能调动直播间互动氛围</item>
+        <item>播放合适的背景音乐，能营造直播间氛围</item>
+        <item>下播前发放直播预告，让你的粉丝及时知道</item>
+    </array>
+    <array name="trunk_integer_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </array>
+    <array name="trunk_string_array">
+        <item>辛</item>
+        <item>壬</item>
+        <item>癸</item>
+        <item>甲</item>
+        <item>乙</item>
+        <item>丙</item>
+        <item>丁</item>
+        <item>戊</item>
+        <item>己</item>
+        <item>庚</item>
+    </array>
+    <array name="ttlive_account_avatar_type">
+        <item>从手机相册选择</item>
+        <item>拍照</item>
+        <item>取消</item>
+    </array>
+    <array name="ttlive_account_avatar_type_new">
+        <item>智能优化</item>
+        <item>从手机相册选择</item>
+        <item>拍照</item>
+        <item>取消</item>
+    </array>
+    <array name="ttlive_barrage">
+        <item>@drawable/ttlive_new_digg_fabulous</item>
+        <item>@drawable/ttlive_new_digg_good_life</item>
+        <item>@drawable/ttlive_new_digg_laugh_cry</item>
+        <item>@drawable/ttlive_new_digg_love</item>
+        <item>@drawable/ttlive_new_digg_love_gesture</item>
+    </array>
+    <array name="ttlive_contribution_background">
+        <item>@drawable/ttlive_end_topuser_bg_1</item>
+        <item>@drawable/ttlive_end_topuser_bg_2</item>
+        <item>@drawable/ttlive_end_topuser_bg_3</item>
+    </array>
+    <array name="ttlive_live_filter_files">
+        <item>Filter_01</item>
+        <item>Filter_02</item>
+        <item>Filter_03</item>
+        <item>Filter_04</item>
+        <item>Filter_05</item>
+    </array>
+    <array name="ttlive_live_filter_names">
+        <item>无</item>
+        <item>粉黛</item>
+        <item>甜蜜</item>
+        <item>暖茶</item>
+        <item>知性</item>
+        <item>红润</item>
+        <item>小清新</item>
+        <item>自然</item>
+        <item>阳光</item>
+        <item>婴儿肌</item>
+        <item>怀旧</item>
+        <item>明亮</item>
+        <item>可爱</item>
+        <item>水蜜桃</item>
+        <item>落日</item>
+    </array>
+    <array name="ttlive_media_barrage">
+        <item>@drawable/ttlive_new_digg_fabulous</item>
+        <item>@drawable/ttlive_new_digg_love</item>
+    </array>
+    <array name="ttlive_miniapp_account_avatar_type">
+        <item>从手机相册选择</item>
+        <item>使用小程序封面截图</item>
+        <item>取消</item>
+    </array>
+    <array name="ttlive_month_list">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>七</item>
+        <item>八</item>
+        <item>九</item>
+        <item>十</item>
+        <item>十一</item>
+        <item>十二</item>
+    </array>
+    <array name="ttlive_official_boom_round">
+        <item>第一爆</item>
+        <item>第二爆</item>
+        <item>第三爆</item>
+    </array>
+    <array name="ttlive_report_list">
+        <item>举报</item>
+        <item>取消</item>
+    </array>
+    <array name="type_list">
+    </array>
+    <array name="ud_timePicker_monthAbbr">
+        <item>@string/Calendar_StandardTime_MonthJanAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthFebAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthMarAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthAprAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthMayAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthJuneAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthJulyAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthAugAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthSeptAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthOctAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthNovAbbr</item>
+        <item>@string/Calendar_StandardTime_MonthDecAbbr</item>
+    </array>
+    <array name="ud_timePicker_weeks">
+        <item>@string/Calendar_StandardTime_WeekdaySunShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayMonShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriShort</item>
+        <item>@string/Calendar_StandardTime_WeekdaySatShort</item>
+    </array>
+    <array name="ud_timePicker_weeks_abbreviation">
+        <item>@string/Calendar_StandardTime_WeekdaySunAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayMonAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdaySatAbbr</item>
+    </array>
+    <array name="week">
+        <item>@string/Lark_Legacy_Sunday</item>
+        <item>@string/Lark_Legacy_Monday</item>
+        <item>@string/Lark_Legacy_Tuesday</item>
+        <item>@string/Lark_Legacy_Wednesday</item>
+        <item>@string/Lark_Legacy_Thursday</item>
+        <item>@string/Lark_Legacy_Friday</item>
+        <item>@string/Lark_Legacy_Saturday</item>
+    </array>
+    <array name="week_day_labels">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </array>
+    <array name="week_days">
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+        <item>周日</item>
+    </array>
+    <array name="week_long">
+        <item>@string/Calendar_StandardTime_WeekdaySunFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayMonFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriFull</item>
+        <item>@string/Calendar_StandardTime_WeekdaySatFull</item>
+    </array>
+    <array name="week_min">
+        <item>@string/Calendar_StandardTime_WeekdaySunAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayMonAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriAbbr</item>
+        <item>@string/Calendar_StandardTime_WeekdaySatAbbr</item>
+    </array>
+    <array name="week_no">
+        <item>@string/Calendar_RRule_First</item>
+        <item>@string/Calendar_RRule_Second</item>
+        <item>@string/Calendar_RRule_Third</item>
+        <item>@string/Calendar_RRule_Fourth</item>
+        <item>@string/Calendar_RRule_Fifth</item>
+    </array>
+    <array name="week_short">
+        <item>@string/Calendar_StandardTime_WeekdaySunShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayMonShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuShort</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriShort</item>
+        <item>@string/Calendar_StandardTime_WeekdaySatShort</item>
+    </array>
+    <array name="week_string_array">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </array>
+    <array name="week_text">
+        <item>@string/Calendar_RRule_SundayAndroidAbbr2</item>
+        <item>@string/Calendar_RRule_MondayAndroidAbbr2</item>
+        <item>@string/Calendar_RRule_TuesdayAndroidAbbr2</item>
+        <item>@string/Calendar_RRule_WednesdayAndroidAbbr2</item>
+        <item>@string/Calendar_RRule_ThursdayAndroidAbbr2</item>
+        <item>@string/Calendar_RRule_FridayAndroidAbbr2</item>
+        <item>@string/Calendar_RRule_SaturdayAndroidAbbr2</item>
+    </array>
+    <array name="weekly">
+        <item>@string/Calendar_StandardTime_WeekdaySunFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayMonFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayTueFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayWedFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayThuFull</item>
+        <item>@string/Calendar_StandardTime_WeekdayFriFull</item>
+        <item>@string/Calendar_StandardTime_WeekdaySatFull</item>
+    </array>
+    <array name="window_blur_blend_modes">
+        <item>3</item>
+    </array>
+    <array name="window_blur_colors">
+        <item>0x1f000000</item>
+    </array>
+    <array name="year_view_week_string_array">
+        <item>S</item>
+        <item>M</item>
+        <item>T</item>
+        <item>W</item>
+        <item>T</item>
+        <item>F</item>
+        <item>S</item>
+    </array>
+</resources>

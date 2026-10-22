@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="?attr/larus_sp_18"
+    android:textStyle="bold"
+    android:textColor="@color/larus_neutral_100"
+    android:ellipsize="end"
+    android:id="@+id/diary_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="?attr/larus_dp_20"
+    android:layout_marginTop="?attr/larus_dp_24"
+    android:layout_marginRight="?attr/larus_dp_20"
+    android:maxLines="2"/>

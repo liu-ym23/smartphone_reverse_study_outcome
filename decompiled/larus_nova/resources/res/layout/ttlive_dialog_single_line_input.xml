@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.live.common.keyboard.MeasureLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+        <com.bytedance.android.live.core.widget.LiveEditText
+            android:textSize="15dp"
+            android:textColor="@color/ttlive_live_input_text_color"
+            android:id="@+id/et_single_line_input"
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:hint="最多输入10个字符"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:textCursorDrawable="@drawable/ttlive_edit_text_cursor_drawable"/>
+        <TextView
+            android:textSize="13dp"
+            android:textColor="#3d000000"
+            android:id="@+id/tv_input_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</com.bytedance.android.live.common.keyboard.MeasureLinearLayout>

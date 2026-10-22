@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nps_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv3.comment.widget.CommentNpsCardView
+        android:id="@+id/comment_nps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.bytedance.android.ui.base.widget.round.RoundFrameLayout>

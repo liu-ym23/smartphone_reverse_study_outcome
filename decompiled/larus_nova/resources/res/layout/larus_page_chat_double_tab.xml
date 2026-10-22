@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.bmhome.view.ChatConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_double_tab_root"
+    android:background="?attr/larus_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/share_container"
+        android:layout_width="?attr/larus_dp_1"
+        android:layout_height="?attr/larus_dp_1"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="@+id/title_container">
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_page2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <FrameLayout
+            android:id="@+id/input_slot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"/>
+</com.larus.bmhome.view.ChatConstraintLayout>

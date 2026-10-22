@@ -1,0 +1,16 @@
+package e7;
+
+import com.bytedance.android.annie.bridge.method.abs.RequestResultModel;
+import com.bytedance.ies.web.jsbridge2.PermissionGroup;
+import e7.s0;
+
+/* JADX INFO: loaded from: classes43.dex */
+public abstract class v<P extends s0, R extends RequestResultModel> extends com.bytedance.ies.web.jsbridge2.f<P, R> {
+    public v() {
+    }
+
+    @Override // com.bytedance.ies.web.jsbridge2.d
+    public final PermissionGroup getPermissionGroup() {
+        return PermissionGroup.PROTECTED;
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="17sp"
+    android:textColor="@color/flow_ud_neutral_50"
+    android:gravity="center"
+    android:id="@+id/ipsEmptyTitleTv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="22dp"
+    android:text="@string/LarkIM_Friend_NoSearchResult_EmptyState"/>

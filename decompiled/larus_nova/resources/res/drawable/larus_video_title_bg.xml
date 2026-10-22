@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:innerRadius="?attr/larus_dp_16">
+    <gradient
+        android:startColor="@color/larus_neutral_transparent_3_web_day"
+        android:endColor="@android:color/transparent"
+        android:angle="270"
+        android:type="linear"/>
+    <corners
+        android:topLeftRadius="?attr/larus_dp_16"
+        android:topRightRadius="?attr/larus_dp_16"/>
+</shape>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close_icon"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            app:srcCompat="@drawable/ud_icon_close_outlined"/>
+        <TextView
+            android:textSize="@dimen/font_size_17"
+            android:textStyle="bold"
+            android:textColor="@color/text_title"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Lark_Legacy_MsgCardSelect"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/primary_content_default"
+            android:gravity="center"
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Lark_Legacy_Confirm"/>
+    </LinearLayout>
+    <com.larksuite.component.ui.navigation.LKUISearchView
+        android:id="@+id/select_menu_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:search_hint_text="@string/Lark_Legacy_Search"
+        app:search_hint_textColor="@color/text_placeholder"
+        app:search_left_drawable_height="16dp"
+        app:search_left_drawable_width="16dp"/>
+</LinearLayout>

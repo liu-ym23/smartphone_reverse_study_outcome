@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="?attr/larus_dp_36"
+    android:paddingTop="?attr/larus_dp_12"
+    android:paddingRight="?attr/larus_dp_36"
+    android:paddingBottom="?attr/larus_dp_12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/larus_dp_2"
+    android:paddingHorizontal="?attr/larus_dp_36"
+    android:paddingVertical="?attr/larus_dp_12">
+    <TextView
+        android:textSize="?attr/larus_dp_14"
+        android:textColor="?attr/larus_neutral_50"
+        android:gravity="center"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineHeight="?attr/larus_dp_21"/>
+</FrameLayout>

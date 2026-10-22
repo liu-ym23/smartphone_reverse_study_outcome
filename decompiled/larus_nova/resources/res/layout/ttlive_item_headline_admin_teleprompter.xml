@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@color/ttlive_white_70"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_teleprompter_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/iv_teleprompter_desc"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ttlive_ic_admin_prompter_intro"
+        android:layout_alignTop="@+id/tv_teleprompter_quantity"
+        android:layout_alignBottom="@+id/tv_teleprompter_quantity"
+        android:contentDescription="@string/ttlive_live_room_manage_permit_prompt"
+        android:layout_toEndOf="@+id/tv_teleprompter_quantity"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/ttlive_white_50"
+        android:id="@+id/tv_teleprompter_header_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/ttlive_live_room_manage_teleprompter_subtitle"
+        android:layout_below="@+id/tv_teleprompter_quantity"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

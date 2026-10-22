@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shopping_anchor_v4_gradient_text_with_icons_component_437728672"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.components.LongTitleComponentView
+        android:id="@+id/long_title_component"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.baseinfo.InlineLongTitleComponentView
+        android:id="@+id/inline_long_title_component"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

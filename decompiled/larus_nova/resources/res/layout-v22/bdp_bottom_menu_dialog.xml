@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/bdp_bottom_menu"
+    android:background="@drawable/bdp_bottom_menu_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:id="@+id/bdp_bottom_menu_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:id="@+id/bdp_bottom_menu_line"
+            android:background="#f2f3f5"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="#1d2129"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:id="@+id/bdpapp_m_choose_media_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/bdp_permission_cancel"
+            android:textFontWeight="400"/>
+    </LinearLayout>
+</LinearLayout>

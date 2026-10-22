@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/larus_dora_h_reply_loading_indicator">
+    <target
+        android:name="dot_left"
+        android:animation="@animator/larus_dora_h_reply_loading_dot_left"/>
+    <target
+        android:name="dot_center"
+        android:animation="@animator/larus_dora_h_reply_loading_dot_center"/>
+    <target
+        android:name="dot_right"
+        android:animation="@animator/larus_dora_h_reply_loading_dot_right"/>
+</animated-vector>

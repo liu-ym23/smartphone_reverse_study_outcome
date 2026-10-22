@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/static_black_transparent_1"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="center"
+        android:background="@drawable/larus_drivebiz_bg_drive_downloading_dialog"
+        android:layout_width="?attr/larus_dp_128"
+        android:layout_height="?attr/larus_dp_120">
+        <ImageView
+            android:id="@+id/larus_drive_downloading_close"
+            android:layout_width="?attr/larus_dp_16"
+            android:layout_height="?attr/larus_dp_16"
+            android:layout_marginTop="?attr/larus_dp_12"
+            android:src="@drawable/larus_ic_popup_window_close"
+            android:contentDescription="@null"
+            android:layout_marginEnd="?attr/larus_dp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ProgressBar
+            android:id="@+id/larus_drive_downloading"
+            android:layout_width="?attr/larus_dp_30"
+            android:layout_height="?attr/larus_dp_30"
+            android:layout_marginTop="?attr/larus_dp_29"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/larus_drivebiz_ic_drive_loading_more"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:textSize="?attr/larus_sp_16"
+            android:textStyle="bold"
+            android:textColor="@color/larus_neutral_100"
+            android:id="@+id/larus_drive_downloading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_13"
+            android:text="@string/larus_drive_toast_downloading_s"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/larus_drive_downloading"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

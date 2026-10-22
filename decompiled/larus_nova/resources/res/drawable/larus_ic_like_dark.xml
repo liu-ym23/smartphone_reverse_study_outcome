@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:autoMirrored="true">
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/larus_ic_like_select_dark"/>
+    <item android:drawable="@drawable/larus_ic_like_normal_dark"/>
+</selector>

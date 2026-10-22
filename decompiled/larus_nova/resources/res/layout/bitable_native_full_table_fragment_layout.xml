@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.bitable.core.infoarch.arch.ThemeBackgroundView
+        android:id="@+id/themeBg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.ee.bear.bitable.infoarch.titlebar.BitableBaseTitleBar
+        android:gravity="center_vertical"
+        android:id="@+id/titlbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:widget_widgets_tb_background="@color/transparent"
+        app:widget_widgets_tb_divider_visible="false"/>
+    <com.bytedance.ee.bear.bitable.infoarch.nativeview.BitableNativeViewContainer
+        android:id="@+id/nativeViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlbar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

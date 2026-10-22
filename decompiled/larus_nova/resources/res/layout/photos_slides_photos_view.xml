@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.awemeopen.apps.framework.feed.pages.recommend.photo.ui.SlidesPhotosViewPager
+        android:id="@+id/photos_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:importantForAccessibility="no"/>
+    <View
+        android:layout_gravity="bottom"
+        android:id="@+id/progress_bar_mask"
+        android:background="@drawable/aos_familiar_progress_bar_mask"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"/>
+    <com.bytedance.awemeopen.apps.framework.feed.pages.recommend.photo.ui.StyleEdgeTransparentView2
+        android:layout_gravity="bottom"
+        android:id="@+id/progress_bar_edge_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/custom_indicator_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.bytedance.awemeopen.apps.framework.feed.pages.recommend.photo.ui.progress.StoryListProgressBar
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"/>
+    </com.bytedance.awemeopen.apps.framework.feed.pages.recommend.photo.ui.StyleEdgeTransparentView2>
+</FrameLayout>

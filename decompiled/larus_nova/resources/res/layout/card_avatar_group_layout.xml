@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.larksuite.component.card.component.personlist.avatar.NonScrollableRecyclerView
+        android:id="@+id/rv_person_avatar_group"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"/>
+    <com.larksuite.component.ui.imageview.LKUIRoundedImageView2
+        android:id="@+id/iv_person_avatar_group_last_avatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:oval="true"
+        app:radius="4dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/text_caption"
+        android:gravity="center"
+        android:id="@+id/tv_person_avatar_group_more_number"
+        android:background="@drawable/card_person_avatar_group_number_bg"
+        android:visibility="gone"
+        android:layout_width="32dp"
+        android:layout_height="32dp"/>
+</merge>

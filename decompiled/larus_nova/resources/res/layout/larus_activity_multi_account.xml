@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_56">
+        <TextView
+            android:textSize="?attr/larus_dp_19"
+            android:textStyle="bold"
+            android:textColor="?attr/larus_neutral_100"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_switchAccount_switchAcc"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="?attr/larus_dp_44"
+            android:layout_height="?attr/larus_dp_44"
+            android:src="@drawable/larus_ic_nav_close"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="?attr/larus_dp_16"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.bitable.itemview.recordpages.ItemViewRecordFooterChild1
+        android:layout_gravity="bottom"
+        android:id="@+id/child1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.ee.bear.bitable.itemview.recordpages.ItemViewRecordFooterChild4
+        android:layout_gravity="bottom"
+        android:id="@+id/child4"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.ee.bear.bitable.itemview.recordpages.ItemViewRecordFooterChild2
+        android:layout_gravity="bottom"
+        android:id="@+id/child2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.ee.bear.bitable.itemview.recordpages.ItemViewRecordFooterChild3
+        android:layout_gravity="bottom"
+        android:id="@+id/child3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</merge>

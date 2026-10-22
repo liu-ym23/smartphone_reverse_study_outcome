@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/larus_third_party_account_manage_page_604949365"
+    android:background="@color/larus_base_1_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"/>
+    <TextView
+        android:textSize="?attr/larus_dp_13"
+        android:textColor="@color/larus_neutral_50"
+        android:padding="?attr/larus_dp_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/larus_dp_16"
+        android:layout_marginRight="?attr/larus_dp_16"
+        android:text="@string/larus_music_setting_account_services_detail"
+        android:layout_marginHorizontal="?attr/larus_dp_16"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="?attr/larus_dp_16"/>
+</LinearLayout>

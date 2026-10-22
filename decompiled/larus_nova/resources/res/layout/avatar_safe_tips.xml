@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/safe_tips_title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/safe_tips_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_subtract"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/text_placeholder"
+            android:id="@+id/safe_tips_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Lark_IM_Profile_CoverSafetyReminder_Title"/>
+    </LinearLayout>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_placeholder"
+        android:gravity="center"
+        android:id="@+id/safe_tips_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/Lark_IM_Profile_CoverSafetyReminder_Desc"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/safe_tips_title_layout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

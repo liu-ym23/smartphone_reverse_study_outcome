@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="?attr/larus_dp_6"
+    android:paddingBottom="?attr/larus_dp_16"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_56">
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/chat_recent_load_more_progress"
+        android:layout_width="?attr/larus_dp_24"
+        android:layout_height="?attr/larus_dp_24"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/larus_neutral_70"/>
+</FrameLayout>

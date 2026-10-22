@@ -1,0 +1,90 @@
+package a49;
+
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes27.dex */
+public final class k {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final String f1813a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public final String f1814b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final String f1815c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public final String f1816d;
+
+    public k() {
+        this(null, null, null, null);
+    }
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L6;
+        return true;
+    L6:
+        if ((r100 instanceof k) == true) goto L8;
+        return false;
+    L8:
+        k r101 = (k) r100;
+        if (Intrinsics.areEqual(this.f1813a, r101.f1813a) == true) goto L12;
+        return false;
+    L12:
+        if (Intrinsics.areEqual(this.f1814b, r101.f1814b) == true) goto L15;
+        return false;
+    L15:
+        if (Intrinsics.areEqual(this.f1815c, r101.f1815c) == true) goto L18;
+        return false;
+    L18:
+        if (Intrinsics.areEqual(this.f1816d, r101.f1816d) == true) goto L20;
+        return false;
+    L20:
+        return true;
+    }
+
+    public final int hashCode() {
+        String r100 = this.f1813a;
+        int r101 = 0;
+        if (r100 != null) goto L5;
+        int r102 = 0;
+    L6:
+        int r103 = r102 * 31;
+        String r104 = this.f1814b;
+        if (r104 != null) goto L9;
+        int r105 = 0;
+    L10:
+        int r106 = (r103 + r105) * 31;
+        String r107 = this.f1815c;
+        if (r107 != null) goto L13;
+        int r108 = 0;
+    L14:
+        int r109 = (r106 + r108) * 31;
+        String r110 = this.f1816d;
+        if (r110 == null) goto L19;
+        r101 = r110.hashCode();
+    L19:
+        return r109 + r101;
+    L13:
+        r108 = r107.hashCode();
+        goto L14
+    L9:
+        r105 = r104.hashCode();
+        goto L10
+    L5:
+        r102 = r100.hashCode();
+        goto L6
+    }
+
+    public final String toString() {
+        return "QuickNoteConfig(leftLongPressAction=" + this.f1813a + ", rightLongPressAction=" + this.f1814b + ", leftDoubleClickAction=" + this.f1815c + ", rightDoubleClickAction=" + this.f1816d + ')';
+    }
+
+    public k(String r100, String r101, String r102, String r103) {
+        this.f1813a = r100;
+        this.f1814b = r101;
+        this.f1815c = r102;
+        this.f1816d = r103;
+    }
+}

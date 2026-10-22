@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/larus_preview_toolbar_circle_bg"
+    android:layout_width="?attr/larus_dp_44"
+    android:layout_height="?attr/larus_dp_44">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_icon"
+        android:layout_width="?attr/larus_dp_20"
+        android:layout_height="?attr/larus_dp_20"
+        android:layerType="software"
+        android:importantForAccessibility="no"
+        app:tint="@color/larus_white"/>
+</LinearLayout>

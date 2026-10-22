@@ -1,0 +1,12 @@
+package com.bytedance.dora.annotation;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* JADX INFO: loaded from: classes15.dex */
+@Retention(RetentionPolicy.SOURCE)
+public @interface DoraState {
+    public static final int BONDED = 1;
+    public static final int CONNECTED = 2;
+    public static final int NONE = 0;
+}

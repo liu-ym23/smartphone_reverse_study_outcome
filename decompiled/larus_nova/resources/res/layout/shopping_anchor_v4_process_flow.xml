@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.components.LongContentLabelComponentView
+        android:id="@+id/process_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.processflow.AnchorV4PathEffectFlowLayout
+        android:id="@+id/process_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="14dp"/>
+</merge>

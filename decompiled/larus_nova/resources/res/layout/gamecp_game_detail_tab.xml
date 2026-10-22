@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ncv_game_detail_page_item_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/v_mask"
+        android:background="@drawable/gamecp_bg_detail_nav_bar_mask_v2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"/>
+</FrameLayout>

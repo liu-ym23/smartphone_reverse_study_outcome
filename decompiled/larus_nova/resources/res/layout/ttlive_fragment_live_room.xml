@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.widget.LiveSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.widget.SafeFrameLayout
+        android:id="@+id/container"
+        android:background="@color/liveuikit_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <SurfaceView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+        <com.bytedance.android.livesdk.widget.LiveVerticalViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"/>
+        <include
+            android:layout_gravity="bottom"
+            android:id="@+id/back_to_pre_room_widget_v2"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginBottom="52dp"
+            layout="@layout/ttlive_back_pre_room_button_layout"/>
+    </com.bytedance.android.livesdk.widget.SafeFrameLayout>
+</com.bytedance.android.livesdk.widget.LiveSwipeRefreshLayout>

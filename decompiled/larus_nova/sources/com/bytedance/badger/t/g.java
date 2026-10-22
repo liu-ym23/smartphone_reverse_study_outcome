@@ -1,0 +1,38 @@
+package com.bytedance.badger.t;
+
+/* JADX INFO: loaded from: classes47.dex */
+public final class g extends l {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final int f199202a;
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L5;
+    L13:
+        return true;
+    L5:
+        if ((r100 instanceof g) == true) goto L7;
+    L12:
+        return false;
+    L7:
+        if (this.f199202a != ((g) r100).f199202a) goto L9;
+        boolean r101 = true;
+    L10:
+        if (r101 == false) goto L12;
+    L9:
+        r101 = false;
+        goto L10
+    }
+
+    public final int hashCode() {
+        return this.f199202a;
+    }
+
+    public final String toString() {
+        return "IntVal(value=" + this.f199202a + ")";
+    }
+
+    public g(int r100) {
+        this.f199202a = r100;
+    }
+}

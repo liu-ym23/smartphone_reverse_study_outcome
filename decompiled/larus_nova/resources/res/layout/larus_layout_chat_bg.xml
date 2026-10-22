@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/chat_bg_image"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/larus_dp_68"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.larus.bmhome.chat.view.ImmerseBgVideoView
+        android:id="@+id/bg_video_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/larus_dp_68"
+        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/ivInputTopBg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_149"
+        app:layout_constraintBottom_toTopOf="@+id/ivInputBg"/>
+    <ImageView
+        android:id="@+id/ivTopImmerseMask"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_390"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/ivInputBg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_86"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_layout"/>
+</merge>

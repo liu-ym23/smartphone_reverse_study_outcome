@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="36dp"
+    android:width="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <path
+        android:fillColor="@color/larus_primary_50_day"
+        android:pathData="M18,18m-17,0a17,17 0,1 1,34 0a17,17 0,1 1,-34 0"
+        android:strokeColor="@color/larus_static_white"
+        android:strokeWidth="2"/>
+    <path
+        android:fillColor="@color/larus_static_white"
+        android:pathData="M21.368,12.58C21.605,12.847 21.945,13 22.302,13H23C24.473,13 25.667,14.194 25.667,15.667V21.667C25.667,23.139 24.473,24.333 23,24.333H12.333C10.861,24.333 9.667,23.139 9.667,21.667V15.667C9.667,14.194 10.861,13 12.333,13H13.031C13.388,13 13.728,12.847 13.966,12.58L15.269,11.114C15.522,10.829 15.885,10.667 16.265,10.667H19.068C19.449,10.667 19.812,10.829 20.065,11.114L21.368,12.58ZM20.333,18.333C20.333,19.806 19.139,21 17.667,21C16.194,21 15,19.806 15,18.333C15,16.86 16.194,15.667 17.667,15.667C19.139,15.667 20.333,16.86 20.333,18.333ZM21.667,18.333C21.667,20.542 19.876,22.333 17.667,22.333C15.458,22.333 13.667,20.542 13.667,18.333C13.667,16.124 15.458,14.333 17.667,14.333C19.876,14.333 21.667,16.124 21.667,18.333Z"
+        android:fillType="evenOdd"/>
+</vector>

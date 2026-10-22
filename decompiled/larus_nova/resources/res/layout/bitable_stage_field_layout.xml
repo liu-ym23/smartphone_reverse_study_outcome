@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.widgets.BaseTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        app:widget_widgets_tb_divider_visible="false"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.bytedance.ee.bear.facade.common.widget.BearLottieView
+            android:layout_gravity="center"
+            android:id="@+id/lottieSuccess"
+            android:visibility="gone"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"/>
+    </FrameLayout>
+</LinearLayout>

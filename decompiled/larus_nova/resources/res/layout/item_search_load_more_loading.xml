@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_68">
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/load_more_loading_progress"
+        android:layout_width="?attr/larus_dp_20"
+        android:layout_height="?attr/larus_dp_20"
+        android:indeterminateTint="@color/larus_neutral_50"
+        style="?android:attr/progressBarStyleSmall"/>
+    <TextView
+        android:textSize="?attr/larus_sp_14"
+        android:textColor="@color/larus_neutral_50"
+        android:layout_gravity="center"
+        android:id="@+id/load_more_finish_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_loading_searching"
+        android:layout_marginStart="?attr/larus_dp_8"/>
+</LinearLayout>

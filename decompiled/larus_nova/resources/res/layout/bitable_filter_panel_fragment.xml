@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/filter_panel"
+    android:tag="filter"
+    android:background="@color/bg_float_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.larksuite.component.universe_design.notice.UDNotice
+            android:id="@+id/notice"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_kit_len_16"
+            android:layout_marginTop="@dimen/space_kit_len_12"
+            android:layout_marginRight="@dimen/space_kit_len_16"
+            app:ud_notice_backgroundColor="@color/function_info_fill_solid_02"
+            app:ud_notice_icon="@drawable/ud_icon_info_colorful"
+            app:ud_notice_iconColorful="true"/>
+        <com.bytedance.ee.bear.bitable.filter.view.FilterInfoView
+            android:id="@+id/filter_info_view"
+            android:padding="@dimen/space_kit_len_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.bytedance.ee.bear.widgets.universedesign.SpaceEmptyState
+            android:id="@+id/empty_state"
+            android:visibility="gone"
+            app:ud_empty_desc="@string/Bitable_Record_NoFilterCondition"
+            app:ud_empty_imageRes="@drawable/ccm_empty_neutral_no_content"
+            style="@style/SpaceEmptyStatusStyle"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

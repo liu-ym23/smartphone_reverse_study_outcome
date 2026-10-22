@@ -1,0 +1,25 @@
+package com.bytedance.android.ec.model.response.anchorv3;
+
+import com.bytedance.android.ec.model.ECUrlModel;
+import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes44.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002R \u0010\u0003\u001a\u0004\u0018\u00010\u00048\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"Lcom/bytedance/android/ec/model/response/anchorv3/ProductImageActivityStruct;", "Ljava/io/Serializable;", "()V", "detailFrame", "Lcom/bytedance/android/ec/model/ECUrlModel;", "getDetailFrame", "()Lcom/bytedance/android/ec/model/ECUrlModel;", "setDetailFrame", "(Lcom/bytedance/android/ec/model/ECUrlModel;)V", "ec-model_release"}, k = 1, mv = {1, 4, 3})
+public final class ProductImageActivityStruct implements Serializable {
+
+    @SerializedName("detail_frame")
+    private ECUrlModel detailFrame;
+
+    public ProductImageActivityStruct() {
+    }
+
+    public final ECUrlModel getDetailFrame() {
+        return this.detailFrame;
+    }
+
+    public final void setDetailFrame(ECUrlModel r100) {
+        this.detailFrame = r100;
+    }
+}

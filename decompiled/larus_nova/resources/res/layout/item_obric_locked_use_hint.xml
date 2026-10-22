@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.text.OTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="12sp"
+    android:textColor="@color/larus_neutral_50"
+    android:id="@+id/hint_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_8"
+    android:paddingStart="@dimen/dp_32"
+    android:paddingEnd="@dimen/dp_32"/>

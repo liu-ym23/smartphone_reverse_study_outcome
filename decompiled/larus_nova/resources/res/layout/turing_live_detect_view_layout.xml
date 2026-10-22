@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.bdturing.livedetect.view.AutoFixTextureView
+        android:layout_gravity="center"
+        android:id="@+id/turing_live_detect_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.bdturing.livedetect.view.DetectDebugView
+        android:id="@+id/turing_ldv_debug_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.bdturing.livedetect.view.LiveDetectMaskView
+        android:layout_gravity="center"
+        android:id="@+id/turing_ldv_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:box_top_margin_ratio="0.15"
+        app:box_width_height_ratio="1"
+        app:box_width_ratio="0.6"/>
+</FrameLayout>

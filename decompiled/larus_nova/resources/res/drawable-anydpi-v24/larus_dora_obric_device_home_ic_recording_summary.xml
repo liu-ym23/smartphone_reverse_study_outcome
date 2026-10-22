@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="#00c743"
+        android:pathData="M10,0L22,0A10,10 0,0 1,32 10L32,22A10,10 0,0 1,22 32L10,32A10,10 0,0 1,0 22L0,10A10,10 0,0 1,10 0z"/>
+    <path
+        android:fillColor="@drawable/_larus_dora_obric_device_home_ic_recording_summary__0_res_0x7f080095"
+        android:pathData="M10,0L22,0A10,10 0,0 1,32 10L32,22A10,10 0,0 1,22 32L10,32A10,10 0,0 1,0 22L0,10A10,10 0,0 1,10 0z"
+        android:fillAlpha="0.15"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M9.721,15.939C9.721,18.075 11.421,19.842 13.563,19.842C15.704,19.842 17.405,18.075 17.405,15.939V15.378H18.625V15.939C18.625,18.52 16.715,20.717 14.173,21.024V22.649H12.952V21.024C10.41,20.717 8.5,18.52 8.5,15.939V15.378H9.721V15.939ZM23.5,20.178H18.868V18.678H23.5V20.178ZM13.563,9.351C15.146,9.351 16.43,10.662 16.43,12.279V15.939C16.43,17.556 15.146,18.867 13.563,18.867C11.979,18.867 10.696,17.556 10.696,15.939V12.279C10.696,10.662 11.979,9.351 13.563,9.351ZM23.5,16.75H19.808V15.25H23.5V16.75ZM23.5,13.321H18.868V11.821H23.5V13.321Z"/>
+</vector>

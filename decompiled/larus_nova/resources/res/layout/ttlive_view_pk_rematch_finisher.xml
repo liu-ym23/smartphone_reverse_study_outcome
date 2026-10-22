@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/ttlive_bg_rematch_anchor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/anim"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="24dp"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:text="@string/ttlive_pk_rematch_for_you"/>
+    <Button
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/cancel"
+        android:background="@drawable/ttlive_bg_rematch_btn_finish"
+        android:layout_width="64dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/ttlive_cancel"/>
+</FrameLayout>

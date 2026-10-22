@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="32dp"
+    android:layout_height="32dp">
+    <com.larksuite.component.universe_design.image.UDTextAvatar
+        android:id="@+id/extra_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ud_avatar_background="@color/bg_filler"
+        app:ud_avatar_size="32dp"
+        app:ud_avatar_textColor="@color/text_caption"
+        app:ud_avatar_textSize="12sp"
+        style="@style/UDAvatar.Circle"/>
+</FrameLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/ccm_widget_common_action_panel_bg_default"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/sheet_subfragment_title_layout"/>
+    <View
+        android:id="@+id/oppanel_divider"
+        android:background="@color/line_divider_default"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_divider"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/oppanel_scrollview"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/space_kit_len_16"
+            android:paddingBottom="@dimen/space_kit_len_8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/space_kit_len_16"
+            android:paddingEnd="@dimen/space_kit_len_16">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sheet_list_item_height">
+                <com.bytedance.ee.bear.sheet.panel.panelcell.SheetSortItemView
+                    android:tag="ascendingSort"
+                    app:icon="@drawable/sheet_icon_sor_a_to_z_outlined"
+                    app:position="left"
+                    style="@style/SheetAttrItem"/>
+                <View
+                    android:layout_width="@dimen/sheet_attr_divider_width"
+                    android:layout_height="match_parent"/>
+                <com.bytedance.ee.bear.sheet.panel.panelcell.SheetSortItemView
+                    android:tag="descendingSort"
+                    app:icon="@drawable/sheet_icon_sort_z_to_a_outlined"
+                    app:position="center"
+                    style="@style/SheetAttrItem"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

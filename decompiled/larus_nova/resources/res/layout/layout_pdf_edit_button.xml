@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="end|bottom"
+    android:id="@+id/edit_button_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="4dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="bottom|right"
+        android:id="@+id/edit_button"
+        android:background="@drawable/drive_bg_pdf_menu"
+        android:padding="6dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:checked="false"
+        app:srcCompat="@drawable/ud_icon_edit_outlined"
+        app:tint="@color/white"/>
+</FrameLayout>

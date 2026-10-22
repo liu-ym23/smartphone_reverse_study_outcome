@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="end|center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="70dp"
+    android:layout_height="50dp">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/shopping_bg_inner_flow_same_product_shade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/shopping_inflow_scanmagnifier_outlined"/>
+        <TextView
+            android:textSize="12dp"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="3.5dp"
+            android:layout_marginBottom="3.5dp"
+            android:text="@string/shopping_search_same_product"
+            android:includeFontPadding="false"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+    </LinearLayout>
+</FrameLayout>

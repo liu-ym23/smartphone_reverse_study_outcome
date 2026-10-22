@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="40dp"
+    android:layout_height="48dp">
+    <CheckedTextView
+        android:id="@+id/commodity"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:checkMark="@drawable/ec_ic_preview_commerce_newstyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/ec_color_white"
+        android:gravity="bottom"
+        android:id="@+id/tv_commerce_count"
+        android:background="@drawable/ec_ic_ec_commerce_dot"
+        android:paddingLeft="4dp"
+        android:paddingTop="1dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="1dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginBottom="24dp"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="@+id/commodity"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/ec_live_start_live_commodity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commodity"
+        style="@style/ECPreviewToolAreaTextview"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

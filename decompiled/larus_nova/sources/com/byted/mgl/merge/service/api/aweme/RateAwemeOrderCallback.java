@@ -1,0 +1,8 @@
+package com.byted.mgl.merge.service.api.aweme;
+
+/* JADX INFO: loaded from: classes43.dex */
+public interface RateAwemeOrderCallback {
+    void onFailed();
+
+    void onSucceed(Boolean r100);
+}

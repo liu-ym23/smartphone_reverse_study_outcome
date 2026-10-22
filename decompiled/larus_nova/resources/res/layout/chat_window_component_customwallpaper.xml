@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.chat.chatwindow.biz.component.customwallpaper.DetectSizeChangeFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_window_customWallpaper_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chat_window_customWallpaper_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mask_chat_window_customWallpaper_container"
+        android:background="@color/static_black_80"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.ss.android.lark.chat.chatwindow.biz.component.customwallpaper.DetectSizeChangeFrameLayout>

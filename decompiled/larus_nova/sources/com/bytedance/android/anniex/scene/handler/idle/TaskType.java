@@ -1,0 +1,36 @@
+package com.bytedance.android.anniex.scene.handler.idle;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes43.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0004\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001j\u0002\b\u0002j\u0002\b\u0003j\u0002\b\u0004¨\u0006\u0005"}, d2 = {"Lcom/bytedance/android/anniex/scene/handler/idle/TaskType;", "", "NEXT_THRESHOLD_PREDICT", "HOT_USAGE_PRE_DECODE", "CLEAR_NOT_HOT_USAGE_CACHE", "anniex_release"}, k = 1, mv = {1, 4, 3})
+public final enum TaskType extends Enum<TaskType> {
+    public static final TaskType CLEAR_NOT_HOT_USAGE_CACHE = null;
+    public static final TaskType HOT_USAGE_PRE_DECODE = null;
+    public static final TaskType NEXT_THRESHOLD_PREDICT = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ TaskType[] f41195a = null;
+
+    public static TaskType valueOf(String r100) {
+        return (TaskType) r27.a.a(TaskType.class, r100);
+    }
+
+    public static TaskType[] values() {
+        return (TaskType[]) f41195a.clone();
+    }
+
+    static {
+        TaskType r100 = new TaskType("NEXT_THRESHOLD_PREDICT", 0);
+        NEXT_THRESHOLD_PREDICT = r100;
+        TaskType r101 = new TaskType("HOT_USAGE_PRE_DECODE", 1);
+        HOT_USAGE_PRE_DECODE = r101;
+        TaskType r102 = new TaskType("CLEAR_NOT_HOT_USAGE_CACHE", 2);
+        CLEAR_NOT_HOT_USAGE_CACHE = r102;
+        f41195a = new TaskType[]{r100, r101, r102};
+    }
+
+    public TaskType(String r100, int r101) {
+        super(r100, r101);
+    }
+}

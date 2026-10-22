@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_drag_hovered="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="3.5dp"/>
+            <solid android:color="@color/N900_60"/>
+            <size android:width="2dp"/>
+        </shape>
+    </item>
+    <item android:state_hovered="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="3.5dp"/>
+            <solid android:color="@color/N900_60"/>
+            <size android:width="2dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="3.5dp"/>
+            <solid android:color="@color/N900_30"/>
+            <size android:width="2dp"/>
+        </shape>
+    </item>
+</selector>

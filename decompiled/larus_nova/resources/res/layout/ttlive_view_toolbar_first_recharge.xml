@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:layout_width="36dp"
+    android:layout_height="51dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/first_recharge_animated_placeholder_icon"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/ttlive_user_first_charge_gift"
+        app:placeholderImageScaleType="centerCrop"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/first_recharge_animated_icon"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="-15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:fadeDuration="0"/>
+</RelativeLayout>

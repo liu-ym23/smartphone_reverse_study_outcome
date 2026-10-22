@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.widget.opt.MeasureOptFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/pk_audience_container"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/rev_render_view_container"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/rev_window_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/pk_cantainer"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/rev_scope_ui_container"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/rev_scope_bg_container"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.live.revlink.impl.pk.ui.MultiOptFrameLayout
+        android:id="@+id/multi_lynx_container"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.bytedance.android.livesdk.widget.opt.MeasureOptFrameLayout>

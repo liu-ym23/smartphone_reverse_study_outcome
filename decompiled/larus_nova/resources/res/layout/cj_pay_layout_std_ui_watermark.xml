@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/cj_pay_layout_std_ui_watermark_root_container"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="18dp">
+    <ImageView
+        android:id="@+id/cj_pay_layout_std_ui_watermark_iv_logo"
+        android:visibility="gone"
+        android:layout_width="271dp"
+        android:layout_height="18dp"
+        android:scaleType="centerInside"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#b0b0b4"
+        android:id="@+id/cj_pay_layout_std_ui_watermark_tv_ulpay"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cj_pay_service_info"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.live.browser.webview.view.PullDownCloseIndicatorContainer xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pull_down_close_indicator_container"
+    android:visibility="gone"
+    android:layout_width="80dp"
+    android:layout_height="22dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <View
+        android:id="@+id/pull_down_close_indicator"
+        android:layout_width="80dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="6dp"/>
+</com.bytedance.android.live.browser.webview.view.PullDownCloseIndicatorContainer>

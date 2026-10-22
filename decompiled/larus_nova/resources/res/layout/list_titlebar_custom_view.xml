@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.widgets.tagview.SpaceTagTitleView
+        android:id="@+id/loading_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:gravity="center_vertical"
+        android:id="@+id/menu_view"
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        android:tint="@color/icon_n1"
+        app:srcCompat="@drawable/ud_icon_expand_down_filled"/>
+</LinearLayout>

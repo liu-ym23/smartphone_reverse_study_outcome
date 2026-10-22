@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General">
+        <Preference
+            android:title="App version"
+            android:key="app_version"
+            android:defaultValue="0.2"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="前端调试相关">
+        <CheckBoxPreference
+            android:title="JSB Debugger"
+            android:key="docs_jsb_debugger_enable"
+            android:defaultValue="true"
+            android:summaryOn="On"
+            android:summaryOff="Off"/>
+        <PreferenceScreen
+            android:title="前端常用调试工具"
+            android:key="web_resource"
+            android:summary="指定前端包、代理前端本地开发、TTwebView"/>
+        <PreferenceScreen
+            android:title="rn调试工具"
+            android:key="rn_debug_tools"
+            android:summary="doze模式、RN调试forBitable、RN调试开关、RN预加载、Docs RN同步"/>
+    </PreferenceCategory>
+    <PreferenceScreen
+        android:title="网络相关工具"
+        android:key="net_tools"
+        android:summary="rust代理、添加请求头信息"/>
+    <PreferenceScreen
+        android:title="lynx调试工具"
+        android:key="lynx_tools"
+        android:summary="指定lynx source url、lynx调试、指定lynx调试服务器、连接lynxDevTool"/>
+    <PreferenceScreen
+        android:title="Drive调试工具"
+        android:key="drive_tools"
+        android:summary="清除Drive缓存数据、清除cleanableDrive缓存数据、\10获取cleanableDrive缓存大小、打开Drive业务测试页面、\10打开西瓜视频sdk日志进行调试"/>
+    <PreferenceScreen
+        android:title="引导调试工具"
+        android:key="onboarding_tools"
+        android:summary="首页引导、引导播放模式、引导数据存储"/>
+    <PreferenceScreen
+        android:title="埋点调试工具"
+        android:key="analytic_tools"
+        android:summary="敏感埋点check、前端ET埋点验证、debug模式上报埋点数据"/>
+    <PreferenceScreen
+        android:title="wiki调试工具"
+        android:key="wiki_tools"
+        android:summary="打开wiki目录树协同、显示wiki目录树areaId、显示wiki目录树status"/>
+    <PreferenceScreen
+        android:title="自动化测试工具"
+        android:key="auto_test_tools"
+        android:summary="AUTO TEST、WIKI AUTO TEST"/>
+    <PreferenceCategory
+        android:title="FG 预览"
+        android:key="fg_scan">
+        <PreferenceScreen
+            android:title="点击查看fg"
+            android:key="fg_preview"/>
+        <PreferenceScreen
+            android:title="Mock FG"
+            android:key="fg_mock"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="安全"
+        android:key="category_log">
+        <CheckBoxPreference
+            android:title="是否开启敏感日志"
+            android:key="sensitive_log_enable"
+            android:defaultValue="true"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+        <CheckBoxPreference
+            android:title="截屏录屏保护"
+            android:key="screen_protection"
+            android:defaultValue="true"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="预加载"
+        android:key="preload_docs">
+        <CheckBoxPreference
+            android:title="是否开启WebView模板预加载"
+            android:key="preload_docs_sdk_enable"
+            android:defaultValue="true"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Bitable"
+        android:key="bitable_tools">
+        <CheckBoxPreference
+            android:title="是否开启bitable加载缓存toast提示"
+            android:key="bitable_loader_chache_toast_enable"
+            android:defaultValue="true"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+        <CheckBoxPreference
+            android:title="是否开启bitable MockFG提示"
+            android:key="bitable_show_mock_fg_tips_enable"
+            android:defaultValue="true"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+        <PreferenceScreen
+            android:title="内存告警测试"
+            android:key="bitable_memory_warning_test"/>
+        <PreferenceScreen
+            android:title="当前机型评分"
+            android:key="bitable_device_level"
+            android:summary="unknown"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="18dp"/>
+    <gradient
+        android:startColor="@color/ttlive_fans_rank_list_start_color"
+        android:endColor="@color/ttlive_fans_rank_list_end_color"
+        android:angle="360"
+        android:centerColor="@color/ttlive_join_rank_list_mid_color"/>
+</shape>

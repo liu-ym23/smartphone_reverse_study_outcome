@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/tv_no_coupon_host"
+            android:layout_width="240dp"
+            android:layout_height="160dp"
+            android:src="@drawable/ec_coupon_host"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@color/ec_color_black_161823_75"
+            android:layout_gravity="center"
+            android:id="@+id/tv_bind_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"/>
+        <com.bytedance.android.ui.ec.widget.button.ECButton
+            android:id="@+id/tv_bind_coupon"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:text="@string/ec_bind_coupon_title"
+            style="@style/ECButton.Rectangle.Primary.Large"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.CircleProgressBar xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="end|center_vertical"
+    android:visibility="gone"
+    android:layout_width="?attr/larus_dp_18"
+    android:layout_height="?attr/larus_dp_18"
+    app:larus_maxProgress="100"
+    app:larus_progress="75"
+    app:larus_progressbarBackgroundColor="@android:color/transparent"
+    app:larus_progressbarGradientEndColor="?attr/larus_side_bar_message_progress_gradient_end"
+    app:larus_progressbarGradientStartColor="?attr/larus_side_bar_message_progress_gradient_start"
+    app:larus_progressbarInset="?attr/larus_dp_1"
+    app:larus_radius="?attr/larus_dp_9"
+    app:larus_strokeWidth="?attr/larus_dp_2_5"/>

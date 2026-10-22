@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.dux.widget.DialogRootView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:background="#ffffff"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    app:cornerRadiusLeftBottom="16dp"
+    app:cornerRadiusLeftTop="16dp"
+    app:cornerRadiusRightBottom="16dp"
+    app:cornerRadiusRightTop="16dp">
+    <ViewStub
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:layout_gravity="end|top"
+        android:id="@+id/close_container"
+        android:background="@drawable/dux_icon_container_bg"
+        android:visibility="gone"
+        android:layout_width="28sp"
+        android:layout_height="28sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:id="@+id/btn_close"
+            android:layout_width="16sp"
+            android:layout_height="16sp"
+            android:src="@drawable/ic_s_s_xmark_outlined_16"/>
+    </FrameLayout>
+</com.bytedance.dux.widget.DialogRootView>

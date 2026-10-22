@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.interactivity.enteranim.view.UserSpecialEntryView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="start|bottom"
+    android:id="@+id/view_user_special_entry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>

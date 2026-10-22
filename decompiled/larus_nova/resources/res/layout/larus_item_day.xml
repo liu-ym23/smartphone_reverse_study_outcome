@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="?attr/larus_dp_16"
+    android:textColor="@color/larus_neutral_100"
+    android:gravity="center"
+    android:id="@+id/day_text"
+    android:paddingTop="12.5dp"
+    android:paddingBottom="12.5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-medium"/>

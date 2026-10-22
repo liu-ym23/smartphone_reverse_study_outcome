@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/status_loading"
+    android:background="@color/white"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:layout_gravity="center"
+        android:layout_width="@dimen/ttlive_default_list_progressbar_size"
+        android:layout_height="@dimen/ttlive_default_list_progressbar_size"
+        style="@style/ttlive_wallet_hs_progressbar"/>
+</FrameLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="34dp"
+    android:viewportWidth="34"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M16.352,25.25C16.495,25.25 16.638,25.262 16.778,25.284L16.351,25.873L15.923,25.284C16.064,25.262 16.207,25.25 16.352,25.25Z"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="2.5"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M2.738,9.779C6.513,6.927 11.121,5.359 15.882,5.334C20.703,5.308 25.384,6.867 29.215,9.746"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M6.509,14.965C7.48,14.292 8.523,13.723 9.62,13.269C11.642,12.431 13.809,12 15.998,12C18.187,12 20.354,12.431 22.376,13.269C23.473,13.723 24.515,14.292 25.487,14.965"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10.42,20.367C10.983,19.989 11.584,19.668 12.215,19.41C13.617,18.837 15.131,18.59 16.642,18.688C18.154,18.785 19.623,19.225 20.94,19.973C21.157,20.097 21.369,20.228 21.575,20.367"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M28,21C29.381,21 30.5,22.119 30.5,23.5V24.5H30.75C31.578,24.5 32.25,25.172 32.25,26V29.5C32.25,30.328 31.578,31 30.75,31H25.25C24.422,31 23.75,30.328 23.75,29.5V26C23.75,25.172 24.422,24.5 25.25,24.5H25.5V23.5C25.5,22.119 26.619,21 28,21ZM28,27C27.724,27 27.5,27.224 27.5,27.5V28C27.5,28.276 27.724,28.5 28,28.5C28.276,28.5 28.5,28.276 28.5,28V27.5C28.5,27.224 28.276,27 28,27ZM28,22C27.172,22 26.5,22.672 26.5,23.5V24.5H29.5V23.5C29.5,22.672 28.828,22 28,22Z"/>
+</vector>

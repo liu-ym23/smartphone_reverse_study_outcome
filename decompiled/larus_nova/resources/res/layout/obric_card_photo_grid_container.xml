@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.bmhome.chat.layout.widget.AtMostHeightRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/dp_8"
+    android:paddingTop="@dimen/dp_8"
+    android:paddingRight="@dimen/dp_8"
+    android:paddingBottom="@dimen/dp_8"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

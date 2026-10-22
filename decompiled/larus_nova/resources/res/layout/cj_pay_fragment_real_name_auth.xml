@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_root_layout"
+    android:background="@color/cj_pay_color_trans"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_gravity="bottom"
+        android:id="@+id/cj_pay_content_layout_auth"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/cj_pay_fragment_authorization_layout"/>
+    <include
+        android:layout_gravity="bottom"
+        android:id="@+id/cj_pay_content_layout_pay"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/cj_pay_fragment_auth_checkout_counter_layout"/>
+    <include
+        android:layout_gravity="bottom"
+        android:id="@+id/cj_pay_content_layout_auth_noise_reduction"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/cj_pay_fragment_authorization_noise_reduction_layout"/>
+    <com.android.ttcjpaysdk.base.ui.widget.CJPayTextLoadingView
+        android:layout_gravity="center"
+        android:id="@+id/cj_pay_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

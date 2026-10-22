@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:textSize="?attr/larus_sp_16"
+        android:id="@+id/prompt_edit"
+        android:background="@drawable/larus_bg_bot_edit"
+        android:paddingTop="?attr/larus_dp_16"
+        android:paddingBottom="?attr/larus_dp_16"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?attr/larus_dp_12"
+        android:maxHeight="?attr/larus_dp_200"
+        android:hint="@string/larus_describe_image_textBox"
+        android:singleLine="false"
+        android:inputType="textMultiLine"
+        android:imeOptions="actionDone"
+        android:paddingStart="?attr/larus_dp_16"
+        android:paddingEnd="?attr/larus_dp_62"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/larus_EditTextStyle"/>
+    <com.larus.bot.impl.feature.edit.feature.bgimage.aigen.img2img.widget.PromptInputButtonView
+        android:id="@+id/prompt_gen_button"
+        android:layout_width="?attr/larus_dp_36"
+        android:layout_height="?attr/larus_dp_36"
+        android:layout_marginBottom="?attr/larus_dp_10"
+        android:layout_marginEnd="?attr/larus_dp_10"
+        app:layout_constraintBottom_toBottomOf="@+id/prompt_edit"
+        app:layout_constraintEnd_toEndOf="@+id/prompt_edit"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

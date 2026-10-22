@@ -1,0 +1,66 @@
+{
+  "scene": 8,
+  "ui_layout": 14,
+  "sei_ver": 24,
+  "spatial_id": -1,
+  "orientation": 1,
+  "scale": 1,
+  "align": 5,
+  "adjust_map": {
+    "android" : {
+        "ui_container":{
+            "top":0,
+            "left":0,
+            "bottom":0,
+            "right":0
+        }
+    },
+    "ios": {
+        "ui_container":{
+            "top":0,
+            "left":0,
+            "bottom":0,
+            "right":0
+        }
+    }
+  },
+  "canvas": {
+    "w": 480,
+    "h": 360,
+    "background_color":"#322542"
+  },
+  "content": {
+    "x": 0,
+    "y": 0,
+    "w": 480,
+    "h": 360
+  },
+  "regions": [
+      {
+          "z": 0,
+          "p": 0,
+          "x": 0,
+          "y": 0,
+          "w": 480,
+          "h": 360
+        },
+        {
+          "z":0,
+          "p": 1,
+          "x":14,
+          "y":201,
+          "w":90,
+          "h":90
+      },
+      {
+          "z":0,
+          "p": 2,
+          "x":14,
+          "y":111,
+          "w":90,
+          "h":90
+      }
+  ],
+  "seats": [
+  ]
+}

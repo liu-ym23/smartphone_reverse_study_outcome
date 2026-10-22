@@ -1,0 +1,9 @@
+package io.noties.markwon.ext.tables;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* JADX INFO: loaded from: classes41.dex */
+@Retention(RetentionPolicy.SOURCE)
+public @interface CustomTableRowSpan$Alignment {
+}

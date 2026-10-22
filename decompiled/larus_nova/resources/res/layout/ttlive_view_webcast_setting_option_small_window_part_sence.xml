@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/float_window_scene_switch"
+    android:padding="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="#e6ffffff"
+        android:gravity="center"
+        android:id="@+id/scene_switch_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_float_window_setting_scene_desc"
+        android:includeFontPadding="false"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/scene_switch_title_question_circle"
+        android:background="@drawable/ttlive_ic_float_setting_questioncircle"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/scene_switch_title"/>
+    <com.bytedance.android.livesdk.chatroom.ui.LiveSwitchButton
+        android:id="@+id/scene_switch_button"
+        android:layout_width="43dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        app:lsb_background="@color/ttlive_prelive_setting_switch_dark_fill"
+        app:lsb_button_color="#ffffff"
+        app:lsb_checked_color="#67dca0"
+        app:lsb_effect_duration="50"
+        app:lsb_shadow_radius="0dp"
+        app:lsb_show_indicator="false"
+        app:lsb_uncheck_color="@color/transparent"
+        app:lsb_uncheckbutton_color="#d9ffffff"/>
+</RelativeLayout>

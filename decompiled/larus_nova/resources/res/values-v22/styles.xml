@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V22.Theme.AppCompat">
+    </style>
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V22.Theme.AppCompat.Light">
+    </style>
+    <style name="Base.V22.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat">
+        <item name="actionModeShareDrawable">?android:attr/actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:attr/editTextBackground</item>
+    </style>
+    <style name="Base.V22.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light">
+        <item name="actionModeShareDrawable">?android:attr/actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:attr/editTextBackground</item>
+    </style>
+    <style name="MmDoubaoTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/flow_ud_bg_base_1</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/flow_ud_bg_base_1</item>
+        <item name="android:useLocalePreferredLineHeightForMinimum">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="MmFeishuTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/bg_body</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/bg_body</item>
+        <item name="android:useLocalePreferredLineHeightForMinimum">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.OApp" parent="@style/Theme.AppCompat.DayNight">
+        <item name="android:windowBackground">@color/larus_base_1</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/larus_base_1</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+        <item name="android:useLocalePreferredLineHeightForMinimum">false</item>
+        <item name="colorPrimary">@color/larus_primary_50</item>
+        <item name="colorSecondary">@color/larus_primary_50</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="larus_EditTextStyle" parent="">
+        <item name="android:textColor">@color/larus_neutral_100</item>
+        <item name="android:textColorHighlight">@color/larus_edit_text_highlight</item>
+        <item name="android:textColorHint">@color/larus_neutral_50</item>
+        <item name="android:textCursorDrawable">@drawable/larus_cursor_color</item>
+        <item name="android:useLocalePreferredLineHeightForMinimum">false</item>
+        <item name="colorAccent">@color/larus_primary_50</item>
+    </style>
+    <style name="larus_SpringEditTextStyle" parent="">
+        <item name="android:textColor">@color/larus_neutral_100_day</item>
+        <item name="android:textColorHighlight">@color/larus_edit_text_highlight_day</item>
+        <item name="android:textColorHint">@color/larus_neutral_50_day</item>
+        <item name="android:textCursorDrawable">@drawable/larus_cursor_color_spring</item>
+        <item name="android:useLocalePreferredLineHeightForMinimum">false</item>
+        <item name="colorAccent">@color/larus_primary_50_day</item>
+    </style>
+    <style name="larus_compat_target_35" parent="">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+        <item name="android:useLocalePreferredLineHeightForMinimum">false</item>
+    </style>
+</resources>

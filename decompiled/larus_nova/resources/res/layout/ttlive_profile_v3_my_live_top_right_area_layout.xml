@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_gravity="right"
+    android:orientation="horizontal"
+    android:id="@+id/ttlive_profile_top_right_layout"
+    android:background="@drawable/ttlive_bg_50black_radius16"
+    android:paddingLeft="12dp"
+    android:paddingTop="6dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="12dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/ttlive_profile_top_right_main_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.live.room.api.view.SimpleIndicatorTextSwitcher2
+        android:id="@+id/ttlive_profile_top_right_carousel_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

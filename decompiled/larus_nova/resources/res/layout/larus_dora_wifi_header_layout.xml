@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/dora_wifi_head"
+        android:padding="?attr/larus_dp_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="?attr/larus_dp_72"
+            android:layout_height="?attr/larus_dp_72"
+            android:layout_marginTop="?attr/larus_dp_90"
+            android:src="@drawable/larus_dora_wifi_icon"/>
+        <com.larus.dora.impl.view.DoraTextView
+            android:textSize="?attr/larus_sp_17"
+            android:textColor="@color/neutral_100"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_20"
+            android:text="@string/larus_dora_wifi_cn"/>
+        <com.larus.dora.impl.view.DoraTextView
+            android:textSize="?attr/larus_sp_15"
+            android:textColor="@color/neutral_50"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_12"
+            android:text="@string/larus_dora_wifi_desc_cn"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

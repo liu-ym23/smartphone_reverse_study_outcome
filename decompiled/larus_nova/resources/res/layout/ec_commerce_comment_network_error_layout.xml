@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/ec_commerce_comment_network_error_layout_465360767"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/ec_commerce_comment_network_error_layout_224984780"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ec_commerce_ic_network_error_placeholder"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/commerce_color_80161823"
+        android:id="@+id/ec_commerce_comment_network_error_layout_44674643"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/shopping_tip_network_error"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/shopping_color_161823"
+        android:gravity="center"
+        android:id="@+id/ec_commerce_btn_network_retry"
+        android:background="@drawable/ec_commerce_bg_refresh_btn"
+        android:layout_width="231dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/shopping_tip_refresh"/>
+</LinearLayout>

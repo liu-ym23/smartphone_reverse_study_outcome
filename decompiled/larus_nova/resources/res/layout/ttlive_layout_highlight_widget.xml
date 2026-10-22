@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="240dp"
+    android:layout_height="240dp"
+    android:layout_centerInParent="true">
+    <com.bytedance.android.livesdk.interactivity.pin.ui.HighlightViewPager
+        android:id="@+id/dux_banner"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:overScrollMode="never"/>
+    <com.bytedance.android.livesdk.interactivity.api.highlight.indicator.LiveDuxCarouselIndicator
+        android:layout_gravity="end|top"
+        android:id="@+id/dux_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+</FrameLayout>

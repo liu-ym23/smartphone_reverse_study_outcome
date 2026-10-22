@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.ui.layout.LKUIRoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/dp_24"
+        app:srcCompat="@drawable/illustration_empty_negative_500"/>
+    <com.larksuite.component.ui.layout.LKUIRoundLinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/dp_24">
+        <TextView
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/ud_N500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Lark_Card_LoadingFailed"/>
+        <TextView
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/ud_N500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Lark_SmartCard_Comma"/>
+        <TextView
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/ud_B600"
+            android:id="@+id/btn_retry_render"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Lark_Card_TryAgain"/>
+    </com.larksuite.component.ui.layout.LKUIRoundLinearLayout>
+</com.larksuite.component.ui.layout.LKUIRoundLinearLayout>

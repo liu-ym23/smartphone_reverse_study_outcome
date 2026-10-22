@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_page_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/annie_debug_page_info"/>
+    <Button
+        android:id="@+id/btn_refresh_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/annie_debug_refresh"/>
+    <Button
+        android:id="@+id/btn_container_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/annie_debug_container_setting"/>
+    <Button
+        android:id="@+id/btn_dev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/annie_debug_more_debug"/>
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/annie_debug_scan"/>
+</LinearLayout>

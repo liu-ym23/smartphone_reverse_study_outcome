@@ -1,0 +1,64 @@
+package com.bytedance.android.livesdk.livecommerce.promotion.card.view;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import androidx.appcompat.widget.AppCompatTextView;
+import com.larus.nova.R;
+import com.ss.android.download.api.constant.BaseConstants;
+import com.ss.android.lark.utils.statistics.PerfLog;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes10.dex */
+@Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\u0018\u00002\u00020\u0001B'\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"Lcom/bytedance/android/livesdk/livecommerce/promotion/card/view/ECNewCountDownView;", "Landroidx/appcompat/widget/AppCompatTextView;", "Landroid/content/Context;", PerfLog.PARAM_KEY_CONTEXT_ID, "Landroid/util/AttributeSet;", "attrs", "", "defStyleAttr", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "livecommerce_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class ECNewCountDownView extends AppCompatTextView {
+    public ECNewCountDownView(Context r100) {
+        AttributeSet r101 = null;
+        this(r100, r101, 6, 0);
+    }
+
+    public ECNewCountDownView(Context r100, AttributeSet r101) {
+        this(r100, r101, 4, 0);
+    }
+
+    public ECNewCountDownView(Context r100, AttributeSet r101, int r102) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        super(r100, r101, r102);
+    }
+
+    public /* synthetic */ ECNewCountDownView(Context r100, AttributeSet r101, int r102, int r103) {
+        if ((r102 & 2) == 0) goto L5;
+        r101 = null;
+    L5:
+        this(r100, r101, 0);
+    }
+
+    public static void x(ECNewCountDownView r100, long r101, String r102, int r110) {
+        if ((r110 & 2) == 0) goto L5;
+        String r103 = "";
+    L7:
+        if ((r110 & 4) == 0) goto L9;
+        r102 = "";
+    L9:
+        r100.getClass();
+        Intrinsics.checkNotNullParameter(r103, "prefix");
+        Intrinsics.checkNotNullParameter(r102, "extraText");
+        double r104 = r101;
+        if (r104 <= 0) goto L12;
+        int r105 = (int) (r104 / ((double) BaseConstants.Time.HOUR));
+        double r106 = r104 - ((double) (BaseConstants.Time.HOUR * r105));
+        int r107 = (int) (r106 / ((double) 60000));
+        int r108 = (int) ((r106 - ((double) (60000 * r107))) / ((double) 1000));
+    L13:
+        r100.setText(r103 + r100.getContext().getString(R.string.ec_promotion_list_time_format, new Object[]{Integer.valueOf(r105)}) + ':' + r100.getContext().getString(R.string.ec_promotion_list_time_format, new Object[]{Integer.valueOf(r107)}) + ':' + r100.getContext().getString(R.string.ec_promotion_list_time_format, new Object[]{Integer.valueOf(r108)}) + r102);
+        return;
+    L12:
+        r108 = 0;
+        r105 = 0;
+        r107 = 0;
+        goto L13
+    L5:
+        r103 = null;
+        goto L7
+    }
+}

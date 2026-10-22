@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/mall_empty_view"
+    android:background="@color/POIBgPrimary"
+    android:paddingTop="60dp"
+    android:paddingBottom="60dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_empty"
+        android:layout_width="@dimen/default_image_width"
+        android:layout_height="@dimen/default_image_height"
+        android:src="@drawable/duximg_illu_s_noitems_w3h2"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="14sp"
+        android:textColor="@color/POITextTertiary"
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/poi_mall_empty"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.livecommerce.promotion.cardV2.widget.ECProductBottomView
+        android:id="@+id/pbv_product_bottom"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"/>
+    <com.bytedance.android.livesdk.livecommerce.promotion.cardV2.widget.ECProductBottomGeneralView
+        android:id="@+id/pbv_product_bottom_general_banner"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+</merge>

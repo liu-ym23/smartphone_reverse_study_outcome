@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="52dp"
+    android:width="52dp"
+    android:viewportWidth="52"
+    android:viewportHeight="52">
+    <group>
+        <clip-path android:pathData="M8,0 H44 A8,8 0 0 1 52,8 V44 A8,8 0 0 1 44,52 H8 A8,8 0 0 1 0,44 V8 A8,8 0 0 1 8,0 Z"/>
+        <group
+            android:pivotX="26"
+            android:pivotY="26"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:rotation="90"
+            android:translateX="1"
+            android:translateY="0">
+            <path
+                android:fillColor="@drawable/_ttlive_effect_bg_beauty_presets_item__0_res_0x7f080119"
+                android:pathData="M0 0V52H52V0"/>
+        </group>
+    </group>
+</vector>

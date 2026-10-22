@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="56dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <com.ss.android.lark.officesdk.minutes.ui.foundation.widget.LineHeightTextView
+        android:textSize="17sp"
+        android:textColor="@color/office_sdk_mm_color_ai_interpretation_item_text_doubao"
+        android:ellipsize="end"
+        android:id="@+id/tvAIInterpretationLanguage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivAIInterpretationChecked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/ivAIInterpretationChecked"
+        android:visibility="invisible"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/office_sdk_mm_ic_check_doubao"
+        app:tint="@color/office_sdk_mm_color_ai_interpretation_primary_doubao"/>
+    <View
+        android:id="@+id/aiInterpretationDividerLine"
+        android:background="@color/office_sdk_mm_color_ai_interpretation_divider_doubao"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

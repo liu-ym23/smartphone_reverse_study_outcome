@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#0d1530"
+                android:endColor="#0a122c"
+                android:angle="90"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="center_horizontal"
+        android:drawable="@drawable/ttlive_ic_anti_addiction_no_network"/>
+</layer-list>

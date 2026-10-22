@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:alpha="0.3"
+    android:autoMirrored="true"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M20,10V15.5C20,17.709 18.209,19.5 16,19.5C13.791,19.5 12,17.709 12,15.5V10C12,7.791 13.791,6 16,6C18.209,6 20,7.791 20,10Z"
+        android:strokeColor="@color/larus_neutral_100_day"
+        android:strokeWidth="2"/>
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M8,15V15.5C8,19.918 11.582,23.5 16,23.5V23.5M24,15V15.5C24,19.918 20.418,23.5 16,23.5V23.5M16,23.5V27"
+        android:strokeColor="@color/larus_neutral_100_day"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"/>
+</vector>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:background="@drawable/cj_pay_bg_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cj_pay_height_470">
+        <include
+            android:id="@+id/cj_pay_cvv_title_bar"
+            layout="@layout/cj_pay_view_titlebar_noise_reduction_layout"/>
+        <LinearLayout
+            android:gravity="center"
+            android:background="@drawable/cj_pay_bg_cvv_round_corner"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="74dp"
+            android:layout_marginRight="20dp">
+            <ImageView
+                android:layout_width="210dp"
+                android:layout_height="124dp"
+                android:src="@drawable/cj_pay_cvv_example_pic"/>
+        </LinearLayout>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="?attr/cj_pay_text_secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="254dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/cj_pay_cvv_example_page_tips"/>
+    </RelativeLayout>
+</FrameLayout>

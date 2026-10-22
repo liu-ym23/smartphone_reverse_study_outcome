@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="16dp"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:layout_marginEnd="16dp"
+    android:layout_alignParentEnd="true">
+    <com.ss.android.ugc.tools.view.style.StyleTextView
+        android:textStyle="bold"
+        android:textColor="@color/larus_tools_media_import_selector_next_step_text_color"
+        android:gravity="center"
+        android:id="@+id/sure_view"
+        android:background="?attr/larus_tools_media_import_selector_next_step_bg"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="@string/larus_album_next_btn"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:ts_enable_text_color="false"
+        app:ts_font_type="medium"
+        style="@style/tools_font_size_30"/>
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.card_list.widgets.nest.MaxHeightRecyclerView
+        android:id="@+id/card_list_rev"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.shopping.card_list.widgets.LoadMoreFooterView
+        android:id="@+id/load_more_footer_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <com.bytedance.android.shopping.card_list.widgets.CardListGULView
+        android:id="@+id/nested_gul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shopping_anchor_v4_head_view_size_layout_710792333"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/size_image"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:actualImageScaleType="fitCenter"/>
+    <View
+        android:layout_gravity="bottom"
+        android:id="@+id/size_image_layer"
+        android:background="@drawable/anchor_v4_head_view_size_bottom_layer"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

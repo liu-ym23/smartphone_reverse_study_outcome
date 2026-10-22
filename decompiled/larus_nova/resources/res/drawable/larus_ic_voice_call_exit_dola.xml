@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="76dp"
+    android:width="76dp"
+    android:viewportWidth="76"
+    android:viewportHeight="76">
+    <path
+        android:fillColor="@color/larus_realtime_dola_status_text_bg_color"
+        android:pathData="M0,38C0,17.013 17.013,0 38,0C58.987,0 76,17.013 76,38C76,58.987 58.987,76 38,76C17.013,76 0,58.987 0,38Z"/>
+    <path
+        android:fillColor="#ff3b30"
+        android:pathData="M27.393,45.778L45.778,27.393A2,2 84.441,0 1,48.607 27.393L48.607,27.393A2,2 84.441,0 1,48.607 30.222L30.222,48.607A2,2 0,0 1,27.393 48.607L27.393,48.607A2,2 0,0 1,27.393 45.778z"/>
+    <path
+        android:fillColor="#ff3b30"
+        android:pathData="M30.222,27.393L48.607,45.777A2,2 107.853,0 1,48.607 48.606L48.607,48.606A2,2 107.853,0 1,45.778 48.606L27.393,30.221A2,2 0,0 1,27.393 27.393L27.393,27.393A2,2 0,0 1,30.222 27.393z"/>
+</vector>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="16dp">
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/ttlive_interact_default_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_guest_honor"
+        android:includeFontPadding="false"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_honor_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/ttlive_interact_pk_feedback_tag_bg_unselected"
+        android:id="@+id/tv_honor_count"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="3+"
+        android:includeFontPadding="false"
+        android:layout_marginStart="2dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ttlive_guest_battle_setting_right_arrow"/>
+</merge>

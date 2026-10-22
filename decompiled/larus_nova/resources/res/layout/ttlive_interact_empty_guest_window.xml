@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_container"
+    android:background="@drawable/ttlive_interact_guest_empty_window_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/ttlive_empty_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ll_empty_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/plus"
+            android:visibility="visible"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ttlive_icon_apply_plus_new"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:textSize="12sp"
+            android:textColor="#b3ffffff"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_empty_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/ttlive_paid_link_waiting_text"
+            android:includeFontPadding="false"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.chatroom.ui.LiveRoundImageView
+        android:id="@+id/backup_cover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ttlive_radius="8dp"/>
+    <View
+        android:background="@drawable/ttlive_bg_mic_room_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:id="@+id/backup_tip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/ttlive_mic_room_backup_tip_1"
+        app:layout_constraintBottom_toTopOf="@+id/backup_tip2"
+        app:layout_constraintRight_toRightOf="@+id/backup_cover"/>
+    <TextView
+        android:textSize="11dp"
+        android:textColor="@color/white"
+        android:id="@+id/backup_tip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/ttlive_mic_room_backup_tip_2"
+        app:layout_constraintBottom_toBottomOf="@+id/backup_cover"
+        app:layout_constraintRight_toRightOf="@+id/backup_cover"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

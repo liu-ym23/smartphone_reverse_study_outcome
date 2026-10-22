@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/top_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ttlive_fast_match_title_container_height"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+    <TextView
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#80161823"
+        android:id="@+id/tv_cancel_or_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_interact_anchor_link_cancel_apply"/>
+</LinearLayout>

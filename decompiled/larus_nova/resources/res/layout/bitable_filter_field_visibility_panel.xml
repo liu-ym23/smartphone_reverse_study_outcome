@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_float_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.ee.bear.bitable.filter.view.ddui.FilterInfoViewV2
+            android:id="@+id/filter_info_view"
+            android:padding="@dimen/space_kit_len_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/addNewRuleBtn"
+            android:background="@drawable/facade_round_around_xl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_kit_len_48"
+            android:layout_marginBottom="@dimen/space_kit_len_16"
+            android:paddingStart="@dimen/space_kit_len_16"
+            android:paddingEnd="@dimen/space_kit_len_16"
+            android:layout_marginStart="@dimen/space_kit_len_16"
+            android:layout_marginEnd="@dimen/space_kit_len_16"
+            android:backgroundTint="@color/facade_selector_item_float">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/addBtnIcon"
+                android:layout_width="@dimen/space_kit_len_20"
+                android:layout_height="@dimen/space_kit_len_20"
+                android:tint="@color/primary_pri_500"
+                app:srcCompat="@drawable/ud_icon_add_outlined"/>
+            <TextView
+                android:textSize="@dimen/space_kit_font_16"
+                android:textColor="@color/primary_pri_500"
+                android:ellipsize="end"
+                android:id="@+id/addBtnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginStart="@dimen/space_kit_len_12"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

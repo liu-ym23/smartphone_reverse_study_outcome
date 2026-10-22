@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/sec_approve_vartar_bg"
+    android:paddingLeft="4dp"
+    android:paddingTop="4dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.universe_design.image.UDAvatar
+        android:layout_gravity="center"
+        android:id="@+id/view_avatar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/facade_common_avatar_place_holder"
+        app:ud_avatar_size="mini"
+        style="@style/UDAvatar.Circle"/>
+    <TextView
+        android:textColor="@color/text_title"
+        android:id="@+id/avatar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:maxWidth="90dp"
+        android:text="wangyi"
+        android:singleLine="true"/>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/task_skill_state_icon"
+        android:layout_width="?attr/larus_dp_48"
+        android:layout_height="?attr/larus_dp_48"
+        app:srcCompat="@drawable/larus_ic_skill_light"
+        app:tint="?attr/larus_neutral_30"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_sp_15"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/task_skill_state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_12"
+        android:text="@string/larus_LarkIM_Common_LoadFailed_EmptyState"
+        android:fontFamily="sans-serif-medium"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_sp_15"
+        android:textColor="?attr/larus_static_white"
+        android:id="@+id/task_skill_state_action"
+        android:background="@drawable/larus_bg_task_skill_retry"
+        android:paddingLeft="?attr/larus_dp_20"
+        android:paddingTop="?attr/larus_dp_10"
+        android:paddingRight="?attr/larus_dp_20"
+        android:paddingBottom="?attr/larus_dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_16"
+        android:text="@string/larus_loading_error_msg"
+        android:fontFamily="sans-serif-medium"/>
+</LinearLayout>

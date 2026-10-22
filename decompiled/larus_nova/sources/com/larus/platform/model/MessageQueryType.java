@@ -1,0 +1,37 @@
+package com.larus.platform.model;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes31.dex */
+@Retention(RetentionPolicy.RUNTIME)
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0002\b\u0002\b\u0086\u0002\u0018\u0000 \u00022\u00020\u0001:\u0001\u0002B\u0000¨\u0006\u0003"}, d2 = {"Lcom/larus/platform/model/MessageQueryType;", "", "Companion", "platform_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public @interface MessageQueryType {
+    public static final a Companion = null;
+    public static final long MESSAGE_QUERY_TYPE_FILE_UPLOAD = 30100;
+    public static final long MESSAGE_QUERY_TYPE_HOMEWORK_CORRECTION = 10101;
+    public static final long MESSAGE_QUERY_TYPE_IMAGE_CREATION = 10100;
+    public static final long MESSAGE_QUERY_TYPE_IMAGE_SEARCH = 10300;
+    public static final long MESSAGE_QUERY_TYPE_IMAGE_UPLOAD = 10200;
+    public static final long MESSAGE_QUERY_TYPE_UNSPECIFIED = 0;
+    public static final long MESSAGE_QUERY_TYPE_VIDEO_CREATION = 20100;
+    public static final long MESSAGE_QUERY_TYPE_VIDEO_UPLOAD = 20200;
+
+    public static final class a {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ a f365473a = null;
+
+        static {
+            f365473a = new a();
+        }
+
+        public a() {
+        }
+    }
+
+    static {
+        Companion = a.f365473a;
+    }
+}

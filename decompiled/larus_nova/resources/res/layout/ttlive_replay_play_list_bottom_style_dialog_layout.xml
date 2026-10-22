@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vs_action_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/ttlive_replay_play_list_container"
+        android:background="@drawable/ttlive_replay_bg_action_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:maxHeight="494dp"
+        android:minHeight="345dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_max="494dp"
+        app:layout_constraintHeight_min="345dp"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <ImageView
+        android:id="@+id/ttlive_replay_play_list_close_icon"
+        android:visibility="gone"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ttlive_vs_top_right_close_icon"
+        app:layout_constraintRight_toRightOf="@+id/ttlive_replay_play_list_container"
+        app:layout_constraintTop_toTopOf="@+id/ttlive_replay_play_list_container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

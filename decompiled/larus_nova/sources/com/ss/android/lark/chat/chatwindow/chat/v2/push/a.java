@@ -1,0 +1,10 @@
+package com.ss.android.lark.chat.chatwindow.chat.v2.push;
+
+import dagger.Module;
+
+/* JADX INFO: loaded from: classes35.dex */
+@Module
+public final class a {
+    public a() {
+    }
+}

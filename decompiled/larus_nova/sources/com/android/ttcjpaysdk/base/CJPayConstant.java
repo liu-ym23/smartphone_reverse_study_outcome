@@ -1,0 +1,159 @@
+package com.android.ttcjpaysdk.base;
+
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* JADX INFO: loaded from: classes28.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00032\u00020\u0001:\u0001\u0003B\u0005¢\u0006\u0002\u0010\u0002¨\u0006\u0004"}, d2 = {"Lcom/android/ttcjpaysdk/base/CJPayConstant;", "", "()V", "Companion", "cj-host-service-api_release"}, k = 1, mv = {1, 6, 0}, xi = 48)
+public final class CJPayConstant {
+    public static final String BOE_SUFFIX = ".boe-gateway.byted.org";
+    public static final String CAIJING_SAAS_REQUEST_ENV_HEADER = "caijing_saas_request_env";
+    public static final int CJ_PAY_BIO_TYPE_FINGERPRINT = 1;
+    public static final int CJ_PAY_BIO_TYPE_NONE = 0;
+    public static final String CJ_PAY_BUSINESS_SCENE_PRE_PAY_ECNY = "Pre_Pay_Ecny";
+    public static final String CJ_PAY_CREDIT_PAY_ACTIVATE_STATUS_INSUFFICIENT = "insufficient_quota";
+    public static final String CJ_PAY_CREDIT_PAY_ACTIVATE_STATUS_SUCCESS = "activate_success";
+    public static final String CJ_PAY_ENTER_PAY_FLOW_FOREGROUND = "wallet_rd_enter_pay_flow_foreground";
+    public static final String CJ_PAY_FINGER_PAGE_STYLE_HALF = "half_page";
+    public static final String CJ_PAY_LOSS_FOR_BACKGROUND = "cjpay_enter_background_pay_loss";
+    public static final String CJ_PAY_LOSS_FOR_BACKGROUND_LOG_NAME = "wallet_rd_enter_background_pay_loss";
+    public static final String CJ_PAY_ON_ENTER_BACKGROUND = "1";
+    public static final String CJ_PAY_ON_ENTER_FOREGROUND = "0";
+    public static final String CJ_PAY_PAY_TYPE_ECNY = "ecnypay";
+    public static final String CJ_PAY_PAY_TYPE_PWD_OPT = "pwd_opt_pay";
+    public static final String CJ_PAY_PRIORITY_RETAIN_INFO_KEY = "home_page_priority_retain";
+    public static final String CJ_PAY_REAL_NAME_LYNX_PAGE = "real_name_lynx";
+    public static final String CJ_PAY_RETAIN_INFO_V2_DEFAULT_NATIVE_KEY = "default_native_retain_info";
+    public static final String CJ_PAY_RETAIN_INFO_V2_INFO_KEY = "home_page_info";
+    public static final String CJ_PAY_RETAIN_INFO_V2_INFO_KEY2 = "merchant_retain_info";
+    public static final String CJ_PAY_RETAIN_INFO_V2_SCHEMA_KEY = "lynx_schema";
+    public static final String CJ_PAY_RETAIN_INFO_V2_USE_SCHEMA_KEY = "use_lynx_schema";
+    public static final String CJ_PAY_SHARE_ASSET_CODE_BANK_CARD = "BANKCARD_SHARE";
+    public static final String CJ_PAY_SHARE_ASSET_CODE_NEW_BANK_CARD = "NEW_BANKCARD_SHARE";
+    public static final String CJ_PAY_SHARE_ASSET_CODE_ORDER_SHARE = "ORDER_SHARE";
+    public static final String CJ_PAY_SHARE_PARAMS_KEY_ASSET_TYPE = "assetStdAssetType";
+    public static final String CJ_PAY_SHARE_PARAMS_KEY_IS_ASSET_STANDARD = "isAssetStd";
+    public static final String CJ_PAY_SHARE_PARAMS_LOG_METHOD_STR = "logMethodStr";
+    public static final String CJ_PAY_SHOW_PAY_TYPE_SINGLE = "single";
+    public static final String CJ_PAY_SP_KEY_CPM_KEEP_DIALOG_SHOWED_WITH_TRADE_NO = "cj_pay_sp_key_cpm_keep_dialog_showed_with_trade_no";
+    public static final String CJ_PAY_SP_KEY_ENABLE_FINGERPRINT_SHOW_FACE_PROTOCOL_DIALOG = "cj_pay_sp_key_enable_fingerprint_show_face_protocol_dialog";
+    public static final String CJ_PAY_SP_KEY_KEEP_DIALOG_RETAIN_INFO_SP = "cj_pay_sp_key_keep_dialog_retain_info_sp";
+    public static final String CJ_PAY_SP_KEY_KEEP_DIALOG_SHOWED_WITH_TRADE_NO = "cj_pay_sp_key_keep_dialog_showed_with_trade_no";
+    public static final String CJ_PAY_SP_KEY_NO_PWD_DIALOG_UPLOAD_FRONT_SP = "cj_pay_sp_key_no_pwd_dialog_upload_front_sp";
+    public static final String CJ_PAY_SP_KEY_NO_PWD_DIALOG_UPLOAD_LIVE_SP = "cj_pay_sp_key_no_pwd_dialog_upload_live_sp";
+    public static final String CJ_PAY_WALLET_CASHIER_BACK_CLICK = "wallet_cashier_back_click";
+    public static final String CJ_PAY_WEB_OFFLINE_DATA_STATUS = "cj_pay_web_offline_data_status";
+    public static final Companion Companion = null;
+    public static final String FACE_LITE_RETURN_URL = "https://cjpaysdk/facelive/callback";
+    public static final String PAY_AGAIN_HOME_PAGE = "104";
+    public static final int TT_CJ_PAY_AGREEMENT_DETAIL_FRAGMENT_SHOW_TYPE = 7;
+    public static final int TT_CJ_PAY_AGREEMENT_FRAGMENT_SHOW_TYPE = 6;
+    public static final String TT_CJ_PAY_API_DOUPAY = "https://api.doupay.com/gateway-u";
+    public static final String TT_CJ_PAY_BD_HOST_API_BOE = "http://cashier.ulpay.com.boe-gateway.byted.org/gateway-bytepay";
+    public static final String TT_CJ_PAY_BD_HOST_API_ONLINE = "https://cashier.ulpay.com/gateway-bytepay";
+    public static final String TT_CJ_PAY_BD_HOST_BOE = "http://cashier.ulpay.com.boe-gateway.byted.org";
+    public static final String TT_CJ_PAY_BD_HOST_ONLINE = "https://cashier.ulpay.com";
+    public static final String TT_CJ_PAY_BYTEPAY_HOST_BOE = "http://bytepay-boe.byted.org";
+    public static final int TT_CJ_PAY_CHECKOUT_COUNTER_TRIGGER_REQUEST = 0;
+    public static final String TT_CJ_PAY_CHINESE_LANGUAGE = "cn";
+    public static final int TT_CJ_PAY_CLOSE_SDK = 2;
+    public static final int TT_CJ_PAY_DISCOUNT_FRAGMENT_SHOW_TYPE = 5;
+    public static final String TT_CJ_PAY_DOUPAY_HOST_BOE = "http://api.doupay.com.boe-gateway.byted.org";
+    public static final String TT_CJ_PAY_DOUPAY_HOST_ONLINE = "https://api.doupay.com";
+    public static final String TT_CJ_PAY_ENGLISH_LANGUAGE = "en";
+    public static final String TT_CJ_PAY_FOLLOW_HOST = "https://aweme.snssdk.com";
+    public static final String TT_CJ_PAY_GECKO_ACCESS_KEY_BOE = "d8694356c0aca73481d38c00960da5a8";
+    public static final String TT_CJ_PAY_GECKO_ACCESS_KEY_ONLINE = "c0493580c3e3829043cb33227b6e2d80";
+    public static final String TT_CJ_PAY_GECKO_GROUP_TYPE = "cjpay_gecko";
+    public static final String TT_CJ_PAY_GECKO_HOST = "gecko.snssdk.com";
+    public static final String TT_CJ_PAY_INTEGRATE_HOST_API_BOE = "http://tp-pay.snssdk.com.boe-gateway.byted.org/gateway-u";
+    public static final String TT_CJ_PAY_INTEGRATE_HOST_API_ONLINE = "https://tp-pay.snssdk.com/gateway-u";
+    public static final String TT_CJ_PAY_INTEGRATE_HOST_BOE = "http://tp-pay.snssdk.com.boe-gateway.byted.org";
+    public static final String TT_CJ_PAY_INTEGRATE_HOST_ONLINE = "https://tp-pay.snssdk.com";
+    public static final String TT_CJ_PAY_KEY_ACTIVITY_ADD_IN_ANIMATION_RESOURCE = "TTCJPayKeyActivityAddInAnimationResource";
+    public static final String TT_CJ_PAY_KEY_ACTIVITY_FADE_IN_ANIMATION_RESOURCE = "TTCJPayKeyActivityFadeInAnimationResource";
+    public static final String TT_CJ_PAY_KEY_ACTIVITY_FADE_OUT_ANIMATION_RESOURCE = "TTCJPayKeyActivityFadeOutAnimationResource";
+    public static final String TT_CJ_PAY_KEY_ACTIVITY_REMOVE_OUT_ANIMATION_RESOURCE = "TTCJPayKeyActivityRemoveOutAnimationResource";
+    public static final String TT_CJ_PAY_KEY_FOR_ADD_BANK_CARD = "addcard";
+    public static final String TT_CJ_PAY_KEY_FOR_ADD_NORMAL_BANK_CARD = "addnormalcard";
+    public static final String TT_CJ_PAY_KEY_FOR_ADD_SPECIFIC_BANK_CARD = "addspecificcard";
+    public static final String TT_CJ_PAY_KEY_FOR_ALI = "alipay";
+    public static final String TT_CJ_PAY_KEY_FOR_ALL_PAYMENT = "allPayment";
+    public static final String TT_CJ_PAY_KEY_FOR_BALANCE = "balance";
+    public static final String TT_CJ_PAY_KEY_FOR_BALANCE_AND_BANK_CARD = "balanceAndBankCard";
+    public static final String TT_CJ_PAY_KEY_FOR_BANK_CARD = "bankCard";
+    public static final String TT_CJ_PAY_KEY_FOR_BYTEPAY = "bytepay";
+    public static final String TT_CJ_PAY_KEY_FOR_CHANNEL_ALI_APP = "ALI_APP";
+    public static final String TT_CJ_PAY_KEY_FOR_CHANNEL_ALI_H5 = "ALI_WAP";
+    public static final String TT_CJ_PAY_KEY_FOR_CHANNEL_APP = "APP";
+    public static final String TT_CJ_PAY_KEY_FOR_CHANNEL_CMB = "CMB";
+    public static final String TT_CJ_PAY_KEY_FOR_CHANNEL_MINIH5 = "MINIH5";
+    public static final String TT_CJ_PAY_KEY_FOR_CHANNEL_MWEB = "MWEB";
+    public static final String TT_CJ_PAY_KEY_FOR_CMB = "cmb_net";
+    public static final String TT_CJ_PAY_KEY_FOR_COMBINE_PAY = "combinepay";
+    public static final String TT_CJ_PAY_KEY_FOR_CREDIT_PAY = "creditpay";
+    public static final String TT_CJ_PAY_KEY_FOR_DYPAY = "dypay";
+    public static final String TT_CJ_PAY_KEY_FOR_DY_STYLE_SPLIT_LINE = "dyStyleSplitLine";
+    public static final String TT_CJ_PAY_KEY_FOR_DY_UNAVAILABLE_CARD_STYLE_SPLIT_LINE = "dyStyleUnavailableCardSplitLine";
+    public static final String TT_CJ_PAY_KEY_FOR_FOREIGN_CARD = "mastercard";
+    public static final String TT_CJ_PAY_KEY_FOR_FUND_PAY = "fundpay";
+    public static final String TT_CJ_PAY_KEY_FOR_INCOME = "income";
+    public static final String TT_CJ_PAY_KEY_FOR_MFUND_BCB_PAY = "mfund_bcb_pay";
+    public static final String TT_CJ_PAY_KEY_FOR_MORE_PAY_METHOD = "morepaymethod";
+    public static final String TT_CJ_PAY_KEY_FOR_OVERSEA_PAY = "global_pay";
+    public static final String TT_CJ_PAY_KEY_FOR_QRCODE = "qrcode";
+    public static final String TT_CJ_PAY_KEY_FOR_QUICK_PAY = "quickpay";
+    public static final String TT_CJ_PAY_KEY_FOR_SHARE_PAY = "share_pay";
+    public static final String TT_CJ_PAY_KEY_FOR_TRANSFER_PAY = "transfer_pay";
+    public static final String TT_CJ_PAY_KEY_FOR_WX = "wx";
+    public static final String TT_CJ_PAY_KEY_FRAGMENT_DOWN_OUT_ANIMATION_RESOURCE = "TTCJPayKeyFragmentDownOutAnimationResource";
+    public static final String TT_CJ_PAY_KEY_FRAGMENT_UP_IN_ANIMATION_RESOURCE = "TTCJPayKeyFragmentUpInAnimationResource";
+    public static final String TT_CJ_PAY_KEY_LOGIN_TOKEN_PARAMS = "TTCJPayKeyLoginTokenParams";
+    public static final String TT_CJ_PAY_KEY_PAY_REQUEST_PARAMS = "TTCJPayKeyPayRequestParams";
+    public static final String TT_CJ_PAY_KEY_RESULT_PARAMS = "TTCJPayKeyPayResultParams";
+    public static final String TT_CJ_PAY_KEY_SERVER_TYPE_PARAMS = "TTCJPayKeyServerTypeParams";
+    public static final String TT_CJ_PAY_KEY_SLIDE_IN_FROM_BOTTOM_ANIMATION_RESOURCE = "TTCJPayKeySlideInFromBottomAnimationResource";
+    public static final String TT_CJ_PAY_KEY_SLIDE_OUT_TO_BOTTOM_ANIMATION_RESOURCE = "TTCJPayKeySlideOutToBottomAnimationResource";
+    public static final String TT_CJ_PAY_KEY_SLIDE_RIGHT_IN_ANIMATION_RESOURCE = "TTCJPayKeySlideRightInAnimationResource";
+    public static final String TT_CJ_PAY_KEY_WITHDRAW_FOR_ADD_BANK_CARD = "addcard";
+    public static final String TT_CJ_PAY_KEY_WITHDRAW_FOR_ALI = "alipay";
+    public static final String TT_CJ_PAY_KEY_WITHDRAW_FOR_INSTANT = "quickwithdraw";
+    public static final String TT_CJ_PAY_KEY_WITHDRAW_FOR_QUICK_PAY = "quickpay";
+    public static final int TT_CJ_PAY_LOGIN_FAILED = 1;
+    public static final int TT_CJ_PAY_LOGIN_SUCCEED = 0;
+    public static final int TT_CJ_PAY_PASSWORD_FRAGMENT_SHOW_TYPE = 2;
+    public static final int TT_CJ_PAY_PAYMENT_COMPLETE_SHOW_TYPE = 3;
+    public static final int TT_CJ_PAY_PAYMENT_CONFIRM_FRAGMENT_SHOW_TYPE = 0;
+    public static final int TT_CJ_PAY_PAYMENT_METHOD_FRAGMENT_SHOW_TYPE = 1;
+    public static final int TT_CJ_PAY_SCREEN_ORIENTATION_BEHIND = 3;
+    public static final int TT_CJ_PAY_SCREEN_ORIENTATION_LANDSCAPE = 1;
+    public static final int TT_CJ_PAY_SCREEN_ORIENTATION_PORTRAIT = 0;
+    public static final int TT_CJ_PAY_SCREEN_ORIENTATION_PORTRAIT_OR_LANDSCAPE = 2;
+    public static final int TT_CJ_PAY_SCREEN_ORIENTATION_REVERSE_LANDSCAPE = -1;
+    public static final int TT_CJ_PAY_SERVER_TYPE_BOE = 2;
+    public static final String TT_CJ_PAY_SERVER_TYPE_BOE_CHANNEL = "boe";
+    public static final int TT_CJ_PAY_SERVER_TYPE_OFFLINE = 0;
+    public static final String TT_CJ_PAY_SERVER_TYPE_OFFLINE_CHANNEL = "local_test";
+    public static final int TT_CJ_PAY_SERVER_TYPE_ONLINE = 1;
+    public static final String TT_CJ_PAY_SERVER_TYPE_ONLINE_CHANNEL = "online";
+    public static final int TT_CJ_PAY_VERIFICATION_CODE_FRAGMENT_SHOW_TYPE = 4;
+    public static final int TT_CJ_PAY_VERIFICATION_CODE_RECEIVED_EXCEPTION = 8;
+    public static final String WALLET_RD_DETECT_UNUSED_SOURCE = "wallet_rd_detect_unused_source";
+
+    @Metadata(d1 = {"\u0000\u001d\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0003\b\u0082\u0001\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010 \u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010'\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010(\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010)\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010*\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010+\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010,\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00100\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00101\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00102\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00103\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00104\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00105\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00106\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00107\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00108\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u00109\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010:\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010;\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010<\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010=\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010>\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010?\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010@\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010A\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010B\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010C\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010D\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010E\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010F\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010G\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010H\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010I\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010J\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010K\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010L\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010M\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010N\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010O\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010P\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Q\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010R\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010S\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010T\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010U\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010V\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010W\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010X\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Y\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010Z\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010[\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\\\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010]\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010^\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010_\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010`\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010a\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010b\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010c\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010d\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010e\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010f\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010g\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010h\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010i\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010j\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010k\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010l\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010m\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010n\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010o\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010p\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010q\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010r\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010s\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010t\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010u\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010v\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010w\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010x\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010y\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010z\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010{\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010|\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010}\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010~\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u007f\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0080\u0001\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0081\u0001\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0082\u0001\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0083\u0001\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0084\u0001\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0085\u0001\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0086\u0001\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0087\u0001\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000R\u000f\u0010\u0088\u0001\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000¨\u0006\u0089\u0001"}, d2 = {"Lcom/android/ttcjpaysdk/base/CJPayConstant$Companion;", "", "()V", "BOE_SUFFIX", "", "CAIJING_SAAS_REQUEST_ENV_HEADER", "CJ_PAY_BIO_TYPE_FINGERPRINT", "", "CJ_PAY_BIO_TYPE_NONE", "CJ_PAY_BUSINESS_SCENE_PRE_PAY_ECNY", "CJ_PAY_CREDIT_PAY_ACTIVATE_STATUS_INSUFFICIENT", "CJ_PAY_CREDIT_PAY_ACTIVATE_STATUS_SUCCESS", "CJ_PAY_ENTER_PAY_FLOW_FOREGROUND", "CJ_PAY_FINGER_PAGE_STYLE_HALF", "CJ_PAY_LOSS_FOR_BACKGROUND", "CJ_PAY_LOSS_FOR_BACKGROUND_LOG_NAME", "CJ_PAY_ON_ENTER_BACKGROUND", "CJ_PAY_ON_ENTER_FOREGROUND", "CJ_PAY_PAY_TYPE_ECNY", "CJ_PAY_PAY_TYPE_PWD_OPT", "CJ_PAY_PRIORITY_RETAIN_INFO_KEY", "CJ_PAY_REAL_NAME_LYNX_PAGE", "CJ_PAY_RETAIN_INFO_V2_DEFAULT_NATIVE_KEY", "CJ_PAY_RETAIN_INFO_V2_INFO_KEY", "CJ_PAY_RETAIN_INFO_V2_INFO_KEY2", "CJ_PAY_RETAIN_INFO_V2_SCHEMA_KEY", "CJ_PAY_RETAIN_INFO_V2_USE_SCHEMA_KEY", "CJ_PAY_SHARE_ASSET_CODE_BANK_CARD", "CJ_PAY_SHARE_ASSET_CODE_NEW_BANK_CARD", "CJ_PAY_SHARE_ASSET_CODE_ORDER_SHARE", "CJ_PAY_SHARE_PARAMS_KEY_ASSET_TYPE", "CJ_PAY_SHARE_PARAMS_KEY_IS_ASSET_STANDARD", "CJ_PAY_SHARE_PARAMS_LOG_METHOD_STR", "CJ_PAY_SHOW_PAY_TYPE_SINGLE", "CJ_PAY_SP_KEY_CPM_KEEP_DIALOG_SHOWED_WITH_TRADE_NO", "CJ_PAY_SP_KEY_ENABLE_FINGERPRINT_SHOW_FACE_PROTOCOL_DIALOG", "CJ_PAY_SP_KEY_KEEP_DIALOG_RETAIN_INFO_SP", "CJ_PAY_SP_KEY_KEEP_DIALOG_SHOWED_WITH_TRADE_NO", "CJ_PAY_SP_KEY_NO_PWD_DIALOG_UPLOAD_FRONT_SP", "CJ_PAY_SP_KEY_NO_PWD_DIALOG_UPLOAD_LIVE_SP", "CJ_PAY_WALLET_CASHIER_BACK_CLICK", "CJ_PAY_WEB_OFFLINE_DATA_STATUS", "FACE_LITE_RETURN_URL", "PAY_AGAIN_HOME_PAGE", "TT_CJ_PAY_AGREEMENT_DETAIL_FRAGMENT_SHOW_TYPE", "TT_CJ_PAY_AGREEMENT_FRAGMENT_SHOW_TYPE", "TT_CJ_PAY_API_DOUPAY", "TT_CJ_PAY_BD_HOST_API_BOE", "TT_CJ_PAY_BD_HOST_API_ONLINE", "TT_CJ_PAY_BD_HOST_BOE", "TT_CJ_PAY_BD_HOST_ONLINE", "TT_CJ_PAY_BYTEPAY_HOST_BOE", "TT_CJ_PAY_CHECKOUT_COUNTER_TRIGGER_REQUEST", "TT_CJ_PAY_CHINESE_LANGUAGE", "TT_CJ_PAY_CLOSE_SDK", "TT_CJ_PAY_DISCOUNT_FRAGMENT_SHOW_TYPE", "TT_CJ_PAY_DOUPAY_HOST_BOE", "TT_CJ_PAY_DOUPAY_HOST_ONLINE", "TT_CJ_PAY_ENGLISH_LANGUAGE", "TT_CJ_PAY_FOLLOW_HOST", "TT_CJ_PAY_GECKO_ACCESS_KEY_BOE", "TT_CJ_PAY_GECKO_ACCESS_KEY_ONLINE", "TT_CJ_PAY_GECKO_GROUP_TYPE", "TT_CJ_PAY_GECKO_HOST", "TT_CJ_PAY_INTEGRATE_HOST_API_BOE", "TT_CJ_PAY_INTEGRATE_HOST_API_ONLINE", "TT_CJ_PAY_INTEGRATE_HOST_BOE", "TT_CJ_PAY_INTEGRATE_HOST_ONLINE", "TT_CJ_PAY_KEY_ACTIVITY_ADD_IN_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_ACTIVITY_FADE_IN_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_ACTIVITY_FADE_OUT_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_ACTIVITY_REMOVE_OUT_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_FOR_ADD_BANK_CARD", "TT_CJ_PAY_KEY_FOR_ADD_NORMAL_BANK_CARD", "TT_CJ_PAY_KEY_FOR_ADD_SPECIFIC_BANK_CARD", "TT_CJ_PAY_KEY_FOR_ALI", "TT_CJ_PAY_KEY_FOR_ALL_PAYMENT", "TT_CJ_PAY_KEY_FOR_BALANCE", "TT_CJ_PAY_KEY_FOR_BALANCE_AND_BANK_CARD", "TT_CJ_PAY_KEY_FOR_BANK_CARD", "TT_CJ_PAY_KEY_FOR_BYTEPAY", "TT_CJ_PAY_KEY_FOR_CHANNEL_ALI_APP", "TT_CJ_PAY_KEY_FOR_CHANNEL_ALI_H5", "TT_CJ_PAY_KEY_FOR_CHANNEL_APP", "TT_CJ_PAY_KEY_FOR_CHANNEL_CMB", "TT_CJ_PAY_KEY_FOR_CHANNEL_MINIH5", "TT_CJ_PAY_KEY_FOR_CHANNEL_MWEB", "TT_CJ_PAY_KEY_FOR_CMB", "TT_CJ_PAY_KEY_FOR_COMBINE_PAY", "TT_CJ_PAY_KEY_FOR_CREDIT_PAY", "TT_CJ_PAY_KEY_FOR_DYPAY", "TT_CJ_PAY_KEY_FOR_DY_STYLE_SPLIT_LINE", "TT_CJ_PAY_KEY_FOR_DY_UNAVAILABLE_CARD_STYLE_SPLIT_LINE", "TT_CJ_PAY_KEY_FOR_FOREIGN_CARD", "TT_CJ_PAY_KEY_FOR_FUND_PAY", "TT_CJ_PAY_KEY_FOR_INCOME", "TT_CJ_PAY_KEY_FOR_MFUND_BCB_PAY", "TT_CJ_PAY_KEY_FOR_MORE_PAY_METHOD", "TT_CJ_PAY_KEY_FOR_OVERSEA_PAY", "TT_CJ_PAY_KEY_FOR_QRCODE", "TT_CJ_PAY_KEY_FOR_QUICK_PAY", "TT_CJ_PAY_KEY_FOR_SHARE_PAY", "TT_CJ_PAY_KEY_FOR_TRANSFER_PAY", "TT_CJ_PAY_KEY_FOR_WX", "TT_CJ_PAY_KEY_FRAGMENT_DOWN_OUT_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_FRAGMENT_UP_IN_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_LOGIN_TOKEN_PARAMS", "TT_CJ_PAY_KEY_PAY_REQUEST_PARAMS", "TT_CJ_PAY_KEY_RESULT_PARAMS", "TT_CJ_PAY_KEY_SERVER_TYPE_PARAMS", "TT_CJ_PAY_KEY_SLIDE_IN_FROM_BOTTOM_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_SLIDE_OUT_TO_BOTTOM_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_SLIDE_RIGHT_IN_ANIMATION_RESOURCE", "TT_CJ_PAY_KEY_WITHDRAW_FOR_ADD_BANK_CARD", "TT_CJ_PAY_KEY_WITHDRAW_FOR_ALI", "TT_CJ_PAY_KEY_WITHDRAW_FOR_INSTANT", "TT_CJ_PAY_KEY_WITHDRAW_FOR_QUICK_PAY", "TT_CJ_PAY_LOGIN_FAILED", "TT_CJ_PAY_LOGIN_SUCCEED", "TT_CJ_PAY_PASSWORD_FRAGMENT_SHOW_TYPE", "TT_CJ_PAY_PAYMENT_COMPLETE_SHOW_TYPE", "TT_CJ_PAY_PAYMENT_CONFIRM_FRAGMENT_SHOW_TYPE", "TT_CJ_PAY_PAYMENT_METHOD_FRAGMENT_SHOW_TYPE", "TT_CJ_PAY_SCREEN_ORIENTATION_BEHIND", "TT_CJ_PAY_SCREEN_ORIENTATION_LANDSCAPE", "TT_CJ_PAY_SCREEN_ORIENTATION_PORTRAIT", "TT_CJ_PAY_SCREEN_ORIENTATION_PORTRAIT_OR_LANDSCAPE", "TT_CJ_PAY_SCREEN_ORIENTATION_REVERSE_LANDSCAPE", "TT_CJ_PAY_SERVER_TYPE_BOE", "TT_CJ_PAY_SERVER_TYPE_BOE_CHANNEL", "TT_CJ_PAY_SERVER_TYPE_OFFLINE", "TT_CJ_PAY_SERVER_TYPE_OFFLINE_CHANNEL", "TT_CJ_PAY_SERVER_TYPE_ONLINE", "TT_CJ_PAY_SERVER_TYPE_ONLINE_CHANNEL", "TT_CJ_PAY_VERIFICATION_CODE_FRAGMENT_SHOW_TYPE", "TT_CJ_PAY_VERIFICATION_CODE_RECEIVED_EXCEPTION", "WALLET_RD_DETECT_UNUSED_SOURCE", "cj-host-service-api_release"}, k = 1, mv = {1, 6, 0}, xi = 48)
+    public static final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(DefaultConstructorMarker r100) {
+            this();
+        }
+    }
+
+    static {
+        Companion = new Companion(null);
+    }
+
+    public CJPayConstant() {
+    }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <com.bytedance.android.livesdk.chatroom.view.VSLinkedAvatarContainer
+        android:layout_gravity="center_vertical"
+        android:id="@+id/link_avatar_container"
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="20dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:layout_gravity="center"
+            android:id="@+id/link_avatar_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/ttlive_ic_default_head_small"
+            app:roundAsCircle="true"/>
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_gravity="end|bottom"
+            android:id="@+id/living_view"
+            android:tag="living_view"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:scaleType="centerCrop"/>
+    </com.bytedance.android.livesdk.chatroom.view.VSLinkedAvatarContainer>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_std_text_white_1"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/link_room_title"
+        android:paddingLeft="6dp"
+        android:paddingRight="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="6dp"
+        android:paddingEnd="12dp"/>
+</LinearLayout>

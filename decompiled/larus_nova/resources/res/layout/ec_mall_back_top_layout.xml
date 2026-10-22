@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_gravity="end|bottom"
+    android:orientation="horizontal"
+    android:id="@+id/ec_mall_back_top_container"
+    android:background="@drawable/ec_mall_back_top_bg"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    android:elevation="1dp">
+    <ImageView
+        android:gravity="center"
+        android:id="@+id/ec_mall_back_top_arrow"
+        android:layout_width="14dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ec_mall_back_top_arrow"/>
+</LinearLayout>

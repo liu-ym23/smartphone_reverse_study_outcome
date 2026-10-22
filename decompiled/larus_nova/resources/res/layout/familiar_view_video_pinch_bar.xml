@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/pinch_bar_container"
+    android:layout_width="wrap_content"
+    android:layout_height="44dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+    <com.bytedance.awemeopen.apps.framework.feed.pinch.ui.PinchPlayPauseView
+        android:id="@+id/play_view"
+        android:padding="11dp"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/familiar_pinch_pause_btn"/>
+    <com.bytedance.awemeopen.apps.framework.feed.pinch.ui.PinchSpeedView
+        android:id="@+id/speed_btn"
+        android:padding="4dp"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/common_feed_speed_100p_small_new"/>
+</LinearLayout>

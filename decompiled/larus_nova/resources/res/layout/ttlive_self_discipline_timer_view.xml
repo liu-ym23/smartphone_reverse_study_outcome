@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/timer_container"
+    android:background="@drawable/ttlive_self_discipline_timer_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="14dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_timer"
+        android:visibility="gone"
+        android:layout_width="9dp"
+        android:layout_height="9dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/ttlive_self_discipline_timer_icon"
+        android:layout_marginStart="5dp"/>
+    <TextView
+        android:textSize="9dp"
+        android:textStyle="bold"
+        android:textColor="#e5ffffff"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="4dp"
+        android:maxLines="1"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="4dp"/>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layout_field_header"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
+        android:minHeight="40dp"
+        android:paddingVertical="10dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:id="@+id/arrow_all_expand"
+            android:layout_width="12sp"
+            android:layout_height="12sp"
+            android:tint="@color/icon_n2"
+            android:layout_marginStart="@dimen/dp_18"
+            android:layout_marginEnd="@dimen/dp_8"
+            app:srcCompat="@drawable/ud_icon_expand_down_filled"/>
+        <TextView
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            android:textColor="@color/text_caption"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Todo_TaskList_ListField_Title"/>
+    </LinearLayout>
+</LinearLayout>

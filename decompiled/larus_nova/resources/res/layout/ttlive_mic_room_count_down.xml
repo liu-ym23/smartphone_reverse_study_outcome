@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:background="@drawable/ttlive_bg_round_item"
+        android:layout_width="135dp"
+        android:layout_height="135dp">
+        <com.bytedance.android.livesdk.chatroom.widget.CountDownView
+            android:id="@+id/count_down_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="18dp"
+            android:layout_centerHorizontal="true"
+            android:scaleX="0.6"
+            android:scaleY="0.6"/>
+        <TextView
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_enter_official_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:text="@string/ttlive_entering_official_channel"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</FrameLayout>

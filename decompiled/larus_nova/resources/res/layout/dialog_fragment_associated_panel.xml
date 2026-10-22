@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/associate_doc_panel_root"
+    android:background="@drawable/facade_round_top_xxl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/bg_body">
+    <com.bytedance.ee.bear.widgets.BaseTitleBar
+        android:id="@+id/associate_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:widget_widgets_tb_back_icon="@drawable/ud_icon_close_small_outlined"
+        app:widget_widgets_tb_background="@color/color_transparent"
+        app:widget_widgets_tb_divider_visible="false"
+        app:widget_widgets_tb_title="@string/LarkCCM_Docs_AppLinkDoc_Select_Title"/>
+</LinearLayout>

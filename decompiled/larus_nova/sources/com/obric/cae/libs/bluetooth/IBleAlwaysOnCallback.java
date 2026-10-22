@@ -1,0 +1,88 @@
+package com.obric.cae.libs.bluetooth;
+
+import android.os.Binder;
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Parcel;
+import android.os.RemoteException;
+
+/* JADX INFO: loaded from: classes33.dex */
+public interface IBleAlwaysOnCallback extends IInterface {
+
+    public static class Default implements IBleAlwaysOnCallback {
+        public Default() {
+        }
+
+        @Override // android.os.IInterface
+        public IBinder asBinder() {
+            return null;
+        }
+    }
+
+    public static abstract class Stub extends Binder implements IBleAlwaysOnCallback {
+        private static final String DESCRIPTOR = "com.obric.cae.libs.bluetooth.IBleAlwaysOnCallback";
+
+        public static class Proxy implements IBleAlwaysOnCallback {
+            public static IBleAlwaysOnCallback sDefaultImpl;
+            private IBinder mRemote;
+
+            public String getInterfaceDescriptor() {
+                return Stub.DESCRIPTOR;
+            }
+
+            @Override // android.os.IInterface
+            public IBinder asBinder() {
+                return this.mRemote;
+            }
+
+            public Proxy(IBinder r100) {
+                this.mRemote = r100;
+            }
+        }
+
+        @Override // android.os.IInterface
+        public IBinder asBinder() {
+            return this;
+        }
+
+        public Stub() {
+            attachInterface(this, DESCRIPTOR);
+        }
+
+        public static IBleAlwaysOnCallback getDefaultImpl() {
+            return Proxy.sDefaultImpl;
+        }
+
+        public static IBleAlwaysOnCallback asInterface(IBinder r100) {
+            if (r100 != null) goto L5;
+            return null;
+        L5:
+            IInterface r101 = r100.queryLocalInterface(DESCRIPTOR);
+            if (r101 == null) goto L12;
+            if ((r101 instanceof IBleAlwaysOnCallback) == false) goto L12;
+            return (IBleAlwaysOnCallback) r101;
+        L12:
+            return new Proxy(r100);
+        }
+
+        public static boolean setDefaultImpl(IBleAlwaysOnCallback r100) {
+            if (Proxy.sDefaultImpl != null) goto L10;
+            if (r100 == null) goto L7;
+            Proxy.sDefaultImpl = r100;
+            return true;
+        L7:
+            return false;
+        L10:
+            throw new IllegalStateException("setDefaultImpl() called twice");
+        }
+
+        @Override // android.os.Binder
+        public boolean onTransact(int r100, Parcel r101, Parcel r102, int r103) throws RemoteException {
+            if (r100 != 1598968902) goto L5;
+            r102.writeString(DESCRIPTOR);
+            return true;
+        L5:
+            return super.onTransact(r100, r101, r102, r103);
+        }
+    }
+}

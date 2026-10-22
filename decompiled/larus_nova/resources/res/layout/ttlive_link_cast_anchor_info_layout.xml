@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="48dp"
+    android:layout_height="32dp">
+    <TextView
+        android:textSize="9dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tv_anchor_label"
+        android:background="@drawable/ttlive_link_cast_anchor_label_bg"
+        android:padding="6dp"
+        android:visibility="visible"
+        android:layout_width="48dp"
+        android:layout_height="32dp"
+        android:text="@string/ttlive_link_cast_anchor_label_text"
+        android:textScaleX="1.7"
+        android:textAlignment="center"/>
+</merge>

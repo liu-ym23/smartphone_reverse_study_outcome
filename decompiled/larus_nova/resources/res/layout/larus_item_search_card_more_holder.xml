@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/larus_dp_208"
+    android:layout_marginStart="?attr/larus_dp_12">
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/button_search_more"
+        android:background="?attr/larus_bg_search_more_button"
+        android:layout_width="?attr/larus_dp_56"
+        android:layout_height="?attr/larus_dp_56">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?attr/larus_ic_search_more"/>
+    </FrameLayout>
+</FrameLayout>

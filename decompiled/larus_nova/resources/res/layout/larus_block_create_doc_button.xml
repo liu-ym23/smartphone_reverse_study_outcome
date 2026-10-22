@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/sp_16"
+    android:textColor="?attr/larus_neutral_100"
+    android:gravity="center"
+    android:id="@+id/doc_create_btn"
+    android:background="?attr/larus_bg_block_button_card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_44"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginRight="@dimen/dp_16"
+    android:fontFamily="sans-serif-medium"/>

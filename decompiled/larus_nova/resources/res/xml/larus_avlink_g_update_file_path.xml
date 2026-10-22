@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path
+        name="g_update_files"
+        path="g_update/"/>
+    <external-cache-path
+        name="g_update_cache"
+        path="g_update/"/>
+    <files-path
+        name="g_update_internal"
+        path="g_update/"/>
+    <cache-path
+        name="g_update_internal_cache"
+        path="g_update/"/>
+</paths>

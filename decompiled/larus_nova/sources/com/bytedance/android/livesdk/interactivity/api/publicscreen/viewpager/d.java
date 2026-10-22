@@ -1,0 +1,6 @@
+package com.bytedance.android.livesdk.interactivity.api.publicscreen.viewpager;
+
+/* JADX INFO: loaded from: classes9.dex */
+public interface d {
+    c a(PublicScreenAreaPageType r100, long r101);
+}

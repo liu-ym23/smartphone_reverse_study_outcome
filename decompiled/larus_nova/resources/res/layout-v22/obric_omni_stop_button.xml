@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/content_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:src="@drawable/obric_omni_ic_stop"/>
+        <TextView
+            android:textSize="@dimen/dp_16"
+            android:textColor="?attr/larus_neutral_100"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_1"
+            android:text="@string/obric_omni_detail_stop"
+            android:fontFamily="PingFang SC"
+            android:layout_marginStart="@dimen/dp_4"
+            android:textFontWeight="500"/>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/loading_view"
+        android:visibility="gone"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:indeterminateDrawable="@drawable/obric_bg_loading_animated"
+        android:indeterminateDuration="2000"
+        android:indeterminateTint="?attr/larus_neutral_100"/>
+</merge>

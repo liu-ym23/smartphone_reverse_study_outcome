@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="?attr/larus_sp_16"
+    android:textStyle="normal"
+    android:textColor="@color/dora_o_memory_link_blue"
+    android:gravity="center"
+    android:id="@+id/style_add_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+    <TextView
+        android:textColor="#1a1a1b"
+        android:id="@+id/trade_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#99161823"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:id="@+id/trade_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:maxLines="2"/>
+</LinearLayout>

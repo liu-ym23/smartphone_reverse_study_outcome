@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.live.matchroom.MatchLandFullShadowFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ttlive_tabs_landscape_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:id="@+id/ttlive_tabs_landscape_rootview"
+        android:layout_width="@dimen/ttlive_tab_landscape_width"
+        android:layout_height="match_parent"/>
+</com.bytedance.android.live.matchroom.MatchLandFullShadowFrameLayout>

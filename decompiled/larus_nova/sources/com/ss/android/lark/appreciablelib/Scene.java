@@ -1,0 +1,220 @@
+package com.ss.android.lark.appreciablelib;
+
+import com.bytedance.ee.bear.wikiv2.browser.plugin.WikiFolderPushPlugin;
+import com.ss.android.lark.picker.Picker;
+import kotlin.Metadata;
+import r27.a;
+
+/* JADX INFO: loaded from: classes34.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\b\n\u0002\bB\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\u000f\b\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\rj\u0002\b\u000ej\u0002\b\u000fj\u0002\b\u0010j\u0002\b\u0011j\u0002\b\u0012j\u0002\b\u0013j\u0002\b\u0014j\u0002\b\u0015j\u0002\b\u0016j\u0002\b\u0017j\u0002\b\u0018j\u0002\b\u0019j\u0002\b\u001aj\u0002\b\u001bj\u0002\b\u001cj\u0002\b\u001dj\u0002\b\u001ej\u0002\b\u001fj\u0002\b j\u0002\b!j\u0002\b\"j\u0002\b#j\u0002\b$j\u0002\b%j\u0002\b&j\u0002\b'j\u0002\b(j\u0002\b)j\u0002\b*j\u0002\b+j\u0002\b,j\u0002\b-j\u0002\b.j\u0002\b/j\u0002\b0j\u0002\b1j\u0002\b2j\u0002\b3j\u0002\b4j\u0002\b5j\u0002\b6j\u0002\b7j\u0002\b8j\u0002\b9j\u0002\b:j\u0002\b;j\u0002\b<j\u0002\b=j\u0002\b>j\u0002\b?j\u0002\b@j\u0002\bAj\u0002\bBj\u0002\bCj\u0002\bD¨\u0006E"}, d2 = {"Lcom/ss/android/lark/appreciablelib/Scene;", "", "value", "", "(Ljava/lang/String;II)V", "getValue", "()I", "Feed", "Chat", "Group", "Profile", "Schedule", "Detail", "Favorite", WikiFolderPushPlugin.PIN, "MeetingView", "Setting", "Search", "CalDiagram", "CalEventEdit", "CalEventDetail", "CalBot", "Playground", "Contact", Picker.TAG, "Thread", "Scanner", "OnBoarding", "UGCenter", "Invite", "Share", "UGNoticeCenter", "Feelgood", "DyResource", "VCPreview", "VCOnTheCall", "VCCalling", "MoHome", "MoPost", "MoProfile", "MoNotification", "MinutesList", "MinutesDetail", "MinutesRecorder", "MinutesPodcast", "ImageViewer", "MailFMP", "MailRead", "MailSearch", "MailDraft", "TodoCenter", "TodoDetail", "TodoCreate", "TodoComment", "TodoListInChat", "DarkMode", "Forward", "Moments", "GroupAvatar", "ProfileAvatar", "LarkLive", "LarkLiveFloat", "SecretChat", "MoFeed", "MailContentSearch", "MailNetwork", "MailAccount", "Mark", "AIRound", "appreciablelib_release"}, k = 1, mv = {1, 1, 15})
+public final enum Scene extends Enum<Scene> {
+    private static final /* synthetic */ Scene[] $VALUES = null;
+    public static final Scene AIRound = null;
+    public static final Scene CalBot = null;
+    public static final Scene CalDiagram = null;
+    public static final Scene CalEventDetail = null;
+    public static final Scene CalEventEdit = null;
+    public static final Scene Chat = null;
+    public static final Scene Contact = null;
+    public static final Scene DarkMode = null;
+    public static final Scene Detail = null;
+    public static final Scene DyResource = null;
+    public static final Scene Favorite = null;
+    public static final Scene Feed = null;
+    public static final Scene Feelgood = null;
+    public static final Scene Forward = null;
+    public static final Scene Group = null;
+    public static final Scene GroupAvatar = null;
+    public static final Scene ImageViewer = null;
+    public static final Scene Invite = null;
+    public static final Scene LarkLive = null;
+    public static final Scene LarkLiveFloat = null;
+    public static final Scene MailAccount = null;
+    public static final Scene MailContentSearch = null;
+    public static final Scene MailDraft = null;
+    public static final Scene MailFMP = null;
+    public static final Scene MailNetwork = null;
+    public static final Scene MailRead = null;
+    public static final Scene MailSearch = null;
+    public static final Scene Mark = null;
+    public static final Scene MeetingView = null;
+    public static final Scene MinutesDetail = null;
+    public static final Scene MinutesList = null;
+    public static final Scene MinutesPodcast = null;
+    public static final Scene MinutesRecorder = null;
+    public static final Scene MoFeed = null;
+    public static final Scene MoHome = null;
+    public static final Scene MoNotification = null;
+    public static final Scene MoPost = null;
+    public static final Scene MoProfile = null;
+    public static final Scene Moments = null;
+    public static final Scene OnBoarding = null;
+    public static final Scene Picker = null;
+    public static final Scene Pin = null;
+    public static final Scene Playground = null;
+    public static final Scene Profile = null;
+    public static final Scene ProfileAvatar = null;
+    public static final Scene Scanner = null;
+    public static final Scene Schedule = null;
+    public static final Scene Search = null;
+    public static final Scene SecretChat = null;
+    public static final Scene Setting = null;
+    public static final Scene Share = null;
+    public static final Scene Thread = null;
+    public static final Scene TodoCenter = null;
+    public static final Scene TodoComment = null;
+    public static final Scene TodoCreate = null;
+    public static final Scene TodoDetail = null;
+    public static final Scene TodoListInChat = null;
+    public static final Scene UGCenter = null;
+    public static final Scene UGNoticeCenter = null;
+    public static final Scene VCCalling = null;
+    public static final Scene VCOnTheCall = null;
+    public static final Scene VCPreview = null;
+    private final int value;
+
+    public static Scene valueOf(String r100) {
+        return (Scene) a.a(Scene.class, r100);
+    }
+
+    public static Scene[] values() {
+        return (Scene[]) $VALUES.clone();
+    }
+
+    static {
+        Scene r100 = new Scene("Feed", 0, 1);
+        Feed = r100;
+        Scene r101 = new Scene("Chat", 1, 2);
+        Chat = r101;
+        Scene r102 = new Scene("Group", 2, 3);
+        Group = r102;
+        Scene r103 = new Scene("Profile", 3, 4);
+        Profile = r103;
+        Scene r104 = new Scene("Schedule", 4, 5);
+        Schedule = r104;
+        Scene r105 = new Scene("Detail", 5, 6);
+        Detail = r105;
+        Scene r106 = new Scene("Favorite", 6, 7);
+        Favorite = r106;
+        Scene r107 = new Scene(WikiFolderPushPlugin.PIN, 7, 8);
+        Pin = r107;
+        Scene r108 = new Scene("MeetingView", 8, 9);
+        MeetingView = r108;
+        Scene r109 = new Scene("Setting", 9, 10);
+        Setting = r109;
+        Scene r110 = new Scene("Search", 10, 11);
+        Search = r110;
+        Scene r111 = new Scene("CalDiagram", 11, 12);
+        CalDiagram = r111;
+        Scene r112 = new Scene("CalEventEdit", 12, 13);
+        CalEventEdit = r112;
+        Scene r113 = new Scene("CalEventDetail", 13, 14);
+        CalEventDetail = r113;
+        Scene r114 = new Scene("CalBot", 14, 15);
+        CalBot = r114;
+        Scene r115 = new Scene("Playground", 15, 16);
+        Playground = r115;
+        Scene r116 = new Scene("Contact", 16, 17);
+        Contact = r116;
+        Scene r117 = new Scene(Picker.TAG, 17, 18);
+        Picker = r117;
+        Scene r118 = new Scene("Thread", 18, 19);
+        Thread = r118;
+        Scene r119 = new Scene("Scanner", 19, 20);
+        Scanner = r119;
+        Scene r120 = new Scene("OnBoarding", 20, 21);
+        OnBoarding = r120;
+        Scene r121 = new Scene("UGCenter", 21, 22);
+        UGCenter = r121;
+        Scene r122 = new Scene("Invite", 22, 23);
+        Invite = r122;
+        Scene r123 = new Scene("Share", 23, 24);
+        Share = r123;
+        Scene r124 = new Scene("UGNoticeCenter", 24, 25);
+        UGNoticeCenter = r124;
+        Scene r125 = new Scene("Feelgood", 25, 26);
+        Feelgood = r125;
+        Scene r126 = new Scene("DyResource", 26, 27);
+        DyResource = r126;
+        Scene r127 = new Scene("VCPreview", 27, 28);
+        VCPreview = r127;
+        Scene r128 = new Scene("VCOnTheCall", 28, 29);
+        VCOnTheCall = r128;
+        Scene r129 = new Scene("VCCalling", 29, 30);
+        VCCalling = r129;
+        Scene r130 = new Scene("MoHome", 30, 31);
+        MoHome = r130;
+        Scene r131 = new Scene("MoPost", 31, 32);
+        MoPost = r131;
+        Scene r132 = new Scene("MoProfile", 32, 33);
+        MoProfile = r132;
+        Scene r133 = new Scene("MoNotification", 33, 34);
+        MoNotification = r133;
+        Scene r134 = new Scene("MinutesList", 34, 35);
+        MinutesList = r134;
+        Scene r135 = new Scene("MinutesDetail", 35, 36);
+        MinutesDetail = r135;
+        Scene r136 = new Scene("MinutesRecorder", 36, 37);
+        MinutesRecorder = r136;
+        Scene r137 = new Scene("MinutesPodcast", 37, 38);
+        MinutesPodcast = r137;
+        Scene r138 = new Scene("ImageViewer", 38, 39);
+        ImageViewer = r138;
+        Scene r139 = new Scene("MailFMP", 39, 40);
+        MailFMP = r139;
+        Scene r140 = new Scene("MailRead", 40, 41);
+        MailRead = r140;
+        Scene r141 = new Scene("MailSearch", 41, 42);
+        MailSearch = r141;
+        Scene r142 = new Scene("MailDraft", 42, 43);
+        MailDraft = r142;
+        Scene r143 = new Scene("TodoCenter", 43, 44);
+        TodoCenter = r143;
+        Scene r144 = new Scene("TodoDetail", 44, 45);
+        TodoDetail = r144;
+        Scene r145 = new Scene("TodoCreate", 45, 46);
+        TodoCreate = r145;
+        Scene r146 = new Scene("TodoComment", 46, 47);
+        TodoComment = r146;
+        Scene r147 = new Scene("TodoListInChat", 47, 48);
+        TodoListInChat = r147;
+        Scene r148 = new Scene("DarkMode", 48, 49);
+        DarkMode = r148;
+        Scene r149 = new Scene("Forward", 49, 50);
+        Forward = r149;
+        Scene r150 = new Scene("Moments", 50, 51);
+        Moments = r150;
+        Scene r151 = new Scene("GroupAvatar", 51, 52);
+        GroupAvatar = r151;
+        Scene r152 = new Scene("ProfileAvatar", 52, 53);
+        ProfileAvatar = r152;
+        Scene r153 = new Scene("LarkLive", 53, 54);
+        LarkLive = r153;
+        Scene r154 = new Scene("LarkLiveFloat", 54, 55);
+        LarkLiveFloat = r154;
+        Scene r155 = new Scene("SecretChat", 55, 56);
+        SecretChat = r155;
+        Scene r156 = new Scene("MoFeed", 56, 57);
+        MoFeed = r156;
+        Scene r157 = new Scene("MailContentSearch", 57, 58);
+        MailContentSearch = r157;
+        Scene r158 = new Scene("MailNetwork", 58, 59);
+        MailNetwork = r158;
+        Scene r159 = new Scene("MailAccount", 59, 60);
+        MailAccount = r159;
+        Scene r160 = new Scene("Mark", 60, 61);
+        Mark = r160;
+        Scene r161 = new Scene("AIRound", 61, 62);
+        AIRound = r161;
+        $VALUES = new Scene[]{r100, r101, r102, r103, r104, r105, r106, r107, r108, r109, r110, r111, r112, r113, r114, r115, r116, r117, r118, r119, r120, r121, r122, r123, r124, r125, r126, r127, r128, r129, r130, r131, r132, r133, r134, r135, r136, r137, r138, r139, r140, r141, r142, r143, r144, r145, r146, r147, r148, r149, r150, r151, r152, r153, r154, r155, r156, r157, r158, r159, r160, r161};
+    }
+
+    public final int getValue() {
+        return this.value;
+    }
+
+    private Scene(String r100, int r101, int r102) {
+        super(r100, r101);
+        this.value = r102;
+    }
+}

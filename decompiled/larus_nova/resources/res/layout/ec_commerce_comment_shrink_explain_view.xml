@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ec_commerce_comment_shrink_explain_view_1265946380"
+    android:paddingTop="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <TextView
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/commerce_color_161823"
+        android:id="@+id/ec_why_shrink_comment_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/shopping_color_99161823"
+        android:id="@+id/ec_shrink_comment_explain_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

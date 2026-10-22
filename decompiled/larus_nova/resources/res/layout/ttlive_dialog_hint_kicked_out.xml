@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_hint_kicked_out"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="295dp"
+        android:layout_height="80dp">
+        <TextView
+            android:textSize="15dp"
+            android:textColor="#ffffffff"
+            android:gravity="center"
+            android:id="@+id/tv_hint_kicked_out"
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/ttlive_live_kicked_out"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_detail_head_image_1934682134"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/poi_head_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.locallife.poi.newdetail.widget.lynx.PoiSimpleLynxView
+            android:id="@+id/poi_lynx_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:id="@+id/poi_native_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+            <com.bytedance.lighten.loader.SmartImageView
+                android:id="@+id/poi_head_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:failureImage="@color/POIBgPlaceholder"
+                app:placeholderImage="@color/POIBgPlaceholder"/>
+            <com.bytedance.locallife.poi.dito.poi.ui.HeaderImageMaskView
+                android:id="@+id/poi_head_image_mask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+        <com.bytedance.locallife.poi.newdetail.widget.trip.TripPoiHeadWidget
+            android:id="@+id/poi_trip_head_image_widget"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+        <com.bytedance.locallife.poi.newdetail.widget.contentplayer.PoiContentPlayerView
+            android:id="@+id/poi_content_player_view"
+            android:background="#f3f3f4"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <com.bytedance.locallife.poi.newdetail.widget.PoiDetailBgView
+        android:id="@+id/poi_head_bg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

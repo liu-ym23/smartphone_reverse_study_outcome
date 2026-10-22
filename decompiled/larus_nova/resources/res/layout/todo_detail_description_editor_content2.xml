@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.keyboard.edittext2.KeyboardFunctionEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="16sp"
+    android:textColor="@color/text_title"
+    android:textColorHighlight="@color/transparent"
+    android:textColorHint="@color/text_caption"
+    android:gravity="start|top"
+    android:id="@+id/edit_description"
+    android:background="@color/transparent"
+    android:paddingLeft="20dp"
+    android:paddingTop="16dp"
+    android:paddingRight="20dp"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inputType="textMultiLine"/>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="@drawable/facade_round_around_xl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_kit_len_180"
+            android:backgroundTint="@color/facade_selector_item_float">
+            <com.bytedance.ee.bear.bitable.common.widgets.rating.BTRatingBar
+                android:id="@+id/preview_ratebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_kit_len_60"/>
+            <TextView
+                android:textSize="@dimen/space_kit_font_16"
+                android:textColor="@color/text_title"
+                android:id="@+id/rateIconTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_kit_len_60"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rateRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_kit_len_24"
+            android:layout_marginBottom="@dimen/space_kit_len_68"
+            android:minHeight="@dimen/space_kit_len_60"/>
+    </LinearLayout>
+</ScrollView>

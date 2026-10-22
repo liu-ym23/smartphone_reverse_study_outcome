@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@drawable/ttlive_bg_interact_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="53dp">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_pk_random_cancel_text_color"
+        android:gravity="center_vertical"
+        android:id="@+id/match_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/ttlive_flex_invite_match_tips"
+        android:layout_marginStart="16dp"
+        android:textFontWeight="600"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#bf161823"
+        android:id="@+id/feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/ttlive_interact_pk_ban_setting"
+        android:layout_marginEnd="16dp"
+        android:textFontWeight="400"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

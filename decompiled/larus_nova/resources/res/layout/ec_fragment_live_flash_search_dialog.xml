@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ec_shape_promotion_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.ui.ec.widget.titlebar.ECTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ec_page_title_height"
+        app:showLeftIcon="true"/>
+    <com.bytedance.android.ui.ec.widget.searchbar.ECSearchBar
+        android:id="@+id/search_bar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="16dp"/>
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/ec_color_black_161823_12"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:paddingTop="13dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

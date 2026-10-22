@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.awemeopen.infra.base.image.AoImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/image"
+    android:visibility="gone"
+    android:layout_width="166dp"
+    android:layout_height="166dp"/>

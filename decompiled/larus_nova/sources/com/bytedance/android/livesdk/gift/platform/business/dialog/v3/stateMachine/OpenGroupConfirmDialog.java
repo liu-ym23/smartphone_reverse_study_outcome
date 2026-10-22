@@ -1,0 +1,32 @@
+package com.bytedance.android.livesdk.gift.platform.business.dialog.v3.stateMachine;
+
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import vz1.e;
+
+/* JADX INFO: loaded from: classes9.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\t\u0018\u00002\u00020\u0001B\u001f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\f\u001a\u00020\u0007¢\u0006\u0004\b\u000e\u0010\u000fR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000bR\u0017\u0010\f\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b\f\u0010\t\u001a\u0004\b\r\u0010\u000b¨\u0006\u0010"}, d2 = {"Lcom/bytedance/android/livesdk/gift/platform/business/dialog/v3/stateMachine/OpenGroupConfirmDialog;", "Lcom/bytedance/android/livesdk/gift/platform/business/dialog/v3/stateMachine/GiftPanelEffect;", "Lvz1/e;", "iconModel", "Lvz1/e;", "getIconModel", "()Lvz1/e;", "", "groupCount", "I", "getGroupCount", "()I", "position", "getPosition", "<init>", "(Lvz1/e;II)V", "livegift-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class OpenGroupConfirmDialog implements GiftPanelEffect {
+    private final int groupCount;
+    private final e iconModel;
+    private final int position;
+
+    public final int getGroupCount() {
+        return this.groupCount;
+    }
+
+    public final e getIconModel() {
+        return this.iconModel;
+    }
+
+    public final int getPosition() {
+        return this.position;
+    }
+
+    public OpenGroupConfirmDialog(e r100, int r101, int r102) {
+        Intrinsics.checkNotNullParameter(r100, "iconModel");
+        this.iconModel = r100;
+        this.groupCount = r101;
+        this.position = r102;
+    }
+}

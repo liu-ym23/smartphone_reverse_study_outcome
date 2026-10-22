@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/gift_effect_config_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+        <TextView
+            android:textSize="17sp"
+            android:textColor="@color/ttlive_dialog_main_text"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/gift_effect_config_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/ttlive_gift_effect_config_title"
+            android:alpha="0.9"/>
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ttlive_gift_effect_config_leave_arrow"
+            android:contentDescription="返回"
+            android:layout_marginStart="16dp"/>
+    </FrameLayout>
+    <ListView
+        android:id="@+id/gift_effect_config_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:listSelector="@color/transparent"
+        android:layout_weight="1"/>
+</LinearLayout>

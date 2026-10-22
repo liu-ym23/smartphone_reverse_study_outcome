@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/searchReferenceTitleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/searchIcon"
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24"
+            android:layout_marginEnd="?attr/larus_dp_4"/>
+        <TextSwitcher
+            android:layout_gravity="center_vertical"
+            android:id="@+id/search_reference_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/search_reference_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_gravity="center_vertical"
+            android:id="@+id/arrow"
+            android:background="@drawable/larus_ic_tool_header_arrow_right"
+            android:layout_width="?attr/larus_dp_14"
+            android:layout_height="?attr/larus_dp_14"
+            android:layout_marginStart="?attr/larus_dp_2"/>
+    </LinearLayout>
+</merge>

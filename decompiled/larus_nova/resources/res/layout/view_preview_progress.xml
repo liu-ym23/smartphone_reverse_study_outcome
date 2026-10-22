@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/progress_container"
+        android:background="@drawable/ttlive_soloktv_preview_progress_line_bg"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_target_time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_target_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_target_time">
+        <View
+            android:id="@+id/progress_view"
+            android:background="@drawable/ttlive_soloktv_preview_progress_line"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <TextView
+        android:textSize="9dp"
+        android:textColor="#99ffffff"
+        android:id="@+id/tv_target_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02:00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</merge>

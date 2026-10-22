@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/quick_launch_bar_item_icon_size"
+    android:layout_marginTop="@dimen/quick_launch_bar_item_icon_top"
+    android:layout_marginBottom="@dimen/quick_launch_bar_item_icon_bottom"
+    android:scaleType="fitCenter"
+    android:layout_weight="1"
+    app:srcCompat="@drawable/ic_quick_launch_bar_item_skeleton"/>

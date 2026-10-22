@@ -1,0 +1,89 @@
+{
+  "dsl_version": "2.0.0",
+  "node_name": "Device List",
+  "node_type": "page",
+  "node_key": "device_list",
+  "nodes": [
+    {
+      "node_type": "nav_bar",
+      "template_type": "general_bar",
+      "config": {
+        "center_item": {
+          "title": {
+            "type": "string_type",
+            "value": "dora_device_list_title_cn"
+          }
+        }
+      }
+    },
+    {
+      "node_type": "layer",
+      "nodes": [
+        {
+          "node_name": "Lite Entry",
+          "node_type": "card",
+          "template_type": "product_item",
+          "config": {
+            "title": {
+              "type": "string_type",
+              "value": "dora_device_list_lite_title_cn"
+            },
+            "subtitle": {
+              "type": "string_type",
+              "value": "dora_device_list_lite_subtitle_cn"
+            },
+            "image_link": {
+              "remote_info": {
+                "dark_url": [
+                  "https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_dora_lite_device_list_light.png"
+                ],
+                "light_url": [
+                  "https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_dora_lite_device_list_light.png"
+                ]
+              }
+            },
+            "action": {
+              "action_type": "internal_jump",
+              "action_url": "sslocal://flow/dora/bind_device?page_key=bind_device_v2&product_id=1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "node_type": "layer",
+      "nodes": [
+        {
+          "node_name": "H Entry",
+          "node_type": "card",
+          "template_type": "product_item",
+          "config": {
+            "device_type": "other",
+            "title": {
+              "type": "string_type",
+              "value": "dora_device_list_other_smart_title_cn"
+            },
+            "subtitle": {
+              "type": "string_type",
+              "value": "larus_dora_device_list_other_smart_subtitle_sax_cn"
+            },
+            "image_link": {
+              "remote_info": {
+                "dark_url": [
+                  "https://p3-starweave-source.byteimg.com/h_onboarding/image_dora_h_device_list_simple_v3.png"
+                ],
+                "light_url": [
+                  "https://p3-starweave-source.byteimg.com/h_onboarding/image_dora_h_device_list_simple_v3.png"
+                ]
+              }
+            },
+            "action": {
+              "action_type": "internal_jump",
+              "action_url": "sslocal://flow/dora/bind_device?page_key=bind_device_v2&product_id=-1"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

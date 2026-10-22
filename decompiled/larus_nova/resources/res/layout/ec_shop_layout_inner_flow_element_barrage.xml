@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.window.shop.innerflow.holder.element.barrage.BarrageFrameLayout
+        android:id="@+id/ec_shop_inner_flow_barrage_root_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.bytedance.android.window.shop.innerflow.holder.element.barrage.BarrageRecycleView
+            android:id="@+id/ec_shop_inner_flow_barrage_area"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.bytedance.android.window.shop.innerflow.holder.element.barrage.BarrageFrameLayout>
+    <com.bytedance.android.window.shop.innerflow.widget.ECControllerViewGroup
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom|right"
+        android:orientation="horizontal"
+        android:id="@+id/ec_shop_inner_flow_controller_group"
+        android:background="@drawable/shopping_bg_controller_view"
+        android:paddingLeft="6dp"
+        android:paddingTop="1dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="1dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:minWidth="12dp"
+        android:minHeight="12dp"/>
+</LinearLayout>

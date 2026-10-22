@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.CustomFontTextView
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/ttlive_end_contribution_color"
+        android:gravity="center_horizontal"
+        android:id="@+id/interact_ticket_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.live.core.widget.LiveTextView
+        android:textSize="12sp"
+        android:textColor="#80ffffff"
+        android:gravity="center_horizontal"
+        android:id="@+id/interact_ticket_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_live_end_ticket_count_label"/>
+</LinearLayout>

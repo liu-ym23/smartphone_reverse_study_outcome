@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ai_button_container"
+    android:visibility="visible"
+    android:layout_width="@dimen/ttlive_input_dialog_new_input_container_height"
+    android:layout_height="@dimen/ttlive_input_dialog_new_input_container_height">
+    <ImageView
+        android:id="@+id/control_button"
+        android:background="@drawable/ttlive_ai_entrance_drawable"
+        android:layout_width="@dimen/ttlive_input_dialog_new_input_container_height"
+        android:layout_height="@dimen/ttlive_input_dialog_new_input_container_height"/>
+</FrameLayout>

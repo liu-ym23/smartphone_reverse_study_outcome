@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="16sp"
+        android:textColor="@color/text_title"
+        android:id="@+id/link_field_membrane_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingEnd="-8dp"/>
+    <FrameLayout
+        android:id="@+id/add_link_record_button_fl"
+        android:background="@drawable/facade_round_around_s"
+        android:focusable="true"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="@dimen/space_kit_len_32"
+        android:layout_height="@dimen/space_kit_len_24"
+        android:layout_marginTop="@dimen/space_kit_len_4"
+        android:layout_marginBottom="@dimen/space_kit_len_4"
+        android:layout_marginStart="@dimen/space_kit_len_8"
+        android:backgroundTint="@color/bitable_page_field_item_right_icon_color">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:id="@+id/add_link_record_button"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:scaleType="centerInside"
+            android:tint="@color/icon_n3"
+            app:srcCompat="@drawable/ud_icon_add_outlined"/>
+    </FrameLayout>
+</LinearLayout>

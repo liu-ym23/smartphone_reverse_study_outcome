@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="?attr/larus_white_bg_item_middle"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_68">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="?attr/larus_dp_44"
+        android:layout_height="?attr/larus_dp_44"
+        android:layout_marginStart="?attr/larus_dp_16"
+        android:layout_marginEnd="?attr/larus_dp_16"
+        app:srcCompat="@drawable/larus_ic_my_tab_voice_create"/>
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:textColor="?attr/larus_primary_50"
+        android:id="@+id/create_voice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_create_my_voice"/>
+</LinearLayout>

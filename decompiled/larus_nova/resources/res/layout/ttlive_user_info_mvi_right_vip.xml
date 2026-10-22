@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:id="@+id/vip_icon_layout"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="28dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/vip_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:actualImageScaleType="centerInside"/>
+    </RelativeLayout>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/vip_icon_animator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</merge>

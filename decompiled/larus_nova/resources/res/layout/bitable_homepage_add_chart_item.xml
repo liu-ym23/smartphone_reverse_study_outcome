@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.ui.layout.LKUIRoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/bitable_homepage_chart_bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_12"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16"
+    app:rl_radius="@dimen/dp_20">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16">
+        <TextView
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_title"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:id="@+id/hp_chart_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_weight="1"/>
+        <com.larksuite.component.universe_design.checkbox.UDCheckBox
+            android:id="@+id/hp_chart_check_status"
+            android:padding="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            app:ud_checkbox_size="normal"/>
+    </LinearLayout>
+    <com.bytedance.ee.bear.bitable.homepage.chart.widget.chart.ChartItemView
+        android:id="@+id/hp_chart_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.larksuite.component.ui.layout.LKUIRoundLinearLayout>

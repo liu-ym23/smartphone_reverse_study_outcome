@@ -1,0 +1,11 @@
+package com.ss.android.lark.todo.impl.utils;
+
+/* JADX INFO: loaded from: classes38.dex */
+public final class f {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ int f444288a = 0;
+
+    static {
+    }
+}

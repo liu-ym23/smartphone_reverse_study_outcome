@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp">
+    <ImageView
+        android:id="@+id/im_cart"
+        android:visibility="gone"
+        android:layout_width="38dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/shopping_add_to_cart"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ec_color_white"
+        android:gravity="center"
+        android:id="@+id/tv_go_to_buy"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:text="@string/ec_open_detail"
+        android:lineSpacingExtra="2dp"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/cart_stepper_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:id="@+id/iv_stepper_sub"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:placeholderImage="@drawable/ec_ic_cart_stepper_sub"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@color/shopping_color_161823"
+            android:gravity="center"
+            android:id="@+id/tv_cart_stepper_num"
+            android:layout_width="32dp"
+            android:layout_height="24dp"/>
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:id="@+id/iv_stepper_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:placeholderImage="@drawable/ec_ic_cart_stepper_add"/>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hybrid_product_area"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.ec.hybrid.list.view.ECHybridListContainerOpt
+        android:id="@+id/ec_shop_product_tab_hybrid_container"
+        android:background="@drawable/shopping_bg_shop_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/ec_shop_product_tab_hybrid_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

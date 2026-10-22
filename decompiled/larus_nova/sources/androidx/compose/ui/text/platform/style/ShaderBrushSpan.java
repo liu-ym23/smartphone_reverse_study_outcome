@@ -1,0 +1,76 @@
+package androidx.compose.ui.text.platform.style;
+
+import android.graphics.Shader;
+import android.text.TextPaint;
+import android.text.style.CharacterStyle;
+import android.text.style.UpdateAppearance;
+import androidx.compose.runtime.MutableState;
+import androidx.compose.runtime.SnapshotStateKt;
+import androidx.compose.runtime.State;
+import androidx.compose.ui.geometry.InlineClassHelperKt;
+import androidx.compose.ui.geometry.Size;
+import androidx.compose.ui.graphics.ShaderBrush;
+import androidx.compose.ui.text.platform.AndroidTextPaint_androidKt;
+import kotlin.Metadata;
+import p.b;
+
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0001\u0018\u00002\u00020\u00012\u00020\u0002B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bJ\u0010\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0016R\u0011\u0010\u0003\u001a\u00020\u0004¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR+\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\u000e8F@FX\u0086\u008e\u0002¢\u0006\u0012\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0010\u0010\u0011\"\u0004\b\u0012\u0010\u0013R\u0016\u0010\u0016\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00180\u0017X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u001d"}, d2 = {"Landroidx/compose/ui/text/platform/style/ShaderBrushSpan;", "Landroid/text/style/CharacterStyle;", "Landroid/text/style/UpdateAppearance;", "shaderBrush", "Landroidx/compose/ui/graphics/ShaderBrush;", "alpha", "", "<init>", "(Landroidx/compose/ui/graphics/ShaderBrush;F)V", "getShaderBrush", "()Landroidx/compose/ui/graphics/ShaderBrush;", "getAlpha", "()F", "<set-?>", "Landroidx/compose/ui/geometry/Size;", "size", "getSize-NH-jbRc", "()J", "setSize-uvyYCjk", "(J)V", "size$delegate", "Landroidx/compose/runtime/MutableState;", "shaderState", "Landroidx/compose/runtime/State;", "Landroid/graphics/Shader;", "updateDrawState", "", "textPaint", "Landroid/text/TextPaint;", "ui-text"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public final class ShaderBrushSpan extends CharacterStyle implements UpdateAppearance {
+    public static final int $stable = 8;
+    private final float alpha;
+    private final ShaderBrush shaderBrush;
+    private final State<Shader> shaderState;
+    private final MutableState size$delegate;
+
+    public static /* synthetic */ Shader a(ShaderBrushSpan r100) {
+        return shaderState$lambda$0(r100);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: getSize-NH-jbRc, reason: not valid java name */
+    public final long m7288getSizeNHjbRc() {
+        return ((Size) this.size$delegate.getValue()).m4656unboximpl();
+    }
+
+    public final float getAlpha() {
+        return this.alpha;
+    }
+
+    public final ShaderBrush getShaderBrush() {
+        return this.shaderBrush;
+    }
+
+    private static final Shader shaderState$lambda$0(ShaderBrushSpan r100) {
+        if (r100.m7288getSizeNHjbRc() != InlineClassHelperKt.UnspecifiedPackedFloats) goto L5;
+        boolean r101 = true;
+    L6:
+        if (r101 == false) goto L8;
+    L11:
+        return null;
+    L8:
+        if (Size.m4653isEmptyimpl(r100.m7288getSizeNHjbRc()) == true) goto L11;
+        return r100.shaderBrush.mo4796createShaderuvyYCjk(r100.m7288getSizeNHjbRc());
+    L5:
+        r101 = false;
+        goto L6
+    }
+
+    /* JADX INFO: renamed from: setSize-uvyYCjk, reason: not valid java name */
+    public final void m7289setSizeuvyYCjk(long r100) {
+        this.size$delegate.setValue(Size.m4639boximpl(r100));
+    }
+
+    @Override // android.text.style.CharacterStyle
+    public void updateDrawState(TextPaint r100) {
+        AndroidTextPaint_androidKt.setAlpha(r100, this.alpha);
+        r100.setShader(this.shaderState.getValue());
+    }
+
+    public ShaderBrushSpan(ShaderBrush r100, float r101) {
+        this.shaderBrush = r100;
+        this.alpha = r101;
+        this.size$delegate = SnapshotStateKt.mutableStateOf$default(Size.m4639boximpl(Size.Companion.m4659getUnspecifiedNHjbRc()), null, 2, null);
+        this.shaderState = SnapshotStateKt.derivedStateOf(new b(this));
+    }
+}

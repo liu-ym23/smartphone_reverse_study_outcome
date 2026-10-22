@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ttlive_merge_drawer_background"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/merge_drawer_big_title_container"
+        android:paddingBottom="15dp"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/merge_drawer_big_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:maxLines="1"/>
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/merge_drawer_back_to_feed"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8.5dp"
+            android:src="@drawable/ttlive_merge_drawer_backtofeed"/>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/merge_drawer_recyclerview_container"
+        android:layout_width="112dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merge_drawer_big_title_container">
+        <com.bytedance.android.live.ui.FadingEdgeRecyclerview
+            android:id="@+id/merge_drawer_recyclerview"
+            android:fadingEdgeLength="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:requiresFadingEdge="vertical"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

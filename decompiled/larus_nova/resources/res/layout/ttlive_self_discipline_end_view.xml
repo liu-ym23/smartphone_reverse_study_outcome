@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/tv_hint_container"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/end_view_iv"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/ttlive_bg_self_discipline_complete_success"/>
+        <TextView
+            android:textSize="12dp"
+            android:textColor="@color/ttlive_white_90"
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:text="@string/ttlive_self_discipline_end_hint"/>
+    </LinearLayout>
+    <TextView
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/ttlive_core_dy_yellow"
+        android:gravity="center"
+        android:id="@+id/tv_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint_container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

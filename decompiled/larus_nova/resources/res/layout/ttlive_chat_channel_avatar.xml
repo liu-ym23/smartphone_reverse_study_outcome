@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="32dp"
+    android:layout_height="32dp">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:id="@+id/multi_avatar_container"
+        android:visibility="visible"
+        android:layout_width="26dp"
+        android:layout_height="26dp">
+        <com.bytedance.android.livesdk.widget.TransparentCircleIconView
+            android:id="@+id/top_avatar"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            app:circleCenterLeftMargin="1.125dp"
+            app:circleCenterTopMargin="17.225dp"
+            app:circleRadius="10dp"
+            app:placeholderImage="@drawable/ttlive_ic_withdraw_default_avatar"
+            app:roundAsCircle="true"
+            app:ttlive_allRadius="20dp"/>
+        <com.bytedance.android.livesdk.widget.roundcorner.RoundCornerImageView
+            android:id="@+id/bottom_avatar"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            app:placeholderImage="@drawable/ttlive_ic_withdraw_default_avatar"
+            app:roundAsCircle="true"
+            app:ttlive_allRadius="20dp"/>
+    </RelativeLayout>
+    <com.bytedance.android.livesdk.widget.roundcorner.RoundCornerImageView
+        android:layout_gravity="center"
+        android:id="@+id/single_avatar"
+        android:visibility="gone"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        app:placeholderImage="@drawable/ttlive_ic_withdraw_default_avatar"
+        app:ttlive_allRadius="20dp"/>
+</FrameLayout>

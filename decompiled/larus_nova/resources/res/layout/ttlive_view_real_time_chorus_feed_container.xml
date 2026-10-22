@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/real_time_chorus_theme_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="背景"/>
+    <FrameLayout
+        android:id="@+id/real_time_chorus_main_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</merge>

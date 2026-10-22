@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.widget.roundcorner.RoundCornerLinearlayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ttlive_vs_dialog_content"
+    android:background="@drawable/ttlive_bg_quick_shot_landscape_v2"
+    android:padding="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="106dp"
+    app:layout_constraintCircleRadius="10dp">
+    <com.bytedance.android.livesdk.widget.roundcorner.RoundCornerImageView
+        android:id="@+id/ttlive_vs_quick_screenshot_img"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        app:ttlive_allRadius="6dp"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/btn_share"
+        android:background="@drawable/ttlive_quick_shot_landscape_share_btn_v2"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        style="@style/uicomponent_button_style_primary_l">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/ttlive_ic_quick_shot_share_v2"
+            android:scaleType="fitCenter"/>
+        <TextView
+            android:textSize="13dp"
+            android:textColor="@color/ttlive_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_long_press_share"/>
+    </LinearLayout>
+</com.bytedance.android.livesdk.widget.roundcorner.RoundCornerLinearlayout>

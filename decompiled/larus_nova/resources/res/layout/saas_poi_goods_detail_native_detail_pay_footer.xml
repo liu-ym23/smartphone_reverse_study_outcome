@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/poi_goods_detail_native_detail_pay_footer_54695764"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/button_title"
+        android:background="@drawable/poi_bg_goods_detail_native_detail_pay_footer_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/poi_groupon_buy_right_now"/>
+</FrameLayout>

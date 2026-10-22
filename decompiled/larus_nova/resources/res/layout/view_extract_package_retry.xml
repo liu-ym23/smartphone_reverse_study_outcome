@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/extract_retry_layout"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/file_retry_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="126dp"
+        app:srcCompat="@drawable/ud_icon_file_zip_colorful"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_caption"
+        android:id="@+id/extract_retry_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxWidth="248dp"
+        android:text="@string/Lark_IMPreviewCompress_DecompressTimeOutTryAgain_Toast"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_caption"
+        android:id="@+id/extract_retry_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"/>
+    <com.larksuite.component.universe_design.button.UDButton
+        android:textColor="@color/static_white"
+        android:id="@+id/retry_btn"
+        android:layout_marginTop="16dp"
+        android:maxWidth="248dp"
+        android:text="@string/Lark_IMPreviewCompress_Retry_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extract_package_size"
+        app:ud_backgroundColor="@color/primary_fill_default"
+        style="@style/UDButton.Middle.Primary"/>
+</LinearLayout>

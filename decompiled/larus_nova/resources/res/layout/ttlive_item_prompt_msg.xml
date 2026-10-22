@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <TextView
+        android:textSize="13sp"
+        android:id="@+id/tv_send_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="13sp"
+        android:id="@+id/tv_showing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:text="@string/ttlive_text_showing"
+        android:layout_alignBaseline="@+id/tv_send_time"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/tv_send_time"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_white_90"
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/ttlive_text_showing"
+        android:layout_below="@+id/tv_send_time"/>
+</RelativeLayout>

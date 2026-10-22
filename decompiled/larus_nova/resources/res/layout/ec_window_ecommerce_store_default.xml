@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/store_default_image"
+            android:layout_width="240dp"
+            android:layout_height="160dp"
+            android:src="@drawable/ecommerce_store_ic_goods_empty"/>
+        <TextView
+            android:textColor="@color/commerce_text_reverse_3"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/store_default_hint"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/portfolio_no_goods"
+            style="@style/font_size_28"/>
+    </LinearLayout>
+</RelativeLayout>

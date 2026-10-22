@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/option_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dp_48">
+    <LinearLayout
+        android:id="@+id/option_tag_layout"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <ImageView
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/option_tag"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/option_select_check"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:layout_width="16sp"
+        android:layout_height="16sp"
+        android:tint="@color/primary_pri_500"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:srcCompat="@drawable/ud_icon_list_check_bold_outlined"/>
+</LinearLayout>

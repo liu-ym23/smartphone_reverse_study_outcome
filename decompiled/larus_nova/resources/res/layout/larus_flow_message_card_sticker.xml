@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/single_img_container"
+        android:layout_width="?attr/larus_dp_200"
+        android:layout_height="?attr/larus_dp_200">
+        <com.larus.bmhome.chat.plugin.image4.view.ImageViewWithLastMotion
+            android:id="@+id/single_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:failureImage="?attr/larus_base_2_overlay"
+            app:placeholderImage="?attr/larus_base_2_overlay"
+            app:roundedCornerRadius="?attr/larus_dp_8"/>
+        <ViewStub
+            android:id="@+id/image_loading"
+            android:layout="@layout/larus_sketch_progress_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

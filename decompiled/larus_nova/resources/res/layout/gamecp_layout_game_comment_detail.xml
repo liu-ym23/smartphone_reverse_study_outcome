@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bytedance.android.gamecp.business.view.CommonTitleView
+        android:id="@+id/title_comment_reply_list"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comment_detail_reply_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <include
+            android:id="@+id/cl_comment_detail_reply_flow_title"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/gamecp_title_game_promote_comment_detail_list_v2"/>
+    </FrameLayout>
+    <com.bytedance.android.gamecp.business.comment.ReplyInputView
+        android:id="@+id/input_comment_detail_reply"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"/>
+</merge>

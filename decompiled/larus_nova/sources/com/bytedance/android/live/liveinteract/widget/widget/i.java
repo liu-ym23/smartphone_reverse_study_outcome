@@ -1,0 +1,18 @@
+package com.bytedance.android.live.liveinteract.widget.widget;
+
+import com.bytedance.android.livesdk.chatroom.model.ILinkmicAudienceSetting;
+
+/* JADX INFO: loaded from: classes46.dex */
+public final /* synthetic */ class i {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ int[] f81067a = null;
+
+    static {
+        int[] r100 = new int[ILinkmicAudienceSetting.LinkmicSettingStatus.values().length];
+        f81067a = r100;
+        r100[ILinkmicAudienceSetting.LinkmicSettingStatus.SETTING_OPEN.ordinal()] = 1;
+        r100[ILinkmicAudienceSetting.LinkmicSettingStatus.SETTING_DELEGATED_TO_EVERYONE.ordinal()] = 2;
+        r100[ILinkmicAudienceSetting.LinkmicSettingStatus.SETTING_OFF.ordinal()] = 3;
+    }
+}

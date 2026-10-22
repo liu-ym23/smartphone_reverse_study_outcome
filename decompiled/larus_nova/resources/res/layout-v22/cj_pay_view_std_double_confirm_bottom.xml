@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_std_double_confirm_bottom_root"
+    android:paddingTop="58dp"
+    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.android.ttcjpaysdk.base.ui.component.agreement.CJRowSwitchText
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/cj_pay_bank_card_points_open"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:paddingHorizontal="12dp"
+        app:CJRowSwitchChecked="false"
+        app:CJRowSwitchContent=""
+        app:CJRowSwitchContentSize="12sp"/>
+    <com.android.ttcjpaysdk.base.ui.component.security.CJSecurityTextView
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@+id/cj_pay_button_above_security_view"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:gravity="bottom"
+        android:id="@+id/cj_pay_std_double_confirm_button_layout"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingHorizontal="12dp">
+        <com.android.ttcjpaysdk.base.ui.widget.LoadingButton
+            android:id="@+id/cj_pay_std_double_confirm_main_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

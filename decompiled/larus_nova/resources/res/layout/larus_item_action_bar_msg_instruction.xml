@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/icon"
+        android:layout_width="?attr/larus_dp_16"
+        android:layout_height="?attr/larus_dp_16"
+        android:layout_marginStart="?attr/larus_dp_14"
+        android:layout_marginEnd="?attr/larus_dp_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/display_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="?attr/larus_dp_14"
+        android:textColor="?attr/larus_neutral_100"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/display_text"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_36"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="?attr/larus_dp_2"
+        android:layout_marginEnd="?attr/larus_dp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+</merge>

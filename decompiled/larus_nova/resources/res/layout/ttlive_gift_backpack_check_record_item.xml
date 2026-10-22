@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/backpack_check_root"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="110dp"
+    android:layout_height="84dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginEnd="2dp">
+    <ImageView
+        android:id="@+id/check_record_item_icon"
+        android:background="@drawable/ttlive_gift_backpack_check_record_item_bg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ttlive_gift_backpack_end_check_record_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.5dp"
+        android:text="@string/ttlive_prop_detail_entrance"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_record_item_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

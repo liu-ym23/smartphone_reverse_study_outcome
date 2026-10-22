@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_bg_white_round_corner_rect"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/live_dialog_top_block"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/live_dialog_title"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        style="@style/ttlive_live_dialog_title"/>
+    <View
+        android:id="@+id/live_dialog_image_block"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/live_dialog_image"
+        android:layout_width="240dp"
+        android:layout_height="244dp"/>
+</LinearLayout>

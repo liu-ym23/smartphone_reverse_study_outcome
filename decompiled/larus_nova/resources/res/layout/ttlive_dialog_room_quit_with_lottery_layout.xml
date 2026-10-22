@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/content_container"
+    android:layout_width="match_parent"
+    android:layout_height="96dp">
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#5c5e64"
+        android:gravity="center"
+        android:id="@+id/title"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/ttlive_quit_room_with_lottery_dialog_title"
+        android:lines="2"
+        style="@style/uicomponent_common_alert_dialog_title_tv"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/rb_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:theme="@style/ttlive_uncheck_radio_button"
+            android:textColor="#161823"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/rb"
+            android:background="@drawable/ttlive_selector_radio_lottery"
+            android:clickable="true"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:checked="false"
+            android:button="@null"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="#7c7d82"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_quit_room_with_lottery_dialog_sub_title"
+            android:layout_marginStart="7.9dp"/>
+    </LinearLayout>
+</LinearLayout>

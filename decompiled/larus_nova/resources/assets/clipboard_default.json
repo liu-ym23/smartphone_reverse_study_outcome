@@ -1,0 +1,113 @@
+{
+    "unit_disable":39,
+    "bpea-ug-luckydog-sdk-install-task-clipboard-read": {
+        "expire_time": 0,
+        "unit_disable": 1,
+        "pattern_confidence": 1,
+        "patterns": [
+            "email",
+            "datetime"
+        ]
+    },
+    "bpea-ug-luckydog-sdk-install-task-clipboard-write": {
+        "expire_time": 0,
+        "unit_disable": 39
+    },
+    "bpea-zlink-sdk":{
+        "unit_disable": 1,
+        "expire_time": 0,
+        "pattern_confidence": 0.8,
+        "patterns": [
+            "email",
+            "datetime"
+        ]
+    },
+    "bpea-applet-frontend":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-created-bot-comments":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-debug-tool":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-dora-settings":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-dora-debug":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-markdown-phone":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-ai-document":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-setting-version-copy":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-message-share-link-copy":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-creation-caption":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-share-message-copy":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-message-copy":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-user-report-message":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-ai-podcast":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-voice-call-caption":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-markdown-text-copy":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-input-long-press":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-bot-update":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-web-copy-link":{
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-audio-menu-popup-copy": {
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-menu-popup-copy": {
+        "expire_time":0,
+        "unit_disable":39
+    },
+    "bpea-markdown-html-copy": {
+        "expire_time":0,
+        "unit_disable":39
+    }
+}

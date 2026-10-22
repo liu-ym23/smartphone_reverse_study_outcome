@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.bmhome.chat.layout.widget.ShimmerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/flowMarkdownCodeHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/larus_dp_12">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/flowMarkdownCodeHeaderIcon"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_28"
+        android:layout_height="?attr/larus_dp_28"/>
+    <TextView
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="?attr/larus_neutral_70"
+        android:id="@+id/flowMarkdownCodeHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/flowMarkdownCodeHeaderArrow"
+        android:layout_width="?attr/larus_dp_12"
+        android:layout_height="?attr/larus_dp_12"
+        android:layout_marginStart="?attr/larus_dp_6"
+        app:srcCompat="?attr/larus_ic_arrow_right_grey_markdown"/>
+</com.larus.bmhome.chat.layout.widget.ShimmerLinearLayout>

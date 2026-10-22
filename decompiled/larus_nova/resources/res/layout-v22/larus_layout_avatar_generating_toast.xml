@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.roundlayout.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/toast_root"
+    android:paddingLeft="?attr/larus_dp_16"
+    android:paddingTop="?attr/larus_dp_12"
+    android:paddingRight="?attr/larus_dp_16"
+    android:paddingBottom="?attr/larus_dp_12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="?attr/larus_dp_8"
+    android:paddingHorizontal="?attr/larus_dp_16"
+    android:paddingVertical="?attr/larus_dp_12"
+    app:rv_backgroundColor="?attr/larus_base_3"
+    app:rv_cornerRadius="?attr/larus_dp_16">
+    <com.lynx.lottieadapter.LottieAdapterView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/loading_icon"
+        android:layout_width="?attr/larus_dp_24"
+        android:layout_height="?attr/larus_dp_24"
+        android:scaleType="centerInside"
+        app:lottie_fileName="lottie/toast_loading.json"
+        app:lottie_loop="true"/>
+    <TextView
+        android:textSize="?attr/larus_dp_16"
+        android:textStyle="bold"
+        android:textColor="?attr/larus_neutral_100"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_replicaTemplate_label_creating"
+        android:layout_marginStart="?attr/larus_dp_8"/>
+</com.larus.common_ui.widget.roundlayout.RoundLinearLayout>

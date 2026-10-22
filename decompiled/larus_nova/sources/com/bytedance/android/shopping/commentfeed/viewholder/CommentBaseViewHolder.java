@@ -1,0 +1,29 @@
+package com.bytedance.android.shopping.commentfeed.viewholder;
+
+import android.view.View;
+import androidx.recyclerview.widget.RecyclerView;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes13.dex */
+@Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0016\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"Lcom/bytedance/android/shopping/commentfeed/viewholder/CommentBaseViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "ec-shopping-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public class CommentBaseViewHolder extends RecyclerView.ViewHolder {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final View f172382a;
+
+    public void T3() {
+    }
+
+    public void U3() {
+    }
+
+    public void V3() {
+    }
+
+    public CommentBaseViewHolder(View r100) {
+        Intrinsics.checkNotNullParameter(r100, "view");
+        super(r100);
+        this.f172382a = r100;
+    }
+}

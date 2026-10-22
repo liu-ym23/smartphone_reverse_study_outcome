@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/larus_bg_smart_reply_block"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44">
+        <TextView
+            android:textSize="?attr/larus_dp_15"
+            android:textStyle="bold"
+            android:textColor="?attr/larus_neutral_70"
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="?attr/larus_dp_12"/>
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_copy"
+            android:layout_width="?attr/larus_dp_32"
+            android:layout_height="?attr/larus_dp_32"
+            android:contentDescription="@string/larus_accessibility_icon_copy"
+            android:layout_marginEnd="?attr/larus_dp_8"/>
+    </LinearLayout>
+    <View
+        android:background="?attr/larus_neutral_transparent_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/block_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

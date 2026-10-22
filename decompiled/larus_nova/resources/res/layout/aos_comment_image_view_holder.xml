@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/aos_familiar_item_slides_photo"/>
+    <com.bytedance.awemeopen.apps.framework.feed.desc.MentionTextView
+        android:textSize="15sp"
+        android:textColor="@color/aos_const_text_inverse2"
+        android:id="@+id/tv_image_comment_content"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:lineSpacingExtra="3sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"/>
+</RelativeLayout>

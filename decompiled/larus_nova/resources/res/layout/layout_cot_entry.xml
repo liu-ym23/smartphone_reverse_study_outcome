@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.chat.cot.entry.CotEntryView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cot_process_layout"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="24dp">
+    <com.ss.android.lark.widget.textview.ShineTextView
+        android:textSize="@dimen/ud_text_title4"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:id="@+id/cot_process_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cot_process_arrow"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center"
+        android:id="@+id/cot_process_arrow"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:contentDescription="@null"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cot_process_summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cot_process_summary"
+        app:layout_constraintTop_toTopOf="@+id/cot_process_summary"
+        app:srcCompat="@drawable/ud_icon_right_outlined"
+        app:tint="@color/icon_n2"/>
+</com.ss.android.lark.chat.cot.entry.CotEntryView>

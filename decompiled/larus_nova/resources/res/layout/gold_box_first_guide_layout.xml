@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/fake_box_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="top|left"
+        android:id="@+id/fake_box_iv"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="12dp"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/box_tip_lottie"
+        android:visibility="gone"
+        android:layout_width="160dp"
+        android:layout_height="160dp"/>
+</merge>

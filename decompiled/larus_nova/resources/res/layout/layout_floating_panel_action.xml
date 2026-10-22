@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.universe_design.shadow.UDShadowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:ud_shadow_radius="18dp"
+        style="@style/FloatCardShadow">
+        <com.larksuite.component.universe_design.button.UDButton
+            android:textColor="@color/text_title"
+            android:id="@+id/floating_panel_action_ellipse_bt"
+            android:text="@string/Lark_Meetings_ShowLessCard_Button"
+            app:ud_backgroundColor="@color/bg_color_card_list_button"
+            app:ud_strokeColor="@color/line_border_card"
+            style="@style/UDButton.Middle.Circle"/>
+    </com.larksuite.component.universe_design.shadow.UDShadowLayout>
+    <com.larksuite.component.universe_design.shadow.UDShadowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:ud_shadow_radius="18dp"
+        style="@style/FloatCardShadow">
+        <com.larksuite.component.universe_design.button.UDButton
+            android:textColor="@color/text_title"
+            android:id="@+id/floating_panel_action_clear_bt"
+            android:padding="0dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="12dp"
+            app:ud_backgroundColor="@color/bg_color_card_list_button"
+            app:ud_isRadiusAdjustBounds="true"
+            app:ud_strokeColor="@color/line_border_card"
+            style="@style/UDButton.Middle.Circle"/>
+    </com.larksuite.component.universe_design.shadow.UDShadowLayout>
+</merge>

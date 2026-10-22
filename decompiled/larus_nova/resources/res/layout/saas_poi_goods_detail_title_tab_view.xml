@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_goods_detail_title_tab_view_297201857"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.dux.text.DuxTextView
+        android:textColor="#66161823"
+        android:layout_gravity="center"
+        android:id="@+id/tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

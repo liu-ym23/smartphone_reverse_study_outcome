@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_gravity="top"
+        android:id="@+id/viewer_video_view_container"
+        android:background="@null"
+        android:padding="?attr/larus_dp_32"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.larus.common_ui.video.VideoPlayView
+            android:layout_gravity="center"
+            android:id="@+id/viewer_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/thread_forward_translate_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/text_caption"
+        android:id="@+id/card_translate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Lark_Chat_Translation"
+        app:layout_constraintBottom_toBottomOf="@+id/translate_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/translate_divider"/>
+    <View
+        android:id="@+id/translate_divider"
+        android:background="@color/line_divider_default"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_translate_label"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.ss.android.lark.chatbase.view.ThreadForwardCardView
+        android:id="@+id/translate_thread_forward"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/translate_divider"
+        app:layout_goneMarginTop="0dp"/>
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/divider_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="translate_divider,card_translate_label"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

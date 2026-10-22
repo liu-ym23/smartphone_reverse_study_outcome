@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/over_layer_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.assistant.view.glowui.GlowView
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/glow_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+    <com.obric.assistant.view.continuespeech.AudioContinueGradientView
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/audio_visualizer_view"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_56"
+        android:layout_marginBottom="?attr/larus_dp_12"
+        app:audioWindowMode="true"/>
+    <TextView
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/white_70"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/larus_dp_70"
+        android:text="@string/larus_hold_to_speak_note"/>
+</FrameLayout>

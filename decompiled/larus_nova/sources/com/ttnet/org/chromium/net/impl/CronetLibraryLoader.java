@@ -1,0 +1,175 @@
+package com.ttnet.org.chromium.net.impl;
+
+import android.content.Context;
+import android.os.ConditionVariable;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
+import android.os.Process;
+import android.text.TextUtils;
+import com.bytedance.librarian.a;
+import com.bytedance.security.android.aopcheck.PolarisFileWrapper;
+import com.larus.utils.logger.FLogger;
+import com.ss.android.ugc.bytex.pthread.base.convergence.hook.ThreadMethodProxy;
+import com.ss.android.ugc.bytex.pthread.base.proxy.PthreadHandlerThreadV2;
+import com.ttnet.org.chromium.base.ContextUtils;
+import com.ttnet.org.chromium.base.Log;
+import com.ttnet.org.chromium.base.annotations.JNINamespace;
+import com.ttnet.org.chromium.net.NetworkChangeNotifier;
+import kotlin.jvm.JvmStatic;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes.dex */
+@JNINamespace("cronet")
+public class CronetLibraryLoader {
+    static final /* synthetic */ boolean $assertionsDisabled = false;
+    private static final String LIBRARY_NAME = "sscronet";
+    private static final String TAG = null;
+    private static final HandlerThread sInitThread = null;
+    private static volatile boolean sInitThreadInitDone;
+    private static volatile boolean sLibraryLoaded;
+    private static final Object sLoadLock = null;
+    private static final ConditionVariable sWaitForLibLoad = null;
+
+    /* JADX INFO: loaded from: classes5.dex */
+    public interface Natives {
+        void createNetworkChangeNotifierOnInitThread();
+
+        void cronetInitOnInitThread();
+
+        String getCronetVersion();
+    }
+
+    public CronetLibraryLoader() {
+    }
+
+    public static /* synthetic */ void access$000(String r100) {
+        System.loadLibrary(r100);
+    }
+
+    static {
+        sLoadLock = new Object();
+        TAG = "CronetLibraryLoader";
+        sInitThread = new PthreadHandlerThreadV2("CronetInit");
+        sLibraryLoaded = false;
+        sWaitForLibLoad = new ConditionVariable();
+    }
+
+    private static void ensureInitializedFromNative() {
+        Object r100 = sLoadLock;
+        monitor-enter(r100);
+        sLibraryLoaded = true;     // Catch: Throwable -> L9
+        sWaitForLibLoad.open();     // Catch: Throwable -> L9
+        monitor-exit(r100);     // Catch: Throwable -> L9
+        ensureInitialized(ContextUtils.getApplicationContext(), null);
+        return;
+    L9:
+        th = move-exception;
+        throw th;
+    }
+
+    public static void ensureInitializedOnInitThread() {
+        if (sInitThreadInitDone == false) goto L5;
+        return;
+    L5:
+        TTCronetInitTimingInfo.sInitThreadStart = System.nanoTime();
+        NetworkChangeNotifier.init();
+        NetworkChangeNotifier.registerToReceiveNotificationsAlways();
+        sWaitForLibLoad.block();
+        CronetLibraryLoaderJni.get().cronetInitOnInitThread();
+        sInitThreadInitDone = true;
+        TTCronetInitTimingInfo.sInitThreadEnd = System.nanoTime();
+    }
+
+    private static boolean onInitThread() {
+        if (sInitThread.getLooper() != Looper.myLooper()) goto L5;
+        return true;
+    L5:
+        return false;
+    }
+
+    public static void createNetworkChangeNotifierOnInitThread() {
+        CronetLibraryLoaderJni.get().createNetworkChangeNotifierOnInitThread();
+    }
+
+    private static String getDefaultUserAgent() {
+        return UserAgent.from(ContextUtils.getApplicationContext());
+    }
+
+    @JvmStatic
+    public static void INVOKESTATIC_com_ttnet_org_chromium_net_impl_CronetLibraryLoader_com_larus_home_impl_utils_SystemLoadLibraryHook_loadLibrary(String r100) {
+        Intrinsics.checkNotNullParameter(r100, "libName");
+        FLogger r101 = FLogger.f375446a;
+        r101.i("Librarian_loadLib", "loadLibrary start libName -> " + r100);
+        a.c(r100);
+        r101.i("Librarian_loadLib", "loadLibrary success by librarian -> " + r100);
+    }
+
+    private static void loadCronetLibrary(CronetEngineBuilderImpl r100) {
+        String r101 = r100.getCronetSoPath();
+        if (TextUtils.isEmpty(r101) == true) goto L11;
+        PolarisFileWrapper r102 = new PolarisFileWrapper(r101);
+        if (r102.exists() == false) goto L11;
+        if (r102.isDirectory() == true) goto L11;
+        Log.i(TAG, "cronet so load: %s", new Object[]{r101});
+        System.load(r101);
+        return;
+    L11:
+        if (r100.libraryLoader() == null) goto L13;
+        r100.libraryLoader().loadLibrary(LIBRARY_NAME);
+        return;
+    L13:
+        INVOKESTATIC_com_ttnet_org_chromium_net_impl_CronetLibraryLoader_com_larus_home_impl_utils_SystemLoadLibraryHook_loadLibrary(LIBRARY_NAME);
+    }
+
+    public static void postToInitThread(Runnable r100) {
+        if (onInitThread() == false) goto L5;
+        r100.run();
+        return;
+    L5:
+        new Handler(sInitThread.getLooper()).post(r100);
+    }
+
+    private static void setNetworkThreadPriorityOnNetworkThread(int r100) {
+        Process.setThreadPriority(r100);
+    }
+
+    public static void ensureInitialized(Context r100, CronetEngineBuilderImpl r101) {
+        Object r102 = sLoadLock;
+        monitor-enter(r102);
+    L29:
+        th = move-exception;
+        throw th;
+    L5:
+        if (sInitThreadInitDone == true) goto L11;
+        ContextUtils.initApplicationContext(r100);     // Catch: Throwable -> L29
+        HandlerThread r103 = sInitThread;     // Catch: Throwable -> L29
+        if (ThreadMethodProxy.isAlive(r103) == true) goto L9;
+        ThreadMethodProxy.start(r103);     // Catch: Throwable -> L29
+    L9:
+        postToInitThread(new AnonymousClass1());     // Catch: Throwable -> L29
+    L11:
+        if (sLibraryLoaded == true) goto L27;
+        TTCronetInitTimingInfo.sLoadCronetSoStart = System.nanoTime();     // Catch: Throwable -> L29
+        loadCronetLibrary(r101);     // Catch: Throwable -> L29
+        TTCronetInitTimingInfo.sLoadCronetSoEnd = System.nanoTime();     // Catch: Throwable -> L29
+        String r104 = ImplVersion.getCronetVersion();     // Catch: Throwable -> L29
+        if (r101 == null) goto L22;
+        if (r101.optInit() == false) goto L22;
+        if (r104.equals("107.0.5273.2") == false) goto L20;
+    L24:
+        sLibraryLoaded = true;     // Catch: Throwable -> L29
+        sWaitForLibLoad.open();     // Catch: Throwable -> L29
+        goto L27
+    L20:
+        throw new RuntimeException(String.format("Expected Cronet version number %s, actual version number %s.", new Object[]{r104, "107.0.5273.2"}));     // Catch: Throwable -> L29
+    L22:
+        if (r104.equals(CronetLibraryLoaderJni.get().getCronetVersion()) == false) goto L26;
+        Log.i(TAG, "Cronet version: %s, arch: %s", new Object[]{r104, System.getProperty("os.arch")});     // Catch: Throwable -> L29
+        goto L24
+    L26:
+        throw new RuntimeException(String.format("Expected Cronet version number %s, actual version number %s.", new Object[]{r104, CronetLibraryLoaderJni.get().getCronetVersion()}));     // Catch: Throwable -> L29
+    L27:
+        monitor-exit(r102);     // Catch: Throwable -> L29
+    }
+}

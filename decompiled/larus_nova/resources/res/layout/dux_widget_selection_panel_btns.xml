@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.dux.button.DuxButton
+        android:id="@+id/btn_negative"
+        android:paddingTop="11.5dp"
+        android:paddingBottom="11.5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_positive"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/DuxButton.Rectangle.Secondary.Medium.LightConst"/>
+    <com.bytedance.dux.button.DuxButton
+        android:id="@+id/btn_positive"
+        android:paddingTop="11.5dp"
+        android:paddingBottom="11.5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_negative"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/DuxButton.Rectangle.Primary.Medium"/>
+</merge>

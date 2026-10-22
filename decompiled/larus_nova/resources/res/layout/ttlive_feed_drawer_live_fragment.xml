@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.chatroom.ui.pullrefresh.DoubleBallSwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:paddingLeft="@dimen/ttlive_dimen_feed_left_rignt_blanck"
+            android:paddingRight="@dimen/ttlive_dimen_feed_left_rignt_blanck"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/ttlive_dimen_feed_left_rignt_blanck"
+            android:paddingEnd="@dimen/ttlive_dimen_feed_left_rignt_blanck"/>
+    </com.bytedance.android.livesdk.chatroom.ui.pullrefresh.DoubleBallSwipeRefreshLayout>
+    <include
+        android:id="@+id/login"
+        android:visibility="gone"
+        layout="@layout/ttlive_feed_drawer_loading_login"/>
+    <com.bytedance.android.livesdk.chatroom.ui.DouyinLoadingLayout
+        android:layout_gravity="center"
+        android:id="@+id/loading_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

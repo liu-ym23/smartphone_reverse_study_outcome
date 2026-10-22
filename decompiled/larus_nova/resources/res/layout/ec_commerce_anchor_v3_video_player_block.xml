@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/player_block_box"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.ec.core.widget.SquareFrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/player_block_square_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/video_area_placeholder"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"/>
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/background_shadow_image"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layoutMode="width_self_adjust"/>
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/blur_background_shadow_image"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layoutMode="width_self_adjust"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/video_play_button"
+        android:background="@drawable/commerce_ic_play_block_play"
+        android:layout_width="60dp"
+        android:layout_height="73dp"/>
+    <com.bytedance.android.ec.core.widget.ECStatusView
+        android:layout_gravity="center"
+        android:id="@+id/load_status_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"/>
+</FrameLayout>

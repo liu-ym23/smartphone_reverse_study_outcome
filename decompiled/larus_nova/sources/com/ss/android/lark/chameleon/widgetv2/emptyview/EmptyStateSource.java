@@ -1,0 +1,207 @@
+package com.ss.android.lark.chameleon.widgetv2.emptyview;
+
+import android.content.Context;
+import androidx.lifecycle.LiveData;
+import com.ss.android.lark.officesdk.utils.di.j;
+import com.ss.android.lark.officesdk.utils.net.NetworkType;
+import java.net.SocketTimeoutException;
+import twb.a;
+
+/* JADX INFO: loaded from: classes35.dex */
+public class EmptyStateSource extends LiveData<EmptyState> {
+    public static final int STATE_LOADING = 0;
+    public static final int STATE_LOADING_FORCE = 8;
+    public static final int STATE_LOAD_ERROR = 3;
+    public static final int STATE_NO_CONTENT = 1;
+    public static final int STATE_NO_EMPTY = 2;
+    public static final int STATE_NO_FOUND = 5;
+    public static final int STATE_NO_NETWORK = 4;
+    public static final int STATE_NO_PERMISSION = 99;
+    public static final int STATE_NO_SUPPORT = 10;
+    public static final int STATE_TIMEOUT = 7;
+    public static final int STATE_WIKI_DELETED = 9;
+    private static final String TAG = "EmptyStateSource";
+    private StateMachine mStateMachine;
+
+    /* JADX INFO: renamed from: com.ss.android.lark.chameleon.widgetv2.emptyview.EmptyStateSource$1, reason: invalid class name */
+    public static /* synthetic */ class AnonymousClass1 {
+    }
+
+    public static class DefaultStateMachine implements StateMachine {
+        private Context mContext;
+        private EmptyState mCurrentState;
+
+        @Override // com.ss.android.lark.chameleon.widgetv2.emptyview.EmptyStateSource.StateMachine
+        public EmptyState current() {
+            return this.mCurrentState;
+        }
+
+        private DefaultStateMachine(Context r100) {
+            this.mCurrentState = new EmptyState(0);
+            this.mContext = r100;
+        }
+
+        @Override // com.ss.android.lark.chameleon.widgetv2.emptyview.EmptyStateSource.StateMachine
+        public EmptyState next(Throwable r100) {
+            j.b(EmptyStateSource.TAG, r100.toString());
+            if (this.mCurrentState.getState() != 2) goto L5;
+        L11:
+            this.mCurrentState.setError(r100);
+            return this.mCurrentState;
+        L5:
+            if (a.a(this.mContext) != NetworkType.NETWORK_NO) goto L8;
+            this.mCurrentState = new EmptyState(4);
+            goto L11
+        L8:
+            if (EmptyStateSource.access$100(r100) == false) goto L10;
+            this.mCurrentState = new EmptyState(7);
+            goto L11
+        L10:
+            this.mCurrentState = new EmptyState(3);
+            goto L11
+        }
+
+        @Override // com.ss.android.lark.chameleon.widgetv2.emptyview.EmptyStateSource.StateMachine
+        public EmptyState next(int r100) {
+            j.a(EmptyStateSource.TAG, "next: load data : " + r100);
+            return next(r100, false);
+        }
+
+        @Override // com.ss.android.lark.chameleon.widgetv2.emptyview.EmptyStateSource.StateMachine
+        public EmptyState next(boolean r100) {
+            j.a(EmptyStateSource.TAG, "next: loading ");
+            return next(r100, false);
+        }
+
+        public /* synthetic */ DefaultStateMachine(Context r100, AnonymousClass1 r101) {
+            this(r100);
+        }
+
+        @Override // com.ss.android.lark.chameleon.widgetv2.emptyview.EmptyStateSource.StateMachine
+        public EmptyState next(int r100, boolean r101) {
+            j.a(EmptyStateSource.TAG, "next: load data : " + r100 + " isForce=" + r101);
+            if (r101 == false) goto L5;
+        L8:
+            if (r100 > 0) goto L10;
+            this.mCurrentState = new EmptyState(1);
+        L12:
+            return this.mCurrentState;
+        L10:
+            this.mCurrentState = new EmptyState(2);
+            goto L12
+        L5:
+            if (this.mCurrentState.getState() != 8) goto L8;
+            return this.mCurrentState;
+        }
+
+        @Override // com.ss.android.lark.chameleon.widgetv2.emptyview.EmptyStateSource.StateMachine
+        public EmptyState next(boolean r100, boolean r101) {
+            j.a(EmptyStateSource.TAG, "next: loading ，isForce=" + r101);
+            if (r100 == false) goto L13;
+            if (this.mCurrentState.getState() == 2) goto L13;
+            if (r101 == false) goto L9;
+        L11:
+            this.mCurrentState = new EmptyState(8);
+            goto L13
+        L9:
+            if (this.mCurrentState.getState() == 8) goto L11;
+            this.mCurrentState = new EmptyState(0);
+        L13:
+            return this.mCurrentState;
+        }
+    }
+
+    public static class EmptyState {
+        private Throwable mError;
+        private int mState;
+
+        public Throwable getError() {
+            return this.mError;
+        }
+
+        public int getState() {
+            return this.mState;
+        }
+
+        public EmptyState(int r100) {
+            this.mState = r100;
+        }
+
+        public void setError(Throwable r100) {
+            this.mError = r100;
+        }
+
+        public void setState(int r100) {
+            this.mState = r100;
+        }
+    }
+
+    public interface StateMachine {
+        EmptyState current();
+
+        EmptyState next(int r100);
+
+        EmptyState next(int r100, boolean r101);
+
+        EmptyState next(Throwable r100);
+
+        EmptyState next(boolean r100);
+
+        EmptyState next(boolean r100, boolean r101);
+    }
+
+    public void noEmpty() {
+        data(1);
+    }
+
+    public void empty() {
+        postValue(this.mStateMachine.next(0));
+    }
+
+    public void loading() {
+        postValue(this.mStateMachine.next(true));
+    }
+
+    public void loadingForceNoInterruption() {
+        postValue(this.mStateMachine.next(true, true));
+    }
+
+    @Override // androidx.lifecycle.LiveData
+    public void onActive() {
+        setValue(this.mStateMachine.current());
+        super.onActive();
+    }
+
+    @Override // androidx.lifecycle.LiveData
+    public void onInactive() {
+        super.onInactive();
+    }
+
+    public EmptyStateSource(Context r100) {
+        this.mStateMachine = new DefaultStateMachine(r100, null);
+    }
+
+    public static /* synthetic */ boolean access$100(Throwable r100) {
+        return isTimeout(r100);
+    }
+
+    private static boolean isTimeout(Throwable r100) {
+        return r100 instanceof SocketTimeoutException;
+    }
+
+    public void data(int r100) {
+        postValue(this.mStateMachine.next(r100));
+    }
+
+    public void fail(Throwable r100) {
+        postValue(this.mStateMachine.next(r100));
+    }
+
+    public void setStateMachine(StateMachine r100) {
+        this.mStateMachine = r100;
+    }
+
+    public void dataForceNoInterruption(int r100, boolean r101) {
+        postValue(this.mStateMachine.next(r100, r101));
+    }
+}

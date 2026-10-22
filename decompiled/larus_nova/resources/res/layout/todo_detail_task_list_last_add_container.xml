@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp">
+    <View
+        android:layout_width="16sp"
+        android:layout_height="22dp"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="16sp"
+        android:layout_height="16sp"
+        android:tint="@color/icon_n3"
+        android:layout_marginStart="28dp"
+        app:srcCompat="@drawable/ud_icon_add_outlined"/>
+    <TextView
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_placeholder"
+        android:padding="@dimen/dp_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Todo_AddTaskListInTaskDetails_Placeholder"/>
+</LinearLayout>

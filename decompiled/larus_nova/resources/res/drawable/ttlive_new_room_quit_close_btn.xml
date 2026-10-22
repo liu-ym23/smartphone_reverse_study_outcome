@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="center"
+        android:height="16dp"
+        android:width="16dp">
+        <bitmap android:src="@drawable/ttlive_liveroom_close"/>
+    </item>
+    <item>
+        <shape>
+            <size
+                android:height="28dp"
+                android:width="28dp"/>
+            <solid android:color="#0fffffff"/>
+            <corners android:radius="14dp"/>
+        </shape>
+    </item>
+</layer-list>

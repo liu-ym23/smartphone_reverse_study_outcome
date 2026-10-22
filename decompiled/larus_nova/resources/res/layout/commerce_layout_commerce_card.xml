@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/goods_manager_tv"
+    android:layout_width="match_parent"
+    android:layout_height="136dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/multi_pro_card_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="75dp">
+            <ImageView
+                android:layout_gravity="end"
+                android:id="@+id/close_multi_pro"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/aos_commerce_bg_multi_pro_close"/>
+            <com.bytedance.awemeopen.apps.framework.base.view.scrollablelayout.RtlViewPager
+                android:id="@+id/vp_card"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
+    </LinearLayout>
+</RelativeLayout>

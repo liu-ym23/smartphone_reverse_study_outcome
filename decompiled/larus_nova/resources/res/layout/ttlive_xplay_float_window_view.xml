@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.live.broadcastgame.xplay.floatwindow.XplayFloatWindowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xplay_float_window_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <include layout="@layout/ttlive_xplay_float_window_view_content_v2"/>
+</com.bytedance.android.live.broadcastgame.xplay.floatwindow.XplayFloatWindowView>

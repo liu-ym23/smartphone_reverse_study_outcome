@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="56dp"
+    android:width="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+    <path
+        android:fillColor="@drawable/_dbx_ic_download__0_res_0x7f080031"
+        android:pathData="M14,0L42,0A14,14 0,0 1,56 14L56,42A14,14 0,0 1,42 56L14,56A14,14 0,0 1,0 42L0,14A14,14 0,0 1,14 0z"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M27.333,13.667C28.254,13.667 29,14.413 29,15.333V32.193L34.869,26.775C35.546,26.151 36.6,26.193 37.225,26.869C37.849,27.546 37.807,28.6 37.131,29.225L27.333,38.268L17.536,29.225C16.86,28.6 16.818,27.546 17.442,26.869C18.066,26.193 19.121,26.151 19.797,26.775L25.667,32.193V15.333C25.667,14.413 26.413,13.667 27.333,13.667Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M15.667,39.333C15.667,38.413 16.413,37.667 17.333,37.667H38C38.921,37.667 39.667,38.413 39.667,39.333C39.667,40.254 38.921,41 38,41H17.333C16.413,41 15.667,40.254 15.667,39.333Z"
+        android:fillType="evenOdd"/>
+</vector>

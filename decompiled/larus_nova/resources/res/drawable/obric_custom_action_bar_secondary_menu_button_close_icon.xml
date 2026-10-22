@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="28dp"
+    android:width="28dp"
+    android:viewportWidth="28"
+    android:viewportHeight="28">
+    <path
+        android:fillColor="@color/oui_fill_element_3"
+        android:pathData="M8,0L20,0A8,8 0,0 1,28 8L28,20A8,8 0,0 1,20 28L8,28A8,8 0,0 1,0 20L0,8A8,8 0,0 1,8 0z"/>
+    <path
+        android:fillColor="@color/obric_custom_action_bar_secondary_menu_icon_pot_color"
+        android:pathData="M10.668,12.667C11.22,12.667 11.668,13.115 11.668,13.667V14.333C11.668,14.885 11.22,15.333 10.668,15.333C10.116,15.333 9.668,14.885 9.668,14.333V13.667C9.668,13.115 10.116,12.667 10.668,12.667ZM14.001,12.667C14.553,12.667 15.001,13.115 15.001,13.667V14.333C15.001,14.885 14.553,15.333 14.001,15.333C13.449,15.333 13.001,14.885 13.001,14.333V13.667C13.001,13.115 13.449,12.667 14.001,12.667ZM17.334,12.667C17.886,12.667 18.334,13.115 18.334,13.667V14.333C18.334,14.885 17.886,15.333 17.334,15.333C16.782,15.333 16.334,14.885 16.334,14.333V13.667C16.334,13.115 16.782,12.667 17.334,12.667Z"/>
+</vector>

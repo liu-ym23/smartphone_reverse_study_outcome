@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:background="@drawable/gamecp_hotsoon_loading_bg"
+    android:visibility="visible"
+    android:layout_width="140dp"
+    android:layout_height="140dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_loading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/gamecp_core_ic_loading_big"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#e6000000"
+        android:ellipsize="end"
+        android:layout_gravity="center"
+        android:id="@+id/double_loading_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:maxLines="1"/>
+</FrameLayout>

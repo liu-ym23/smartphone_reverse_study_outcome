@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.ee.bear.widgets.universedesign.SpaceShadowLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/aside_comment_card_shadow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginHorizontal="6dp"
+    app:ud_shadow_size="s2"
+    style="@style/UDShadow.M">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/comment_card"
+        android:background="@drawable/facade_round_8_stroke_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/top_line"
+            android:background="@drawable/facade_round_top_m"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:backgroundTint="@color/colorful_yellow"
+            android:layout_marginHorizontal="1dp"/>
+        <com.bytedance.ee.bear.middleground.comment.widget.NoTopFadingEdgeRecyclerView
+            android:id="@+id/aside_comment_rv"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="1dp"/>
+        <FrameLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</com.bytedance.ee.bear.widgets.universedesign.SpaceShadowLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="36sp">
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_50"
+        android:gravity="center_vertical"
+        android:id="@+id/more_pay_method_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/cj_pay_more_pay_method"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/cj_pay_gray_right_arrow"/>
+</LinearLayout>

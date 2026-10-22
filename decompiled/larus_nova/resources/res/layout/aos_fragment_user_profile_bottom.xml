@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_bottom_content_rl"
+    android:background="@color/aos_bg_primary"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.awemeopen.apps.framework.base.view.tablayout.DmtTabLayout
+        android:id="@+id/user_profile_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/aos_profile_header_height"
+        app:tabIndicatorColor="@color/aos_primary2"
+        app:tabIndicatorHeight="2dp"
+        app:tabMaxWidth="0dp"/>
+    <com.bytedance.awemeopen.apps.framework.base.view.scrollablelayout.UserProfileViewPager
+        android:orientation="horizontal"
+        android:id="@+id/user_works_viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user_profile_tab_layout"/>
+    <View
+        android:background="@color/aos_line_primary"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/user_profile_tab_layout"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_bottom_status_view"
+        android:background="@color/aos_bg_primary"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

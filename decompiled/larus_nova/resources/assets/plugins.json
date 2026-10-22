@@ -1,0 +1,24 @@
+[
+  {
+    "pluginType": 2,
+    "routerModuleName": "dora",
+    "_comment": "这是dora正式插件",
+    "minVersionCode": 15209001,
+    "enableDeleteNativeEntry": true,
+    "standalone": false,
+    "packageName": "com.larus.mira.dora",
+    "extraPackages": [],
+    "disabledInDebug": false
+  },
+  {
+    "pluginType": 2,
+    "routerModuleName": "ttoffice",
+    "_comment": "CCM TTOffice 插件，供 OfficeSDK 文档预览使用",
+    "minVersionCode": 15103000,
+    "enableDeleteNativeEntry": true,
+    "standalone": false,
+    "packageName": "com.bytedance.ee.plugin.ttoffice",
+    "extraPackages": [],
+    "disabledInDebug": true
+  }
+]

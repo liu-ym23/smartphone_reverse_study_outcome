@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.roundlayout.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/larus_dp_38"
+    app:rv_backgroundColor="?attr/larus_base_1"
+    app:rv_backgroundPressColor="?attr/larus_press"
+    app:rv_cornerRadius="?attr/larus_dp_8"
+    app:rv_strokeColor="?attr/larus_neutral_transparent_2"
+    app:rv_strokePressColor="?attr/larus_press"
+    app:rv_strokeWidth="?attr/larus_dp_1">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_item_img"
+            android:layout_width="?attr/larus_dp_16"
+            android:layout_height="?attr/larus_dp_16"
+            android:layout_marginStart="?attr/larus_dp_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_item_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="?attr/larus_dp_14"
+            android:textColor="?attr/larus_neutral_100"
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="?attr/larus_dp_34"
+            android:layout_marginEnd="?attr/larus_dp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.larus.common_ui.widget.roundlayout.RoundFrameLayout>

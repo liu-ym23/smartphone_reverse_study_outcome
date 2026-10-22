@@ -1,0 +1,32 @@
+package com.ss.android.ugc.aweme.search.common.utils;
+
+import com.bytedance.keva.Keva;
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes40.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\n\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\n \u0002*\u0004\u0018\u00010\u00010\u0001H\n¢\u0006\u0002\b\u0003"}, d2 = {"<anonymous>", "Lcom/bytedance/keva/Keva;", "kotlin.jvm.PlatformType", AbsMethodDelegate.TAG_INVOKE}, k = 3, mv = {1, 4, 3}, xi = 48)
+final class KeyboardUtils$KeyBoardHeightSp$keva$2 extends Lambda implements Function0<Keva> {
+    public static final KeyboardUtils$KeyBoardHeightSp$keva$2 INSTANCE = null;
+
+    static {
+        INSTANCE = new KeyboardUtils$KeyBoardHeightSp$keva$2();
+    }
+
+    public KeyboardUtils$KeyBoardHeightSp$keva$2() {
+        super(0);
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // kotlin.jvm.functions.Function0
+    public final Keva invoke() {
+        return Keva.getRepo("KeyBoardHeightRepo", 1);
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    public /* bridge */ /* synthetic */ Keva invoke() {
+        return invoke();
+    }
+}

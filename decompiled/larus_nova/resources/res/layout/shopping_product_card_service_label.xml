@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="10sp"
+        android:textColor="@color/Primary"
+        android:gravity="center"
+        android:id="@+id/label_text"
+        android:background="@drawable/ecommerce_coupon_item_left"
+        android:padding="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <View
+        android:id="@+id/label_circle"
+        android:background="@drawable/shopping_bg_inflow_feed_recreason_border"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_text"
+        app:layout_constraintLeft_toLeftOf="@+id/label_text"
+        app:layout_constraintRight_toRightOf="@+id/label_text"
+        app:layout_constraintTop_toTopOf="@+id/label_text"/>
+</merge>

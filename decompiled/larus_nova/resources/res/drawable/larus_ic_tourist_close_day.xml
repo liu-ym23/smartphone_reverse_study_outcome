@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <group>
+        <clip-path android:pathData="M0,0h32v32h-32z"/>
+        <path
+            android:fillColor="@color/larus_neutral_100_day"
+            android:pathData="M16,16m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"
+            android:fillAlpha="0.06"/>
+        <path
+            android:fillColor="@color/larus_neutral_70_day"
+            android:pathData="M11.286,11.286L11.286,11.286A0.833,0.833 90,0 1,12.464 11.286L20.714,19.535A0.833,0.833 90,0 1,20.714 20.714L20.714,20.714A0.833,0.833 90,0 1,19.535 20.714L11.286,12.464A0.833,0.833 90,0 1,11.286 11.286z"
+            android:strokeColor="@color/larus_neutral_70_day"
+            android:strokeWidth="0.5"/>
+        <path
+            android:fillColor="@color/larus_neutral_70_day"
+            android:pathData="M20.714,11.286L20.714,11.286A0.833,0.833 0,0 1,20.714 12.464L12.465,20.714A0.833,0.833 90,0 1,11.286 20.714L11.286,20.714A0.833,0.833 90,0 1,11.286 19.535L19.536,11.286A0.833,0.833 90,0 1,20.714 11.286z"
+            android:strokeColor="@color/larus_neutral_70_day"
+            android:strokeWidth="0.5"/>
+    </group>
+</vector>

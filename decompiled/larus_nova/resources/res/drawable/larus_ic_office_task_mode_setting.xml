@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@drawable/_larus_ic_office_task_mode_setting__0_res_0x7f0800a9"
+        android:pathData="M10,0L22,0A10,10 0,0 1,32 10L32,22A10,10 0,0 1,22 32L10,32A10,10 0,0 1,0 22L0,10A10,10 0,0 1,10 0z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M21.5,14V12.8C21.5,10.175 19.375,8.05 16.75,8.05H12.8C10.175,8.05 8.05,10.175 8.05,12.8V17.1C8.05,19.725 10.175,21.85 12.8,21.85H13.35"
+        android:strokeColor="#ffffffff"
+        android:strokeWidth="2.25"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#ffffffff"
+        android:pathData="M13.167,13.75C12.787,13.601 12.406,13.972 12.546,14.355L15.939,23.633C16.087,24.039 16.653,24.063 16.835,23.671L18.531,20.025L22.365,18.599C22.77,18.448 22.789,17.882 22.395,17.708L13.167,13.75Z"/>
+</vector>

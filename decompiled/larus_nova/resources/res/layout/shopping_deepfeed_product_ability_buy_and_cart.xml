@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal">
+    <com.bytedance.android.shopping.deepfeed.weights.common.ProductTextOrImageView
+        android:gravity="center"
+        android:id="@+id/infeed_product_cart"
+        android:background="@drawable/shopping_bg_deepfeed_add_card"
+        android:layout_width="117dp"
+        android:layout_height="34dp"/>
+    <com.bytedance.android.shopping.deepfeed.weights.common.ProductTextView
+        android:textSize="13dp"
+        android:textColor="#ffffffff"
+        android:gravity="center"
+        android:id="@+id/infeed_product_buy"
+        android:layout_width="108dp"
+        android:layout_height="34dp"
+        android:text="立即购买"
+        app:customWeight="600"/>
+</merge>

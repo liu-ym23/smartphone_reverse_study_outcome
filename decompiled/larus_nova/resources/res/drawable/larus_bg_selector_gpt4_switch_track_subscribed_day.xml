@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_checked="false"
+        android:drawable="@drawable/larus_bg_shape_gpt4_switch_track_not_check_day"/>
+    <item
+        android:state_checked="true"
+        android:drawable="@drawable/larus_bg_shape_gpt4_switch_track_checked_subscribed_day"/>
+    <item android:drawable="@drawable/larus_bg_shape_gpt4_switch_track_not_check_day"/>
+</selector>

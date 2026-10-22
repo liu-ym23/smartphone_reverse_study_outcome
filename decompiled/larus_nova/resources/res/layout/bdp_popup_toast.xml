@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bdp_bg_slide_hint"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp">
+    <ImageView
+        android:id="@+id/bdp_icon"
+        android:visibility="gone"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="4dp"/>
+    <ProgressBar
+        android:id="@+id/bdp_loading_progress"
+        android:visibility="gone"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="4dp"
+        android:indeterminateOnly="true"
+        android:indeterminateDrawable="@drawable/bdp_loading_progress"
+        style="?android:attr/progressBarStyleSmall"/>
+    <TextView
+        android:id="@+id/bdp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/bdp_popup_toast_text"/>
+</LinearLayout>

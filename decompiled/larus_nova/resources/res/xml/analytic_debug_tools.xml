@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="埋点Setting"
+        android:key="report_check">
+        <CheckBoxPreference
+            android:title="是否开启敏感埋点check"
+            android:key="sensitive_report_enable"
+            android:defaultValue="true"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+        <CheckBoxPreference
+            android:title="是否开启前端ET埋点验证"
+            android:key="enableFrontendEtTest"
+            android:defaultValue="false"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+        <CheckBoxPreference
+            android:title="debug模式上报埋点数据"
+            android:key="enable_statistics"
+            android:defaultValue="false"
+            android:summaryOn="开启"
+            android:summaryOff="关闭"/>
+    </PreferenceCategory>
+</PreferenceScreen>

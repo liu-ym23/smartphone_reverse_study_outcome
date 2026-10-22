@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="false"
+        android:drawable="@drawable/ttlive_bg_fe2c55_round_4_btn"/>
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/ttlive_bg_0d161823_round_4_btn"/>
+</selector>

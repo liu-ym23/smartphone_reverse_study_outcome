@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ttlive_bg_round_item"
+    android:layout_width="wrap_content"
+    android:layout_height="22dp">
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_core_hs_s5_70"
+        android:gravity="center"
+        android:id="@+id/tv_official_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/ttlive_official_channel"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_core_hs_s5_70"
+        android:gravity="center"
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="8dp"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/tv_official_channel"/>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_base"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.widgets.universedesign.SpaceEmptyState
+        android:id="@+id/nodata"
+        android:layout_marginTop="@dimen/space_kit_len_61"
+        android:layout_marginBottom="@dimen/space_kit_len_61"
+        app:ud_empty_desc="@string/Doc_List_EmptyTemplateCategory"
+        app:ud_empty_imageRes="@drawable/ccm_empty_neutral_no_cloud_document"
+        style="@style/SpaceEmptyStatusStyle"/>
+</LinearLayout>

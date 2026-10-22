@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/image_view_reference"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    fresco:actualImageScaleType="centerCrop"
+    fresco:roundedCornerRadius="?attr/larus_dp_8"
+    fresco:roundingBorderColor="@color/static_white_transparent_4"
+    fresco:roundingBorderWidth="?attr/larus_dp_1"/>

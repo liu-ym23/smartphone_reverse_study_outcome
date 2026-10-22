@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_h5_root_view"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/cj_pay_webview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.android.ttcjpaysdk.base.h5.CJPayJsBridgeWebView
+            android:id="@+id/cj_pay_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.android.ttcjpaysdk.base.h5.widget.CJPayNetworkErrorView
+            android:id="@+id/cj_pay_view_network_error_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <include layout="@layout/cj_pay_view_quickbind_titlebar_layout"/>
+    </RelativeLayout>
+    <com.android.ttcjpaysdk.base.ui.widget.CJPayTextLoadingView
+        android:id="@+id/cj_pay_text_loading_view"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

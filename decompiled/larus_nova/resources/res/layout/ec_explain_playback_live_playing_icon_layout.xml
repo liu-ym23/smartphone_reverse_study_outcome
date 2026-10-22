@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="1dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingEnd="1dp"
+    app:bg_color="@color/white_75"
+    app:bg_cornerRadius_BL="16dp"
+    app:bg_cornerRadius_TL="16dp"
+    app:bg_strokeColor="@color/white"
+    app:bg_strokeWidth="1dp">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_gravity="center_vertical"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="6dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="ec_living_lottie.json"
+        app:lottie_loop="true"/>
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/ec_dux_black_161823"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ec_explain_playback_living"
+        android:layout_marginStart="2dp"/>
+    <com.bytedance.android.ui.base.widget.icon.IconImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon_color="@color/ec_dux_black_161823"
+        app:icon_size="14dp"
+        app:srcCompat="@drawable/ec_dux_ic_s_s_arrowright_outlined_16"/>
+</com.bytedance.android.ui.base.widget.round.RoundLinearLayout>

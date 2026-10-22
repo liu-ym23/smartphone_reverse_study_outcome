@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/container_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/game_sticker_bg_view"
+        android:background="#33000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.t01.T01GameRoleView
+        android:id="@+id/first_game_role_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.t01.T01GameRoleView
+        android:id="@+id/second_game_role_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.t01.T01GameLiveView
+        android:layout_gravity="end"
+        android:id="@+id/first_game_live_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.t01.T01GameLiveView
+        android:layout_gravity="end"
+        android:id="@+id/second_game_live_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</FrameLayout>

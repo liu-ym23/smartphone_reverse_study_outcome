@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/product_flow_card_ability_view_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/shopping_product_shop_window"
+        android:scaleType="fitCenter"
+        app:actualImageScaleType="fitCenter"/>
+    <LinearLayout
+        android:gravity="bottom"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="11sp"
+            android:textColor="@color/commerce_color_999999"
+            android:id="@+id/product_flow_card_ability_view_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/commerce_store"
+            android:lines="1"
+            android:singleLine="true"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"/>
+    </LinearLayout>
+</LinearLayout>

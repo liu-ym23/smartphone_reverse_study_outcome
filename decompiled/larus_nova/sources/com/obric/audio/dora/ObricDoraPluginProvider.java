@@ -1,0 +1,19 @@
+package com.obric.audio.dora;
+
+import com.larus.audio.call.arch.c;
+import com.ss.android.lark.utils.statistics.PerfLog;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes33.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0016\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u00052\u0006\u0010\u0007\u001a\u00020\u0006H\u0016¨\u0006\b"}, d2 = {"Lcom/obric/audio/dora/ObricDoraPluginProvider;", "Lcom/obric/audio/dora/IObricDoraPluginProvider;", "<init>", "()V", "getDoraObricPlugin", "Lcom/larus/audio/call/arch/BaseLLMPlugin;", "Lcom/larus/audio/call/arch/ICommonPluginContext;", PerfLog.PARAM_KEY_CONTEXT_ID, "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class ObricDoraPluginProvider implements IObricDoraPluginProvider {
+    public ObricDoraPluginProvider() {
+    }
+
+    @Override // com.obric.audio.dora.IObricDoraPluginProvider
+    public final DoraObricPlugin a(c r100) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        return new DoraObricPlugin(r100);
+    }
+}

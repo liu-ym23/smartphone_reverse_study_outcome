@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:id="@+id/deepResearchCodeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?attr/larus_dp_8"
+    android:layout_marginStart="?attr/larus_dp_32"
+    app:cardCornerRadius="?attr/larus_dp_12"
+    app:cardElevation="0dp">
+    <com.larus.bmhome.chat.layout.widget.MaxHeightRelativeLayout
+        android:id="@+id/markdownIconTextBlockViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.larus.bmhome.chat.deepresearch.view.MarkdownIconTextBlockView
+                android:id="@+id/markdownIconTextBlockView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <View
+                android:id="@+id/markdownCodeClickMask"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="?attr/larus_dp_40"
+                app:layout_constraintBottom_toBottomOf="@+id/markdownIconTextBlockView"
+                app:layout_constraintTop_toTopOf="@+id/markdownIconTextBlockView"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.larus.bmhome.chat.layout.widget.MaxHeightRelativeLayout>
+    <View
+        android:layout_gravity="bottom"
+        android:id="@+id/deepResearchMask"
+        android:background="?attr/larus_bg_vertical_linear_depp_search_gradient"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_55"/>
+</androidx.cardview.widget.CardView>

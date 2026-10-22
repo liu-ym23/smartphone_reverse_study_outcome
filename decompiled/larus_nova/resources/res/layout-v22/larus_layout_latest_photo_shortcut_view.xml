@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.bmhome.chat.component.bottom.multimodal.latest.LatestPhotoShortcutGestureLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/latest_photo_shortcut_layout"
+    android:background="@drawable/larus_bg_latest_photo_shortcut_shadow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.common_ui.widget.roundlayout.RoundLinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="?attr/larus_dp_96"
+        android:layout_height="?attr/larus_dp_120"
+        app:rv_backgroundColor="?attr/larus_base_3"
+        app:rv_cornerRadius="?attr/larus_dp_12">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/thumbnail_view"
+            android:background="?attr/larus_bg_latest_photo_thumbnail_corner"
+            android:padding="?attr/larus_dp_1"
+            android:layout_width="?attr/larus_dp_80"
+            android:layout_height="?attr/larus_dp_80"
+            android:layout_marginTop="?attr/larus_dp_8"
+            android:layout_marginBottom="?attr/larus_dp_2"
+            app:roundedCornerRadius="?attr/larus_dp_8"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="?attr/larus_sp_14"
+            android:textColor="?attr/larus_neutral_100"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_send_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/larus_sendImage_shortcut_btn_send"
+            android:drawableEnd="?attr/larus_ic_latest_photo_shortcut"
+            android:textFontWeight="500"
+            app:lineHeight="?attr/larus_dp_26"/>
+    </com.larus.common_ui.widget.roundlayout.RoundLinearLayout>
+</com.larus.bmhome.chat.component.bottom.multimodal.latest.LatestPhotoShortcutGestureLayout>

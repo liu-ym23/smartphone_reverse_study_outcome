@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_loading_view"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="52dp">
+    <com.bytedance.awemeopen.apps.framework.base.view.refresh.DmtTextView
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/aos_bg_tertiary"
+        android:layout_gravity="center"
+        android:id="@+id/tv_pull_and_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aos_pull_and_refresh_content"/>
+    <com.bytedance.awemeopen.apps.framework.base.view.refresh.DoubleColorBallAnimationView
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/loading_double_ball"
+        android:padding="4dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"/>
+</FrameLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"> // 标题栏 
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/healthkit_auth_web_back_icon"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/healthkit_back_icon"
+                style="@style/healthkit_auth_nav_icon"/>
+        </LinearLayout>
+    </LinearLayout>
+    <WebView
+        android:id="@+id/healthkit_auth_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

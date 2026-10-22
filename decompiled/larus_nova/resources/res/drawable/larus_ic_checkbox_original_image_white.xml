@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/larus_ic_checkbox_original_image_checked"/>
+    <item android:drawable="@drawable/larus_ic_checkbox_original_image_unchecked_white"/>
+</selector>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/content_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        style="@style/uicomponent_common_alert_dialog_title_icon"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/uicomponent_common_alert_dialog_title_tv"/>
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/uicomponent_common_alert_dialog_content_tv"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/rb_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:theme="@style/ttlive_uncheck_radio_button"
+            android:textColor="#161823"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/rb"
+            android:background="@drawable/ttlive_selector_radio"
+            android:clickable="false"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:checked="true"
+            android:button="@null"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="#99161823"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_small_window_retain_dialog_hint_text"
+            android:layout_marginStart="7.9dp"/>
+    </LinearLayout>
+</LinearLayout>

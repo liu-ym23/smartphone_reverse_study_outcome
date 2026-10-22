@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:clipChildren="true"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:importantForAccessibility="no">
+    <FrameLayout
+        android:id="@+id/enhanced_touch_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ttlive_live_spacing_sti_enhanced_normal"/>
+    <com.bytedance.android.livesdk.chatroom.view.InterceptTouchHorizontalScrollView
+        android:id="@+id/short_term_indicator_scroll_view"
+        android:scrollbars="none"
+        android:fadingEdgeLength="10dp"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:requiresFadingEdge="horizontal"
+        android:importantForAccessibility="no">
+        <com.bytedance.android.livesdk.chatroom.view.ShortTermFrameLayout
+            android:orientation="horizontal"
+            android:id="@+id/short_term_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </com.bytedance.android.livesdk.chatroom.view.InterceptTouchHorizontalScrollView>
+</LinearLayout>

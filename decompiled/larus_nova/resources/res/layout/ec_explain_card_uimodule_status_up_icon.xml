@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/ec_bg_promotion_card_status_tag"
+    android:visibility="visible"
+    android:layout_width="wrap_content"
+    android:layout_height="16dp">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/iv_activity_tag"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:autoPlayAnimation="true"
+        app:layoutMode="width_self_adjust"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/ec_color_white"
+        android:ellipsize="end"
+        android:layout_gravity="center"
+        android:id="@+id/tv_up_desc"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="?attr/larus_dp_18"
+    android:textColor="@color/static_white_transparent_3"
+    android:ellipsize="end"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_25"
+    android:layout_marginTop="?attr/larus_dp_6"
+    android:layout_marginBottom="?attr/larus_dp_6"
+    android:maxLines="1"
+    android:layout_marginVertical="?attr/larus_dp_6"
+    android:textFontWeight="600"/>

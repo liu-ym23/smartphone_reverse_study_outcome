@@ -1,0 +1,242 @@
+{
+    "type": "View",
+     "style": {
+        "width": "stretch",
+         "height": "auto",
+         "padding": ["8",
+         "8",
+         "0",
+         "8"]
+    },
+     "elements": [{
+        "type": "View",
+         "style": {
+            "width": "stretch",
+             "height": "44",
+             ":radius": "[12, 12, 0, 0]",
+             "bg_color": "#ffffff",
+             "align_items": "center",
+             "flex_direction": "row",
+             "justify_content": "space-between"
+        },
+         "elements": [{
+            "type": "View",
+             "style": {
+                "width": "auto",
+                 "flex_grow": "1",
+                 "align_items": "center"
+            },
+             "elements": [{
+                "type": "View",
+                 "style": {
+                    "width": "auto",
+                     "height": "stretch",
+                     "flex_shrink": 0
+                },
+                 "elements": [{
+                    "attr": {
+                        ":src": "option(data.selected, 'https://p3-piu.byteimg.com/tos-cn-i-8jisjyls3a/35eb5eca5ad144e2b5c9c03a67b65052~tplv-8jisjyls3a-3:0:0:q75.png','https://p6-piu.byteimg.com/tos-cn-i-8jisjyls3a/9e3360c39736409c879fa78e105836da~tplv-8jisjyls3a-3:0:0:q75.png')",
+                         "role": "button",
+                         ":aria_label": "strcat(option(data.can_select, option(data.selected, '已选中,', '未选中,'), '已停用,'), data.shop_name, '的商品')"
+                    },
+                     "type": "Image",
+                     "style": {
+                        "width": "36",
+                         "height": "36",
+                         "padding": ["8",
+                         "8",
+                         "8",
+                         "8"],
+                         ":display": "option(data.can_select, 'flex', 'none')",
+                         "flex_grow": 0,
+                         "flex_shrink": 0
+                    },
+                     "click_action": {
+                        "type": "checkClick"
+                    }
+                },
+                 {
+                    "attr": {
+                        "src": "https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/3ff773cd12324a51b860be828265f1b8~tplv-8jisjyls3a-image.image",
+                         "role": "button",
+                         ":aria_label": "strcat(option(data.can_select, option(data.selected, '已选中,', '未选中,'), '已停用,'), data.shop_name, '的商品')",
+                         "_experimental_base64_src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAACVBMVEUXFyMUFCZHcExuF7NuAAAAA3RSTlMoDQB5hq3LAAAA1ElEQVRIie3Wyw6EMAgFUO78/0dP4vRhgbYwYHQhK2N6vMRoC30CRS9OwgCVAny4wfYAMxb0KBPWqZouMAPLcHajL8apZuGkW/BSNWlW0IkmaTXaOSZ4bavW8c5K3S+xtUVDwQZbtMT7pmU0uYJZdL2AzY7R5AseozOwteuikYfNXQ99PwLb7E8/qO178H1fmPPHCGH2S1q2P951zjZkjCYdh7be2KYfOm5iB13siA0d7gtNms0caNpbq4vHWUqs5TdCQxwPn9MLBteD/z8yG+vFzvoCpncSjC1qZSYAAAAASUVORK5CYII="
+                    },
+                     "type": "Image",
+                     "style": {
+                        "width": "36",
+                         "height": "36",
+                         "padding": ["8",
+                         "8",
+                         "8",
+                         "8"],
+                         ":display": "option(data.can_select, 'none', 'flex')",
+                         "flex_grow": 0,
+                         "flex_shrink": 0
+                    }
+                }]
+            },
+             {
+                "attr": {
+                    "role": "button",
+                     ":aria_label": "data.shop_name + option(data.right_icon.src, ',直播中', '')"
+                },
+                 "type": "View",
+                 "style": {
+                    "width": "auto",
+                     "height": "44",
+                     "flex_grow": "1",
+                     "align_items": "center",
+                     "the-comments": "0703-1354fix"
+                },
+                 "elements": [{
+                    "attr": {
+                        ":tag_group_data": "data.shop_tag_ui_str",
+                        "tag_show_scene": "yata_cart",
+                        "tag_show_page_position": "ecom_cart_shop_title"
+                    },
+                     "type": "ECTagGroup",
+                     "style": {
+                         "margin": ["0",
+                         "4",
+                         "0",
+                         "0"],
+                         ":display": "option(data.shop_tag_ui_str, 'flex', 'none')",
+                         "flex_shrink": 0,
+                         "max_width": 375
+                    }
+                },
+                 {
+                    "attr": {
+                        ":text": "data.shop_name"
+                    },
+                     "type": "Text",
+                     "style": {
+                        "width": "auto",
+                         "height": "auto",
+                         "display": "block",
+                         "font_size": 16,
+                         "font_color": "#161823",
+                         "end_ellipse": true,
+                         "flex_shrink": 1,
+                         "font_weight": "bold",
+                         "white_space": "nowrap",
+                         "text_overflow": "ellipsis"
+                    }
+                },
+                 {
+                    "attr": {
+                        ":src": "data.right_icon.src"
+                    },
+                     "type": "Image",
+                     "style": {
+                        ":width": "data.right_icon.width",
+                         "margin": ["0",
+                         "0",
+                         "0",
+                         "4"],
+                         ":height": "data.right_icon.height",
+                         ":display": "option(data.right_icon, 'flex', 'none')",
+                         "flex_shrink": 0
+                    }
+                },
+                 {
+                    "attr": {
+                        "src": "https://p26-piu.byteimg.com/tos-cn-i-8jisjyls3a/c932f172ca984b7f9ebd22740b00fed0~tplv-8jisjyls3a-3:0:0:q75.png",
+                         "_experimental_base64_src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAD1BMVEVHcEwWFyMVFyMVFSAVFyLsdbV4AAAABXRSTlMAmUsXhn+0aD0AAAAySURBVDiNY2AYQMDMTIQaFkYmwooYGYlQxTSqajioIkbRqJrBo4aozElUNieqwKA9AAA2DADZ75a03wAAAABJRU5ErkJggg=="
+                    },
+                     "type": "Image",
+                     "style": {
+                        "width": "12",
+                         "height": "12",
+                         ":display": "option(data.shop_url, 'flex', 'none')",
+                         "flex_shrink": 0
+                    }
+                }],
+                 "click_action": {
+                    "type": "itemClick"
+                }
+            }]
+        },
+         {
+            "type": "View",
+             "style": {
+                "width": "auto",
+                 "height": "44",
+                 "padding": ["0",
+                 "12",
+                 "0",
+                 "12"],
+                 ":display": "option(data.coupon_button.coupon_icon || len(data.coupon_button.coupon_text)>0 || len(data.delivery_info.text)>0, 'flex', 'none')",
+                 "align_items": "center",
+                 "flex_shrink": 0
+            },
+             "elements": [{
+                "attr": {
+                    "role": "text",
+                     ":text": "data.delivery_info.text",
+                     ":aria_label": "data.delivery_info.text"
+                },
+                 "type": "Text",
+                 "style": {
+                    "height": "20",
+                     "radius": ["100"],
+                     "padding": ["0",
+                     "6"],
+                     ":display": "option(data.delivery_info.text, 'flex', 'none')",
+                     "bg_color": "#0D161823",
+                     "font_size": 12,
+                     "font_color": "#99161823",
+                     "align_items": "center",
+                     "flex_shrink": 0
+                }
+            },
+             {
+                "attr": {
+                    "role": "button",
+                     ":aria_label": "data.coupon_button.coupon_text"
+                },
+                 "type": "View",
+                 "style": {
+                    "height": "stretch",
+                     ":margin": "option(data.delivery_info.text, ['0','0','0','8'], ['0','0','0','0'])",
+                     ":display": "option(data.coupon_button.coupon_icon || len(data.coupon_button.coupon_text)>0, 'flex', 'none')",
+                     "align_items": "center"
+                },
+                 "elements": [{
+                    "attr": {
+                        ":src": "data.coupon_button.coupon_icon"
+                    },
+                     "type": "Image",
+                     "style": {
+                        ":width": "data.coupon_button.width",
+                         "margin": ["0",
+                         "2",
+                         "0",
+                         "0"],
+                         ":height": "data.coupon_button.height",
+                         ":display": "option(data.coupon_button.coupon_icon, 'flex', 'none')",
+                         "flex_shrink": 0
+                    }
+                },
+                 {
+                    "attr": {
+                        ":text": "data.coupon_button.coupon_text"
+                    },
+                     "type": "Text",
+                     "style": {
+                        "height": "auto",
+                         ":display": "option(data.coupon_button.coupon_text, 'flex', 'none')",
+                         "font_size": 14,
+                         "font_color": "#161823",
+                         "flex_shrink": 0,
+                         "justify_content": "center"
+                    }
+                }]
+            }],
+             "click_action": {
+                "type": "couponClick"
+            }
+        }]
+    }]
+}

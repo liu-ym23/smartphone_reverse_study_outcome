@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/cot_tool_call_group_title_row"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="24dp">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/text_caption"
+        android:ellipsize="end"
+        android:id="@+id/cot_tool_call_group_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cot_tool_call_group_arrow"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="2dp"
+        app:srcCompat="@drawable/ud_icon_right_small_ccm_outlined"
+        app:tint="@color/icon_n3"/>
+</LinearLayout>

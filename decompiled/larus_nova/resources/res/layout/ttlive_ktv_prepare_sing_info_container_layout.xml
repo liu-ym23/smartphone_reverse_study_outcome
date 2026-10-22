@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ktv_prepare_sing_info_container"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constrainedWidth="true"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="@+id/ktv_lyrics_container"
+    app:layout_constraintTop_toBottomOf="@+id/ktv_lyrics_container">
+    <com.bytedance.android.livesdk.ktvimpl.ktvroom.view.singer.KtvComponentEmptyView
+        android:id="@+id/ktv_prepare_sing_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.livesdk.ktvimpl.ktvroom.view.singer.KtvComponentEmptyView
+        android:id="@+id/ktv_sing_song_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="#d9ffffff"
+        android:ellipsize="end"
+        android:id="@+id/ktv_component_next_song_info"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <include layout="@layout/ttlive_ktv_component_float_ball_tips_layout"/>
+    <include layout="@layout/ttlive_ktv_component_midi_feed_back_v2"/>
+    <TextView
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/lyrics_empty_view"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_ktv_room_lyrics_empty"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/ktv_sing_song_view"
+        app:layout_constraintRight_toRightOf="@+id/ktv_sing_song_view"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

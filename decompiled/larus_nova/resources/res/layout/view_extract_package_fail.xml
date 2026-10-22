@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/extract_failed_layout"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/extract_failed_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="170dp"
+        app:srcCompat="@drawable/illustration_empty_neutral_no_preview"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_caption"
+        android:gravity="center"
+        android:id="@+id/extract_failed_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:maxWidth="248dp"
+        android:text="@string/Lark_IMPreviewCompress_DecompressFailedSaveLocal_Toast"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_caption"
+        android:id="@+id/extract_failed_size_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"/>
+    <com.larksuite.component.universe_design.button.UDButton
+        android:textColor="@color/static_white"
+        android:id="@+id/open_btn"
+        android:layout_marginTop="16dp"
+        android:maxWidth="248dp"
+        android:text="@string/Lark_Audit_BlockedActionOpenInAnotherApp"
+        app:ud_backgroundColor="@color/primary_fill_default"
+        style="@style/UDButton.Middle.Primary"/>
+</LinearLayout>

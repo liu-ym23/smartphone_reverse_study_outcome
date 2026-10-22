@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/aos_main_level_1"
+        android:layout_gravity="center"
+        android:id="@+id/tv_close_ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/aos_ad_comment_close_des"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:src="@drawable/aos_img_blacklock_big"
+        android:layout_above="@+id/tv_close_ad"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

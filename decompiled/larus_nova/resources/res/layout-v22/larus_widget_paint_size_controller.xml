@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/left_icon"
+        android:layout_width="?attr/larus_dp_44"
+        android:layout_height="?attr/larus_dp_44">
+        <com.larus.common_ui.widget.roundlayout.RoundFrameLayout
+            android:layout_gravity="center"
+            android:layout_width="?attr/larus_dp_12"
+            android:layout_height="?attr/larus_dp_12"
+            app:rv_cornerRadius="?attr/larus_dp_12"
+            app:rv_strokeColor="?attr/larus_neutral_100"
+            app:rv_strokeWidth="?attr/larus_dp_2"/>
+    </FrameLayout>
+    <SeekBar
+        android:layout_gravity="center_vertical"
+        android:id="@+id/seek_bar"
+        android:layout_width="?attr/larus_dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/larus_dp_8"
+        android:layout_marginRight="?attr/larus_dp_8"
+        android:max="100"
+        android:progress="16"
+        android:progressDrawable="?attr/larus_image_paint_size_progress"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="?attr/larus_dp_8"
+        style="@style/larus_mix_seekbar_style"/>
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/right_icon"
+        android:layout_width="?attr/larus_dp_44"
+        android:layout_height="?attr/larus_dp_44">
+        <com.larus.common_ui.widget.roundlayout.RoundFrameLayout
+            android:layout_gravity="center"
+            android:layout_width="?attr/larus_dp_20"
+            android:layout_height="?attr/larus_dp_20"
+            app:rv_cornerRadius="?attr/larus_dp_20"
+            app:rv_strokeColor="?attr/larus_neutral_100"
+            app:rv_strokeWidth="?attr/larus_dp_2"/>
+    </FrameLayout>
+</merge>

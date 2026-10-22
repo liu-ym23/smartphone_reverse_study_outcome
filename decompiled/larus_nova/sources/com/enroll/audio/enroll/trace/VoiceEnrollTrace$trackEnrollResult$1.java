@@ -1,0 +1,66 @@
+package com.enroll.audio.enroll.trace;
+
+import com.larus.applog.api.IApplog;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes22.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.enroll.audio.enroll.trace.VoiceEnrollTrace$trackEnrollResult$1", f = "VoiceEnrollTrace.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+public final class VoiceEnrollTrace$trackEnrollResult$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ String $enterFrom;
+    final /* synthetic */ String $isSuccess;
+    final /* synthetic */ String $lockVoiceprintSwitch;
+    final /* synthetic */ String $voiceWakeupSwitch;
+    int label;
+
+    public VoiceEnrollTrace$trackEnrollResult$1(String r100, String r101, String r102, String r103, Continuation<? super VoiceEnrollTrace$trackEnrollResult$1> r104) {
+        this.$voiceWakeupSwitch = r100;
+        this.$lockVoiceprintSwitch = r101;
+        this.$isSuccess = r102;
+        this.$enterFrom = r103;
+        super(2, r104);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object r100, Continuation<?> r101) {
+        return new VoiceEnrollTrace$trackEnrollResult$1(this.$voiceWakeupSwitch, this.$lockVoiceprintSwitch, this.$isSuccess, this.$enterFrom, r101);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public /* bridge */ /* synthetic */ Object invoke(CoroutineScope r100, Continuation<? super Unit> r101) {
+        return invoke2(r100, r101);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Object invoke2(CoroutineScope r100, Continuation<? super Unit> r101) {
+        return ((VoiceEnrollTrace$trackEnrollResult$1) create(r100, r101)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) goto L10;
+        ResultKt.throwOnFailure(r100);
+        JSONObject r101 = new JSONObject();
+        r101.put("voice_wakeup_switch", this.$voiceWakeupSwitch);
+        r101.put("lock_voiceprint_switch", this.$lockVoiceprintSwitch);
+        r101.put("is_success", this.$isSuccess);
+        String r102 = this.$enterFrom;
+        if (r102 == null) goto L7;
+        r101.put("enter_from", r102);
+    L7:
+        IApplog.f287053a.reportEvent("obric_record_voice_result", r101);
+        return Unit.INSTANCE;
+    L10:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    }
+}

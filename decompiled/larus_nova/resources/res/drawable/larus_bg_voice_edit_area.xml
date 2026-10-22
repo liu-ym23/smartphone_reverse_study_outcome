@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="-2dp">
+        <shape>
+            <solid android:color="@color/larus_base_1_day"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <stroke
+                android:width="?attr/larus_dp_1"
+                android:color="@color/larus_neutral_transparent_1_day"/>
+            <corners android:radius="?attr/larus_dp_16"/>
+            <solid android:color="@color/larus_base_2_day"/>
+        </shape>
+    </item>
+</layer-list>

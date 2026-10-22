@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_anchor_group_purchase_tip_text"
+        android:id="@+id/tip_text"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_anchor_group_purchase_tip_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/tip_divider"
+        android:background="@color/ttlive_anchor_group_purchase_tip_divider"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tip_text"
+        app:layout_constraintLeft_toRightOf="@+id/tip_text"
+        app:layout_constraintTop_toTopOf="@+id/tip_text"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_anchor_group_purchase_tip_no_notice_text"
+        android:id="@+id/tip_no_notice_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/ttlive_anchor_group_purchase_tip_no_notice_text"
+        app:layout_constraintBottom_toBottomOf="@+id/tip_divider"
+        app:layout_constraintLeft_toRightOf="@+id/tip_divider"
+        app:layout_constraintTop_toTopOf="@+id/tip_divider"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

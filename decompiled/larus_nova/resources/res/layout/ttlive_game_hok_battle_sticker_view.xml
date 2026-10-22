@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/game_sticker_bg_view"
+        android:background="#33000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.hok.HokGameRoleView
+        android:id="@+id/game_role_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.hok.HokGameRoleView
+        android:id="@+id/second_game_role_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.hok.HokGameWinView
+        android:layout_gravity="end"
+        android:id="@+id/game_win_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.hok.HokGameEquipView
+        android:layout_gravity="end"
+        android:id="@+id/game_equip_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <com.bytedance.android.livesdk.gamesticker.hok.HokGameMoneyView
+        android:layout_gravity="end"
+        android:id="@+id/game_money_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</FrameLayout>

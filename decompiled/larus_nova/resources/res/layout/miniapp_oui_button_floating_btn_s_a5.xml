@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="0dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.obric.oui.button.OIconButtonFloating
+        android:id="@+id/btn_s_a5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:oui_widgetIcon="@drawable/icon_circle_20"
+        style="@style/OStyleV2.OButtonFloating.S.Primary.Icon"/>
+</FrameLayout>

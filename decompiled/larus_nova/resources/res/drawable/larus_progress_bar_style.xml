@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="true"
+    android:innerRadius="?attr/larus_dp_48"
+    android:thickness="?attr/larus_dp_2">
+    <stroke
+        android:width="?attr/larus_dp_2"
+        android:color="@color/larus_neutral_30_day"/>
+</shape>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/uicomponent_toast_bg"
+    style="@style/uicomponent_toast_img_container_style">
+    <ImageView
+        android:id="@+id/toast_img"
+        style="@style/uicomponent_toast_img_style"/>
+    <TextView
+        android:id="@+id/toast_text"
+        style="@style/uicomponent_toast_img_text_style"/>
+</LinearLayout>

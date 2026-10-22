@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/shape_id"
+        android:top="-300dp"
+        android:bottom="-300dp">
+        <rotate
+            android:fromDegrees="14"
+            android:pivotX="90%"
+            android:pivotY="41.6%">
+            <shape android:shape="rectangle">
+                <gradient
+                    android:startColor="#00ffffff"
+                    android:endColor="#0ffe2c55"
+                    android:angle="0"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

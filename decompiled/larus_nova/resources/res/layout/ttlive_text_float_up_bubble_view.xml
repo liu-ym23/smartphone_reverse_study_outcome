@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@+id/linearlayout_container"
+        android:background="@drawable/ttlive_bg_float_tips_bubble_view"
+        android:padding="12dp"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp">
+        <TextView
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:id="@+id/bubble_tips_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"/>
+        <View
+            android:background="@color/ttlive_douyin_dark_TextQuaternary2"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="12dp"/>
+        <TextView
+            android:textSize="13dp"
+            android:textColor="@color/ttlive_douyin_dark_TextQuaternary2"
+            android:id="@+id/bubble_ignore_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_security_text_ignore"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/up_arrow"
+        android:layout_width="20dp"
+        android:layout_height="7dp"
+        android:src="@drawable/ttlive_bubble_view_up_arrow"
+        android:rotation="180"/>
+</LinearLayout>

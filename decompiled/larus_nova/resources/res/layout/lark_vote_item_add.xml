@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/add_view"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="17dp"
+        android:tint="@color/icon_disable"
+        app:srcCompat="@drawable/ud_icon_more_add_filled"/>
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/text_disable"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:id="@+id/add_view_text"
+        android:layout_width="325dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:text="@string/Lark_IM_Poll_CreatePoll_Options_AddOptions_Button"/>
+</LinearLayout>

@@ -1,0 +1,52 @@
+package com.larus.im.internal.trace.stable;
+
+import com.larus.im.internal.delegate.d1;
+import java.util.Map;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+
+/* JADX INFO: loaded from: classes30.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.larus.im.internal.trace.stable.AVEventReporter$tryReportVideoQualityOffset$1", f = "AVEventReporter.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+final class AVEventReporter$tryReportVideoQualityOffset$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ Map<String, Object> $params;
+    int label;
+
+    public AVEventReporter$tryReportVideoQualityOffset$1(Map<String, Object> r100, Continuation<? super AVEventReporter$tryReportVideoQualityOffset$1> r101) {
+        this.$params = r100;
+        super(2, r101);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object r100, Continuation<?> r101) {
+        return new AVEventReporter$tryReportVideoQualityOffset$1(this.$params, r101);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public /* bridge */ /* synthetic */ Object invoke(CoroutineScope r100, Continuation<? super Unit> r101) {
+        return invoke2(r100, r101);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Object invoke2(CoroutineScope r100, Continuation<? super Unit> r101) {
+        return ((AVEventReporter$tryReportVideoQualityOffset$1) create(r100, r101)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) goto L7;
+        ResultKt.throwOnFailure(r100);
+        d1.f348206b.a("flow_av_quality_video_offset", kf9.g.b(this.$params));
+        return Unit.INSTANCE;
+    L7:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    }
+}

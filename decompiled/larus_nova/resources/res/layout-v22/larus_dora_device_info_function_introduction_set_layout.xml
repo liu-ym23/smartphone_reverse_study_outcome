@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/dora_device_info_function_introduction_set_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="?attr/larus_dp_16"
+    android:layout_marginTop="?attr/larus_dp_8"
+    android:layout_marginRight="?attr/larus_dp_16"
+    android:layout_marginBottom="?attr/larus_dp_8">
+    <com.larus.dora.impl.view.DoraTextView
+        android:textSize="?attr/larus_dp_14"
+        android:textColor="@color/neutral_50"
+        android:id="@+id/function_introduction_set_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/larus_dp_12"
+        android:layout_marginBottom="?attr/larus_dp_12"
+        android:textFontWeight="500"/>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:id="@+id/cj_pay_pre_bio_guide_root_view"
+    android:background="@drawable/cj_pay_bg_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="516dp">
+    <include
+        android:id="@+id/cj_pay_titlebar_root_view"
+        layout="@layout/cj_pay_view_titlebar_layout"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cj_pay_titlebar_root_view"
+        layout="@layout/cj_pay_view_half_screen_loading_layout"/>
+    <include
+        android:id="@+id/cj_pay_security_panel_loading_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cj_pay_titlebar_root_view"
+        layout="@layout/cj_pay_view_security_panel_loading_container"/>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/x_keyboard_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.android.ttcjpaysdk.base.ui.component.keyboard.CJNumKeyboardView
+        android:id="@+id/cj_pay_view_num_keyboard"
+        android:background="@color/cj_pay_color_trans"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"/>
+    <com.android.ttcjpaysdk.base.ui.component.keyboard.CJAmountKeyboardView
+        android:textColor="#161823"
+        android:id="@+id/cj_pay_amount_keyboard"
+        android:background="#f1f1f2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowRadius="0"
+        android:keepScreenOn="true"
+        android:keyBackground="@color/cj_pay_color_trans"/>
+</FrameLayout>

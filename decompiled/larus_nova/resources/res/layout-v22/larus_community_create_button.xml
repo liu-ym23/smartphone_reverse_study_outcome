@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/community_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="?attr/larus_dp_192"
+        android:layout_height="?attr/larus_dp_88"
+        android:src="@drawable/larus_community_create_button_shadow"
+        android:scaleType="fitXY"/>
+    <com.larus.common_ui.widget.roundlayout.RoundLinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/community_create_btn"
+        android:paddingLeft="?attr/larus_dp_36"
+        android:paddingRight="?attr/larus_dp_36"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_58"
+        android:paddingHorizontal="?attr/larus_dp_36"
+        app:rv_backgroundColor="@color/larus_base_2"
+        app:rv_cornerRadius="?attr/larus_dp_28"
+        app:rv_strokeColor="@color/larus_neutral_transparent_1"
+        app:rv_strokeWidth="?attr/larus_dp_0_5">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="?attr/larus_dp_6"
+            android:src="@drawable/larus_icon_sparkle_fill"/>
+        <TextView
+            android:textSize="?attr/larus_sp_16"
+            android:textStyle="bold"
+            android:textColor="#ffc34d"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/community_create_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_CreateAI_btn_create"
+            android:fontFamily="sans-serif-medium"
+            android:textFontWeight="600"/>
+    </com.larus.common_ui.widget.roundlayout.RoundLinearLayout>
+</merge>

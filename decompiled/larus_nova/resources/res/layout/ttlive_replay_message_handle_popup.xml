@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="100dp"
+    android:layout_height="37dp">
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="7dp">
+        <View
+            android:id="@+id/divider"
+            android:background="@color/ttlive_white_10"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"/>
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/tv_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/divider"
+            android:layout_alignParentLeft="true">
+            <TextView
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/tv_agree_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" +"/>
+            <TextView
+                android:textSize="16dp"
+                android:textStyle="italic|bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/tv_agree_one"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1 "/>
+        </LinearLayout>
+        <TextView
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/tv_report"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/ttlive_report_anchor"
+            android:layout_alignLeft="@+id/divider"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</FrameLayout>

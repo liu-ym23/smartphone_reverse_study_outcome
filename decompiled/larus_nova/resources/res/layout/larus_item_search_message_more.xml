@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_60">
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="?attr/larus_dp_28"
+        android:layout_height="?attr/larus_dp_28"
+        style="@style/larus_LoadingProgressBar"/>
+</LinearLayout>

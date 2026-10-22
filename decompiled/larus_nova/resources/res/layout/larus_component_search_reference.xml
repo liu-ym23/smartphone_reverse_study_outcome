@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ll_reference_title_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_reference_title"
+        android:background="?attr/larus_bg_text_source_header_title"
+        android:paddingTop="?attr/larus_dp_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/larus_dp_16">
+        <com.larus.bmhome.chat.layout.widget.ShimmerTextView
+            android:textSize="?attr/larus_sp_17"
+            android:textColor="?attr/larus_neutral_70"
+            android:ellipsize="end"
+            android:id="@+id/tv_reference_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:maxEms="15"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_arrow"
+            android:layout_width="?attr/larus_dp_14"
+            android:layout_height="?attr/larus_dp_14"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="?attr/larus_dp_12"
+            app:srcCompat="?attr/larus_ic_top_reference_arrow"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/mask_reference_title"
+        android:background="?attr/larus_bg_vertical_linear_gray_gradient"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_12"/>
+</LinearLayout>

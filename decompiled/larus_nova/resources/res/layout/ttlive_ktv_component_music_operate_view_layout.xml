@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="32dp"
+    android:layout_height="32dp">
+    <LinearLayout
+        android:id="@+id/music_operate_ll"
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/music_operate_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/red_dot"
+        android:background="@drawable/ttlive_ic_setting_dot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+</merge>

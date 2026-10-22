@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ec_shop_empty_image"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:layout_marginTop="160sp"
+        android:src="@drawable/ec_shop_empty_product_v2"/>
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/TextPrimary"
+        android:id="@+id/ec_shop_empty_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/commerce_store_no_product_title"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#5c5d65"
+        android:id="@+id/ec_shop_empty_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ec_shop_empty_product_sub_title"/>
+</LinearLayout>

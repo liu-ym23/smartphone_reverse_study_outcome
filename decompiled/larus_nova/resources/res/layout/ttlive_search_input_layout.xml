@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp">
+    <com.bytedance.android.live.core.widget.LiveTextView
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_search_textview"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="@string/ttlive_search_cancel"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:lineSpacingExtra="2dp"
+        android:layout_alignParentEnd="true"/>
+    <include
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_toLeftOf="@+id/tv_search_textview"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@+id/tv_search_textview"
+        layout="@layout/ttlive_search_discover_search_edittext_layout"/>
+</RelativeLayout>

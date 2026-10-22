@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:startColor="@color/larus_neutral_immerse_overlay_90"
+        android:endColor="@color/larus_base_1_overlay_alpha_0"
+        android:angle="90"
+        android:type="linear"
+        android:centerColor="@color/larus_neutral_immerse_overlay_90"/>
+</shape>

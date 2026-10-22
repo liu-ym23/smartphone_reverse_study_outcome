@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.lark.ui.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_background="@color/bg_base"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:layout_marginStart="@dimen/dp_16">
+        <TextView
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Todo_CreateNewList_ListTitle_Text"/>
+        <TextView
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/function_danger_fill_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" *"/>
+    </LinearLayout>
+    <com.larksuite.component.universe_design.edittext.UDTextInputLayout
+        android:id="@+id/layout_task_list_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16">
+        <com.suite.lark.emm.design.edittext.SCUDEditText
+            android:id="@+id/edittext_task_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Todo_CreateNewList_ListTitle_Placeholder"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:ud_backgroundColor="@color/ud_edittext_white_bg"
+            app:ud_radius="m"
+            app:ud_strokeColor="@color/ud_edittext_stroke"
+            app:ud_strokeWidth="1dp"
+            style="@style/UDEditText.Normal">
+            <requestFocus/>
+        </com.suite.lark.emm.design.edittext.SCUDEditText>
+    </com.larksuite.component.universe_design.edittext.UDTextInputLayout>
+</LinearLayout>

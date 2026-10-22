@@ -1,0 +1,14 @@
+package io.ktor.client.plugins.cache;
+
+import io.ktor.http.Url;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes41.dex */
+@Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00060\u0001j\u0002`\u0002B\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004¢\u0006\u0002\u0010\u0005¨\u0006\u0006"}, d2 = {"Lio/ktor/client/plugins/cache/InvalidCacheStateException;", "Ljava/lang/IllegalStateException;", "Lkotlin/IllegalStateException;", "requestUrl", "Lio/ktor/http/Url;", "(Lio/ktor/http/Url;)V", "ktor-client-core"}, k = 1, mv = {1, 8, 0}, xi = 48)
+public final class InvalidCacheStateException extends IllegalStateException {
+    public InvalidCacheStateException(Url r100) {
+        Intrinsics.checkNotNullParameter(r100, "requestUrl");
+        super("The entry for url: " + r100 + " was removed from cache");
+    }
+}

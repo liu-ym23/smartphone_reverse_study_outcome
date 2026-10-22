@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recommend_layout"
+    android:paddingTop="@dimen/dp_8"
+    android:paddingBottom="@dimen/dp_8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/dp_8"
+    android:paddingEnd="@dimen/dp_8">
+    <com.ss.android.lark.widget.ptr.LKUIPtrClassicFrameLayout
+        android:id="@+id/recommend_ptr_layout"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp">
+        <com.ss.android.lark.widget.recyclerview.CommonRecyclerView
+            android:id="@+id/recommend_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+    </com.ss.android.lark.widget.ptr.LKUIPtrClassicFrameLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/loading_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_below="@+id/search_result_head_container">
+        <ImageView
+            android:id="@+id/loading_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="@dimen/dp_8"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/text_caption"
+            android:id="@+id/loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Lark_Legacy_Loading"/>
+    </LinearLayout>
+    <include
+        android:visibility="gone"
+        layout="@layout/view_picker_search_empty"/>
+</RelativeLayout>

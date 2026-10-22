@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/dialog_common_content"
+        layout="@layout/larus_dialog_common"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="end|top"
+        android:id="@+id/dialog_close"
+        android:padding="?attr/larus_dp_6"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_28"
+        android:layout_height="?attr/larus_dp_28"
+        android:layout_marginTop="?attr/larus_dp_6"
+        android:src="?attr/larus_ic_close"
+        android:layout_marginEnd="?attr/larus_dp_6"/>
+</FrameLayout>

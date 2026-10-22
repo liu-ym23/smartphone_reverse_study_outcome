@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:id="@+id/ec_commerce_layout_anchor_v3_sell_point_strand_767788049"
+    android:background="@drawable/ec_commerce_bg_anchor_v3_sell_point_strand"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/commerce_anchor_v3_sell_point_strand_height"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+    <ImageView
+        android:id="@+id/anchor_v3_sell_point_icon"
+        android:background="@drawable/anchor_v3_sell_point_icon"
+        android:layout_width="28dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="12dp"
+        android:contentDescription="@null"
+        android:layout_marginStart="12dp"/>
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:id="@+id/anchor_v3_sell_point_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:singleLine="true"
+        android:layout_marginStart="6dp"/>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/outside"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/setting_content"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/setting_content"
+        android:paddingBottom="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/ttlive_white"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_setting_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="@string/ttlive_interact_link_play_method"/>
+        <View
+            android:background="#1a161823"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_play_method"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

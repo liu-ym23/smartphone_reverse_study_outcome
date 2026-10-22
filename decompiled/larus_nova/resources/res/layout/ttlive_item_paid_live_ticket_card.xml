@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="112dp"
+    android:layout_height="175dp">
+    <com.bytedance.android.livesdk.vscore_impl.paidlive.ablity.AutoFallbackHybridComponentContainer
+        android:id="@+id/hybrid_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:layout_gravity="end|top"
+        android:id="@+id/iv_close_card"
+        android:paddingLeft="4dp"
+        android:paddingTop="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="4dp"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/icon_card_close_white"
+        android:scaleType="fitXY"
+        android:paddingStart="4dp"
+        android:paddingEnd="2dp"/>
+</FrameLayout>

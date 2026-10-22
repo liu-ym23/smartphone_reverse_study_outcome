@@ -1,0 +1,66 @@
+/* Generated code, DO NOT EDIT.
+ * source: ccm_nexus.yaml
+ */
+
+syntax = "proto2";
+
+package ccm_nexus.proto;
+
+
+
+
+
+message FuncParamsX59f4a5708a791818 
+{
+    required uint64 user_id = 1;
+    required string entity_token = 2;
+    required string resource_type = 3;
+     optional string resource_sub_type = 4;
+    required string route_type = 5;
+    required string route_key = 6;
+     optional MoltenFfiInstanceMsg push_callback = 7;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8d9db686a21d1c12 
+{
+    required string nexus_domain = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb3ce1a48a9c21ec4 
+{
+    required uint64 user_id = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb90de776903cc76f 
+{
+    required uint64 user_id = 1;
+    required string entity_token = 2;
+    required int64 obj_type = 3;
+     optional MoltenFfiInstanceMsg push_callback = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe6545313fa89638d 
+{
+     optional string module = 1;
+    required string raw_data = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX0dacc3cd9208fcbc 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3dc8b8542df1cbb1 
+{
+    required bool ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX531b1dca7604d3b4 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX860dc395538b22b2 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message MoltenFfiInstanceMsg {
+  required int64 type_id = 1;
+  required int64 instance_id = 2;
+}
+message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

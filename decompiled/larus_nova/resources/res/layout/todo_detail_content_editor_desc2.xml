@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.keyboard.edittext2.KeyboardFunctionEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="14sp"
+    android:textColor="@color/text_title"
+    android:textColorHighlight="@color/transparent"
+    android:textColorHint="@color/text_placeholder"
+    android:ellipsize="end"
+    android:id="@+id/todo_description"
+    android:background="@color/bg_body"
+    android:focusableInTouchMode="true"
+    android:scrollbars="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="168dp"
+    android:hint="@string/Todo_Task_AddNotesPlaceholder"
+    android:inputType="textMultiLine"/>

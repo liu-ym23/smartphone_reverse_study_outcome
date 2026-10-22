@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/bitable_homepage_list_cover_start"
+        android:endColor="@color/bitable_homepage_list_cover_end"
+        android:angle="270"
+        android:centerColor="@color/bitable_homepage_list_cover_center"/>
+</shape>

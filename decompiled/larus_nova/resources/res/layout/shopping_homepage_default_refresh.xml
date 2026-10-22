@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/shopping_homepage_default_refresh_1839822439"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#161823"
+        android:ellipsize="end"
+        android:id="@+id/double_loading_text"
+        android:paddingTop="21dp"
+        android:paddingBottom="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:alpha="0.5"/>
+</LinearLayout>

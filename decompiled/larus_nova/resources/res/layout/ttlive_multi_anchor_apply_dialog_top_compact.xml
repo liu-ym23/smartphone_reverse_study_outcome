@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="#161823"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/ttlive_anchor_link_apply_to_join_link"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="11dp"
+        android:textColor="#80161823"
+        android:id="@+id/anchor_pk_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="9.4dp"
+        android:text="@string/ttlive_anchor_pk_invite_tips"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

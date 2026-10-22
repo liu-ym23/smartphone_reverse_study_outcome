@@ -1,0 +1,45 @@
+package com.relax.relaxframework;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes34.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\b\n\u0002\b\t\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\n¨\u0006\u000b"}, d2 = {"Lcom/relax/relaxframework/DirectionType;", "", "", "value", "I", "getValue", "()I", "Normal", "LynxRtl", "Rtl", "Ltr", "relax-framework_release"}, k = 1, mv = {1, 7, 1})
+public final enum DirectionType extends Enum<DirectionType> {
+    public static final DirectionType Ltr = null;
+    public static final DirectionType LynxRtl = null;
+    public static final DirectionType Normal = null;
+    public static final DirectionType Rtl = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ DirectionType[] f404707a = null;
+    private final int value;
+
+    public static DirectionType valueOf(String r100) {
+        return (DirectionType) r27.a.a(DirectionType.class, r100);
+    }
+
+    public static DirectionType[] values() {
+        return (DirectionType[]) f404707a.clone();
+    }
+
+    static {
+        DirectionType r100 = new DirectionType("Normal", 0, 0);
+        Normal = r100;
+        DirectionType r101 = new DirectionType("LynxRtl", 1, 1);
+        LynxRtl = r101;
+        DirectionType r102 = new DirectionType("Rtl", 2, 2);
+        Rtl = r102;
+        DirectionType r103 = new DirectionType("Ltr", 3, 3);
+        Ltr = r103;
+        f404707a = new DirectionType[]{r100, r101, r102, r103};
+    }
+
+    public final int getValue() {
+        return this.value;
+    }
+
+    public DirectionType(String r100, int r101, int r102) {
+        super(r100, r101);
+        this.value = r102;
+    }
+}

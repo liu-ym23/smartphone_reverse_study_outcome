@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+    <TextView
+        android:textColor="@color/ttlive_interest_kp_item_text_color"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/item_name"
+        android:background="@drawable/ttlive_comment_input_panel_interest_kp_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="美食"
+        android:maxLines="1"/>
+</LinearLayout>

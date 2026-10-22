@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.venus.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="?attr/larus_dp_32"
+    android:layout_height="?attr/larus_dp_32"
+    app:larus_sc_cornerRadius="?attr/larus_dp_16"
+    app:larus_sc_fillColor="@color/larus_reach_banner_close_background">
+    <ImageView
+        android:layout_width="?attr/larus_dp_12"
+        android:layout_height="?attr/larus_dp_12"
+        android:src="@drawable/larus_reach_ic_close_fill"
+        android:contentDescription="@string/larus_accessibility_icon_close"/>
+</com.larus.common_ui.venus.ShapeLinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/mdMemoryIcon"
+        android:layout_width="?attr/larus_dp_20"
+        android:layout_height="?attr/larus_dp_20"
+        android:layout_marginTop="?attr/larus_dp_3"
+        android:layout_marginBottom="?attr/larus_dp_3"/>
+    <TextView
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="?attr/larus_neutral_70"
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/mdMemoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="?attr/larus_dp_4"/>
+</LinearLayout>

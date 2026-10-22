@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/ud_dialog_padding_left_right"
+    android:paddingEnd="@dimen/ud_dialog_padding_left_right">
+    <TextView
+        android:textAppearance="@style/UDText.Body0"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:id="@+id/ud_dialog_content_message_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.ee.bear.widgets.universedesign.SpaceEditText
+        android:textAppearance="@style/UDText.Body0"
+        android:id="@+id/ud_dialog_content_et"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="@dimen/ud_dialog_padding_title_content"
+        android:layout_marginRight="0dp"
+        app:ud_backgroundColor="@color/ud_edittext_white_bg"
+        app:ud_radius="m"
+        app:ud_strokeColor="@color/ud_edittext_stroke"
+        app:ud_strokeWidth="1dp"
+        style="@style/UDEditText.Normal.SingleLine"/>
+    <TextView
+        android:textAppearance="@style/UDText.Body0"
+        android:textSize="@dimen/space_kit_font_14"
+        android:textColor="@color/text_caption"
+        android:ellipsize="end"
+        android:id="@+id/ud_dialog_content_desc_message"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ud_dialog_padding_title_content"/>
+</LinearLayout>

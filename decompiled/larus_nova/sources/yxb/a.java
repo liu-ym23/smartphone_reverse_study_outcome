@@ -1,0 +1,5 @@
+package yxb;
+
+/* JADX INFO: loaded from: classes37.dex */
+public interface a extends b {
+}

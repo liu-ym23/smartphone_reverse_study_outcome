@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<voice-interaction-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="com.obric.assistant.AssistantSettingsActivity"
+    android:sessionService="com.obric.sva.interactor.service.ObricInteractionSessionService2"
+    android:recognitionService="com.obric.sva.interactor.service.ObricInteractionService2"
+    android:supportsAssist="true"
+    android:supportsLaunchVoiceAssistFromKeyguard="true"
+    android:supportsLocalInteraction="true"/>

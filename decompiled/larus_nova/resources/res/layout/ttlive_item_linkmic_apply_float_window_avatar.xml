@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="28dp"
+    android:layout_height="28dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/float_view_avatar"
+        android:background="@drawable/ttlive_bg_default_anchor_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImage="@drawable/ttlive_img_avatar_empty"
+        app:roundAsCircle="true"/>
+    <View
+        android:layout_gravity="center"
+        android:background="@drawable/ttlive_bg_linkmic_apply_float_view_avatar_border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

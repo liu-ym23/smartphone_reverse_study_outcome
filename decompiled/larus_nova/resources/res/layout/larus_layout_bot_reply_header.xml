@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/reply_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/larus_ic_reply_rect_new"/>
+        <TextView
+            android:textSize="?attr/larus_dp_14"
+            android:textColor="@color/static_white_transparent_4"
+            android:ellipsize="end"
+            android:id="@+id/reply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:alpha="0.7"
+            android:layout_marginStart="?attr/larus_dp_4"/>
+    </LinearLayout>
+</merge>

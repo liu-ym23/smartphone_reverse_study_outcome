@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/gamecp_detail_error_view_container"
+    android:paddingTop="80dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/gamecp_detail_error_view_image"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:src="@drawable/gamecp_feed_drawer_no_network"
+        android:scaleType="fitCenter"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/gamecp_game_80161823"
+        android:id="@+id/gamecp_detail_error_view_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ttlive_game_promote_list_error_tip"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/gamecp_game_161823"
+        android:gravity="center"
+        android:id="@+id/gamecp_detail_error_view_retry"
+        android:background="@drawable/gamecp_game_detail_dialog_retry_btn"
+        android:layout_width="169dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ttlive_promote_list_download_error"/>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/av_ic_network_err_panel_retry_arrow_small"
+        android:layout_marginEnd="4dp"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/tools_std_const_text_inverse"
+        android:gravity="center"
+        android:id="@+id/tv_panel_error_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cj_pay_agreement_layout"
+    android:paddingTop="@dimen/cj_pay_padding_16"
+    android:paddingBottom="@dimen/cj_pay_padding_16"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/cj_pay_padding_16"
+    android:paddingEnd="@dimen/cj_pay_padding_8">
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/cj_pay_color_black_161823"
+        android:ellipsize="end"
+        android:id="@+id/cj_pay_agreement_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginEnd="@dimen/cj_pay_padding_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cj_pay_agreement_entrance_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/cj_pay_agreement_entrance_icon"
+        android:layout_width="@dimen/cj_pay_padding_20"
+        android:layout_height="@dimen/cj_pay_padding_20"
+        android:src="@drawable/cj_pay_icon_right_arrow_agreement"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cj_pay_agreement_desc"
+        app:layout_constraintTop_toTopOf="@+id/cj_pay_agreement_desc"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.sectiontitlebar.OSectionTitleBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/oui_popover_sectionbar_margin"
+    android:paddingRight="@dimen/oui_popover_sectionbar_margin"
+    style="@style/OSectionTitleBar.S"/>

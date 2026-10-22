@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="false">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_static"
+        android:visibility="visible"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ttlive_ic_game_promote_new"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/gamecp_game_promote_audience_name"
+        app:actualImageScaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

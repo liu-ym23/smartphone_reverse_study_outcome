@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.shopping.deepfeed.weights.common.ProductTextView
+        android:textSize="13dp"
+        android:textColor="#ffff3344"
+        android:gravity="center"
+        android:id="@+id/deepfeed_product_cart_text"
+        android:layout_width="117dp"
+        android:layout_height="34dp"
+        android:text="加入购物车"
+        app:customWeight="600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.shopping.deepfeed.ui.view.AdapterScreenImageView
+        android:gravity="center"
+        android:id="@+id/deepfeed_product_cart_icon"
+        android:visibility="gone"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/shopping_icon_deepfeed_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</merge>

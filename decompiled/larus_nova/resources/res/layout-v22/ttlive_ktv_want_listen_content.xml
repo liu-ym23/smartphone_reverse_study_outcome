@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/want_listen_iv"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        app:placeholderImage="@drawable/ttlive_ktv_want_listen_black_icon"
+        app:placeholderImageScaleType="fitXY"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="#80000000"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/want_listen_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:lineHeight="18dp"
+        android:textFontWeight="400"/>
+</LinearLayout>

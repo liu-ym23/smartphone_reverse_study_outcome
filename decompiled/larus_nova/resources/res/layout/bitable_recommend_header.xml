@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading_container"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/iv_loading"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"/>
+</FrameLayout>

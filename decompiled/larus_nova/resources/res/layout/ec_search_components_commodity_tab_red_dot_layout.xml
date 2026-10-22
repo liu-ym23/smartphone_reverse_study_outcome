@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipChildren="false"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/tab_name"
+    android:layout_alignTop="@+id/tab_name">
+    <View
+        android:id="@+id/red_dot_guide"
+        android:background="@drawable/search_components_tab_guide_red_dot_bg"
+        android:visibility="gone"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:translationY="-1dp"/>
+</FrameLayout>

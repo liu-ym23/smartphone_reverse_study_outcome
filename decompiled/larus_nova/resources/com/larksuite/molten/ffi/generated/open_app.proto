@@ -1,0 +1,532 @@
+/* Generated code, DO NOT EDIT.
+ * source: open_app.yaml
+ */
+
+syntax = "proto2";
+
+package open_app.proto;
+
+//  应用上下文信息，包含应用 ID 和应用类型
+message AppContext {
+    required string app_id = 1;
+    required OpenPlatformAppType app_type = 2;
+}
+
+//  应用信息
+message AppInfo {
+    required string app_id = 1;
+    required string desc = 2;
+     optional string developer_user_id = 3;
+     optional string help_doc = 4;
+    required Icon icon = 5;
+    required string item_desc = 6;
+     optional string mobile_applink_url = 7;
+    required bool mobile_available = 8;
+    required string name = 9;
+    required string required_launch_ability = 10;
+     optional string appstore_detail_applink = 11;
+     optional string action_name = 12;
+}
+
+//  飞书聊天信息结构
+message ChatInfo {
+     optional string chat_name = 1;
+     map<string, string> chat_i18n_names = 2;
+     repeated string chat_avatar_urls = 3;
+    required string open_chat_id = 4;
+}
+
+//  飞书聊天结构
+message ChatRequest {
+    required string chat_id = 1;
+     optional string chat_type = 2;
+     optional bool is_bot = 3;
+}
+
+//  文件信息
+message FileStat {
+    required uint32 mode = 1;
+    required uint64 size = 2;
+    required uint64 last_accessed_time = 3;
+    required uint64 last_modified_time = 4;
+}
+
+//  区块动作源详情的内容信息
+message GetBlockActionSourceDetailContent {
+    required string action_time = 1;
+     repeated GetBlockActionSourceDetailMessage messages = 2;
+}
+
+//  区块动作源详情的消息信息
+message GetBlockActionSourceDetailMessage {
+    required string message_type = 1;
+    required MessagesSender sender = 2;
+    required string create_time = 3;
+    required bool support = 4;
+    required string open_chat_id = 5;
+    required string open_message_id = 6;
+    required string content = 7;
+    required bool status = 8;
+}
+
+//  获取区块动作源详情的响应信息
+message GetBlockActionSourceDetailResponse {
+    required string biz_type = 1;
+    required GetBlockActionSourceDetailContent content = 2;
+}
+
+//  获取消息内容错误结构体，用于封装获取消息内容过程中出现的错误信息。
+message GetMessageContentError {
+    required GetMessageContentErrorKind kind = 1;
+    required int32 error_code = 2;
+    required string error_msg = 3;
+}
+
+//  通过ChatID获取开放聊天信息的HTTP响应结构体
+message GetOpenChatByChatIdResponse {
+     map<string, OpenChatInfo> open_chat_ids = 1;
+}
+
+//  应用图标信息
+message Icon {
+    required string fs_unit = 1;
+    required string key = 2;
+}
+
+//  聊天会话基本信息结构体
+message IdRequestChatInfo {
+    required string chat_id = 1;
+    required int32 chat_type = 2;
+}
+
+//  消息触发信息，用于记录消息触发相关的信息
+message MessageTriggerInfo {
+    required string action_time = 1;
+     repeated string message_ids = 2;
+}
+
+//  消息发送者信息
+message MessagesSender {
+    required string name = 1;
+    required string open_id = 2;
+     optional string status = 3;
+}
+
+//  开放应用错误结构体，用于封装开放应用操作过程中出现的错误信息。
+message OpenAppFfiError {
+    required string error_msg = 1;
+    required int32 error_code = 2;
+}
+
+//  开放聊天信息结构体
+message OpenChatInfo {
+    required string open_chat_id = 1;
+     optional string chat_name = 2;
+     map<string, string> chat_i18n_names = 3;
+     repeated string chat_avatar_urls = 4;
+}
+
+//  `OpenAppService` trait
+//  开放平台聊天模型，用于存储与开放平台聊天相关的信息
+message OpenPlatformChatModel {
+    required string chat_id = 1;
+    required string chat_name = 2;
+    required string biz_type = 3;
+}
+
+//  分页数据结构体，包含外部应用列表、可用应用列表、帮助链接和最大常用项数量。
+message PageData {
+     repeated AppInfo external = 1;
+     repeated AppInfo available = 2;
+     optional string help_url = 3;
+    required int32 max_common_items = 4;
+}
+
+message TtCode {
+    required string key = 1;
+    required string iv = 2;
+    required string code = 3;
+}
+
+//  飞书用户摘要结构
+message UserSummary {
+    required string openid = 1;
+    required string union_id = 2;
+    required string name = 3;
+     map<string, string> i18n_name = 4;
+     optional string display_name = 5;
+     map<string, string> i18n_display_name = 6;
+     repeated string avatar_urls = 7;
+}
+
+//  获取消息内容错误类型枚举，定义了不同类型的错误。
+enum GetMessageContentErrorKind {
+    VAR_GET_MESSAGE_CONTENT_ERROR_KIND_INTERNAL_ERROR = 0;
+    VAR_GET_MESSAGE_CONTENT_ERROR_KIND_MESSAGE_NOT_FOUND = 1;
+    VAR_GET_MESSAGE_CONTENT_ERROR_KIND_GATEWAY_ERROR = 2;
+    VAR_GET_MESSAGE_CONTENT_ERROR_KIND_SERVER_ERROR = 3;
+}
+//  开放平台应用类型枚举，定义了不同类型的开放平台应用
+enum OpenPlatformAppType {
+    VAR_OPEN_PLATFORM_APP_TYPE_GADGET_APP = 0;
+    VAR_OPEN_PLATFORM_APP_TYPE_WEB_APP = 1;
+}
+//  操作场景枚举，定义了不同的操作场景类型。
+enum Scene {
+    VAR_SCENE_PLUS_MENU = 0;
+    VAR_SCENE_MESSAGE_ACTION = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+message FuncParamsX043db18132a5fb7a 
+{
+    required AppContext app_context = 1;
+    required string uid = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX0d317d2c5c1a3af6 
+{
+     repeated string open_ids = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+    required string platform_session = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX125b6301e3b45c7c 
+{
+     repeated ChatRequest chats = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+    required string platform_session = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX139f3de53fb9711e 
+{
+    required string error_msg = 1;
+    required int32 error_code = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX1dacb8f695f11a07 
+{
+    required string uid = 1;
+    required string trigger_code = 2;
+    required string app_id = 3;
+    required MoltenFfiInstanceMsg callback = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX2438127b8ef7dc33 
+{
+    required string uid = 1;
+    required string trigger_code = 2;
+    required OpenPlatformChatModel chat_model = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX256cc6eaadfe3438 
+{
+    required string uid = 1;
+    required AppContext app_context = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX2dfe6875e1081594 
+{
+    required string user_id = 1;
+    required string open_thread_id = 2;
+    required MoltenFfiInstanceMsg callback = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX307635d0c0e69ad1 
+{
+    required string uid = 1;
+    required string trigger_code = 2;
+    required MessageTriggerInfo message_ids = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX310f8ba646d34cdb 
+{
+    required int32 error_code = 1;
+    required string error_msg = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX3330f779f3fa3298 
+{
+     map<string, string> result = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX37402a2a4c751ad7 
+{
+    required string open_thread_id = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX3b39fd92bb87cfa8 
+{
+    required MoltenFfiInstanceMsg callback = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX3dfd610f17427e25 
+{
+    required string open_chat_id = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX3f39ac3f95fbfef9 
+{
+     map<string, string> data = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX455fcfdcf74ec432 
+{
+    required MoltenFfiInstanceMsg callback = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX54ec86dcf3ee9915 
+{
+    required GetOpenChatByChatIdResponse chat_infos = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX5687f21023c96386 
+{
+    required MoltenFfiInstanceMsg call_back = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX6a82f911653819c8 
+{
+     repeated string user_ids = 1;
+    required string isolation_id = 2;
+    required MoltenFfiInstanceMsg callback = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX76aed50e32db8a94 
+{
+    required int32 len = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX86c6badf82afafc0 
+{
+    required PageData page_data = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX86cb61896a9da901 
+{
+    required string session = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8862e0177db125fd 
+{
+    required string uid = 1;
+    required string trigger_code = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8e5e4021809b3824 
+{
+     optional string session = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8ec96398181a4b9f 
+{
+    required string local_template_path = 1;
+    required bool force_update = 2;
+    required MoltenFfiInstanceMsg callback = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8f5bea88a883627c 
+{
+    required GetMessageContentError get_message_content_error = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX9ad116e57549f434 
+{
+    required MoltenFfiInstanceMsg callback = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX9f2014e8c57b1e23 
+{
+    required string user_id = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXa4ba87bbd28c7b6a 
+{
+    required string session = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXab52452729e756ac 
+{
+    required string open_id = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXad03e1b602ba5a9e 
+{
+     repeated string lark_user_ids = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+    required string platform_session = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb3f12ba85e396f4e 
+{
+    required string path = 1;
+    required string version = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb55ce33a2ecad228 
+{
+    required string user_id = 1;
+    required AppContext app_context = 2;
+     repeated IdRequestChatInfo chat_infos = 3;
+    required string session_value = 4;
+    required MoltenFfiInstanceMsg callback = 5;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXba71458d5e99ed3c 
+{
+    required string id = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXc14fa8054cee04ab 
+{
+    required string uid = 1;
+    required string trigger = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXc6f1e7110b67c19e 
+{
+     repeated string user_ids = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+    required string platform_session = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXd16cd87eca230145 
+{
+    required string uid = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXd5c3946cfaa171a1 
+{
+    required string open_id = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+    required string platform_session = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXd74c077310392c82 
+{
+    required MoltenFfiInstanceMsg callback = 1;
+     repeated string app_ids = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe121a43ef5645158 
+{
+     repeated string open_chat_ids = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+    required string platform_session = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe919aa5ad0f75508 
+{
+     repeated string dep_ids = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+    required string platform_session = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXf08ef31208be7426 
+{
+     map<string, ChatInfo> data = 1;
+    required string raw_data = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXf1672a73e1398765 
+{
+    required string file_path = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXf46840fd95d98527 
+{
+    required string user_id = 1;
+    required Scene scene = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXf62a6b8ca76d7c2d 
+{
+     map<string, UserSummary> data = 1;
+    required string raw_data = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXf7fb04ff0909142f 
+{
+    required GetBlockActionSourceDetailResponse response = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX0416e8f84f62f60b 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX0bf8b5c665c57f35 
+{
+    required string ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX24f00c44e39a7f53 
+{
+    required FileStat ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX26b9d083ba42537a 
+{
+     optional string ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3ed29e542256825c 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX45c019902e3449dd 
+{
+    required MessageTriggerInfo ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX576940bfeeef49a9 
+{
+     optional OpenPlatformChatModel ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX665ace980782e368 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX7051b2256605c1d0 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX7f577b291f219c56 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX8e08d3a40d002f34 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX9875489e7162af1a 
+{
+    required TtCode ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXe1e07bfa3447ad8c 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncErrorX9757bb2a5952da86 
+{
+    required OpenAppFfiError err = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX0b81081e93c180cc 
+{
+    optional FuncErrorX9757bb2a5952da86 err = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX45d559313319102c 
+{
+    optional FuncReturnX576940bfeeef49a9 ret = 1;
+    optional FuncErrorX9757bb2a5952da86 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultXa8d813508ec879e0 
+{
+    optional FuncReturnX9875489e7162af1a ret = 1;
+    optional FuncErrorX9757bb2a5952da86 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultXd5300ae19920d349 
+{
+    optional FuncReturnX24f00c44e39a7f53 ret = 1;
+    optional FuncErrorX9757bb2a5952da86 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultXf3eefbc3931fa257 
+{
+    optional FuncReturnX45c019902e3449dd ret = 1;
+    optional FuncErrorX9757bb2a5952da86 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultXfa9885f569d89707 
+{
+    optional FuncReturnX26b9d083ba42537a ret = 1;
+    optional FuncErrorX9757bb2a5952da86 err = 2;
+    optional bytes _molten_ctx = 255;
+}message MoltenFfiInstanceMsg {
+  required int64 type_id = 1;
+  required int64 instance_id = 2;
+}
+message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

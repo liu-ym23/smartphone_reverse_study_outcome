@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/auto_fill_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_9"
+        android:layout_marginBottom="?attr/larus_dp_9"
+        android:layout_marginStart="?attr/larus_dp_14"
+        android:layout_marginEnd="?attr/larus_dp_1"
+        app:srcCompat="@drawable/larus_ic_bot_create_ai_colorful"/>
+    <com.larus.common_ui.widget.GradientTextView
+        android:textSize="?attr/larus_dp_14"
+        android:textColor="@color/larus_neutral_100"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/auto_fill_title"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_create_bot_one_click_fill"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginEnd="?attr/larus_dp_16"/>
+</LinearLayout>

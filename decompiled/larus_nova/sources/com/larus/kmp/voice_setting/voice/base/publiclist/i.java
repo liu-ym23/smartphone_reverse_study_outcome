@@ -1,0 +1,23 @@
+package com.larus.kmp.voice_setting.voice.base.publiclist;
+
+import com.larus.kmp.voice_setting.voice.component.l5;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes30.dex */
+public final class i implements Function1<l5, l5> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ t1a.c f351835a;
+
+    public i(l5 r100) {
+        this.f351835a = r100;
+    }
+
+    /* JADX WARN: Type inference failed for: r2v2, types: [com.larus.kmp.voice_setting.voice.component.l5, t1a.c] */
+    @Override // kotlin.jvm.functions.Function1
+    public final l5 invoke(l5 r100) {
+        Intrinsics.checkNotNullParameter(r100, "it");
+        return this.f351835a;
+    }
+}

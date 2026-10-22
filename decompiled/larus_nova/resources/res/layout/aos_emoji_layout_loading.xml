@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.awemeopen.apps.framework.base.view.refresh.DmtTextView
+        android:textSize="13sp"
+        android:textColor="@color/aos_text_reverse2"
+        android:id="@+id/title"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/loading_progress_bar"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:indeterminateOnly="true"
+            android:indeterminateDrawable="@drawable/aos_emoji_ic_progress"
+            android:indeterminateBehavior="repeat"/>
+        <com.bytedance.awemeopen.apps.framework.base.view.refresh.DmtTextView
+            android:textSize="13sp"
+            android:textColor="@color/aos_line_secondary2"
+            android:id="@+id/loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中..."
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>

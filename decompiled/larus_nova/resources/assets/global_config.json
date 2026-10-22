@@ -1,0 +1,269 @@
+{
+  "common": {
+    "abTest": {
+      "ab_channel_domain": "https://abtestvm.bytedance.com"
+    },
+    "brand": {
+      "app_name": "APP_NAME_FEISHU"
+    },
+    "channel": "saas",
+    "domain": {
+      "applink": "applink.feishu.cn",
+      "dlp_api": "internal-api-security.feishu.cn",
+      "helpcenter": "www.feishu.cn",
+      "helpdesk": "helpdesk.feishu.cn",
+      "lark_api": "internal-api-lark-api.feishu.cn",
+      "lark_file": "internal-api-lark-file.feishu.cn",
+      "official": "www.feishu.cn",
+      "okr_api": "okr.feishu.cn",
+      "open": "open.feishu.cn",
+      "open_platform": "internal-api.feishu.cn",
+      "open_tpl_service": "feishupkg.com",
+      "pano": "oa.feishu.cn",
+      "passport": "login.feishu.cn",
+      "passport_agw_feishu": "login.feishu.cn",
+      "passport_agw_lark": "passport.larksuite.com",
+      "passport_main_domain": "feishu.cn",
+      "security": "internal-api.feishu.cn",
+      "setting": "internal-api-lark-api.feishu.cn",
+      "tnc_fetch_api": "dm.feishu.cn",
+      "tnc_sdk": "sf6-scmcdn-cn.feishucdn.com"
+    },
+    "domainPool": [
+      "feishu.net",
+      "docs.bytedance.net",
+      "feishu.cn",
+      "larksuite.com",
+      "feishu-staging.cn",
+      "larksuite-staging.com",
+      "docs-staging.bytedance.net",
+      "larkoffice.com",
+      "larkenterprise.com",
+      "bezo.com",
+      "feishubase.com",
+      "larksuite.us"
+    ],
+    "env": "online",
+    "frontier": {
+      "aid": 10011,
+      "appKey": "4af89272b20e69c0f78512189e86d13d",
+      "fpid": 61
+    },
+    "garrMina": {
+      "appId": 66,
+      "domain": "open.feishu.cn",
+      "pathName": "/config/get",
+      "version": "1.0.0"
+    },
+    "helpcenter_article": {
+      "app_share_help": 360049067873,
+      "authorized_help": 360025093793,
+      "confluence_importing_help": 612602911143,
+      "importing_help": 360026428074,
+      "incompatible_extension": 360037376033,
+      "shimo_importing_help": "049570101480",
+      "space_single_container": 361321970830,
+      "stickup_help": 360044875193,
+      "storage_help": 360049067797,
+      "supported_browser": 360038713913
+    },
+    "i18nCdnApi": {
+      "domain": "starling.snssdk.com",
+      "path": "/get_cdn/2102/"
+    },
+    "mainDomain": "feishu.cn",
+    "metrics": {
+      "domain": "api.zjurl.cn",
+      "open": true
+    },
+    "mina": {
+      "appId": 2,
+      "domain": "open.feishu.cn",
+      "pathName": "/config/get",
+      "version": "online-1.0"
+    },
+    "product": "feishu",
+    "rosetta": {
+      "domain": "rosetta.feishu.cn",
+      "path": "/rosetta/api/v1/products/29/cdn"
+    },
+    "secLink": {
+      "appId": 1161,
+      "open": true
+    },
+    "sentry": {
+      "domain": "ee-sentry.byted.org",
+      "mobile": {
+        "domain": "ee-sentry.byted.org",
+        "open": true,
+        "organizationSlug": "bytedance-ee",
+        "projectSlug": {
+          "doc": "bear_mobile"
+        },
+        "raven": {
+          "dsnDomain": "b2b4fd03e1c94c17bdfee04f4001d617@internal-api-sentry.feishu.cn/normal",
+          "ignoreUrls": [
+            "bear-test\\.bytedance\\.net",
+            "docs-test\\.bytedance\\.net"
+          ],
+          "logger": "docs-mobile",
+          "projectId": 267
+        }
+      },
+      "open": true,
+      "organizationSlug": "bytedance-ee",
+      "projectSlug": {
+        "doc": "bear_fe"
+      },
+      "raven": {
+        "bid": {
+          "docs_pc": "docs_pc"
+        },
+        "dsnDomain": "f60ebb5d980b4795ad10d8ca7259dc0e@internal-api-sentry.feishu.cn/normal",
+        "ignoreUrls": ["bear-test\\.bytedance\\.net"],
+        "logger": {
+          "doc": "docs-fe"
+        },
+        "projectId": {
+          "doc": 65
+        }
+      }
+    },
+    "slardar": {
+      "config": {
+        "bid": {
+          "docs_pc": "docs_pc"
+        },
+        "ignoreAjax": [
+          "mcs\\.snssdk\\.com",
+          "mcs-bd\\.feishu\\.cn",
+          "slardar-bd\\.feishu\\.cn",
+          "mon-va\\.byteoversea\\.com",
+          "api\\.zjurl\\.cn",
+          ".*api\\/sheet\\/sht.*"
+        ]
+      },
+      "domain": "slardar.bytedance.net",
+      "logDomain": "slardar-bd.feishu.cn",
+      "mobile": {
+        "config": {
+          "bid": "docs_mobile",
+          "ignoreAjax": ["mcs\\.snssdk\\.com", "mcs-bd\\.feishu\\.cn"],
+          "pid": "index"
+        },
+        "domain": "slardar.bytedance.net",
+        "logDomain": "slardar-bd.feishu.cn",
+        "open": true,
+        "region": "cn",
+        "sdkAddr": "https://lf3-cdn-tos.bytegoofy.com/goofy/slardar/fe/sdk/browser.cn.js"
+      },
+      "open": true,
+      "region": "cn",
+      "sdkAddr": "https://lf3-cdn-tos.bytegoofy.com/goofy/slardar/fe/sdk/browser.cn.js"
+    },
+    "slardarWeb": {
+      "bid": "docs_pc",
+      "ignoreUrls": [
+        "mcs\\.snssdk\\.com",
+        "mcs-bd\\.feishu\\.cn",
+        "mcs-bd\\.larksuite\\.com",
+        "mon-va\\.byteoversea\\.com",
+        "api\\.zjurl\\.cn",
+        ".*api\\/sheet\\/sht.*"
+      ],
+      "open": true,
+      "sdkAddr": "https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js"
+    },
+    "tea": {
+      "api": {
+        "report": "/v1/list"
+      },
+      "config": {
+        "appId": {
+          "base_solo": 718720,
+          "doc": 1229,
+          "drive_sdk": 2331,
+          "single_product": 2916
+        },
+        "channel_domain": "https://mcs-bd.feishu.cn"
+      },
+      "domain": "data.bytedance.net/tea",
+      "open": true,
+      "productId": {
+        "doc": 40
+      },
+      "report_default_domain": "mcs-bd.feishu.cn"
+    },
+    "unit": "eu_nc"
+  },
+  "drive_api": [
+    "internal-api-drive-stream.feishu.cn",
+    "api3-eeft-drive.feishu.cn"
+  ],
+  "drive_bgp_api": ["", "https://internal-api-alibgp.feishu.cn"],
+  "drive_bgp_stream": ["https://internal-api-drive-stream-alibgp.feishu.cn"],
+  "drive_bgp_weboffice": [
+    "https://weboffice-alibgp.feishu-3rd-party-services.com"
+  ],
+  "drive_cdn": [
+    "lf26-drive.feishucdn.com",
+    "lf6-drive.feishucdn.com",
+    "lf3-drive.feishucdn.com"
+  ],
+  "drive_wps": ["weboffice.feishu-3rd-party-services.com"],
+  "ext": {
+    "domain": {
+      "helpcenter": "www.feishu.cn",
+      "helpdesk": "helpdesk.feishu.cn",
+      "internal-api": "internal-api.feishu.cn",
+      "lark_api": "internal-api-lark-api.feishu.cn",
+      "lark_file": "internal-api-lark-file.feishu.cn",
+      "mina": "open.feishu.cn",
+      "official": "www.feishu.cn",
+      "passport": "login.feishu.cn"
+    },
+    "helpcenter_article": {
+      "incompatible_extension": 360037376033
+    },
+    "pathname": {
+      "mina": "/config/get"
+    }
+  },
+  "frontier": ["ccm-frontier.feishu.cn", "ccm-frontier-hl.feishu.cn"],
+  "im_gateway": ["lark-frontier.snssdk.com", "lark-frontier-hl.snssdk.com"],
+  "image": ["p3-space-ee.byteimg.com", "p1-space-ee.byteimg.com"],
+  "internal_api": ["https://internal-api.feishu.cn"],
+  "lf_pkg_cdn": ["lf-package-cn.feishucdn.com"],
+  "lf_pkg_cdn_with_path": ["lf-package-cn.feishucdn.com/obj/feishu-static"],
+  "nearby_drive_api": [
+    "internal-api-drive-stream-hl.feishu.cn",
+    "internal-api-drive-stream-lf.feishu.cn"
+  ],
+  "overload_static_domain": ["lf-scm-cn.feishucdn.com"],
+  "overload_static_domain_new": [
+    "lf-package-cn.feishucdn.com/obj/feishu-static"
+  ],
+  "paramsConfig": {
+    "create_api": [
+      "internal-api.feishu.cn/space/api/explorer/create",
+      "internal-api.larksuite.com/space/api/explorer/create"
+    ],
+    "fileSecureMode": false,
+    "fileURLPrefix": "https://www.feishu.cn",
+    "fileWebOfficeDomain": "weboffice.feishu-3rd-party-services.com",
+    "storageNullSecretKey": "",
+    "unitID": "cn",
+    "updatePreviewTplSeed": 1
+  },
+  "space_api": ["internal-api-space.feishu.cn", "api3-eeft-docs.feishu.cn"],
+  "static": ["s3.pstatp.com", "s1.pstatp.com"],
+  "urlMapper": {
+    "docHome": "https://www.feishu.cn/drive/home/",
+    "downloadLark": "https://www.feishu.cn/download",
+    "larkHome": "https://www.feishu.cn/",
+    "loginDocs": "https://login.feishu.cn/docs/passport/page/login",
+    "loginLark": "https://login.feishu.cn/suite/passport/page/login",
+    "singleDocsHome": "https://docs.feishu.cn/welcome",
+    "wikiHome": "https://www.feishu.cn/wiki/"
+  }
+}

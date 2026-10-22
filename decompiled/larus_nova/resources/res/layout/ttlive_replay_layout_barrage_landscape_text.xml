@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.chatroom.replay.interactionmsg.danmaku.barrage.view.VSGifDanmuTextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/tv_danmaku_text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="19dp"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:shadowColor="#14000000"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        app:sectionText="HHHHHHHHHH"
+        app:sectionTextColor="@color/white"
+        app:sectionTextSize="16dp"/>
+</FrameLayout>

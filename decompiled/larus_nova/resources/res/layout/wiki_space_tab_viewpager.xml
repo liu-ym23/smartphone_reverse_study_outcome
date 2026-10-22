@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larksuite.component.universe_design.tab.UDTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="6dp"
+        app:tabSelectedTextColor="@color/primary_fill_default"
+        app:ud_tab_gravity="start"
+        app:ud_tab_indicator="@drawable/facade_tab_indicator"
+        app:ud_tab_indicatorFullWidth="false"
+        app:ud_tab_indicatorHeight="2dp"
+        app:ud_tab_maxWidth="200dp"
+        app:ud_tab_minWidth="20dp"
+        app:ud_tab_mode="scrollable"
+        app:ud_tab_padding="0dp"
+        app:ud_tab_paddingEnd="10dp"
+        app:ud_tab_paddingStart="10dp"
+        app:ud_tab_titleTextAppearance="@style/TabLayoutTextStyle"/>
+    <View
+        android:id="@+id/tab_divider"
+        android:background="@color/line_divider_default"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <com.bytedance.ee.bear.list.homepage.tab.HomeViewPager
+        android:id="@+id/tab_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</merge>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/avatarContainer"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/dp_7">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/dp_1">
+        <com.larksuite.component.ui.avatar.v2.LarkAvatarView
+            android:id="@+id/avatar"
+            android:focusable="false"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:scaleType="centerCrop"
+            android:tint="@color/fill_img_mask"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sriv_oval="true"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/status"
+        android:background="@drawable/todo_detail_assignee_status_bg_new"
+        android:visibility="gone"
+        android:layout_width="10sp"
+        android:layout_height="10sp"
+        android:src="@drawable/ud_icon_check_outlined"
+        android:tint="@color/static_white"
+        app:layout_constraintBottom_toBottomOf="@+id/avatarContainer"
+        app:layout_constraintRight_toRightOf="@+id/avatarContainer"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

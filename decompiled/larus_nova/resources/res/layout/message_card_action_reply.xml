@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@drawable/bg_gray_bot_reply"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_bot_replying"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/icon_bot_animation_replying"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_bot_reply"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/icon_bot_reply_success"/>
+        <TextView
+            android:textSize="@dimen/dp_14"
+            android:textColor="@color/lkui_N00"
+            android:id="@+id/text_bot_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="回复成功"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/larus_base_1_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:paddingTop="?attr/larus_dp_8"
+        android:paddingBottom="?attr/larus_dp_8"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="?attr/larus_dp_12"
+        android:paddingEnd="?attr/larus_dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="?attr/larus_dp_56"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+            <com.larus.bmhome.view.item.ItemGroup
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_8">
+                <com.larus.bmhome.view.item.ItemTextToggle
+                    android:id="@+id/dora_p2p_rtc"
+                    android:background="@drawable/larus_bg_item_selector"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P2P RTC"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_8">
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_goto_wifi_settings"
+                    android:background="@drawable/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Goto WiFi Settings Page"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_get_ap_list"
+                    android:background="@drawable/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get AP List"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_delete_ap"
+                    android:background="@drawable/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete AP"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_get_wifi_list"
+                    android:background="@drawable/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get WiFi List"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_8">
+                <com.larus.bmhome.view.item.ItemTextToggle
+                    android:id="@+id/dora_api_assistant_wifi_switch"
+                    android:background="@drawable/larus_bg_item_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DoraDispatcher WiFi"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_8">
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_assistant_wifi_request"
+                    android:background="@drawable/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DoraClient Request"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_assistant_wifi_release"
+                    android:background="@drawable/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DoraClient Release"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dora_api_console"
+                android:background="@drawable/larus_dora_bg_console"
+                android:padding="?attr/larus_dp_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/larus_dp_180"/>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/larus_dp_8"
+                android:layout_marginBottom="?attr/larus_dp_8">
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_connect_wifi_p2p"
+                    android:background="@drawable/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Only Connect P2P"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_connect_soft_ap"
+                    android:background="@drawable/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Only Connect SoftAp"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_connect_p2p_soft_ap"
+                    android:background="@drawable/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Connect P2P, If Failed Connect SoftAp"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_disconnect_wifi"
+                    android:background="@drawable/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Disconnect P2P/SoftAp"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_check_network"
+                    android:background="@drawable/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Check Network"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_8">
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_wifi_link_strategy"
+                    android:background="@drawable/larus_bg_item_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WiFi Link Strategy"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,262 @@
+package l98;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.annotations.SerializedName;
+import com.larus.im.bean.message.block.Block;
+import com.larus.utils.logger.FLogger;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.text.StringsKt;
+
+/* JADX INFO: loaded from: classes25.dex */
+@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u0001B{\u0012\n\b\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\t\u0012\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u0003\u0012\u0012\b\u0002\u0010\f\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0003\u0018\u00010\r¢\u0006\u0004\b\u000e\u0010\u000fJ\u000e\u0010\u001c\u001a\n\u0012\u0004\u0012\u00020\u001d\u0018\u00010\rJ\u000b\u0010\u001e\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010\u001f\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010 \u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010!\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010\"\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010#\u001a\u0004\u0018\u00010\tHÆ\u0003J\u000b\u0010$\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010%\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u0013\u0010&\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0003\u0018\u00010\rHÆ\u0003J}\u0010'\u001a\u00020\u00002\n\b\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u00032\u0012\b\u0002\u0010\f\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0003\u0018\u00010\rHÆ\u0001J\u0013\u0010(\u001a\u00020)2\b\u0010*\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010+\u001a\u00020,HÖ\u0001J\t\u0010-\u001a\u00020\u0003HÖ\u0001R\u0018\u0010\u0002\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u0011R\u0018\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0011R\u0018\u0010\u0005\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0011R\u0018\u0010\u0006\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\u0011R\u0018\u0010\u0007\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0011R\u0018\u0010\b\u001a\u0004\u0018\u00010\t8\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0017R\u0018\u0010\n\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0018\u0010\u0011R\u0018\u0010\u000b\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0019\u0010\u0011R \u0010\f\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0003\u0018\u00010\r8\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u001a\u0010\u001b¨\u0006."}, d2 = {"Lcom/larus/avlink/env/diary/model/DiaryItem;", "", "id", "", "createTime", "title", "statusTag", "nextUpdateTime", "emotionInfo", "Lcom/larus/avlink/env/diary/model/EmotionInfo;", "summary", "content", "blockList", "", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/larus/avlink/env/diary/model/EmotionInfo;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "getId", "()Ljava/lang/String;", "getCreateTime", "getTitle", "getStatusTag", "getNextUpdateTime", "getEmotionInfo", "()Lcom/larus/avlink/env/diary/model/EmotionInfo;", "getSummary", "getContent", "getBlockList", "()Ljava/util/List;", "deserializeContentToBlocks", "Lcom/larus/im/bean/message/block/Block;", "component1", "component2", "component3", "component4", "component5", "component6", "component7", "component8", "component9", "copy", "equals", "", "other", "hashCode", "", "toString", "dora_avlink_impl_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class a {
+
+    @SerializedName("preview_contents")
+    private final List<String> blockList;
+
+    @SerializedName("content")
+    private final String content;
+
+    @SerializedName("create_time")
+    private final String createTime;
+
+    @SerializedName("emotion_info")
+    private final b emotionInfo;
+
+    /* JADX INFO: renamed from: id, reason: collision with root package name */
+    @SerializedName("diary_id")
+    private final String f508114id;
+
+    @SerializedName("next_update_time")
+    private final String nextUpdateTime;
+
+    @SerializedName("status_tag")
+    private final String statusTag;
+
+    @SerializedName("summary")
+    private final String summary;
+
+    @SerializedName("title")
+    private final String title;
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L6;
+        return true;
+    L6:
+        if ((r100 instanceof a) == true) goto L8;
+        return false;
+    L8:
+        a r101 = (a) r100;
+        if (Intrinsics.areEqual(this.f508114id, r101.f508114id) == true) goto L12;
+        return false;
+    L12:
+        if (Intrinsics.areEqual(this.createTime, r101.createTime) == true) goto L15;
+        return false;
+    L15:
+        if (Intrinsics.areEqual(this.title, r101.title) == true) goto L18;
+        return false;
+    L18:
+        if (Intrinsics.areEqual(this.statusTag, r101.statusTag) == true) goto L21;
+        return false;
+    L21:
+        if (Intrinsics.areEqual(this.nextUpdateTime, r101.nextUpdateTime) == true) goto L24;
+        return false;
+    L24:
+        if (Intrinsics.areEqual(this.emotionInfo, r101.emotionInfo) == true) goto L27;
+        return false;
+    L27:
+        if (Intrinsics.areEqual(this.summary, r101.summary) == true) goto L30;
+        return false;
+    L30:
+        if (Intrinsics.areEqual(this.content, r101.content) == true) goto L33;
+        return false;
+    L33:
+        if (Intrinsics.areEqual(this.blockList, r101.blockList) == true) goto L35;
+        return false;
+    L35:
+        return true;
+    }
+
+    public final int hashCode() {
+        String r100 = this.f508114id;
+        int r101 = 0;
+        if (r100 != null) goto L5;
+        int r102 = 0;
+    L6:
+        int r103 = r102 * 31;
+        String r104 = this.createTime;
+        if (r104 != null) goto L9;
+        int r105 = 0;
+    L10:
+        int r106 = (r103 + r105) * 31;
+        String r107 = this.title;
+        if (r107 != null) goto L13;
+        int r108 = 0;
+    L14:
+        int r109 = (r106 + r108) * 31;
+        String r110 = this.statusTag;
+        if (r110 != null) goto L17;
+        int r111 = 0;
+    L18:
+        int r112 = (r109 + r111) * 31;
+        String r113 = this.nextUpdateTime;
+        if (r113 != null) goto L21;
+        int r114 = 0;
+    L22:
+        int r115 = (r112 + r114) * 31;
+        b r116 = this.emotionInfo;
+        if (r116 != null) goto L25;
+        int r117 = 0;
+    L26:
+        int r118 = (r115 + r117) * 31;
+        String r119 = this.summary;
+        if (r119 != null) goto L29;
+        int r120 = 0;
+    L30:
+        int r121 = (r118 + r120) * 31;
+        String r122 = this.content;
+        if (r122 != null) goto L33;
+        int r123 = 0;
+    L34:
+        int r124 = (r121 + r123) * 31;
+        List<String> r125 = this.blockList;
+        if (r125 == null) goto L39;
+        r101 = r125.hashCode();
+    L39:
+        return r124 + r101;
+    L33:
+        r123 = r122.hashCode();
+        goto L34
+    L29:
+        r120 = r119.hashCode();
+        goto L30
+    L25:
+        r117 = r116.hashCode();
+        goto L26
+    L21:
+        r114 = r113.hashCode();
+        goto L22
+    L17:
+        r111 = r110.hashCode();
+        goto L18
+    L13:
+        r108 = r107.hashCode();
+        goto L14
+    L9:
+        r105 = r104.hashCode();
+        goto L10
+    L5:
+        r102 = r100.hashCode();
+        goto L6
+    }
+
+    public final String toString() {
+        return "DiaryItem(id=" + this.f508114id + ", createTime=" + this.createTime + ", title=" + this.title + ", statusTag=" + this.statusTag + ", nextUpdateTime=" + this.nextUpdateTime + ", emotionInfo=" + this.emotionInfo + ", summary=" + this.summary + ", content=" + this.content + ", blockList=" + this.blockList + ')';
+    }
+
+    public final List<Block> a() {
+        FLogger r100 = FLogger.f375446a;     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        StringBuilder r101 = new StringBuilder("deserializeContentToBlocks: tempField size = ");     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        List<String> r102 = this.blockList;     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        if (r102 == null) goto L6;
+        Integer r103 = Integer.valueOf(r102.size());     // Catch: Exception -> L32 JsonSyntaxException -> L34
+    L7:
+        r101.append(r103);     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        r100.d("DiaryItem", r101.toString());     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        List<String> r104 = this.blockList;     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        if (r104 != null) goto L10;
+    L13:
+        boolean r105 = true;
+    L14:
+        if (r105 == false) goto L16;
+        r100.w("DiaryItem", "tempField is null or empty");     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        return null;
+    L16:
+        Gson r106 = new Gson();     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        List<String> r107 = this.blockList;     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        ArrayList r108 = new ArrayList();     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        Iterator<T> r109 = r107.iterator();     // Catch: Exception -> L32 JsonSyntaxException -> L34
+    L18:
+        if (r109.hasNext() == false) goto L30;
+        String r110 = (String) r109.next();     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        FLogger r111 = FLogger.f375446a;     // Catch: Exception -> L26
+        StringBuilder r112 = new StringBuilder();     // Catch: Exception -> L26
+        r112.append("Parsing block: ");     // Catch: Exception -> L26
+        if (r110 == null) goto L23;
+        String r113 = StringsKt.take(r110, 100);     // Catch: Exception -> L26
+    L24:
+        r112.append(r113);     // Catch: Exception -> L26
+        r112.append("...");     // Catch: Exception -> L26
+        r111.d("DiaryItem", r112.toString());     // Catch: Exception -> L26
+        Block r114 = (Block) r106.fromJson(r110, Block.class);     // Catch: Exception -> L26
+    L28:
+        if (r114 == null) goto L18;
+        r108.add(r114);     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        goto L18
+    L23:
+        r113 = null;
+    L26:
+        e = move-exception;
+        FLogger.f375446a.e("DiaryItem", "Failed to parse single block: " + e.getMessage());     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        r114 = null;
+        goto L28
+    L30:
+        FLogger.f375446a.d("DiaryItem", "Successfully parsed " + r108.size() + " blocks");     // Catch: Exception -> L32 JsonSyntaxException -> L34
+        return r108;
+    L10:
+        if (r104.isEmpty() == true) goto L13;
+        r105 = false;
+        goto L14
+    L6:
+        r103 = null;
+    L34:
+        e = move-exception;
+        FLogger.f375446a.e("DiaryItem", "Failed to deserialize content to blocks: " + e.getMessage());
+        return null;
+    L32:
+        e = move-exception;
+        FLogger.f375446a.e("DiaryItem", "Error deserializing content to blocks: " + e.getMessage());
+        return null;
+    }
+
+    public a() {
+        this.f508114id = null;
+        this.createTime = "";
+        this.title = null;
+        this.statusTag = null;
+        this.nextUpdateTime = "";
+        this.emotionInfo = null;
+        this.summary = null;
+        this.content = null;
+        this.blockList = null;
+    }
+
+    public final List<String> b() {
+        return this.blockList;
+    }
+
+    public final String c() {
+        return this.createTime;
+    }
+
+    public final b d() {
+        return this.emotionInfo;
+    }
+
+    public final String e() {
+        return this.f508114id;
+    }
+
+    public final String f() {
+        return this.nextUpdateTime;
+    }
+
+    public final String g() {
+        return this.title;
+    }
+}

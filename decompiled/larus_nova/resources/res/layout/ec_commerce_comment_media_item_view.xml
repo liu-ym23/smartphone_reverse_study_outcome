@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ec.core.widget.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_commerce_comment_media_item_view_2041574347"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.widget.RemoteRoundImageView
+        android:id="@+id/comment_sv_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:failureImage="@color/shopping_color_1F161823"
+        app:placeholderImage="@color/shopping_color_1F161823"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/comment_video_play_button"
+        android:background="@drawable/ec_comment_multipicmode_item_play_icon"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.bytedance.android.ec.core.widget.RoundedFrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/bitable_link_records_list_item_bg_v2"
+    android:paddingLeft="8dp"
+    android:paddingTop="3dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="3dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxHeight="@dimen/space_kit_len_32"
+    android:minHeight="@dimen/space_kit_len_24"
+    android:layout_marginEnd="@dimen/space_kit_len_8">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/titleTVPreview"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="600dp"
+        android:singleLine="true"
+        android:includeFontPadding="false"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center"
+        android:id="@+id/closeIcon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="4dp"
+        android:tint="@color/icon_n3"
+        app:srcCompat="@drawable/ud_icon_close_bold_outlined"/>
+</LinearLayout>

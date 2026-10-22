@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.lark.ui.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.larksuite.component.ui.layout.LKUIRoundLinearLayout
+        android:background="@color/bg_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:rl_radius_left_bottom="@dimen/dp_8"
+        app:rl_radius_left_top="@dimen/dp_8"
+        app:rl_radius_right_bottom="@dimen/dp_8"
+        app:rl_radius_right_top="@dimen/dp_8">
+        <include
+            android:id="@+id/events_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/task_list_events_recycler"/>
+    </com.larksuite.component.ui.layout.LKUIRoundLinearLayout>
+</LinearLayout>

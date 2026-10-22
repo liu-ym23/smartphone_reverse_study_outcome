@@ -1,0 +1,25 @@
+package com.bytedance.android.livesdk.chatroom.ssposter;
+
+import com.bytedance.android.livesdk.chatroom.widget.RoomRecyclableWidget;
+import kotlin.Metadata;
+import kotlin.NotImplementedError;
+
+/* JADX INFO: loaded from: classes7.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/bytedance/android/livesdk/chatroom/ssposter/MatchPosterShareWidget;", "Lcom/bytedance/android/livesdk/chatroom/widget/RoomRecyclableWidget;", "<init>", "()V", "livesdk_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class MatchPosterShareWidget extends RoomRecyclableWidget {
+    @Override // com.bytedance.android.live.core.tetris.widgets.LiveRecyclableWidget
+    public final void onLoad(Object[] r100) {
+    }
+
+    @Override // com.bytedance.android.live.core.tetris.widgets.LiveRecyclableWidget
+    public final void onUnload() {
+    }
+
+    public MatchPosterShareWidget() {
+    }
+
+    @Override // com.bytedance.android.live.core.tetris.widgets.LiveRecyclableWidget
+    public final void onInit(Object[] r100) {
+        throw new NotImplementedError("An operation is not implemented: Not yet implemented");
+    }
+}

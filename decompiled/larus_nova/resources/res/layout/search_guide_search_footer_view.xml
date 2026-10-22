@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:id="@+id/tabFooterLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <com.bytedance.ies.dmt.ui.widget.DmtTextView
+        android:textSize="11sp"
+        android:textColor="@color/TextTertiary"
+        android:id="@+id/slideTipsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拖动查看\10下个分类"
+        android:drawableTop="@drawable/search_gs_footer_slide_icon"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"/>
+</RelativeLayout>

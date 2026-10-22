@@ -1,0 +1,60 @@
+{
+  "dsl_version": "2.0.0",
+  "node_name": "G device bind page",
+  "node_type": "page",
+  "node_key": "bind_device_v2",
+  "nodes": [
+    {
+      "node_type": "nav_bar",
+      "template_type": "only_back",
+      "config": {}
+    },
+    {
+      "node_type": "layer",
+      "nodes": [
+        {
+          "node_name": "G bind page",
+          "node_type": "card",
+          "template_type": "bind_device",
+          "config": {
+            "title": {
+              "type": "string_type",
+              "value": "dora_g_bind_device_title_cn"
+            },
+            "desc": {
+              "type": "string_type",
+              "value": "dora_g_bind_device_desc_cn"
+            },
+            "image_link": {
+              "remote_info": {
+                  "light_url": ["https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_dora_g_bind_device_light.png"],
+                  "dark_url": ["https://p3-starweave-source.byteimg.com/tos-cn-i-99ixvlomm4/dynamic_dora_device/image_dora_g_bind_device_dark.png"]
+              }
+            },
+            "bind_button_info": {
+              "title": {
+                "type": "string_type",
+                "value": "dora_bind_device_button_title_cn"
+              },
+              "action": {
+                  "action_type": "internal_jump",
+                  "action_url": "sslocal://flow/dora/onboarding_found?product_id=16"
+                }
+            },
+            "buy_button_info": {
+              "title": {
+                "type": "string_type",
+                "value": "dora_g_bind_device_buy_button_title_cn"
+              },
+              "action": {
+                "action_type": "internal_jump",
+                "action_url": "sslocal://flow/webview?product_id=16&link_url=https://www.olafriend.cn/product?allows_inline_media_playback=1"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+            

@@ -1,0 +1,6 @@
+package com.larus.avlink.plugins;
+
+/* JADX INFO: loaded from: classes25.dex */
+public interface y1 extends com.larus.audio.call.arch.e {
+    boolean P();
+}

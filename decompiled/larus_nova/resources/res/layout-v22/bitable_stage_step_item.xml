@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:paddingBottom="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.bitable.card.view.stage.StageStepView
+        android:id="@+id/stepView"
+        android:paddingLeft="@dimen/space_kit_len_1"
+        android:paddingTop="@dimen/space_kit_len_4"
+        android:paddingRight="@dimen/space_kit_len_1"
+        android:paddingBottom="@dimen/space_kit_len_4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_kit_len_44"
+        android:paddingHorizontal="@dimen/space_kit_len_1"
+        android:paddingVertical="@dimen/space_kit_len_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.ee.bear.bitable.common.widgets.common.RingView
+        android:id="@+id/ring"
+        android:layout_width="@dimen/dp_8"
+        android:layout_height="@dimen/dp_8"
+        android:layout_marginStart="@dimen/space_kit_len_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/text"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="@dimen/space_kit_font_14"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/space_kit_len_8"
+        android:layout_marginEnd="@dimen/space_kit_len_16"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ring"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

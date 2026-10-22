@@ -1,0 +1,164 @@
+/* Generated code, DO NOT EDIT.
+ * source: oggopus_rust.yaml
+ */
+
+syntax = "proto2";
+
+package oggopus_rust.proto;
+
+message OggOpusCodecError {
+    required int64 code = 1;
+    required string message = 2;
+}
+
+message OggOpusEncoderInputInfo {
+    required int64 rate = 1;
+    required int64 channels = 2;
+}
+
+
+
+
+
+
+
+
+
+
+message RawOpusOptions {
+    required uint32 bitrate_bps = 1;
+    required uint32 frame_ms = 2;
+    required uint32 channels = 3;
+    required uint32 input_rate_hz = 4;
+}
+
+
+message FuncParamsX08e9d23f80c13545 
+{
+    required string file = 1;
+    required int64 samples_count = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX0c021fdd7c0fb37f 
+{
+    required bytes opus_data = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX1564c1b4b2eaf93e 
+{
+    required bytes pcm_data = 1;
+    required OggOpusEncoderInputInfo info = 2;
+     optional string config_id = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX17154e3229a0d50a 
+{
+    required string opus_file = 1;
+    required string wav_file = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX20ec1c846f59d02f 
+{
+    required double to_duration = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX21b9ef75deec02da 
+{
+    required string file = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX372b5923c3b2f682 
+{
+    required int64 len = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX6806fe1be2f98400 
+{
+    required string pcm_file = 1;
+    required string opus_file = 2;
+    required OggOpusEncoderInputInfo info = 3;
+     optional string config_id = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX7ddd81440b9c908f 
+{
+    required bytes data = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX87d80ad0bc53ee0c 
+{
+    required string input_file_path = 1;
+    required string output_file_path = 2;
+     optional RawOpusOptions options = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXa4b41a8bf761203e 
+{
+    required bytes pcm_data = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb76ad38fe0b46a4f 
+{
+    required OggOpusEncoderInputInfo info = 1;
+    required int64 max_ms_per_page = 2;
+     optional string encoded_path = 3;
+     optional string config_id = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe5dadc66e347bcf7 
+{
+    required int64 sample_count = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX1d6b299344bab347 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3dc8b8542df1cbb1 
+{
+    required bool ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX52df9253b448ac14 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX98001640812d1cf5 
+{
+     optional bytes ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX9c7cb55563ee989e 
+{
+    required double ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXb05c0e03c1bfe022 
+{
+    required bytes ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXfb6fcb38b2b36e87 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncErrorX7cd250264a8c023a 
+{
+    required OggOpusCodecError err = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX1c102aaadea52c0b 
+{
+    optional FuncReturnX98001640812d1cf5 ret = 1;
+    optional FuncErrorX7cd250264a8c023a err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX4083a81a11594cc4 
+{
+    optional FuncReturnX52df9253b448ac14 ret = 1;
+    optional FuncErrorX7cd250264a8c023a err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX680be86a7e5877bf 
+{
+    optional FuncReturnXfb6fcb38b2b36e87 ret = 1;
+    optional FuncErrorX7cd250264a8c023a err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX71349210c8f0b089 
+{
+    optional FuncReturnXb05c0e03c1bfe022 ret = 1;
+    optional FuncErrorX7cd250264a8c023a err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultXa6781d84def262ad 
+{
+    optional FuncErrorX7cd250264a8c023a err = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncResultXf02fcf8c24fcacd1 
+{
+    optional FuncReturnX9c7cb55563ee989e ret = 1;
+    optional FuncErrorX7cd250264a8c023a err = 2;
+    optional bytes _molten_ctx = 255;
+}message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

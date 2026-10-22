@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.ec.core.widget.price.PriceView
+        android:textSize="14dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_info_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:pv_autoResize="true"
+        app:pv_prefixMarginRight="1dp"
+        app:pv_prefixTextSizeRatio="0.714"
+        app:pv_priceBold="true"
+        app:pv_priceDecimalTextSizeRatio="1"
+        app:pv_priceTextColor="@color/ec_color_black_161823"
+        app:pv_yuanSymbolMarginRight="1dp"
+        app:pv_yuanSymbolRatioOfPriceTextSize="0.714"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/layout_info_user_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.bytedance.android.ec.core.widget.ECNetImageView
+            android:id="@+id/iv_info_user_head"
+            android:visibility="gone"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="4dp"/>
+        <TextView
+            android:textSize="10dp"
+            android:id="@+id/tv_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

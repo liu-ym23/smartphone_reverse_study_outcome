@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/turntable_bubble_tip"
+    android:layout_width="wrap_content"
+    android:layout_height="42dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#e6ffffff"
+        android:gravity="start"
+        android:id="@+id/tv_content"
+        android:background="@drawable/ttlive_bg_douplus_tip"
+        android:padding="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/iv_anchor"
+        android:layout_width="16dp"
+        android:layout_height="6dp"
+        android:src="@drawable/ttlive_ic_tip_arrow"
+        android:layout_below="@+id/tv_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

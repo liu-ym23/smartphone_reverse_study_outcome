@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="44dp"
+    android:width="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <path
+        android:fillColor="@color/larus_canvas_close_btn_bg_day"
+        android:pathData="M22,0L22,0A22,22 0,0 1,44 22L44,22A22,22 0,0 1,22 44L22,44A22,22 0,0 1,0 22L0,22A22,22 0,0 1,22 0z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M22,0.5L22,0.5A21.5,21.5 0,0 1,43.5 22L43.5,22A21.5,21.5 0,0 1,22 43.5L22,43.5A21.5,21.5 0,0 1,0.5 22L0.5,22A21.5,21.5 0,0 1,22 0.5z"
+        android:strokeColor="@color/larus_neutral_transparent_1"
+        android:strokeWidth="1"/>
+    <path
+        android:fillColor="@color/larus_neutral_100"
+        android:pathData="M15.519,15.519C15.877,15.16 16.457,15.16 16.815,15.519L22.059,20.763L27.304,15.519C27.662,15.16 28.242,15.16 28.6,15.519C28.958,15.877 28.958,16.457 28.6,16.815L23.356,22.059L28.6,27.304C28.958,27.662 28.958,28.242 28.6,28.6C28.242,28.958 27.662,28.958 27.304,28.6L22.059,23.356L16.815,28.6C16.457,28.958 15.877,28.958 15.519,28.6C15.16,28.242 15.16,27.662 15.519,27.304L20.763,22.059L15.519,16.815C15.16,16.457 15.16,15.877 15.519,15.519Z"
+        android:fillType="evenOdd"/>
+</vector>

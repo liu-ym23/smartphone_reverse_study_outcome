@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ecom.arch.slice.render.widget.roundcorner.SlcRoundLinearlayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.shopping.orderlist.list.widget.horizontalpull.OftenShopPullLayout
+        android:id="@+id/often_shop_pull_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:max_offset_right="30dp">
+        <com.bytedance.android.shopping.orderlist.list.slice.elements.oftenbuy.OrderListOftenBuyRecyclerView
+            android:id="@+id/often_shop_child_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_type="content"/>
+        <LinearLayout
+            android:gravity="start|center_vertical"
+            android:orientation="vertical"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            app:layout_type="edge_right">
+            <ImageView
+                android:id="@+id/often_shop_iv_foot_arrow"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:alpha="0.6"/>
+            <TextView
+                android:textSize="8dp"
+                android:textColor="@color/order_list_99161823"
+                android:id="@+id/often_shop_tv_foot_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ems="1"/>
+        </LinearLayout>
+    </com.bytedance.android.shopping.orderlist.list.widget.horizontalpull.OftenShopPullLayout>
+</com.bytedance.android.ecom.arch.slice.render.widget.roundcorner.SlcRoundLinearlayout>

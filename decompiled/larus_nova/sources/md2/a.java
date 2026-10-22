@@ -1,0 +1,6 @@
+package md2;
+
+/* JADX INFO: loaded from: classes10.dex */
+public interface a extends com.bytedance.android.livesdk.ktvimpl.base.component.b {
+    String getRoomId();
+}

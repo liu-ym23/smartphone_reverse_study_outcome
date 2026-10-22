@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@color/larus_bubble_banner_close_background"
+        android:pathData="M16,0A16,16 0,1 1,16 32A16,16 0,1 1,16 0"/>
+    <path
+        android:fillColor="@color/larus_bubble_banner_close_icon"
+        android:pathData="M10.81,10.81C11.1,10.53 11.56,10.53 11.85,10.81L16.05,15.01L20.24,10.81C20.53,10.53 20.99,10.53 21.28,10.81C21.57,11.1 21.57,11.57 21.28,11.85L17.08,16.05L21.28,20.24C21.57,20.53 21.57,20.99 21.28,21.28C20.99,21.57 20.53,21.57 20.24,21.28L16.05,17.08L11.85,21.28C11.56,21.57 11.1,21.57 10.81,21.28C10.53,20.99 10.53,20.53 10.81,20.24L15.01,16.05L10.81,11.85C10.53,11.57 10.53,11.1 10.81,10.81Z"/>
+</vector>

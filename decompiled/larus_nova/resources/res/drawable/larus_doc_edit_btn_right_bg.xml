@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:state_selected="false"
+        android:state_pressed="true">
+        <shape>
+            <corners
+                android:topLeftRadius="?attr/larus_dp_0"
+                android:topRightRadius="?attr/larus_dp_12"
+                android:bottomLeftRadius="?attr/larus_dp_0"
+                android:bottomRightRadius="?attr/larus_dp_12"/>
+            <solid android:color="@color/larus_press"/>
+        </shape>
+    </item>
+    <item
+        android:state_enabled="true"
+        android:state_selected="true">
+        <shape>
+            <corners
+                android:topLeftRadius="?attr/larus_dp_0"
+                android:topRightRadius="?attr/larus_dp_12"
+                android:bottomLeftRadius="?attr/larus_dp_0"
+                android:bottomRightRadius="?attr/larus_dp_12"/>
+            <solid android:color="@color/larus_primary_transparent_3"/>
+        </shape>
+    </item>
+    <item
+        android:state_enabled="true"
+        android:state_selected="false"
+        android:state_pressed="false">
+        <shape>
+            <corners
+                android:topLeftRadius="?attr/larus_dp_0"
+                android:topRightRadius="?attr/larus_dp_12"
+                android:bottomLeftRadius="?attr/larus_dp_0"
+                android:bottomRightRadius="?attr/larus_dp_12"/>
+            <solid android:color="@color/larus_base_1_overlay"/>
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape>
+            <corners
+                android:topLeftRadius="?attr/larus_dp_0"
+                android:topRightRadius="?attr/larus_dp_12"
+                android:bottomLeftRadius="?attr/larus_dp_0"
+                android:bottomRightRadius="?attr/larus_dp_12"/>
+            <solid android:color="@color/larus_base_1_overlay"/>
+        </shape>
+    </item>
+</selector>

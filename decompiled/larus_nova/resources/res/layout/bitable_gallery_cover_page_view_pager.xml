@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cover_container"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.viewpager.widget.ViewPager
+        android:layout_gravity="bottom"
+        android:id="@+id/bitable_card_cover_view_pager"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/bitable_card_cover_empty_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+        <com.bytedance.ee.bear.bitable.infoarch.nativeview.gallery.record.cover.GalleryEmptyCoverView
+            android:layout_gravity="center"
+            android:id="@+id/bitable_card_cover_empty_image"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="-10dp"/>
+    </FrameLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="bottom|right"
+        android:orientation="horizontal"
+        android:id="@+id/cover_index_layout"
+        android:background="@drawable/bitable_page_view_cover_indicator_bg"
+        android:layout_width="28dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp">
+        <TextView
+            android:textSize="10sp"
+            android:textColor="@color/ud_N900"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/cover_index"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lineSpacingExtra="2sp"/>
+    </LinearLayout>
+</FrameLayout>

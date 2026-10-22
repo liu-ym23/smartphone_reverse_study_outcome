@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_64">
+        <ProgressBar
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/loading"
+            android:visibility="gone"
+            android:layout_width="?attr/larus_dp_28"
+            android:layout_height="?attr/larus_dp_28"
+            android:indeterminate="true"
+            android:indeterminateDuration="750"
+            android:indeterminateTint="?attr/larus_neutral_50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/error_lay"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="?attr/larus_dp_13"
+                android:layout_height="?attr/larus_dp_16"
+                app:srcCompat="?attr/larus_ic_refresh_gray"/>
+            <TextView
+                android:textColor="?attr/larus_neutral_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/larus_chat_list_load_failed"
+                android:layout_marginStart="?attr/larus_dp_8"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

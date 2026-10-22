@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/main_img_dv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:borderColor="#0c161823"
+        app:borderWidth="0.5dp"
+        app:cornerRadius="8dp"/>
+    <com.bytedance.android.shopping.feed.resourcecard.view.PanelPriceView
+        android:id="@+id/panel_price_view"
+        android:background="@drawable/commerce_bg_panel_price"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <com.bytedance.android.ec.core.widget.RoundedFrameLayout
+        android:id="@+id/fl_price_center"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:visibility="gone"
+        android:clipChildren="true"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:rounded_radius="10dp">
+        <TextView
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/tv_price_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"/>
+    </com.bytedance.android.ec.core.widget.RoundedFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.lark.feed.app.tablayout.RefactoredFeedTabLayout
+        android:id="@+id/tab_switch_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/FeedTabLayout"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_grid"
+        android:padding="2dp"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:tint="@color/icon_n2"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ud_icon_borders_outlined"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_filter"
+        android:padding="2dp"
+        android:visibility="gone"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:tint="@color/icon_n2"
+        android:layout_toLeftOf="@+id/image_grid"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ud_icon_filter_outlined"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_sort"
+        android:padding="2dp"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:tint="@color/icon_n2"
+        android:layout_toLeftOf="@+id/image_grid"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ud_icon_sort_outlined"/>
+</RelativeLayout>

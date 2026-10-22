@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ec_mall_toast_container"
+    android:background="@drawable/mall_custom_toast_bg"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="0dp"
+    android:minHeight="0dp">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/shopping_home_color_FFFFFF"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/ec_mall_toast_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"/>
+</LinearLayout>

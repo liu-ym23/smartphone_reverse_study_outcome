@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/immersive_voice_popup_view_simple_root"
+    android:paddingTop="8dp"
+    android:paddingBottom="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/static_black"
+        android:gravity="center"
+        android:id="@+id/prompt_word"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <ImageButton
+        android:id="@+id/audio_with_text_popup_view_main_button"
+        android:background="#0442d2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:src="@drawable/ud_icon_voice_outlined"
+        android:tint="@color/static_white"
+        android:minWidth="104dp"
+        style="@style/UDButton.Big.Primary"/>
+    <TextView
+        android:textColor="@color/static_white"
+        android:gravity="center"
+        android:id="@+id/audio_with_text_popup_view_main_text_button"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:minWidth="104dp"
+        android:includeFontPadding="false"/>
+</LinearLayout>

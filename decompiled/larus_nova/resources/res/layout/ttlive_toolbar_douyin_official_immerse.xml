@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="14dp"
+    android:textStyle="bold"
+    android:textColor="#ffffff"
+    android:gravity="center"
+    android:background="@drawable/ttlive_bg_douyin_official_toolbar"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:text="@string/ttlive_douyin_official_immerse"/>

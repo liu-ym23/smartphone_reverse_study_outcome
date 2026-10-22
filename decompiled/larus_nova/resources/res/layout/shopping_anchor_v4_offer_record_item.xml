@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shopping_anchor_v4_offer_record_item_2052343014"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.components.LongContentLabelComponentView
+        android:id="@+id/offer_record_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextElementView
+        android:id="@+id/offer_record_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintStart_toStartOf="@+id/offer_record_author"
+        app:layout_constraintTop_toBottomOf="@+id/offer_record_author"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.PriceElementView
+        android:id="@+id/offer_record_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

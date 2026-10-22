@@ -1,0 +1,54 @@
+package com.larus.crossplatform.card.impl;
+
+import com.larus.bmhome.chat.list.cell.widget.WidgetCell;
+import com.larus.ui.arch.component.external.api.feature.ComponentFeature;
+import com.larus.ui.arch.component.external.delegate.BaseCellComponentFeature;
+import ei9.g;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import xc8.i;
+import xc8.k;
+
+/* JADX INFO: loaded from: classes4.dex */
+@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\t\u0018\u00002\u00020\u00012\u00020\u0002BI\u0012\u0014\b\u0002\u0010\u0003\u001a\u000e\u0012\n\b\u0001\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004\u0012\u0010\b\u0002\u0010\u0006\u001a\n\u0012\u0006\b\u0001\u0012\u00020\b0\u0007\u0012\u0018\b\u0002\u0010\t\u001a\u0012\u0012\u0006\b\u0001\u0012\u00020\u000b\u0012\u0006\b\u0001\u0012\u00020\b0\n¢\u0006\u0004\b\f\u0010\rR \u0010\u0003\u001a\u000e\u0012\n\b\u0001\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\u000fR\u001c\u0010\u0006\u001a\n\u0012\u0006\b\u0001\u0012\u00020\b0\u0007X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u0011R$\u0010\t\u001a\u0012\u0012\u0006\b\u0001\u0012\u00020\u000b\u0012\u0006\b\u0001\u0012\u00020\b0\nX\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0013¨\u0006\u0014"}, d2 = {"Lcom/larus/crossplatform/card/impl/WidgetCard;", "Lcom/larus/ui/arch/component/external/api/feature/ComponentCard;", "Lcom/larus/ui/arch/component/external/api/feature/ComponentFeature;", "cellClazz", "Ljava/lang/Class;", "Lcom/larus/ui/arch/component/external/delegate/BaseCellComponentFeature;", "matcher", "Lcom/larus/list/arch/multi/IMultipleType;", "Lcom/larus/list/arch/IFlowListCellState;", "stateTransformer", "Lcom/larus/list/arch/IFlowListCellStateTransformer;", "Lcom/larus/ui/arch/context/external/VCardData;", "<init>", "(Ljava/lang/Class;Lcom/larus/list/arch/multi/IMultipleType;Lcom/larus/list/arch/IFlowListCellStateTransformer;)V", "getCellClazz", "()Ljava/lang/Class;", "getMatcher", "()Lcom/larus/list/arch/multi/IMultipleType;", "getStateTransformer", "()Lcom/larus/list/arch/IFlowListCellStateTransformer;", "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class WidgetCard extends ComponentFeature implements m1a.b {
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public final Class<? extends BaseCellComponentFeature<?>> f330487h;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    public final hi9.a<? extends ei9.f> f330488i;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    public final g<Object, ? extends ei9.f> f330489j;
+
+    public WidgetCard() {
+        this(null);
+    }
+
+    @Override // m1a.b
+    public final g<Object, ? extends ei9.f> N() {
+        return this.f330489j;
+    }
+
+    @Override // m1a.b
+    public final hi9.a<? extends ei9.f> getMatcher() {
+        return this.f330488i;
+    }
+
+    @Override // m1a.b
+    public final Class<? extends BaseCellComponentFeature<?>> l1() {
+        return this.f330487h;
+    }
+
+    public WidgetCard(Object r100) {
+        ah8.b r101 = new ah8.b();
+        i r102 = k.a(new ah8.d());
+        Intrinsics.checkNotNullParameter(WidgetCell.class, "cellClazz");
+        Intrinsics.checkNotNullParameter(r101, "matcher");
+        Intrinsics.checkNotNullParameter(r102, "stateTransformer");
+        this.f330487h = WidgetCell.class;
+        this.f330488i = r101;
+        this.f330489j = r102;
+    }
+}

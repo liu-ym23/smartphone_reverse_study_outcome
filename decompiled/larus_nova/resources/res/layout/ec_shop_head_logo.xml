@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_store_head_logo_wrapper"
+    android:visibility="gone"
+    android:clipChildren="true"
+    android:layout_width="wrap_content"
+    android:layout_height="40sp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/ec_store_head_logo_border"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        app:placeholderImage="@color/transparent"
+        app:roundedCornerRadius="10dp"
+        app:roundingBorderColor="#0d161823"
+        app:roundingBorderWidth="1dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/ec_store_head_logo"
+        android:padding="1dp"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        app:roundedCornerRadius="10dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ec_store_head_logo_douyin_icon_background"
+        android:visibility="gone"
+        android:layout_width="16sp"
+        android:layout_height="16sp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        app:placeholderImage="@color/transparent"
+        app:roundAsCircle="true"
+        app:roundingBorderColor="@color/white"
+        app:roundingBorderWidth="1dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ec_store_head_logo_douyin_icon"
+        android:padding="1dp"
+        android:visibility="gone"
+        android:layout_width="16sp"
+        android:layout_height="16sp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        app:roundAsCircle="true"/>
+</FrameLayout>

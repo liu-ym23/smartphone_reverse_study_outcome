@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_kit_len_3"
+    android:layout_marginEnd="@dimen/space_kit_len_4">
+    <com.bytedance.ee.bear.bitable.card.view.cell.select.SelectTextView
+        android:textSize="14sp"
+        android:textColor="@color/text_title"
+        android:gravity="center"
+        android:id="@+id/selected_item"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="32dp"
+        android:minHeight="24dp"
+        android:layout_centerVertical="true"/>
+</FrameLayout>

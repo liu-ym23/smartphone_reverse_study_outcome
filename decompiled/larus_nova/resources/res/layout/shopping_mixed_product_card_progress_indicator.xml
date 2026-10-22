@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fl_indicator_progress"
+        android:background="@drawable/shopping_product_card_header_indicator_mask"
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+        <com.bytedance.android.shopping.inflow.cardui.product.header.indicator.ProductCardProgressIndicator
+            android:layout_gravity="bottom"
+            android:id="@+id/indicator_progress"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="6dp"/>
+    </FrameLayout>
+</merge>

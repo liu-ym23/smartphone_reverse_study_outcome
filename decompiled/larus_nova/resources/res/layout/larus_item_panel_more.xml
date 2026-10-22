@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="?attr/larus_sp_17"
+    android:textColor="?attr/larus_neutral_transparent_4"
+    android:gravity="center_vertical"
+    android:background="@drawable/larus_bg_panel_row"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_40"
+    android:text="@string/larus_LarkIM_Search_ViewMoreInTab_Button"
+    android:paddingStart="?attr/larus_dp_52"
+    android:paddingEnd="?attr/larus_dp_16"/>

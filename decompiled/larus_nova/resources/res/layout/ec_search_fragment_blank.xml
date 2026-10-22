@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
+        <com.bytedance.dux.image.DuxImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="240dp"
+            android:layout_height="160dp"
+            android:src="@drawable/img_s_s_search_no_result"
+            app:keepSrcInTheme="light"/>
+        <com.bytedance.ies.dmt.ui.widget.DmtTextView
+            android:textSize="17sp"
+            android:textColor="#ff161823"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/search_ec_common_empty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="搜索结果为空"/>
+        <com.bytedance.ies.dmt.ui.widget.DmtTextView
+            android:textSize="14sp"
+            android:textColor="#99161823"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/search_ec_common_empty_desc"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="72dp"
+            android:text="没有搜索到相关的内容"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:startColor="@color/ttlive_gift_anim_red_end"
+        android:endColor="@color/ttlive_gift_anim_red_start"
+        android:angle="0"
+        android:centerColor="@color/ttlive_gift_anim_red_center"/>
+    <corners android:radius="@dimen/ttlive_gift_anim_bg_radius"/>
+</shape>

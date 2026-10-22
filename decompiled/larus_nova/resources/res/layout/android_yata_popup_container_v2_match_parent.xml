@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.kmp.ec.yata.view.render.screenmanager.popup.view.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:id="@+id/yata_position_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_footer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_body"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_above="@+id/ll_footer"
+            android:layout_below="@+id/ll_header"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</com.bytedance.kmp.ec.yata.view.render.screenmanager.popup.view.RoundFrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.material.OMaterialDrawable xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:shape="rectangle"
+    app:oui_widgetEnableShadow="true"
+    app:oui_widgetMaterial="OUI_Bg_Floating"
+    app:oui_widgetMaterialApiVersion="3"
+    app:oui_widgetMaterialSrcType="backdrop_view_complex">
+    <corners android:radius="?attr/larus_dp_40"/>
+    <solid android:color="@color/obric_window_floating_button_bg_color"/>
+</com.obric.oui.material.OMaterialDrawable>

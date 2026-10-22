@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/land_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.vscore_impl.paidlive.ablity.AutoFallbackHybridComponentContainer
+        android:layout_gravity="end|bottom"
+        android:id="@+id/right_bottom_banner_container"
+        android:visibility="gone"
+        android:layout_width="112dp"
+        android:layout_height="175dp"/>
+</FrameLayout>

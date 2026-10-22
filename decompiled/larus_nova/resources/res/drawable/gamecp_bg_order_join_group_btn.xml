@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_border_ff8a8b90_corner_4"/>
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/shape_border_ffd2d2d4_corner_4"/>
+</selector>

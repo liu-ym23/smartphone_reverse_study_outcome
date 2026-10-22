@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dp_8"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_48"
+    android:paddingEnd="@dimen/dp_16">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.larus.bmhome.view.textview.impl.CustomMarkdownTextView
+            android:textSize="@dimen/dp_14"
+            android:textColor="?attr/larus_neutral_70"
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Content text..."
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="sans-serif-light"
+            android:textFontWeight="300"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.message.lynxcard.message.LynxCardRoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/lynx_card_fold_container"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.ss.android.lark.widget.EllipsizeFrameLayout
+            android:id="@+id/lynx_card_ellipsize_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:enableEllipsize="false">
+            <com.ss.android.lark.message.lynxcard.message.LynxCardMessageContentLayout
+                android:id="@+id/lynx_card_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.ss.android.lark.widget.EllipsizeFrameLayout>
+        <View
+            android:layout_gravity="bottom"
+            android:id="@+id/lynx_card_show_more_mask"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+        <TextView
+            android:textColor="@color/text_title"
+            android:gravity="center"
+            android:layout_gravity="bottom|center_horizontal"
+            android:id="@+id/lynx_card_show_more_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"/>
+    </FrameLayout>
+    <ViewStub
+        android:id="@+id/lynx_vt_card_translate"
+        android:layout="@layout/lynx_card_translate_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.ss.android.lark.message.lynxcard.message.LynxCardRoundLinearLayout>

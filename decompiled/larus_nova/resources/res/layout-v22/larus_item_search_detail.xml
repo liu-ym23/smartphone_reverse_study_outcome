@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/search_detail"
+    android:background="?attr/larus_bg_search_detail"
+    android:paddingBottom="?attr/larus_dp_12"
+    android:layout_width="?attr/larus_dp_344"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="?attr/larus_dp_12"
+    android:layout_marginRight="?attr/larus_dp_12"
+    android:layout_marginBottom="?attr/larus_dp_12"
+    android:layout_marginHorizontal="?attr/larus_dp_12">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@+id/search_detail_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_22"
+        android:layout_marginLeft="?attr/larus_dp_12"
+        android:layout_marginTop="?attr/larus_dp_12"
+        android:layout_marginRight="?attr/larus_dp_12"
+        android:layout_marginBottom="?attr/larus_dp_10"
+        android:layout_marginHorizontal="?attr/larus_dp_12">
+        <ImageView
+            android:layout_width="?attr/larus_dp_16"
+            android:layout_height="?attr/larus_dp_16"
+            android:src="@drawable/larus_bg_search_fill"
+            app:tint="?attr/larus_neutral_100"/>
+        <TextView
+            android:textSize="?attr/larus_sp_15"
+            android:textStyle="bold"
+            android:textColor="?attr/larus_neutral_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_search_chat_card_header"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="?attr/larus_dp_6"/>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/search_detail_expend"
+            android:layout_width="?attr/larus_dp_14"
+            android:layout_height="?attr/larus_dp_14"
+            android:src="@drawable/larus_bg_chevron_left_fill"/>
+    </LinearLayout>
+</LinearLayout>

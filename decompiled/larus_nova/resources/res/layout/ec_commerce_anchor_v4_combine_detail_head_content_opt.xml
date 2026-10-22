@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv4.voavhs.detailhead.AutoHeightTabLayout
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:layout_gravity="start"
+        android:id="@+id/combine_tab_opt"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"
+        android:minHeight="30dp"
+        app:tabBackground="@color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="8dp"
+        app:tabPaddingStart="0dp"
+        app:tabRippleColor="@color/transparent"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.detailhead.AutoHeightViewPager
+        android:id="@+id/combine_viewpager_opt"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+</merge>

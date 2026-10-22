@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="122dp"
+    android:layout_height="99dp">
+    <ImageView
+        android:id="@+id/decoration_image"
+        android:layout_width="98dp"
+        android:layout_height="99dp"
+        android:scaleType="fitCenter"/>
+</LinearLayout>

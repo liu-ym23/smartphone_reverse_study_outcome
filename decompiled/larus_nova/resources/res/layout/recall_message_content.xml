@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.chat.chatwindow.chat.message.cell.mergeforward.AutoWrapLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.lark.widget.linked_emojicon.widget.LinkEmojiTextView
+        android:textSize="17sp"
+        android:textColor="@color/text_placeholder"
+        android:id="@+id/recall_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/p2p_build_group_text_color"
+        android:id="@+id/recall_re_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginStart="4dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/recall_re_edit_arrow"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:tint="@color/primary_fill_default"
+        app:srcCompat="@drawable/ud_icon_right_outlined"/>
+</com.ss.android.lark.chat.chatwindow.chat.message.cell.mergeforward.AutoWrapLayout>

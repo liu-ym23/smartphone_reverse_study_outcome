@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.shopping.legacy.DragRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/play_back_drag_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="70dp"
+    app:dock_margin_left="8dp"
+    app:dock_margin_right="8dp"
+    app:dock_mode="none">
+    <com.bytedance.android.shopping.prepurchase.business.pdp.view.AnchorV4PlaybackAreaV2
+        android:id="@+id/play_back_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"/>
+</com.bytedance.android.shopping.legacy.DragRelativeLayout>

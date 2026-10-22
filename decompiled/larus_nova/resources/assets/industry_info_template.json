@@ -1,0 +1,185 @@
+{
+	"type": "View",
+	"style": {
+		"bg_color": "#33000000",
+		"flex_direction": "column",
+		"margin": "0 24 0 0",
+		"width": "118",
+		"radius": [
+			4,
+			4,
+			4,
+			4
+		]
+	},
+	"elements": [
+		{
+			"type": "View",
+			"style": {
+				"padding": [
+					"12",
+					"8",
+					"12",
+					"8"
+				],
+				"justify_content": "space-between",
+				"align_items": "center"
+			},
+			"click_action": {
+				"type": "card_data_update",
+				"fields": {
+					":is_folded": "!data.is_folded"
+				},
+				"incoming_data": {
+					":is_folded": "!data.is_folded"
+				}
+			},
+			"elements": [
+				{
+					"type": "Text",
+					"style": {
+						"font_size": "11",
+						"font_weight": "500",
+						"font_color": "#FFFFFFFF",
+						"align_items": "flex-end"
+					},
+					"attr": {
+						":text": "data.industry_info.title"
+					}
+				},
+				{
+					"type": "Image",
+					"style": {
+						"width": "8",
+						"height": "8",
+						"align_items": "flex-end"
+					},
+					"attr": {
+						":src": "option(data.is_folded,data.industry_info.folded_icon,data.industry_info.unfolded_icon)"
+					}
+				}
+			]
+		},
+		{
+			"type": "View",
+			"style": {
+				"flex_direction": "column",
+				"padding": [
+					"0",
+					"8",
+					"8",
+					"8"
+				],
+				":display": "option(data.is_folded==true,'none','flex')"
+			},
+			"elements": [
+				{
+					"type": "Text",
+					"style": {
+						"padding": [
+							"0",
+							"0",
+							"6",
+							"0"
+						],
+						"font_size": "10",
+						"font_weight": "300",
+						"font_color": "#BFFFFFFF",
+						"align_items": "flex-start"
+					},
+					"attr": {
+						":text": "data.industry_info.sub_title_1"
+					}
+				},
+				{
+					"type": "Text",
+					"style": {
+						"padding": [
+							"0",
+							"0",
+							"8",
+							"0"
+						],
+						"font_size": "11",
+						"font_weight": "400",
+						"font_color": "#FFFFFF",
+						"align_items": "flex-start",
+						"line": "2",
+						"end_ellipse": true,
+						"line_height": "1.6"
+					},
+					"attr": {
+						":text": "data.industry_info.org_name"
+					}
+				},
+				{
+					"type": "Text",
+					"style": {
+						"font_size": "10",
+						"font_weight": "300",
+						"font_color": "#BFFFFFFF",
+						"align_items": "flex-start",
+						"padding": [
+							"0",
+							"0",
+							"6",
+							"0"
+						]
+					},
+					"attr": {
+						":text": "data.industry_info.sub_title_2"
+					}
+				},
+				{
+					"type": "View",
+					"style": {
+						"flex_direction": "column"
+					},
+					"for": {
+						"items": "data.industry_info.org_people"
+					},
+					"elements": [
+						{
+							"type": "Text",
+							"style": {
+								"font_size": "11",
+								"font_weight": "400",
+								"font_color": "#FFFFFF",
+								"align_items": "flex-start",
+								"end_ellipse": true,
+								"padding": [
+									"0",
+									"0",
+									"4",
+									"0"
+								]
+							},
+							"attr": {
+								":text": "item.name"
+							}
+						},
+						{
+							"type": "Text",
+							"style": {
+								"font_size": "11",
+								"font_weight": "400",
+								"font_color": "#FFFFFF",
+								"align_items": "flex-start",
+								"end_ellipse": true,
+								"padding": [
+									"0",
+									"0",
+									"4",
+									"0"
+								]
+							},
+							"attr": {
+								":text": "item.serial_number"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

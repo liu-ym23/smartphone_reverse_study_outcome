@@ -1,0 +1,1 @@
+{"type":"View","meta":{"name":"pfz_pdp_group","version":"1"},"style":{"width":"100%","height":"100%",":bg_color":"data.bg_color",":radius":"data.radius"},"elements":[{"type":"Image","style":{":display":"option(data.bg_image, 'flex', 'none')","width":"100%","height":"100%","flex_shrink":0},"attr":{":src":"data.bg_image"}}]}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/larus_static_black_transparent_2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larus.bmhome.bigimg.aibeautify.CommonAiBeautifyLayout
+        android:id="@+id/ai_beautify_layout"
+        android:background="@drawable/larus_bg_big_image_icon3"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_56"
+        android:layout_marginEnd="?attr/larus_dp_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/download_layout"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.larus.bmhome.bigimg.download.CommonDownLoadLayout
+        android:id="@+id/download_layout"
+        android:background="@drawable/larus_bg_big_image_icon3"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_56"
+        android:contentDescription="@string/larus_accessibility_save"
+        android:layout_marginEnd="?attr/larus_dp_8"
+        app:layout_constraintEnd_toStartOf="@+id/creation_view"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/ai_beautify_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginEnd="?attr/larus_dp_0"/>
+    <com.larus.bmhome.view.CreationOperateContainerView
+        android:id="@+id/creation_view"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_56"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/download_layout"
+        app:layout_constraintTop_toTopOf="parent"/>
+</merge>

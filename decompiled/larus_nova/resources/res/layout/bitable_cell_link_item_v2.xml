@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.bitable.common.widgets.flex.InnerRecyclerView
+        android:id="@+id/link_field_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingEnd="-8dp"/>
+    <FrameLayout
+        android:id="@+id/add_link_record_button_fl"
+        android:background="@drawable/bitable_link_records_list_item_bg_v2"
+        android:focusable="true"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="@dimen/space_kit_len_32"
+        android:layout_height="@dimen/space_kit_len_24"
+        android:layout_marginTop="@dimen/space_kit_len_4"
+        android:layout_marginBottom="@dimen/space_kit_len_4"
+        android:layout_marginStart="@dimen/space_kit_len_8">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:id="@+id/add_link_record_button"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:scaleType="centerInside"
+            android:tint="@color/icon_n1"
+            app:srcCompat="@drawable/ud_icon_add_outlined"/>
+    </FrameLayout>
+</LinearLayout>

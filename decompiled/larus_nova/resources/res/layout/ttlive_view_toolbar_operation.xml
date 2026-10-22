@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_icon_root"
+    android:layout_width="80dp"
+    android:layout_height="36dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <FrameLayout
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        app:actualImageScaleType="centerCrop">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_opt_anim"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="0dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/siv_opt_anim"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            app:actualImageScaleType="center"
+            app:roundedCornerRadius="9dp"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

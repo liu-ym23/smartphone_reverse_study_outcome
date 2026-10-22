@@ -1,0 +1,31 @@
+package com.bytedance.android.ec.core.slice.ectag;
+
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleEventObserver;
+import androidx.lifecycle.LifecycleOwner;
+import com.ss.android.cert.manager.constants.BytedCertConstant;
+import java.util.concurrent.ConcurrentHashMap;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes43.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001:\u0001\u0002¨\u0006\u0003"}, d2 = {"Lcom/bytedance/android/ec/core/slice/ectag/ECTagViewCache;", "Landroidx/lifecycle/LifecycleEventObserver;", BytedCertConstant.ReflectionConfigKey.COLOR_ARRAY, "ec-core_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class ECTagViewCache implements LifecycleEventObserver {
+
+    public static final class a {
+    }
+
+    static {
+        new ConcurrentHashMap();
+    }
+
+    @Override // androidx.lifecycle.LifecycleEventObserver
+    public final void onStateChanged(LifecycleOwner r100, Lifecycle.Event r101) {
+        Intrinsics.checkNotNullParameter(r100, "source");
+        Intrinsics.checkNotNullParameter(r101, "event");
+        if (r100.getLifecycle().getCurrentState() == Lifecycle.State.DESTROYED) goto L6;
+        return;
+    L6:
+        throw null;
+    }
+}

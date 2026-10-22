@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:ux_shadow_color="@color/larus_black_20"
+    app:ux_shadow_offset_x="?attr/larus_dp_0"
+    app:ux_shadow_offset_y="?attr/larus_dp_0"
+    app:ux_shadow_radius="?attr/larus_dp_6"
+    app:ux_shadow_size="?attr/larus_dp_8">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_8"
+        android:layout_marginBottom="?attr/larus_dp_8"
+        android:layout_marginStart="?attr/larus_dp_4"
+        android:layout_marginEnd="?attr/larus_dp_4">
+        <com.larus.common_ui.widget.roundlayout.CustomRoundImageView
+            android:id="@+id/iv_preview_thumb"
+            android:layout_width="?attr/larus_dp_48"
+            android:layout_height="?attr/larus_dp_48"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/larus_accessibility_photo"
+            app:cus_corner_radius="?attr/larus_dp_6"/>
+        <com.larus.common_ui.widget.roundlayout.CustomRoundImageView
+            android:id="@+id/iv_preview_marked"
+            android:layout_width="?attr/larus_dp_48"
+            android:layout_height="?attr/larus_dp_48"
+            android:scaleType="centerCrop"
+            app:cus_corner_radius="?attr/larus_dp_6"/>
+        <ImageButton
+            android:layout_gravity="end|top"
+            android:id="@+id/btn_delete_preview_thumb"
+            android:background="@drawable/larus_ic_thumb_delete"
+            android:layout_width="?attr/larus_dp_14"
+            android:layout_height="?attr/larus_dp_14"
+            android:contentDescription="@string/larus_accessibility_delete"/>
+        <View
+            android:id="@+id/iv_preview_thumb_border"
+            android:background="@drawable/larus_ic_result_preview_thumb_border"
+            android:layout_width="?attr/larus_dp_48"
+            android:layout_height="?attr/larus_dp_48"/>
+    </FrameLayout>
+</com.larus.common_ui.widget.ShadowLayout>

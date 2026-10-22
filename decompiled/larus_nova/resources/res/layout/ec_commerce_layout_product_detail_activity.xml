@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.shopping.anchorv3.compat.UserInteractFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/ec_commerce_layout_product_detail_common"/>
+    <include
+        android:id="@+id/layout_top_layer"
+        layout="@layout/ec_commerce_layout_product_detail_top_layer"/>
+</com.bytedance.android.shopping.anchorv3.compat.UserInteractFrameLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_kit_len_44">
+    <View
+        android:layout_gravity="start"
+        android:id="@+id/item_leading_divider"
+        android:background="@color/line_divider_default"
+        android:visibility="gone"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center"
+        android:id="@+id/item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/space_kit_len_6"
+        android:paddingEnd="@dimen/space_kit_len_6"/>
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/icon_n1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/item_text"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:includeFontPadding="false"/>
+    <com.larksuite.component.universe_design.badge.UDBadgeView
+        android:layout_gravity="center"
+        android:id="@+id/item_badge"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_kit_len_12"
+        android:layout_marginStart="@dimen/space_kit_len_12"
+        style="@style/UDBadge.Dot.StrongReminder.Small"/>
+</FrameLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/status_error"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="#1e1e1e"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/error_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/ttlive_core_load_status_error"
+        android:drawableTop="@drawable/ttlive_ic_load_fail_custom"
+        android:drawablePadding="15dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_core_s12"
+        android:layout_gravity="center"
+        android:id="@+id/error_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/ttlive_core_load_status_retry"
+        android:layout_below="@+id/error_icon"
+        android:layout_centerHorizontal="true"/>
+</LinearLayout>

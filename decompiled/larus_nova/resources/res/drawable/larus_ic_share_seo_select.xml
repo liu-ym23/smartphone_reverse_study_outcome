@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="14dp"
+    android:width="14dp"
+    android:viewportWidth="14"
+    android:viewportHeight="14">
+    <group>
+        <clip-path android:pathData="M7,0L7,0A7,7 0,0 1,14 7L14,7A7,7 0,0 1,7 14L7,14A7,7 0,0 1,0 7L0,7A7,7 0,0 1,7 0z"/>
+        <path
+            android:fillColor="@color/larus_neutral_50_day"
+            android:pathData="M6.204,10.522C6.019,10.522 5.862,10.44 5.731,10.276L3.739,7.784C3.691,7.725 3.655,7.668 3.632,7.611C3.611,7.555 3.601,7.497 3.601,7.438C3.601,7.305 3.644,7.195 3.732,7.107C3.821,7.02 3.934,6.977 4.07,6.977C4.226,6.977 4.358,7.047 4.466,7.188L6.189,9.399L9.526,4.097C9.585,4.007 9.646,3.944 9.707,3.908C9.769,3.87 9.848,3.851 9.945,3.851C10.079,3.851 10.188,3.893 10.272,3.977C10.357,4.06 10.399,4.167 10.399,4.3C10.399,4.354 10.39,4.409 10.372,4.466C10.354,4.52 10.326,4.577 10.288,4.639L6.673,10.272C6.56,10.439 6.404,10.522 6.204,10.522Z"/>
+    </group>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M7,0.438L7,0.438A6.563,6.563 0,0 1,13.563 7L13.563,7A6.563,6.563 0,0 1,7 13.563L7,13.563A6.563,6.563 0,0 1,0.438 7L0.438,7A6.563,6.563 0,0 1,7 0.438z"
+        android:strokeColor="@color/larus_neutral_50_day"
+        android:strokeWidth="0.875"/>
+</vector>

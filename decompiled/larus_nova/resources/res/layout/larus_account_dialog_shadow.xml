@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialogRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout
+            android:id="@+id/google_login_loading_bar"
+            android:background="?attr/larus_bg_account_loading"
+            android:visibility="visible"
+            android:layout_width="?attr/larus_dp_80"
+            android:layout_height="?attr/larus_dp_80">
+            <ProgressBar
+                android:layout_gravity="center"
+                android:id="@+id/loading_page"
+                android:layout_width="?attr/larus_dp_30"
+                android:layout_height="?attr/larus_dp_30"
+                android:indeterminateTint="?attr/larus_neutral_50"
+                style=""/>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

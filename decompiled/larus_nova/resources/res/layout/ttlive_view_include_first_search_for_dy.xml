@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:id="@+id/first_more_anchor_layout"
+    android:background="@drawable/ttlive_search_first_guide"
+    android:layout_width="145dp"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true">
+    <TextView
+        android:textSize="13sp"
+        android:textColor="#ffffff"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/ttlive_search_guide_toast"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

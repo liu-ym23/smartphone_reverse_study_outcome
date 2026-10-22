@@ -1,0 +1,464 @@
+/* Generated code, DO NOT EDIT.
+ * source: open_pkm.yaml
+ */
+
+syntax = "proto2";
+
+package open_pkm.proto;
+
+// The model associated with unique information about the target you care about in PKM.
+message UniqueId {
+    required string app_id = 1;
+    required string identifier = 2;
+    required PkmBizType biz_type = 3;
+}
+
+// 包加载状态状态
+enum LoadStatus {
+    VAR_LOAD_STATUS_INITIAL = 0;
+    VAR_LOAD_STATUS_DOWNLOADING = 1;
+    VAR_LOAD_STATUS_FINISHED = 2;
+}
+// 来源类型
+enum PkmFrom {
+    VAR_PKM_FROM_NORMAL = 0;
+    VAR_PKM_FROM_ASYNC = 1;
+    VAR_PKM_FROM_PRELOAD = 2;
+    VAR_PKM_FROM_BUILTIN = 3;
+}
+// pkg 类型
+enum PkgType {
+    VAR_PKG_TYPE_COMMON = 0;
+    VAR_PKG_TYPE_MAIN = 1;
+    VAR_PKG_TYPE_SUBPACKAGE = 2;
+    VAR_PKG_TYPE_INDEPENDENT = 3;
+}
+// The package associated with like download informations and identity(md5) informations in PKM, can be used in public.
+message PkmPackage {
+    required UniqueId unique_id = 1;
+    required PkgType pkg_type = 2;
+    required string pkg_name = 3;
+    required string md5 = 4;
+    required string version = 5;
+     repeated string pkg_url_list = 6;
+}
+
+// The business type which using pkm-system currently.
+enum PkmBizType {
+    VAR_PKM_BIZ_TYPE_UNKNOWN = 0;
+    VAR_PKM_BIZ_TYPE_GADGET = 1;
+    VAR_PKM_BIZ_TYPE_WEB_APP = 2;
+    VAR_PKM_BIZ_TYPE_WIDGET = 3;
+    VAR_PKM_BIZ_TYPE_BLOCK = 4;
+    VAR_PKM_BIZ_TYPE_DYNAMIC_COMPONENT = 5;
+    VAR_PKM_BIZ_TYPE_JSSDK = 6;
+    VAR_PKM_BIZ_TYPE_JSSDK_BLOCK = 7;
+    VAR_PKM_BIZ_TYPE_JSSDK_MSG_CARD = 8;
+    VAR_PKM_BIZ_TYPE_BASE = 9;
+}
+// The step happened when PKM prepare step is on going.
+enum PkmPrepareStep {
+    VAR_PKM_PREPARE_STEP_LOAD_META_START = 0;
+    VAR_PKM_PREPARE_STEP_LOAD_META_PROGRESS = 1;
+    VAR_PKM_PREPARE_STEP_LOAD_META_COMPLETE = 2;
+    VAR_PKM_PREPARE_STEP_LOAD_PKG_START = 3;
+    VAR_PKM_PREPARE_STEP_LOAD_PKG_PROGRESS = 4;
+    VAR_PKM_PREPARE_STEP_LOAD_PKG_READY = 5;
+    VAR_PKM_PREPARE_STEP_LOAD_PKG_COMPLETE = 6;
+    VAR_PKM_PREPARE_STEP_META_FAILED = 7;
+    VAR_PKM_PREPARE_STEP_PKG_FAILED = 8;
+    VAR_PKM_PREPARE_STEP_SUCCESS = 9;
+}
+// the different strategy using to decide how to organize the logic when using meta/pkg cache data.
+enum PkmStrategy {
+    VAR_PKM_STRATEGY_TRY_REMOTE_AND_UPDATE_ASYNC = 0;
+    VAR_PKM_STRATEGY_FORCE_REMOTE = 1;
+    VAR_PKM_STRATEGY_USE_LOCAL = 2;
+}
+// to wrap file info like offset/length from stream file
+message FileInfo {
+    required int64 offset = 1;
+    required int64 length = 2;
+}
+
+// package reference to fetch data from ttpkg
+message TtPkgHeader {
+    required string tag = 1;
+    required int64 version = 2;
+    required string pkg_info = 3;
+     map<string, FileInfo> file_infos = 4;
+}
+
+// DiffPath model
+message DiffPath {
+    required string path = 1;
+    required string path_md5 = 2;
+}
+
+// component model
+message Component {
+    required string name = 1;
+}
+
+// Meta model, mapping meta response from getAppMeta API
+message MetaInfo {
+    required string app_version = 1;
+    required string appid = 2;
+    required bool chat_action = 3;
+    required string compile_version = 4;
+     repeated Component components = 5;
+     map<string, DiffPath> diff_path = 6;
+    required string extra = 7;
+     repeated string gadget_safe_urls = 8;
+    required string icon = 9;
+    required bool message_action = 10;
+     optional string min_jssdk = 11;
+     repeated string urls = 12;
+    required bool pc_use_mobile_pkg = 13;
+     map<string, DiffPath> pc_diff_path = 14;
+     optional string pc_md5_v2 = 15;
+     optional string pcpath_v2 = 16;
+     optional string socket_address = 17;
+    required string domain = 18;
+    required string md5 = 19;
+    required string name = 20;
+    required int64 scene_type = 21;
+    required int64 state = 22;
+    required string ttblackcode = 23;
+    required string ttcode = 24;
+    required string ttid = 25;
+    required int64 app_type = 26;
+    required string version = 27;
+     optional int64 version_code = 28;
+    required int64 version_state = 29;
+    required int64 version_update_time = 30;
+}
+
+// WebMeta model
+message WebMetaInfo {
+    required string version = 1;
+    required string app_id = 2;
+    required string bot_id = 3;
+    required string icon = 4;
+    required string name = 5;
+    required string extension_type = 6;
+    required string extension_id = 7;
+    required ExtConfig ext_config = 8;
+    required WebOfflinePkg offline_pkg = 9;
+}
+
+// ExtConfig model
+message ExtConfig {
+    required string pc_url = 1;
+    required string mobile_url = 2;
+    required bool offline_enable = 3;
+     optional string version = 4;
+    required string min_lark_version = 5;
+    required string v_host = 6;
+    required string main_url = 7;
+    required int64 pkg_id = 8;
+     repeated string fallback_path_list = 9;
+}
+
+// WebOfflinePkg model
+message WebOfflinePkg {
+    required string url = 1;
+    required string md5 = 2;
+}
+
+// The error occured in PKM download related APIs.
+message PkmError {
+    oneof inner {
+        string network = 1;
+        string disk = 2;
+        string data = 3;
+    }}
+
+
+
+
+// The basic meta model can be use in public
+message PkmMeta {
+    required UniqueId unique_id = 1;
+    required bool is_preview = 2;
+    required MetaInfo meta = 3;
+    required string app_version = 4;
+    required PkmPackage pkg = 5;
+}
+
+// The basic meta model can be use in public
+message PkmWebMeta {
+    required UniqueId unique_id = 1;
+    required bool is_preview = 2;
+    required WebMetaInfo meta = 3;
+    required string app_version = 4;
+     optional PkmPackage pkg = 5;
+}
+
+// The package model used only in PKM internal (with a lot of information that should be be exposed on public)
+message PkmPackageInternal {
+    required PkmPackage pkg = 1;
+    required PkmFrom pkg_init_from = 2;
+    required PkmFrom pkg_result_from = 3;
+    required LoadStatus load_status = 4;
+    required int64 update_time = 5;
+}
+
+// The package download context which you should create it each time if you want start a new downloading task if necessary.
+message PackageDownloadContext {
+    required PkmPackage pkg = 1;
+    required UniqueId unique_id = 2;
+}
+
+
+
+
+
+
+message FuncParamsX00873cafeac511b8 
+{
+    required PackageDownloadContext context = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX083d4a3cea79ab60 
+{
+    required MetaInfo meta_info = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX0e798fd943da4743 
+{
+    required PkmBizType biz_type = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX1adcdc5e8201e558 
+{
+    required UniqueId unique_id = 1;
+    required PkmStrategy strategy = 2;
+    required bool is_preview = 3;
+     map<string, string> ex_data = 4;
+    required MoltenFfiInstanceMsg callback = 5;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX313af2e689ebd2c8 
+{
+    required string file_path = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX3897bf48216accb9 
+{
+    required string resource_path = 1;
+    required PkmBizType biz_type = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX3db6782aaff5241e 
+{
+    required UniqueId unique_id = 1;
+    required PkmPackage pkg = 2;
+    required TtPkgHeader pkg_header = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX4877ab89ad2b2b88 
+{
+    required PkmBizType biz_type = 1;
+    required string zip_path = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX5102dc032b85dd1c 
+{
+    required string resource_path = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX5bf630a906d91308 
+{
+    required bytes data = 1;
+    required FileInfo file_info = 2;
+    required string package_name = 3;
+     optional PkmError err = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX6c9c09bd3ecddfc3 
+{
+    required UniqueId unique_id = 1;
+    required MetaInfo current_meta = 2;
+    required MoltenFfiInstanceMsg callback = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX74d58d6de6f5156e 
+{
+    required UniqueId unique_id = 1;
+    required PkmStrategy strategy = 2;
+    required bool is_preview = 3;
+     map<string, string> ex_data = 4;
+    required MoltenFfiInstanceMsg callback = 5;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX7699395070cc4e5f 
+{
+    required string zip_path = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX7ad39ed7fb1a58e1 
+{
+    required int64 file_handle = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX883a468efe0afc17 
+{
+    required UniqueId unique_id = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8f34ec831cdaea87 
+{
+    required PkmPrepareStep step = 1;
+    required double download_progress = 2;
+     optional PkmMeta meta = 3;
+     optional PkmPackage pkg = 4;
+     optional TtPkgHeader pkg_header = 5;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX93d94b6c405a1feb 
+{
+    required PkmMeta meta = 1;
+    required PkmPackage pkg = 2;
+    required TtPkgHeader pkg_header = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX99118202873d6f1a 
+{
+    required PkmPrepareStep step = 1;
+     optional PkmWebMeta meta = 2;
+     optional PkmPackage pkg = 3;
+     optional TtPkgHeader pkg_header = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX9f2014e8c57b1e23 
+{
+    required string user_id = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXa92100fb0248083e 
+{
+    required UniqueId unique_id = 1;
+    required PkmPackage pkg = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXabcd86bb8f6789ba 
+{
+    required string biz_type = 1;
+    required string resource_path = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXaca3906521a30e25 
+{
+    required string event = 1;
+     map<string, string> payload = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb05c69ceeb390024 
+{
+    required string file_path = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb212c76ad323a577 
+{
+    required PkmBizType biz_type = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb3983a971884c50d 
+{
+    required string biz_type = 1;
+    required string builtin_path = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXbb49092977865659 
+{
+    required UniqueId unique_id = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXcd0c5c8ac279f59b 
+{
+    required PkmError err = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXd76621da692f983e 
+{
+    required UniqueId unique_id = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXdb4ee1acb5817725 
+{
+    required int64 file_handle = 1;
+     optional PkmError err = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe014817072925fd2 
+{
+    required bytes zip_content = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe4874537e9e682c3 
+{
+    required int64 received_size = 1;
+    required int64 expected_size = 2;
+    required string url = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX0bf8b5c665c57f35 
+{
+    required string ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX1daf590640320b62 
+{
+     optional int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3dc8b8542df1cbb1 
+{
+    required bool ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX48c28c1f9d113590 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX8f13730e4623857f 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX9d000cf8a8c823fc 
+{
+     optional MetaInfo ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXac10ad430fdcf37d 
+{
+    required TtPkgHeader ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXb05c0e03c1bfe022 
+{
+    required bytes ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXb0650d017245a907 
+{
+    required PkmPackage ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXc6903201297f0756 
+{
+    required UniqueId ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXd412f9ea24c07480 
+{
+    required FileInfo ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncErrorX38c51c3b789fecb4 
+{
+    required PkmError err = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX0748fbcd1b15d5b4 
+{
+    optional FuncReturnX3dc8b8542df1cbb1 ret = 1;
+    optional FuncErrorX38c51c3b789fecb4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX600a38cc45acb4f9 
+{
+    optional FuncReturnX8f13730e4623857f ret = 1;
+    optional FuncErrorX38c51c3b789fecb4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX6101e4dc91bbdad3 
+{
+    optional FuncReturnX1daf590640320b62 ret = 1;
+    optional FuncErrorX38c51c3b789fecb4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX81aef5d27f4d1aa0 
+{
+    optional FuncReturnXb05c0e03c1bfe022 ret = 1;
+    optional FuncErrorX38c51c3b789fecb4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX923e31ece7849f3b 
+{
+    optional FuncReturnX0bf8b5c665c57f35 ret = 1;
+    optional FuncErrorX38c51c3b789fecb4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX9d34e0e5c4ba7699 
+{
+    optional FuncReturnXd412f9ea24c07480 ret = 1;
+    optional FuncErrorX38c51c3b789fecb4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message MoltenFfiInstanceMsg {
+  required int64 type_id = 1;
+  required int64 instance_id = 2;
+}
+message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

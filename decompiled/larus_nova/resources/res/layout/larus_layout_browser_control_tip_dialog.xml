@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/larus_bg_bottom_sheet"
+    android:paddingLeft="@dimen/dp_28"
+    android:paddingRight="@dimen/dp_28"
+    android:paddingBottom="@dimen/dp_20"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/dp_22"
+        android:textStyle="bold"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="@string/larus_proTask_CoTPage_toDesktop_title"
+        android:fontFamily="PingFang SC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="@dimen/dp_15"
+        android:textColor="?attr/larus_neutral_70"
+        android:id="@+id/tv_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/larus_proTask_CoTPage_toDesktop_des"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+    <com.larus.common_ui.widget.roundlayout.RoundTextView
+        android:textSize="@dimen/dp_17"
+        android:textColor="@color/larus_static_white"
+        android:gravity="center"
+        android:id="@+id/btn_confirma"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/larus_got_it_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
+        app:rv_backgroundColor="?attr/larus_primary_50"
+        app:rv_cornerRadius="?attr/larus_dp_16"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

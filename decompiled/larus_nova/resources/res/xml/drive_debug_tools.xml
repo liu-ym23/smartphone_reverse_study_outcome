@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Drive">
+        <PreferenceScreen
+            android:title="清除Drive缓存数据"
+            android:key="clean_drive_cache"/>
+        <PreferenceScreen
+            android:title="清除cleanableDrive缓存数据"
+            android:key="clean_cleanable_cache"/>
+        <PreferenceScreen
+            android:title="获取cleanableDrive缓存大小"
+            android:key="get_cleanable_cache_size"/>
+        <PreferenceScreen
+            android:title="打开Drive业务测试页面"
+            android:key="open_drive_test_activity"/>
+        <CheckBoxPreference
+            android:title="打开西瓜视频sdk日志进行调试"
+            android:key="tt_video_log_enable"
+            android:defaultValue="false"
+            android:summaryOn="打开"
+            android:summaryOff="关闭"/>
+    </PreferenceCategory>
+</PreferenceScreen>

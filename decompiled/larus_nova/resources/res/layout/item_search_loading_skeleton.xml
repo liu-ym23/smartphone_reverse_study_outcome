@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/larus_base_1_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/item_search_divider"/>
+    <include layout="@layout/item_search_skeleton_single_row_short"/>
+    <include layout="@layout/item_search_item_divider"/>
+    <include layout="@layout/item_search_skeleton_single_row_long"/>
+    <include layout="@layout/item_search_item_divider"/>
+    <include layout="@layout/item_search_skeleton_single_row_long"/>
+    <include layout="@layout/item_search_item_divider"/>
+</LinearLayout>

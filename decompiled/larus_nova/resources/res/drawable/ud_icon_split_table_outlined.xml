@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#2b2f36"
+        android:pathData="M3 15a1 1 0 0 1 1 1v2a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1a1 1 0 0 1 2 0v1a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-2a1 1 0 0 1 1-1zm18 0a1 1 0 0 1 1 1v2a4 4 0 0 1-4 4h-1a4 4 0 0 1-4-4v-1a1 1 0 0 1 2 0v1a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-2a1 1 0 0 1 1-1zm-2.718-4.956a0.6 0.6 0 0 1 0.969-0.474l2.518 1.958a0.6 0.6 0 0 1 0 0.948l-2.518 1.958a0.6 0.6 0 0 1-0.969-0.474v-0.957H13.93a1 1 0 0 1 0-2h4.352v-0.96zM4.75 9.568a0.6 0.6 0 0 1 0.968 0.474v0.957h4.352a1 1 0 0 1 0 2H5.718v0.959a0.6 0.6 0 0 1-0.969 0.474l-2.518-1.958a0.6 0.6 0 0 1 0-0.948L4.75 9.568zM7 2a4 4 0 0 1 4 4v1a1 1 0 1 1-2 0V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2a1 1 0 1 1-2 0V6a4 4 0 0 1 4-4h1zm11 0a4 4 0 0 1 4 4v2a1 1 0 1 1-2 0V6a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v1a1 1 0 1 1-2 0V6a4 4 0 0 1 4-4h1z"/>
+</vector>

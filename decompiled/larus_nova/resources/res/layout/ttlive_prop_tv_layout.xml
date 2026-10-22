@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/prop_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+    <View
+        android:id="@+id/prop_panel_red_point"
+        android:background="@drawable/ttlive_ic_red_point_tip"
+        android:visibility="visible"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_toRightOf="@+id/prop_tv"
+        android:layout_alignTop="@+id/prop_tv"
+        android:layout_toEndOf="@+id/prop_tv"/>
+    <View
+        android:id="@+id/sort_order_view"
+        android:background="@drawable/ttlive_gift_default_sort_order"
+        android:layout_width="9dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/prop_tv"
+        android:layout_toEndOf="@+id/prop_tv"/>
+    <View
+        android:id="@+id/topic_label_view"
+        android:background="@drawable/ttlive_gift_topic_label_unselected"
+        android:visibility="gone"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_toRightOf="@+id/prop_tv"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/prop_tv"/>
+</RelativeLayout>

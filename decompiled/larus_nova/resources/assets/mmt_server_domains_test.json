@@ -1,0 +1,11 @@
+{
+  "access_hosts": [
+    "rtc-test.bytedance.com"
+  ],
+  "vpaas_config_url": "mmt-decision-test.zijieapi.com",
+  "ntp_server": [
+    "time1.bytedance.com",
+    "time2.bytedance.com"
+  ],
+  "logsdk_url": "wss://mmt-log-report.zijieapi.com/mmt/v2/report"
+}

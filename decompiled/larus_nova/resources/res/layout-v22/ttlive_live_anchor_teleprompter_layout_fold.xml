@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.widget.roundcorner.RoundCornerConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/live_anchor_teleprompter_top_bar_ic_fold"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    app:ttlive_allRadius="8dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/live_anchor_teleprompter_fold_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="left"
+        android:id="@+id/live_anchor_teleprompter_fold_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="6dp"
+        android:text="提词"
+        android:lineHeight="14sp"
+        android:textFontWeight="400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/live_anchor_teleprompter_icon_fold"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:layout_gravity="right"
+        android:id="@+id/live_anchor_teleprompter_icon_fold"
+        android:background="@drawable/ttlive_anchor_teleprompter_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintLeft_toRightOf="@+id/live_anchor_teleprompter_fold_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</com.bytedance.android.livesdk.widget.roundcorner.RoundCornerConstraintLayout>

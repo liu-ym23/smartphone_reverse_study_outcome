@@ -1,0 +1,97 @@
+package org.bouncycastle.asn1.misc;
+
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+
+/* JADX INFO: loaded from: classes42.dex */
+public interface MiscObjectIdentifiers {
+    public static final ASN1ObjectIdentifier as_sys_sec_alg_ideaCBC = null;
+    public static final ASN1ObjectIdentifier blake2 = null;
+    public static final ASN1ObjectIdentifier cast5CBC = null;
+    public static final ASN1ObjectIdentifier cryptlib = null;
+    public static final ASN1ObjectIdentifier cryptlib_algorithm = null;
+    public static final ASN1ObjectIdentifier cryptlib_algorithm_blowfish_CBC = null;
+    public static final ASN1ObjectIdentifier cryptlib_algorithm_blowfish_CFB = null;
+    public static final ASN1ObjectIdentifier cryptlib_algorithm_blowfish_ECB = null;
+    public static final ASN1ObjectIdentifier cryptlib_algorithm_blowfish_OFB = null;
+    public static final ASN1ObjectIdentifier entrust = null;
+    public static final ASN1ObjectIdentifier entrustVersionExtension = null;
+    public static final ASN1ObjectIdentifier hMAC_SHA1 = null;
+    public static final ASN1ObjectIdentifier id_alg_composite = null;
+    public static final ASN1ObjectIdentifier id_blake2b160 = null;
+    public static final ASN1ObjectIdentifier id_blake2b256 = null;
+    public static final ASN1ObjectIdentifier id_blake2b384 = null;
+    public static final ASN1ObjectIdentifier id_blake2b512 = null;
+    public static final ASN1ObjectIdentifier id_blake2s128 = null;
+    public static final ASN1ObjectIdentifier id_blake2s160 = null;
+    public static final ASN1ObjectIdentifier id_blake2s224 = null;
+    public static final ASN1ObjectIdentifier id_blake2s256 = null;
+    public static final ASN1ObjectIdentifier id_scrypt = null;
+    public static final ASN1ObjectIdentifier netscape = null;
+    public static final ASN1ObjectIdentifier netscapeBaseURL = null;
+    public static final ASN1ObjectIdentifier netscapeCARevocationURL = null;
+    public static final ASN1ObjectIdentifier netscapeCApolicyURL = null;
+    public static final ASN1ObjectIdentifier netscapeCertComment = null;
+    public static final ASN1ObjectIdentifier netscapeCertType = null;
+    public static final ASN1ObjectIdentifier netscapeRenewalURL = null;
+    public static final ASN1ObjectIdentifier netscapeRevocationURL = null;
+    public static final ASN1ObjectIdentifier netscapeSSLServerName = null;
+    public static final ASN1ObjectIdentifier novell = null;
+    public static final ASN1ObjectIdentifier novellSecurityAttribs = null;
+    public static final ASN1ObjectIdentifier verisign = null;
+    public static final ASN1ObjectIdentifier verisignBitString_6_13 = null;
+    public static final ASN1ObjectIdentifier verisignCzagExtension = null;
+    public static final ASN1ObjectIdentifier verisignDnbDunsNumber = null;
+    public static final ASN1ObjectIdentifier verisignIssStrongCrypto = null;
+    public static final ASN1ObjectIdentifier verisignOnSiteJurisdictionHash = null;
+    public static final ASN1ObjectIdentifier verisignPrivate_6_9 = null;
+
+    static {
+        ASN1ObjectIdentifier r100 = new ASN1ObjectIdentifier("2.16.840.1.113730.1");
+        netscape = r100;
+        netscapeCertType = r100.branch("1");
+        netscapeBaseURL = r100.branch("2");
+        netscapeRevocationURL = r100.branch("3");
+        netscapeCARevocationURL = r100.branch("4");
+        netscapeRenewalURL = r100.branch("7");
+        netscapeCApolicyURL = r100.branch("8");
+        netscapeSSLServerName = r100.branch("12");
+        netscapeCertComment = r100.branch("13");
+        ASN1ObjectIdentifier r101 = new ASN1ObjectIdentifier("2.16.840.1.113733.1");
+        verisign = r101;
+        verisignCzagExtension = r101.branch("6.3");
+        verisignPrivate_6_9 = r101.branch("6.9");
+        verisignOnSiteJurisdictionHash = r101.branch("6.11");
+        verisignBitString_6_13 = r101.branch("6.13");
+        verisignDnbDunsNumber = r101.branch("6.15");
+        verisignIssStrongCrypto = r101.branch("8.1");
+        ASN1ObjectIdentifier r102 = new ASN1ObjectIdentifier("2.16.840.1.113719");
+        novell = r102;
+        novellSecurityAttribs = r102.branch("1.9.4.1");
+        ASN1ObjectIdentifier r103 = new ASN1ObjectIdentifier("1.2.840.113533.7");
+        entrust = r103;
+        entrustVersionExtension = r103.branch("65.0");
+        cast5CBC = r103.branch("66.10");
+        hMAC_SHA1 = new ASN1ObjectIdentifier("1.3.6.1.5.5.8.1.2");
+        as_sys_sec_alg_ideaCBC = new ASN1ObjectIdentifier("1.3.6.1.4.1.188.7.1.1.2");
+        ASN1ObjectIdentifier r104 = new ASN1ObjectIdentifier("1.3.6.1.4.1.3029");
+        cryptlib = r104;
+        ASN1ObjectIdentifier r105 = r104.branch("1");
+        cryptlib_algorithm = r105;
+        cryptlib_algorithm_blowfish_ECB = r105.branch("1.1");
+        cryptlib_algorithm_blowfish_CBC = r105.branch("1.2");
+        cryptlib_algorithm_blowfish_CFB = r105.branch("1.3");
+        cryptlib_algorithm_blowfish_OFB = r105.branch("1.4");
+        ASN1ObjectIdentifier r106 = new ASN1ObjectIdentifier("1.3.6.1.4.1.1722.12.2");
+        blake2 = r106;
+        id_blake2b160 = r106.branch("1.5");
+        id_blake2b256 = r106.branch("1.8");
+        id_blake2b384 = r106.branch("1.12");
+        id_blake2b512 = r106.branch("1.16");
+        id_blake2s128 = r106.branch("2.4");
+        id_blake2s160 = r106.branch("2.5");
+        id_blake2s224 = r106.branch("2.7");
+        id_blake2s256 = r106.branch("2.8");
+        id_scrypt = new ASN1ObjectIdentifier("1.3.6.1.4.1.11591.4.11");
+        id_alg_composite = new ASN1ObjectIdentifier("1.3.6.1.4.1.18227.2.1");
+    }
+}

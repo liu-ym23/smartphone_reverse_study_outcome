@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="4dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:layout_gravity="center"
+            android:id="@+id/ktv_anchor_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:placeholderImage="@drawable/ttlive_ic_default_avatar"
+            app:roundAsCircle="true"/>
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:layout_gravity="center"
+            android:id="@+id/ktv_anchor_effect"
+            android:visibility="visible"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+    </FrameLayout>
+    <View
+        android:layout_gravity="center_vertical"
+        android:background="#33ffffff"
+        android:layout_width="0.5dp"
+        android:layout_height="20dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:orientation="horizontal"
+        android:id="@+id/ktv_seat_list"
+        android:fadingEdgeLength="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:requiresFadingEdge="horizontal"/>
+</LinearLayout>

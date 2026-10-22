@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ss.android.lark.feed.cardcomponent.preview.MinuteHardwareSyncBarDashedLoadingView
+        android:layout_gravity="center"
+        android:id="@+id/boundDeviceSyncListAnim"
+        android:visibility="visible"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"/>
+    <com.larksuite.component.universe_design.progress.UDProgress
+        android:layout_gravity="center"
+        android:id="@+id/boundDeviceSyncListProgress"
+        android:visibility="visible"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:progress="0"
+        app:ud_progress_indicatorColor="@color/primary_content_default"
+        app:ud_progress_indicatorCornerRadius="1.1dp"
+        app:ud_progress_thickness="2.2dp"
+        app:ud_progress_trackColor="@color/transparent"
+        app:ud_progress_type="circular"/>
+</merge>

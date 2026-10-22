@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.uikit.viewpager.SSViewPager
+        android:id="@+id/emoji_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0.5dp"/>
+    <com.bytedance.android.live.core.view.MaxWidthLinearLayout
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:id="@+id/max_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/emoji_section_list"
+            android:background="@drawable/ttlive_emoji_button_background"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:overScrollMode="never"/>
+    </com.bytedance.android.live.core.view.MaxWidthLinearLayout>
+</merge>

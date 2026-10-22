@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="14dp"
+    android:layout_marginEnd="14dp">
+    <FrameLayout
+        android:id="@+id/tuning_cover_container"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <View
+            android:id="@+id/tuning_selected"
+            android:background="@drawable/ttlive_bg_ktv_tuning_border"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:layout_gravity="center"
+            android:id="@+id/tuning_cover"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:roundAsCircle="true"/>
+    </FrameLayout>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:id="@+id/tuning_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:alpha="0.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tuning_cover_container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

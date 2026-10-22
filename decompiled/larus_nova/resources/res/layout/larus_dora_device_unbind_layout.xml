@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/dora_device_info_genera_group_layout"
+    android:background="@drawable/larus_item_dora_device_unbind_buttom"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_56"
+    android:layout_marginTop="?attr/larus_dp_18"
+    android:layout_marginStart="?attr/larus_dp_16"
+    android:layout_marginEnd="?attr/larus_dp_16">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="#ff3b30"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/dora_device_unbind_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_dora_device_btn_unbind_cn"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dora_device_disconnect_connect_status_text"/>
+</LinearLayout>

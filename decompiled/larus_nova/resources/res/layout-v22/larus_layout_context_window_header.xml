@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="?attr/larus_dp_12"
+    android:paddingRight="?attr/larus_dp_12"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_44"
+    android:paddingHorizontal="?attr/larus_dp_12">
+    <Space
+        android:layout_width="?attr/larus_dp_28"
+        android:layout_height="?attr/larus_dp_28"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/bottom_sheet_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_input_slash_header_Usage"
+        android:fontFamily="sans-serif"
+        android:textFontWeight="600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bottom_sheet_close"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="?attr/larus_dp_28"
+        android:layout_height="?attr/larus_dp_28"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/larus_ic_close_dialog"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

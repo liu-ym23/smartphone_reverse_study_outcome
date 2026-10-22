@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="66dp"
+    android:width="66dp"
+    android:viewportWidth="66"
+    android:viewportHeight="66">
+    <path
+        android:fillColor="@color/larus_realtime_call_bottom_new_mute_bg"
+        android:pathData="M0,33C0,14.775 14.775,0 33,0C51.225,0 66,14.775 66,33C66,51.225 51.225,66 33,66C14.775,66 0,51.225 0,33Z"/>
+    <path
+        android:fillColor="@color/larus_realtime_call_bottom_new_mute_bg_icon"
+        android:pathData="M27.167,26C27.167,22.778 29.778,20.167 33,20.167C36.222,20.167 38.833,22.778 38.833,26V31.25C38.833,34.472 36.222,37.083 33,37.083C29.778,37.083 27.167,34.472 27.167,31.25V26Z"/>
+    <path
+        android:fillColor="@color/larus_realtime_call_bottom_new_mute_bg_icon"
+        android:pathData="M23.667,29.5C24.311,29.5 24.833,30.023 24.833,30.667V31.25C24.833,35.761 28.49,39.417 33,39.417C37.51,39.417 41.167,35.761 41.167,31.25V30.667C41.167,30.023 41.689,29.5 42.333,29.5C42.978,29.5 43.5,30.023 43.5,30.667V31.25C43.5,36.655 39.417,41.106 34.167,41.686V44.667C34.167,45.311 33.644,45.834 33,45.834C32.356,45.834 31.833,45.311 31.833,44.667V41.686C26.583,41.106 22.5,36.655 22.5,31.25V30.667C22.5,30.023 23.022,29.5 23.667,29.5Z"
+        android:fillType="evenOdd"/>
+</vector>

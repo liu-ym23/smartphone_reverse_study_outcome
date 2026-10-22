@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:layout_width="36dp"
+    android:layout_height="51dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <View
+        android:id="@+id/landscape_icon_bg"
+        android:background="@drawable/ttlive_bg_selector_action_btn_gift"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignLeft="@+id/static_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/static_icon"/>
+    <View
+        android:id="@+id/static_icon"
+        android:background="@drawable/ttlive_selector_action_btn_gift_new"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/animated_icon"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="-15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:fadeDuration="0"/>
+    <View
+        android:id="@+id/view_red_dot"
+        android:background="@drawable/ttlive_ic_filter_red_point"
+        android:visibility="gone"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+package androidx.camera.core.impl;
+
+/* JADX INFO: loaded from: classes2.dex */
+final class AutoValue_StateObservable_ErrorWrapper extends StateObservable.ErrorWrapper {
+    private final Throwable error;
+
+    public int hashCode() {
+        return this.error.hashCode() ^ 1000003;
+    }
+
+    public String toString() {
+        return "ErrorWrapper{error=" + this.error + com.alipay.sdk.m.u.i.f25855d;
+    }
+
+    @Override // androidx.camera.core.impl.StateObservable.ErrorWrapper
+    public Throwable getError() {
+        return this.error;
+    }
+
+    public AutoValue_StateObservable_ErrorWrapper(Throwable r100) {
+        if (r100 == null) goto L7;
+        this.error = r100;
+        return;
+    L7:
+        throw new NullPointerException("Null error");
+    }
+
+    public boolean equals(Object r100) {
+        if (r100 != this) goto L6;
+        return true;
+    L6:
+        if ((r100 instanceof StateObservable.ErrorWrapper) == true) goto L8;
+        return false;
+    L8:
+        return this.error.equals(((StateObservable.ErrorWrapper) r100).getError());
+    }
+}

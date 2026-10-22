@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:insetRight="@dimen/dp_9">
+    <vector
+        android:height="20dp"
+        android:width="16dp"
+        android:viewportWidth="16"
+        android:viewportHeight="20">
+        <path
+            android:fillColor="@color/larus_neutral_100"
+            android:pathData="M8,18C12.418,18 16,14.418 16,10C16,5.582 12.418,2 8,2C3.582,2 0,5.582 0,10C0,14.418 3.582,18 8,18ZM12.243,8.669C12.613,8.258 12.58,7.626 12.169,7.257C11.759,6.887 11.126,6.921 10.757,7.331L7.045,11.455L5.781,9.875C5.436,9.444 4.807,9.374 4.375,9.719C3.944,10.064 3.874,10.693 4.219,11.125L6.219,13.625C6.403,13.854 6.678,13.991 6.971,14C7.265,14.008 7.547,13.887 7.743,13.669L12.243,8.669Z"
+            android:fillType="evenOdd"/>
+    </vector>
+</inset>

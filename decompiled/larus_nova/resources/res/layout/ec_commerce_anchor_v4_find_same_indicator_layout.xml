@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/ec_commerce_anchor_v4_find_same_indicator_layout_1204016995"
+    android:visibility="gone"
+    android:layout_width="208dp"
+    android:layout_height="40dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/find_same_indicator_item_1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        app:roundedCornerRadius="8dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/find_same_indicator_item_2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        app:roundedCornerRadius="8dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/find_same_indicator_item_3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        app:roundedCornerRadius="8dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ec_commerce_find_same_indicator_text"
+        android:layout_marginStart="4dp"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/commerce_anchor_v4_find_same_indicator_arrow"
+        android:layout_marginStart="8dp"/>
+</merge>

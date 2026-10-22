@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_container"
+    android:background="@color/larus_base_1_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@drawable/larus_community_creation_gradient_bg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_120"/>
+</FrameLayout>

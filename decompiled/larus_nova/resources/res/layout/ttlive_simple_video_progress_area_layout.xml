@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:id="@+id/current_play_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/video_progress_seekbar"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <com.bytedance.android.livesdk.chatroom.progressbar.ui.PlayerSeekBar
+        android:id="@+id/video_progress_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/total_video_time"
+        app:layout_constraintStart_toEndOf="@+id/current_play_time"
+        app:ttlive_background_progress_color="@color/ttlive_vs_progress_outer_stroke_color"
+        app:ttlive_measure_depend_on_dragging_radius="false"
+        app:ttlive_progress_height="3dp"
+        app:ttlive_round_point_style="true"
+        app:ttlive_secondary_progress_color="@color/transparent"
+        app:ttlive_thumb_outer_stroke_color="@color/ttlive_vs_progress_outer_stroke_color"
+        app:ttlive_thumb_radius="6dp"
+        app:ttlive_thumb_radius_on_dragging="6dp"
+        app:ttlive_track_color="@color/commonui_white"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:id="@+id/total_video_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/video_progress_seekbar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

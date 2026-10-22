@@ -1,0 +1,171 @@
+package com.obric.capabilitykit.common.intent;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.byted.cast.linkcommon.cybergarage.upnp.Argument;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\t\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B\u0011\u0012\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u0004¢\u0006\u0002\u0010\u0005J\u0010\u0010\n\u001a\u0004\u0018\u00010\u0004HÆ\u0003¢\u0006\u0002\u0010\u0007J\u001a\u0010\u000b\u001a\u00020\u00002\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u0004HÆ\u0001¢\u0006\u0002\u0010\fJ\t\u0010\r\u001a\u00020\u000eHÖ\u0001J\u0013\u0010\u000f\u001a\u00020\u00042\b\u0010\u0010\u001a\u0004\u0018\u00010\u0011HÖ\u0003J\t\u0010\u0012\u001a\u00020\u000eHÖ\u0001J\u0012\u0010\u0013\u001a\u00020\u00012\b\u0010\u0014\u001a\u0004\u0018\u00010\u0011H\u0016J\t\u0010\u0015\u001a\u00020\u0016HÖ\u0001J\u0019\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u000eHÖ\u0001R\u001e\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0086\u000e¢\u0006\u0010\n\u0002\u0010\t\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\u0005¨\u0006\u001c"}, d2 = {"Lcom/obric/capabilitykit/common/intent/OfficeKnowledgeAIAuthParams;", "Lcom/obric/capabilitykit/common/intent/IntentParams;", "Landroid/os/Parcelable;", "auth", "", "(Ljava/lang/Boolean;)V", "getAuth", "()Ljava/lang/Boolean;", "setAuth", "Ljava/lang/Boolean;", "component1", "copy", "(Ljava/lang/Boolean;)Lcom/obric/capabilitykit/common/intent/OfficeKnowledgeAIAuthParams;", "describeContents", "", "equals", "other", "", "hashCode", "mergeParams", "params", "toString", "", "writeToParcel", "", "parcel", "Landroid/os/Parcel;", "flags", "intentcommon_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+public final class OfficeKnowledgeAIAuthParams implements IntentParams, Parcelable {
+    public static final Parcelable.Creator<OfficeKnowledgeAIAuthParams> CREATOR = null;
+    private Boolean auth;
+
+    /* JADX INFO: loaded from: classes33.dex */
+    public static final class a implements Parcelable.Creator<OfficeKnowledgeAIAuthParams> {
+        public a() {
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public final OfficeKnowledgeAIAuthParams createFromParcel(Parcel r100) {
+            int r101 = r100.readInt();
+            Intrinsics.checkNotNullParameter(r100, "parcel");
+            int r102 = 1;
+            if (r100.readInt() != 0) goto L6;
+            Boolean r103 = null;
+        L10:
+            OfficeKnowledgeAIAuthParams r104 = new OfficeKnowledgeAIAuthParams(r103);
+            int r105 = Math.min(r101, 0);
+            ClassLoader r106 = a.class.getClassLoader();
+        L11:
+            if (r102 > r105) goto L13;
+            r102 = r102 + 1;
+        L13:
+            if (r102 > r101) goto L15;
+            joa.a.d(r100, r106);
+            r102 = r102 + 1;
+            goto L13
+        L15:
+            return r104;
+        L6:
+            if (r100.readInt() == 0) goto L8;
+            boolean r107 = true;
+        L9:
+            r103 = Boolean.valueOf(r107);
+            goto L10
+        L8:
+            r107 = false;
+            goto L9
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public final OfficeKnowledgeAIAuthParams[] newArray(int r100) {
+            return new OfficeKnowledgeAIAuthParams[r100];
+        }
+    }
+
+    static {
+        CREATOR = new a();
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public OfficeKnowledgeAIAuthParams() {
+        this(null, 1, 0 == true ? 1 : 0);
+    }
+
+    public static /* synthetic */ OfficeKnowledgeAIAuthParams copy$default(OfficeKnowledgeAIAuthParams r100, Boolean r101, int r102, Object r103) {
+        if ((r102 & 1) == 0) goto L6;
+        r101 = r100.auth;
+    L6:
+        return r100.copy(r101);
+    }
+
+    public final Boolean component1() {
+        return this.auth;
+    }
+
+    public final OfficeKnowledgeAIAuthParams copy(Boolean r100) {
+        return new OfficeKnowledgeAIAuthParams(r100);
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object r100) {
+        if (this != r100) goto L6;
+        return true;
+    L6:
+        if ((r100 instanceof OfficeKnowledgeAIAuthParams) == true) goto L9;
+        return false;
+    L9:
+        if (Intrinsics.areEqual(this.auth, ((OfficeKnowledgeAIAuthParams) r100).auth) == true) goto L11;
+        return false;
+    L11:
+        return true;
+    }
+
+    public String getSubActionValue() {
+        return null;
+    }
+
+    public int hashCode() {
+        Boolean r100 = this.auth;
+        if (r100 != null) goto L6;
+        return 0;
+    L6:
+        return r100.hashCode();
+    }
+
+    public boolean isParamsCompleted() {
+        return true;
+    }
+
+    public String toString() {
+        return "OfficeKnowledgeAIAuthParams(auth=" + this.auth + ')';
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v0, types: [android.os.Parcel, java.lang.Object] */
+    /* JADX WARN: Type inference failed for: r3v1 */
+    /* JADX WARN: Type inference failed for: r3v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v5 */
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel r100, int r101) {
+        ?? r102 = 0;
+        r100.writeInt(0);
+        Intrinsics.checkNotNullParameter(r100, Argument.OUT);
+        Boolean r103 = this.auth;
+        if (r103 != null) goto L5;
+    L4:
+        r100.writeInt(r102);
+        return;
+    L5:
+        r100.writeInt(1);
+        r102 = r103.booleanValue();
+        goto L4
+    }
+
+    public final Boolean getAuth() {
+        return this.auth;
+    }
+
+    public OfficeKnowledgeAIAuthParams(Boolean r100) {
+        this.auth = r100;
+    }
+
+    public IntentParams mergeParams(Object r100) {
+        if ((r100 instanceof OfficeKnowledgeAIAuthParams) == true) goto L5;
+        return this;
+    L5:
+        Boolean r101 = this.auth;
+        if (r101 != null) goto L9;
+        r101 = ((OfficeKnowledgeAIAuthParams) r100).auth;
+    L9:
+        return new OfficeKnowledgeAIAuthParams(r101);
+    }
+
+    public final void setAuth(Boolean r100) {
+        this.auth = r100;
+    }
+
+    public /* synthetic */ OfficeKnowledgeAIAuthParams(Boolean r100, int r101, DefaultConstructorMarker r102) {
+        if ((r101 & 1) == 0) goto L5;
+        r100 = null;
+    L5:
+        this(r100);
+    }
+}

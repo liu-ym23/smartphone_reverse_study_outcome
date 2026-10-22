@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:insetRight="@dimen/dp_9">
+    <layer-list>
+        <item
+            android:top="2dp"
+            android:bottom="2dp">
+            <vector
+                android:height="16dp"
+                android:width="16dp"
+                android:viewportWidth="16"
+                android:viewportHeight="16">
+                <path
+                    android:fillColor="@android:color/transparent"
+                    android:pathData="M8,8m-7.5,0a7.5,7.5 0,1 1,15 0a7.5,7.5 0,1 1,-15 0"
+                    android:strokeColor="@color/larus_neutral_30"
+                    android:strokeWidth="1"/>
+            </vector>
+        </item>
+    </layer-list>
+</inset>

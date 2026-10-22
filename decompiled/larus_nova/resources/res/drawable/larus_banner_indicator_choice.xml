@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/larus_dp_4"
+    android:width="@dimen/larus_dp_5"
+    android:viewportWidth="5"
+    android:viewportHeight="4">
+    <path
+        android:fillColor="@color/larus_static_white"
+        android:pathData="M2.5,2m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
+</vector>

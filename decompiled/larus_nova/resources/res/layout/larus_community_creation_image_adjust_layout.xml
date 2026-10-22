@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/image_view_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_view_reference"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_10"
+        android:layout_marginEnd="?attr/larus_dp_12"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_header"
+        app:layout_constraintTop_toTopOf="@+id/image_view_header"
+        app:roundedCornerRadius="?attr/larus_dp_12"
+        app:roundingBorderColor="@color/static_white_transparent_4"
+        app:roundingBorderWidth="?attr/larus_dp_1"/>
+    <ImageView
+        android:id="@+id/video_play_icon_view"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_20"
+        android:layout_height="?attr/larus_dp_20"
+        android:layout_marginTop="?attr/larus_dp_8"
+        android:src="@drawable/larus_community_ic_video_icon"
+        android:layout_marginEnd="?attr/larus_dp_8"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_header"
+        app:layout_constraintTop_toTopOf="@+id/image_view_header"/>
+</merge>

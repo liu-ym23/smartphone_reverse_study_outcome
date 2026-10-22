@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/create_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_18">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/sp_16"
+            android:layout_height="@dimen/sp_16"
+            android:tint="@color/icon_n3"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            app:srcCompat="@drawable/ud_icon_add_middle_outlined"/>
+        <TextView
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/text_caption"
+            android:layout_gravity="center"
+            android:id="@+id/create_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Todo_ManageTaskList_CreateList_Button"
+            android:singleLine="true"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/divide_line"
+        android:background="@color/line_divider_default"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"/>
+</LinearLayout>

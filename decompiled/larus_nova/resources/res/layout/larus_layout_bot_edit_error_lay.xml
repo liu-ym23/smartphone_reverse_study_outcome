@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/error_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="?attr/larus_sp_16"
+        android:textStyle="bold"
+        android:textColor="@color/larus_neutral_100"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_chat_list_load_failed"
+        android:drawableTop="@drawable/larus_ugc_bot_arrow_clockwise"
+        android:drawablePadding="?attr/larus_dp_12"/>
+</FrameLayout>

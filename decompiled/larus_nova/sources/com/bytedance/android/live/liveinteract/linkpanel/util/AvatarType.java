@@ -1,0 +1,42 @@
+package com.bytedance.android.live.liveinteract.linkpanel.util;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes46.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\b\n\u0002\b\b\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\t¨\u0006\n"}, d2 = {"Lcom/bytedance/android/live/liveinteract/linkpanel/util/AvatarType;", "", "", "value", "I", "getValue", "()I", "AVATAR_THUMB", "AVATAR_MEDIUM", "AVATAR_LARGE", "multilink-business-platform_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final enum AvatarType extends Enum<AvatarType> {
+    public static final AvatarType AVATAR_LARGE = null;
+    public static final AvatarType AVATAR_MEDIUM = null;
+    public static final AvatarType AVATAR_THUMB = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ AvatarType[] f75012a = null;
+    private final int value;
+
+    static {
+        AvatarType r100 = new AvatarType("AVATAR_THUMB", 0, 1);
+        AVATAR_THUMB = r100;
+        AvatarType r101 = new AvatarType("AVATAR_MEDIUM", 1, 2);
+        AVATAR_MEDIUM = r101;
+        AvatarType r102 = new AvatarType("AVATAR_LARGE", 2, 3);
+        AVATAR_LARGE = r102;
+        f75012a = new AvatarType[]{r100, r101, r102};
+    }
+
+    public static AvatarType valueOf(String r100) {
+        return (AvatarType) r27.a.a(AvatarType.class, r100);
+    }
+
+    public static AvatarType[] values() {
+        return (AvatarType[]) f75012a.clone();
+    }
+
+    public final int getValue() {
+        return this.value;
+    }
+
+    public AvatarType(String r100, int r101, int r102) {
+        super(r100, r101);
+        this.value = r102;
+    }
+}

@@ -1,0 +1,145 @@
+package org.bouncycastle.pqc.crypto.mceliece;
+
+import java.security.SecureRandom;
+import org.bouncycastle.crypto.CipherParameters;
+import org.bouncycastle.crypto.CryptoServicesRegistrar;
+import org.bouncycastle.crypto.Digest;
+import org.bouncycastle.crypto.InvalidCipherTextException;
+import org.bouncycastle.crypto.digests.SHA1Digest;
+import org.bouncycastle.crypto.params.ParametersWithRandom;
+import org.bouncycastle.crypto.prng.DigestRandomGenerator;
+import org.bouncycastle.pqc.crypto.MessageEncryptor;
+import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
+import org.bouncycastle.pqc.math.linearalgebra.GF2Vector;
+
+/* JADX INFO: loaded from: classes42.dex */
+public class McElieceFujisakiCipher implements MessageEncryptor {
+    private static final String DEFAULT_PRNG_NAME = "SHA1PRNG";
+    public static final String OID = "1.3.6.1.4.1.8301.3.1.3.4.2.1";
+    private boolean forEncryption;
+
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    private int f525553k;
+    McElieceCCA2KeyParameters key;
+    private Digest messDigest;
+
+    /* JADX INFO: renamed from: n, reason: collision with root package name */
+    private int f525554n;
+
+    /* JADX INFO: renamed from: sr, reason: collision with root package name */
+    private SecureRandom f525555sr;
+
+    /* JADX INFO: renamed from: t, reason: collision with root package name */
+    private int f525556t;
+
+    public McElieceFujisakiCipher() {
+    }
+
+    private void initCipherDecrypt(McElieceCCA2PrivateKeyParameters r100) {
+        this.messDigest = Utils.getDigest(r100.getDigest());
+        this.f525554n = r100.getN();
+        this.f525556t = r100.getT();
+    }
+
+    private void initCipherEncrypt(McElieceCCA2PublicKeyParameters r100) {
+        this.messDigest = Utils.getDigest(r100.getDigest());
+        this.f525554n = r100.getN();
+        this.f525553k = r100.getK();
+        this.f525556t = r100.getT();
+    }
+
+    public int getKeySize(McElieceCCA2KeyParameters r100) throws IllegalArgumentException {
+        if ((r100 instanceof McElieceCCA2PublicKeyParameters) == false) goto L7;
+        return ((McElieceCCA2PublicKeyParameters) r100).getN();
+    L7:
+        if ((r100 instanceof McElieceCCA2PrivateKeyParameters) == false) goto L11;
+        return ((McElieceCCA2PrivateKeyParameters) r100).getN();
+    L11:
+        throw new IllegalArgumentException("unsupported type");
+    }
+
+    @Override // org.bouncycastle.pqc.crypto.MessageEncryptor
+    public void init(boolean r100, CipherParameters r101) {
+        this.forEncryption = r100;
+        if (r100 == true) goto L5;
+        McElieceCCA2PrivateKeyParameters r102 = (McElieceCCA2PrivateKeyParameters) r101;
+        this.key = r102;
+        initCipherDecrypt(r102);
+        return;
+    L5:
+        if ((r101 instanceof ParametersWithRandom) == false) goto L7;
+        ParametersWithRandom r103 = (ParametersWithRandom) r101;
+        this.f525555sr = r103.getRandom();
+        McElieceCCA2PublicKeyParameters r104 = (McElieceCCA2PublicKeyParameters) r103.getParameters();
+        this.key = r104;
+        initCipherEncrypt(r104);
+        return;
+    L7:
+        this.f525555sr = CryptoServicesRegistrar.getSecureRandom();
+        McElieceCCA2PublicKeyParameters r105 = (McElieceCCA2PublicKeyParameters) r101;
+        this.key = r105;
+        initCipherEncrypt(r105);
+    }
+
+    @Override // org.bouncycastle.pqc.crypto.MessageEncryptor
+    public byte[] messageDecrypt(byte[] r100) throws InvalidCipherTextException {
+        if (this.forEncryption == true) goto L13;
+        int r101 = (this.f525554n + 7) >> 3;
+        int r102 = r100.length - r101;
+        byte[][] r103 = ByteUtils.split(r100, r101);
+        byte[] r104 = r103[0];
+        byte[] r105 = r103[1];
+        GF2Vector r106 = GF2Vector.OS2VP(this.f525554n, r104);
+        GF2Vector[] r107 = McElieceCCA2Primitives.decryptionPrimitive((McElieceCCA2PrivateKeyParameters) this.key, r106);
+        byte[] r108 = r107[0].getEncoded();
+        GF2Vector r109 = r107[1];
+        DigestRandomGenerator r110 = new DigestRandomGenerator(new SHA1Digest());
+        r110.addSeedMaterial(r108);
+        byte[] r111 = new byte[r102];
+        r110.nextBytes(r111);
+        int r112 = 0;
+    L5:
+        if (r112 >= r102) goto L7;
+        r111[r112] = (byte) (r111[r112] ^ r105[r112]);
+        r112 = r112 + 1;
+        goto L5
+    L7:
+        byte[] r113 = ByteUtils.concatenate(r108, r111);
+        byte[] r114 = new byte[this.messDigest.getDigestSize()];
+        this.messDigest.update(r113, 0, r113.length);
+        this.messDigest.doFinal(r114, 0);
+        if (Conversions.encode(this.f525554n, this.f525556t, r114).equals(r109) == false) goto L11;
+        return r111;
+    L11:
+        throw new InvalidCipherTextException("Bad Padding: invalid ciphertext");
+    L13:
+        throw new IllegalStateException("cipher initialised for decryption");
+    }
+
+    @Override // org.bouncycastle.pqc.crypto.MessageEncryptor
+    public byte[] messageEncrypt(byte[] r100) {
+        if (this.forEncryption == false) goto L11;
+        GF2Vector r101 = new GF2Vector(this.f525553k, this.f525555sr);
+        byte[] r102 = r101.getEncoded();
+        byte[] r103 = ByteUtils.concatenate(r102, r100);
+        int r104 = 0;
+        this.messDigest.update(r103, 0, r103.length);
+        byte[] r105 = new byte[this.messDigest.getDigestSize()];
+        this.messDigest.doFinal(r105, 0);
+        GF2Vector r106 = Conversions.encode(this.f525554n, this.f525556t, r105);
+        byte[] r107 = McElieceCCA2Primitives.encryptionPrimitive((McElieceCCA2PublicKeyParameters) this.key, r101, r106).getEncoded();
+        DigestRandomGenerator r108 = new DigestRandomGenerator(new SHA1Digest());
+        r108.addSeedMaterial(r102);
+        byte[] r109 = new byte[r100.length];
+        r108.nextBytes(r109);
+    L6:
+        if (r104 >= r100.length) goto L9;
+        r109[r104] = (byte) (r109[r104] ^ r100[r104]);
+        r104 = r104 + 1;
+        goto L6
+    L9:
+        return ByteUtils.concatenate(r107, r109);
+    L11:
+        throw new IllegalStateException("cipher initialised for decryption");
+    }
+}

@@ -1,0 +1,25 @@
+package com.alipay.sdk.m.q;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes28.dex */
+public class c extends com.alipay.sdk.m.p.e {
+    @Override // com.alipay.sdk.m.p.e
+    public String b() {
+        return "5.0.0";
+    }
+
+    @Override // com.alipay.sdk.m.p.e
+    public boolean c() {
+        return true;
+    }
+
+    @Override // com.alipay.sdk.m.p.e
+    public JSONObject a() throws JSONException {
+        return com.alipay.sdk.m.p.e.a("cashier", "gentid");
+    }
+
+    public c() {
+    }
+}

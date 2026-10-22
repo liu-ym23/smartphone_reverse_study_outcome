@@ -1,0 +1,51 @@
+{
+  "dsl_version": "2.0.0",
+  "node_name": "Lite Bind Device Page",
+  "node_type": "page",
+  "node_key": "device_list",
+  "nodes": [
+    {
+      "node_type": "nav_bar",
+      "template_type": "only_back",
+      "config": {}
+    },
+    {
+      "node_type": "layer",
+      "nodes": [
+        {
+          "node_name": "Lite Bind Device Card",
+          "node_type": "card",
+          "template_type": "bind_device",
+          "config": {
+            "title": {
+              "type": "string_type",
+              "value": "dora_other_smart_bind_device_title_cn"
+            },
+            "desc": {
+              "type": "string_type",
+              "value": "larus_dora_other_smart_bind_device_desc_sax_cn"
+            },
+            "image_link": {
+              "remote_info": {
+                "light_url": [
+                  "https://p3-starweave-source.byteimg.com/h_onboarding/image_dora_h_bind_device_simple_light_v3.png"
+                ]
+              }
+            },
+            "bind_button_info": {
+              "title": {
+                "type": "string_type",
+                "value": "dora_bind_device_button_title_cn"
+              },
+              "action": {
+                "action_type": "internal_jump",
+                "action_url": "sslocal://flow/dora/onboarding_found?product_id=-1",
+                "action_data": { }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

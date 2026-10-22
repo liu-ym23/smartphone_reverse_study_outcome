@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/search_filter_panel_chip_container"
+    android:background="@drawable/bg_search_filter_chip"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="3dp"
+    android:paddingStart="?attr/larus_dp_10">
+    <TextView
+        android:textSize="?attr/larus_dp_14"
+        android:textColor="@color/larus_primary_50"
+        android:gravity="center"
+        android:id="@+id/search_filter_panel_chip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/search_filter_panel_chip_right_icon"
+        android:background="@drawable/larus_icon_chevron_left_bold_fill"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_12"
+        android:layout_height="?attr/larus_dp_12"
+        android:layout_marginEnd="-2dp"
+        android:backgroundTint="@color/primary_transparent_4"/>
+    <View
+        android:id="@+id/search_filter_panel_chip_right_padding"
+        android:layout_width="?attr/larus_dp_10"
+        android:layout_height="match_parent"/>
+</LinearLayout>

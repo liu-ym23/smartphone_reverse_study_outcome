@@ -1,0 +1,46 @@
+{
+    "scene": 8,
+    "ui_layout": 63,
+    "sei_ver": 36,
+    "spatial_id": 6,
+    "scale": 2,
+    "align": 5,
+    "adjust_map": {
+        "android" : {
+            "ui_container":{
+                "top":0,
+                "left":0,
+                "bottom":0,
+                "right":0
+            }
+        },
+        "ios": {
+            "ui_container":{
+                "top":0,
+                "left":0,
+                "bottom":0,
+                "right":0
+            }
+        }
+    },
+    "canvas": {
+        "w": 360,
+        "h": 640
+    },
+    "content": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 640
+    },
+    "regions": [
+        {
+            "z": 0,
+            "p": 0,
+            "x": 0,
+            "y": 0,
+            "w": 360,
+            "h": 640
+        }
+    ]
+}

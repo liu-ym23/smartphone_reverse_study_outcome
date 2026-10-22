@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="56dp"
+    android:width="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+    <path
+        android:fillColor="@color/BGCard2"
+        android:pathData="M28,0L28,0A28,28 0,0 1,56 28L56,28A28,28 0,0 1,28 56L28,56A28,28 0,0 1,0 28L0,28A28,28 0,0 1,28 0z"/>
+    <path
+        android:fillColor="@color/Secondary2"
+        android:pathData="M20.125,25.2C21.575,25.2 22.75,23.79 22.75,22.05C22.75,20.31 21.575,18.9 20.125,18.9C18.675,18.9 17.5,20.31 17.5,22.05C17.5,23.79 18.675,25.2 20.125,25.2Z"/>
+    <path
+        android:fillColor="@color/Secondary2"
+        android:pathData="M17.9,35.828C20.356,33.043 23.997,31.288 28.044,31.288C32.101,31.288 35.749,33.051 38.205,35.847C38.886,36.621 38.809,37.8 38.035,38.481C37.261,39.161 36.081,39.085 35.401,38.311C33.638,36.305 31.004,35.022 28.044,35.022C25.091,35.022 22.463,36.299 20.7,38.297C20.018,39.07 18.838,39.144 18.065,38.462C17.292,37.78 17.218,36.601 17.9,35.828Z"/>
+    <path
+        android:fillColor="@color/Secondary2"
+        android:pathData="M38.46,22.05C38.46,23.79 37.285,25.2 35.835,25.2C34.385,25.2 33.21,23.79 33.21,22.05C33.21,20.31 34.385,18.9 35.835,18.9C37.285,18.9 38.46,20.31 38.46,22.05Z"/>
+</vector>

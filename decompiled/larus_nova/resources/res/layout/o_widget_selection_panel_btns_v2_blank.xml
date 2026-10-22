@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/oui_p_sheet"
+    android:paddingTop="8dp"
+    android:paddingRight="@dimen/oui_p_sheet"
+    android:paddingBottom="@dimen/oui_p_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

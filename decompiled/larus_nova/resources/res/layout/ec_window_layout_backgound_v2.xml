@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/ec_window_header_bg_second_part_opt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/ec_window_header_bg_pic_opt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutMode="height_self_adjust"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/ec_window_header_transition_mask_opt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ec_window_header_bg_pic_opt"
+        app:layout_constraintLeft_toLeftOf="@+id/ec_window_header_bg_pic_opt"
+        app:layout_constraintRight_toRightOf="@+id/ec_window_header_bg_pic_opt"
+        app:layout_constraintTop_toTopOf="@+id/ec_window_header_bg_pic_opt"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ec_window_cropped_hint"
+        android:visibility="gone"
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="@color/commerce_color_33FFFFFF"
+        app:cardCornerRadius="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

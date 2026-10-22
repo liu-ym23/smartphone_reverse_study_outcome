@@ -1,0 +1,8 @@
+package org.bouncycastle.crypto;
+
+/* JADX INFO: loaded from: classes42.dex */
+public class OutputLengthException extends DataLengthException {
+    public OutputLengthException(String r100) {
+        super(r100);
+    }
+}

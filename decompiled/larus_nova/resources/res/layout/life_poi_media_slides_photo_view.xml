@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_slides_photo_view_606371623"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.viewpager2.widget.ViewPager2
+        android:orientation="horizontal"
+        android:id="@+id/poi_slide_photo_pager"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"/>
+    <View
+        android:layout_gravity="bottom"
+        android:id="@+id/poi_slides_photo_bottom_mask"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
+    <com.bytedance.locallife.poi.media.photo.PoiSlidesPhotosProgressBar
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:id="@+id/poi_slide_photo_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"/>
+</FrameLayout>

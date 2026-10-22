@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/screen_shot_dialog_root_view"
+    android:background="@drawable/ttlive_screenshot_dialog_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#ffc4c4c4"
+        android:gravity="start"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/ttlive_screen_shot_tips"
+        android:layout_marginStart="17dp"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginStart="17dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/screen_shot_img"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            app:roundedCornerRadius="2dp"/>
+        <View
+            android:id="@+id/divider_line"
+            android:background="#14ffffff"
+            android:layout_width="0.5dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="21dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/screen_shot_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

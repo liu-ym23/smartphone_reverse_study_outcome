@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:textColorPrimary="@color/red_6_30">
+    <PreferenceCategory android:title="Chameleon调试设置">
+        <EditTextPreference
+            android:title="打开任意url"
+            android:key="open_url"
+            android:dialogTitle="输入url"
+            android:inputType="textUri"/>
+        <Preference
+            android:title="前端网络代理"
+            android:key="cml_debug_ip_proxy"
+            android:summary="设置bizName和调试地址"/>
+        <SwitchPreference
+            android:title="禁用前端代理"
+            android:key="cml_debug_disable_ip_proxy"/>
+        <Preference
+            android:title="scm：指定离线资源"
+            android:key="cml_debug_offline_res_info"/>
+        <Preference
+            android:title="tos：指定离线资源"
+            android:key="cml_debug_offline_res_info_tos"/>
+        <SwitchPreference
+            android:title="禁用指定资源包"
+            android:key="cml_debug_disable_offline_res"/>
+        <Preference
+            android:title="配置header下载鉴权"
+            android:key="cml_debug_header_auth"
+            android:summary="注：scm下载离线资源需填写"/>
+        <SwitchPreference
+            android:title="不显示调试信息"
+            android:key="cml_debug_disable_debug_info_view"/>
+    </PreferenceCategory>
+</PreferenceScreen>

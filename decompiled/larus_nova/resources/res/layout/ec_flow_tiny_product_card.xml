@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ec.core.widget.RoundedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/commerce_color_FFFFFF"
+    android:paddingLeft="12dp"
+    android:paddingTop="12dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="13dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:rounded_radius="10dp">
+    <com.bytedance.android.shopping.feed.widget.FlowTinyProductView
+        android:id="@+id/tiny_product_card_tiny_product_view"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"/>
+    <com.bytedance.android.shopping.feed.view.InflowFeedCommentView
+        android:id="@+id/tiny_product_card_comment_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <com.bytedance.android.shopping.feed.view.bottombar.InflowFeedBottomBarView
+        android:id="@+id/tiny_product_card_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="13.5dp"/>
+</com.bytedance.android.ec.core.widget.RoundedLinearLayout>

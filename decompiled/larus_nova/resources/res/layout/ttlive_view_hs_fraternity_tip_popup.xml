@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:background="@drawable/ttlive_bg_hs_fraternity_tip"
+        android:layout_width="172dp"
+        android:layout_height="34dp">
+        <View
+            android:layout_gravity="end|top"
+            android:background="@drawable/ttlive_hs_fraternity_tip_stars"
+            android:layout_width="22dp"
+            android:layout_height="16dp"/>
+        <TextView
+            android:textSize="13dp"
+            android:textColor="#e6ffffff"
+            android:gravity="center"
+            android:id="@+id/tv_fraternity_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"/>
+    </FrameLayout>
+    <View
+        android:background="@drawable/ttlive_hs_fraternity_tip_arrow"
+        android:layout_width="12dp"
+        android:layout_height="6dp"/>
+</LinearLayout>

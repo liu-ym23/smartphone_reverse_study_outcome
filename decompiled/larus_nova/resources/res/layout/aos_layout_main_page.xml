@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/stub_container"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.awemeopen.apps.framework.feed.follow.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:background="@color/ConstBGInverse"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"/>
+    <com.bytedance.awemeopen.apps.framework.feed.follow.MainTabStripScrollView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/stub_tab_scroll_view"
+        android:visibility="gone"
+        android:scrollbars="none"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:overScrollMode="never"
+        android:requiresFadingEdge="horizontal"/>
+</FrameLayout>

@@ -1,0 +1,54 @@
+package com.larus.bmhome.collection;
+
+import by7.e;
+import com.larus.im.bean.message.Message;
+import com.larus.network.http.a;
+import com.larus.platform.model.CancelCollectionResponse;
+import com.larus.platform.model.SaveCollectionResponse;
+import com.ss.android.ugc.aweme.framework.services.ServiceManager;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes26.dex */
+@Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J-\u0010\u0004\u001a\u00020\u00052\b\u0010\u0006\u001a\u0004\u0018\u00010\u00072\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u00072\b\u0010\n\u001a\u0004\u0018\u00010\u000bH\u0096\u0001JQ\u0010\f\u001a\u00020\u00052\u000e\u0010\r\u001a\n\u0012\u0004\u0012\u00020\u000f\u0018\u00010\u000e2\u0010\u0010\u0010\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0012\u0018\u00010\u00112\u0006\u0010\u0013\u001a\u00020\u00072\b\u0010\t\u001a\u0004\u0018\u00010\u00072\b\u0010\u0014\u001a\u0004\u0018\u00010\u00072\b\u0010\u0015\u001a\u0004\u0018\u00010\u0016H\u0096\u0001J[\u0010\u0017\u001a\u00020\u00052\u000e\u0010\u0018\u001a\n\u0012\u0004\u0012\u00020\u0019\u0018\u00010\u000e2\u0010\u0010\u0010\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0012\u0018\u00010\u00112\u0006\u0010\u0013\u001a\u00020\u00072\b\u0010\u0014\u001a\u0004\u0018\u00010\u00072\b\u0010\u001a\u001a\u0004\u0018\u00010\u00072\b\u0010\u001b\u001a\u0004\u0018\u00010\u00072\b\u0010\n\u001a\u0004\u0018\u00010\u000bH\u0096\u0001¨\u0006\u001c"}, d2 = {"Lcom/larus/bmhome/collection/CollectionReportDelegate;", "Lcom/larus/bmhome/collection/ICollectionReport;", "<init>", "()V", "clickButton", "", "collectionId", "", "buttonName", "followingOtherAction", "trackNode", "Lcom/ixigua/lib/track/ITrackNode;", "messageCollect", "collectResult", "Lcom/larus/network/http/Async;", "Lcom/larus/platform/model/SaveCollectionResponse;", "messages", "", "Lcom/larus/im/bean/message/Message;", "clickFrom", "currentPage", "traceInfo", "Lorg/json/JSONObject;", "messageCollectCancel", "collectCancelResult", "Lcom/larus/platform/model/CancelCollectionResponse;", "botId", "conversationId", "api_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class CollectionReportDelegate implements ICollectionReport {
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public static final CollectionReportDelegate f310657b = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ ICollectionReport f310658a;
+
+    static {
+        f310657b = new CollectionReportDelegate();
+    }
+
+    @Override // com.larus.bmhome.collection.ICollectionReport
+    public final void a(String r100, String r101, String r102, e r103) {
+        Intrinsics.checkNotNullParameter(r101, "buttonName");
+        Intrinsics.checkNotNullParameter(r102, "followingOtherAction");
+        this.f310658a.a(r100, r101, r102, r103);
+    }
+
+    @Override // com.larus.bmhome.collection.ICollectionReport
+    public final void b(a<CancelCollectionResponse> r110, List<Message> r111, String r112, String r113, String r114, String r115, e r116) {
+        Intrinsics.checkNotNullParameter(r112, "clickFrom");
+        this.f310658a.b(r110, r111, r112, r113, r114, r115, r116);
+    }
+
+    @Override // com.larus.bmhome.collection.ICollectionReport
+    public final void c(a<SaveCollectionResponse> r100, List<Message> r110, String r111, String r112, String r113, JSONObject r114) {
+        Intrinsics.checkNotNullParameter(r111, "clickFrom");
+        this.f310658a.c(r100, r110, r111, r112, r113, r114);
+    }
+
+    private CollectionReportDelegate() {
+        ICollectionReport r100 = (ICollectionReport) ServiceManager.get().getService(ICollectionReport.class);
+        if (r100 != null) goto L5;
+        r100 = new CollectionReportNoop();
+    L5:
+        this.f310658a = r100;
+    }
+}

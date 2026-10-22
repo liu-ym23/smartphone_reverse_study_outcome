@@ -1,0 +1,20 @@
+package com.story.ai.biz.comment.model;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes38.dex */
+@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\b\u0010\u0004\u001a\u00020\u0005H\u0016¨\u0006\u0006"}, d2 = {"Lcom/story/ai/biz/comment/model/EmptyItem;", "Lcom/story/ai/biz/comment/model/CommentSection;", "<init>", "()V", "getCommentItemType", "Lcom/story/ai/biz/comment/model/CommentSection$CommentItemType;", "impl_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class EmptyItem implements CommentSection {
+    public EmptyItem() {
+    }
+
+    @Override // com.story.ai.biz.comment.model.CommentSection
+    public boolean isLoadingOrEmptyOrFail() {
+        return CommentSection.a.a(this);
+    }
+
+    @Override // com.story.ai.biz.comment.model.CommentSection
+    public CommentSection.CommentItemType getCommentItemType() {
+        return CommentSection.CommentItemType.EMPTY;
+    }
+}

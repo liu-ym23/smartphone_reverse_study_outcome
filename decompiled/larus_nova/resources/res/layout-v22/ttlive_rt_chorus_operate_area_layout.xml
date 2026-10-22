@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setting_container"
+        android:layout_width="28dp"
+        android:layout_height="28dp">
+        <ImageView
+            android:id="@+id/setting_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ttlive_icon_setting"/>
+        <TextView
+            android:textSize="10dp"
+            android:textColor="#ffffff"
+            android:id="@+id/chorus_setting_red_dot"
+            android:background="@drawable/ttlive_real_time_chorus_red_dot_bg"
+            android:visibility="gone"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:lineHeight="14dp"
+            android:textFontWeight="500"
+            app:layout_constraintRight_toRightOf="@+id/setting_iv"
+            app:layout_constraintTop_toTopOf="@+id/setting_iv"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

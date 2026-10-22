@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="8dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_preview_selector_view"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:roundedCornerRadius="4dp"
+        app:roundingBorderColor="#1f161823"
+        app:roundingBorderWidth="0.5dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="end|top"
+        android:id="@+id/item_preview_selector_delete"
+        android:background="@drawable/larus_tools_media_import_bg_mixed_item_delete"
+        android:padding="3dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/larus_flow_media_import_icon_mixed_item_delete"/>
+    <View
+        android:layout_gravity="end|top"
+        android:id="@+id/item_preview_selector_delete_layout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/item_preview_selector_duration"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:shadowColor="#4c000000"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginEnd="4dp"
+        style="@style/tools_font_size_24"/>
+    <View
+        android:id="@+id/item_preview_selector_border"
+        android:background="?attr/larus_tools_media_import_bg_mixed_item_selected_border"
+        android:visibility="gone"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+</FrameLayout>

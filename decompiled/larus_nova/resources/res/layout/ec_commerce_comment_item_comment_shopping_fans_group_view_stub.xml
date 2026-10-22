@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/shopping_fans_group_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/comment_ic_shopping_fans_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layoutMode="self_adjust_3X"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/commerce_color_FFFFFF"
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/comment_shopping_fans_group_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4.5dp"/>
+</FrameLayout>

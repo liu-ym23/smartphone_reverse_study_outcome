@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.shadow.ShadowLinearLayout
+        android:gravity="center_vertical"
+        android:id="@+id/shadow"
+        android:background="@color/bg_body"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/toolbar_item_horizontal_height"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:borderColor="@color/line_border_card"
+        app:borderWidth="1dp"
+        app:radius="8dp"
+        app:shadowAlpha="0.4"
+        app:shadowElevation="4dp"
+        app:showBorderOnlyBeforeL="false">
+        <FrameLayout
+            android:id="@+id/fl_transition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/rv_font_size"
+                android:clipToPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </com.bytedance.ee.bear.shadow.ShadowLinearLayout>
+</FrameLayout>

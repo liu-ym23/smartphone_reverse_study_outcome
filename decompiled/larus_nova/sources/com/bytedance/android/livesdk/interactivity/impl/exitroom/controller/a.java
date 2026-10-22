@@ -1,0 +1,52 @@
+package com.bytedance.android.livesdk.interactivity.impl.exitroom.controller;
+
+import android.os.Handler;
+import android.os.Looper;
+import android.view.View;
+import com.bytedance.crash.d;
+import com.obric.assistant.interaction.impl.window.helpers.DialogLancet;
+
+/* JADX INFO: loaded from: classes9.dex */
+public final class a implements View.OnClickListener {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ mp2.a f137010a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public final /* synthetic */ Runnable f137011b;
+
+    public a(mp2.a r100, Runnable r101) {
+        this.f137010a = r100;
+        this.f137011b = r101;
+    }
+
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View r100) {
+        mp2.a r101 = this.f137010a;
+        Handler r102 = DialogLancet.resolveDialogHandler(r101);
+        if (r102 != null) goto L5;
+    L7:
+        DialogLancet.beforeDialogDismiss(r101);
+        r101.dismiss();     // Catch: Throwable -> L10 Exception -> L12
+    L16:
+        DialogLancet.afterDialogDismiss(r101);
+    L17:
+        this.f137011b.run();
+        return;
+    L10:
+        th = move-exception;
+        DialogLancet.afterDialogDismiss(r101);
+        throw th;
+    L12:
+        e = move-exception;
+        d.d(e, "DIALOG_DISMISS_EXCEPTION");     // Catch: Throwable -> L10
+        Throwable r103 = DialogLancet.sLastShowStack;     // Catch: Throwable -> L10
+        if (r103 == null) goto L16;
+        d.d(r103, "DIALOG_SHOW_STACK_TRACE");     // Catch: Throwable -> L10
+        goto L16
+    L5:
+        if (Looper.myLooper() == r102.getLooper()) goto L7;
+        r102.post(DialogLancet.createDismissRunnable(r101));
+        goto L17
+    }
+}

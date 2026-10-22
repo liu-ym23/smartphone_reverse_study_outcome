@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dy_brand_loading_view_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ll_dy_brand_loading"
+        android:background="@drawable/dypay_bg_loading_view"
+        android:paddingTop="20dp"
+        android:layout_width="124dp"
+        android:layout_height="120dp">
+        <ImageView
+            android:id="@+id/dy_brand_loading_iv_logo"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/dypay_icon_loading_breathe_default"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="#e6ffffff"
+            android:id="@+id/dy_brand_loading_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/dypay_dy_pay"/>
+        <TextView
+            android:textSize="11dp"
+            android:textColor="#99ffffff"
+            android:id="@+id/dy_brand_loading_sub_message"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+</FrameLayout>

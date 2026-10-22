@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.gift.platform.business.dialog.v2.view.LiveGiftViewPagerContainer
+        android:id="@+id/view_pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ttlive_gift_list_widget_height_v1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.bytedance.android.livesdk.gift.platform.business.dialog.v3.mviview.adapter.GiftViewPager
+            android:id="@+id/gift_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.bytedance.android.livesdk.gift.platform.business.dialog.v2.view.LiveGiftViewPagerContainer>
+    <ImageView
+        android:id="@+id/mask_view"
+        android:background="@drawable/ttlive_gift_vertical_list_mask"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_pager_container"/>
+    <ImageView
+        android:id="@+id/mask_view_bottom"
+        android:background="@drawable/ttlive_gift_vertical_list_bottom_mask"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_pager_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

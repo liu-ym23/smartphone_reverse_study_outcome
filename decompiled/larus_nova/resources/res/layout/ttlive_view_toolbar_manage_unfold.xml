@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ttlive_selector_action_anchor_room_manage_unfolded"/>
+    <View
+        android:id="@+id/red_dot"
+        android:background="@drawable/ttlive_ic_filter_red_point"
+        android:visibility="gone"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="2dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

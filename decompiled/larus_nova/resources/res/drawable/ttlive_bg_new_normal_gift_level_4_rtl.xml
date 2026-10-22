@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:startColor="@color/ttlive_bg_new_normal_gift_level_4_end"
+        android:endColor="@color/ttlive_bg_new_normal_gift_level_4_start"
+        android:angle="0"/>
+    <corners android:radius="@dimen/ttlive_gift_anim_bg_radius"/>
+</shape>

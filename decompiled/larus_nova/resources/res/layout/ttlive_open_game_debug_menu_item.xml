@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="57dp">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_black"
+        android:gravity="center"
+        android:id="@+id/title"
+        android:background="@color/commonui_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1px"
+        android:text="@string/ttlive_open_game_debug_menu_others"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.SwitchCompat
+        android:gravity="center"
+        android:id="@+id/switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:thumbTint="@color/ttlive_open_game_debug_switch_thumb"
+        app:trackTint="@color/ttlive_open_game_debug_switch_trace"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

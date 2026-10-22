@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/page_card_container"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/slice_page_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/hybrid_page_status_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:layout_gravity="end|bottom"
+        android:id="@+id/ec_hybrid_float_go_top"
+        android:background="@drawable/ec_store_ic_go_top_round"
+        android:visibility="gone"
+        android:layout_width="64sp"
+        android:layout_height="64sp"
+        android:layout_marginBottom="86sp"/>
+</FrameLayout>

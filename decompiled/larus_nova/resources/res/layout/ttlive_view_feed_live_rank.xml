@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headlines_flipper"
+    android:background="@color/ttlive_hs_s13"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:inAnimation="@anim/ttlive_slide_in_bottom"
+    android:outAnimation="@anim/ttlive_slide_out_top"/>

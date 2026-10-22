@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.ktvimpl.ktvroom.view.KtvMidiContainerConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.ktvimpl.ktvroom.view.midi.KtvComponentMidiView
+        android:id="@+id/ktv_mv_midi_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ttlive_ktv_component_new_midi_height"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ViewStub
+        android:layout_gravity="center"
+        android:id="@+id/ktv_song_end_feed_back_view_v2"
+        android:layout="@layout/ttlive_ktv_sing_end_feedback_container_midi_stage_v2"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</com.bytedance.android.livesdk.ktvimpl.ktvroom.view.KtvMidiContainerConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/uicomponent_switch_thumb_inset_left"
+        android:top="@dimen/uicomponent_switch_thumb_inset_top"
+        android:right="@dimen/uicomponent_switch_thumb_inset_right"
+        android:bottom="@dimen/uicomponent_switch_thumb_inset_bottom">
+        <shape android:shape="oval">
+            <size
+                android:height="@dimen/uicomponent_switch_thumb_height"
+                android:width="@dimen/uicomponent_switch_thumb_width"/>
+        </shape>
+    </item>
+</layer-list>

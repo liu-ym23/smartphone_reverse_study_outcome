@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/larus_success_50_night"/>
+    <size android:height="?attr/larus_dp_21"/>
+    <corners android:radius="?attr/larus_dp_68"/>
+</shape>

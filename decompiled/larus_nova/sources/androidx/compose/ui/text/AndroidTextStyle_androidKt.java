@@ -1,0 +1,24 @@
+package androidx.compose.ui.text;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(d1 = {"\u0000\"\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0007\n\u0000\u001a\u001c\u0010\u0002\u001a\u00020\u00032\b\u0010\u0004\u001a\u0004\u0018\u00010\u00052\b\u0010\u0006\u001a\u0004\u0018\u00010\u0007H\u0000\u001a\u001e\u0010\b\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\u00072\u0006\u0010\u000b\u001a\u00020\f\u001a\u001e\u0010\b\u001a\u00020\u00052\u0006\u0010\t\u001a\u00020\u00052\u0006\u0010\n\u001a\u00020\u00052\u0006\u0010\u000b\u001a\u00020\f\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0080T¢\u0006\u0002\n\u0000¨\u0006\r"}, d2 = {"DefaultIncludeFontPadding", "", "createPlatformTextStyle", "Landroidx/compose/ui/text/PlatformTextStyle;", "spanStyle", "Landroidx/compose/ui/text/PlatformSpanStyle;", "paragraphStyle", "Landroidx/compose/ui/text/PlatformParagraphStyle;", "lerp", "start", "stop", "fraction", "", "ui-text"}, k = 2, mv = {2, 0, 0}, xi = 48)
+public final class AndroidTextStyle_androidKt {
+    public static final boolean DefaultIncludeFontPadding = false;
+
+    public static final PlatformSpanStyle lerp(PlatformSpanStyle r100, PlatformSpanStyle r101, float r102) {
+        return r100;
+    }
+
+    public static final PlatformTextStyle createPlatformTextStyle(PlatformSpanStyle r100, PlatformParagraphStyle r101) {
+        return new PlatformTextStyle(r100, r101);
+    }
+
+    public static final PlatformParagraphStyle lerp(PlatformParagraphStyle r100, PlatformParagraphStyle r101, float r102) {
+        if (r100.getIncludeFontPadding() != r101.getIncludeFontPadding()) goto L6;
+        return r100;
+    L6:
+        return new PlatformParagraphStyle(((EmojiSupportMatch) SpanStyleKt.lerpDiscrete(EmojiSupportMatch.m6845boximpl(r100.m6926getEmojiSupportMatch_3YsG6Y()), EmojiSupportMatch.m6845boximpl(r101.m6926getEmojiSupportMatch_3YsG6Y()), r102)).m6851unboximpl(), ((Boolean) SpanStyleKt.lerpDiscrete(Boolean.valueOf(r100.getIncludeFontPadding()), Boolean.valueOf(r101.getIncludeFontPadding()), r102)).booleanValue(), null);
+    }
+}

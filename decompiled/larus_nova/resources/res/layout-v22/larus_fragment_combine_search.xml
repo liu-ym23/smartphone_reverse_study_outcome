@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true">
+    <com.larus.common_ui.search.SearchBar
+        android:id="@+id/search_bar"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_8"
+        android:layout_marginBottom="?attr/larus_dp_8"
+        android:paddingHorizontal="?attr/larus_dp_16"
+        app:larus_style="full"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_result_list"
+        android:paddingBottom="?attr/larus_dp_24"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar"
+        android:overScrollMode="never"/>
+    <com.larus.common_ui.widget.LoadingWithRetryView
+        android:textColor="@color/larus_neutral_100"
+        android:id="@+id/loading_view"
+        android:background="@color/larus_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar"/>
+    <FrameLayout
+        android:id="@+id/search_history_recommend_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_history_recommend_list"
+            android:paddingBottom="?attr/larus_dp_24"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/input_mention_container"
+    android:background="@drawable/ttlive_input_mention_list_background"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="129dp">
+    <com.bytedance.android.livesdk.interactivity.comment.mention.MentionListSearchingView
+        android:id="@+id/loading_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_gravity="bottom"
+        android:id="@+id/mention_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+</FrameLayout>

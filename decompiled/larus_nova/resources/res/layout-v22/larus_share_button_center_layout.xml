@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/share_button_center"
+    android:background="?attr/larus_bg_share_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?attr/larus_dp_16"
+    android:layout_marginBottom="?attr/larus_dp_8"
+    android:minWidth="?attr/larus_dp_160">
+    <TextView
+        android:textSize="?attr/larus_dp_16"
+        android:textStyle="bold"
+        android:textColor="@color/larus_static_white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/share_button_center_text_view"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingTop="?attr/larus_dp_11"
+        android:paddingRight="?attr/larus_dp_16"
+        android:paddingBottom="?attr/larus_dp_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_bot_setting_sharebot"
+        android:drawablePadding="?attr/larus_dp_4"
+        android:drawableStart="@drawable/larus_ic_share_arrow"
+        android:paddingHorizontal="?attr/larus_dp_16"
+        android:paddingVertical="?attr/larus_dp_11"/>
+</FrameLayout>

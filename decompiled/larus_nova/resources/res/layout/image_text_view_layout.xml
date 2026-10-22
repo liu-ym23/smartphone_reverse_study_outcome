@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/guide_chat_container"
+    android:background="@drawable/gray_rounded_background"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

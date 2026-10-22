@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_flow_ud_toast"
+        android:paddingTop="14dp"
+        android:paddingBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="18dp"
+        android:paddingEnd="20dp"
+        android:elevation="5dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/flow_ud_toast_ic_warning"
+            android:scaleType="fitCenter"/>
+        <TextView
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textColor="@color/flow_ud_static_black"
+            android:gravity="center"
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</merge>

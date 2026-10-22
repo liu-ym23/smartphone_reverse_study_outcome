@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+    <View
+        android:background="@color/ttlive_std_line_black_1"
+        android:layout_width="60dp"
+        android:layout_height="0.5dp"/>
+    <TextView
+        android:textColor="@color/ttlive_douyin_text_TextTertiary"
+        android:id="@+id/tv_tip"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_link_room_search_result_bottom"/>
+    <View
+        android:background="@color/ttlive_std_line_black_1"
+        android:layout_width="60dp"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

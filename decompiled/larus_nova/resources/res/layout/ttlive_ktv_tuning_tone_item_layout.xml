@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="16dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#000000"
+        android:id="@+id/adjust_tone_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"/>
+    <View
+        android:id="@+id/ic_decrease"
+        android:background="@drawable/ttlive_ktv_tone_decrease_light"
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
+    <com.bytedance.android.live.ktv.common.adjust.view.ToneProcessView
+        android:id="@+id/tone_process"
+        android:layout_width="0dp"
+        android:layout_height="17dp"
+        android:layout_weight="1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:tone_num="9"/>
+    <View
+        android:id="@+id/ic_increase"
+        android:background="@drawable/ttlive_ktv_tone_increase_light"
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/obric_action_bar_input_bg_color"/>
+    <corners android:radius="?attr/larus_dp_6"/>
+    <stroke
+        android:width="@dimen/obric_mention_icon_stroke_width"
+        android:color="@color/obric_mention_icon_border_color"/>
+</shape>

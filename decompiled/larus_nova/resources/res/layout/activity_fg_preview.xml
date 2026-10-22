@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.widgets.BaseTitleBar
+        android:id="@+id/fg_preview_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:widget_widgets_tb_divider_visible="false"
+        app:widget_widgets_tb_title="@string/fg_preview"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_50">
+        <EditText
+            android:id="@+id/fg_input"
+            android:padding="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="@string/fg_look_hint"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/fg_look"
+            android:padding="0dp"
+            android:layout_width="@dimen/space_kit_len_80"
+            android:layout_height="match_parent"
+            android:text="@string/fg_look"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

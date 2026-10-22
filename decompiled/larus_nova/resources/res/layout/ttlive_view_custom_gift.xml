@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/custom_gift_left_count_layout"
+        android:visibility="gone"
+        android:layout_width="84dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="21dp"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ttlive_custom_gift_card_count_bg"/>
+        <TextView
+            android:textSize="12sp"
+            android:textColor="@color/ttlive_color223b7d"
+            android:layout_gravity="center"
+            android:id="@+id/custom_gift_left_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <com.bytedance.android.livesdk.gift.biggift.view.CustomGiftHintDialog
+        android:id="@+id/custom_gift_hint_dialog_view"
+        android:visibility="gone"
+        android:layout_width="280dp"
+        android:layout_height="195dp"
+        android:layout_centerInParent="true"/>
+</merge>

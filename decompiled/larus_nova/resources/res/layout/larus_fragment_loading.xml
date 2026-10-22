@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@color/larus_static_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:layout_gravity="top|center_horizontal"
+        android:id="@+id/progress_bar_v"
+        android:layout_width="?attr/larus_dp_32"
+        android:layout_height="?attr/larus_dp_32"
+        android:layout_marginTop="?attr/larus_dp_24"
+        android:indeterminateTint="@color/larus_static_white"/>
+    <ProgressBar
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/progress_bar_h"
+        android:layout_width="?attr/larus_dp_32"
+        android:layout_height="?attr/larus_dp_32"
+        android:layout_marginStart="?attr/larus_dp_24"
+        android:indeterminateTint="@color/larus_static_white"/>
+</FrameLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/annie_x_dialog_root_view"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/annie_x_dialog_btn_close"
+        android:visibility="gone"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_title_bar_close_normal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/annie_x_dialog_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/annie_x_dialog_btn_close">
+        <include
+            android:visibility="visible"
+            layout="@layout/annie_x_fragment"/>
+        <include
+            android:layout_gravity="top|center_horizontal"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            layout="@layout/annie_x_pull_down_close_layout"/>
+        <FrameLayout
+            android:id="@+id/float_window_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</RelativeLayout>

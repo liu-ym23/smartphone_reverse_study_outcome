@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="68dp"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/swipe_menu_star"
+        android:background="@color/colorful_blue"
+        android:padding="22dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:tint="@color/static_white"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ud_icon_set_top_outlined"/>
+</LinearLayout>

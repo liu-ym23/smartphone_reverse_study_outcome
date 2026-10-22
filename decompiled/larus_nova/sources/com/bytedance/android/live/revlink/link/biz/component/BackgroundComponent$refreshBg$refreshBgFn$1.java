@@ -1,0 +1,28 @@
+package com.bytedance.android.live.revlink.link.biz.component;
+
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+
+/* JADX INFO: loaded from: classes47.dex */
+@Metadata(d1 = {"\u0000\b\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001¢\u0006\u0002\b\u0002"}, d2 = {"<anonymous>", "", AbsMethodDelegate.TAG_INVOKE}, k = 3, mv = {1, 5, 1})
+public final /* synthetic */ class BackgroundComponent$refreshBg$refreshBgFn$1 extends FunctionReferenceImpl implements Function0<Unit> {
+    public BackgroundComponent$refreshBg$refreshBgFn$1(BackgroundComponent r100) {
+        super(0, r100, BackgroundComponent.class, "refreshInnerBg", "refreshInnerBg()V", 0);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final void invoke2() {
+        BackgroundComponent r100 = (BackgroundComponent) this.receiver;
+        com.bytedance.android.live.revlink.link.domain.anchorimpl.b r101 = r100.b();
+        r100.getContext().getCommonService().d(r101);
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    public /* bridge */ /* synthetic */ Unit invoke() {
+        invoke2();
+        return Unit.INSTANCE;
+    }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="#ff0000"
+        android:layout_gravity="center"
+        android:id="@+id/tv_test_vendor"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:id="@+id/voice_chat_interact_emoji_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/sender_interact_emoji_view"
+            android:visibility="invisible"
+            android:layout_width="@dimen/ttlive_video_talk_interact_emoji_size"
+            android:layout_height="@dimen/ttlive_video_talk_interact_emoji_size"/>
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/path_interact_emoji_view"
+            android:visibility="invisible"
+            android:layout_width="@dimen/ttlive_video_talk_interact_path_emoji_size"
+            android:layout_height="@dimen/ttlive_video_talk_interact_path_emoji_size"/>
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/receiver_interact_emoji_view"
+            android:visibility="invisible"
+            android:layout_width="@dimen/ttlive_video_talk_interact_emoji_size"
+            android:layout_height="@dimen/ttlive_video_talk_interact_emoji_size"/>
+    </FrameLayout>
+</FrameLayout>

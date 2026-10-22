@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox
+        android:id="@+id/audio_bar_play_cb"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/flow_ud_primary_80"
+        android:id="@+id/audio_duration_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.ss.android.lark.flow.chat.message.block.audio.FlowAudioWaveView
+        android:id="@+id/audio_wave_view"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:minWidth="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/audio_duration_tv"
+        app:layout_constraintStart_toEndOf="@+id/audio_bar_play_cb"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_min="34dp"/>
+</merge>

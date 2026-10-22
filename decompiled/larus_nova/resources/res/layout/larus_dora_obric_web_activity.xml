@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/oui_bg_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/dora_obric_web_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <FrameLayout
+        android:id="@+id/dora_obric_web_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

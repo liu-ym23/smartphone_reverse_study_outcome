@@ -1,0 +1,19 @@
+package com.benchmark.btc_annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/* JADX INFO: loaded from: classes39.dex */
+@Target({ElementType.METHOD, ElementType.FIELD})
+@Retention(RetentionPolicy.CLASS)
+public @interface BTCStrategy {
+    String dec();
+
+    boolean isSticky() default false;
+
+    String key();
+
+    String owner();
+}

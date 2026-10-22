@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:background="#00ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="#00ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.android.ttcjpaysdk.base.ui.widget.TalkbackKeyboardNoiseReductionView
+            android:layout_gravity="bottom"
+            android:id="@+id/tt_cj_pay_keyboard_view"
+            android:background="#ffffff"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:keepScreenOn="true"/>
+    </RelativeLayout>
+</RelativeLayout>

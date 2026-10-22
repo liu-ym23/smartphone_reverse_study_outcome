@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.universe_design.shadow.UDShadowLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/partial_select_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:ud_shadow_radius="10dp"
+    style="@style/UDShadow.S3.Down">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/partial_message_action_rv"
+        android:background="@drawable/bg_partial_select_message_action_panel"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.larksuite.component.universe_design.shadow.UDShadowLayout>

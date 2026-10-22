@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:topLeftRadius="@dimen/uicomponent_action_sheet_cancel_corner"
+        android:topRightRadius="@dimen/uicomponent_action_sheet_cancel_corner"
+        android:bottomLeftRadius="@dimen/uicomponent_action_sheet_cancel_corner"
+        android:bottomRightRadius="@dimen/uicomponent_action_sheet_cancel_corner"/>
+    <solid android:color="@color/ttlive_std_bg_overlay"/>
+</shape>

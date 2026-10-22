@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:background="@drawable/gamecp_custom_content_view_bg"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="2dp"
+    android:paddingEnd="4dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_first_avatar"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        app:roundAsCircle="true"
+        app:roundingBorderColor="@color/gamecp_white"
+        app:roundingBorderWidth="1dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_second_avatar"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="8dp"
+        app:roundAsCircle="true"
+        app:roundingBorderColor="@color/gamecp_white"
+        app:roundingBorderWidth="1dp"/>
+    <TextView
+        android:textSize="9dp"
+        android:textColor="@color/gamecp_game_BF161823"
+        android:id="@+id/tv_custom_content"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/iv_second_avatar"/>
+</RelativeLayout>

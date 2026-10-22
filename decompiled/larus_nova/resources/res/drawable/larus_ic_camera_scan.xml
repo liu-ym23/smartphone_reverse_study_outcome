@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/larus_dp_44"
+    android:width="@dimen/larus_dp_44"
+    android:autoMirrored="true"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <path
+        android:fillColor="@color/larus_neutral_100"
+        android:pathData="M25 13C25 12.4477 25.4477 12 26 12H29C30.6569 12 32 13.3431 32 15V18C32 18.5523 31.5523 19 31 19C30.4477 19 30 18.5523 30 18V15C30 14.4477 29.5523 14 29 14H26C25.4477 14 25 13.5523 25 13Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@color/larus_neutral_100"
+        android:pathData="M19 13C19 12.4477 18.5523 12 18 12H15C13.3431 12 12 13.3431 12 15V18C12 18.5523 12.4477 19 13 19C13.5523 19 14 18.5523 14 18V15C14 14.4477 14.4477 14 15 14H18C18.5523 14 19 13.5523 19 13Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@color/larus_neutral_100"
+        android:pathData="M25 31C25 31.5523 25.4477 32 26 32H29C30.6569 32 32 30.6569 32 29V26C32 25.4477 31.5523 25 31 25C30.4477 25 30 25.4477 30 26V29C30 29.5523 29.5523 30 29 30H26C25.4477 30 25 30.4477 25 31Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@color/larus_neutral_100"
+        android:pathData="M19 31C19 31.5523 18.5523 32 18 32H15C13.3431 32 12 30.6569 12 29V26C12 25.4477 12.4477 25 13 25C13.5523 25 14 25.4477 14 26V29C14 29.5523 14.4477 30 15 30H18C18.5523 30 19 30.4477 19 31Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@color/larus_neutral_100"
+        android:pathData="M15 22C15 21.4477 15.4477 21 16 21H28C28.5523 21 29 21.4477 29 22C29 22.5523 28.5523 23 28 23H16C15.4477 23 15 22.5523 15 22Z"
+        android:fillType="evenOdd"/>
+</vector>

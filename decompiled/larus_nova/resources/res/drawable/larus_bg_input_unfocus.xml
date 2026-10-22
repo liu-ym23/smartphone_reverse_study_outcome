@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="?attr/larus_dp_12"/>
+    <padding
+        android:left="?attr/larus_dp_10"
+        android:top="?attr/larus_dp_10"
+        android:right="?attr/larus_dp_10"
+        android:bottom="?attr/larus_dp_10"/>
+    <stroke
+        android:width="?attr/larus_dp_1"
+        android:color="@color/larus_neutral_70_day"/>
+    <solid android:color="@color/larus_base_2_day"/>
+</shape>

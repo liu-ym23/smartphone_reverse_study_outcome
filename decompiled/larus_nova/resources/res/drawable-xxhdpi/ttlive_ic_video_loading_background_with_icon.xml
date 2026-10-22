@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#31151c"
+                android:endColor="#181722"
+                android:angle="0"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="center"
+        android:height="319dp"
+        android:width="312dp"
+        android:drawable="@drawable/ttlive_ic_video_loading_center_new"/>
+</layer-list>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/lkui_N00"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:background="@color/line_border_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/core_doc_input_divider_height"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/lkui_N900"
+        android:gravity="center_vertical"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/core_toolbar_menu_height"
+        android:drawablePadding="7dp"
+        android:drawableStart="@drawable/ud_icon_left_small_ccm_outlined"
+        android:paddingStart="12dp"/>
+    <View
+        android:background="@color/line_border_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/core_doc_input_divider_height"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/colorList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

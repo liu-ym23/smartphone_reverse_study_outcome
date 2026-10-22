@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="500dp"
+    android:width="500dp"
+    android:viewportWidth="500"
+    android:viewportHeight="500">
+    <group>
+        <clip-path android:pathData="M500 250C500 388.071 388.071 500 250 500C111.929 500 0 388.071 0 250C0 111.929 111.929 0 250 0C388.071 0 500 111.929 500 250Z"/>
+        <group
+            android:pivotX="250"
+            android:pivotY="250"
+            android:scaleX="3.365"
+            android:scaleY="3.02"
+            android:rotation="22.358"
+            android:translateX="-0.303"
+            android:translateY="-0.701">
+            <path
+                android:fillColor="@drawable/_bitable_card_page_header_bg_right__0_res_0x7f08000e"
+                android:pathData="M0 0V500H500V0"/>
+        </group>
+    </group>
+</vector>

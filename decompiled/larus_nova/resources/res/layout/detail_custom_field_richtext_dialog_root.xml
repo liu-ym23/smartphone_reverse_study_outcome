@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:background="@color/bg_base"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.ss.android.lark.keyboard.edittext2.KeyboardFunctionEditText
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/text_title"
+            android:gravity="center_vertical"
+            android:id="@+id/edittext_richtext_input"
+            android:background="@drawable/todo_custom_fields_richtext_bg"
+            android:padding="@dimen/dp_12"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="@dimen/dp_300"
+            android:minHeight="@dimen/dp_46"
+            android:cursorVisible="true"
+            android:inputType="textMultiLine"
+            android:textCursorDrawable="@drawable/text_cursor_drawable">
+            <requestFocus/>
+        </com.ss.android.lark.keyboard.edittext2.KeyboardFunctionEditText>
+    </FrameLayout>
+</LinearLayout>

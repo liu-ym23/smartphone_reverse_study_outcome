@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.window.shop.widget.WindowEveryoneTalkCard xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/window_info_everyone_talk_area"
+    android:background="@color/transparent"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/window_info_everyone_talk_ic"
+        android:layout_width="14dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="1.5dp"
+        android:src="@drawable/ec_window_talk_ic_arrow_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/window_info_everyone_talk_impression"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/window_info_everyone_talk_title"
+        android:background="@drawable/ec_window_everytalk_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        app:layoutMode="width_self_adjust"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/window_info_everyone_talk_impression"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="0.5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/window_info_everyone_talk_title"
+        app:layout_constraintLeft_toRightOf="@+id/window_info_everyone_talk_title"
+        app:layout_constraintRight_toLeftOf="@+id/window_info_everyone_talk_ic"
+        app:layout_constraintTop_toTopOf="@+id/window_info_everyone_talk_title"/>
+</com.bytedance.android.window.shop.widget.WindowEveryoneTalkCard>

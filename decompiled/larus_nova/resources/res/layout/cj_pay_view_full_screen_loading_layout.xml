@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cj_pay_loading_layout"
+    android:background="@color/cj_pay_color_white"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/cj_pay_loading_view"
+        android:background="@color/cj_pay_color_trans"
+        android:layout_width="@dimen/cj_pay_height_60"
+        android:layout_height="@dimen/cj_pay_height_60"
+        android:indeterminateOnly="true"
+        android:indeterminateDrawable="@drawable/cj_pay_bg_loading_circle"
+        android:indeterminateDuration="500"
+        android:indeterminateBehavior="repeat"/>
+    <com.android.ttcjpaysdk.base.ui.widget.InsuranceTipsView
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_insurance_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:theme_type="0"/>
+</FrameLayout>

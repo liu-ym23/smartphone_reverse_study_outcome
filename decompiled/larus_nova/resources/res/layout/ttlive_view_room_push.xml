@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/push_message_container"
+        android:background="@drawable/ttlive_bg_room_push_notify_message_v3"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp">
+        <TextView
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/ttlive_core_hs_s5"
+            android:ellipsize="end"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/push_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="172dp"
+            android:minWidth="100dp"
+            android:maxLines="2"
+            android:lineSpacingExtra="4dp"/>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/right_icon"
+            android:background="@drawable/ttlive_bg_room_push_notify_message_arrow"
+            android:layout_width="10dp"
+            android:layout_height="10dp"/>
+    </LinearLayout>
+</LinearLayout>

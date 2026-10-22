@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_ec_pdp_loading_error_bg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        fresco:placeholderImage="@drawable/ec_common_loading_error_ic"/>
+    <TextView
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#ff161823"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_ec_pdp_loading_error_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ec_common_network_error"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#99161823"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_ec_common_refresh_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/ec_common_network_refresh"/>
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#ff161823"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_ec_common_refresh"
+        android:background="@drawable/ec_common_bg_refresh_button"
+        android:layout_width="165dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/ec_common_refresh_optimize"/>
+</LinearLayout>

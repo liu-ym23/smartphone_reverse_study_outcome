@@ -1,0 +1,82 @@
+package x97;
+
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes11.dex */
+public final class a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public Object f562982a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public final int f562983b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final String f562984c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public final Throwable f562985d;
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L4;
+        return true;
+    L4:
+        if ((r100 instanceof a) == false) goto L14;
+        a r101 = (a) r100;
+        if (Intrinsics.areEqual(this.f562982a, r101.f562982a) == true) goto L8;
+        return false;
+    L8:
+        if (this.f562983b == r101.f562983b) goto L10;
+        return false;
+    L10:
+        if (Intrinsics.areEqual(this.f562984c, r101.f562984c) == true) goto L12;
+        return false;
+    L12:
+        if (Intrinsics.areEqual(this.f562985d, r101.f562985d) == true) goto L22;
+        return false;
+    L22:
+        return true;
+    L14:
+        return false;
+    }
+
+    public final int hashCode() {
+        Object r100 = this.f562982a;
+        int r101 = 0;
+        if (r100 == null) goto L5;
+        int r102 = r100.hashCode();
+    L6:
+        int r103 = ((r102 * 31) + this.f562983b) * 31;
+        String r104 = this.f562984c;
+        if (r104 == null) goto L9;
+        int r105 = r104.hashCode();
+    L10:
+        int r106 = (r103 + r105) * 31;
+        Throwable r107 = this.f562985d;
+        if (r107 == null) goto L14;
+        r101 = r107.hashCode();
+    L14:
+        return r106 + r101;
+    L9:
+        r105 = 0;
+        goto L10
+    L5:
+        r102 = 0;
+        goto L6
+    }
+
+    public final String toString() {
+        return "ExprResponse(result=" + this.f562982a + ", code=" + this.f562983b + ", msg=" + this.f562984c + ", throwable=" + this.f562985d + ")";
+    }
+
+    public a() {
+        this.f562982a = null;
+        this.f562983b = 0;
+        this.f562984c = null;
+        this.f562985d = null;
+    }
+
+    public final void setResult(Object r100) {
+        this.f562982a = r100;
+    }
+}

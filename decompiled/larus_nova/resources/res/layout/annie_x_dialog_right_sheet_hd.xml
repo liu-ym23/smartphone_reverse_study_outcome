@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/annie_x_bottom_sheet_container"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/annie_x_bottom_sheet_coordinator"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/annie_x_bottom_sheet_outside"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:soundEffectsEnabled="false"
+            android:contentDescription="@string/annie_x_close"/>
+        <com.bytedance.android.anniex.container.view.LimitedHeightFrameLayout
+            android:id="@+id/annie_x_bottom_sheet"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_anchor="@+id/annie_x_bottom_sheet_outside"
+            app:layout_anchorGravity="bottom|right"
+            app:layout_behavior="@string/annie_x_dialog_bottom_sheet_behavior"
+            style="?attr/bottomSheetStyle"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

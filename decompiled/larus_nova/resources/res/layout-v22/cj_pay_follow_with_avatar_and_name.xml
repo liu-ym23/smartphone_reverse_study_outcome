@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.android.ttcjpaysdk.base.ui.widget.CJPayNoPaddingTextView
+        android:textSize="@dimen/cj_pay_font_size_12"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_60"
+        android:ellipsize="middle"
+        android:gravity="end"
+        android:id="@+id/follow_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/follow_avatar_container"
+        android:layout_width="@dimen/cj_pay_padding_19"
+        android:layout_height="@dimen/cj_pay_padding_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/follow_right_tv"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_gravity="bottom|right"
+            android:layout_width="@dimen/cj_pay_padding_7"
+            android:layout_height="@dimen/cj_pay_padding_7"
+            android:layout_marginRight="@dimen/cj_pay_padding_2"
+            android:src="@drawable/cj_pay_follow_avatar_state"
+            android:layout_alignTop="@+id/avatar_view"
+            android:layout_alignStart="@+id/avatar_view"/>
+    </FrameLayout>
+    <TextView
+        android:textSize="@dimen/cj_pay_font_size_12"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_60"
+        android:gravity="center"
+        android:id="@+id/follow_left_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineHeight="@dimen/cj_pay_padding_17"
+        app:layout_constraintEnd_toStartOf="@+id/follow_avatar_container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

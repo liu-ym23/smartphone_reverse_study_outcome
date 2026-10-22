@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/larus_dp_20"
+    android:width="@dimen/larus_dp_20"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <path
+        android:pathData="M10,1C5.029,1 1,5.029 1,10C1,14.971 5.029,19 10,19C14.971,19 19,14.971 19,10C19,5.029 14.971,1 10,1Z"
+        android:strokeColor="@color/larus_neutral_30"
+        android:strokeWidth="1.5"/>
+</vector>

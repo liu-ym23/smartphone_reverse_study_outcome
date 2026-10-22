@@ -1,0 +1,6 @@
+package com.bytedance.ee.bear.list.share;
+
+/* JADX INFO: loaded from: classes18.dex */
+public interface l0 extends com.bytedance.ee.bear.list.list.d {
+    void n1(m1 r100);
+}

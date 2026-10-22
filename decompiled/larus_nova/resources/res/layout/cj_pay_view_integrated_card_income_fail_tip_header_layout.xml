@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/cj_pay_card_insufficient_tip_layout"
+    android:background="#0ffe2c55"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.android.ttcjpaysdk.base.theme.widget.CJPayLightTextView
+        android:textSize="12sp"
+        android:gravity="start"
+        android:id="@+id/cj_pay_income_fail_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cj_pay_padding_10"
+        android:layout_marginBottom="@dimen/cj_pay_padding_10"
+        android:maxLines="2"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/cj_pay_padding_16"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/income_fail_info"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-16dp"
+        android:layout_marginRight="-16dp"
+        android:src="@drawable/cj_pay_income_fail_info_icon"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:background="@drawable/ttlive_bg_tag_room_intro"
+    android:paddingLeft="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="25dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/icon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginRight="2dp"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_std_text_black_2"
+        android:gravity="center"
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:maxLines="1"/>
+    <ImageView
+        android:id="@+id/close"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ttlive_broadcast_tag_close"
+        android:scaleType="center"/>
+</LinearLayout>

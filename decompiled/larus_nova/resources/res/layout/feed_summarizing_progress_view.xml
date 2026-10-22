@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.larksuite.component.universe_design.progress.UDProgress
+        android:layout_gravity="center"
+        android:id="@+id/feed_summarizing_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:progress="0"
+        app:ud_progress_indicatorColor="@color/primary_content_default"
+        app:ud_progress_indicatorCornerRadius="1dp"
+        app:ud_progress_thickness="2dp"
+        app:ud_progress_trackColor="@color/N900_10"
+        app:ud_progress_type="circular"/>
+</merge>

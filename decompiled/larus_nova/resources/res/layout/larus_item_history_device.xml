@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/container"
+        android:background="@drawable/larus_selector_device_item_background"
+        android:paddingLeft="?attr/larus_dp_8"
+        android:paddingTop="?attr/larus_dp_8"
+        android:paddingRight="?attr/larus_dp_8"
+        android:paddingBottom="?attr/larus_dp_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_4"
+        android:layout_marginEnd="?attr/larus_dp_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/device_icon"
+            android:visibility="gone"
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24"/>
+        <com.larus.dora.impl.view.DoraTextView
+            android:textSize="?attr/larus_sp_15"
+            android:textColor="@color/neutral_100"
+            android:ellipsize="end"
+            android:id="@+id/device_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="?attr/larus_dp_200"
+            android:maxLines="1"
+            android:layout_marginStart="?attr/larus_dp_4"
+            android:layout_marginEnd="?attr/larus_dp_4"/>
+    </LinearLayout>
+</FrameLayout>

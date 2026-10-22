@@ -1,0 +1,34 @@
+package com.bytedance.android.shopping.store.home.event;
+
+import kotlin.Metadata;
+import r27.a;
+
+/* JADX INFO: loaded from: classes14.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0003\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001j\u0002\b\u0002j\u0002\b\u0003¨\u0006\u0004"}, d2 = {"Lcom/bytedance/android/shopping/store/home/event/ChangeStateType;", "", "AUTO", "HAND", "ec-biz-store-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final enum ChangeStateType extends Enum<ChangeStateType> {
+    public static final ChangeStateType AUTO = null;
+    public static final ChangeStateType HAND = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ ChangeStateType[] f183765a = null;
+
+    static {
+        ChangeStateType r100 = new ChangeStateType("AUTO", 0);
+        AUTO = r100;
+        ChangeStateType r101 = new ChangeStateType("HAND", 1);
+        HAND = r101;
+        f183765a = new ChangeStateType[]{r100, r101};
+    }
+
+    public static ChangeStateType valueOf(String r100) {
+        return (ChangeStateType) a.a(ChangeStateType.class, r100);
+    }
+
+    public static ChangeStateType[] values() {
+        return (ChangeStateType[]) f183765a.clone();
+    }
+
+    public ChangeStateType(String r100, int r101) {
+        super(r100, r101);
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.assistant.view.FullWidthLinearlayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larus.common_ui.widget.roundlayout.RoundLinearLayout
+        android:orientation="vertical"
+        android:id="@+id/download_app_v2_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_backgroundColor="@color/base_2_overlay"
+        app:rv_cornerRadius="@dimen/dp_16">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/download_app_v2_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.larus.common_ui.widget.roundlayout.RoundLinearLayout>
+</com.obric.assistant.view.FullWidthLinearlayout>

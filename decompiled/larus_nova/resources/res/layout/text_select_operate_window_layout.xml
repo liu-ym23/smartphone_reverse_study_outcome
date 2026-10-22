@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/image_ocr_operate_list_view"
+        android:background="@drawable/image_ocr_select_popwindow_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="16dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="35dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/image_ocr_select_arrow"/>
+</RelativeLayout>

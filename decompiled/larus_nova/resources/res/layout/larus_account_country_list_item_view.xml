@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/larus_bg_account_button_country_code"
+    android:paddingTop="?attr/larus_dp_18"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="@color/larus_neutral_100"
+        android:ellipsize="end"
+        android:id="@+id/country_name"
+        android:paddingBottom="?attr/larus_dp_18"
+        android:layout_width="?attr/larus_dp_0"
+        android:layout_height="wrap_content"
+        android:text="Country Name"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:paddingStart="?attr/larus_dp_16"
+        android:layout_marginEnd="?attr/larus_dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/country_code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:textColor="@color/larus_neutral_50"
+        android:id="@+id/country_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country Code"
+        android:textDirection="ltr"
+        android:paddingEnd="?attr/larus_dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/divider"
+        android:background="@color/larus_neutral_transparent_2"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="?attr/larus_dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

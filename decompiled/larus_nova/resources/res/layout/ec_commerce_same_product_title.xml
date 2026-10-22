@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="16dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/shopping_color_161823"
+        android:id="@+id/ec_commerce_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shopping_tip_same_product"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/commerce_color_57161823"
+        android:id="@+id/ec_commerce_tv_commission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="@string/shopping_tip_commission"
+        app:layout_constraintLeft_toRightOf="@+id/ec_commerce_tv_title"/>
+    <View
+        android:id="@+id/ec_commerce_ic_commission_explaination"
+        android:background="@drawable/ec_commerce_ic_commission_explaination"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ec_commerce_tv_commission"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

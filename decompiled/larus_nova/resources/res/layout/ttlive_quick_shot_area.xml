@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="36dp"
+    android:layout_height="36dp">
+    <ImageView
+        android:layout_gravity="top"
+        android:id="@+id/ttlive_vs_quickshot_btn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ttlive_ic_quick_shot"/>
+</FrameLayout>

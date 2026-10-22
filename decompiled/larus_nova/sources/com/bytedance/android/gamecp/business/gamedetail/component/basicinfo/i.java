@@ -1,0 +1,44 @@
+package com.bytedance.android.gamecp.business.gamedetail.component.basicinfo;
+
+import java.util.List;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes44.dex */
+public final class i {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final List<String> f53733a;
+
+    public i() {
+        this(null);
+    }
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L4;
+        return true;
+    L4:
+        if ((r100 instanceof i) == true) goto L6;
+        return false;
+    L6:
+        if (Intrinsics.areEqual(this.f53733a, ((i) r100).f53733a) == true) goto L13;
+        return false;
+    L13:
+        return true;
+    }
+
+    public final int hashCode() {
+        List<String> r100 = this.f53733a;
+        if (r100 != null) goto L7;
+        return 0;
+    L7:
+        return r100.hashCode();
+    }
+
+    public final String toString() {
+        return "AudienceGameDetailInfoV6Tags(tags=" + this.f53733a + ")";
+    }
+
+    public i(List<String> r100) {
+        this.f53733a = r100;
+    }
+}

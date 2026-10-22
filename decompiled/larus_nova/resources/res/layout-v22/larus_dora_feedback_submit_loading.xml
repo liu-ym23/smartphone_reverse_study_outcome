@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.common_ui.widget.roundlayout.RoundLinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingTop="?attr/larus_dp_12"
+        android:paddingRight="?attr/larus_dp_16"
+        android:paddingBottom="?attr/larus_dp_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="?attr/larus_dp_8"
+        android:paddingHorizontal="?attr/larus_dp_16"
+        android:paddingVertical="?attr/larus_dp_12"
+        app:rv_backgroundColor="?attr/larus_base_3"
+        app:rv_cornerRadius="?attr/larus_dp_16">
+        <ProgressBar
+            android:layout_gravity="center_vertical"
+            android:layout_width="?attr/larus_dp_24"
+            android:layout_height="?attr/larus_dp_24"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/larus_dora_progressbar_loading"
+            android:indeterminateDuration="750"
+            android:layout_marginEnd="?attr/larus_dp_8"
+            android:indeterminateTint="?attr/larus_neutral_50"/>
+        <TextView
+            android:textSize="?attr/larus_sp_15"
+            android:textColor="?attr/larus_neutral_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_dora_g_feedback_submitting_tip_cn"/>
+    </com.larus.common_ui.widget.roundlayout.RoundLinearLayout>
+</FrameLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ec_shop_slide_hint_wrapper"
+    android:background="@drawable/ec_shop_slide_hint_bg"
+    android:layout_width="40sp"
+    android:layout_height="40sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <View
+        android:id="@+id/ec_shop_slide_hint_line"
+        android:background="@drawable/ec_shop_slide_hint_line_bg"
+        android:layout_width="26sp"
+        android:layout_height="1sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/commerce_color_BF161823"
+        android:id="@+id/ec_shop_slide_hint_numerator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/ec_shop_slide_hint_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/commerce_color_BF161823"
+        android:id="@+id/ec_shop_slide_hint_denominator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ec_shop_slide_hint_line"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

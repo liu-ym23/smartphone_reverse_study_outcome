@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_body"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.widgets.BaseTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:widget_widgets_tb_background="@color/bg_float"
+        app:widget_widgets_tb_divider_height="@dimen/ud_divider_size"
+        app:widget_widgets_tb_divider_visible="true"
+        app:widget_widgets_tb_title="@string/LarkCCM_Workspace_SecLeviI_AdjustRequest_Records_Mob"/>
+    <TextView
+        android:textSize="@dimen/space_kit_len_16"
+        android:textColor="@color/text_title"
+        android:id="@+id/approval_record_tip"
+        android:background="@color/ud_N50"
+        android:paddingLeft="@dimen/space_kit_len_22"
+        android:paddingTop="@dimen/space_kit_len_20"
+        android:paddingRight="@dimen/space_kit_len_22"
+        android:paddingBottom="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:background="@color/ud_N50"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

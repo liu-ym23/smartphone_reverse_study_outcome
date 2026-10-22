@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/cj_pay_layout_std_ui_tag_root"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="14dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/cj_pay_layout_std_ui_tag_left_icon"
+        android:visibility="gone"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="2dp"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="@color/cj_pay_color_red_fe2c55"
+        android:id="@+id/cj_pay_layout_std_ui_tag_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/cj_pay_layout_std_ui_tag_right_icon"
+        android:visibility="gone"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"/>
+</LinearLayout>

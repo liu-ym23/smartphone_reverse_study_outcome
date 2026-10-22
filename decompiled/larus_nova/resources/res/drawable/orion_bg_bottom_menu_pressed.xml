@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/orion_bg_bottom_menu_normal"/>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dp_16"/>
+            <solid android:color="@color/obric_bottom_menu_press_bg"/>
+        </shape>
+    </item>
+</layer-list>

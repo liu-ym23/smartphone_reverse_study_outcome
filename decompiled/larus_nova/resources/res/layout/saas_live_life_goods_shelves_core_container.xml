@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="118dp">
+    <com.bytedance.locallife.live.goodsshelves.view.LiveLifeShelfProductImgContainerView
+        android:id="@+id/live_life_shelf_product_img_container"
+        android:layout_width="118dp"
+        android:layout_height="match_parent"/>
+    <com.bytedance.locallife.live.goodsshelves.view.LiveLifeShelfProductInfoContainerView
+        android:id="@+id/live_life_shelf_product_info_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"/>
+</merge>

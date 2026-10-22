@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_rooter_activity_login"
+    android:background="@color/cj_pay_color_gray_245"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.android.ttcjpaysdk.base.ui.widget.LabelTextLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <FrameLayout
+        android:id="@+id/cj_pay_login_native_view_container"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <com.android.ttcjpaysdk.base.ui.widget.LoadingButton
+        android:gravity="center"
+        android:id="@+id/cj_pay_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cj_pay_custom_button_height_44"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="11dp"
+        app:btnTextColor="@color/cj_pay_color_white"
+        app:btnTextSize="15sp"
+        app:loadingHeight="20dp"
+        app:loadingWidth="20dp"/>
+    <com.android.ttcjpaysdk.base.ui.widget.InsuranceTipsView
+        android:id="@+id/bottom_insurance_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        app:theme_type="0"/>
+</LinearLayout>

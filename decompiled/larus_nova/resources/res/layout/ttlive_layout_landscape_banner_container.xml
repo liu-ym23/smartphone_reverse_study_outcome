@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/banner_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/landscape_top_left_activity_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:id="@+id/landscape_predictor_entrance_container"
+        android:visibility="gone"
+        android:layout_width="@dimen/ttlive_multi_top_right_banner_width"
+        android:layout_height="@dimen/ttlive_multi_top_right_banner_height"/>
+</FrameLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <size
+                android:height="@dimen/uicomponent_square_tick_compound_button_height"
+                android:width="@dimen/uicomponent_square_tick_compound_button_width"/>
+            <corners android:radius="@dimen/uicomponent_square_tick_compound_button_corner_radius"/>
+            <solid android:color="@color/ttlive_std_brand"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/uicomponent_tick_small"
+            android:antialias="true"
+            android:dither="true"/>
+    </item>
+</layer-list>

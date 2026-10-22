@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/larus_plugin_bg_round_full"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_160">
+    <TextView
+        android:textSize="?attr/larus_dp_18"
+        android:textColor="@color/larus_neutral_100"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="?attr/larus_dp_20"
+        android:layout_marginEnd="?attr/larus_dp_20"/>
+</LinearLayout>

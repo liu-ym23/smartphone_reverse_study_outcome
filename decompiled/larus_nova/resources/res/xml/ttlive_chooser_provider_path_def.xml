@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="ttlive_provider_path"
+        path="."/>
+    <cache-path
+        name="ttlive_provider_cache_path_ttlive"
+        path="./ttlive/"/>
+    <cache-path
+        name="ttlive_provider_cache_path_webview"
+        path="./webview/"/>
+    <cache-path
+        name="ttlive_provider_cache_path_pcdn_cachepath"
+        path="./pcdn_cachepath/"/>
+    <cache-path
+        name="ttlive_provider_cache_path_pcdn_basepath"
+        path="./pcdn_basepath/"/>
+    <cache-path
+        name="ttlive_provider_cache_path_upload"
+        path="./upload/"/>
+    <cache-path
+        name="ttlive_provider_cache_path_live_longvideo_thumb"
+        path="./live_longvideo_thumb/"/>
+    <cache-path
+        name="ttlive_provider_cache_path_bd_pic"
+        path="./bd_pic/"/>
+    <cache-path
+        name="ttlive_provider_cache_path_EncryptedUploadMethod"
+        path="./EncryptedUploadMethod/"/>
+    <cache-path
+        name="ttlive_provider_cache_path_head"
+        path="./head/"/>
+</paths>

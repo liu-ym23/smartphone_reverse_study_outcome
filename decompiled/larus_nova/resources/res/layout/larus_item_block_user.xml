@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:id="@+id/larus_item_block_user_768030909"
+    android:paddingTop="?attr/larus_dp_10"
+    android:paddingBottom="?attr/larus_dp_10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="?attr/larus_dp_16"
+    android:paddingEnd="?attr/larus_dp_16">
+    <com.larus.bmhome.view.RoundAvatarImageView
+        android:id="@+id/block_avatar"
+        android:layout_width="?attr/larus_dp_60"
+        android:layout_height="?attr/larus_dp_60"
+        app:avatar_placeholder="@color/larus_neutral_transparent_1"/>
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:textStyle="bold"
+        android:textColor="@color/larus_neutral_100"
+        android:ellipsize="end"
+        android:id="@+id/block_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:layout_marginStart="?attr/larus_dp_16"/>
+    <Button
+        android:textSize="?attr/larus_sp_14"
+        android:textStyle="bold"
+        android:id="@+id/block_button"
+        android:background="@drawable/larus_bg_blocklist_unblock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

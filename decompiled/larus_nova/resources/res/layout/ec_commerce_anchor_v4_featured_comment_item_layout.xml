@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/ec_commerce_anchor_v4_featured_comment_item_layout_57585051"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ec_commerce_anchor_v4_featured_comment_item_layout_1743283318"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/ec_commerce_anchor_v4_featured_comment_item_layout_1447668120"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.bytedance.android.shopping.widget.legacy.AvatarImageView
+                android:id="@+id/featured_item_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextWithOneIconElementView
+                android:id="@+id/featured_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+        <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextElementView
+            android:id="@+id/featured_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/featured_item_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="12dp"
+        app:roundedCornerRadius="4dp"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="110dp">
+    <include
+        android:id="@+id/expanded_layout"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/ttlive_effect_preview_small_item_beauty_collect_album_layout_v2"/>
+    <include
+        android:id="@+id/fold_layout"
+        android:layout_width="56dp"
+        android:layout_height="110dp"
+        layout="@layout/ttlive_effect_item_preview_beauty_small_item_v2"/>
+</FrameLayout>

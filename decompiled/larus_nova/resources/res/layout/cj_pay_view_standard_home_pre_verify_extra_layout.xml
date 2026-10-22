@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/cj_pay_pre_bio_guide_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/cj_pay_view_pre_bio_guide_layout"/>
+    <include
+        android:id="@+id/cj_pay_nopwd_guide_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/cj_pay_view_pre_no_pwd_guide_layout"/>
+    <com.android.ttcjpaysdk.base.ui.component.agreement.CJRowSwitchText
+        android:id="@+id/cj_pay_bank_card_points_open"
+        android:paddingBottom="6dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:CJRowSwitchChecked="false"
+        app:CJRowSwitchContent=""
+        app:CJRowSwitchContentSize="12sp"/>
+</LinearLayout>

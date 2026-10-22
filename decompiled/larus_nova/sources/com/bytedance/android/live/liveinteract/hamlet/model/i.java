@@ -1,0 +1,29 @@
+package com.bytedance.android.live.liveinteract.hamlet.model;
+
+import com.google.gson.annotations.SerializedName;
+import com.ss.android.socialbase.downloader.constants.MonitorConstants;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes46.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\b\u0006\n\u0002\u0010\u0007\n\u0002\b\t\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0010\u0010\u0011R$\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR$\u0010\n\u001a\u0004\u0018\u00010\t8\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000f¨\u0006\u0012"}, d2 = {"Lcom/bytedance/android/live/liveinteract/hamlet/model/i;", "Lcom/bytedance/android/live/liveinteract/hamlet/model/d;", "", "avatarID", "Ljava/lang/Long;", "b", "()Ljava/lang/Long;", "setAvatarID", "(Ljava/lang/Long;)V", "", MonitorConstants.SCHEDULE, "Ljava/lang/Float;", "c", "()Ljava/lang/Float;", "setSchedule", "(Ljava/lang/Float;)V", "<init>", "()V", "liveinteract-impl_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final class i extends d {
+
+    @SerializedName("avatarID")
+    private Long avatarID;
+
+    @SerializedName(MonitorConstants.SCHEDULE)
+    private Float schedule;
+
+    public i() {
+        super(null);
+        this.schedule = Float.valueOf(0.0f);
+    }
+
+    public final Long b() {
+        return this.avatarID;
+    }
+
+    public final Float c() {
+        return this.schedule;
+    }
+}

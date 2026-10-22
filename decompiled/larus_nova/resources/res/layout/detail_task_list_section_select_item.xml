@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/section_container"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16">
+            <TextView
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/text_title"
+                android:gravity="center_vertical"
+                android:id="@+id/section_name"
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minWidth="@dimen/dp_300"
+                android:text="@string/Todo_New_Section_NoSection_Title"
+                android:singleLine="true"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/section_select_check"
+            android:visibility="gone"
+            android:clickable="false"
+            android:layout_width="@dimen/sp_16"
+            android:layout_height="@dimen/sp_16"
+            android:tint="@color/primary_fill_default"
+            android:layout_marginEnd="@dimen/dp_18"
+            app:srcCompat="@drawable/ud_icon_list_check_bold_outlined"/>
+    </LinearLayout>
+</LinearLayout>

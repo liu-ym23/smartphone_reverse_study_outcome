@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="?attr/selectableItemBackground"
+    android:paddingLeft="?attr/larus_dp_16"
+    android:paddingRight="?attr/larus_dp_16"
+    android:layout_width="?attr/larus_dp_200"
+    android:layout_height="?attr/larus_dp_48"
+    android:paddingHorizontal="?attr/larus_dp_16">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="?attr/larus_dp_20"
+        android:layout_height="?attr/larus_dp_20"/>
+    <TextView
+        android:textSize="?attr/larus_sp_16"
+        android:textColor="@color/larus_neutral_100"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_12"
+        android:textFontWeight="500"/>
+</LinearLayout>

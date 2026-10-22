@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.universe_design.button.UDButton
+        android:textColor="@color/static_white"
+        android:id="@+id/button"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        app:ud_backgroundColor="@color/ud_button_blue_bg"
+        style="@style/UDButton.Middle.Primary"/>
+</LinearLayout>

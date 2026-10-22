@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.gamecp.common.ui.RoundRectLayoutV2 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/round_fl_all_lynx_parent_container"
+    android:background="@drawable/gamecp_bg_all_lynx_detail_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.gamecp.business.hybrid.uielement.GameDetailLynxCard
+        android:id="@+id/all_lynx_lynx_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/all_lynx_convert_layout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/iv_game_detail_title_close"
+        android:visibility="gone"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gamecp_game_detail_title_close_ic_v2"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+</com.bytedance.android.gamecp.common.ui.RoundRectLayoutV2>

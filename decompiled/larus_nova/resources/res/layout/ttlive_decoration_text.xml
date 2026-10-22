@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="8dp"
+    android:paddingRight="16dp"
+    android:layout_width="@dimen/ttlive_decoration_text_image_width"
+    android:layout_height="@dimen/ttlive_decoration_text_image_height">
+    <ImageView
+        android:id="@+id/decoration_text_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"/>
+</LinearLayout>

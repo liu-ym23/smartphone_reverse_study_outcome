@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="@dimen/dp_62"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/applet_share_sheet_menu_bg"
+        android:background="@drawable/larus_ec_bg_applet_share_sheet_item"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/applet_share_sheet_menu_icon"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:scaleType="centerInside"/>
+    </FrameLayout>
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/ec_applet_action_sheet_menu_title_color"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/applet_share_sheet_menu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:maxLines="1"/>
+</LinearLayout>

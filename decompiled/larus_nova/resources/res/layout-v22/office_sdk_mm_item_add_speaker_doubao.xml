@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:paddingHorizontal="8dp">
+    <View
+        android:id="@+id/avatarBg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/avatarIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/avatarBg"
+        app:layout_constraintEnd_toEndOf="@+id/avatarBg"
+        app:layout_constraintStart_toStartOf="@+id/avatarBg"
+        app:layout_constraintTop_toTopOf="@+id/avatarBg"
+        app:srcCompat="@drawable/office_sdk_mm_ic_people_add_doubao"
+        app:tint="@color/flow_ud_primary_50"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/flow_ud_primary_50"
+        android:ellipsize="end"
+        android:id="@+id/addSpeakerText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/avatarBg"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

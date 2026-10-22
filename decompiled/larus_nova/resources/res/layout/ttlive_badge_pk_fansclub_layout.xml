@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/fans_layout"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4dp"
+    android:layout_marginStart="4dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/iv_fans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:textSize="8dp"
+        android:textColor="@color/ttlive_white"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_fans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:singleLine="true"/>
+</FrameLayout>

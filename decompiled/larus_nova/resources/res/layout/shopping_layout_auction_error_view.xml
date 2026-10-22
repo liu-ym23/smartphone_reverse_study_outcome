@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/shopping_layout_auction_error_view_11209213"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/store_v2_iv_image"
+        android:layout_width="236dp"
+        android:layout_height="158dp"
+        android:src="@drawable/shopping_img_empty_neterror"/>
+    <TextView
+        android:textColor="@color/TextTertiary"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/store_v2_tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/commerce_same_style_loading_error_retry_description"
+        style="@style/font_size_28"/>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="18dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_60_161823"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/emoji_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/emoji_group_tag"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:scaleType="centerInside"/>
+</LinearLayout>

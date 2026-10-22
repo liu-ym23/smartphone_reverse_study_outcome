@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/ec_store_bg_3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/ec_store_tab_promotion_background_gradient"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+    <ViewStub
+        android:id="@+id/view_stub_tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/sv_store_v2_selection_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

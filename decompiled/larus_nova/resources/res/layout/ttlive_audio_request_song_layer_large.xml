@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="top|center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/request_song_micseat_anim_view_container"
+        android:visibility="visible"
+        android:layout_width="@dimen/ttlive_voice_chat_guest_seat_avatar_size_large"
+        android:layout_height="@dimen/ttlive_voice_chat_guest_seat_avatar_size_large"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:layout_gravity="center"
+            android:id="@+id/request_song_micseat_anim_view"
+            android:visibility="visible"
+            android:layout_width="@dimen/ttlive_voice_chat_guest_seat_effect_size_large"
+            android:layout_height="@dimen/ttlive_voice_chat_guest_seat_effect_size_large"/>
+    </FrameLayout>
+    <include
+        android:layout_gravity="center"
+        android:id="@+id/interact_song_gold_microphone_container"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/request_song_micseat_anim_view_container"
+        app:layout_constraintLeft_toLeftOf="@+id/request_song_micseat_anim_view_container"
+        app:layout_constraintRight_toRightOf="@+id/request_song_micseat_anim_view_container"
+        layout="@layout/ttlive_video_request_song_label_layout"/>
+    <com.bytedance.android.live.liveinteract.view.MicSeatSponsorView
+        android:id="@+id/ll_mic_seat_sponsor_anim"
+        android:visibility="gone"
+        android:layout_width="40dp"
+        android:layout_height="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/interact_song_gold_microphone_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/request_song_mic_icon_anim_view"
+        android:visibility="visible"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/interact_song_gold_microphone_container"
+        app:layout_constraintStart_toStartOf="@+id/interact_song_gold_microphone_container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

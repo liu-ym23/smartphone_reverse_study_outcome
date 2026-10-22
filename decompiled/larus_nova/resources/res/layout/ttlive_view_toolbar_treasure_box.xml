@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <RelativeLayout
+        android:id="@+id/icon_rl"
+        android:clipChildren="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/treasure_box_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            app:actualImageResource="@drawable/ttlive_view_toolbar_treasure_box_icon"/>
+        <com.bytedance.android.live.recharge.widget.TreasureBoxCircleProgressView
+            android:layout_gravity="center"
+            android:id="@+id/countdown_progress_bar"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:clipChildren="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-8dp"
+        android:layout_marginStart="-8dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:layout_gravity="bottom"
+            android:id="@+id/treasure_box_icon_webp"
+            android:visibility="gone"
+            android:clipChildren="false"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+</RelativeLayout>

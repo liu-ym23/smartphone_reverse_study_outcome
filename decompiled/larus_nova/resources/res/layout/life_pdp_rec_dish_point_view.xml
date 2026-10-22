@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.locallife.dito.baseview.RoundFrameLayout
+        android:gravity="center"
+        android:background="#bf3a3a3a"
+        android:padding="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rounded_radius="8dp">
+        <com.bytedance.dux.text.DuxTextView
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:id="@+id/dish_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"/>
+    </com.bytedance.locallife.dito.baseview.RoundFrameLayout>
+    <com.bytedance.locallife.dito.baseview.RoundFrameLayout
+        android:background="#803a3a3a"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="4.5dp"
+        app:rounded_radius="6dp">
+        <com.bytedance.locallife.dito.baseview.RoundFrameLayout
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            app:rounded_radius="2.5dp"/>
+    </com.bytedance.locallife.dito.baseview.RoundFrameLayout>
+</merge>

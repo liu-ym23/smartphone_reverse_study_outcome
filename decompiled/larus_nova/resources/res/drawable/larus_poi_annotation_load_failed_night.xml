@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/larus_base_3_night"/>
+    <size
+        android:height="?attr/larus_poi_annotation_size"
+        android:width="?attr/larus_poi_annotation_size"/>
+    <solid android:color="@color/larus_base_3_night"/>
+    <corners android:radius="?attr/larus_poi_annotation_radius"/>
+</shape>

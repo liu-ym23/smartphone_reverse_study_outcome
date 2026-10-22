@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ec_commerce_indicator_progress_bar"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="13dp"
+    android:max="100"
+    android:progress="0"
+    android:progressDrawable="@drawable/ec_commerce_indicator_progress_layer"
+    style="?android:attr/progressBarStyleHorizontal"/>

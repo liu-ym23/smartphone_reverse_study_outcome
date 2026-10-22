@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ttlive_replay_top_bar_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/ttlive_replay_top_logo"
+        android:layout_width="90dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="-3dp"
+        app:actualImageScaleType="fitXY"/>
+    <TextView
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/ttlive_replay_text_color"
+        android:id="@+id/ttlive_replay_top_title_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/ttlive_replay_tab"
+        android:shadowColor="@color/ttlive_replay_shadow_color"
+        android:shadowRadius="5"/>
+    <TextView
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/ttlive_replay_text_color"
+        android:gravity="center"
+        android:id="@+id/ttlive_replay_top_split_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/ttlive_replay_divider"
+        android:singleLine="true"
+        android:shadowColor="@color/ttlive_replay_shadow_color"
+        android:shadowRadius="5"/>
+    <com.bytedance.android.livesdk.common.MarqueeTextView
+        android:id="@+id/ttlive_replay_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:shadowColor="@color/ttlive_replay_shadow_color"
+        android:shadowRadius="5"/>
+</LinearLayout>

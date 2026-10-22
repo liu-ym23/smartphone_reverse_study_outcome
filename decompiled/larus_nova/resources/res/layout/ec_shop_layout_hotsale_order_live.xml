@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hot_sale_live_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp">
+    <include layout="@layout/ec_shop_layout_hotsale_background"/>
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#161823"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/hotsale_live_order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        style="@style/font_size_30"/>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/hotsale_live_order_button"
+        android:background="@drawable/shopping_bg_shop_bt_hotsale_live_order"
+        android:paddingLeft="12dp"
+        android:paddingTop="7dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/ec_hotsale_order_live"
+            android:id="@+id/tv_order_live"
+            android:paddingBottom="0.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_gravity="center_vertical"
+            android:id="@+id/arrow_order_live"
+            android:background="@drawable/ec_shop_ic_tab_order_live_navigate"
+            android:layout_width="10dp"
+            android:layout_height="10dp"/>
+    </LinearLayout>
+</FrameLayout>

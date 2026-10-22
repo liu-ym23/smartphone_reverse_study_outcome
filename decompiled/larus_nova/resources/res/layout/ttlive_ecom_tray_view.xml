@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:id="@+id/ecom_tray_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/iv_ecom_icon"
+        android:layout_width="20dp"
+        android:layout_height="@dimen/ttlive_come_tray_image_height"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="4dp"
+        app:failureImage="@drawable/ttlive_icon_ecom_barrage"
+        app:placeholderImage="@drawable/ttlive_icon_ecom_barrage"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:id="@+id/tv_ecom_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:shadowColor="#4c000000"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:lineSpacingExtra="2dp"/>
+</merge>

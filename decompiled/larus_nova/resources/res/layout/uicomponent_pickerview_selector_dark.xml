@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/uicomponent_picker_container_dark">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/uicomponent_picker_top_bar_height"
+        layout="@layout/uicomponent_pickerview_topbar_dark"/>
+    <View
+        android:background="@color/ttlive_std_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/uicomponent_picker_divider_line_height"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/picker_container"
+        android:background="@color/ttlive_std_bg_live_iOS"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="180dp"/>
+</LinearLayout>

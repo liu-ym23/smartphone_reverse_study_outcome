@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/ec_bg_size_info_container"
+    android:layout_width="112dp"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.livesdk.livecommerce.room.widgets.floatwindow.pannel.view.ECCarouselIndicatorView
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/carousel_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginBottom="4dp"/>
+</FrameLayout>

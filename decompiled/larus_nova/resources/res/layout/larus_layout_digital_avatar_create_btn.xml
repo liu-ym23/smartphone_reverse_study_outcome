@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.roundlayout.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/avatar_create_btn_root"
+    android:paddingLeft="?attr/larus_dp_24"
+    android:paddingTop="?attr/larus_dp_17"
+    android:paddingRight="?attr/larus_dp_24"
+    android:paddingBottom="?attr/larus_dp_17"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:rv_backgroundColor="?attr/larus_base_1"
+    app:rv_backgroundPressColor="?attr/larus_neutral_transparent_2"
+    app:rv_cornerRadius="?attr/larus_dp_28">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="?attr/larus_dp_20"
+        android:layout_height="?attr/larus_dp_20"
+        android:src="@drawable/larus_ic_face_swap_new"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_create"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_create"/>
+    <com.larus.uaigc.createpage.component.digitalavatar.GradientTextView
+        android:textSize="?attr/larus_dp_16"
+        android:textStyle="bold"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/tv_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_replicaTemplate_btn_createReplica"
+        android:layout_marginStart="?attr/larus_dp_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+</com.larus.common_ui.widget.roundlayout.RoundConstraintLayout>

@@ -1,0 +1,1 @@
+{"type":"View","meta":{"name":"ja_detail_title","version":"1"},"style":{"flex_direction":"column","width":"100%","height":"100%","justify_content":"center","align_items":"center"},"elements":[{"type":"Image","style":{"flex_shrink":0,":width":"data.title_image.width",":height":"data.title_image.height"},"attr":{":src":"data.title_image.url"}}]}

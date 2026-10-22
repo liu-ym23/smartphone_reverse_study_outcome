@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/rootRL"
+    android:background="@color/liveuikit_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/camera_display_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:layout_gravity="bottom|right"
+        android:id="@+id/zoomIV"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ttlive_broadcast_cast_little_zoomin"
+        android:scaleType="centerInside"/>
+</FrameLayout>

@@ -1,0 +1,9 @@
+package com.bytedance.android.livesdkapi.livestate;
+
+import com.bytedance.android.live.base.IService;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes12.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bg\u0018\u00002\u00020\u00012\u00020\u0002¨\u0006\u0003"}, d2 = {"Lcom/bytedance/android/livesdkapi/livestate/ILiveStateService;", "Lcom/bytedance/android/live/base/IService;", "Lcom/bytedance/android/livesdkapi/livestate/ILiveStateManager;", "livesdkapi_saasRelease"}, k = 1, mv = {1, 4, 3})
+public interface ILiveStateService extends IService, ILiveStateManager {
+}

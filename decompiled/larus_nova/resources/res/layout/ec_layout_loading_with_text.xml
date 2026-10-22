@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ll_box_view"
+        android:background="@drawable/uikit_bg_text_loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="85dp"
+        android:minHeight="85dp">
+        <com.bytedance.ies.dmt.ui.widget.DoubleColorBallAnimationView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/double_loading_view_text"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:dmt_doublecolorball_scene="awemeuikit_DmtLoadingLayout"/>
+        <com.bytedance.ies.dmt.ui.widget.DmtTextView
+            android:textColor="@color/ConstTextInverse2"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_bottom_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="16dp"
+            android:maxWidth="176dp"
+            android:minWidth="61dp"
+            android:maxLines="3"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            style="@style/font_size_26"/>
+    </LinearLayout>
+</merge>

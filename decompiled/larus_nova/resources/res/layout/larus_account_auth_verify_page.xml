@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="?attr/larus_dp_24"
+        android:textStyle="bold"
+        android:textColor="@color/larus_neutral_100"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="?attr/larus_dp_32"
+        android:paddingRight="?attr/larus_dp_32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_50"
+        android:text="@string/larus_third_authorization_cn"/>
+    <TextView
+        android:textSize="?attr/larus_dp_14"
+        android:textColor="@color/larus_neutral_70"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="?attr/larus_dp_32"
+        android:paddingRight="?attr/larus_dp_32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_6"
+        android:text="@string/larus_third_authorization_verify_cn"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/auth_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/larus_dp_32"/>
+</LinearLayout>

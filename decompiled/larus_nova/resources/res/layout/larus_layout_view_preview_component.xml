@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_begin="@dimen/larus_camera_top_height_and_top_margin"/>
+    <com.larus.camera.impl.ui.component.result.general.viewpager.PreviewContainerView
+        android:id="@+id/preview_view_container"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_line"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_line"
+        app:layout_constraintVertical_bias="0"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/preview_image_thumb_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/preview_view_container"
+        app:layout_constraintStart_toStartOf="@+id/preview_view_container"/>
+    <View
+        android:id="@+id/touch_intercept_overlay"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_24"
+        app:layout_constraintBottom_toBottomOf="@+id/preview_view_container"
+        app:layout_constraintEnd_toEndOf="@+id/preview_view_container"
+        app:layout_constraintStart_toStartOf="@+id/preview_view_container"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_end="@dimen/larus_camera_bottom_height"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

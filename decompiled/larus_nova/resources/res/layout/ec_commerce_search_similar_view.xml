@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom|center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/search_similar_container"
+    android:layout_width="162dp"
+    android:layout_height="211dp"
+    android:layout_marginBottom="11dp">
+    <FrameLayout
+        android:background="@drawable/commerce_bg_search_similar_view_image"
+        android:layout_width="162dp"
+        android:layout_height="162dp">
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:layout_gravity="center"
+            android:id="@+id/search_similar_image"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:cornerRadius="12dp"/>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/commerce_inner_feed_search_similar_white_ic"
+            android:layout_marginEnd="4dp"/>
+        <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/ec_inner_flow_search_similar_text_color"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ec_inner_flow_find_similar_with_image"/>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="0.5dp"
+            android:src="@drawable/commerce_inner_feed_search_similar_arrow_ic"/>
+    </LinearLayout>
+</LinearLayout>

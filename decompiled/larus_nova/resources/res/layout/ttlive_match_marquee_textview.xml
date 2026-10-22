@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <view
+        android:id="@+id/scrollView"
+        android:fadingEdgeLength="20dp"
+        android:clipChildren="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:requiresFadingEdge="horizontal"
+        class="com.bytedance.android.livesdk.common.MatchMarqueeTextView$FadingEdgeHorizontalScrollView">
+        <com.bytedance.android.livesdk.common.MatchTitleTextView
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/ttlive_white"
+            android:gravity="start|center_vertical"
+            android:id="@+id/match_real_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:includeFontPadding="false"/>
+    </view>
+</merge>

@@ -1,0 +1,6 @@
+package zm4;
+
+/* JADX INFO: loaded from: classes15.dex */
+public interface a {
+    void a(String r100);
+}

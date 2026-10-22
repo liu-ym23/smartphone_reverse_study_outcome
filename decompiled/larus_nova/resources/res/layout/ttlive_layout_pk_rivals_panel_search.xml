@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_history"
+        android:background="@color/ttlive_white"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"/>
+    <RelativeLayout
+        android:id="@+id/search_base"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.live.revlink.impl.pk.ui.PKRivalsSearchHistoryView
+            android:id="@+id/search_history_chunk"
+            android:background="@color/ttlive_white"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:maxHeight="100dp"/>
+        <com.bytedance.android.live.revlink.impl.pk.ui.PKRivalsSearchRankTabColumn
+            android:id="@+id/search_rank_column"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
+            android:paddingRight="16dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_history_chunk"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/search_rank_list_view_pager"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_rank_column"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ttlive_layout_guide_mini_app"
+    android:background="@drawable/ttlive_ic_toolbar_mini_app_guide"
+    android:layout_width="24dp"
+    android:layout_height="24dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/ttlive_view_guide_snow_flower"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ttlive_ic_toolbar_snow_flower_guide"/>
+    <com.bytedance.android.livesdk.chatroom.view.LiveMiniAppCoverView
+        android:layout_width="24dp"
+        android:layout_height="24dp">
+        <View
+            android:layout_gravity="center"
+            android:id="@+id/ttlive_ic_swipe"
+            android:background="@drawable/ttlive_ic_toolbar_swipe"
+            android:visibility="gone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+    </com.bytedance.android.livesdk.chatroom.view.LiveMiniAppCoverView>
+</FrameLayout>

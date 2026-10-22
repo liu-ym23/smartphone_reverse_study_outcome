@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/search_filter_animation_root_view"
+    android:paddingLeft="4dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.lighten.loader.SmartImageView
+        android:id="@+id/search_filter_animation_icon_left"
+        android:visibility="gone"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="2dp"
+        android:scaleType="fitXY"/>
+    <com.ss.android.ugc.aweme.search.filter.view.ui.NoPaddingTextView
+        android:textSize="14sp"
+        android:textColor="#99161823"
+        android:ellipsize="none"
+        android:id="@+id/search_filter_animation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:minHeight="16dp"
+        android:singleLine="true"
+        android:includeFontPadding="false"/>
+    <com.bytedance.lighten.loader.SmartImageView
+        android:id="@+id/search_filter_animation_icon_right"
+        android:visibility="gone"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="4dp"
+        android:scaleType="fitXY"/>
+</LinearLayout>

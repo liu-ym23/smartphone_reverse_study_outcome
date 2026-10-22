@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/out_of_rank_list_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/out_of_rank_list_cover"
+            android:background="@drawable/ttlive_empty_content_light"
+            android:layout_width="192dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="31dp"/>
+        <TextView
+            android:textSize="17dp"
+            android:textColor="@color/ttlive_black"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/out_of_rank_list_hint_phase1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/ttlive_interact_pk_out_of_rank_list_hint_phase1"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="#80161823"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/out_of_rank_list_hint_phase2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+    <com.bytedance.android.live.revlink.impl.pk.ui.PkItemExposeRecyclerView
+        android:id="@+id/rank_list"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

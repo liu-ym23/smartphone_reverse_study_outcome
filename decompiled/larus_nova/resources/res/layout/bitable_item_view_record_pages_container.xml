@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.bitable.common.widgets.NoScrollViewPager
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:id="@+id/view_pager"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.bytedance.ee.bear.bitable.itemview.recordpages.ItemViewRecordFooterContainer
+        android:layout_gravity="bottom"
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</merge>

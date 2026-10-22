@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.material.OMaterialDrawable xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:shape="rectangle"
+    app:oui_widgetEnableShadow="false"
+    app:oui_widgetMaterial="DoubaoV2_Bg_Task_Skill_Chip_Selected"
+    app:oui_widgetMaterialApiVersion="3"
+    app:oui_widgetMaterialSrcType="backdrop_view_complex">
+    <corners android:radius="@dimen/larus_dp_10"/>
+    <solid android:color="@color/obric_window_chip_selected_bg_color"/>
+</com.obric.oui.material.OMaterialDrawable>

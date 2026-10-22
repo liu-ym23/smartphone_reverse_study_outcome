@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.dialog.alert.view.RadiusLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_constraint"
+    android:background="@color/oui_basic_bg_base_2"
+    android:paddingBottom="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:oui_cornerRadiusLeftTop="36dp"
+    app:oui_cornerRadiusRightTop="36dp">
+    <FrameLayout
+        android:orientation="vertical"
+        android:id="@+id/scaffold_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.obric.oui.sheet.OSheetContentFrameLayout
+            android:id="@+id/body_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:layout_gravity="top"
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/footer_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</com.obric.oui.dialog.alert.view.RadiusLayout>

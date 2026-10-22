@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="end"
+    android:layout_gravity="end|bottom"
+    android:orientation="vertical"
+    android:id="@+id/search_result_right_bottom_btn_container"
+    android:paddingBottom="20dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="8dp">
+    <FrameLayout
+        android:layout_gravity="end"
+        android:id="@+id/search_right_bottom_marketing_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <include layout="@layout/saas_search_ec_common_layout_result_feedback"/>
+    <include layout="@layout/saas_search_view_commodity_cart"/>
+    <include layout="@layout/saas_search_ec_common_layout_result_back_top"/>
+</LinearLayout>

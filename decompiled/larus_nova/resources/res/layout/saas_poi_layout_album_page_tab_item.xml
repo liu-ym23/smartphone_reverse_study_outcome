@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.locallife.pdp.widget.SearchTabTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/poi_album_tab_selector"
+    android:layout_gravity="center"
+    android:id="@android:id/text1"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:textAllCaps="true"
+    style="@style/font_size_30_sp"/>

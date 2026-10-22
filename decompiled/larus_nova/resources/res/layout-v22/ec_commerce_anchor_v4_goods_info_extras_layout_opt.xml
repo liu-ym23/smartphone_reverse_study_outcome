@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="3dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp">
+        <TextView
+            android:textSize="13sp"
+            android:textColor="#99161823"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:maxWidth="85dp"/>
+        <com.bytedance.commerce.uikit.flowlayout.TagFlowLayout
+            android:id="@+id/tag_layout"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            app:commerce_fll_tag_space_horizontal="12dp"
+            app:commerce_fll_tag_space_vertical="10dp"/>
+        <com.bytedance.android.shopping.anchorv3.view.AnchorV4QualificationNewDesignView
+            android:id="@+id/qualification_new_design"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:layout_marginStart="3dp"/>
+    </LinearLayout>
+</LinearLayout>

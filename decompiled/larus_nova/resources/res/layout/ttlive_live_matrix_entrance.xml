@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/ttlive_bg_live_matrix_entrance"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="22dp">
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ttlive_ic_live_matrix_rank_entrance"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:orientation="horizontal"
+        android:id="@+id/live_matrix_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:singleLine="true"
+        android:maxLength="8"
+        android:drawablePadding="1dp"/>
+</LinearLayout>

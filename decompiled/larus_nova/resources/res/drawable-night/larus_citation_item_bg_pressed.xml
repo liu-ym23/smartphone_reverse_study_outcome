@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/larus_neutral_transparent_2_night"/>
+    <solid android:color="@color/larus_press_night"/>
+    <corners android:radius="?attr/larus_dp_16"/>
+</shape>

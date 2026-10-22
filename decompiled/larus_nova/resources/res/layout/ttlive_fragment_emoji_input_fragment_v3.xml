@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.live.common.keyboard.MeasureLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/root_view"
+    android:fitsSystemWindows="true"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/ttlive_input_shadow_view"/>
+    <include layout="@layout/ttlive_input_secret_chat_view"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.bytedance.android.livesdk.interactivity.comment.newinput.framework.InputPanelSectionContainer
+            android:id="@+id/input_panel_quick_comment_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <include layout="@layout/ttlive_input_mention_view"/>
+    <FrameLayout
+        android:id="@+id/page_container"
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.bytedance.android.livesdk.interactivity.common.InterceptLinearLayout
+            android:orientation="vertical"
+            android:id="@+id/base_function_container"
+            android:clipChildren="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/portrait_content_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp">
+                <com.bytedance.android.livesdk.interactivity.comment.newinput.framework.InputPanelSectionContainer
+                    android:id="@+id/input_panel_content_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <com.bytedance.android.livesdk.interactivity.comment.newinput.framework.InputPanelSectionContainer
+                    android:layout_gravity="bottom"
+                    android:id="@+id/input_panel_send_view"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginEnd="17dp"/>
+            </LinearLayout>
+            <include layout="@layout/ttlive_input_control_view"/>
+            <FrameLayout
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.bytedance.android.livesdk.interactivity.comment.newinput.framework.InputPanelSectionContainer
+                    android:id="@+id/input_panel_bottom_view"
+                    android:background="@color/white"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+        </com.bytedance.android.livesdk.interactivity.common.InterceptLinearLayout>
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</com.bytedance.android.live.common.keyboard.MeasureLinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:background="@drawable/ec_commerce_product_tag_background"
+    android:paddingLeft="8dp"
+    android:paddingRight="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="26dp">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/product_sv_topic_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layoutMode="self_adjust_3X"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/commerce_color_FFFFFF"
+        android:id="@+id/product_tv_topic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="2dp"
+        android:maxEms="9"/>
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ec_commerce_ic_right_arrow_10px"/>
+</LinearLayout>

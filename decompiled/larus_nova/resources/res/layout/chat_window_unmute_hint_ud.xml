@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bannerContainer"
+    android:background="@drawable/bg_banner_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.universe_design.notice.UDNotice
+        android:id="@+id/chat_auto_mute_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ud_notice_backgroundColor="@color/function_warning_50"
+        app:ud_notice_icon="@drawable/ud_icon_info_hollow_filled"
+        app:ud_notice_iconBtn="@drawable/ud_icon_close_outlined"
+        app:ud_notice_iconColor="@color/function_warning_fill_default"
+        app:ud_notice_text="@string/Lark_IM_LargeGroupAutoMuted_Text"
+        app:ud_notice_textBtn="@string/Lark_IM_LargeGroupAutoMuted_TurnOn_Button"
+        app:ud_notice_textBtnPosition="auto"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

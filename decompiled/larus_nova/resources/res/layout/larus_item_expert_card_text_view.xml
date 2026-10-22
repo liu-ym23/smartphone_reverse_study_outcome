@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textSize="?attr/larus_dp_12"
+    android:textColor="?attr/larus_neutral_70"
+    android:ellipsize="end"
+    android:id="@+id/text_content_text"
+    android:background="?attr/larus_bg_expert_text"
+    android:paddingLeft="?attr/larus_dp_8"
+    android:paddingTop="?attr/larus_dp_4"
+    android:paddingRight="?attr/larus_dp_8"
+    android:paddingBottom="?attr/larus_dp_4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.live.effect.base.AdjustPercentBar xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/small_item_beauty_seek_bar"
+    android:background="#0000"
+    android:padding="0dp"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:maxHeight="4dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:ttlive_effect_textColor="#ffffff"
+    app:ttlive_effect_textSize="14dp"/>

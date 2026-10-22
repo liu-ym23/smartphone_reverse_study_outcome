@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/sp_14"
+            android:id="@+id/loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"/>
+        <com.larksuite.component.universe_design.progress.UDProgress
+            android:id="@+id/loading_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:progress="50"
+            app:ud_progress_indicatorColor="@color/colorful_blue"
+            app:ud_progress_indicatorCornerRadius="1dp"
+            app:ud_progress_thickness="2dp"
+            app:ud_progress_trackColor="@color/ud_N300"
+            app:ud_progress_type="circular"/>
+    </LinearLayout>
+</FrameLayout>

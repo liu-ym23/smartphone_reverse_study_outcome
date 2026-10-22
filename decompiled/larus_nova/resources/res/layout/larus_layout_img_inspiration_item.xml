@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.roundlayout.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="?attr/larus_dp_12"
+    android:paddingTop="?attr/larus_dp_8"
+    android:paddingRight="?attr/larus_dp_12"
+    android:paddingBottom="?attr/larus_dp_8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:rv_backgroundColor="?attr/larus_base_4"
+    app:rv_backgroundPressColor="?attr/larus_press"
+    app:rv_cornerRadius="?attr/larus_dp_8"
+    app:rv_strokeColor="?attr/larus_neutral_transparent_2"
+    app:rv_strokePressColor="?attr/larus_neutral_transparent_2"
+    app:rv_strokeWidth="?attr/larus_dp_1">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_dp_14"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/tv_inspiration_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="?attr/larus_dp_14"
+        android:layout_height="?attr/larus_dp_14"
+        android:layout_marginStart="?attr/larus_dp_4"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_inspiration_prompt"
+        app:layout_constraintStart_toEndOf="@+id/tv_inspiration_prompt"
+        app:layout_constraintTop_toTopOf="@+id/tv_inspiration_prompt"
+        app:srcCompat="?attr/larus_img_inspiration_arrow_right"/>
+</com.larus.common_ui.widget.roundlayout.RoundConstraintLayout>

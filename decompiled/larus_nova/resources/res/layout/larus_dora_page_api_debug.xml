@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/larus_base_1_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.bmhome.view.NovaTitleBarEx
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:paddingTop="?attr/larus_dp_8"
+        android:paddingBottom="?attr/larus_dp_8"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="?attr/larus_dp_12"
+        android:paddingEnd="?attr/larus_dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="?attr/larus_dp_56"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_wifi_settings"
+                    android:background="@drawable/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WiFi Settings"/>
+                <com.larus.bmhome.view.item.ItemTextArrow
+                    android:id="@+id/dora_api_log_file"
+                    android:background="@drawable/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log File"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+            <com.larus.bmhome.view.item.ItemGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/larus_dp_24">
+                <com.larus.bmhome.view.item.ItemTextToggle
+                    android:id="@+id/dora_api_sync_heartbeat_loop"
+                    android:background="@drawable/larus_bg_item_selector_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sync Heartbeat Loop (30ms)"/>
+                <com.larus.bmhome.view.item.ItemTextToggle
+                    android:id="@+id/dora_api_mute_playback"
+                    android:background="@drawable/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Silent Playback"/>
+                <com.larus.bmhome.view.item.ItemTextToggle
+                    android:id="@+id/dora_api_sync_heartbeat_loop_simple"
+                    android:background="@drawable/larus_bg_item_selector_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sync Heartbeat Loop Simple (30ms)"/>
+                <com.larus.bmhome.view.item.ItemTextToggle
+                    android:id="@+id/dora_api_force_3m_packet"
+                    android:background="@drawable/larus_bg_item_selector_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Force 3M Packet Sync"/>
+            </com.larus.bmhome.view.item.ItemGroup>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

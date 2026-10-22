@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:topRightRadius="@dimen/goods_cover_top_radius"
+        android:bottomLeftRadius="8dp"/>
+    <solid android:color="@color/commerce_color_4c292929"/>
+</shape>

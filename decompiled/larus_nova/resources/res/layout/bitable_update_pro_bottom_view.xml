@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <View
+        android:layout_gravity="top"
+        android:background="@color/line_divider_default"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_1"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.larksuite.component.universe_design.button.UDButton
+            android:textSize="17sp"
+            android:textColor="@color/primary_fill_default"
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/Bitable_AdvancedPermission_Later_Button"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:ud_backgroundColor="@color/udtoken_component_outlined_bg"
+            app:ud_strokeColor="@color/primary_fill_default"
+            app:ud_strokeWidth="1dp"
+            style="@style/UDButton"/>
+        <com.larksuite.component.universe_design.button.UDButton
+            android:textSize="17sp"
+            android:textColor="@color/static_white"
+            android:id="@+id/updateBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/Bitable_AdvancedPermission_UpgradeNow_Button"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            app:ud_backgroundColor="@color/primary_fill_default"
+            style="@style/UDButton"/>
+    </LinearLayout>
+</LinearLayout>

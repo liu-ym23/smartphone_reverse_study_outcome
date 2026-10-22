@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/ttlive_vs_interactive_switch_on_light_theme"/>
+    <item
+        android:state_selected="false"
+        android:drawable="@drawable/ttlive_vs_interactive_switch_off_light_theme"/>
+</selector>

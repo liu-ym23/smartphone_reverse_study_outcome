@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.widgets.panel.CommonActionPanelLayout
+        android:id="@+id/title_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:panel_background_color="@color/bg_body"
+        app:panel_show_divider="false"
+        app:panel_show_drag_handler="false"
+        app:panel_show_left_icon="true">
+        <com.bytedance.ee.bear.widgets.universedesign.SpaceEmptyState
+            android:id="@+id/ud_empty_state_view"
+            android:paddingBottom="@dimen/space_kit_len_48"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ud_empty_desc="@string/CreationMobile_Activity_NoPermissionToUse_content"
+            app:ud_empty_imageRes="@drawable/ccm_empty_neutral_no_access"
+            app:ud_empty_primaryText="@string/CreationMobile_Activity_Plan_ConfirmBtn"
+            app:ud_empty_title="@string/CreationMobile_Activity_NoPermissionToUse_title"
+            style="@style/SpaceEmptyStatusStyle"/>
+    </com.bytedance.ee.bear.widgets.panel.CommonActionPanelLayout>
+</LinearLayout>

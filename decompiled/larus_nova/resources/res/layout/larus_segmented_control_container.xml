@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.widget.roundlayout.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="?attr/larus_dp_2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:rv_backgroundColor="@color/larus_base_1_overlay"
+    app:rv_cornerRadius="?attr/larus_dp_8">
+    <com.larus.community.impl.share.CreationShareSegmentedControlItemView
+        android:id="@+id/single_image_control"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_28"/>
+    <com.larus.community.impl.share.CreationShareSegmentedControlItemView
+        android:id="@+id/puzzle_image_control"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_28"
+        android:layout_marginStart="?attr/larus_dp_4"/>
+</com.larus.common_ui.widget.roundlayout.RoundLinearLayout>

@@ -1,0 +1,30 @@
+package com.bytedance.android.live.core.resources;
+
+import com.bytedance.tools.kcp.modelx.runtime.internal.decode.SerializableObjectJsonAdapterBase;
+import com.google.gson.annotations.SerializedName;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes45.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\n\u0018\u00002\u00020\u0001:\u0001\u000bB\u0007¢\u0006\u0004\b\t\u0010\nR\u001a\u0010\u0003\u001a\u00020\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006R\u001a\u0010\u0007\u001a\u00020\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0007\u0010\u0004\u001a\u0004\b\b\u0010\u0006¨\u0006\f"}, d2 = {"Lcom/bytedance/android/live/core/resources/LokiExtraKt_BefViewRenderSizeSerializableObjectImpl;", "Lcom/bytedance/android/live/core/resources/h$b;", "", "w", "I", "getW", "()I", "h", "getH", "<init>", "()V", "Adapter", "live-model-api_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final class LokiExtraKt_BefViewRenderSizeSerializableObjectImpl implements h.b {
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    @SerializedName("h")
+    private final int f65193h;
+
+    /* JADX INFO: renamed from: w, reason: collision with root package name */
+    @SerializedName("w")
+    private final int f65194w;
+
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002¨\u0006\u0003"}, d2 = {"Lcom/bytedance/android/live/core/resources/LokiExtraKt_BefViewRenderSizeSerializableObjectImpl$Adapter;", "Lcom/bytedance/tools/kcp/modelx/runtime/internal/decode/SerializableObjectJsonAdapterBase;", "()V", "live-model-api_saasRelease"}, k = 1, mv = {1, 5, 1})
+    public static final class Adapter extends SerializableObjectJsonAdapterBase {
+        public Adapter() {
+            super(LokiExtraKt_BefViewRenderSizeSerializableObjectImpl.class);
+        }
+    }
+
+    public LokiExtraKt_BefViewRenderSizeSerializableObjectImpl() {
+        this.f65194w = 0;
+        this.f65193h = 0;
+    }
+}

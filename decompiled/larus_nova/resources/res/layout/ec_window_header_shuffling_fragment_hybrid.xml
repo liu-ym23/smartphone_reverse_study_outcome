@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ec_window_hybrid_container_host"
+    android:tag="@string/ec_window_list_tag"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.window.shop.home.header.HeaderHybridParent
+        android:orientation="vertical"
+        android:id="@+id/ec_rv_content_pin_layout"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.bytedance.android.ec.hybrid.list.view.ECHybridListContainer
+            android:id="@+id/ec_rv_content_hybrid"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"/>
+    </com.bytedance.android.window.shop.home.header.HeaderHybridParent>
+</LinearLayout>

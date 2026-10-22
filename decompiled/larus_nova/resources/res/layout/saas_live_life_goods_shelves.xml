@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="142dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+    <com.bytedance.locallife.live.goodsshelves.view.LiveLifeShelfBrandContainerView
+        android:id="@+id/live_life_shelf_brand_container"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/live_life_shelf_product_container"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+        <com.bytedance.locallife.live.goodsshelves.view.LiveLifeShelfCoreContainerView
+            android:id="@+id/live_life_shelf_core_container"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"/>
+        <com.bytedance.locallife.live.goodsshelves.view.LiveLifeShelfIndustryContainerView
+            android:id="@+id/live_life_shelf_industry_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+</LinearLayout>

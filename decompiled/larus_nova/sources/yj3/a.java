@@ -1,0 +1,44 @@
+package yj3;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.fragment.app.Fragment;
+import com.bytedance.android.shopping.store.router.hybridpage.fragment.ShopClassificationHybridPageFragment;
+import com.bytedance.android.shopping.store.router.hybridpage.presenter.page.ClassificationHybridPageCardPresenter;
+import com.bytedance.android.shopping.store.router.hybridpage.presenter.page.SearchResultPageCardPresenter;
+import com.ss.android.lark.utils.statistics.PerfLog;
+import com.ss.android.ugc.aweme.kiwi.presenter.QIPresenter;
+import com.ss.android.ugc.aweme.kiwi.ui.QUIModule;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes14.dex */
+public final class a extends QUIModule {
+
+    /* JADX INFO: renamed from: l, reason: collision with root package name */
+    public final View f568071l;
+
+    @Override // com.ss.android.ugc.aweme.kiwi.ui.QUIModule
+    public final QIPresenter h() {
+        Fragment r100 = a().i();
+        if (r100 != null) goto L7;
+        return null;
+    L7:
+        if ((r100 instanceof ShopClassificationHybridPageFragment) == false) goto L10;
+        return new ClassificationHybridPageCardPresenter(r100);
+    L10:
+        return new SearchResultPageCardPresenter(r100);
+    }
+
+    public a(View r100) {
+        Intrinsics.checkNotNullParameter(r100, "rootView");
+        super(0);
+        this.f568071l = r100;
+    }
+
+    @Override // com.ss.android.ugc.aweme.kiwi.ui.QUIModule
+    public final View f(Context r100, ViewGroup r101) {
+        Intrinsics.checkNotNullParameter(r100, PerfLog.PARAM_KEY_CONTEXT_ID);
+        return this.f568071l;
+    }
+}

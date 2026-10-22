@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/benefit_icon"
+        android:layout_width="@dimen/benefit_list_icon_size"
+        android:layout_height="@dimen/benefit_list_icon_size"/>
+    <TextView
+        android:textSize="@dimen/benefit_list_text_size"
+        android:textColor="@color/text_caption"
+        android:gravity="center_vertical"
+        android:id="@+id/benefit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/benefit_list_text_left_margin"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/benefit_arrow_icon"
+        android:background="@drawable/ud_icon_list_check_bold_outlined"
+        android:layout_width="@dimen/benefit_list_icon_size"
+        android:layout_height="@dimen/benefit_list_icon_size"
+        android:backgroundTint="@color/ud_G350"/>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="?attr/larus_base_1_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="?attr/larus_sp_12"
+        android:textColor="@color/larus_neutral_50"
+        android:gravity="start|center_vertical"
+        android:id="@+id/search_filter_group_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_sp_12"
+        android:layout_marginBottom="?attr/larus_dp_6"
+        android:layout_marginStart="?attr/larus_dp_20"/>
+    <HorizontalScrollView
+        android:id="@+id/search_filter_group_scroll"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/search_filter_group_items"
+            android:paddingTop="?attr/larus_dp_6"
+            android:paddingBottom="?attr/larus_dp_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="?attr/larus_dp_16"
+            android:paddingEnd="?attr/larus_dp_16"/>
+    </HorizontalScrollView>
+</LinearLayout>

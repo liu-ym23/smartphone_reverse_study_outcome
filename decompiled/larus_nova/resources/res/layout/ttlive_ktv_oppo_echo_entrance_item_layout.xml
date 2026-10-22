@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#000000"
+        android:id="@+id/entrance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#03a9f4"
+        android:id="@+id/entrance_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="74dp"
+        android:text="@string/ttlive_go_echo_setting_dialog_tips"
+        app:layout_constraintBottom_toBottomOf="@+id/entrance_title"
+        app:layout_constraintLeft_toRightOf="@+id/entrance_title"
+        app:layout_constraintTop_toTopOf="@+id/entrance_title"/>
+</merge>

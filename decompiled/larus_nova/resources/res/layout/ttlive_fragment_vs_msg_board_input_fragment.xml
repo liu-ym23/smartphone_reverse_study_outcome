@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.live.common.keyboard.MeasureLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/ttlive_input_shadow_view_vs"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/container_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:clipChildren="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/ttlive_input_content_view_vs"/>
+                <include layout="@layout/ttlive_input_publish_to_story_view_vs"/>
+                <include layout="@layout/ttlive_input_control_view_vs"/>
+            </LinearLayout>
+        </FrameLayout>
+        <include layout="@layout/ttlive_input_bottom_view_vs"/>
+    </LinearLayout>
+</com.bytedance.android.live.common.keyboard.MeasureLinearLayout>

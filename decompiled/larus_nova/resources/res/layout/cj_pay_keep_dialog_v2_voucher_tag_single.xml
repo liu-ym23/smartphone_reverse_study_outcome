@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/cj_pay_keep_dialog_v2_bg_voucher_tag_allline_rectangle"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/cj_pay_color_red_fe2c55"
+        android:ellipsize="end"
+        android:id="@+id/voucher_tag_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginRight="29dp"
+        android:maxLines="1"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

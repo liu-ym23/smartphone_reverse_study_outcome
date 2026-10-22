@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="?attr/larus_dp_12"/>
+    <gradient
+        android:startColor="@color/larus_primary_50"
+        android:endColor="@color/larus_primary_50"
+        android:angle="270"/>
+</shape>

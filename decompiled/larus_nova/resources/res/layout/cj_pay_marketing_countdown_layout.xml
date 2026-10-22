@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_marketing_countdown_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.android.ttcjpaysdk.base.ui.component.tag.CJVoucherView
+        android:id="@+id/cj_pay_marketing_tag_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"/>
+    <com.android.ttcjpaysdk.base.ui.component.CJTextView
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/cj_pay_countdown_text_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:singleLine="true"
+        android:fontFamily="monospace"/>
+</LinearLayout>

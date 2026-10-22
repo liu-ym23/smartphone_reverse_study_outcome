@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:title="doze模式"
+        android:key="rn_doze"
+        android:defaultValue="false"
+        android:summaryOn="开启"
+        android:summaryOff="关闭"/>
+    <CheckBoxPreference
+        android:title="RN调试"
+        android:key="rn_debug"
+        android:defaultValue="false"
+        android:summaryOn="开启"
+        android:summaryOff="关闭"/>
+    <CheckBoxPreference
+        android:title="RN预加载"
+        android:key="rn_preload"
+        android:defaultValue="true"
+        android:summaryOn="开启"
+        android:summaryOff="关闭"/>
+    <CheckBoxPreference
+        android:title="Docs RN同步"
+        android:key="doc_rn_enabled"
+        android:defaultValue="true"
+        android:summaryOn="开启"
+        android:summaryOff="关闭"/>
+</PreferenceScreen>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/anchor_v4_head_container"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/anchor_v4_head_background_image"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layoutMode="width_self_adjust"/>
+    <com.bytedance.android.shopping.widget.RemoteRoundImageView
+        android:id="@+id/anchor_v4_head_atmosphere_image"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+</FrameLayout>

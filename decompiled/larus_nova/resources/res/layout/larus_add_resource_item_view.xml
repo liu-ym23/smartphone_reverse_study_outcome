@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="?attr/larus_dp_92"
+    android:layout_height="?attr/larus_dp_108"
+    android:contentDescription="@string/larus_canvas_imageUpload_btn">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="?attr/larus_bg_resource_add"
+        android:layout_width="?attr/larus_dp_84"
+        android:layout_height="?attr/larus_dp_84"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="?attr/larus_dp_18"
+            android:layout_height="?attr/larus_dp_18"
+            android:src="?attr/larus_resource_item_plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

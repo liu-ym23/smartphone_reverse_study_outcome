@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/smart_reply_card"
+    android:background="@drawable/larus_bg_flow_smart_reply_ai_container_bg"
+    android:paddingTop="?attr/larus_dp_8"
+    android:paddingBottom="?attr/larus_dp_12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="?attr/larus_dp_16"
+    android:paddingEnd="?attr/larus_dp_16">
+    <View
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/view_drag_handle"
+        android:background="@drawable/larus_bg_flow_smart_reply_drag_handle"
+        android:layout_width="?attr/larus_dp_36"
+        android:layout_height="?attr/larus_dp_4"/>
+    <com.larus.common_ui.widget.ExpandableTextView
+        android:textSize="?attr/larus_dp_15"
+        android:textColor="?attr/larus_neutral_70"
+        android:textColorHighlight="@android:color/transparent"
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_12"
+        android:lineSpacingExtra="?attr/larus_dp_6"
+        app:larus_etv_EllipsisHint="..."
+        app:larus_etv_EnableToggle="true"
+        app:larus_etv_GapAfterExpandHint=" "
+        app:larus_etv_GapAfterShrinkHint=" "
+        app:larus_etv_GapToExpandHint=" "
+        app:larus_etv_GapToShrinkHint=" "
+        app:larus_etv_MaxLinesOnShrink="2"
+        app:larus_etv_ToExpandHint="@string/larus_LarkIM_SmartReply_Expand_Button"
+        app:larus_etv_ToExpandHintColor="?attr/larus_neutral_50"
+        app:larus_etv_ToExpandHintColorBgPressed="@android:color/transparent"
+        app:larus_etv_ToExpandHintShow="true"
+        app:larus_etv_ToShrinkHintShow="false"/>
+</LinearLayout>

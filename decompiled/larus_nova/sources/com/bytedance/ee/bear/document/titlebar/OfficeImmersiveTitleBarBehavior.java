@@ -1,0 +1,151 @@
+package com.bytedance.ee.bear.document.titlebar;
+
+import android.animation.ObjectAnimator;
+import android.view.View;
+import android.view.ViewConfiguration;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.google.android.material.appbar.AppBarLayout;
+
+/* JADX INFO: loaded from: classes16.dex */
+public class OfficeImmersiveTitleBarBehavior extends CoordinatorLayout.Behavior<AppBarLayout> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public int f222150a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public int f222151b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public AppBarLayout f222152c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public ObjectAnimator f222153d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public ObjectAnimator f222154e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public final int[] f222155f;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public final int[] f222156g;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public BaseTitlePlugin.a f222157h;
+
+    public final void a() {
+        ObjectAnimator r100 = this.f222153d;
+        if (r100 == null) goto L8;
+        r100.removeAllListeners();
+        if (this.f222153d.isRunning() == false) goto L7;
+        this.f222153d.cancel();
+    L7:
+        this.f222153d = null;
+    L8:
+        ObjectAnimator r101 = this.f222154e;
+        if (r101 == null) goto L15;
+        r101.removeAllListeners();
+        if (this.f222154e.isRunning() == false) goto L13;
+        this.f222154e.cancel();
+    L13:
+        this.f222154e = null;
+        return;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
+    public final void onDetachedFromLayoutParams() {
+        ObjectAnimator r100 = this.f222153d;
+        if (r100 == null) goto L5;
+        r100.end();
+        this.f222153d.removeAllListeners();
+    L8:
+        ObjectAnimator r101 = this.f222154e;
+        if (r101 != null) goto L11;
+        return;
+    L11:
+        if (r101.isRunning() == false) goto L15;
+        this.f222154e.removeAllListeners();
+        this.f222154e.cancel();
+        return;
+    L15:
+        return;
+    L5:
+        AppBarLayout r102 = this.f222152c;
+        if (r102 == null) goto L8;
+        r102.setVisibility(0);
+        this.f222152c.setAlpha(1.0f);
+        goto L8
+    }
+
+    public OfficeImmersiveTitleBarBehavior() {
+        this.f222155f = new int[2];
+        this.f222156g = new int[2];
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
+    public final boolean onStartNestedScroll(CoordinatorLayout r100, View r101, View r102, View r103, int r104, int r105) {
+        AppBarLayout r106 = (AppBarLayout) r101;
+        if ((r104 & 2) == 0) goto L5;
+        return true;
+    L5:
+        return false;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
+    public final void onNestedPreScroll(CoordinatorLayout r100, View r101, View r102, int r103, int r104, int[] r105, int r110) {
+        AppBarLayout r106 = (AppBarLayout) r101;
+        this.f222152c = r106;
+        if (this.f222150a > 0) goto L6;
+        this.f222150a = ViewConfiguration.get(r106.getContext()).getScaledTouchSlop();
+    L6:
+        if (Math.abs(r103) <= Math.abs(r104)) goto L9;
+        return;
+    L9:
+        if (Math.abs(this.f222151b) > this.f222150a) goto L11;
+        this.f222151b += r104;
+        return;
+    L11:
+        if (r104 > 0) goto L13;
+        if (r104 < 0) goto L32;
+    L47:
+        this.f222151b = 0;
+        return;
+    L32:
+        if (r106.getAlpha() >= 1.0f) goto L47;
+        ObjectAnimator r107 = this.f222154e;
+        if (r107 == null) goto L39;
+        if (r107.isRunning() == false) goto L39;
+        this.f222154e.cancel();
+    L39:
+        if (this.f222153d != null) goto L42;
+        this.f222153d = ObjectAnimator.ofFloat(r106, "alpha", new float[]{0.0f, 1.0f}).setDuration(100);
+    L42:
+        if (this.f222153d.getListeners() != null) goto L45;
+        this.f222153d.addListener(new e(this, r106));
+    L45:
+        if (this.f222153d.isRunning() == true) goto L47;
+        tt5.a.h("ImmersiveTitleBarBehavior", "start showAnimator");
+        this.f222153d.start();
+        goto L47
+    L13:
+        if (r106.getAlpha() <= 0.0f) goto L47;
+        r100.getLocationOnScreen(this.f222155f);
+        r102.getLocationOnScreen(this.f222156g);
+        if ((this.f222156g[1] - this.f222155f[1]) >= r106.getMeasuredHeight()) goto L47;
+        ObjectAnimator r108 = this.f222153d;
+        if (r108 == null) goto L22;
+        if (r108.isRunning() == false) goto L22;
+        this.f222153d.cancel();
+    L22:
+        if (this.f222154e != null) goto L25;
+        this.f222154e = ObjectAnimator.ofFloat(r106, "alpha", new float[]{1.0f, 0.0f}).setDuration(100);
+    L25:
+        if (this.f222154e.getListeners() != null) goto L28;
+        this.f222154e.addListener(new d(this, r106));
+    L28:
+        if (this.f222154e.isRunning() == true) goto L47;
+        tt5.a.h("ImmersiveTitleBarBehavior", "start hideAnimator");
+        this.f222154e.start();
+        goto L47
+    }
+}

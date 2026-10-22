@@ -1,0 +1,5 @@
+package m1a;
+
+/* JADX INFO: loaded from: classes4.dex */
+public interface a extends t1a.a {
+}

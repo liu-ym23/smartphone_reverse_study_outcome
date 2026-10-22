@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fl_game_view"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/game_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:actualImageScaleType="fitXY"/>
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/game_center"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="25dp"
+            app:actualImageScaleType="fitXY"/>
+    </FrameLayout>
+    <com.bytedance.android.livesdk.common.AnchorPauseTipsView
+        android:id="@+id/pause_view"
+        android:paddingLeft="16dp"
+        android:paddingTop="56dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="72dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</merge>

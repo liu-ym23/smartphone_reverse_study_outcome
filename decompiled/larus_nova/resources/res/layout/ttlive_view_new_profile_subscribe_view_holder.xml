@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:id="@+id/profile_subscribe_count_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp">
+        <TextView
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/ttlive_new_profile_black"
+            android:layout_gravity="bottom"
+            android:id="@+id/profile_subscribe_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:translationY="0.5dp"/>
+        <TextView
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/ttlive_new_profile_black"
+            android:id="@+id/profile_subscribe_count_suffix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:includeFontPadding="false"/>
+    </LinearLayout>
+</FrameLayout>

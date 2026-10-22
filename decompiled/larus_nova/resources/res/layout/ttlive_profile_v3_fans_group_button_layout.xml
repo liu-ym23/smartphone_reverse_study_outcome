@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/new_profile_fans_group_button_root"
+    android:background="@drawable/ttlive_bg_profile_anchor_followed"
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+    <ImageView
+        android:gravity="center"
+        android:id="@+id/new_profile_fans_group_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ttlive_ic_new_profile_fans_club_icon"
+        android:scaleType="center"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_new_profile_black"
+        android:ellipsize="none"
+        android:gravity="start|center_vertical"
+        android:id="@+id/new_profile_fans_group_text"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_live_profile_fans_group"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:alpha="0"
+        android:layout_marginStart="4dp"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_new_profile_black"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:id="@+id/new_profile_fans_group_text_v2"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_live_profile_fans_group_v2"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:alpha="0"/>
+</LinearLayout>

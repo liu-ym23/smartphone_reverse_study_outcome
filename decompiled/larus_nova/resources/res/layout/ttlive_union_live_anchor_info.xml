@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:background="@drawable/ttlive_vs_anchor_info_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="22dp">
+    <com.bytedance.android.livesdk.chatroom.ui.NoTouchRecyclerView
+        android:id="@+id/union_avatar_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="#ffffff"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/union_live_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:maxLines="1"
+        android:maxEms="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/union_avatar_list"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/union_live_arrow"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ttlive_union_live_avatar_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/union_live_desc"
+        app:layout_constraintLeft_toRightOf="@+id/union_live_desc"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/union_live_desc"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

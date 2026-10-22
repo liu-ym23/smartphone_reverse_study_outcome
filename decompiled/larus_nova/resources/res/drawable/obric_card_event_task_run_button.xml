@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@color/obric_event_task_run_button_bg"
+        android:pathData="M0,16C0,7.163 7.163,0 16,0C24.837,0 32,7.163 32,16C32,24.837 24.837,32 16,32C7.163,32 0,24.837 0,16Z"/>
+    <path
+        android:fillColor="@color/obric_event_task_run_button_icon"
+        android:pathData="M11.668,10.697C11.668,9.833 12.634,9.309 13.373,9.773L21.82,15.076C22.505,15.507 22.505,16.493 21.82,16.923L13.373,22.227C12.634,22.691 11.668,22.167 11.668,21.303V10.697Z"/>
+</vector>

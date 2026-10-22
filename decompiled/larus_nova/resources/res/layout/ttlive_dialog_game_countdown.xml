@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.widget.roundcorner.RoundCornerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#99000000"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:ttlive_allRadius="8dp">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="140dp"
+        android:layout_height="140dp">
+        <TextView
+            android:textSize="60dp"
+            android:textColor="@color/white"
+            android:id="@+id/countdown_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:id="@+id/countdown_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="@string/ttlive_game_entering"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countdown_text"/>
+    </LinearLayout>
+</com.bytedance.android.livesdk.widget.roundcorner.RoundCornerFrameLayout>

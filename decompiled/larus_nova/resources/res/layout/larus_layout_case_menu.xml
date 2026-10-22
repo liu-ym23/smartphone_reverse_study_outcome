@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/larus_bg_conversation_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/fl_menu_remove"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_250"
+        android:layout_height="?attr/larus_dp_56">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="?attr/larus_dp_16"
+            android:textColor="@color/larus_danger_50"
+            android:layout_gravity="start|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_chat_list_long_press_remove_chat"
+            android:fontFamily="sans-serif-medium"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="end|center_vertical"
+            android:layout_width="?attr/larus_dp_20"
+            android:layout_height="?attr/larus_dp_20"
+            android:src="@drawable/larus_ic_screen_menu_delete"/>
+    </FrameLayout>
+</merge>

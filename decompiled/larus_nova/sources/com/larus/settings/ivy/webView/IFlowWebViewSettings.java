@@ -1,0 +1,12 @@
+package com.larus.settings.ivy.webView;
+
+import com.bytedance.news.common.settings.api.annotation.ISettings;
+import com.bytedance.news.common.settings.api.annotation.Settings;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes31.dex */
+@Settings(storageKey = "flow_webview_config")
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\bg\u0018\u00002\u00020\u0001J\b\u0010\u0002\u001a\u00020\u0003H'¨\u0006\u0004"}, d2 = {"Lcom/larus/settings/ivy/webView/IFlowWebViewSettings;", "Lcom/bytedance/news/common/settings/api/annotation/ISettings;", "flowWebViewCommonConfig", "Lcom/larus/settings/ivy/webView/FlowWebViewSettingConfig;", "settings_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public interface IFlowWebViewSettings extends ISettings {
+    b flowWebViewCommonConfig();
+}

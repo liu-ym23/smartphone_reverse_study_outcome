@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.locallife.live.view.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0d161823"
+    android:layout_width="match_parent"
+    android:layout_height="16dp"
+    app:rounded_radius="8dp">
+    <com.bytedance.lighten.loader.SmartImageView
+        android:id="@+id/iv_progress"
+        android:layout_width="46dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/poi_progress_live_flash_sale"
+        app:roundedCornerRadius="8dp"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:gravity="start|center_vertical"
+        android:id="@+id/tv_flash_sale_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxLines="1"
+        android:layout_marginStart="6dp"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="#57161823"
+        android:gravity="end|center_vertical"
+        android:id="@+id/tv_count_down_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="2dp"
+        android:paddingEnd="6dp"/>
+</com.bytedance.locallife.live.view.RoundedFrameLayout>

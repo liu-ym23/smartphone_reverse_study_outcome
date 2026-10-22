@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:id="@+id/layout_deep_research_item_fold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larus.bmhome.chat.markdown.view.DeepThinkCommonToolHeader
+        android:id="@+id/deepResearchToolHeader"
+        android:background="?attr/larus_bg_markdown_emphasize_reference_radius_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <com.bytedance.android.shopping.deepfeed.ui.view.AdapterScreenImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"/>
+    <com.bytedance.android.shopping.deepfeed.weights.common.ProductTextView
+        android:textSize="10dp"
+        android:textColor="@color/commerce_color_73161823"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        app:customMarginTop="2dp"/>
+</merge>

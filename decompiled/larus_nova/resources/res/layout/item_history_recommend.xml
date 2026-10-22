@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/picker_search_history_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/ll_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_history_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_history_clock"/>
+        <TextView
+            android:textSize="17sp"
+            android:textColor="@color/ud_N1000"
+            android:ellipsize="end"
+            android:id="@+id/tv_history_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:includeFontPadding="false"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_history_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="center"
+        android:layout_marginStart="16dp"
+        app:srcCompat="@drawable/ic_history_delete"/>
+</LinearLayout>

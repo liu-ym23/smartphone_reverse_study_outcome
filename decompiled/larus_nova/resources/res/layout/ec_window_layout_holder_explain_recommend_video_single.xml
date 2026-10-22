@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_window_video_view_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+    <com.bytedance.android.shopping.api.video.ECVideoPlayerView
+        android:id="@+id/ec_window_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:delayInitPlayer="true"
+        app:enablePlayerPool="true"
+        app:keepScreenOnPlaying="true"
+        app:playerSceneName="window#inner_flow"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ec_window_video_cover_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/window_product_card_image_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImage="@color/shopping_std_bg_black_1"/>
+</com.bytedance.android.ui.base.widget.round.RoundFrameLayout>

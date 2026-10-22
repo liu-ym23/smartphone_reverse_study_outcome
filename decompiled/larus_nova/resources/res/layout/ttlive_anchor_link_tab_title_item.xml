@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/ttlive_anchor_link_tab_title_bg"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:minWidth="76dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_anchor_link_tab_title_text_color"
+        android:gravity="center"
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

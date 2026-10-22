@@ -1,0 +1,7 @@
+package npc;
+
+/* JADX INFO: loaded from: classes36.dex */
+public final class b {
+    public b() {
+    }
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <merge
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/DitoBgPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/status_bar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+            <FrameLayout
+                android:id="@+id/toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/toolbar_back"
+                    android:padding="10dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    app:srcCompat="@drawable/dito_arrowbackward_outlined"
+                    app:tint="@color/DitoTextPrimary"/>
+                <TextView
+                    android:textSize="17sp"
+                    android:textColor="@color/DitoTextPrimary"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <View
+                android:background="#1e161823"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+        </LinearLayout>
+    </merge>
+</LinearLayout>

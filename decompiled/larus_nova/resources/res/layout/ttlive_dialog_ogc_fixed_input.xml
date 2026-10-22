@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.live.common.keyboard.MeasureLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/root_view"
+    android:fitsSystemWindows="true"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/ttlive_input_shadow_view"/>
+    <com.bytedance.android.livesdk.interactivity.common.business.quickcomment.QuickCommentView
+        android:id="@+id/view_quick_comment"
+        android:paddingLeft="12dp"
+        android:paddingTop="4dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:id="@+id/dialog_content"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/bg_dialog"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/bg_header"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page_container"
+            android:clipChildren="false"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ttlive_comment_ogc_fixed_dialog_container_height">
+            <com.bytedance.android.live.core.widget.HSImageView
+                android:id="@+id/dialog_close"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:actualImageResource="@drawable/ttlive_ic_ogc_fixed_dialog_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderImage="@drawable/ttlive_ic_ogc_fixed_dialog_close"/>
+            <com.bytedance.android.livesdk.interactivity.comment.newinput.framework.InputPanelSectionContainer
+                android:id="@+id/fixed_input_panel_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</com.bytedance.android.live.common.keyboard.MeasureLinearLayout>

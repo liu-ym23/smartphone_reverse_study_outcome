@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="36dp"
+    android:width="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <path
+        android:fillColor="@color/larus_base_2_overlay_night"
+        android:pathData="M18,0L18,0A18,18 0,0 1,36 18L36,18A18,18 0,0 1,18 36L18,36A18,18 0,0 1,0 18L0,18A18,18 0,0 1,18 0z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M18,0.25L18,0.25A17.75,17.75 0,0 1,35.75 18L35.75,18A17.75,17.75 0,0 1,18 35.75L18,35.75A17.75,17.75 0,0 1,0.25 18L0.25,18A17.75,17.75 0,0 1,18 0.25z"
+        android:strokeColor="#000000"
+        android:strokeWidth="0.5"
+        android:strokeAlpha="0.06"/>
+</vector>

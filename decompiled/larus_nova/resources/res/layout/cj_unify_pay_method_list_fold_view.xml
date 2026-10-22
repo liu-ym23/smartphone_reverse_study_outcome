@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/cj_pay_method_fold_layout"
+    android:background="@drawable/cj_pay_bg_gray_press_selector"
+    android:paddingTop="8dp"
+    android:paddingBottom="14dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="46dp">
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_40"
+        android:id="@+id/cj_unify_pay_method_fold_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cj_pay_unfold_more_pay_methods"/>
+    <ImageView
+        android:id="@+id/cj_pay_method_fold_arrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/cj_pay_icon_unify_arrow_down_gray"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@drawable/_ud_icon_logo_gradient_base_colorful__0_res_0x7f08015f"
+        android:pathData="M0 7.776c0-2.779 0-4.168 0.558-5.222a4.8 4.8 0 0 1 1.996-1.996C3.608 0 4.997 0 7.776 0h8.448c2.779 0 4.168 0 5.222 0.558a4.8 4.8 0 0 1 1.996 1.996C24 3.608 24 4.997 24 7.776v8.448c0 2.779 0 4.168-0.558 5.222a4.801 4.801 0 0 1-1.996 1.996C20.392 24 19.003 24 16.224 24H7.776c-2.779 0-4.168 0-5.222-0.558a4.8 4.8 0 0 1-1.996-1.996C0 20.392 0 19.003 0 16.224V7.776z"/>
+    <path
+        android:fillColor="#fff"
+        android:pathData="M12 7.41L16.59 12 12 16.584 7.41 12 12 7.41zM7.41 12l-2.16 2.792 3.958 3.958L12 16.584l2.792 2.166 3.958-3.958L16.59 12l2.16-2.792-3.958-3.958L12 7.41 9.208 5.25 5.25 9.208 7.41 12z"/>
+</vector>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    android:textColor="@color/ConstTextInverse"
+    android:gravity="center"
+    android:layout_gravity="start|bottom"
+    android:id="@+id/store_v3_live_status"
+    android:background="@drawable/shopping_bg_store_v3_header_live_status"
+    android:layout_width="46sp"
+    android:layout_height="20sp"
+    android:layout_marginBottom="4dp"
+    android:text="@string/shopping_bought_live"/>

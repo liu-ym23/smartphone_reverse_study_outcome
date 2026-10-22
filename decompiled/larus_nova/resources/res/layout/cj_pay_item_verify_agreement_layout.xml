@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cj_pay_agreement_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/cj_pay_font_size_15"
+        android:textColor="?attr/cj_pay_text_primary"
+        android:id="@+id/cj_pay_agreement_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cj_pay_padding_16"
+        android:singleLine="true"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/cj_pay_agreement_entrance_icon"
+        android:paddingTop="@dimen/cj_pay_padding_16"
+        android:paddingBottom="@dimen/cj_pay_padding_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/cj_pay_padding_16"
+        android:src="?attr/cj_pay_icon_right_arrow_noise_reduction"
+        android:scaleType="centerCrop"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    <View
+        android:id="@+id/cj_pay_agreement_bottom_divider"
+        android:background="?attr/cj_pay_border_divider_grey_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cj_pay_height_half_1"
+        android:layout_marginLeft="@dimen/cj_pay_padding_16"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

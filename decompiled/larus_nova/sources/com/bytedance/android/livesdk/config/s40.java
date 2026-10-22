@@ -1,0 +1,16 @@
+package com.bytedance.android.livesdk.config;
+
+/* JADX INFO: loaded from: classes8.dex */
+public final class s40 extends SSettingKey<Long> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final s40 f121183a = null;
+
+    static {
+        f121183a = new s40();
+    }
+
+    public s40() {
+        super("live_ktv_music_progress_update_interval", "歌曲进度同步间隔，单位ms", 3000L, 3000L);
+    }
+}

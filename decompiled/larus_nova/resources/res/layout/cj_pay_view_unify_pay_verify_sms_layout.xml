@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cj_pay_color_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.android.ttcjpaysdk.base.ui.component.input.CJSmsCodeInputLayout
+        android:id="@+id/cj_pay_layout_sms_code_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cj_pay_padding_20"
+        android:layout_marginBottom="@dimen/cj_pay_padding_20"
+        android:layout_alignWithParentIfMissing="true"/>
+</RelativeLayout>

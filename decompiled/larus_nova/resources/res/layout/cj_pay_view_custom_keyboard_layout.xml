@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/cj_pay_keyboard_margin_bottom_view"
+        android:background="@color/cj_pay_color_pwd_keyboard_gap_color"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cj_pay_height_half_1"
+        android:layout_alignParentBottom="true"/>
+    <com.android.ttcjpaysdk.base.ui.widget.CJPayKeyboardView
+        android:id="@+id/cj_pay_keyboard_view"
+        android:visibility="gone"
+        android:layout_above="@+id/cj_pay_keyboard_margin_bottom_view"
+        android:keepScreenOn="true"
+        style="@style/CJ_Pay_Keyboard"/>
+</RelativeLayout>

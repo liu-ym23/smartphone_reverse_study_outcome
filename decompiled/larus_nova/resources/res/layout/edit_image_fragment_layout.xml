@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lkui_N1000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/edit_img_failed_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/edit_img_bar_back"
+            android:layout_width="@dimen/widget_menu_img_size"
+            android:layout_height="@dimen/widget_menu_img_size"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/dp_10"
+            app:srcCompat="@drawable/ud_icon_close_outlined"
+            app:tint="@color/white"/>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_edi_image_fail"
+                android:layout_width="@dimen/space_kit_len_80"
+                android:layout_height="@dimen/space_kit_len_80"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ccm_empty_neutral_no_picture"/>
+            <TextView
+                android:textColor="@color/text_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LarkCCM_Docx_Image_LoadFail_Empty"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

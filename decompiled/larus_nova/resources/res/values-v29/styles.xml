@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CJ_Pay_Full_Screen_Translucent" parent="@style/CJ_Pay_Translucent">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="CJ_Pay_MI_Compatible" parent="@style/CJ_Pay_Translucent">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="CJ_Pay_Not_Translucent" parent="@style/CJ_Pay_Theme_Dark">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="EnrollEnrollActivityTheme" parent="@style/Theme.OApp.BaseAttr">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:clipChildren">true</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor">@color/enroll_transparent</item>
+        <item name="android:navigationBarColor">@color/enroll_transparent</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+    <style name="SvaEnrollActivityTheme" parent="@style/Theme.AppCompat.DayNight">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:clipChildren">true</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor">@color/sva_transparent</item>
+        <item name="android:navigationBarColor">@color/sva_transparent</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="larus_neutral_100">@color/larus_neutral_100_day</item>
+        <item name="larus_neutral_50">@color/larus_neutral_50_day</item>
+        <item name="larus_primary_50">@color/larus_primary_50_day</item>
+    </style>
+    <style name="Theme.OApp.Home.Transparent" parent="@style/Theme.OApp.Home">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+    <style name="TutorAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:screenOrientation">1</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="byted_AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="colorAccent">@color/byted_colorAccent</item>
+        <item name="colorPrimary">@color/byted_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/byted_transparent</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="byted_alert_dialog" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="colorAccent">#2a90d7</item>
+    </style>
+    <style name="byted_common_dialog_style" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/byted_transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@color/byted_transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="byted_loading_dialog_style" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/byted_transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@color/byted_transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="larus_MultiTaskManagementBottomSheetDialog" parent="@style/larus_BottomSheetDialog">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+    <style name="larus_WebActivityTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="mgl_i_app_activity_float" parent="@style/mgl_i_app_activity_float_base">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="mgl_i_transparent_window_base" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textViewStyle">@style/mgl_i_text_direction_locale</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+        <item name="editTextStyle">@style/mgl_i_text_align_start</item>
+    </style>
+    <style name="microapp_i_mini_app_activity_float" parent="@style/microapp_i_mini_app_activity_float_base">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="microapp_i_transparentWindow_base" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textViewStyle">@style/TextViewStyle.TextDirection</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+        <item name="editTextStyle">@style/EditTextStyle.Alignment</item>
+    </style>
+    <style name="microapp_i_transparentWindow_for_map" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textViewStyle">@style/TextViewStyle.TextDirection</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+        <item name="editTextStyle">@style/EditTextStyle.Alignment</item>
+    </style>
+</resources>

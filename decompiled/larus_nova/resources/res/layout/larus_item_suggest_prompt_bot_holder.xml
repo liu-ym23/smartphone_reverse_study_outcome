@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/suggest_prompt_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.larus.common_ui.widget.roundlayout.CircleFrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/bot_avatar_parent"
+        android:layout_width="?attr/larus_dp_24"
+        android:layout_height="?attr/larus_dp_24"
+        android:layout_marginStart="?attr/larus_dp_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.larus.bmhome.view.TitleAvatarImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/bot_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.larus.common_ui.widget.roundlayout.CircleFrameLayout>
+    <TextView
+        android:textSize="?attr/larus_dp_14"
+        android:textStyle="bold"
+        android:textColor="?attr/larus_neutral_100"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/bot_name"
+        android:paddingTop="@dimen/larus_prompt_content_vertical_padding"
+        android:paddingBottom="@dimen/larus_prompt_content_vertical_padding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:layout_marginStart="?attr/larus_dp_6"
+        android:layout_marginEnd="?attr/larus_dp_6"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="?attr/larus_dp_12"
+        android:layout_height="?attr/larus_dp_12"
+        android:src="@drawable/larus_action_bar_arrow_icon"
+        android:tint="?attr/larus_neutral_100"
+        android:layout_marginEnd="?attr/larus_dp_10"/>
+</LinearLayout>

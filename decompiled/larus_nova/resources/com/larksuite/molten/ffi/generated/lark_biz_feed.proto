@@ -1,0 +1,366 @@
+/* Generated code, DO NOT EDIT.
+ * source: lark_biz_feed.yaml
+ */
+
+syntax = "proto2";
+
+package lark_biz_feed.proto;
+
+message LarkBizFeedStructPayload69115a2878680bc6 {
+    required FeedFilterType folder = 1;
+};
+message LarkBizFeedStructPayload6f39b401968ec98b {
+    required FeedCardEntity feed_entity = 1;
+};
+message LarkBizFeedStructPayloadBfabc31623467351 {
+    required FeedCardEntity feed_entity = 1;
+    required bool mark_as_unread = 2;
+};
+message LarkBizFeedStructPayloadB8cbcc55056b5a14 {
+    required FeedCardEntity feed_entity = 1;
+    required bool is_topping = 2;
+};
+message LarkBizFeedStructPayload4c1debabb59c79d0 {
+    required FeedCardEntity feed_entity = 1;
+    required bool is_remind = 2;
+};
+message LarkBizFeedStructPayload2eaf423772123ddd {
+    required int64 chat_id = 1;
+};
+message LarkBizFeedStructPayload6818d699db356952 {
+    required FeedCardEntity feed_entity = 1;
+};
+message LarkBizFeedStructPayloadCb51aa4e0dfa46c1 {
+    required ChannelEntity channel_entity = 1;
+};
+message LarkBizFeedStructPayload227619f5325cb7cd {
+    required FeedCardEntity feed_entity = 1;
+};
+message LarkBizFeedStructPayload467788b2cd36fc07 {
+     repeated string feed_ids = 1;
+};
+message LarkBizFeedStructPayload7e251b9c83581426 {
+     repeated string feed_ids = 1;
+    required int32 position = 2;
+};
+message LarkBizFeedStructPayload2b2517acb416c4dd {
+    required FeedFilterType folder = 1;
+    required int32 position = 2;
+    required bool is_scrolling = 3;
+};
+message LarkBizFeedStructPayloadBbbf6bfd1b7d76e7 {
+    required string feed_id = 1;
+};
+//  一个通用的 `ViewFlow` 业务逻辑执行 Error 定义
+message BizError {
+    required int32 code = 1;
+    required string msg = 2;
+}
+
+//  Channel Entity
+message ChannelEntity {
+    required string channel_id = 1;
+     optional FeedCardType feed_type = 2;
+}
+
+//  Represents a live query instance.
+message ExternLiveQuery {
+    required int64 pointer = 1;
+}
+
+//  单条 Feed 卡片实体
+message FeedCardEntity {
+    required string feed_id = 1;
+    required FeedCardType feed_type = 2;
+}
+
+//  前台用户容器作用域
+message ForegroundUserContainerScope {
+    required uint64 uid = 1;
+}
+
+message LarkFeedInfo {
+    required int32 badge_count = 1;
+     optional bytes latest_preview = 2;
+    required int64 rank_time_ms = 3;
+    required int64 version = 4;
+    required int32 badge_count_without_doubao = 5;
+    required int32 message_on_top_badge_count = 6;
+    required int32 message_without_doubao_on_top_badge_count = 7;
+}
+
+//  Generated context with foreground user scope
+//  Feed 列表上下文
+message LarkFeedListContext {
+    required int32 filter_type = 1;
+    required ForegroundUserContainerScope container_scope = 2;
+}
+
+//  FFI-compatible wrapper around the internal ViewFlowContext implementation
+message LarkFeedListContextWrapped {
+    required LarkFeedListContext inner = 1;
+    required ForegroundUserContainerScope container_scope = 2;
+}
+
+//  列表状态
+message ListStatus {
+    required bool is_loading = 1;
+    required bool is_empty = 2;
+}
+
+//  弹窗失败状态
+message ToastStatusFailure {
+    required uint64 version = 1;
+    required bool is_remind = 2;
+    required string error_message = 3;
+    required int32 error_code = 4;
+}
+
+//  弹窗成功状态
+message ToastStatusSuccess {
+    required uint64 version = 1;
+    required bool is_remind = 2;
+}
+
+//  用户前台作用域，用于获取 FeedRepositoryService 实例
+message UserForegroundScope {
+    required uint64 uid = 1;
+}
+
+//  Feed 卡片的类型
+enum FeedCardType {
+    VAR_FEED_CARD_TYPE_UNKNOWN_TYPE = 0;
+    VAR_FEED_CARD_TYPE_CHAT = 1;
+    VAR_FEED_CARD_TYPE_MAIL = 2;
+    VAR_FEED_CARD_TYPE_DOC = 3;
+    VAR_FEED_CARD_TYPE_THREAD = 4;
+    VAR_FEED_CARD_TYPE_BOX = 5;
+    VAR_FEED_CARD_TYPE_OPENAPP = 6;
+    VAR_FEED_CARD_TYPE_TOPIC = 7;
+    VAR_FEED_CARD_TYPE_APP_CHAT = 8;
+    VAR_FEED_CARD_TYPE_DEPRECATED9 = 9;
+    VAR_FEED_CARD_TYPE_SUBSCRIPTION = 10;
+    VAR_FEED_CARD_TYPE_MSG_THREAD = 11;
+    VAR_FEED_CARD_TYPE_MY_AI = 12;
+    VAR_FEED_CARD_TYPE_APP_FEED = 13;
+    VAR_FEED_CARD_TYPE_KNOWLEDGE_AI = 14;
+    VAR_FEED_CARD_TYPE_DOUBAO_CUSTOM = 15;
+}
+//  消息筛选类型
+enum FeedFilterType {
+    VAR_FEED_FILTER_TYPE_UNKNOWN = 0;
+    VAR_FEED_FILTER_TYPE_INBOX = 1;
+    VAR_FEED_FILTER_TYPE_AT_ME = 2;
+    VAR_FEED_FILTER_TYPE_UNREAD = 3;
+    VAR_FEED_FILTER_TYPE_DELAYED = 4;
+    VAR_FEED_FILTER_TYPE_DOC = 5;
+    VAR_FEED_FILTER_TYPE_P2P_CHAT = 6;
+    VAR_FEED_FILTER_TYPE_GROUP_CHAT = 7;
+    VAR_FEED_FILTER_TYPE_BOT = 8;
+    VAR_FEED_FILTER_TYPE_HELP_DESK = 9;
+    VAR_FEED_FILTER_TYPE_TOPIC_GROUP = 10;
+    VAR_FEED_FILTER_TYPE_DONE = 11;
+    VAR_FEED_FILTER_TYPE_CRYPTO_CHAT = 12;
+    VAR_FEED_FILTER_TYPE_MESSAGE = 13;
+    VAR_FEED_FILTER_TYPE_MUTE = 14;
+    VAR_FEED_FILTER_TYPE_GROUP = 15;
+    VAR_FEED_FILTER_TYPE_TEAM = 16;
+    VAR_FEED_FILTER_TYPE_DEPRECATED_AT_ME_ONLY = 17;
+    VAR_FEED_FILTER_TYPE_TAG = 18;
+    VAR_FEED_FILTER_TYPE_FLAG = 19;
+    VAR_FEED_FILTER_TYPE_THREAD = 20;
+    VAR_FEED_FILTER_TYPE_UNREAD_OVER_DAYS = 21;
+    VAR_FEED_FILTER_TYPE_CALENDAR_GROUP = 22;
+    VAR_FEED_FILTER_TYPE_INSTANT_MEETING_GROUP = 23;
+    VAR_FEED_FILTER_TYPE_COLLAPSED = 24;
+    VAR_FEED_FILTER_TYPE_ALL_MESSAGE = 25;
+    VAR_FEED_FILTER_TYPE_EXPIRED_FOLD = 26;
+    VAR_FEED_FILTER_TYPE_MARK_AS_DELETED = 27;
+    VAR_FEED_FILTER_TYPE_MESSAGE_WITHOUT_DOUBAO = 28;
+}
+//  Feed 类型（业务分组）- 对应 Android 的 FeedCard.FeedType
+enum FeedType {
+    VAR_FEED_TYPE_ALL = 0;
+    VAR_FEED_TYPE_INBOX = 1;
+    VAR_FEED_TYPE_DONE = 2;
+}
+//  Feed 列表动作
+message LarkFeedListAction {
+    oneof inner {
+        bool setup = 1;
+        bool pause_data_change_notify = 2;
+        bool resume_data_change_notify = 3;
+        LarkBizFeedStructPayload69115a2878680bc6 refresh = 4;
+        LarkBizFeedStructPayload6f39b401968ec98b clear_badge = 5;
+        LarkBizFeedStructPayloadBfabc31623467351 mark_item_as_un_read = 6;
+        LarkBizFeedStructPayloadB8cbcc55056b5a14 set_topping = 7;
+        LarkBizFeedStructPayload4c1debabb59c79d0 set_no_disturb = 8;
+        LarkBizFeedStructPayload2eaf423772123ddd switch_auto_mute = 9;
+        LarkBizFeedStructPayload6818d699db356952 delete_item = 10;
+        LarkBizFeedStructPayloadCb51aa4e0dfa46c1 hide_item = 11;
+        LarkBizFeedStructPayload227619f5325cb7cd set_done = 12;
+        LarkBizFeedStructPayload467788b2cd36fc07 preload_items_data = 13;
+        LarkBizFeedStructPayload7e251b9c83581426 preload_items_dependency = 14;
+        LarkBizFeedStructPayload2b2517acb416c4dd data_loading_check = 15;
+        LarkBizFeedStructPayloadBbbf6bfd1b7d76e7 preload_next_unread = 16;
+    }}
+enum LarkFeedListViewObjectFieldType {
+    VAR_LARK_FEED_LIST_VIEW_OBJECT_FIELD_TYPE_LOAD_STATUS = 0;
+    VAR_LARK_FEED_LIST_VIEW_OBJECT_FIELD_TYPE_TOAST_STATUS = 1;
+    VAR_LARK_FEED_LIST_VIEW_OBJECT_FIELD_TYPE_CAN_LOAD_MORE = 2;
+}
+message LarkFeedListViewObjectFieldValue {
+    oneof inner {
+        ListStatus load_status = 1;
+        ToastStatus toast_status = 2;
+        bool can_load_more = 3;
+    }}
+enum LarkFeedListViewObjectLiveQueryFieldType {
+    VAR_LARK_FEED_LIST_VIEW_OBJECT_LIVE_QUERY_FIELD_TYPE_FEED_LIST = 0;
+}
+//  加载方向
+enum LoadDirection {
+    VAR_LOAD_DIRECTION_NEXT = 0;
+    VAR_LOAD_DIRECTION_PREVIOUS = 1;
+}
+//  弹窗状态
+message ToastStatus {
+    oneof inner {
+        bool none = 1;
+        ToastStatusSuccess on_no_disturb_switch_change_success = 2;
+        ToastStatusFailure on_no_disturb_switch_change_failure = 3;
+        ToastStatusSuccess on_auto_mute_switch_change_success = 4;
+        ToastStatusFailure on_auto_mute_switch_change_failure = 5;
+        ToastStatusFailure general_failure = 6;
+    }}
+//  一个通用的 `ViewFlow` Error 定义
+message ViewFlowError {
+    oneof inner {
+        bool view_flow_is_shut_down = 1;
+        bool no_container_handle = 2;
+        BizError biz = 3;
+    }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+message FuncParamsX1481112f09a0a4cd 
+{
+    required LarkFeedListContextWrapped context = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX221721e3ba23b393 
+{
+    required MoltenFfiInstanceMsg listener = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX4199da73f91db0ad 
+{
+    required LarkFeedInfo feed_info = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX502c68800964a1de 
+{
+    required LarkFeedListViewObjectLiveQueryFieldType field_type = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX7a8547e12a586378 
+{
+    required UserForegroundScope arg_0 = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX86234f93c431e40c 
+{
+    required ViewFlowError error = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX863fc13505d7d967 
+{
+    required LarkFeedListViewObjectFieldValue field = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXbb39dacb99e0b497 
+{
+    required LarkFeedListAction action = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXcb6201774036d97f 
+{
+    required LarkFeedListViewObjectFieldType field_type = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXec0d742cb23d6d18 
+{
+    required LarkFeedListViewObjectFieldType field_type = 1;
+    required MoltenFfiInstanceMsg notifier = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX0b6f74cfcd2e6db2 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX17a2a2d9ea0bd11e 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX23c558f1283f96a7 
+{
+    required LarkFeedListViewObjectFieldValue ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3865b996d611a10e 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX7a1798371c2d0666 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX7c0289fbb4dc068f 
+{
+    required ExternLiveQuery ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX847bc3ef2c942e1d 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX9960aa3217bce639 
+{
+    required LarkFeedInfo ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXe6e6aa990169f5b3 
+{
+     optional int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXfa2575f514facd38 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncErrorXb20506848349f8f4 
+{
+    required ViewFlowError err = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX5fa2ad7ee23bcf9f 
+{
+    optional FuncReturnXfa2575f514facd38 ret = 1;
+    optional FuncErrorXb20506848349f8f4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX69ad708838380383 
+{
+    optional FuncReturnX7a1798371c2d0666 ret = 1;
+    optional FuncErrorXb20506848349f8f4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultXe3a0b7f5b1da8345 
+{
+    optional FuncReturnX0b6f74cfcd2e6db2 ret = 1;
+    optional FuncErrorXb20506848349f8f4 err = 2;
+    optional bytes _molten_ctx = 255;
+}message MoltenFfiInstanceMsg {
+  required int64 type_id = 1;
+  required int64 instance_id = 2;
+}
+message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

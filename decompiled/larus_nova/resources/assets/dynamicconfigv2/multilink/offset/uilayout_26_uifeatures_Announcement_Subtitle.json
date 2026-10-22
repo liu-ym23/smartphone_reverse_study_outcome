@@ -1,0 +1,24 @@
+{
+    "adjust_map": {
+        "android" : {
+            "ui_container":{
+                "top":32
+            }
+        },
+        "ios": {
+            "ui_container":{
+                "top":32
+            }
+        }
+    },
+    "regions":[
+        {
+            "p":0,
+            "x":-33
+        },
+        {
+            "p":1,
+            "x":33
+        }
+    ]
+}

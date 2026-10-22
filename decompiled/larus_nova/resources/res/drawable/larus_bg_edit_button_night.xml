@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/larus_base_4_night"/>
+                    <corners android:radius="?attr/larus_dp_12"/>
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <solid android:color="@color/larus_press_night"/>
+                    <corners android:radius="?attr/larus_dp_12"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/larus_base_4_night"/>
+            <corners android:radius="?attr/larus_dp_12"/>
+        </shape>
+    </item>
+</selector>

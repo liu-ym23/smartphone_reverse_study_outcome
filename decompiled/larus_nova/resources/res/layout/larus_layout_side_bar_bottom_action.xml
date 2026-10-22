@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="?attr/larus_dp_30"
+    android:layout_height="?attr/larus_dp_32"
+    android:layout_marginStart="?attr/larus_dp_8"
+    android:layout_marginEnd="?attr/larus_dp_6">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/icon"
+        android:layout_width="?attr/larus_dp_24"
+        android:layout_height="?attr/larus_dp_24"/>
+    <com.larus.common_ui.widget.RedDotTextView
+        android:textSize="?attr/larus_dp_10"
+        android:textStyle="bold"
+        android:textColor="@color/larus_static_white"
+        android:gravity="center"
+        android:layout_gravity="end|top"
+        android:id="@+id/red_dot"
+        android:background="@drawable/larus_red_dot_bg"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_16"
+        android:layout_height="?attr/larus_dp_16"
+        android:includeFontPadding="false"/>
+</FrameLayout>

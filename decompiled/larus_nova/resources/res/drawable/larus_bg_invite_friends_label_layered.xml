@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/larus_base_1_overlay"/>
+            <size
+                android:height="?attr/larus_dp_44"
+                android:width="?attr/larus_dp_44"/>
+        </shape>
+    </item>
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="@color/larus_neutral_100"/>
+            <size
+                android:height="?attr/larus_dp_26"
+                android:width="?attr/larus_dp_26"/>
+        </shape>
+    </item>
+</layer-list>

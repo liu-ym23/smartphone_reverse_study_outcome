@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#00ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.android.ttcjpaysdk.base.theme.widget.CJPayCustomButton
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@+id/loading_btn_text"
+            android:background="@drawable/cj_pay_bg_red_btn_opacity_40"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"/>
+        <ProgressBar
+            android:id="@+id/loading_btn_loading"
+            android:background="@color/cj_pay_color_trans"
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:indeterminateOnly="true"
+            android:indeterminateDrawable="@drawable/cj_pay_bg_loading_small_circle_white"
+            android:indeterminateDuration="500"
+            android:indeterminateBehavior="repeat"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</RelativeLayout>

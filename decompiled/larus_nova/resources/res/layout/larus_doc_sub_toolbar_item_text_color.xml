@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/larus_doc_toolbar_v2_subitem_all_selector"
+    android:padding="@dimen/dp_6"
+    android:layout_width="@dimen/dp_36"
+    android:layout_height="@dimen/dp_36"
+    android:layout_margin="@dimen/dp_6">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/icon"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_18"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/textColorRect"
+        android:layout_width="@dimen/dp_22"
+        android:layout_height="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_1"
+        app:radius="@dimen/dp_2"/>
+</LinearLayout>

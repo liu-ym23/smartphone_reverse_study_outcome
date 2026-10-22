@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="?attr/larus_dp_15"
+    android:textStyle="bold"
+    android:textColor="@color/larus_const_text_inverse2"
+    android:gravity="center_horizontal"
+    android:id="@+id/item_text"
+    android:paddingLeft="?attr/larus_dp_12"
+    android:paddingRight="?attr/larus_dp_12"
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/larus_dp_20"
+    android:paddingHorizontal="?attr/larus_dp_12"
+    android:lineHeight="?attr/larus_dp_18"
+    android:textFontWeight="600"/>

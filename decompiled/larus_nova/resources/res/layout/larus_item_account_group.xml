@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/larus_item_account_group_608862948"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/selectOneService"
+        android:paddingTop="?attr/larus_dp_10"
+        android:paddingBottom="?attr/larus_dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择汽水音乐服务"
+        android:layout_marginStart="?attr/larus_dp_16"/>
+    <com.larus.bmhome.view.item.ItemGroup
+        android:id="@+id/thirdPartyGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_8"/>
+</LinearLayout>

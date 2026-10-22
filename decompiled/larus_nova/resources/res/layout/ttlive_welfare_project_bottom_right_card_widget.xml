@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.chatroom.ui.BannerFrameLayout
+        android:id="@+id/welfare_card_container"
+        android:layout_width="112dp"
+        android:layout_height="175dp"/>
+    <ImageView
+        android:layout_gravity="end|top"
+        android:id="@+id/iv_close"
+        android:padding="6dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ttlive_welfare_right_card_close"/>
+</FrameLayout>

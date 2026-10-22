@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.lisitem.OUICardConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/larus_base_2"
+    android:paddingTop="?attr/larus_dp_16"
+    android:paddingBottom="?attr/larus_dp_16"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="?attr/larus_dp_16"
+    android:paddingEnd="?attr/larus_dp_16"
+    app:oui_radius="?attr/larus_dp_20">
+    <com.obric.oui.image.OImage
+        android:id="@+id/dora_obric_device_home_quick_action_icon"
+        android:layout_width="?attr/larus_dp_32"
+        android:layout_height="?attr/larus_dp_32"
+        android:src="@drawable/larus_dora_obric_device_home_ic_grid"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:oui_imageStrokeEnabled="false"/>
+    <com.obric.oui.text.OTextView
+        android:textSize="?attr/larus_sp_16"
+        android:textColor="@color/oui_basic_text_1"
+        android:gravity="center_vertical"
+        android:id="@+id/dora_obric_device_home_quick_action_title"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_28"
+        android:layout_marginTop="?attr/larus_dp_10"
+        android:includeFontPadding="false"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dora_obric_device_home_quick_action_icon"/>
+</com.obric.oui.lisitem.OUICardConstraintLayout>

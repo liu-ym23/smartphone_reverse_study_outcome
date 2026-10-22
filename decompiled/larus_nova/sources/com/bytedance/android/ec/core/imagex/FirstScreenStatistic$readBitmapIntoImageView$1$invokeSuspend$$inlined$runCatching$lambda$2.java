@@ -1,0 +1,52 @@
+package com.bytedance.android.ec.core.imagex;
+
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.Boxing;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Ref;
+import kotlinx.coroutines.CoroutineScope;
+
+/* JADX INFO: loaded from: classes43.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u008a@¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;", AbsMethodDelegate.TAG_INVOKE, "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "com/bytedance/android/ec/core/imagex/FirstScreenStatistic$readBitmapIntoImageView$1$runResult$1$2"}, k = 3, mv = {1, 4, 3})
+@DebugMetadata(c = "com.bytedance.android.ec.core.imagex.FirstScreenStatistic$readBitmapIntoImageView$1$runResult$1$2", f = "FirstScreenStatistic.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+public final class FirstScreenStatistic$readBitmapIntoImageView$1$invokeSuspend$$inlined$runCatching$lambda$2 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    final /* synthetic */ Ref.ObjectRef $bitmap$inlined;
+    int label;
+    final /* synthetic */ FirstScreenStatistic$readBitmapIntoImageView$1 this$0;
+
+    public FirstScreenStatistic$readBitmapIntoImageView$1$invokeSuspend$$inlined$runCatching$lambda$2(Continuation r100, FirstScreenStatistic$readBitmapIntoImageView$1 r101, Ref.ObjectRef r102) {
+        this.this$0 = r101;
+        this.$bitmap$inlined = r102;
+        super(2, r100);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object r100, Continuation<?> r101) {
+        Intrinsics.checkNotNullParameter(r101, "completion");
+        return new FirstScreenStatistic$readBitmapIntoImageView$1$invokeSuspend$$inlined$runCatching$lambda$2(r101, this.this$0, this.$bitmap$inlined);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(CoroutineScope r100, Continuation<? super Unit> r101) {
+        return ((FirstScreenStatistic$readBitmapIntoImageView$1$invokeSuspend$$inlined$runCatching$lambda$2) create(r100, r101)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) goto L7;
+        ResultKt.throwOnFailure(r100);
+        this.this$0.$callback.invoke(Boxing.boxBoolean(false));
+        return Unit.INSTANCE;
+    L7:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    }
+}

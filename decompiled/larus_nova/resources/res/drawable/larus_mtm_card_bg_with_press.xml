@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/larus_press"/>
+            <stroke
+                android:width="?attr/larus_dp_0_5"
+                android:color="@color/larus_neutral_transparent_1"/>
+            <corners android:radius="?attr/larus_dp_16"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/larus_base_3"/>
+            <stroke
+                android:width="?attr/larus_dp_0_5"
+                android:color="@color/larus_neutral_transparent_1"/>
+            <corners android:radius="?attr/larus_dp_16"/>
+        </shape>
+    </item>
+</selector>

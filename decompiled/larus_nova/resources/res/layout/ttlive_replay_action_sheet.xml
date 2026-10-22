@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vs_action_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/vs_action_sheet_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/vs_action_sheet_container"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/vs_action_sheet_container"
+        android:background="@drawable/ttlive_replay_bg_action_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vs_action_sheet_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+        <View
+            android:background="#14ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <TextView
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/vs_action_sheet_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/ttlive_replay_cancel"/>
+    </LinearLayout>
+</RelativeLayout>

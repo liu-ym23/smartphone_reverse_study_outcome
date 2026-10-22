@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mv_preview_label_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/mv_preview_label_bg"
+        android:background="@drawable/ttlive_bg_mv_preview_label"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/mv_preview_label_lock_icon"
+            android:visibility="gone"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_marginEnd="2dp"
+            app:placeholderImage="@drawable/ttlive_mv_lock_icon"/>
+        <TextView
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:textColor="#77311b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ttlive_interactive_song_mv_high_quality"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.bitable.card.view.cell.text.BitableSpaceEditText
+        android:textSize="@dimen/space_kit_font_16"
+        android:textColor="@color/text_title"
+        android:textColorHint="@color/text_placeholder"
+        android:id="@+id/input_et"
+        android:paddingLeft="@dimen/space_kit_len_12"
+        android:paddingTop="@dimen/space_kit_len_8"
+        android:paddingRight="@dimen/space_kit_len_12"
+        android:paddingBottom="@dimen/space_kit_len_8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_108"
+        android:layout_margin="@dimen/space_kit_len_16"
+        android:hint="@string/Bitable_Common_PleaseEnterMobileVer"
+        app:ud_backgroundColor="@color/bg_body"
+        app:ud_strokeColor="@color/primary_fill_default"
+        app:ud_strokeWidth="@dimen/space_kit_len_1"
+        style="@style/SpaceEditTextStyle"/>
+</FrameLayout>

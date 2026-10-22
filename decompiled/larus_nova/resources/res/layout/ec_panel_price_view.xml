@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/product_price_container"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/activity_prefix_icon_dv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="4dp"
+        app:layoutMode="width_self_adjust"/>
+    <com.bytedance.android.ec.core.widget.price.PriceView
+        android:textSize="13dp"
+        android:id="@+id/ec_product_pv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:pv_priceDecimalTextSizeRatio="1"
+        app:pv_priceTextColor="@color/white"/>
+    <com.bytedance.android.ec.core.widget.price.PriceView
+        android:textSize="10dp"
+        android:id="@+id/ec_strike_through_pv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="4dp"
+        app:pv_priceDecimalTextSizeRatio="1"
+        app:pv_priceTextColor="#99ffffff"
+        app:pv_showStrikeThrough="true"
+        app:pv_yuanSymbolRatioOfPriceTextSize="1"/>
+</LinearLayout>

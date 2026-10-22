@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.middleground.comment.widget.CommentTextView
+        android:textSize="16sp"
+        android:textColor="@color/text_title"
+        android:id="@+id/tv_content"
+        android:paddingLeft="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"/>
+    <com.bytedance.ee.bear.middleground.comment.widget.CommentTextView
+        android:textSize="16sp"
+        android:textColor="@color/text_caption"
+        android:id="@+id/tv_content_translate"
+        android:background="@drawable/facade_round_around_xs"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/tv_content"
+        android:paddingEnd="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignStart="@+id/tv_content"
+        android:backgroundTint="@color/bg_filler"/>
+    <com.bytedance.ee.bear.facade.common.widget.BearLottieView
+        android:id="@+id/iv_translate"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignBottom="@+id/tv_content"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="translate_ing.json"
+        app:lottie_loop="true"/>
+</RelativeLayout>

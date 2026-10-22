@@ -1,0 +1,26 @@
+package com.bytedance.android.livesdk.chatroom.viewmodule;
+
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+
+/* JADX INFO: loaded from: classes8.dex */
+public final class q1 extends AnimatorListenerAdapter {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ s1 f115334a;
+
+    public q1(s1 r100) {
+        this.f115334a = r100;
+    }
+
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationCancel(Animator r100) {
+        super.onAnimationCancel(r100);
+        r100.removeAllListeners();
+    }
+
+    @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+    public final void onAnimationEnd(Animator r100) {
+        this.f115334a.i(true);
+    }
+}

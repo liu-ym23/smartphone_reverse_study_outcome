@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <ImageView
+        android:id="@+id/gift_bag_top_bar_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/gift_bag_top_bar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/gift_bag_top_bar_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/gift_bag_top_bar_icon"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#795100"
+        android:gravity="center"
+        android:id="@+id/gift_bag_top_bar_check"
+        android:background="@drawable/ttlive_gift_bag_top_bar_check_bg"
+        android:layout_width="48dp"
+        android:layout_height="22dp"
+        android:text="@string/ttlive_gift_bag_top_bar_check"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

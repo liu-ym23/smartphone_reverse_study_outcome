@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:layout_width="112dp"
+    android:layout_height="112dp"
+    app:bg_color="@color/white"
+    app:bg_cornerRadius="16dp">
+    <com.bytedance.android.ec.core.widget.ECPromotionImageView
+        android:id="@+id/piv_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.ui.base.widget.round.RoundTextView
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/tv_index"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:minWidth="26dp"
+        android:paddingHorizontal="4dp"
+        app:bg_color="@color/shopping_color_73161823"
+        app:bg_cornerRadius_BR="10dp"
+        app:bg_cornerRadius_TL="10dp"
+        app:layout_constraintStart_toStartOf="@+id/piv_image"
+        app:layout_constraintTop_toTopOf="@+id/piv_image"/>
+</com.bytedance.android.ui.base.widget.round.RoundConstraintLayout>

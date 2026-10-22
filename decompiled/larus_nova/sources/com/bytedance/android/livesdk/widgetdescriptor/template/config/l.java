@@ -1,0 +1,12 @@
+package com.bytedance.android.livesdk.widgetdescriptor.template.config;
+
+import com.bytedance.android.livesdk.widgetdescriptor.e0;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes11.dex */
+public abstract class l extends a80.b<e0> {
+    public l(e0 r100) {
+        Intrinsics.checkNotNullParameter(r100, "layerContext");
+        super(r100);
+    }
+}

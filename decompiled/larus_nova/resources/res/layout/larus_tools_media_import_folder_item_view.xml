@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/larus_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="88dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_folder"
+        android:background="@color/larus_tools_media_folder_image_bg"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="16dp"/>
+    <com.ss.android.ugc.tools.view.style.StyleTextView
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="?attr/larus_neutral_100"
+        android:ellipsize="middle"
+        android:id="@+id/tv_folder_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/iv_folder"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/iv_folder"
+        app:ts_enable_text_color="false"
+        app:ts_font_type="medium"/>
+    <com.ss.android.ugc.tools.view.style.StyleTextView
+        android:textSize="13sp"
+        android:textColor="@color/larus_tools_media_secondary_text_color"
+        android:id="@+id/tv_folder_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/iv_folder"
+        android:layout_below="@+id/tv_folder_name"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/iv_folder"
+        app:ts_enable_text_color="false"/>
+</RelativeLayout>

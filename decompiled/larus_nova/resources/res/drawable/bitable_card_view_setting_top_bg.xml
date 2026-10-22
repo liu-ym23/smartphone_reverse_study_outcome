@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <gradient
+                android:startColor="@color/primary_pri_200"
+                android:endColor="@color/primary_pri_100"
+                android:angle="315"
+                android:type="linear"
+                android:centerX="0.5"
+                android:centerY="0.5"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/bitable_card_view_top_bg_unselect_color"/>
+        </shape>
+    </item>
+</selector>

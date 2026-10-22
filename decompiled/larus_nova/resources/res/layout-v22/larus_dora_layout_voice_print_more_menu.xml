@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/larus_dora_bg_rule_menu"
+    android:layout_width="?attr/larus_dp_200"
+    android:layout_height="wrap_content"
+    android:elevation="?attr/larus_dp_6">
+    <include
+        android:id="@+id/item_re_enroll"
+        layout="@layout/larus_dora_item_voice_print_more_menu"/>
+    <View
+        android:background="@color/larus_neutral_transparent_2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_0_5"
+        android:layout_marginLeft="?attr/larus_dp_16"
+        android:layout_marginRight="?attr/larus_dp_16"
+        android:layout_marginHorizontal="?attr/larus_dp_16"/>
+    <include
+        android:id="@+id/item_delete"
+        layout="@layout/larus_dora_item_voice_print_more_menu"/>
+</LinearLayout>

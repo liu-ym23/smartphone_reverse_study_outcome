@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <CheckBox
+        android:textColor="@color/ttlive_live_input_text_horizontal_color"
+        android:id="@+id/publish_as_story_checkbox"
+        android:paddingLeft="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_sned_msg_board_publish_as_story"
+        android:layout_marginStart="16dp"
+        style="@style/ttlive_RedEnvelopeCheckboxStyle"/>
+</FrameLayout>

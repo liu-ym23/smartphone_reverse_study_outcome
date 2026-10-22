@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="64dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+    <ImageView
+        android:id="@+id/office_select_panel_item_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"/>
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@color/office_select_panel_text"
+        android:gravity="center"
+        android:id="@+id/office_select_panel_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:includeFontPadding="false"/>
+</LinearLayout>

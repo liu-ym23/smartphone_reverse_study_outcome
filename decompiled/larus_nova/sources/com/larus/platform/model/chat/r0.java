@@ -1,0 +1,121 @@
+package com.larus.platform.model.chat;
+
+import com.google.gson.annotations.SerializedName;
+import com.ss.android.socialbase.downloader.setting.DownloadSettingKeys;
+import com.ss.ttvideoengine.TTVideoEngineInterface;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes31.dex */
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\b\n\u0002\b\u0013\n\u0002\u0010\u000b\n\u0002\b\u0004\b\u0086\b\u0018\u00002\u00020\u0001B?\u0012\u0012\b\u0002\u0010\u0002\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u0012\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\b\u0012\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\n\u0010\u000bJ\u0013\u0010\u0015\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0004\u0018\u00010\u0003HÆ\u0003J\u0010\u0010\u0016\u001a\u0004\u0018\u00010\u0006HÆ\u0003¢\u0006\u0002\u0010\u000fJ\u0010\u0010\u0017\u001a\u0004\u0018\u00010\bHÆ\u0003¢\u0006\u0002\u0010\u0012J\u0010\u0010\u0018\u001a\u0004\u0018\u00010\u0006HÆ\u0003¢\u0006\u0002\u0010\u000fJF\u0010\u0019\u001a\u00020\u00002\u0012\b\u0002\u0010\u0002\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00062\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\b2\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\u0006HÆ\u0001¢\u0006\u0002\u0010\u001aJ\u0013\u0010\u001b\u001a\u00020\u001c2\b\u0010\u001d\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u001e\u001a\u00020\bHÖ\u0001J\t\u0010\u001f\u001a\u00020\u0004HÖ\u0001R \u0010\u0002\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\rR\u001a\u0010\u0005\u001a\u0004\u0018\u00010\u00068\u0006X\u0087\u0004¢\u0006\n\n\u0002\u0010\u0010\u001a\u0004\b\u000e\u0010\u000fR\u001a\u0010\u0007\u001a\u0004\u0018\u00010\b8\u0006X\u0087\u0004¢\u0006\n\n\u0002\u0010\u0013\u001a\u0004\b\u0011\u0010\u0012R\u001a\u0010\t\u001a\u0004\u0018\u00010\u00068\u0006X\u0087\u0004¢\u0006\n\n\u0002\u0010\u0010\u001a\u0004\b\u0014\u0010\u000f¨\u0006 "}, d2 = {"Lcom/larus/platform/model/chat/UploadAudioEntityConf;", "", "allowTypes", "", "", "maxSize", "", "maxCount", "", "maxDuration", "<init>", "(Ljava/util/List;Ljava/lang/Long;Ljava/lang/Integer;Ljava/lang/Long;)V", "getAllowTypes", "()Ljava/util/List;", "getMaxSize", "()Ljava/lang/Long;", "Ljava/lang/Long;", "getMaxCount", "()Ljava/lang/Integer;", "Ljava/lang/Integer;", "getMaxDuration", "component1", "component2", "component3", "component4", "copy", "(Ljava/util/List;Ljava/lang/Long;Ljava/lang/Integer;Ljava/lang/Long;)Lcom/larus/platform/model/chat/UploadAudioEntityConf;", "equals", "", "other", "hashCode", "toString", "platform_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class r0 {
+
+    @SerializedName("allow_types")
+    private final List<String> allowTypes;
+
+    @SerializedName("max_cnt")
+    private final Integer maxCount;
+
+    @SerializedName("max_duration")
+    private final Long maxDuration;
+
+    @SerializedName(DownloadSettingKeys.MaxDiskSizeLimit.MAX_SIZE)
+    private final Long maxSize;
+
+    public r0() {
+        this(0);
+    }
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L6;
+        return true;
+    L6:
+        if ((r100 instanceof r0) == true) goto L8;
+        return false;
+    L8:
+        r0 r101 = (r0) r100;
+        if (Intrinsics.areEqual(this.allowTypes, r101.allowTypes) == true) goto L12;
+        return false;
+    L12:
+        if (Intrinsics.areEqual(this.maxSize, r101.maxSize) == true) goto L15;
+        return false;
+    L15:
+        if (Intrinsics.areEqual(this.maxCount, r101.maxCount) == true) goto L18;
+        return false;
+    L18:
+        if (Intrinsics.areEqual(this.maxDuration, r101.maxDuration) == true) goto L20;
+        return false;
+    L20:
+        return true;
+    }
+
+    public final int hashCode() {
+        List<String> r100 = this.allowTypes;
+        int r101 = 0;
+        if (r100 != null) goto L5;
+        int r102 = 0;
+    L6:
+        int r103 = r102 * 31;
+        Long r104 = this.maxSize;
+        if (r104 != null) goto L9;
+        int r105 = 0;
+    L10:
+        int r106 = (r103 + r105) * 31;
+        Integer r107 = this.maxCount;
+        if (r107 != null) goto L13;
+        int r108 = 0;
+    L14:
+        int r109 = (r106 + r108) * 31;
+        Long r110 = this.maxDuration;
+        if (r110 == null) goto L19;
+        r101 = r110.hashCode();
+    L19:
+        return r109 + r101;
+    L13:
+        r108 = r107.hashCode();
+        goto L14
+    L9:
+        r105 = r104.hashCode();
+        goto L10
+    L5:
+        r102 = r100.hashCode();
+        goto L6
+    }
+
+    public final String toString() {
+        return "UploadAudioEntityConf(allowTypes=" + this.allowTypes + ", maxSize=" + this.maxSize + ", maxCount=" + this.maxCount + ", maxDuration=" + this.maxDuration + ')';
+    }
+
+    public final List<String> b() {
+        return this.allowTypes;
+    }
+
+    public final Integer c() {
+        return this.maxCount;
+    }
+
+    public final Long d() {
+        return this.maxDuration;
+    }
+
+    public final Long e() {
+        return this.maxSize;
+    }
+
+    public /* synthetic */ r0(int r110) {
+        this(CollectionsKt.listOf(new String[]{TTVideoEngineInterface.FORMAT_TYPE_MP3, "wav", "m4a", "wma", "aac", "ogg", "amr", "flac", "aiff"}), 314572800L, 10, 14400000L);
+    }
+
+    public static r0 a(r0 r100, List r101) {
+        return new r0(r101, r100.maxSize, r100.maxCount, r100.maxDuration);
+    }
+
+    public r0(List<String> r100, Long r101, Integer r102, Long r103) {
+        this.allowTypes = r100;
+        this.maxSize = r101;
+        this.maxCount = r102;
+        this.maxDuration = r103;
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/root_view"
+    android:background="@drawable/ttlive_scene_bg"
+    android:paddingLeft="6dp"
+    android:paddingTop="2dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="2dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/mic"
+        android:layout_width="18dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="4dp"/>
+    <ImageView
+        android:id="@+id/temp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"/>
+    <ImageView
+        android:id="@+id/net"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="4dp"/>
+</LinearLayout>

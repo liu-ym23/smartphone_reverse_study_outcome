@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_body_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/ll_todo_tab"
+        android:background="@drawable/todo_bg_send_to_chat"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingTop="4dp"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="4dp">
+        <ImageView
+            android:id="@+id/img_todo_drawable"
+            android:layout_width="16sp"
+            android:layout_height="16sp"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/text_title"
+            android:id="@+id/text_todo_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"/>
+    </LinearLayout>
+</LinearLayout>

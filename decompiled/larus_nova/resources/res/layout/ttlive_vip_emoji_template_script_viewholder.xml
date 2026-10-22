@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginStart="8dp">
+    <com.bytedance.android.uicomponent.text.BorderTextView
+        android:textSize="10dp"
+        android:textColor="#80161823"
+        android:id="@+id/script_text"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        app:borderColor="#33161823"
+        app:borderRadius="4dp"/>
+</FrameLayout>

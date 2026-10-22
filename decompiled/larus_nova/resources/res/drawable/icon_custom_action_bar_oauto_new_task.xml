@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="20dp"
+    android:width="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="@color/obric_custom_action_bar_secondary_menu_item_color"
+        android:pathData="M10.833,4.167V9.167H15.833V10.833H10.833V15.833H9.167V10.833H4.167V9.167H9.167V4.167H10.833Z"
+        android:fillAlpha="0.85"/>
+</vector>

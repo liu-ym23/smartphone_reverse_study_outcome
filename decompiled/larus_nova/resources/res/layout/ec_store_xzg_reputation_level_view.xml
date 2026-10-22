@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:gravity="center_vertical"
+            android:id="@+id/xzg_title_dv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="14sp"
+            android:alpha="0"
+            app:layoutMode="width_self_adjust"/>
+        <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+            android:gravity="center_vertical"
+            android:id="@+id/xzg_title_dv_end"
+            android:layout_width="wrap_content"
+            android:layout_height="14sp"
+            app:layoutMode="width_self_adjust"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/expand_xzg_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/collapse_xzg_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</merge>

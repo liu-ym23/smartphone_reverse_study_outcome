@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.livecommerce.iron.listheader.CustomEllipsisPositionTextView
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/ec_color_black_161823_90"
+        android:ellipsize="end"
+        android:id="@+id/info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/info_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/info_forward"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:visibility="gone"
+        android:layout_width="14dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ec_icon_reputation_forward"
+        android:contentDescription="@string/ec_button"/>
+    <com.bytedance.android.ui.ec.widget.ecdraweeview.ECDraweeView
+        android:id="@+id/info_change_store_icon"
+        android:paddingTop="1dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:contentDescription="@string/ec_button"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

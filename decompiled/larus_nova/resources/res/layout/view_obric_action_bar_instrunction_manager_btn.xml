@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/obric_action_bar_phone_operation_pro_icon_container"
+    android:background="@drawable/selector_obric_action_bar_instruction_manager_btn"
+    android:paddingTop="@dimen/dp_8"
+    android:paddingBottom="@dimen/dp_8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_12"
+    android:paddingEnd="@dimen/dp_12">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:src="@drawable/obric_ic_edit_instruction"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/dp_14"
+        android:textColor="@color/primary_50"
+        android:gravity="center"
+        android:id="@+id/pro_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/obric_action_bar_phone_operation_edit_instruction"
+        android:maxLines="1"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="@dimen/dp_4"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

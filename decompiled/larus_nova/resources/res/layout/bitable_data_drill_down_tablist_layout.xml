@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.universe_design.tab.UDTabLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_list"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:minWidth="30dp"
+    app:ud_tab_gravity="start"
+    app:ud_tab_mode="scrollable"
+    app:ud_tab_tabMargin="8dp"
+    app:ud_tab_titleSize="14sp"/>

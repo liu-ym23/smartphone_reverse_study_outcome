@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/dora_g_onboarding_bottom_btn_line"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.obric.oui.button.OButton
+        android:gravity="center"
+        android:id="@+id/dora_g_onboarding_bottom_btn_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_52"
+        android:text="@string/larus_dora_environmental_observation_onboarding_agree_cn"
+        style="@style/OStyleV2.OButton.L.Standard.Primary"/>
+    <View
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/dora_g_onboarding_top_margin"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_12"/>
+    <View
+        android:id="@+id/dora_g_onboarding_top_bottom_margin"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="?attr/larus_dp_12"/>
+    <com.obric.oui.button.OButton
+        android:gravity="center"
+        android:id="@+id/dora_g_onboarding_bottom_btn_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_52"
+        android:text="@string/larus_dora_g_onboard_set_later_cn"
+        style="@style/OStyleV2.OButton.L.Trans.Primary"/>
+</LinearLayout>

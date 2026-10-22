@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/ttlive_ic_vs_small_emoji_btn_clicked"/>
+    <item android:drawable="@drawable/ttlive_ic_vs_small_emoji_btn_normal"/>
+</selector>

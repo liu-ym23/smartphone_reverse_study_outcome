@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/barrage_badge"
+        android:layout_width="32dp"
+        android:layout_height="16dp"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/recent_barrage_badge"
+        android:visibility="gone"
+        android:layout_width="32dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="2dp"/>
+    <com.bytedance.android.livesdk.interactivity.barrage.view.StrokeColorTextView
+        android:id="@+id/advanced_barrage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:includeFontPadding="false"/>
+</LinearLayout>

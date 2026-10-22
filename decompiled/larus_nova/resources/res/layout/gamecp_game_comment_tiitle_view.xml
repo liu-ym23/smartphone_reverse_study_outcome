@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/iv_comment_detail_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/gamecp_ic_game_promote_comment_titlebar_back"
+        android:layout_marginStart="16dp"/>
+    <TextView
+        android:textSize="17dp"
+        android:textColor="#161823"
+        android:layout_gravity="center"
+        android:id="@+id/tv_game_comment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_game_promote_comment_detail_title"/>
+    <ImageView
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/iv_comment_detail_item_option"
+        android:visibility="gone"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="19dp"
+        android:src="@drawable/gamecp_ic_comment_options"/>
+</merge>

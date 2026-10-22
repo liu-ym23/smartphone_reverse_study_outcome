@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layout_revoke_assignee"
+        android:background="@color/bg_base"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_48">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/text_title"
+            android:gravity="center_vertical"
+            android:id="@+id/message_revoke_assignee"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/Todo_Task_AddedAsAssignee"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/primary_fill_default"
+            android:gravity="center_vertical"
+            android:id="@+id/text_revoke_assignee"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Todo_Common_Revoke"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+    </LinearLayout>
+</LinearLayout>

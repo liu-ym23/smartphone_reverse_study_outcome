@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/larus_dp_8">
+    <ImageView
+        android:id="@+id/function_introduction_query_reference"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_16"
+        android:layout_height="?attr/larus_dp_16"
+        android:layout_marginTop="?attr/larus_dp_8"
+        android:src="@drawable/larus_dora_function_introduction_reference"
+        android:layout_marginEnd="?attr/larus_dp_3"
+        app:layout_constraintEnd_toStartOf="@+id/function_introduction_desc_query"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/function_introduction_desc_query"/>
+    <com.larus.dora.impl.view.DoraTextView
+        android:textSize="?attr/larus_dp_17"
+        android:gravity="center_horizontal"
+        android:id="@+id/function_introduction_desc_query"
+        android:paddingTop="?attr/larus_dp_4_5"
+        android:paddingBottom="?attr/larus_dp_4_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingVertical="?attr/larus_dp_4_5"
+        android:textFontWeight="400"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="18dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="23dp"
+        app:srcCompat="@drawable/tenant_tip_arrow"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/ud_N00"
+        android:orientation="vertical"
+        android:id="@+id/text"
+        android:background="@drawable/tenant_tip_bg"
+        android:paddingLeft="22dp"
+        android:paddingTop="11.5dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="21.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.25"/>
+</LinearLayout>

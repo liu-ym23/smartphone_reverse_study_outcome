@@ -1,0 +1,703 @@
+/* Generated code, DO NOT EDIT.
+ * source: lark_bitable.yaml
+ */
+
+syntax = "proto2";
+
+package lark_bitable.proto;
+
+
+message ModelError {
+    required int64 code = 1;
+    required string msg = 2;
+}
+
+enum RecordPermission {
+    VAR_RECORD_PERMISSION_READABLE = 0;
+    VAR_RECORD_PERMISSION_EDITABLE = 1;
+}
+
+enum ModelAction {
+    VAR_MODEL_ACTION_JUMP_PAGE = 0;
+    VAR_MODEL_ACTION_COMMENT = 1;
+    VAR_MODEL_ACTION_EDIT = 2;
+    VAR_MODEL_ACTION_VIEW_ATTACHMENT = 3;
+    VAR_MODEL_ACTION_CLICK_BUTTON = 4;
+}
+enum FieldInputType {
+    VAR_FIELD_INPUT_TYPE_NO_LIMIT = 0;
+    VAR_FIELD_INPUT_TYPE_MOBILE = 1;
+}
+message TextSpan {
+    required string text = 1;
+     optional string input_type = 2;
+     optional string link = 3;
+     optional string category = 4;
+     optional string en_name = 5;
+     optional bool mention_notify = 6;
+     optional string token = 7;
+     optional int32 mention_type = 8;
+     optional string name = 9;
+}
+
+message OptionValue {
+    required string color = 1;
+    required string id = 2;
+    required string name = 3;
+}
+
+message LinkCapsule {
+    required string text = 1;
+    required string capsule_color = 2;
+}
+
+message TextCellContent {
+    required string link_highlight_color = 1;
+     repeated TextSpan content = 2;
+    required bool is_extend = 3;
+     optional FieldInputType input_type = 4;
+}
+
+message OptionCellContent {
+     repeated OptionValue content = 1;
+    required bool is_extend = 2;
+}
+
+message LinkCellContent {
+     repeated LinkCapsule content = 1;
+    required ModelAction action = 2;
+}
+
+message ButtonCellContent {
+    required string button_text = 1;
+    required string button_background_color = 2;
+    required string button_text_color = 3;
+}
+
+message RatingCellContent {
+    required string rating_icon = 1;
+    required int64 rating_num = 2;
+    required int64 max_num = 3;
+    required int64 min_num = 4;
+}
+
+message UserCell {
+    required string avatar = 1;
+    required string text = 2;
+}
+
+message UserCellContent {
+     repeated UserCell users = 1;
+    required bool is_extend = 2;
+}
+
+message CheckBoxCellContent {
+    required bool checked = 1;
+}
+
+message ProgressCellContent {
+    required string progress_background_color = 1;
+    required string progress_color = 2;
+    required float progress_percentage = 3;
+    required string progress_text = 4;
+}
+
+message UnSupportCellContent {
+    required string text = 1;
+}
+
+message AttachmentCellItem {
+    required string name = 1;
+    required string mime_type = 2;
+    required string token = 3;
+    required string extra = 4;
+}
+
+message AttachmentCellContent {
+     repeated AttachmentCellItem items = 1;
+    required bool is_camera_only = 2;
+}
+
+message StageCellContent {
+    required string stage_background_color = 1;
+    required string stage_text = 2;
+    required string stage_text_color = 3;
+    required string stage_status = 4;
+}
+
+message FormulaCellContent {
+     repeated ICellContent content = 1;
+    required bool need_comma = 2;
+}
+
+message ICellContent {
+    oneof inner {
+        TextCellContent multi_text = 1;
+        OptionCellContent option_cell = 2;
+        LinkCellContent link_cell = 3;
+        ButtonCellContent button_cell = 4;
+        ProgressCellContent progress_cell = 5;
+        RatingCellContent rating_cell = 6;
+        UserCellContent user_cell = 7;
+        CheckBoxCellContent check_box_cell = 8;
+        UnSupportCellContent un_support_cell = 9;
+        AttachmentCellContent attachment_cell = 10;
+        StageCellContent stage_cell = 11;
+        FormulaCellContent formula_cell = 12;
+    }}
+message RecordItem {
+    required string item_icon = 1;
+    required string item_name = 2;
+    required string item_ui_type = 3;
+    required bool editable = 4;
+     optional ModelAction action = 5;
+    required ICellContent item_content = 6;
+}
+
+enum ErrorContent {
+    VAR_ERROR_CONTENT_NO_PERMISSION = 0;
+    VAR_ERROR_CONTENT_NO_CONTENT = 1;
+}
+// tab type
+enum TabType {
+    VAR_TAB_TYPE_MAIN = 0;
+    VAR_TAB_TYPE_STAGE = 1;
+}
+message ContentModel {
+     map<string, RecordItem> item_list = 1;
+     repeated string item_sort_list = 2;
+    required uint32 hidden_field_count = 3;
+}
+
+message StageModel {
+    required string name = 1;
+}
+
+message TabContent {
+    oneof inner {
+        StageModel stage_content = 1;
+        ContentModel main_content = 2;
+    }}
+// define tab ui type
+message Tab {
+    required string tab_name = 1;
+    required TabType tab_type = 2;
+    required TabContent tab_content = 3;
+}
+
+message SubTitle {
+    required string sub_title_name = 1;
+     optional ModelAction action = 2;
+}
+
+message RecordData {
+    required string title = 1;
+     repeated SubTitle sub_titles = 2;
+     repeated Tab tabs = 3;
+     repeated AttachmentCellItem cover = 4;
+    required bool has_cover_config = 5;
+    required string cover_field_name = 6;
+    required ErrorContent error_ui = 7;
+}
+
+message ForegroundUserContainerScope {
+    required uint64 uid = 1;
+}
+
+
+
+
+
+
+
+
+enum HomepageListType {
+    VAR_HOMEPAGE_LIST_TYPE_RECENT = 0;
+    VAR_HOMEPAGE_LIST_TYPE_PIN = 1;
+    VAR_HOMEPAGE_LIST_TYPE_FAVORITE = 2;
+    VAR_HOMEPAGE_LIST_TYPE_WORKSPACE = 3;
+    VAR_HOMEPAGE_LIST_TYPE_UNKNOWN = 4;
+}
+enum HomepageAction {
+    VAR_HOMEPAGE_ACTION_REFRESH = 0;
+    VAR_HOMEPAGE_ACTION_LOAD_MORE = 1;
+    VAR_HOMEPAGE_ACTION_DELETE = 2;
+    VAR_HOMEPAGE_ACTION_CANCEL_FAVORITE = 3;
+    VAR_HOMEPAGE_ACTION_CANCEL_PIN = 4;
+    VAR_HOMEPAGE_ACTION_OPEN_SHARE = 5;
+    VAR_HOMEPAGE_ACTION_OPEN_MORE = 6;
+    VAR_HOMEPAGE_ACTION_OPEN_BITABLE = 7;
+    VAR_HOMEPAGE_ACTION_SWITCH_LIST_TYPE = 8;
+    VAR_HOMEPAGE_ACTION_OPEN_WORK_SPACE_PANEL = 9;
+}
+message HomepageDocData {
+    required string token = 1;
+    required string icon = 2;
+    required string title = 3;
+    required int32 biz_type = 4;
+    required int32 obj_biz_type = 5;
+    required string obj_token = 6;
+    required int64 open_time = 7;
+    required int64 star_time = 8;
+    required int64 create_time = 9;
+    required int64 edit_time = 10;
+    required HomepageTagConfig tag = 11;
+    required bool is_owner = 12;
+    required bool is_stared = 13;
+    required bool is_my_library = 14;
+    required string wiki_space_name = 15;
+    required string url = 16;
+}
+
+message HomepageTagConfig {
+    required bool show_template = 1;
+    required bool show_external = 2;
+    required bool show_file_risk_tag = 3;
+}
+
+message HomepageListData {
+    required string last_label = 1;
+    required bool has_more = 2;
+    required string space_token = 3;
+     repeated HomepageDocData doc_data_list = 4;
+     repeated HomepageDocument raw_data_list = 5;
+}
+
+message HomepageDocument {
+    required string url = 1;
+    required int32 owner_type = 2;
+    required string security_name = 3;
+    required int64 path_count = 4;
+    required int32 obj_biz_type = 5;
+    required string delete_uid = 6;
+    required string token = 7;
+    required string obj_token = 8;
+    required int32 r_type = 9;
+    required HomepageInnerDocExtraData extra = 10;
+    required int64 open_time = 11;
+    required int64 star_time = 12;
+    required int64 get_sec_label_code = 13;
+    required int64 can_set_sec_label = 14;
+    required string name = 15;
+    required bool secret_key_delete = 16;
+    required string edit_uid = 17;
+    required int32 delete_flag = 18;
+    required string icon_info = 19;
+    required int64 activity_time = 20;
+    required int64 edit_time = 21;
+    required string security_label_id = 22;
+    required bool is_stared = 23;
+    required bool is_pined = 24;
+    required string thumbnail = 25;
+    required int32 security_level = 26;
+    required string owner_id = 27;
+    required int64 create_time = 28;
+    required int64 my_edit_time = 29;
+    required string sharer_id = 30;
+    required bool is_subscribed = 31;
+    required int64 share_time = 32;
+    required string icon_key = 33;
+    required int32 icon_type = 34;
+    required string icon_fsunit = 35;
+    required string create_tenant_id = 36;
+    required string create_cn_name = 37;
+    required string create_en_name = 38;
+    required string share_cn_name = 39;
+    required string share_en_name = 40;
+}
+
+message HomepageInnerDocExtraData {
+    required string icon_key = 1;
+    required string space_id = 2;
+    required bool is_visited = 3;
+    required bool has_perm = 4;
+    required bool copiable = 5;
+    required bool is_share_root = 6;
+    required int32 icon_encrypted_type = 7;
+    required string icon_nonce = 8;
+    required string icon = 9;
+    required string app_id = 10;
+    required bool not_wiki_obj = 11;
+    required int32 template_type = 12;
+    required string wiki_space_id = 13;
+    required string wiki_space_name = 14;
+    required string wiki_sub_token = 15;
+    required string wiki_version = 16;
+    required int64 biz_type = 17;
+    required bool file_risk_tag = 18;
+    required bool is_external = 19;
+    required string wiki_space_create_uid = 20;
+    required int32 wiki_space_type = 21;
+    required int32 wiki_subtype = 22;
+    required string wiki_homepage = 23;
+    required string complaint = 24;
+    required string doc_description = 25;
+}
+
+message BitableWorkspaceInfo {
+    required string name = 1;
+    required string icon = 2;
+    required string token = 3;
+    required string cover = 4;
+    required int32 scope = 5;
+    required string space_description = 6;
+    required WorkspaceAllowActions allow_actions = 7;
+}
+
+message WorkspaceAllowActions {
+    required bool manage = 1;
+    required bool move_in = 2;
+    required bool move_out = 3;
+    required bool edit = 4;
+    required bool view = 5;
+}
+
+message WorkspaceListResult {
+    required bool has_more = 1;
+    required string page_token = 2;
+    required int32 action = 3;
+     repeated BitableWorkspaceInfo items = 4;
+}
+
+message HomepageCreateBitableResult {
+    required string url = 1;
+    required string token = 2;
+}
+
+message BitableWorkspaceMoveResult {
+    required string token = 1;
+    required string msg = 2;
+    required WorkspaceBitableMoveStatus move_result = 3;
+}
+
+enum WorkspaceBitableMoveStatus {
+    VAR_WORKSPACE_BITABLE_MOVE_STATUS_UNSUPPORTED = 0;
+    VAR_WORKSPACE_BITABLE_MOVE_STATUS_SUCCESS = 1;
+    VAR_WORKSPACE_BITABLE_MOVE_STATUS_FAIL = 2;
+    VAR_WORKSPACE_BITABLE_MOVE_STATUS_NOPERMISSION = 3;
+}
+message BitableMorePanelPermission {
+    required bool can_change_workspace = 1;
+    required bool can_move_out_workspace = 2;
+    required bool can_move_in_workspace = 3;
+     optional string workspace_token = 4;
+     optional string workspace_name = 5;
+}
+
+message BitableTenantTypeInfo {
+    required bool solo_user = 1;
+    required bool solo_base = 2;
+}
+
+
+
+message BitableAppInfo {
+    required int32 biz_type = 1;
+}
+
+message BitableMarketplaceInstallResult {
+    required string url = 1;
+    required string base_app_token = 2;
+}
+
+
+
+
+
+enum BaseAppPreloadResourceType {
+    VAR_BASE_APP_PRELOAD_RESOURCE_TYPE_CLIENT_VARS = 0;
+}
+message BaseAppPreloadResource {
+    required string payload = 1;
+    required string source = 2;
+    required int64 cache_elapsed_time = 3;
+    required int64 request_start = 4;
+    required int32 api_code = 5;
+    required string error_msg = 6;
+    required string xtt_log_id = 7;
+    required int32 schema_version = 8;
+}
+
+
+enum BitableDocumentType {
+    VAR_BITABLE_DOCUMENT_TYPE_MAIN = 1;
+    VAR_BITABLE_DOCUMENT_TYPE_RECORD = 2;
+    VAR_BITABLE_DOCUMENT_TYPE_ADD_RECORD = 3;
+}
+message PushBitableLoaderResource {
+     optional string container_id = 1;
+     optional string block_id = 2;
+     optional string view_id = 3;
+     optional string clientvars = 4;
+     optional string main_page = 5;
+     optional int32 block_type = 6;
+     optional string record_data = 7;
+     optional string add_record_page = 8;
+}
+
+message FuncParamsX0919def174cd15cf 
+{
+     map<string, string> params = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX0aae7bf6900be3c2 
+{
+    required ForegroundUserContainerScope context = 1;
+    required string container_id = 2;
+    required uint64 uid = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX1651980f0a3cea4c 
+{
+    required HomepageListType list_type = 1;
+    required string last_label = 2;
+     optional string space_token = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX1fe2d26feb43d1a7 
+{
+    required string doc_token = 1;
+    required int32 doc_type = 2;
+    required bool remove_recent = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX22d4957386f22642 
+{
+    required string token = 1;
+    required BitableDocumentType document_type = 2;
+    required string url = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX2998eb4c8f2d270e 
+{
+    required int32 homepage_tab_count = 1;
+    required int32 feed_tab_count = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX2a53b6de2ddfdaa7 
+{
+    required string doc_token = 1;
+    required int32 obj_type = 2;
+    required bool need_user = 3;
+    required MoltenFfiInstanceMsg callback = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX2c6727670471b0d6 
+{
+     optional BitableWorkspaceMoveResult data = 1;
+    required int64 error_code = 2;
+    required string msg = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX39dfcc67fa2c43ee 
+{
+    required uint64 uid = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX41cc6cb809b521a6 
+{
+    required BitableMorePanelPermission data = 1;
+    required int64 error_code = 2;
+    required string msg = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX4567d0cab517d6e9 
+{
+    required string token = 1;
+     optional RecordPermission require_permission = 2;
+    required MoltenFfiInstanceMsg callback = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX4657aabcd36f0e4f 
+{
+    required HomepageListType list_type = 1;
+    required HomepageAction action = 2;
+    required int64 error_code = 3;
+    required string msg = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX594b8f99fc9a5d01 
+{
+    required string space_token = 1;
+    required string doc_token = 2;
+    required MoltenFfiInstanceMsg callback = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX5f7e843510e32e23 
+{
+    required string record_data = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX6a546484e25fe16c 
+{
+    required int64 error_code = 1;
+    required string msg = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX735c0b6edd8b4c21 
+{
+    required string obj_token = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX7fe34926be2dcf82 
+{
+    required HomepageListType list_type = 1;
+    required bool use_cache = 2;
+     optional string space_token = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8069ef26a583dd8a 
+{
+     optional BitableAppInfo data = 1;
+    required int64 error_code = 2;
+    required string msg = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX827f4aec43bb21c9 
+{
+     optional string space_token = 1;
+     map<string, string> params = 2;
+    required MoltenFfiInstanceMsg callback = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX88bdc051bfebec32 
+{
+    required HomepageListType list_type = 1;
+     optional string name = 2;
+     optional string space_token = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8f81da39e50895ee 
+{
+    required HomepageListType list_type = 1;
+    required string name = 2;
+     optional string space_token = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX91480d6c2b131397 
+{
+    required uint64 uid = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX9221912263e84352 
+{
+    required string doc_token = 1;
+    required string source_space_token = 2;
+    required string target_space_token = 3;
+    required MoltenFfiInstanceMsg callback = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX96824bca21cd0c32 
+{
+     repeated string obj_tokens = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX9f8d1b152bb4e31a 
+{
+    required string token = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXa5c5492769738b6e 
+{
+     optional HomepageCreateBitableResult data = 1;
+    required int64 error_code = 2;
+    required string msg = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXaae76e8b72271872 
+{
+    required MoltenFfiInstanceMsg callback = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb974c3e45c31adc5 
+{
+    required string doc_token = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXbf3e1164f098d39a 
+{
+    required HomepageAction action = 1;
+    required string token = 2;
+    required int64 error_code = 3;
+    required string msg = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXc2c78c6ed1e909d8 
+{
+     optional BitableTenantTypeInfo data = 1;
+    required int64 error_code = 2;
+    required string msg = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXd1fd78384beee20d 
+{
+    required string doc_token = 1;
+    required int32 doc_type = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXd8dd816b01b0dcf8 
+{
+    required string obj_token = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXdcd35689da80097a 
+{
+     optional BitableMarketplaceInstallResult data = 1;
+    required int64 error_code = 2;
+    required string msg = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe4bcc2963797d943 
+{
+    required uint64 uid = 1;
+    required MoltenFfiInstanceMsg callback = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXf0e8b7511932e1a5 
+{
+    required HomepageListType list_type = 1;
+    required HomepageAction action = 2;
+    required HomepageListData data = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXf9c6ac1ffb03e79e 
+{
+    required HomepageAction action = 1;
+    required string token = 2;
+     map<string, string> ext = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX02b10f3fefdb0630 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX33a71d6df1fbb730 
+{
+    required BaseAppPreloadResource ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3dc8b8542df1cbb1 
+{
+    required bool ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3ee2f825fb43f301 
+{
+     optional BitableAppInfo ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX46884442da1f878f 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX4902fca7340b87a0 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX50eab1b92d182188 
+{
+    required PushBitableLoaderResource ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXa0cc096a9ab9364f 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXa1695a77bb652ea9 
+{
+    required HomepageDocument ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXd9acd5f1550ef3dc 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXf2b5d7aa56b099c1 
+{
+    required int64 ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncErrorX529049160a731337 
+{
+    required ModelError err = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncResultX76bca2677fbfb90f 
+{
+    optional FuncReturnXa1695a77bb652ea9 ret = 1;
+    optional FuncErrorX529049160a731337 err = 2;
+    optional bytes _molten_ctx = 255;
+}message FuncResultXd892fa135953ee1a 
+{
+    optional FuncReturnXf2b5d7aa56b099c1 ret = 1;
+    optional FuncErrorX529049160a731337 err = 2;
+    optional bytes _molten_ctx = 255;
+}message MoltenFfiInstanceMsg {
+  required int64 type_id = 1;
+  required int64 instance_id = 2;
+}
+message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

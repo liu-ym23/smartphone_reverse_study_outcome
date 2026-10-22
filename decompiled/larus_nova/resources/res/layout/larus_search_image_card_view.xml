@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:rv_backgroundColor="?attr/larus_base_2"
+    app:rv_backgroundPressColor="?attr/larus_neutral_transparent_2"
+    app:rv_cornerRadius="?attr/larus_dp_8"
+    app:rv_strokeColor="?attr/larus_press"
+    app:rv_strokeWidth="?attr/larus_dp_1">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageResource="?attr/larus_base_1_overlay"
+        app:placeholderImage="?attr/larus_base_1_overlay"/>
+    <com.larus.common_ui.widget.roundlayout.RoundFrameLayout
+        android:id="@+id/image_mask"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        app:rv_backgroundColor="@color/larus_static_black_transparent_1"/>
+    <com.larus.common_ui.widget.roundlayout.RoundTextView
+        android:textSize="?attr/larus_dp_24"
+        android:textColor="@color/larus_static_white"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/image_metrics"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.larus.bmhome.chat.markdown.imagegroup.view.MarkdownSourceImageView
+        android:layout_gravity="end|top"
+        android:id="@+id/sourceIcon"
+        android:visibility="gone"
+        android:layout_width="?attr/larus_dp_16"
+        android:layout_height="?attr/larus_dp_16"
+        android:layout_margin="?attr/larus_dp_10"/>
+</merge>

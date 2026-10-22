@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/larus_base_1_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close"
+        android:layout_width="?attr/larus_dp_44"
+        android:layout_height="?attr/larus_dp_44"
+        android:layout_marginStart="?attr/larus_dp_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/larus_ic_plugin_detail_back"/>
+    <TextView
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="?attr/larus_neutral_100"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/larus_dp_75"
+        android:layout_marginRight="?attr/larus_dp_75"
+        android:minHeight="?attr/larus_dp_44"
+        android:text="@string/larus_plugin"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        android:layout_marginHorizontal="?attr/larus_dp_75"
+        android:lineHeight="?attr/larus_dp_24"
+        android:textFontWeight="600"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="?attr/larus_dp_12"
+        android:overScrollMode="never"
+        android:paddingHorizontal="?attr/larus_dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

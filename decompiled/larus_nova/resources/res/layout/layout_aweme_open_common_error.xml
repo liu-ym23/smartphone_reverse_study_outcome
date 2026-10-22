@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/error_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aweme_open_request_error"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/error_retry_click"
+        android:background="@drawable/aweme_open_common_retry_bg"
+        android:paddingLeft="14dp"
+        android:paddingTop="8dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/aweme_open_request_click_to_retry"
+        android:includeFontPadding="false"
+        android:layout_below="@+id/error_tips"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

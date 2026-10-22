@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.widget.photo.preview.video.cover.VideoControlBar xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/video_control_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/toggle_play_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:tint="@color/static_white"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ud_icon_play_filled"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/lkui_N00"
+        android:gravity="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/current_play_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <SeekBar
+        android:layout_gravity="center"
+        android:id="@+id/seek_bar"
+        android:focusable="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="4dp"
+        android:progressDrawable="@drawable/video_seek_bar"
+        android:minHeight="4dp"
+        android:thumb="@drawable/video_seekbar_thumb_normal"
+        android:layout_weight="1"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/lkui_N00"
+        android:gravity="start"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/video_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.ss.android.lark.widget.photo.preview.video.cover.VideoControlBar>

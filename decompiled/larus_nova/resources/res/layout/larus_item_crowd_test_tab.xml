@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingLeft="?attr/larus_dp_12"
+    android:paddingRight="?attr/larus_dp_12"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="14dp"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/tab_first"
+        android:background="?attr/larus_bg_crowd_test_tab_normal"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_publicTest_card_question_answer1"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="?attr/larus_neutral_100"
+        android:id="@+id/tab_second"
+        android:background="?attr/larus_bg_crowd_test_tab_normal"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_publicTest_card_question_answer2"
+        android:layout_marginStart="?attr/larus_dp_8"/>
+</LinearLayout>

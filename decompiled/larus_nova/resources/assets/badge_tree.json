@@ -1,0 +1,18 @@
+{
+  "root":{
+    "key":"RP_VIRTUAL_SETTING",
+    "children":[
+      {
+        "key":"RP_VIRTUAL_SETTING_ABOUT",
+        "children":[
+          {
+            "key":"RP_USER_AGREEMENT_BADGE"
+          },
+          {
+            "key":"RP_USER_PRIVACY_BADGE"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/ec_window_header_bg_default"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ec_window_header_bg_pic"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ec_window_background_mask"
+        android:background="@drawable/ec_window_header_default_shader"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ec_window_header_bg_default"
+        app:layout_constraintLeft_toLeftOf="@+id/ec_window_header_bg_default"
+        app:layout_constraintRight_toRightOf="@+id/ec_window_header_bg_default"
+        app:layout_constraintTop_toTopOf="@+id/ec_window_header_bg_default"/>
+    <View
+        android:id="@+id/ec_window_header_bg_second_part"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ec_window_header_bg_pic"/>
+    <View
+        android:id="@+id/ec_window_header_transition_mask"
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

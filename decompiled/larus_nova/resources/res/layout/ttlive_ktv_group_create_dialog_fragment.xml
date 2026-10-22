@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="35dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/ktv_group_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/ttlive_ktv_group_create_introduce"/>
+        <include
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ktv_group_online_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/ttlive_viewstub_ktv_group_onlie_state"/>
+    </LinearLayout>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ktv_group_dialog_access"
+        android:background="@drawable/ttlive_bg_ktv_red_bt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="168dp"
+        android:text="@string/ttlive_ktv_group_create"
+        android:lines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/main_content"
+        app:layout_constraintEnd_toEndOf="@+id/main_content"
+        app:layout_constraintTop_toTopOf="@+id/main_content"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+package w20;
+
+import com.bytedance.android.live.browser.jsbridge.base.GameGetToolbarDataResultModel;
+import com.bytedance.ies.web.jsbridge2.PermissionGroup;
+import w20.a9;
+
+/* JADX INFO: loaded from: classes45.dex */
+public abstract class u0<P extends a9, R extends GameGetToolbarDataResultModel> extends com.bytedance.ies.web.jsbridge2.f<P, R> {
+    @Override // com.bytedance.ies.web.jsbridge2.f
+    public final void onTerminate() {
+    }
+
+    public u0() {
+    }
+
+    @Override // com.bytedance.ies.web.jsbridge2.d
+    public final PermissionGroup getPermissionGroup() {
+        return PermissionGroup.PRIVATE;
+    }
+}

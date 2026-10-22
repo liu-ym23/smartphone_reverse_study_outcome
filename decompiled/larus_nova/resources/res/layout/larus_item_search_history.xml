@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="?attr/larus_bg_search_item"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_48">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_24"
+        android:layout_marginEnd="?attr/larus_dp_10"
+        app:srcCompat="?attr/larus_icon_clock_arrow"/>
+    <TextView
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="?attr/larus_neutral_100"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:textDirection="locale"
+        android:textAlignment="viewStart"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_delete"
+        android:paddingTop="?attr/larus_dp_16"
+        android:layout_width="?attr/larus_dp_56"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:contentDescription="@string/larus_accessibility_delete"
+        android:paddingStart="?attr/larus_dp_16"
+        android:paddingEnd="?attr/larus_dp_24"
+        app:srcCompat="?attr/larus_icon_close"/>
+</LinearLayout>

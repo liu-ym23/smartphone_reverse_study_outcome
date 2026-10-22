@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.larus.common_ui.venus.ShapeConstraintLayout
+        android:id="@+id/tts_speed_control_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:larus_sc_cornerRadius="?attr/larus_dp_14"
+        app:larus_sc_fillColor="@color/larus_base_3"
+        app:larus_sc_shadow_blur_radius="?attr/larus_dp_10"
+        app:larus_sc_shadow_color="#26000000"
+        app:larus_sc_shadow_dx="?attr/larus_dp_0"
+        app:larus_sc_shadow_dy="?attr/larus_dp_2"
+        app:larus_sc_strokeColor="@color/larus_base_3"
+        app:larus_sc_strokeWidth="?attr/larus_dp_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="@dimen/dp_16"
+            android:textColor="@color/neutral_100"
+            android:id="@+id/tts_speed_control_tv"
+            android:paddingTop="@dimen/dp_19"
+            android:paddingBottom="@dimen/dp_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/larus_tutor_voice_settings_hint_cn"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="@dimen/dp_28"
+            android:paddingEnd="@dimen/dp_26"/>
+    </com.larus.common_ui.venus.ShapeConstraintLayout>
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="8dp"
+        android:src="@drawable/live_tutor_ic_tts_speed_control_triangle"
+        android:translationY="10dp"
+        android:layout_marginEnd="@dimen/dp_28"
+        app:layout_constraintBottom_toTopOf="@+id/tts_speed_control_layout"
+        app:layout_constraintEnd_toEndOf="@+id/tts_speed_control_layout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

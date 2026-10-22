@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/shopping_std_bg_primary_white"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/ec_color_bg_iron_promotion_on_explain_new"/>
+        </shape>
+    </item>
+</layer-list>

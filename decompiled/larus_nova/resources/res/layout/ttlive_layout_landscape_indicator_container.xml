@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/ttlive_landscape_sti_container_height">
+    <com.bytedance.android.livesdk.widget.opt.MeasureOptFrameLayout
+        android:id="@+id/short_term_indicator_container"
+        android:layout_width="124dp"
+        android:layout_height="@dimen/ttlive_landscape_sti_container_height"
+        app:layout_constraintBottom_toTopOf="@+id/task_indicator_container"
+        app:layout_constraintRight_toRightOf="@+id/task_indicator_container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"/>
+    <View
+        android:id="@+id/task_indicator_container"
+        android:visibility="gone"
+        android:layout_width="124dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_and_predictor_container"
+        app:layout_constraintRight_toRightOf="@+id/activity_and_predictor_container"/>
+    <FrameLayout
+        android:id="@+id/activity_and_predictor_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <FrameLayout
+            android:id="@+id/activity_indicator_container"
+            android:visibility="gone"
+            android:layout_width="@dimen/ttlive_multi_top_right_banner_width"
+            android:layout_height="@dimen/ttlive_multi_top_right_banner_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <FrameLayout
+            android:id="@+id/predictor_entrance_container"
+            android:visibility="gone"
+            android:layout_width="@dimen/ttlive_multi_top_right_banner_width"
+            android:layout_height="@dimen/ttlive_multi_top_right_banner_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

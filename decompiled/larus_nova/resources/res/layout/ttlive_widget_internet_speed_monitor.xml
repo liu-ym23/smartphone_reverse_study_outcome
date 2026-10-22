@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="end|center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.live.room.discovery.NetSpeedImageView
+        android:id="@+id/icon_status_iv"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:src="@drawable/ttlive_ic_speed_status_good"/>
+    <com.bytedance.android.live.room.discovery.NetSpeedTextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_core_hs_s5_70"
+        android:id="@+id/tip_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="@string/live_room_internet_speed_status_good"
+        android:includeFontPadding="false"
+        android:shadowColor="@color/live_room_internet_speed_monitor_shadow_color"
+        android:shadowRadius="1"/>
+</LinearLayout>

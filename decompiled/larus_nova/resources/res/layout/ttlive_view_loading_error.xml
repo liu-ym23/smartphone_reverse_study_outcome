@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/status_error"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/error_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_loading_retry"
+        android:drawableTop="@drawable/ttlive_ic_loading_error"
+        android:drawablePadding="20dp"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:textSize="16dp"
+        android:textColor="#4dffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/ttlive_network_error"
+        android:layout_below="@+id/error_icon"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

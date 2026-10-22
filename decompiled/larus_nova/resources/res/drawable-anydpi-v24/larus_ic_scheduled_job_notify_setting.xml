@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@drawable/_larus_ic_scheduled_job_notify_setting__0_res_0x7f0800b0"
+        android:pathData="M0,10C0,4.477 4.477,0 10,0H22C27.523,0 32,4.477 32,10V22C32,27.523 27.523,32 22,32H10C4.477,32 0,27.523 0,22V10Z"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M16,7.75C20.556,7.75 24.25,11.444 24.25,16C24.25,20.556 20.556,24.25 16,24.25C11.444,24.25 7.75,20.556 7.75,16C7.75,11.444 11.444,7.75 16,7.75ZM16,9.75C12.548,9.75 9.75,12.548 9.75,16C9.75,19.452 12.548,22.25 16,22.25C19.452,22.25 22.25,19.452 22.25,16C22.25,12.548 19.452,9.75 16,9.75ZM16,11.25C16.552,11.25 17,11.698 17,12.25V15H19.75C20.302,15 20.75,15.448 20.75,16C20.75,16.552 20.302,17 19.75,17H16.75C15.784,17 15,16.216 15,15.25V12.25C15,11.698 15.448,11.25 16,11.25Z"/>
+</vector>

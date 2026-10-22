@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/bottom_action_bar_root"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    style="@style/OStyleV2.OBottomActionBar.Normal">
+    <FrameLayout
+        android:id="@+id/action_bar_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/action_bar_horizontal_container"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

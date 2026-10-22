@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ec.core.widget.PriceView
+        android:id="@+id/min_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:extraTextColor="@color/inflow_ui_card_price"
+        app:extraTextSize="12sp"
+        app:prefixSpaceSize="2dp"
+        app:prefixTextSize="13sp"
+        app:priceBold="true"
+        app:priceDecimalTextSize="19sp"
+        app:priceTextColor="@color/inflow_ui_card_price"
+        app:priceTextSize="24sp"
+        app:spaceSize="1sp"
+        app:thinDecimal="true"
+        app:yangTextSize="14sp"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/tv_low_price_text"
+        android:background="@drawable/ec_inflow_low_price_bg"
+        android:paddingLeft="6dp"
+        android:paddingTop="3dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/min_price"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="3dp"/>
+</RelativeLayout>

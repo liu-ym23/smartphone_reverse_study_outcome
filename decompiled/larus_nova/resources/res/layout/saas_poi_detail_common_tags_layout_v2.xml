@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_detail_tag_container"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.locallife.poi.dito.poi.ClickInterceptedTabLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/poi_detail_common_tags_container_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tabBackground="@null"
+        app:tabGravity="center"
+        app:tabIndicator="@drawable/poi_detail_tag_v2_indicator_bg"
+        app:tabIndicatorAnimationDuration="200"
+        app:tabIndicatorColor="#fffe2c55"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="0dp"
+        app:tabPaddingStart="0dp"
+        app:tabRippleColor="@null"/>
+</FrameLayout>

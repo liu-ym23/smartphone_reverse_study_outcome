@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/ll_expend"
+    android:layout_width="wrap_content"
+    android:layout_height="24dp">
+    <ImageView
+        android:id="@+id/btn_decrease"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/buynow_counter_minus_enable"/>
+    <EditText
+        android:textSize="14sp"
+        android:textColor="#161823"
+        android:gravity="center"
+        android:id="@+id/et_quantity"
+        android:background="@null"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:text="@string/buynow_counter_default_num"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:textCursorDrawable="@drawable/buynow_counter_edit_cursor"/>
+    <ImageView
+        android:id="@+id/btn_increase"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/buynow_counter_plus_enable"/>
+</LinearLayout>

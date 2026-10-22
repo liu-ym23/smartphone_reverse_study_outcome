@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="?attr/larus_dp_0_5"
+        android:color="@color/larus_ic_learn_more_blue"/>
+    <corners android:radius="?attr/larus_dp_11"/>
+</shape>

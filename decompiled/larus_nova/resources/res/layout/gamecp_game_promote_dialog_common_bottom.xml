@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_game_promote_common_bottom_dialog_parent"
+    android:background="@drawable/gamecp_bg_dialog_bottom_white_top_radius_12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

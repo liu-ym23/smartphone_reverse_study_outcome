@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="16sp"
+    android:textColor="@color/ss_alert_dialog_item_color"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:id="@+id/text1"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checkMark="?attr/listChoiceIndicatorMultiple"
+    android:minHeight="@dimen/alert_dialog_item_min_hight"/>

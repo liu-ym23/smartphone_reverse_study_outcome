@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ec.core.widget.PriceView
+        android:id="@+id/min_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:extraTextColor="@color/inflow_ui_card_price"
+        app:extraTextSize="13sp"
+        app:prefixSpaceSize="2dp"
+        app:prefixTextSize="13sp"
+        app:priceBold="true"
+        app:priceDecimalTextSize="19sp"
+        app:priceTextColor="@color/inflow_ui_card_price"
+        app:priceTextSize="26sp"
+        app:spaceSize="1sp"
+        app:thinDecimal="true"
+        app:yangTextSize="14sp"/>
+    <com.bytedance.android.ec.core.widget.PriceView
+        android:id="@+id/market_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/min_price"
+        android:layout_alignBaseline="@+id/min_price"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/min_price"
+        app:extraTextColor="@color/commerce_color_57161823"
+        app:extraTextSize="12sp"
+        app:prefixSpaceSize="2dp"
+        app:priceTextColor="@color/commerce_color_57161823"
+        app:priceTextSize="15sp"
+        app:showDeleteLine="true"
+        app:spaceSize="1dp"
+        app:yangTextSize="12sp"/>
+    <include
+        android:id="@+id/container_discount_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_toRightOf="@+id/min_price"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/min_price"
+        layout="@layout/ec_inflow_red_discount_view"/>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.ee.bear.facade.common.widget.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bitable_homepage_chart_bg_color"
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:bottom_left_radius="20dp"
+    app:bottom_right_radius="20dp"
+    app:top_left_radius="0dp"
+    app:top_right_radius="0dp">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/hp_chart_empty_icon"
+            android:layout_width="188dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="48dp"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/text_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Bitable_HomeDashboard_AddChartHere_Desc"/>
+        <com.bytedance.ee.bear.bitable.homepage.chart.home.edit.AddChartEntryView
+            android:id="@+id/hp_chart_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="60dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"/>
+    </LinearLayout>
+</com.bytedance.ee.bear.facade.common.widget.RoundFrameLayout>

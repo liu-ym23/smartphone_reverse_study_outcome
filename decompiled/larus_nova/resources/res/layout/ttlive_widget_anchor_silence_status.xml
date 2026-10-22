@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="end|center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/icon_status_iv"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:src="@drawable/ttlive_icon_anchor_silence"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_core_hs_s5_70"
+        android:id="@+id/tip_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="@string/ttlive_video_talk_silence_audience_tips"
+        android:includeFontPadding="false"
+        android:shadowRadius="1"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

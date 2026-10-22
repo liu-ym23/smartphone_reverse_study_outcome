@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_56"
+    android:paddingStart="?attr/larus_dp_16">
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:textColor="?attr/larus_neutral_100"
+        android:ellipsize="end"
+        android:id="@+id/work_experience_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:fontFamily="sans-serif-medium"
+        android:textFontWeight="500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/work_experience_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/work_experience_arrow"
+        android:padding="?attr/larus_dp_16"
+        android:layout_width="?attr/larus_dp_56"
+        android:layout_height="?attr/larus_dp_56"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/larus_ic_arrow"/>
+    <View
+        android:id="@+id/work_experience_divider"
+        android:background="?attr/larus_neutral_transparent_2"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

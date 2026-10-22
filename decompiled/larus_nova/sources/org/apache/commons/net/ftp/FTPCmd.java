@@ -1,0 +1,218 @@
+package org.apache.commons.net.ftp;
+
+import com.byted.cast.linkcommon.cybergarage.http.HTTP;
+import com.ss.videoarch.strategy.dataCenter.config.model.FeatureConfigInfo;
+import r27.a;
+
+/* JADX INFO: loaded from: classes42.dex */
+public final enum FTPCmd extends Enum<FTPCmd> {
+    private static final /* synthetic */ FTPCmd[] $VALUES = null;
+    public static final FTPCmd ABOR = null;
+    public static final FTPCmd ABORT = null;
+    public static final FTPCmd ACCOUNT = null;
+    public static final FTPCmd ACCT = null;
+    public static final FTPCmd ALLO = null;
+    public static final FTPCmd ALLOCATE = null;
+    public static final FTPCmd APPE = null;
+    public static final FTPCmd APPEND = null;
+    public static final FTPCmd CDUP = null;
+    public static final FTPCmd CHANGE_TO_PARENT_DIRECTORY = null;
+    public static final FTPCmd CHANGE_WORKING_DIRECTORY = null;
+    public static final FTPCmd CWD = null;
+    public static final FTPCmd DATA_PORT = null;
+    public static final FTPCmd DELE = null;
+    public static final FTPCmd DELETE = null;
+    public static final FTPCmd EPRT = null;
+    public static final FTPCmd EPSV = null;
+    public static final FTPCmd FEAT = null;
+    public static final FTPCmd FEATURES = null;
+    public static final FTPCmd FILE_STRUCTURE = null;
+    public static final FTPCmd GET_MOD_TIME = null;
+    public static final FTPCmd HELP = null;
+    public static final FTPCmd LIST = null;
+    public static final FTPCmd LOGOUT = null;
+    public static final FTPCmd MAKE_DIRECTORY = null;
+    public static final FTPCmd MDTM = null;
+    public static final FTPCmd MFMT = null;
+    public static final FTPCmd MKD = null;
+    public static final FTPCmd MLSD = null;
+    public static final FTPCmd MLST = null;
+    public static final FTPCmd MODE = null;
+    public static final FTPCmd MOD_TIME = null;
+    public static final FTPCmd NAME_LIST = null;
+    public static final FTPCmd NLST = null;
+    public static final FTPCmd NOOP = null;
+    public static final FTPCmd PASS = null;
+    public static final FTPCmd PASSIVE = null;
+    public static final FTPCmd PASSWORD = null;
+    public static final FTPCmd PASV = null;
+    public static final FTPCmd PORT = null;
+    public static final FTPCmd PRINT_WORKING_DIRECTORY = null;
+    public static final FTPCmd PWD = null;
+    public static final FTPCmd QUIT = null;
+    public static final FTPCmd REIN = null;
+    public static final FTPCmd REINITIALIZE = null;
+    public static final FTPCmd REMOVE_DIRECTORY = null;
+    public static final FTPCmd RENAME_FROM = null;
+    public static final FTPCmd RENAME_TO = null;
+    public static final FTPCmd REPRESENTATION_TYPE = null;
+    public static final FTPCmd REST = null;
+    public static final FTPCmd RESTART = null;
+    public static final FTPCmd RETR = null;
+    public static final FTPCmd RETRIEVE = null;
+    public static final FTPCmd RMD = null;
+    public static final FTPCmd RNFR = null;
+    public static final FTPCmd RNTO = null;
+    public static final FTPCmd SET_MOD_TIME = null;
+    public static final FTPCmd SITE = null;
+    public static final FTPCmd SITE_PARAMETERS = null;
+    public static final FTPCmd SMNT = null;
+    public static final FTPCmd STAT = null;
+    public static final FTPCmd STATUS = null;
+    public static final FTPCmd STOR = null;
+    public static final FTPCmd STORE = null;
+    public static final FTPCmd STORE_UNIQUE = null;
+    public static final FTPCmd STOU = null;
+    public static final FTPCmd STRU = null;
+    public static final FTPCmd STRUCTURE_MOUNT = null;
+    public static final FTPCmd SYST = null;
+    public static final FTPCmd SYSTEM = null;
+    public static final FTPCmd TRANSFER_MODE = null;
+    public static final FTPCmd TYPE = null;
+    public static final FTPCmd USER = null;
+    public static final FTPCmd USERNAME = null;
+
+    static {
+        FTPCmd r100 = new FTPCmd("ABOR", 0);
+        ABOR = r100;
+        FTPCmd r101 = new FTPCmd("ACCT", 1);
+        ACCT = r101;
+        FTPCmd r102 = new FTPCmd("ALLO", 2);
+        ALLO = r102;
+        FTPCmd r103 = new FTPCmd("APPE", 3);
+        APPE = r103;
+        FTPCmd r104 = new FTPCmd("CDUP", 4);
+        CDUP = r104;
+        FTPCmd r105 = new FTPCmd("CWD", 5);
+        CWD = r105;
+        FTPCmd r110 = new FTPCmd("DELE", 6);
+        DELE = r110;
+        FTPCmd r111 = new FTPCmd("EPRT", 7);
+        EPRT = r111;
+        FTPCmd r112 = new FTPCmd("EPSV", 8);
+        EPSV = r112;
+        FTPCmd r113 = new FTPCmd("FEAT", 9);
+        FEAT = r113;
+        FTPCmd r114 = new FTPCmd("HELP", 10);
+        HELP = r114;
+        FTPCmd r115 = new FTPCmd("LIST", 11);
+        LIST = r115;
+        FTPCmd r106 = new FTPCmd("MDTM", 12);
+        MDTM = r106;
+        FTPCmd r107 = new FTPCmd("MFMT", 13);
+        MFMT = r107;
+        FTPCmd r108 = new FTPCmd("MKD", 14);
+        MKD = r108;
+        FTPCmd r109 = new FTPCmd("MLSD", 15);
+        MLSD = r109;
+        FTPCmd r116 = new FTPCmd("MLST", 16);
+        MLST = r116;
+        FTPCmd r117 = new FTPCmd("MODE", 17);
+        MODE = r117;
+        FTPCmd r118 = new FTPCmd("NLST", 18);
+        NLST = r118;
+        FTPCmd r119 = new FTPCmd("NOOP", 19);
+        NOOP = r119;
+        FTPCmd r120 = new FTPCmd("PASS", 20);
+        PASS = r120;
+        FTPCmd r121 = new FTPCmd("PASV", 21);
+        PASV = r121;
+        FTPCmd r122 = new FTPCmd(HTTP.PORT, 22);
+        PORT = r122;
+        FTPCmd r123 = new FTPCmd("PWD", 23);
+        PWD = r123;
+        FTPCmd r124 = new FTPCmd("QUIT", 24);
+        QUIT = r124;
+        FTPCmd r125 = new FTPCmd("REIN", 25);
+        REIN = r125;
+        FTPCmd r126 = new FTPCmd("REST", 26);
+        REST = r126;
+        FTPCmd r127 = new FTPCmd("RETR", 27);
+        RETR = r127;
+        FTPCmd r128 = new FTPCmd("RMD", 28);
+        RMD = r128;
+        FTPCmd r129 = new FTPCmd("RNFR", 29);
+        RNFR = r129;
+        FTPCmd r130 = new FTPCmd("RNTO", 30);
+        RNTO = r130;
+        FTPCmd r131 = new FTPCmd("SITE", 31);
+        SITE = r131;
+        FTPCmd r132 = new FTPCmd("SMNT", 32);
+        SMNT = r132;
+        FTPCmd r133 = new FTPCmd("STAT", 33);
+        STAT = r133;
+        FTPCmd r134 = new FTPCmd("STOR", 34);
+        STOR = r134;
+        FTPCmd r135 = new FTPCmd("STOU", 35);
+        STOU = r135;
+        FTPCmd r136 = new FTPCmd("STRU", 36);
+        STRU = r136;
+        FTPCmd r137 = new FTPCmd("SYST", 37);
+        SYST = r137;
+        FTPCmd r138 = new FTPCmd("TYPE", 38);
+        TYPE = r138;
+        FTPCmd r139 = new FTPCmd(FeatureConfigInfo.USER_PROFILE_FEATURE_TYPE_ID, 39);
+        USER = r139;
+        $VALUES = new FTPCmd[]{r100, r101, r102, r103, r104, r105, r110, r111, r112, r113, r114, r115, r106, r107, r108, r109, r116, r117, r118, r119, r120, r121, r122, r123, r124, r125, r126, r127, r128, r129, r130, r131, r132, r133, r134, r135, r136, r137, r138, r139};
+        ABORT = r100;
+        ACCOUNT = r101;
+        ALLOCATE = r102;
+        APPEND = r103;
+        CHANGE_TO_PARENT_DIRECTORY = r104;
+        CHANGE_WORKING_DIRECTORY = r105;
+        DATA_PORT = r122;
+        DELETE = r110;
+        FEATURES = r113;
+        FILE_STRUCTURE = r136;
+        GET_MOD_TIME = r106;
+        LOGOUT = r124;
+        MAKE_DIRECTORY = r108;
+        MOD_TIME = r106;
+        NAME_LIST = r118;
+        PASSIVE = r121;
+        PASSWORD = r120;
+        PRINT_WORKING_DIRECTORY = r123;
+        REINITIALIZE = r125;
+        REMOVE_DIRECTORY = r128;
+        RENAME_FROM = r129;
+        RENAME_TO = r130;
+        REPRESENTATION_TYPE = r138;
+        RESTART = r126;
+        RETRIEVE = r127;
+        SET_MOD_TIME = r107;
+        SITE_PARAMETERS = r131;
+        STATUS = r133;
+        STORE = r134;
+        STORE_UNIQUE = r135;
+        STRUCTURE_MOUNT = r132;
+        SYSTEM = r137;
+        TRANSFER_MODE = r117;
+        USERNAME = r139;
+    }
+
+    public static FTPCmd[] values() {
+        return (FTPCmd[]) $VALUES.clone();
+    }
+
+    public final String getCommand() {
+        return name();
+    }
+
+    public static FTPCmd valueOf(String r100) {
+        return (FTPCmd) a.a(FTPCmd.class, r100);
+    }
+
+    private FTPCmd(String r100, int r101) {
+        super(r100, r101);
+    }
+}

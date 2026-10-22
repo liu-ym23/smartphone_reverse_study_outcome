@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp">
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:id="@+id/ec_task_guide_pop_up_msg"
+        android:background="@drawable/ec_bg_shopping_cart_task_guide_pop"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="@string/ec_shopping_cart_task_guide_pop"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="10dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="-1dp"
+        android:src="@drawable/ec_shopping_cart_task_guide_pop_arrow"
+        android:scaleType="fitXY"
+        android:layout_marginStart="22dp"/>
+</LinearLayout>

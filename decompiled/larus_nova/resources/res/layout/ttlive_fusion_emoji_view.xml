@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/fusion_emoji"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="15.5dp"/>
+    <View
+        android:id="@+id/fusion_emoji_divider"
+        android:background="#1f161823"
+        android:layout_width="0.5dp"
+        android:layout_height="12dp"/>
+</LinearLayout>

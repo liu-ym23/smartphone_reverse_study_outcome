@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/creation_ai_loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.larksuite.component.ui.loading.LKUILoadingView
+            android:layout_gravity="center"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app:lottie_autoPlay="true"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/text_caption"
+            android:gravity="center"
+            android:id="@+id/creation_ai_loading_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_16"
+            android:text="@string/Lark_Legacy_LoadingNow"
+            android:maxLines="1"/>
+    </LinearLayout>
+    <com.larksuite.component.universe_design.emptystate.UDEmptyState
+        android:id="@+id/creation_ai_empty_cover"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ud_empty_desc="@string/Lark_Legacy_NetworkErrorRetry"
+        app:ud_empty_imageRes="@drawable/illustration_placeholder_common_no_wifi"
+        app:ud_empty_imageSize="@dimen/ud_emptystate_image_size_small"
+        style="@style/UDEmptyState"/>
+</merge>

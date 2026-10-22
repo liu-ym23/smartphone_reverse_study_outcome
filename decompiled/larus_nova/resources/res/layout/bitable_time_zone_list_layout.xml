@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/panel_root"
+    android:background="@color/bg_mask"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.widgets.panel.CommonActionPanelLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/panel_layout"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:panel_background_color="@color/bg_float"
+        app:panel_enable_drag="true"
+        app:panel_show_divider="false"
+        app:panel_show_drag_handler="true"
+        app:panel_show_titlebar="false"/>
+</FrameLayout>

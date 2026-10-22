@@ -1,0 +1,84 @@
+package com.bytedance.android.livesdk.chatroom.vsplayer.api;
+
+import android.view.View;
+import com.bytedance.android.live.core.tetris.widgets.RecyclableWidgetManager;
+import com.bytedance.android.livesdk.chatroom.vsplayer.model.PlayerViewControl;
+import com.bytedance.android.livesdk.chatroom.vsplayer.model.VSPlayerViewControlContext;
+import com.bytedance.ies.sdk.widgets.NextLiveData;
+import com.bytedance.ies.sdk.widgets.Widget;
+import com.bytedance.ies.sdk.widgets.WidgetManager;
+
+/* JADX INFO: loaded from: classes8.dex */
+public interface c {
+
+    public static final class a {
+        public static /* synthetic */ void a(c r110, PlayerViewControl.KEY r111, PlayerViewControl.Type r112, PlayerViewControl.Style r113, View r114, float r115, boolean r116, boolean r117, com.bytedance.android.livesdk.chatroom.vsplayer.model.a r210, int r211) {
+            if ((r211 & 16) == 0) goto L5;
+            float r100 = 0.0f;
+        L7:
+            if ((r211 & 32) == 0) goto L9;
+            boolean r101 = false;
+        L11:
+            if ((r211 & 64) == 0) goto L13;
+            boolean r102 = false;
+        L15:
+            if ((r211 & 128) == 0) goto L17;
+            com.bytedance.android.livesdk.chatroom.vsplayer.model.a r118 = null;
+        L18:
+            r110.b(r111, r112, r113, r114, r100, r101, r102, r118, false);
+            return;
+        L17:
+            r118 = r210;
+            goto L18
+        L13:
+            r102 = r117;
+            goto L15
+        L9:
+            r101 = r116;
+            goto L11
+        L5:
+            r100 = r115;
+            goto L7
+        }
+    }
+
+    void a(PlayerViewControl.KEY r100, boolean r101);
+
+    void b(PlayerViewControl.KEY r100, PlayerViewControl.Type r101, PlayerViewControl.Style r102, View r103, float r104, boolean r105, boolean r106, com.bytedance.android.livesdk.chatroom.vsplayer.model.a r107, boolean r108);
+
+    void c(PlayerViewControl.KEY r100);
+
+    void changeVisibilityStatus();
+
+    void clearControlWidget();
+
+    void d(PlayerViewControl.KEY r100, boolean r101);
+
+    void e(com.bytedance.android.livesdk.chatroom.vsplayer.model.c r100);
+
+    void f(Widget r100);
+
+    NextLiveData<Integer> g(PlayerViewControl.KEY r100);
+
+    boolean getLockStatus();
+
+    boolean getVisibilityStatus();
+
+    WidgetManager getWidgetManager();
+
+    void h(PlayerViewControl.KEY r100);
+
+    void i(RecyclableWidgetManager r100);
+
+    void j(boolean r100);
+
+    void markVisibilityStatusChangeByUser();
+
+    VSPlayerViewControlContext provideContext();
+
+    void releaseService();
+
+    void resetHideTask();
+
+    void setVisibilityStatus(boolean r100);
+}

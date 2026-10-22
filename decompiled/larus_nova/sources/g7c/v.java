@@ -1,0 +1,6 @@
+package g7c;
+
+/* JADX INFO: loaded from: classes38.dex */
+public interface v {
+    void a();
+}

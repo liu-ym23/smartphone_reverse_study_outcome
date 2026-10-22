@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <bitmap
+            android:src="@drawable/live_toolbar_ic_v2_gift_static"
+            android:alpha="0.5"/>
+    </item>
+    <item android:drawable="@drawable/live_toolbar_ic_v2_gift_static"/>
+</selector>

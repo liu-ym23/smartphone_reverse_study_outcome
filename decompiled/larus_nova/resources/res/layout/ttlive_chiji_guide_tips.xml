@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/layout_interact_tip"
+    android:background="@drawable/ttlive_bg_chiji_guide"
+    android:layout_width="240dp"
+    android:layout_height="51dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#404040"
+        android:gravity="center"
+        android:id="@+id/tv_interact_tip"
+        android:paddingLeft="9dp"
+        android:paddingRight="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="@string/ttlive_live_inroom_pk_chiji_tips"/>
+</LinearLayout>

@@ -1,0 +1,128 @@
+{
+    "type": "View",
+     "style": {
+        "width": "stretch",
+         "height": "auto",
+         "padding": ["0",
+         "8",
+         "0",
+         "8"],
+         "flex_direction": "column"
+    },
+     "elements": [{
+        "type": "View",
+         "style": {
+            "width": "stretch",
+             "height": "auto",
+             ":radius": "option(data.y_card_tail, ['0','0','12','12'], ['0','0','0','0'])",
+             ":padding": "option(data.y_card_tail, ['8','12','12','36'], ['8','12','8','36'])",
+             "bg_color": "#ffffff",
+             "align_items": "center",
+             "flex_direction": "row",
+             "justify_content": "space-between"
+        },
+         "elements": [{
+            "type": "View",
+             "style": {
+                "width": "auto",
+                 "flex_grow": 1,
+                 "align_items": "center"
+            },
+             "elements": [{
+                "for": {
+                    "items": "data.left_tag"
+                },
+                 "attr": {
+                    ":text": "item.text"
+                },
+                 "type": "Text",
+                 "style": {
+                    "line": 1,
+                     "width": "auto",
+                     "height": "14",
+                     "margin": ["0",
+                     "4",
+                     "0",
+                     "0"],
+                     "radius": [2],
+                     "padding": ["0",
+                     "4",
+                     "0",
+                     "4"],
+                     ":bg_color": "item.bg",
+                     "font_size": 10,
+                     ":font_color": "item.color",
+                     "align_items": "center",
+                     "flex_shrink": 0,
+                     "font_weight": 400,
+                     "line_height": 1,
+                     "border_width": 0.5,
+                     ":border_color": "item.border"
+                }
+            },
+             {
+                "for": {
+                    "items": "data.description"
+                },
+                 "attr": {
+                    ":text": "item.text"
+                },
+                 "type": "Text",
+                 "style": {
+                    "line": 1,
+                     "width": "auto",
+                     "height": "auto",
+                     "font_size": 14,
+                     ":font_color": "item.color",
+                     "end_ellipse": true,
+                     "font_weight": 400
+                }
+            }]
+        },
+         {
+            "type": "View",
+             "style": {
+                "margin": ["0",
+                 "0",
+                 "0",
+                 "4"],
+                 "align_items": "center",
+                 "flex_shrink": 0
+            },
+             "elements": [{
+                "attr": {
+                    ":text": "data.right_text.text"
+                },
+                 "type": "Text",
+                 "style": {
+                    "height": "auto",
+                     "padding": ["0",
+                     "0",
+                     "0",
+                     "0"],
+                     "font_size": 14,
+                     "font_color": "#FE2C55",
+                     "align_items": "center",
+                     "flex_shrink": 0,
+                     "font_weight": 400,
+                     "justify_content": "center"
+                }
+            },
+             {
+                "attr": {
+                    "src": "https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/a84f04f468464539be5a8cedde673e50~tplv-8jisjyls3a-3:0:0:q75.png"
+                },
+                 "type": "Image",
+                 "style": {
+                    "width": "12",
+                     "height": "12",
+                     ":display": "option(len(data.link)>0, 'flex', 'none')",
+                     "flex_shrink": 0
+                }
+            }]
+        }],
+         "click_action": {
+            "type": "itemClick"
+        }
+    }]
+}

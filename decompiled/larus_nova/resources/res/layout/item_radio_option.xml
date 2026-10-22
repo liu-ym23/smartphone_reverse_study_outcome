@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@+id/ud_dialog_radio_layout"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_4"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.larksuite.component.universe_design.checkbox.UDCheckBox
+            android:id="@+id/ud_dialog_radio"
+            android:padding="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_kit_len_8"
+            app:ud_checkbox_size="small"
+            app:ud_checkbox_type="radio"/>
+        <TextView
+            android:textAppearance="@style/UDText.Body0"
+            android:textColor="@color/text_title"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ud_dialog_radio_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:textSize="@dimen/ud_text_body1"
+        android:textColor="@color/ud_N500"
+        android:id="@+id/tv_description"
+        android:paddingLeft="26dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

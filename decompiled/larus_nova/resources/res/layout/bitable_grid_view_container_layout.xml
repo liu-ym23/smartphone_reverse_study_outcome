@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.ee.bear.bitable.infoarch.nativeview.grid.field.GridFieldHeaderView
+        android:id="@+id/gird_field_header"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"/>
+    <View
+        android:background="@color/line_divider_default"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bitable_native_view_divider_size"/>
+    <com.bytedance.ee.bear.bitable.cardview.widget.StickyItemViewLayout
+        android:id="@+id/stickyItemView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.ee.bear.bitable.infoarch.nativeview.grid.GridRecyclerView
+            android:id="@+id/main_recycler_view"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+    </com.bytedance.ee.bear.bitable.cardview.widget.StickyItemViewLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+package com.larus.common.account.platform.larklogin;
+
+import com.larus.platform.service.h1;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes27.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+final /* synthetic */ class LarkEntryActivityKt$handleLarkEntry$3 extends FunctionReferenceImpl implements Function1<String, Boolean> {
+    public LarkEntryActivityKt$handleLarkEntry$3(Object r100) {
+        super(1, r100, h1.class, "handleOfficeSdkPassportAppLink", "handleOfficeSdkPassportAppLink(Ljava/lang/String;)Z", 0);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Boolean invoke2(String r100) {
+        Intrinsics.checkNotNullParameter(r100, "p0");
+        return Boolean.valueOf(((h1) this.receiver).a(r100));
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ Boolean invoke(String r100) {
+        return invoke2(r100);
+    }
+}

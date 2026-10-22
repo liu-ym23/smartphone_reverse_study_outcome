@@ -1,0 +1,20 @@
+package w20;
+
+import com.bytedance.android.live.browser.jsbridge.base.AppInfoResultModel;
+import com.bytedance.ies.web.jsbridge2.PermissionGroup;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes45.dex */
+public abstract class i<P extends JSONObject, R extends AppInfoResultModel> extends com.bytedance.ies.web.jsbridge2.f<P, R> {
+    @Override // com.bytedance.ies.web.jsbridge2.f
+    public final void onTerminate() {
+    }
+
+    public i() {
+    }
+
+    @Override // com.bytedance.ies.web.jsbridge2.d
+    public final PermissionGroup getPermissionGroup() {
+        return PermissionGroup.PROTECTED;
+    }
+}

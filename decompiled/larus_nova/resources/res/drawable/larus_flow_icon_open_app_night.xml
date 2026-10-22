@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="17dp"
+    android:width="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="17">
+    <path
+        android:fillColor="@color/larus_flow_icon_open_app_color_night"
+        android:pathData="M13.503,2.842C13.662,2.842 13.815,2.905 13.927,3.018C14.04,3.13 14.103,3.283 14.103,3.442V11.109C14.103,11.44 13.835,11.709 13.503,11.709C13.172,11.709 12.903,11.44 12.903,11.109V4.882L3.583,14.203C3.349,14.437 2.969,14.437 2.735,14.203C2.5,13.968 2.5,13.588 2.735,13.354L12.047,4.042H5.83C5.499,4.042 5.23,3.773 5.23,3.442C5.23,3.111 5.499,2.842 5.83,2.842H13.503Z"/>
+</vector>

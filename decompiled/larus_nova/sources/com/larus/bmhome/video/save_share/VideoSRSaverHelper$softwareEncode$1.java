@@ -1,0 +1,31 @@
+package com.larus.bmhome.video.save_share;
+
+import com.ss.android.dypay.api.DyPayConstant;
+import com.ss.android.socialbase.downloader.constants.DBDefinition;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes26.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.larus.bmhome.video.save_share.VideoSRSaverHelper", f = "VideoSRSaverHelper.kt", i = {0, 0, 0}, l = {160, 176}, m = "softwareEncode", n = {"bitmaps", DBDefinition.TEMP_PATH, DyPayConstant.KEY_START_TIME}, s = {"L$0", "L$1", "J$0"})
+final class VideoSRSaverHelper$softwareEncode$1 extends ContinuationImpl {
+    long J$0;
+    Object L$0;
+    Object L$1;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ h this$0;
+
+    public VideoSRSaverHelper$softwareEncode$1(h r100, Continuation<? super VideoSRSaverHelper$softwareEncode$1> r101) {
+        super(r101);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        this.result = r100;
+        this.label |= Integer.MIN_VALUE;
+        throw null;
+    }
+}

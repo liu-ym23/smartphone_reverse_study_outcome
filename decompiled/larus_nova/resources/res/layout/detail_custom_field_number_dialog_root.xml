@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:background="@color/bg_base"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.suite.lark.emm.design.edittext.SCUDEditText
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:id="@+id/edittext_number_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            app:ud_backgroundColor="@color/ud_edittext_white_bg"
+            app:ud_editText_clearBtnEnabled="true"
+            app:ud_editText_clearButtonShownMode="showWhenHasFocusAndNotEmpty"
+            app:ud_radius="m"
+            app:ud_strokeColor="@color/ud_edittext_stroke"
+            app:ud_strokeWidth="1dp"
+            style="@style/UDEditText.Normal">
+            <requestFocus/>
+        </com.suite.lark.emm.design.edittext.SCUDEditText>
+    </FrameLayout>
+</LinearLayout>

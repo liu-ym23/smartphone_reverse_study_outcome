@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#ccffffff"
+        android:id="@+id/tv_target_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:text="2:00"
+        android:layout_centerVertical="true"/>
+    <View
+        android:id="@+id/right_icon"
+        android:background="@drawable/ttlive_solo_ktv_lyric_locate_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</merge>

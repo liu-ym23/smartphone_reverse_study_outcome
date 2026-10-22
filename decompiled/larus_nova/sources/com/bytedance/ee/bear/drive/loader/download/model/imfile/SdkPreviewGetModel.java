@@ -1,0 +1,75 @@
+package com.bytedance.ee.bear.drive.loader.download.model.imfile;
+
+import com.bytedance.ee.bear.drive.loader.download.model.Content;
+import yu5.c;
+
+/* JADX INFO: loaded from: classes16.dex */
+public final class SdkPreviewGetModel {
+    private final String appFileId;
+    private final String appId;
+    private final String authExtra;
+    private final Content content;
+    private final String extra;
+    private final int interval;
+    private final boolean linearized;
+    private final int longPushRetryInterval;
+    private final long previewFileSize;
+    private final int status;
+
+    public String toString() {
+        return "SdkPreviewGetModel{appId='" + c.j(this.appId) + "', appFileId='" + c.j(this.appFileId) + "', authExtra='" + c.j(this.authExtra) + "', status=" + this.status + ", interval=" + this.interval + ", longPushRetryInterval=" + this.longPushRetryInterval + ", content=" + this.content + ", linearized=" + this.linearized + ", previewFileSize=" + this.previewFileSize + ", extra='" + this.extra + "'}";
+    }
+
+    public String getAppFileId() {
+        return this.appFileId;
+    }
+
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public String getAuthExtra() {
+        return this.authExtra;
+    }
+
+    public Content getContent() {
+        return this.content;
+    }
+
+    public String getExtra() {
+        return this.extra;
+    }
+
+    public int getInterval() {
+        return this.interval;
+    }
+
+    public int getLongPushRetryInterval() {
+        return this.longPushRetryInterval;
+    }
+
+    public long getPreviewFileSize() {
+        return this.previewFileSize;
+    }
+
+    public int getStatus() {
+        return this.status;
+    }
+
+    public boolean isLinearized() {
+        return this.linearized;
+    }
+
+    public SdkPreviewGetModel(String r100, String r101, String r102, int r103, int r104, int r105, Content r106, boolean r107, long r108, String r110) {
+        this.appId = r100;
+        this.appFileId = r101;
+        this.authExtra = r102;
+        this.status = r103;
+        this.interval = r104;
+        this.longPushRetryInterval = r105;
+        this.content = r106;
+        this.linearized = r107;
+        this.previewFileSize = r108;
+        this.extra = r110;
+    }
+}

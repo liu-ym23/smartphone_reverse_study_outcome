@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.widgets.panel.CommonActionPanelLayout
+        android:orientation="vertical"
+        android:id="@+id/vp_at_title"
+        android:paddingLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:panel_background_color="@color/bg_body"
+        app:panel_left_menu_type="text"
+        app:panel_left_text="@string/Doc_Facade_Cancel"
+        app:panel_title="@string/Doc_At_MentionTip"/>
+    <FrameLayout
+        android:background="@color/bg_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:background="@color/bg_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.larksuite.component.universe_design.tab.UDTabLayout
+            android:id="@+id/new_at_bar"
+            android:background="@color/bg_body"
+            android:paddingLeft="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:ud_tab_bottomDividerEnabled="false"
+            app:ud_tab_gravity="start"/>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_gravity="top"
+        android:id="@+id/vp_at"
+        android:background="@color/bg_body"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/at_viewpager_max_height2"/>
+    <FrameLayout
+        android:background="@color/bg_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:background="@color/bg_body_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_8"/>
+    <TextView
+        android:textSize="@dimen/space_kit_font_17"
+        android:textColor="@color/text_title"
+        android:gravity="center"
+        android:id="@+id/drive_video_resolution_action_cancel"
+        android:background="@drawable/drive_video_resolution_action_item_rectangle_v2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_kit_len_56"
+        android:text="@string/Doc_Widget_Cancel"
+        android:includeFontPadding="false"/>
+</LinearLayout>

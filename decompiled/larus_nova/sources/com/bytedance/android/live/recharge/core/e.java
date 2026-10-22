@@ -1,0 +1,5 @@
+package com.bytedance.android.live.recharge.core;
+
+/* JADX INFO: loaded from: classes47.dex */
+public interface e extends d, dy0.c {
+}

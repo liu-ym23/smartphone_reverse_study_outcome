@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ec_commerce_layout_anchor_v4_kol_evaluation_section_1595879573"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.components.LongContentLabelComponentView
+        android:id="@+id/anchor_v4_kol_evaluation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.components.KolGridComponentView
+        android:id="@+id/anchor_v4_kol_evaluation_grid_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+    <LinearLayout
+        android:id="@+id/anchor_v4_kol_evaluation_normal_component"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>

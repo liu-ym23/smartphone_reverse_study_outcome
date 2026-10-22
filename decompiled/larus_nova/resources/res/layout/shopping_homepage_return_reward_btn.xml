@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.shopping.api.mall.common.homepage.card.common.ECRoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shopping_homepage_return_reward_btn_20601313"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.shopping.api.mall.common.homepage.card.common.ECRoundedLinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/mall_homepage_return_reward_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mall_homepage_return_reward_icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="2dp"
+            android:importantForAccessibility="no"/>
+        <com.bytedance.android.shopping.mall.homepage.card.product.ProductTextView
+            android:textSize="13dp"
+            android:textColor="@color/shopping_home_color_FFFFFF"
+            android:gravity="center"
+            android:id="@+id/mall_homepage_return_reward_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:includeFontPadding="false"
+            android:importantForAccessibility="no"/>
+    </com.bytedance.android.shopping.api.mall.common.homepage.card.common.ECRoundedLinearLayout>
+</com.bytedance.android.shopping.api.mall.common.homepage.card.common.ECRoundedFrameLayout>

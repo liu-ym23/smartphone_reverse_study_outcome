@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_title_bar_layout"
+    android:background="@color/aos_sd_quaternary"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/aos_uikit_default_title_bar_height">
+    <View
+        android:id="@+id/title_color_ctrl"
+        android:background="@color/aos_bg_primary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"/>
+    <FrameLayout
+        android:id="@+id/title_bar_content_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.awemeopen.apps.framework.base.view.AutoRTLImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/back_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="centerInside"
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/aos_profile_ic_back"/>
+        <com.bytedance.awemeopen.apps.framework.base.view.refresh.DmtTextView
+            android:textColor="@color/aos_text_primary"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/title"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:maxLines="1"
+            style="@style/font_size_34_sp"/>
+    </FrameLayout>
+</FrameLayout>

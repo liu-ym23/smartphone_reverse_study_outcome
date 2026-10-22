@@ -1,0 +1,11 @@
+package com.ss.android.lark.profile_office.userprofile;
+
+/* JADX INFO: loaded from: classes37.dex */
+public final class f {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ int f438928a = 0;
+
+    static {
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/ttlive_open_game_debug_corner_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_rank_gray_hint"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:text="@string/ttlive_open_game_debug"/>
+    <View
+        android:background="#f1f1f2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:background="#f1f1f2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:background="#f1f1f2"
+        android:layout_width="match_parent"
+        android:layout_height="13px"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_black"
+        android:gravity="center"
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:text="@string/ttlive_open_game_cancel"/>
+</LinearLayout>

@@ -1,0 +1,142 @@
+package com.bytedance.android.shopping.anchorv4.voavhs.headv2;
+
+import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
+import kotlin.Lazy;
+import kotlin.LazyKt;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes13.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0006\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\b\n\u0002\b\f\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0003\b\u0086\b\u0018\u00002\u00020\u0001B)\u0012\n\b\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0007¢\u0006\u0002\u0010\bJ\u000b\u0010\u0016\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u0010\u0010\u0017\u001a\u0004\u0018\u00010\u0005HÆ\u0003¢\u0006\u0002\u0010\nJ\u000b\u0010\u0018\u001a\u0004\u0018\u00010\u0007HÆ\u0003J2\u0010\u0019\u001a\u00020\u00002\n\b\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00052\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0007HÆ\u0001¢\u0006\u0002\u0010\u001aJ\u0013\u0010\u001b\u001a\u00020\u001c2\b\u0010\u001d\u001a\u0004\u0018\u00010\u001eHÖ\u0003J\t\u0010\u001f\u001a\u00020\u000fHÖ\u0001J\t\u0010 \u001a\u00020\u0003HÖ\u0001R\u001a\u0010\u0004\u001a\u0004\u0018\u00010\u00058\u0006X\u0087\u0004¢\u0006\n\n\u0002\u0010\u000b\u001a\u0004\b\t\u0010\nR\u0018\u0010\u0002\u001a\u0004\u0018\u00010\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\rR\u001d\u0010\u000e\u001a\u0004\u0018\u00010\u000f8FX\u0086\u0084\u0002¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0010\u0010\u0011R\u0018\u0010\u0006\u001a\u0004\u0018\u00010\u00078\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\u0015¨\u0006!"}, d2 = {"Lcom/bytedance/android/shopping/anchorv4/voavhs/headv2/FontShadow;", "Ljava/io/Serializable;", "shadowColor", "", "shadowBlur", "", "shadowOffset", "Lcom/bytedance/android/shopping/anchorv4/voavhs/headv2/ShadowOffset;", "(Ljava/lang/String;Ljava/lang/Double;Lcom/bytedance/android/shopping/anchorv4/voavhs/headv2/ShadowOffset;)V", "getShadowBlur", "()Ljava/lang/Double;", "Ljava/lang/Double;", "getShadowColor", "()Ljava/lang/String;", "shadowColorInt", "", "getShadowColorInt", "()Ljava/lang/Integer;", "shadowColorInt$delegate", "Lkotlin/Lazy;", "getShadowOffset", "()Lcom/bytedance/android/shopping/anchorv4/voavhs/headv2/ShadowOffset;", "component1", "component2", "component3", "copy", "(Ljava/lang/String;Ljava/lang/Double;Lcom/bytedance/android/shopping/anchorv4/voavhs/headv2/ShadowOffset;)Lcom/bytedance/android/shopping/anchorv4/voavhs/headv2/FontShadow;", "equals", "", "other", "", "hashCode", "toString", "ec-shopping-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class FontShadow implements Serializable {
+
+    @SerializedName("blur")
+    private final Double shadowBlur;
+
+    @SerializedName("color")
+    private final String shadowColor;
+    private final Lazy shadowColorInt$delegate;
+
+    @SerializedName("offset")
+    private final ShadowOffset shadowOffset;
+
+    public FontShadow() {
+        this(null, null, null, 7, null);
+    }
+
+    public static /* synthetic */ FontShadow copy$default(FontShadow r100, String r101, Double r102, ShadowOffset r103, int r104, Object r105) {
+        if ((r104 & 1) == 0) goto L6;
+        r101 = r100.shadowColor;
+    L6:
+        if ((r104 & 2) == 0) goto L9;
+        r102 = r100.shadowBlur;
+    L9:
+        if ((r104 & 4) == 0) goto L12;
+        r103 = r100.shadowOffset;
+    L12:
+        return r100.copy(r101, r102, r103);
+    }
+
+    public final String component1() {
+        return this.shadowColor;
+    }
+
+    public final Double component2() {
+        return this.shadowBlur;
+    }
+
+    public final ShadowOffset component3() {
+        return this.shadowOffset;
+    }
+
+    public final FontShadow copy(String r100, Double r101, ShadowOffset r102) {
+        return new FontShadow(r100, r101, r102);
+    }
+
+    public boolean equals(Object r100) {
+        if (this != r100) goto L4;
+        return true;
+    L4:
+        if ((r100 instanceof FontShadow) == false) goto L12;
+        FontShadow r101 = (FontShadow) r100;
+        if (Intrinsics.areEqual(this.shadowColor, r101.shadowColor) == true) goto L8;
+        return false;
+    L8:
+        if (Intrinsics.areEqual(this.shadowBlur, r101.shadowBlur) == true) goto L10;
+        return false;
+    L10:
+        if (Intrinsics.areEqual(this.shadowOffset, r101.shadowOffset) == true) goto L19;
+        return false;
+    L19:
+        return true;
+    L12:
+        return false;
+    }
+
+    public final Integer getShadowColorInt() {
+        return (Integer) this.shadowColorInt$delegate.getValue();
+    }
+
+    public int hashCode() {
+        String r100 = this.shadowColor;
+        int r101 = 0;
+        if (r100 == null) goto L5;
+        int r102 = r100.hashCode();
+    L6:
+        int r103 = r102 * 31;
+        Double r104 = this.shadowBlur;
+        if (r104 == null) goto L9;
+        int r105 = r104.hashCode();
+    L10:
+        int r106 = (r103 + r105) * 31;
+        ShadowOffset r107 = this.shadowOffset;
+        if (r107 == null) goto L14;
+        r101 = r107.hashCode();
+    L14:
+        return r106 + r101;
+    L9:
+        r105 = 0;
+        goto L10
+    L5:
+        r102 = 0;
+        goto L6
+    }
+
+    public String toString() {
+        return "FontShadow(shadowColor=" + this.shadowColor + ", shadowBlur=" + this.shadowBlur + ", shadowOffset=" + this.shadowOffset + ")";
+    }
+
+    public final Double getShadowBlur() {
+        return this.shadowBlur;
+    }
+
+    public final String getShadowColor() {
+        return this.shadowColor;
+    }
+
+    public final ShadowOffset getShadowOffset() {
+        return this.shadowOffset;
+    }
+
+    public FontShadow(String r100, Double r101, ShadowOffset r102) {
+        this.shadowColor = r100;
+        this.shadowBlur = r101;
+        this.shadowOffset = r102;
+        this.shadowColorInt$delegate = LazyKt.lazy(new FontShadow$shadowColorInt$2(this));
+    }
+
+    public /* synthetic */ FontShadow(String r100, Double r101, ShadowOffset r102, int r103, DefaultConstructorMarker r104) {
+        if ((r103 & 1) == 0) goto L6;
+        r100 = null;
+    L6:
+        if ((r103 & 2) == 0) goto L9;
+        r101 = null;
+    L9:
+        if ((r103 & 4) == 0) goto L11;
+        r102 = null;
+    L11:
+        this(r100, r101, r102);
+    }
+}

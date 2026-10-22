@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/larus_bg_markdown_emphasize_reference_radius_8"
+    android:paddingLeft="12dp"
+    android:paddingTop="7dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:paddingHorizontal="12dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_reference_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:id="@+id/mask_reference_title"
+        android:background="?attr/larus_reference_list_zoom_in_mask"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

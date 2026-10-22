@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.ui.base.widget.round.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingTop="11dp"
+    android:paddingBottom="11dp"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:paddingVertical="11dp"
+    app:bg_color="@color/shopping_color_0D161823"
+    app:bg_cornerRadius="8dp">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/shopping_color_73161823"
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/ec_window_anchor_bottom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:importantForAccessibility="no"
+        android:textFontWeight="500"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/ec_shop_info_area_fans_group_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/ec_window_anchor_card_ic"/>
+</com.bytedance.android.ui.base.widget.round.RoundLinearLayout>

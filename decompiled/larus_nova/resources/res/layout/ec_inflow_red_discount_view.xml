@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_discount_price"
+    android:background="@drawable/ec_inflow_bg_discount_price"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:id="@+id/tv_discount_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_discount_price"/>
+    <com.bytedance.android.ec.core.widget.PriceView
+        android:id="@+id/tv_discount_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_discount_price_text"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/tv_discount_price_text"
+        app:extraTextColor="@android:color/white"
+        app:extraTextSize="12sp"
+        app:prefixTextSize="12sp"
+        app:priceDecimalTextSize="15sp"
+        app:priceTextColor="@android:color/white"
+        app:priceTextSize="19sp"
+        app:spaceSize="1dp"
+        app:thinDecimal="true"
+        app:yangTextSize="15sp"/>
+</RelativeLayout>

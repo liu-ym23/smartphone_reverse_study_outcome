@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="?attr/larus_dp_12"
+    android:textStyle="bold"
+    android:textColor="?attr/larus_neutral_70"
+    android:id="@+id/mtm_section_header_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:includeFontPadding="false"
+    android:layout_marginStart="?attr/larus_dp_12"/>

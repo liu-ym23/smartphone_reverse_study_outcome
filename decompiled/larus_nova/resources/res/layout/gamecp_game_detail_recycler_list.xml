@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.gamecp.business.gamedetail.view.NestedChildRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sve_recycler_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"/>

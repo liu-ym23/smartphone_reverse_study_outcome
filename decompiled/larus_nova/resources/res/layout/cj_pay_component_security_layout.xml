@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/cj_pay_bottom_tips_icon"
+        android:visibility="gone"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/cj_pay_icon_pay_again_pop_left_14_night"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="?attr/cj_pay_text_tertiary"
+        android:id="@+id/cj_pay_bottom_tips_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"/>
+</LinearLayout>

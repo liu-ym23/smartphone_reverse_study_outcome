@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_like_icon"
+        android:layout_width="?attr/larus_dp_20"
+        android:layout_height="?attr/larus_dp_20"
+        android:layout_marginTop="?attr/larus_dp_10"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="?attr/danger_50"
+        android:gravity="center"
+        android:id="@+id/tv_like_size"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="?attr/larus_dp_3"
+        android:minWidth="?attr/larus_dp_32"
+        android:layout_below="@+id/img_like_icon"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-medium"
+        android:textFontWeight="500"/>
+</merge>

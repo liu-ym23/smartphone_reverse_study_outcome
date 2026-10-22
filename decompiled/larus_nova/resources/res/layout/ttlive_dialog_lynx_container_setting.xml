@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/outside"
+        android:background="#57000000"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <FrameLayout
+        android:orientation="vertical"
+        android:id="@+id/setting_lynx_container"
+        android:background="@drawable/ttlive_bg_interact_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

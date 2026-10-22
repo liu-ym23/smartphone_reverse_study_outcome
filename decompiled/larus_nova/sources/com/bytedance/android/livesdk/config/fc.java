@@ -1,0 +1,16 @@
+package com.bytedance.android.livesdk.config;
+
+/* JADX INFO: loaded from: classes8.dex */
+public final class fc extends SSettingKey<Integer> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final fc f120189a = null;
+
+    public fc() {
+        super("live_anchor_more_dialog_height_fix", "主播更多面板高度修复", 2, 2);
+    }
+
+    static {
+        f120189a = new fc();
+    }
+}

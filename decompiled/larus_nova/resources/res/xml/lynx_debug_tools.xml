@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Lynx调试">
+        <PreferenceScreen
+            android:title="当前使用版本"
+            android:key="lynx_current_version"
+            android:summary="未加载"/>
+        <EditTextPreference
+            android:title="打开指定 lynx template url"
+            android:key="lynx_source_url"
+            android:dialogTitle="请输入lynx模板地址"/>
+        <PreferenceScreen
+            android:title="扫码连接lynxDevTool（lark）"
+            android:key="lynx_dev_tool_scan"
+            android:summary="内测包仅使用debug服务编译产物"/>
+        <EditTextPreference
+            android:title="使用指定 lynx版本（空则禁用）"
+            android:key="lynx_specific_version"
+            android:summary=""
+            android:dialogTitle="请输入lynx版本"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Bitable Lynx调试">
+        <SwitchPreference
+            android:title="开启固定展示LynxView"
+            android:key="lynx_bitable_enable_show_lynx"
+            android:defaultValue="true"/>
+        <EditTextPreference
+            android:title="BitableLynx 代理地址"
+            android:key="lynx_bitable_proxy_ip"
+            android:summary=""
+            android:dialogTitle="请输入BitableLynx代理 IP:端口"/>
+        <EditTextPreference
+            android:title="加载 SCM 资源 (版本为空则关闭)"
+            android:key="lynx_bitable_scm_version"
+            android:summary=""
+            android:dialogTitle="请输入BitableLynx SCM 版本"/>
+        <PreferenceScreen
+            android:title="扫码连接 LynxDevTool 或 代理地址"
+            android:key="lynx_bitable_dev_tool_scan"
+            android:summary=""/>
+        <SwitchPreference
+            android:title="加载代理资源"
+            android:key="lynx_bitable_enable_proxy"
+            android:defaultValue="false"/>
+        <PreferenceScreen
+            android:title="加载内置资源"
+            android:key="lynx_bitable_enable_buildin"
+            android:summary=""/>
+    </PreferenceCategory>
+</PreferenceScreen>

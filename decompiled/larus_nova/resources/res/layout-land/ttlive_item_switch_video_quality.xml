@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+    <Button
+        android:textSize="16dp"
+        android:textColor="@color/ttlive_barrage_setting_normal_color"
+        android:id="@+id/bt_switch_video"
+        android:background="#0000"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:text="@string/ttlive_live_quality_SD"/>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cj_pay_face_guide_half_layer_popup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true">
+    <FrameLayout
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/cj_pay_face_guide_half_layer_popup_con"
+        android:background="@color/cj_pay_color_white"
+        android:layout_width="220dp"
+        android:layout_height="220dp"/>
+</FrameLayout>

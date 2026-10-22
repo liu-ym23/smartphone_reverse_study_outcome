@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="aivoice_callback_service_enabled">false</bool>
+    <bool name="cpv_default_anim_autostart">false</bool>
+    <bool name="cpv_default_is_indeterminate">false</bool>
+    <bool name="enable_system_alarm_service_default">true</bool>
+    <bool name="enable_system_foreground_service_default">true</bool>
+    <bool name="enable_system_job_service_default">false</bool>
+    <bool name="gamecp_cpv_default_anim_autostart">false</bool>
+    <bool name="gamecp_cpv_default_is_indeterminate">false</bool>
+    <bool name="larus_browser_takeover_cloud_enabled">true</bool>
+    <bool name="larus_browser_takeover_local_pc_enabled">true</bool>
+    <bool name="larus_plugin_cpv_default_anim_autostart">false</bool>
+    <bool name="larus_plugin_cpv_default_is_indeterminate">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="sva_support_stage2_by_pass">true</bool>
+    <bool name="ttlive_with_plus_prefix">true</bool>
+    <bool name="workmanager_test_configuration">false</bool>
+</resources>

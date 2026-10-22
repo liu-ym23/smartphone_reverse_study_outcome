@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp">
+    <TextView
+        android:textSize="15sp"
+        android:textColor="#a4ffffff"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/action_close"
+        android:background="@drawable/ttlive_bg_duty_gift_close_button"
+        android:layout_width="62dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/ttlive_live_gift_game_stop"
+        android:lineSpacingExtra="1sp"/>
+    <LinearLayout
+        android:gravity="bottom|right"
+        android:orientation="horizontal"
+        android:id="@+id/action_container"
+        android:paddingLeft="12dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</LinearLayout>

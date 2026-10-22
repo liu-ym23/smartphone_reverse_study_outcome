@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/larus_base_1_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/larus_dp_32"
+        android:paddingEnd="?attr/larus_dp_32">
+        <ProgressBar
+            android:layout_width="?attr/larus_dp_40"
+            android:layout_height="?attr/larus_dp_40"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/larus_dora_resource_loading"
+            android:indeterminateDuration="750"/>
+        <TextView
+            android:textSize="?attr/larus_sp_14"
+            android:textColor="?attr/larus_neutral_50"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_12"
+            android:text="@string/larus_dora_beta_first_load_tip_cn"/>
+    </LinearLayout>
+</FrameLayout>

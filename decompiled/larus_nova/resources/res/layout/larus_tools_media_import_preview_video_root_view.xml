@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.creativex.mediaimport.widget.gesture.ScaleGestureLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gesture_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextureView
+        android:layout_gravity="center"
+        android:id="@+id/video_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_video_thumbnail"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="fitCenter"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_deleted"
+        android:visibility="gone"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/larus_tools_media_import_ic_video_delete"/>
+    <com.ss.android.ugc.tools.view.widget.state.LoadingView
+        android:layout_gravity="center"
+        android:id="@+id/video_loading"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.bytedance.creativex.mediaimport.widget.gesture.ScaleGestureLayout>

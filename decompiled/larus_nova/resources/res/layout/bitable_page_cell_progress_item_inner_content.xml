@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.universe_design.progress.UDProgress
+        android:id="@+id/progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="72dp"
+        android:layout_weight="1"
+        app:ud_progress_indicatorCornerRadius="4dp"
+        app:ud_progress_thickness="8dp"
+        app:ud_progress_trackColor="@color/N900_10"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/progress_text"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="200dp"
+        android:minWidth="42dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:lineSpacingExtra="0dp"
+        android:layout_marginStart="@dimen/space_kit_len_8"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_title"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/progress_text_placeholder"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:lineSpacingExtra="0dp"/>
+</LinearLayout>

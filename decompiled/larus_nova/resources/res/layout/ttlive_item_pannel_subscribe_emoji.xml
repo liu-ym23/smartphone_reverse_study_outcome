@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/subscribe_emoji_icon"
+        android:background="@drawable/ttlive_bg_subscribe_emoji"
+        android:padding="0.5dp"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        app:actualImageScaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/subscribe_emoji_label"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="10dp"
+        android:textColor="#fe2c55"
+        android:gravity="center"
+        android:id="@+id/subscribe_emoji_new"
+        android:background="@drawable/ttlive_bg_subscribe_emoji_new_tab"
+        android:visibility="gone"
+        android:layout_width="26dp"
+        android:layout_height="16dp"
+        android:text="@string/ttlive_subscribe_new_tab_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/subscribe_emoji_lock"
+        android:background="@drawable/ttlive_subscribe_emoji_lock"
+        android:visibility="gone"
+        android:layout_width="7dp"
+        android:layout_height="8.65dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintRight_toRightOf="@+id/subscribe_emoji_icon"
+        app:layout_constraintTop_toTopOf="@+id/subscribe_emoji_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

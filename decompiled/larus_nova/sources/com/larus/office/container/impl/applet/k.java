@@ -1,0 +1,31 @@
+package com.larus.office.container.impl.applet;
+
+import com.ixigua.lib.track.TrackParams;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes29.dex */
+public final class k implements by7.e {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ TrackParams f362132a;
+
+    @Override // by7.e
+    public final by7.e parentTrackNode() {
+        return by7.i.c(this);
+    }
+
+    @Override // by7.e
+    public final by7.e referrerTrackNode() {
+        return by7.e.a.a(this);
+    }
+
+    public k(TrackParams r100) {
+        this.f362132a = r100;
+    }
+
+    @Override // by7.e, by7.d
+    public final void fillTrackParams(TrackParams r100) {
+        Intrinsics.checkNotNullParameter(r100, "params");
+        r100.merge(this.f362132a);
+    }
+}

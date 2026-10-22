@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/color_ud_P350_alpha_1_5"
+                android:endColor="@color/color_ud_I500_alpha_1_5"
+                android:angle="225"/>
+            <corners android:radius="@dimen/ud_radius_s"/>
+        </shape>
+    </item>
+</selector>

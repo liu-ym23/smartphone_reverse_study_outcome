@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ec_commerce_anchor_v4_combine_detail_head_content_1912674798"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv4.voavhs.detailhead.AutoHeightTabLayout
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:layout_gravity="start"
+        android:id="@+id/combine_tab"
+        android:visibility="gone"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="11dp"
+        android:minHeight="30dp"
+        android:requiresFadingEdge="horizontal"
+        app:tabBackground="@color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="5dp"
+        app:tabPaddingStart="5dp"
+        app:tabRippleColor="@color/transparent"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.detailhead.AutoHeightViewPager
+        android:id="@+id/combine_viewpager"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+</merge>

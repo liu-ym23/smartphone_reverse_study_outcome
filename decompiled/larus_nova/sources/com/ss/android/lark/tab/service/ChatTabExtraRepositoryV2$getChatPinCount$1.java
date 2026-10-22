@@ -1,0 +1,31 @@
+package com.ss.android.lark.tab.service;
+
+import com.bytedance.lark.pb.im.v1.GetChatPinCountResponse;
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes38.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"<anonymous>", "", "it", "Lcom/bytedance/lark/pb/im/v1/GetChatPinCountResponse;", AbsMethodDelegate.TAG_INVOKE, "(Lcom/bytedance/lark/pb/im/v1/GetChatPinCountResponse;)Ljava/lang/Integer;"}, k = 3, mv = {2, 1, 0}, xi = 48)
+final class ChatTabExtraRepositoryV2$getChatPinCount$1 extends Lambda implements Function1<GetChatPinCountResponse, Integer> {
+    final /* synthetic */ Function1<GetChatPinCountResponse, Integer> $respMap;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public ChatTabExtraRepositoryV2$getChatPinCount$1(Function1<? super GetChatPinCountResponse, Integer> r100) {
+        this.$respMap = r100;
+        super(1);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Integer invoke2(GetChatPinCountResponse r100) {
+        Intrinsics.checkNotNullParameter(r100, "it");
+        return this.$respMap.invoke(r100);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public /* bridge */ /* synthetic */ Integer invoke(GetChatPinCountResponse r100) {
+        return invoke2(r100);
+    }
+}

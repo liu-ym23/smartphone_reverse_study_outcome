@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <TextView
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#161823"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#80161823"
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/anchor_pk_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_anchor_pk_invite_tips"
+        android:layout_marginEnd="16dp"/>
+</FrameLayout>

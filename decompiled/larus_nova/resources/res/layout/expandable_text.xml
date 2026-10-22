@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/expand_btn"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+        <View
+            android:id="@+id/mask_view"
+            android:background="@drawable/expandable_text_mask"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="@color/primary_fill_default"
+            android:id="@+id/expand_btn_text"
+            android:background="@color/bg_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Bitable_Common_Expand"
+            android:paddingStart="4dp"/>
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/expand_arrow_icon"
+            android:background="@color/bg_body"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ud_icon_down_bold_outlined"
+            android:tint="@color/primary_fill_default"/>
+    </LinearLayout>
+</merge>

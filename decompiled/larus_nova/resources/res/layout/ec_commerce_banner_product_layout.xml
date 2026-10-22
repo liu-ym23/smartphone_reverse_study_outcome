@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/anchor_v3_sv_banner_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/shopping_color_35AAFF"
+        android:ellipsize="end"
+        android:id="@+id/anchor_v3_tv_banner_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:maxLines="1"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginStart="4dp"/>
+    <ImageView
+        android:id="@+id/anchor_v3_ic_arrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ec_commerce_product_banner_arrow"/>
+</LinearLayout>

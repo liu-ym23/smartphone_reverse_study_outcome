@@ -1,0 +1,56 @@
+package com.bytedance.locallife.groupon.basic.utils;
+
+import androidx.exifinterface.media.ExifInterface;
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function2;
+
+/* JADX INFO: loaded from: classes21.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0004\u001a\u00020\u0003\"\u0004\b\u0000\u0010\u00002\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00028\u00000\u0001H\u008a@"}, d2 = {ExifInterface.GPS_DIRECTION_TRUE, "Lcom/bytedance/locallife/groupon/basic/utils/e;", "result", "", "<anonymous>"}, k = 3, mv = {1, 4, 3})
+@DebugMetadata(c = "com.bytedance.locallife.groupon.basic.utils.ResultKt$onLoading$1", f = "Result.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+final class ResultKt$onLoading$1 extends SuspendLambda implements Function2<e<Object>, Continuation<? super Unit>, Object> {
+    final /* synthetic */ Function0<Unit> $onLoading;
+    /* synthetic */ Object L$0;
+    int label;
+
+    public ResultKt$onLoading$1(Function0<Unit> r100, Continuation<? super ResultKt$onLoading$1> r101) {
+        this.$onLoading = r100;
+        super(2, r101);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation<Unit> create(Object r100, Continuation<?> r101) {
+        ResultKt$onLoading$1 r102 = new ResultKt$onLoading$1(this.$onLoading, r101);
+        r102.L$0 = r100;
+        return r102;
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Object invoke2(e<Object> r100, Continuation<? super Unit> r101) {
+        return ((ResultKt$onLoading$1) create(r100, r101)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public /* bridge */ /* synthetic */ Object invoke(e<Object> r100, Continuation<? super Unit> r101) {
+        return invoke2(r100, r101);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label != 0) goto L10;
+        ResultKt.throwOnFailure(r100);
+        if ((((e) this.L$0) instanceof e.c) == false) goto L8;
+        this.$onLoading.invoke();
+    L8:
+        return Unit.INSTANCE;
+    L10:
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    }
+}

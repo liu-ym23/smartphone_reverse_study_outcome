@@ -1,0 +1,33 @@
+package com.bytedance.android.btm.impl.setting;
+
+import com.google.gson.annotations.SerializedName;
+import com.ss.android.cert.manager.constants.BytedCertConstant;
+import com.ss.android.ugc.aweme.lazydata.LazyData;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\r\u0010\u000eR\u001a\u0010\u0003\u001a\u00020\u00028\u0006X\u0087D¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006R \u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\t\u0010\n\u001a\u0004\b\u000b\u0010\f¨\u0006\u000f"}, d2 = {"Lcom/bytedance/android/btm/impl/setting/a;", "", "", "event", "Ljava/lang/String;", BytedCertConstant.ReflectionConfigKey.COLOR_ARRAY, "()Ljava/lang/String;", "", "Lcom/bytedance/android/btm/impl/setting/p;", "params", "Ljava/util/List;", "b", "()Ljava/util/List;", "<init>", "()V", "btm-impl_cnRelease"}, k = 1, mv = {1, 4, 0})
+@LazyData
+public final class a {
+
+    @SerializedName("event")
+    private final String event;
+
+    @SerializedName("params")
+    private final List<p> params;
+
+    public a() {
+        this.event = "";
+        this.params = CollectionsKt.emptyList();
+    }
+
+    public final String a() {
+        return this.event;
+    }
+
+    public final List<p> b() {
+        return this.params;
+    }
+}

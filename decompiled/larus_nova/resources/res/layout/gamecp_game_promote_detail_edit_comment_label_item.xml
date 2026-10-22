@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/gamecp_shape_game_promote_comment_detail_label_item_unselect"
+    android:layout_width="80dp"
+    android:layout_height="28dp">
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/gamecp_game_99161823"
+        android:layout_gravity="center"
+        android:id="@+id/label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

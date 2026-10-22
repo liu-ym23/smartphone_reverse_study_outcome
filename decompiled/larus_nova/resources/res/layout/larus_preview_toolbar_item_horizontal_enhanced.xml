@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@drawable/larus_preview_toolbar_pill_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/larus_dp_44"
+    android:minWidth="?attr/larus_dp_64"
+    android:paddingStart="?attr/larus_dp_16"
+    android:paddingEnd="?attr/larus_dp_16">
+    <TextView
+        android:textSize="?attr/larus_dp_16"
+        android:textStyle="bold"
+        android:textColor="@color/larus_black"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"/>
+</LinearLayout>

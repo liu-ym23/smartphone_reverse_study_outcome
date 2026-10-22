@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="bottom"
+        android:height="46dp"
+        android:left="@dimen/dp_12"
+        android:right="@dimen/dp_12">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/obric_action_bar_input_bg_color_chat_window"
+                android:endColor="#00000000"
+                android:angle="90"
+                android:type="linear"
+                android:centerY="0.65"
+                android:centerColor="@color/obric_action_bar_input_bg_color_chat_window"/>
+        </shape>
+    </item>
+</layer-list>

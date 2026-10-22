@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/paid_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImage="@drawable/ttlive_equal_talkroom_window_empty_bg"/>
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center"
+        android:id="@+id/front_view"
+        android:visibility="gone"
+        android:layout_width="@dimen/ttlive_interact_paid_stub_size"
+        android:layout_height="@dimen/ttlive_interact_paid_stub_size"/>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/end_link_bid_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.livesdk.chatroom.view.NoPaddingTextView
+            android:textSize="12dp"
+            android:textColor="#e6ffffff"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/end_link_bid_tips"
+            android:padding="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"/>
+        <com.bytedance.android.livesdk.chatroom.view.NoPaddingTextView
+            android:textSize="28dp"
+            android:textColor="#face15"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/end_link_bid_profit"
+            android:padding="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/ttlive_item_video_talkroom_end_link_bid_profit"/>
+    </LinearLayout>
+</FrameLayout>

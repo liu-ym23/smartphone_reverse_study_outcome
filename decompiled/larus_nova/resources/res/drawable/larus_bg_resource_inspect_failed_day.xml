@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="?attr/larus_dp_8"/>
+            <solid android:color="@color/larus_base_4_overlay_50_day"/>
+            <stroke
+                android:width="?attr/larus_dp_1"
+                android:color="@color/larus_base_4_overlay_day"/>
+        </shape>
+    </item>
+</selector>

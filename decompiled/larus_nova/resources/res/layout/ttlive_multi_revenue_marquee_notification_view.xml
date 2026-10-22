@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="#16182308"
+    android:layout_width="match_parent"
+    android:layout_height="38dp">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/marquee_notification_icon"
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ttlive_multi_revenue_notification_icon_black"
+        android:scaleType="center"
+        android:layout_marginStart="8dp"/>
+    <com.bytedance.android.live.liveinteract.view.MarqueeTextSwitcher
+        android:gravity="center_vertical"
+        android:id="@+id/marquee_notification_text_switcher"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:maxLines="1"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/marquee_notification_close"
+        android:layout_width="33dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ttlive_multi_revenue_notification_close_black"
+        android:scaleType="center"/>
+</merge>

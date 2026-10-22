@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_commerce_anchor_v3_brand_pics_item_475236470"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="16dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/anchor_v3_brand_pics_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:actualImageScaleType="fitXY"/>
+</FrameLayout>

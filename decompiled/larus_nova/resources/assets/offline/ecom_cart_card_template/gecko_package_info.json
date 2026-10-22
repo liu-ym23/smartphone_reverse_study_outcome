@@ -1,0 +1,258 @@
+{
+    "id": "7579139563268898835",
+    "createdAt": "2025-12-02T14:12:57+08:00",
+    "updatedAt": "2025-12-02T14:13:03+08:00",
+    "leafId": "25050234278146",
+    "channelId": "123285667",
+    "creator": "yuhao.x",
+    "status": "FULL_RELEASED",
+    "releasePolicy": {
+        "currentRatio": 50,
+        "targetRatio": 100,
+        "computedRatio": 100,
+        "targetedDeviceIds": [],
+        "startedAt": "2025-12-02T15:47:37+08:00",
+        "duration": "0",
+        "_version": "6890d599bd6d408de53141bcda56ef314285efa488d23729a0f89810cb901f2b",
+        "fuseV2": {
+            "13": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "32": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "35": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "36": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "1112": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "1128": {
+                "seed": "115381978",
+                "mod": "100",
+                "result": "0"
+            },
+            "1319": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "1349": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "1390": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "1398": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "1775": {
+                "seed": "67075858",
+                "mod": "100",
+                "result": "0"
+            },
+            "1967": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "2079": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "2081": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "2329": {
+                "seed": "62473467",
+                "mod": "100",
+                "result": "0"
+            },
+            "3040": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "3102": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "4939": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "5085": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "6340": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "6589": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "7060": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "8478": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "8661": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "8662": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "8663": {
+                "seed": "39366845",
+                "mod": "100",
+                "result": "0"
+            },
+            "8698": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "8703": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "8704": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "219989": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "301868": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "315828": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "362928": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "482488": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "507386": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "507427": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "515927": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "547599": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "561124": {
+                "seed": "114147731",
+                "mod": "100",
+                "result": "0"
+            },
+            "568863": {
+                "seed": "171212031",
+                "mod": "100",
+                "result": "0"
+            },
+            "614242": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            },
+            "615883": {
+                "seed": "58782012",
+                "mod": "100",
+                "result": "0"
+            },
+            "664226": {
+                "seed": "30",
+                "mod": "50",
+                "result": "0"
+            }
+        }
+    },
+    "strategies": {
+        "delIfDownloadFailed": false,
+        "delOldPkgBeforeDownload": false,
+        "needUnzip": true
+    },
+    "scmInfo": {
+        "repoName": "ecom/ecom_yata_template/cart",
+        "version": "1.0.0.816",
+        "targetPath": "./gecko"
+    },
+    "description": "bytecycle平台 离线部署创建 —— <a href=\"https://gecko.bytedance.net/api/atom/redirect-bytecycle-build-site?buildId=103503798\" target=\"_blank\" style=\"color:rgb(0, 100, 250) \">流水线链接</a>",
+    "userUploadPkgByteSize": 122553,
+    "originalFileCount": 75,
+    "originalUncompressedByteSize": 426097,
+    "processedZipPkgByteSize": 117425,
+    "processedZipPkgMd5": "051c2cbaa24a0213021bc453c6d8cb3e",
+    "processedZipPkgTosUrl": "https://lf0-geckocdn.bytedance.net/obj/ies.fe.gecko/10181/123285667/051c2cbaa24a0213021bc453c6d8cb3e_7579139563268898835.zip",
+    "processedZstdPkgByteSize": 34278,
+    "processedZstdPkgTosUrl": "https://lf0-geckocdn.bytedance.net/obj/ies.fe.gecko/10181/123285667/e03956f46082fe907186794630536f92_7579139563268898835_zstd.zst",
+    "zipSchema": "sslocal://gecko/download?access_key=5fb33cde3ebff01c8433ddc22aac0816&channel=ecom_cart_card_template&version=7579139563268898835&package_type=0&url_list=https%3A%2F%2Flf0-geckocdn.bytedance.net%2Fobj%2Fies.fe.gecko%2F10181%2F123285667%2F051c2cbaa24a0213021bc453c6d8cb3e_7579139563268898835.zip&md5=051c2cbaa24a0213021bc453c6d8cb3e&size=117425",
+    "zstdSchema": "sslocal://gecko/download?access_key=5fb33cde3ebff01c8433ddc22aac0816&channel=ecom_cart_card_template&version=7579139563268898835&package_type=0&url_list=https%3A%2F%2Flf0-geckocdn.bytedance.net%2Fobj%2Fies.fe.gecko%2F10181%2F123285667%2Fe03956f46082fe907186794630536f92_7579139563268898835_zstd.zst&md5=e03956f46082fe907186794630536f92&size=34278",
+    "envLanes": [],
+    "url": "https://lf0-geckocdn.bytedance.net/obj/ies.fe.gecko/10181/123285667/051c2cbaa24a0213021bc453c6d8cb3e_7579139563268898835.zip"
+}

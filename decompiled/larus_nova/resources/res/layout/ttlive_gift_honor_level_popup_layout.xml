@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/ttlive_bg_gift_honor_text"
+        android:gravity="start"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/detail_popup_tv"
+        android:background="@drawable/ttlive_bg_gift_honor_popup"
+        android:padding="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:maxLength="14"/>
+    <View
+        android:layout_gravity="center_vertical"
+        android:id="@+id/popup_arrow_view"
+        android:background="@drawable/ttlive_gift_honor_right_arrow"
+        android:layout_width="6dp"
+        android:layout_height="12dp"/>
+    <View
+        android:id="@+id/detail_popup_icon_click_view"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"/>
+</LinearLayout>

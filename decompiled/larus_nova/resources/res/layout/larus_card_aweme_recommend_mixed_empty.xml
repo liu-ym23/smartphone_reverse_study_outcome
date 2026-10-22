@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.venus.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shape_layout"
+    android:background="?attr/larus_base_2"
+    android:paddingLeft="?attr/larus_dp_6"
+    android:paddingTop="?attr/larus_dp_6"
+    android:paddingRight="?attr/larus_dp_6"
+    android:paddingBottom="?attr/larus_dp_6"
+    android:layout_width="?attr/larus_dp_169"
+    android:layout_height="match_parent"
+    app:larus_sc_cornerRadius="?attr/larus_dp_8"
+    app:larus_sc_shadow_blur_radius="?attr/larus_dp_6"
+    app:larus_sc_shadow_color="#14000000"/>

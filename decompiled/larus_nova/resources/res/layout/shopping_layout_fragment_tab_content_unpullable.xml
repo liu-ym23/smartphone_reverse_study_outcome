@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ec_rv_content_linear_gradient_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/ec_sub_category"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ec_window_layout_sub_category"/>
+    <FrameLayout
+        android:id="@+id/ec_toolbar_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.window.shop.product.pinrecyclerview.ECRecyclerViewPinnableLayout
+            android:id="@+id/ec_rv_content_pin_layout"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.bytedance.android.window.shop.widget.ECShopRecyclerView
+                android:id="@+id/ec_rv_content"
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.bytedance.android.window.shop.product.pinrecyclerview.ECRecyclerViewPinnableLayout>
+        <com.bytedance.android.ec.window.base.status.WindowLazyStatusView
+            android:id="@+id/ec_status_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

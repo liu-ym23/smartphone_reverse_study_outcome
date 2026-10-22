@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/font_picker_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+    <TextView
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/text_title"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/font_picker_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textFontWeight="500"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/font_picker_icon"
+        android:visibility="gone"
+        android:layout_width="24dp"
+        android:layout_height="20dp"
+        android:src="@drawable/doc_toobar_warn_disable_font"
+        android:paddingEnd="@dimen/dp_2_5"
+        android:layout_marginStart="@dimen/dp_6"/>
+</LinearLayout>

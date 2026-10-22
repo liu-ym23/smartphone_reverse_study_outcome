@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="2dp">
+        <com.ss.android.ugc.aweme.views.CircleDraweeView
+            android:layout_gravity="center"
+            android:id="@+id/effect_resource_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_gravity="end|bottom"
+            android:id="@+id/img_sticker_loading"
+            android:visibility="visible"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/av_ic_effects_download"
+            android:scaleType="fitXY"/>
+        <com.ss.android.ugc.tools.view.widget.CircleProgressView
+            android:layout_gravity="end|bottom"
+            android:id="@+id/iv_loading"
+            android:background="@drawable/av_ic_effects_downloading_bg"
+            android:visibility="gone"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="1dp"
+            app:ts_loading_circle_radius="5dp"/>
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+        <com.ss.android.ugc.tools.view.style.StyleTextView
+            android:textSize="14dp"
+            android:textColor="#bfffffff"
+            android:id="@+id/search_sticker_title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green Jelly"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="1"/>
+        <com.ss.android.ugc.tools.view.style.StyleTextView
+            android:textSize="12dp"
+            android:textColor="#ffffff"
+            android:id="@+id/search_sticker_use_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="11.2k videos"
+            android:alpha="0.75"/>
+    </LinearLayout>
+</LinearLayout>

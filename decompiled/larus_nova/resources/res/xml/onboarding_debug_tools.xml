@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="首页引导">
+        <CheckBoxPreference
+            android:maxLines="3"
+            android:title="是否显示飞书文档新手引导，重启后生效"
+            android:key="lark_docs_newer_guide_switch"
+            android:defaultValue="false"
+            android:summaryOn="显示"
+            android:summaryOff="不显示"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="引导Key设置">
+        <EditTextPreference
+            android:title="调试指定引导key"
+            android:key="global_onboarding_key"
+            android:dialogTitle="请输入待调试的引导key"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="引导播放模式">
+        <CheckBoxPreference
+            android:title="是否进入Dev模式，重启后生效"
+            android:key="global_onboarding_enable"
+            android:defaultValue="false"
+            android:summaryOn="Dev模式：跳过引导状态检查，总是播放引导"
+            android:summaryOff="非Dev模式：检查引导状态，未完成时才播放引导"
+            android:disableDependentsState="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="引导数据存储模式">
+        <CheckBoxPreference
+            android:title="是否进入本地存储模式，重启后生效"
+            android:key="global_onboarding_native_only_enable"
+            android:dependency="global_onboarding_enable"
+            android:defaultValue="false"
+            android:summaryOn="本地存储：引导状态数据仅在本地读写"
+            android:summaryOff="非本地存储：同步服务器上的引导状态"/>
+        <PreferenceScreen
+            android:title="清除本地引导缓存数据"
+            android:key="clear_onboarding_cache"
+            android:dependency="global_onboarding_enable"/>
+    </PreferenceCategory>
+</PreferenceScreen>

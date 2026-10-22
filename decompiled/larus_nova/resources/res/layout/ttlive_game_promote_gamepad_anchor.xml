@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_icon_container"
+    android:clipChildren="false"
+    android:layout_width="36dp"
+    android:layout_height="52dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <ImageView
+        android:id="@+id/common_static_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ttlive_ic_game_promote_grey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/gamecp_icon_anchor_toolbar_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/common_static_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/common_static_icon"
+        app:layout_constraintRight_toRightOf="@+id/common_static_icon"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/commonui_white"
+        android:id="@+id/tv_tips"
+        android:background="@drawable/gamecp_shape_introduce_tip"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:minWidth="230dp"
+        android:text="查看实时下载数据及更多推广工具"
+        android:translationX="-145dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_arrow"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

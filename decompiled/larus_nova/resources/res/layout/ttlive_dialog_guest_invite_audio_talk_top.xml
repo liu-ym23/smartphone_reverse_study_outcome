@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="56dp">
+    <TextView
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="#161823"
+        android:layout_gravity="start|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/ttlive_interact_video_talk_invite_message"
+        android:layout_marginStart="16dp"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="#8a000000"
+        android:gravity="center"
+        android:layout_gravity="end"
+        android:id="@+id/tv_update_position"
+        android:paddingRight="16dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/ttlive_interact_update_position"
+        android:paddingEnd="16dp"/>
+</FrameLayout>

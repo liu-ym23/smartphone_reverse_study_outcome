@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="12dp"
+        android:textColor="#80161823"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="@string/ttlive_interact_pk_rivals_search_history"/>
+    <ImageView
+        android:id="@+id/iv_clear"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/ttlive_ic_pk_rivals_search_history_clear"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:textColor="#d9ff0000"
+        android:gravity="center"
+        android:id="@+id/tv_clear"
+        android:background="@drawable/ttlive_bg_interact_pk_search_history_clear"
+        android:visibility="gone"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/ttlive_interact_pk_rivals_search_history_clear"
+        android:layout_alignParentRight="true"/>
+    <com.bytedance.android.live.uikit.layout.WrapLineFlowLayout
+        android:id="@+id/fl_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/tv_title"
+        app:hSpacing="8dp"
+        app:vSpacing="8dp"/>
+</RelativeLayout>

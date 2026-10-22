@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_begin="@dimen/larus_camera_top_height_and_top_margin"/>
+    <com.larus.bmhome.view.crop.ImageCropView
+        android:id="@+id/preview_clip_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="?attr/larus_dp_12"
+        android:layout_marginTop="?attr/larus_dp_20"
+        android:layout_marginRight="?attr/larus_dp_12"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_line"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_line"
+        app:layout_constraintVertical_bias="0"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_end="@dimen/larus_camera_bottom_height"/>
+    <Button
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="@color/larus_static_white"
+        android:id="@+id/btn_finish_crop"
+        android:background="?attr/larus_bg_confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_56"
+        android:layout_marginLeft="?attr/larus_dp_16"
+        android:layout_marginRight="?attr/larus_dp_16"
+        android:layout_marginBottom="?attr/larus_dp_32"
+        android:text="@string/larus_edit_bot_done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

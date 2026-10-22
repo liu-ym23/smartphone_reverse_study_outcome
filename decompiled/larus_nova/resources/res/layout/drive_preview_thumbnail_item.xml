@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.ee.bear.drive.core.thumbnail.GalleryRoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/drive_preview_thumbnail_item_width"
+    android:layout_height="@dimen/drive_preview_thumbnail_item_height">
+    <ImageView
+        android:id="@+id/drive_thumbnail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:importantForAccessibility="no"/>
+</com.bytedance.ee.bear.drive.core.thumbnail.GalleryRoundedFrameLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp">
+    <com.larksuite.component.ui.imageview.LKUIRoundedImageView2
+        android:id="@+id/sidebar_navi_item_bg"
+        android:layout_width="@dimen/space_kit_len_48"
+        android:layout_height="@dimen/space_kit_len_48"
+        android:layout_centerHorizontal="true"
+        app:radius="12dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sidebar_navi_item_icon"
+        android:layout_width="@dimen/space_kit_len_24"
+        android:layout_height="@dimen/space_kit_len_24"
+        android:layout_marginTop="@dimen/space_kit_len_11"
+        android:layout_alignTop="@+id/sidebar_navi_item_bg"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/text_title"
+        android:gravity="center"
+        android:id="@+id/sidebar_navi_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_below="@+id/sidebar_navi_item_bg"/>
+</RelativeLayout>

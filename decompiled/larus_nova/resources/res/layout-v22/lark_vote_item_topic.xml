@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.suite.lark.emm.design.edittext.SCEditText
+        android:textSize="16dp"
+        android:textColor="@color/text_title"
+        android:textColorHint="@color/text_placeholder"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/vote_topic"
+        android:background="@null"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:hint="@string/Lark_IM_Poll_CreatePoll_PollTitle_Placeholder"
+        android:singleLine="true"
+        android:paddingHorizontal="17dp"/>
+    <View
+        android:orientation="vertical"
+        android:background="@color/bg_base"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/tag_container"
+    android:background="@drawable/ttlive_link_tag_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="5dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/ic_tag"
+        android:visibility="gone"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        app:actualImageScaleType="fitXY"/>
+    <TextView
+        android:textSize="9dp"
+        android:textColor="@color/ttlive_room_center_btn_elderly_remind"
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="1dp"
+        android:textFontWeight="400"/>
+</LinearLayout>

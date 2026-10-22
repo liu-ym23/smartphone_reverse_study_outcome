@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="14dp"
+            android:textColor="@color/oui_basic_text_1"
+            android:gravity="start"
+            android:id="@+id/hint_content_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lineHeight="21dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="14dp"
+            android:textColor="@color/oui_basic_text_1"
+            android:gravity="start"
+            android:id="@+id/hint_content_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:lineHeight="21dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="14dp"
+            android:textColor="@color/oui_basic_text_1"
+            android:gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/obric_change_mode_tip_content_tail"/>
+    </LinearLayout>
+</FrameLayout>

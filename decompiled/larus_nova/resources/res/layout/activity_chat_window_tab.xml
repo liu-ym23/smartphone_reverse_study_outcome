@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.ui.layout.LKUIFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:background="@color/imtoken_message_bg_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.lark.chatwindow.view.widget.MeasureDetectConstraintLayout
+        android:id="@+id/chat_customWallpaper_container_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/chat_customWallpaper_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:id="@+id/chat_tab_container"
+            android:background="@color/color_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:id="@+id/chat_titlebar_float_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <FrameLayout
+            android:id="@+id/chat_titlebar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <FrameLayout
+            android:id="@+id/chat_banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chat_titlebar_container"/>
+    </com.ss.android.lark.chatwindow.view.widget.MeasureDetectConstraintLayout>
+</com.larksuite.component.ui.layout.LKUIFrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/search_view_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/ttlive_std_brand"
+        android:id="@+id/search_view_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/uicomponent_cancel"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    <com.bytedance.android.uicomponent.input.view.SingleLineInputView
+        android:id="@+id/search_view_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/search_view_cancel"
+        app:enableClear="true"
+        app:hint="预设文案"
+        app:input_type="frame"/>
+</RelativeLayout>

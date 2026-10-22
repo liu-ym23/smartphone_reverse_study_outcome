@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/playback_layout"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/normal_bottom_case_layout"
+        android:background="?attr/larus_base_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:textSize="?attr/larus_sp_17"
+            android:textStyle="bold"
+            android:textColor="?attr/larus_primary_50"
+            android:id="@+id/case_read_all"
+            android:background="?attr/larus_bg_bottom_action_button_new_primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/larus_dp_56"
+            android:layout_marginTop="?attr/larus_dp_12"
+            android:layout_marginBottom="?attr/larus_dp_12"
+            android:text="@string/larus_showcase_jumptoresult_cn"
+            android:textAllCaps="false"
+            android:layout_marginStart="?attr/larus_dp_12"
+            android:layout_marginEnd="?attr/larus_dp_12"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </LinearLayout>
+</LinearLayout>

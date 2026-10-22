@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/aos_bg_primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/aos_profile_background"/>
+    <com.bytedance.awemeopen.apps.framework.base.view.scrollablelayout.DampScrollableLayout
+        android:orientation="vertical"
+        android:id="@+id/scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabs_marginTop="0dp">
+        <include layout="@layout/aos_fragment_user_profile_header"/>
+        <include layout="@layout/aos_fragment_user_profile_bottom"/>
+    </com.bytedance.awemeopen.apps.framework.base.view.scrollablelayout.DampScrollableLayout>
+    <com.bytedance.awemeopen.apps.framework.base.view.refresh.DmtStatusView
+        android:id="@+id/status_view"
+        android:background="@color/aos_bg_primary"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/aos_fragment_user_profile_title_bar"/>
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/recently_see_btn"
+        android:background="@drawable/profile_bg_locate_aweme_btn"
+        android:layout_width="109dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#ff161823"
+            android:id="@+id/recently_see_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aos_recently_see"/>
+        <ImageView
+            android:id="@+id/recently_see_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/profile_ic_double_arrow_up"/>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/host_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

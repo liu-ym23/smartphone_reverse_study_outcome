@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/drawer_custom_container"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.common.RoundRectLayout
+        android:id="@+id/top_info_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:roundRect="8dp">
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/live_cover"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:placeholderImage="@drawable/ttlive_feed_cover_loading"
+            app:placeholderImageScaleType="fitXY"
+            app:viewAspectRatio="1"/>
+        <com.bytedance.android.livesdk.widget.LiveSportScoreBoardView
+            android:id="@+id/live_score_board"
+            android:layout_width="160dp"
+            android:layout_height="160dp"/>
+        <com.bytedance.android.live.core.widget.HSImageView
+            android:id="@+id/live_label"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="8dp"/>
+    </com.bytedance.android.livesdk.common.RoundRectLayout>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:id="@+id/live_title"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"/>
+</LinearLayout>

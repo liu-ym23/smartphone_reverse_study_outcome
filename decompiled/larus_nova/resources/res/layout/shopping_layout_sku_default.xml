@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/shopping_layout_sku_default_1662461289"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/shopping_layout_sku_default_1709535847"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:src="@drawable/shopping_ic_sku_error"/>
+    <TextView
+        android:textColor="@color/shopping_std_text_black_3"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/shopping_layout_sku_default_922194593"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/shopping_check_network_and_refresh"
+        style="@style/font_size_28"/>
+    <TextView
+        android:textColor="@color/shopping_std_text_black_3"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_sku_refresh"
+        android:background="@drawable/shopping_bg_sku_refresh_button"
+        android:padding="5dp"
+        android:layout_width="231dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/shopping_sku_refresh"
+        style="@style/font_size_30"/>
+</LinearLayout>

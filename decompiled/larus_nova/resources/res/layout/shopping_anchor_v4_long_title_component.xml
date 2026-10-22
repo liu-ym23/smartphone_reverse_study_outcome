@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.IconsWithSpaceElementView
+        android:id="@+id/long_title_head_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextElementView
+        android:id="@+id/long_title_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.IconsWithSpaceElementView
+        android:id="@+id/long_title_tail_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</merge>

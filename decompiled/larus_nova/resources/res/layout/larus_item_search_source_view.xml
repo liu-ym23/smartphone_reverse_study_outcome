@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/ll_source_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/item_icon"
+        android:layout_width="@dimen/dp_14"
+        android:layout_height="@dimen/dp_14"
+        android:layout_marginEnd="@dimen/dp_6"
+        app:roundedCornerRadius="?attr/larus_dp_4"/>
+    <TextView
+        android:textSize="?attr/larus_sp_15"
+        android:textColor="?attr/larus_conditional_link_50"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:id="@+id/tv_reference_index"
+        android:layout_width="?attr/larus_dp_14"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginStart="?attr/larus_dp_16"/>
+    <TextView
+        android:textSize="?attr/larus_sp_15"
+        android:textColor="?attr/larus_conditional_link_50"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_reference_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:lineSpacingMultiplier="1.5"
+        android:layout_marginEnd="?attr/larus_dp_16"/>
+</LinearLayout>

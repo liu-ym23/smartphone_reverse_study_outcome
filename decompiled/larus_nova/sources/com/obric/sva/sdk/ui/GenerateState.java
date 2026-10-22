@@ -1,0 +1,17 @@
+package com.obric.sva.sdk.ui;
+
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes34.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/obric/sva/sdk/ui/GenerateState;", "Lcom/obric/sva/sdk/ui/InteractionState;", "<init>", "()V", "libs_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class GenerateState extends InteractionState {
+    public static final GenerateState INSTANCE = null;
+
+    static {
+        INSTANCE = new GenerateState();
+    }
+
+    private GenerateState() {
+        super(null, 1, null);
+    }
+}

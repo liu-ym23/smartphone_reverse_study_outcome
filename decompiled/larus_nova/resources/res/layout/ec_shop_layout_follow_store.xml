@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_follow_store_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/ec_follow_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="4dp"/>
+        <com.bytedance.android.ui.base.widget.round.RoundFrameLayoutLite
+            android:id="@+id/ec_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:left_top_radius="12dp"
+            app:right_top_radius="12dp">
+            <FrameLayout
+                android:id="@+id/header_live_bg"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:id="@+id/first_content_card_bg"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.bytedance.android.ec.hybrid.list.view.ECHybridListContainer
+                android:id="@+id/ec_follow_store_hybridContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.bytedance.android.ec.store.status.LazyStatusView
+                android:id="@+id/ec_follow_store_status_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.bytedance.android.ui.base.widget.round.RoundFrameLayoutLite>
+    </LinearLayout>
+</FrameLayout>

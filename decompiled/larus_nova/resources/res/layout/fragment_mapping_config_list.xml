@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/add_one_mapping_config"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/add"
+        android:layout_alignParentRight="true"
+        android:textAlignment="center"/>
+    <TextView
+        android:ellipsize="end"
+        android:id="@+id/origin_url_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:layout_below="@+id/add_one_mapping_config"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:name="com.bytedance.android.live.browser.debug.mock.MappingConfigFragment"
+        android:id="@+id/mapping_config_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/origin_url_text"
+        app:layoutManager="LinearLayoutManager"/>
+</RelativeLayout>

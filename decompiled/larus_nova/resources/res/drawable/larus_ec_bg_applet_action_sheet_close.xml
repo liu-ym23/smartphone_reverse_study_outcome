@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <inset>
+            <shape android:shape="oval">
+                <solid android:color="@color/ec_applet_action_sheet_close_bg_pressed"/>
+            </shape>
+        </inset>
+    </item>
+    <item>
+        <inset>
+            <shape android:shape="oval">
+                <solid android:color="@color/ec_applet_action_sheet_close_bg"/>
+            </shape>
+        </inset>
+    </item>
+</selector>

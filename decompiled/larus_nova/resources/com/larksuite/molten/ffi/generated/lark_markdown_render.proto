@@ -1,0 +1,383 @@
+/* Generated code, DO NOT EDIT.
+ * source: lark_markdown_render.yaml
+ */
+
+syntax = "proto2";
+
+package lark_markdown_render.proto;
+
+message CodeBlockConfig {
+     optional float font_size = 1;
+     optional FontStyle font_style = 2;
+     optional float line_height = 3;
+     optional string caption_color = 4;
+     optional string background_color = 5;
+     optional float header_height = 6;
+     optional float copy_size = 7;
+     optional string header_background_color = 8;
+     optional float border_radius = 9;
+     optional float border_width = 10;
+     optional string border_color = 11;
+     optional float padding = 12;
+     optional EdgeInsets header_padding = 13;
+}
+
+//  Body text config
+message DocumentConfig {
+     optional float font_size = 1;
+     optional FontWeight font_weight = 2;
+     optional float heading_gap = 3;
+     optional float paragraph_gap = 4;
+     optional float media_block_margin_top = 5;
+     optional float media_block_margin_bottom = 6;
+     optional float item_gap = 7;
+     optional float line_height = 8;
+     optional string background_color = 9;
+     optional string foreground_color = 10;
+     optional EdgeInsets doc_padding = 11;
+     optional EdgeInsets paragraph_padding = 12;
+}
+
+message EdgeInsets {
+     optional float top = 1;
+     optional float right = 2;
+     optional float bottom = 3;
+     optional float left = 4;
+}
+
+message FfiCaret {
+    required float x = 1;
+    required float y = 2;
+    required float height = 3;
+    required bool direction = 4;
+    required uint32 uuid = 5;
+    required uint32 canvas_id = 6;
+}
+
+//  H1~H6 config
+message HeadingConfig {
+     optional HeadingLevelConfig h1 = 1;
+     optional HeadingLevelConfig h2 = 2;
+     optional HeadingLevelConfig h3 = 3;
+     optional HeadingLevelConfig h4 = 4;
+     optional HeadingLevelConfig h5 = 5;
+     optional HeadingLevelConfig h6 = 6;
+}
+
+message HeadingLevelConfig {
+     optional float font_size = 1;
+     optional FontWeight font_weight = 2;
+     optional float line_height = 3;
+     optional EdgeInsets padding = 4;
+}
+
+//  Inline code config
+message InlineCodeConfig {
+     optional float font_size = 1;
+     optional FontStyle font_style = 2;
+     optional float line_height = 3;
+    required float horizontal_margin = 4;
+    required float horizontal_inner_margin = 5;
+     optional string background_color = 6;
+     optional string foreground_color = 7;
+     optional string border_color = 8;
+    required float border_width = 9;
+    required float border_radius = 10;
+}
+
+message LinkConfig {
+     optional string link_color = 1;
+}
+
+//  List config
+message ListConfig {
+     optional string ordered_marker_color = 1;
+     optional float ordered_marker_font_size = 2;
+     optional string unordered_marker_color = 3;
+     optional float unordered_marker_font_size = 4;
+     optional float block_gap = 5;
+     optional float item_gap = 6;
+     optional EdgeInsets item_padding = 7;
+}
+
+//  document info
+message MovableDocumentInfo {
+    required uint32 document_id = 1;
+    required uint32 document_version = 2;
+    required float width = 3;
+    required float height = 4;
+}
+
+message MovableRenderAtProperty {
+    required string user_id = 1;
+    required string content = 2;
+     optional bool is_outer = 3;
+     optional bool is_anonymous = 4;
+     optional bool is_highlight = 5;
+}
+
+message MovableRenderConfig {
+     optional DocumentConfig document_config = 1;
+     optional HeadingConfig heading_config = 2;
+     optional CodeBlockConfig code_block_config = 3;
+     optional InlineCodeConfig inline_code_config = 4;
+     optional ThematicBreakConfig thematic_break_config = 5;
+     optional ListConfig list_config = 6;
+     optional TableConfig table_config = 7;
+     optional LinkConfig link_config = 8;
+     map<string, MovableRenderAtProperty> at_users = 9;
+}
+
+message MovableRenderUrlPreviewInline {
+    required string preview_id = 1;
+    required string origin_url = 2;
+    required string click_url = 3;
+    required string title = 4;
+     optional string icon_key = 5;
+     optional string icon_type = 6;
+}
+
+message MovableRenderUrlPreviewInlines {
+     repeated MovableRenderUrlPreviewInline items = 1;
+}
+
+//  Table config todo!("to be revised again with Aping")
+message TableConfig {
+     optional string header_background_color = 1;
+     optional string cell_background_color = 2;
+     optional string table_border_color = 3;
+     optional float table_font_size = 4;
+     optional float table_line_height = 5;
+     optional float cell_min_width = 6;
+     optional float cell_max_width = 7;
+     optional float table_border_width = 8;
+     optional float table_border_radius = 9;
+     optional float cell_padding = 10;
+     optional EdgeInsets cell_padding_insets = 11;
+}
+
+//  Thematic break config
+message ThematicBreakConfig {
+    required float height = 1;
+     optional string line_color = 2;
+     optional float margin_top = 3;
+     optional float margin_bottom = 4;
+}
+
+//  Globally unique type id used by AttachmentAttribute.
+//  100-999 for internal use by the Movable component. 1000-9999 for business
+//  callers
+enum AttachmentTypeId {
+    VAR_ATTACHMENT_TYPE_ID_LEGACY_CODE_BLOCK_COPY_ICON = 99;
+    VAR_ATTACHMENT_TYPE_ID_IMAGE_GALLERY = 100;
+    VAR_ATTACHMENT_TYPE_ID_DATA_SLOT = 101;
+    VAR_ATTACHMENT_TYPE_ID_DOC_CANVAS = 102;
+    VAR_ATTACHMENT_TYPE_ID_IMAGE = 103;
+    VAR_ATTACHMENT_TYPE_ID_CODE_BLOCK_COPY_ICON = 104;
+    VAR_ATTACHMENT_TYPE_ID_IM_URL_PREVIEW_ICON = 1000;
+}
+enum FontStyle {
+    VAR_FONT_STYLE_NORMAL = 0;
+    VAR_FONT_STYLE_ITALIC = 1;
+}
+enum FontWeight {
+    VAR_FONT_WEIGHT_REGULAR = 0;
+    VAR_FONT_WEIGHT_BOLD = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+message FuncParamsX128e7aed481f35b9 
+{
+    required string markdown = 1;
+    required float prefer_width = 2;
+     optional MovableRenderConfig render_config = 3;
+     optional MovableRenderUrlPreviewInlines url_preview_inlines = 4;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX263d27dbec1bcaad 
+{
+    required uint32 canvas_id = 1;
+    required uint32 document_id = 2;
+    required uint32 document_version = 3;
+    required float x = 4;
+    required float y = 5;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX302a81fd1e3f62ae 
+{
+    required uint32 document_version = 1;
+    required uint32 render_id = 2;
+    required uint32 render_width = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX3bb861e377637789 
+{
+    required uint32 canvas_id = 1;
+    required uint32 document_id = 2;
+    required uint32 document_version = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX3f2cec9ef12393f7 
+{
+    required uint32 document_id = 1;
+    required uint32 from_version = 2;
+    required uint32 to_version = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX4314480f8beb223c 
+{
+    required uint32 document_version = 1;
+    required uint32 render_id = 2;
+    required uint32 island_id = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX47a9fcbf1062f608 
+{
+    required uint32 document_id = 1;
+    required uint32 document_version = 2;
+    required uint32 island_id = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX47e8a258d7042136 
+{
+    required MoltenFfiInstanceMsg service = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX57675f1c0efe42b7 
+{
+    required uint32 instance_id = 1;
+    required string schema = 2;
+    required string payload = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX6cfe857e49a7f925 
+{
+    required uint32 render_id = 1;
+    required uint32 document_version = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX710fe409271b5ca7 
+{
+    required uint32 document_version = 1;
+    required uint32 render_id = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX7ebda7b1245bc0ff 
+{
+    required uint32 document_id = 1;
+    required uint32 document_version = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX8cff7ec6f21a8edd 
+{
+    required uint32 type_id = 1;
+    required float container_width = 2;
+    required string property_string = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX95952a77259068fc 
+{
+    required float zoom_level = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX9770f9919ae2737d 
+{
+    required bool is_dark_mode = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX9cdbe2b96ec2b9d9 
+{
+    required uint32 device_type = 1;
+    required bool is_dark_mode = 2;
+    required float zoom_level = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXb93ca91530509a90 
+{
+    required uint32 uuid = 1;
+    required uint32 document_id = 2;
+    required uint32 document_version = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXbefd9658286129cf 
+{
+    required uint32 island_id = 1;
+    required uint32 document_id = 2;
+    required uint32 document_version = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXc67a973e53572a63 
+{
+    required string name = 1;
+    required string path = 2;
+    required uint32 ttc_index = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe6c042c351c9bc6a 
+{
+    required uint32 canvas_id = 1;
+    required uint32 island_id = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe7073a5413ebfa76 
+{
+    required uint32 canvas_id = 1;
+    required float x = 2;
+    required float y = 3;
+    required float width = 4;
+    required float height = 5;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXe97a81031974399b 
+{
+    required uint32 document_id = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsXf48f33eae5ff1bb1 
+{
+    required uint32 instance_id = 1;
+    required uint32 document_id = 2;
+    required uint32 document_version = 3;
+    required float x = 4;
+    required float y = 5;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnX011dd45b533eb24e 
+{
+     repeated string ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX042ac4d5a07e821f 
+{
+     repeated float ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX0bf8b5c665c57f35 
+{
+    required string ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX3dc8b8542df1cbb1 
+{
+    required bool ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnX899e98b47a458199 
+{
+     repeated FfiCaret ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXb05c0e03c1bfe022 
+{
+    required bytes ret = 1;
+    optional bytes _molten_ctx = 255;
+}message FuncReturnXcbb624c70e011a12 
+{
+     optional MovableDocumentInfo ret = 1;
+    optional bytes _molten_ctx = 255;
+}message MoltenFfiInstanceMsg {
+  required int64 type_id = 1;
+  required int64 instance_id = 2;
+}
+message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

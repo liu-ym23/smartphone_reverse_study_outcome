@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom|right"
+    android:layout_width="92dp"
+    android:layout_height="135dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="64dp">
+    <SurfaceView
+        android:id="@+id/preview_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:background="@drawable/ttlive_virtual_live_preview_gradient_shape"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"/>
+    <View
+        android:layout_gravity="top|right"
+        android:id="@+id/preview_close_icon"
+        android:background="@drawable/ttlive_virtual_live_preview_close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
+</FrameLayout>

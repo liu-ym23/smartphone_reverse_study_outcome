@@ -1,0 +1,18 @@
+package com.bytedance.android.livesdk.chatroom.vs_host;
+
+import com.bytedance.android.livesdk.l8;
+import com.bytedance.android.livesdk.log.model.LiveVSLog;
+import ec.a;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes8.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002¨\u0006\u0003"}, d2 = {"Lcom/bytedance/android/livesdk/chatroom/vs_host/VSHostFlexModelInitializer;", "", "()V", "vs-host_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class VSHostFlexModelInitializer {
+    public VSHostFlexModelInitializer() {
+        LiveVSLog.b r100 = LiveVSLog.f153393r;
+        boolean r101 = l8.f146992a.getValue().booleanValue();
+        r100.getClass();
+        LiveVSLog.f153391p = r101;
+        a.call("modelx");
+    }
+}

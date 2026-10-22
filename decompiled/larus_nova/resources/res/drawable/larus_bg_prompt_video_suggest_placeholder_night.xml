@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="?attr/larus_dp_8"/>
+            <stroke
+                android:width="?attr/larus_dp_1"
+                android:color="@color/larus_neutral_transparent_2_night"/>
+        </shape>
+    </item>
+    <item
+        android:left="?attr/larus_dp_12"
+        android:top="11.5dp"
+        android:right="?attr/larus_dp_12"
+        android:bottom="11.5dp">
+        <shape>
+            <solid android:color="@color/larus_base_2_overlay_night"/>
+            <corners android:radius="?attr/larus_dp_8"/>
+        </shape>
+    </item>
+</layer-list>

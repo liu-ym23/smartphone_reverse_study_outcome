@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="?attr/larus_dp_2"
+    android:paddingBottom="?attr/larus_dp_2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/checkbox"
+        android:layout_width="?attr/larus_dp_20"
+        android:layout_height="?attr/larus_dp_20"
+        android:src="@drawable/larus_ic_checkbox_original_image"
+        android:layout_marginEnd="?attr/larus_dp_6"/>
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:textColor="?attr/larus_neutral_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_IM_image_radioButton_original"/>
+</LinearLayout>

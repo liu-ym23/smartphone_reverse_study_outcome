@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="24dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="#99161823"
+        android:id="@+id/expand_collapse_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_live_user_list_expend_title"/>
+    <ImageView
+        android:id="@+id/expand_collapse_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/ttlive_ic_polygon"/>
+</LinearLayout>

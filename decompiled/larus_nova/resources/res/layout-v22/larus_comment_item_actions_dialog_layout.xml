@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:background="?attr/comment_actions_dialog_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_action_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/gap_padding"
+        android:background="?attr/base_4_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_8"
+        app:layout_constraintTop_toBottomOf="@+id/rv_action_list"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="?attr/neutral_100"
+        android:gravity="center"
+        android:id="@+id/btn_cancel"
+        android:background="?attr/comment_list_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/larus_cancel"
+        android:textFontWeight="500"
+        app:layout_constraintTop_toBottomOf="@+id/gap_padding"/>
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:textFontWeight="500"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cancel"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

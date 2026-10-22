@@ -1,0 +1,5 @@
+package peb;
+
+/* JADX INFO: loaded from: classes35.dex */
+public interface c {
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="?attr/larus_dp_44"
+    android:layout_height="?attr/larus_dp_58">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_icon"
+        android:layout_width="?attr/larus_dp_32"
+        android:layout_height="?attr/larus_dp_32"
+        android:layerType="software"
+        android:importantForAccessibility="no"/>
+    <TextView
+        android:textSize="?attr/larus_dp_10"
+        android:textColor="@color/larus_white"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/larus_black"
+        android:shadowRadius="2"
+        android:layerType="software"/>
+</LinearLayout>

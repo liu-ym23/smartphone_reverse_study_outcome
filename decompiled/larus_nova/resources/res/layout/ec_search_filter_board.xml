@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ss.android.ugc.aweme.search.filter.view.ui.NoPaddingTextView
+        android:textSize="14sp"
+        android:gravity="center"
+        android:id="@+id/filter_board_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/filter_board_image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp">
+        <com.bytedance.lighten.loader.SmartImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/filter_board_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+        <com.bytedance.lighten.loader.SmartImageView
+            android:layout_gravity="end|top"
+            android:id="@+id/filter_board_fresh"
+            android:background="@color/Primary"
+            android:visibility="gone"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:translationX="3dp"
+            android:translationY="-3dp"/>
+    </FrameLayout>
+</LinearLayout>

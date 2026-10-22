@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/bury_container"
+        android:layout_width="24dp"
+        android:layout_height="24dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/bury_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"/>
+    </FrameLayout>
+</merge>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.awemeopen.apps.framework.feed.follow.util.DuxBadgeView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textColor="@color/ConstTextInverse"
+    android:layout_gravity="center"
+    android:id="@+id/tab_dot_count_dux"
+    android:visibility="invisible"
+    android:layout_width="wrap_content"
+    android:layout_height="14dp"
+    android:includeFontPadding="true"
+    app:badgeColor="@color/aos_custom_primary"
+    app:badgeMode="round"/>

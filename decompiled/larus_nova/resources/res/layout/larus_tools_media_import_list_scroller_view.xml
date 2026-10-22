@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="end"
+    android:id="@+id/fastscroll_scrollbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_gravity="end"
+        android:id="@+id/fastscroll_handle"
+        android:layout_width="56dp"
+        android:layout_height="80dp">
+        <com.ss.android.ugc.tools.view.widget.AVAutoRTLImageView
+            android:background="@drawable/larus_tools_media_import_icon_fast_scroll_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_gravity="end|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/larus_tools_media_import_icon_fast_scroll_center"
+            android:layout_marginEnd="16dp"/>
+    </FrameLayout>
+    <com.ss.android.ugc.tools.view.style.StyleTextView
+        android:textStyle="bold"
+        android:textColor="@color/tools_const_tPrimary"
+        android:gravity="start|center_vertical"
+        android:layout_gravity="end"
+        android:id="@+id/fastscroll_bubble"
+        android:visibility="invisible"
+        android:layout_width="148dp"
+        android:layout_height="80dp"
+        android:maxLines="1"
+        app:ts_enable_text_color="false"
+        style="@style/tools_font_size_30"/>
+</FrameLayout>

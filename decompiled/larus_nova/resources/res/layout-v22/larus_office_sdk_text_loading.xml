@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/larus_base_1"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_62">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="start|bottom"
+        android:background="@drawable/larus_office_sdk_loading_card_bg"
+        android:paddingLeft="?attr/larus_dp_16"
+        android:paddingRight="?attr/larus_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_50"
+        android:layout_marginStart="?attr/larus_dp_12"
+        android:paddingHorizontal="?attr/larus_dp_16">
+        <TextView
+            android:textSize="@dimen/dp_17"
+            android:id="@+id/text_loading_main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textFontWeight="700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

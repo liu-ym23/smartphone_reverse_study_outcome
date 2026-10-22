@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <size
+        android:height="@dimen/uicomponent_num_check_view_height"
+        android:width="@dimen/uicomponent_num_check_view_width"/>
+    <solid android:color="@color/ttlive_std_brand"/>
+</shape>

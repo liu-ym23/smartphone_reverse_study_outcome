@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.universe_design.shadow.UDShadowLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:ud_shadow_radius="8dp"
+    style="@style/UDShadow.S2.Down">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/copy_layout"
+        android:background="@drawable/bg_code_block_v2_menu"
+        android:paddingTop="16dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/ud_icon_copy_outlined"
+            app:tint="@color/icon_n1"/>
+        <TextView
+            android:textSize="11sp"
+            android:textColor="@color/text_title"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/Lark_Legacy_Copy"/>
+    </LinearLayout>
+</com.larksuite.component.universe_design.shadow.UDShadowLayout>

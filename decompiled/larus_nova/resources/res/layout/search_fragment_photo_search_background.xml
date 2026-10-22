@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="center"
+        android:id="@+id/back_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+        <com.ss.android.ugc.aweme.search.vision.background.image.SearchPhotoDraweeView
+            android:id="@+id/photo_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"/>
+        <com.ss.android.ugc.aweme.search.vision.crop.ScrollableCropWindowView
+            android:id="@+id/crop_window"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+            app:layout_constraintEnd_toEndOf="@+id/photo_view"
+            app:layout_constraintStart_toStartOf="@+id/photo_view"
+            app:layout_constraintTop_toTopOf="@+id/photo_view"/>
+        <com.ss.android.ugc.aweme.search.vision.widget.scandot.PhotoSearchScanDotContainer
+            android:id="@+id/scan_dot_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+            app:layout_constraintEnd_toEndOf="@+id/photo_view"
+            app:layout_constraintStart_toStartOf="@+id/photo_view"
+            app:layout_constraintTop_toTopOf="@+id/photo_view"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

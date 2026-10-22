@@ -1,0 +1,62 @@
+package com.bytedance.jedi.ext.adapter.decorator;
+
+import androidx.exifinterface.media.ExifInterface;
+import com.bytedance.jedi.arch.IReceiver;
+import com.bytedance.jedi.arch.ext.list.ListMiddleware;
+import com.bytedance.jedi.arch.ext.list.ListState;
+import com.bytedance.jedi.arch.ext.list.Payload;
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes19.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002\"\u000e\b\u0001\u0010\u0003*\b\u0012\u0004\u0012\u0002H\u00020\u0004\"\b\b\u0002\u0010\u0005*\u00020\u0006*\u0002H\u00052\u0006\u0010\u0007\u001a\u00020\bH\n¢\u0006\u0004\b\t\u0010\n"}, d2 = {"<anonymous>", "", ExifInterface.GPS_DIRECTION_TRUE, "DEC", "Lcom/bytedance/jedi/ext/adapter/decorator/JediAdapterDecorator;", "RECEIVER", "Lcom/bytedance/jedi/arch/IReceiver;", "it", "", AbsMethodDelegate.TAG_INVOKE, "(Lcom/bytedance/jedi/arch/IReceiver;Ljava/lang/Throwable;)V"}, k = 3, mv = {1, 1, 16})
+final class MiddlewareDecoration$attachTo$5 extends Lambda implements Function2<IReceiver, Throwable, Unit> {
+    final /* synthetic */ ListMiddleware $middleware;
+    final /* synthetic */ d this$0;
+
+    /* JADX INFO: renamed from: com.bytedance.jedi.ext.adapter.decorator.MiddlewareDecoration$attachTo$5$1, reason: invalid class name */
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000 \n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002\"\u000e\b\u0001\u0010\u0003*\b\u0012\u0004\u0012\u0002H\u00020\u0004\"\b\b\u0002\u0010\u0005*\u00020\u00062\u0014\u0010\u0007\u001a\u0010\u0012\u0004\u0012\u0002H\u0002\u0012\u0006\b\u0001\u0012\u00020\t0\bH\n¢\u0006\u0002\b\n"}, d2 = {"<anonymous>", "", ExifInterface.GPS_DIRECTION_TRUE, "DEC", "Lcom/bytedance/jedi/ext/adapter/decorator/JediAdapterDecorator;", "RECEIVER", "Lcom/bytedance/jedi/arch/IReceiver;", "sub", "Lcom/bytedance/jedi/arch/ext/list/ListState;", "Lcom/bytedance/jedi/arch/ext/list/Payload;", AbsMethodDelegate.TAG_INVOKE}, k = 3, mv = {1, 1, 16})
+    public static final class AnonymousClass1 extends Lambda implements Function1<ListState<Object, ? extends Payload>, Unit> {
+        final /* synthetic */ MiddlewareDecoration$attachTo$5 this$0;
+
+        public AnonymousClass1(MiddlewareDecoration$attachTo$5 r100) {
+            this.this$0 = r100;
+            super(1);
+        }
+
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(ListState<Object, ? extends Payload> r100) {
+            if (r100.getList().isEmpty() == true) goto L5;
+            return;
+        L5:
+            this.this$0.getClass();
+            throw null;
+        }
+
+        @Override // kotlin.jvm.functions.Function1
+        public /* bridge */ /* synthetic */ Unit invoke(ListState<Object, ? extends Payload> r100) {
+            invoke2(r100);
+            return Unit.INSTANCE;
+        }
+    }
+
+    public MiddlewareDecoration$attachTo$5(d r100, ListMiddleware r101) {
+        this.$middleware = r101;
+        super(2);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public /* bridge */ /* synthetic */ Unit invoke(IReceiver r100, Throwable r101) {
+        invoke2(r100, r101);
+        return Unit.INSTANCE;
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final void invoke2(IReceiver r100, Throwable r101) {
+        throw null;
+    }
+}

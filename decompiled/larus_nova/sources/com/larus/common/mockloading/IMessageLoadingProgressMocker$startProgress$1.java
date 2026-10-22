@@ -1,0 +1,31 @@
+package com.larus.common.mockloading;
+
+import androidx.camera.video.AudioStats;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: loaded from: classes27.dex */
+@Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+@DebugMetadata(c = "com.larus.common.mockloading.IMessageLoadingProgressMocker$DefaultImpls", f = "IMessageLoadingProgressMocker.kt", i = {0, 0, 0, 1, 1, 1, 1, 1}, l = {14, 37}, m = "startProgress", n = {"$this", "loadingTaskId", "progressStep", "$this", "loadingTaskId", "previousProgress", "progressStep", "duration"}, s = {"L$0", "L$1", "D$0", "L$0", "L$1", "L$2", "D$0", "D$1"})
+final class IMessageLoadingProgressMocker$startProgress$1 extends ContinuationImpl {
+    double D$0;
+    double D$1;
+    Object L$0;
+    Object L$1;
+    Object L$2;
+    int label;
+    /* synthetic */ Object result;
+
+    public IMessageLoadingProgressMocker$startProgress$1(Continuation<? super IMessageLoadingProgressMocker$startProgress$1> r100) {
+        super(r100);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object r100) {
+        this.result = r100;
+        this.label |= Integer.MIN_VALUE;
+        return a.C4182a.a(null, null, 0, AudioStats.AUDIO_AMPLITUDE_NONE, this);
+    }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ToastDefault"
+    android:paddingLeft="12dp"
+    android:paddingTop="10dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="10dp">
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="14sp"
+        android:textColor="@color/ConstTextInverse"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/dux_bg_popover_guide_view_divider"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="14sp"
+        android:textColor="@color/ConstTextActionSecondary"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_guide_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dux_jump_guide"/>
+    <com.bytedance.dux.image.DuxImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/iv_guide_arrow"
+        android:layout_width="12sp"
+        android:layout_height="12sp"
+        android:src="@drawable/ic_s_s_arrowforward_outlined_12"
+        android:layout_marginStart="2dp"
+        app:tint="@color/ConstTextActionSecondary"/>
+</merge>

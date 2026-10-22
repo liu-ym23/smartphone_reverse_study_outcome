@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.livesdk.common.LiveViewStub
+        android:layout_gravity="end|bottom"
+        android:id="@+id/self_digg_view"
+        android:layout_width="120dp"
+        android:layout_height="204dp"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="end|bottom"
+        android:id="@+id/digg_flow_atmosphere_view"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"/>
+    <com.bytedance.android.livesdk.common.LiveViewStub
+        android:id="@+id/tap_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hapticFeedbackEnabled="true"/>
+    <com.bytedance.android.livesdk.interactivity.like.view.DiggTabCountView
+        android:id="@+id/digg_tap_count_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

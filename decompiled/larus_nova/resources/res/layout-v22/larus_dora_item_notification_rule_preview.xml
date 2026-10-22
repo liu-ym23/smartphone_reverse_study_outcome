@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.dora.impl.view.DoraTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="?attr/larus_sp_15"
+    android:textColor="@color/larus_neutral_100"
+    android:ellipsize="end"
+    android:id="@+id/rule_name"
+    android:background="@drawable/larus_dora_bg_item_defalut"
+    android:padding="?attr/larus_dp_16"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/larus_dp_8"
+    android:maxLines="1"
+    android:singleLine="true"
+    android:textFontWeight="500"/>

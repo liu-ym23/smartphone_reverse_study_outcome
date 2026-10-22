@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.window.shop.widget.WindowHeaderNumItemCard xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/commerce_color_FFFFFF"
+        android:id="@+id/ec_window_number_item_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="11dp"
+        android:textColor="@color/commerce_color_FFFFFF"
+        android:id="@+id/ec_window_number_item_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:includeFontPadding="false"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ec_window_number_item_amount"
+        app:layout_constraintLeft_toRightOf="@+id/ec_window_number_item_amount"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/shopping_color_99FFFFFF"
+        android:id="@+id/ec_window_number_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ec_window_number_item_amount"/>
+</com.bytedance.android.window.shop.widget.WindowHeaderNumItemCard>

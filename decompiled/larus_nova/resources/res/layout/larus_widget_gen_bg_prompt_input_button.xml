@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/larus_ugc_bot_bg_prompt_input_button"
+    android:layout_width="?attr/larus_dp_36"
+    android:layout_height="?attr/larus_dp_36">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/desc_prompt_input_icon"
+        android:layout_width="?attr/larus_dp_24"
+        android:layout_height="?attr/larus_dp_24"
+        android:src="@drawable/larus_ugc_bot_icon_prompt_input_button_normal"/>
+</merge>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="?attr/larus_dp_17"
+        android:textColor="?attr/larus_neutral_50"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/videoTitle"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:layout_marginBottom="?attr/larus_dp_12"
+        android:maxLines="1"/>
+    <com.larus.bmhome.double_post.view.AwemeRecommendContentView
+        android:id="@+id/video_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

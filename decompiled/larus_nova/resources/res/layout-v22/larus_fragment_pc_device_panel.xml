@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/larus_bg_task_mode_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/pc_device_header"
+        layout="@layout/larus_layout_bottom_sheet_header"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pc_device_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pc_device_recycler"
+            android:background="@drawable/larus_bg_task_skill_recycler"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="?attr/larus_dp_16"
+            android:layout_marginTop="?attr/larus_dp_10"
+            android:layout_marginRight="?attr/larus_dp_16"
+            android:layout_marginBottom="?attr/larus_dp_20"
+            android:overScrollMode="never"
+            android:layout_marginHorizontal="?attr/larus_dp_16"
+            android:clipToOutline="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

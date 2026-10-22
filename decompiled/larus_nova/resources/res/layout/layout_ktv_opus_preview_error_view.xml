@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ttlive_opus_error_icon"
+            android:layout_width="67dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="网络错误"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@color/liveuikit_gray"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="请检查网络连接后重试"/>
+        <com.bytedance.android.live.ktv.common.view.CommomKtvButton
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/retry_btn"
+            android:layout_width="165dp"
+            android:layout_height="45dp"
+            android:text="刷新"/>
+    </LinearLayout>
+</merge>

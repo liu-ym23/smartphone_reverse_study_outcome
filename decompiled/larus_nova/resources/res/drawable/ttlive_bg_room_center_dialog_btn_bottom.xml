@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@color/ttlive_room_center_btn_bg_white"/>
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="@dimen/ttlive_room_center_dialog_radius"
+                android:bottomRightRadius="@dimen/ttlive_room_center_dialog_radius"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/white"/>
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="@dimen/ttlive_room_center_dialog_radius"
+                android:bottomRightRadius="@dimen/ttlive_room_center_dialog_radius"/>
+        </shape>
+    </item>
+</selector>

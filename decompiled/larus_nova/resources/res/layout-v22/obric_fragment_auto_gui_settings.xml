@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.coachmark.OCoachmarkTipView
+        android:id="@+id/group_permission_settings"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_120"
+        android:layout_marginRight="@dimen/dp_12"
+        android:text="@string/obric_setting_auto_gui_app_permission_dialog_title"
+        android:layout_marginHorizontal="@dimen/dp_12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:oui_cmTipActionText="@string/obric_setting_auto_gui_app_permission_dialog_confirm_button"
+        app:oui_cmTipDismissText="@string/obric_setting_auto_gui_app_permission_dialog_cancel_button"
+        app:oui_cmTipShowIcon="true"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_app_list"
+        android:paddingTop="96dp"
+        android:paddingBottom="@dimen/dp_64"
+        android:scrollbars="none"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@+id/group_permission_settings"/>
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

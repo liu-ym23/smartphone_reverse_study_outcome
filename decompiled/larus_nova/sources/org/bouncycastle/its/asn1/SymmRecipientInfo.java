@@ -1,0 +1,17 @@
+package org.bouncycastle.its.asn1;
+
+import org.bouncycastle.asn1.ASN1EncodableVector;
+import org.bouncycastle.asn1.ASN1Object;
+import org.bouncycastle.asn1.ASN1Primitive;
+import org.bouncycastle.asn1.DERSequence;
+
+/* JADX INFO: loaded from: classes42.dex */
+public class SymmRecipientInfo extends ASN1Object {
+    public SymmRecipientInfo() {
+    }
+
+    @Override // org.bouncycastle.asn1.ASN1Object, org.bouncycastle.asn1.ASN1Encodable
+    public ASN1Primitive toASN1Primitive() {
+        return new DERSequence(new ASN1EncodableVector());
+    }
+}

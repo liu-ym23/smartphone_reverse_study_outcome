@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:layout_marginTop="14dp"
+    android:layout_marginBottom="14dp">
+    <View
+        android:id="@+id/history_icon"
+        android:background="@drawable/ttlive_ic_history"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/remove_history"
+        android:background="@drawable/ttlive_ic_pk_rivals_search_history_remove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="#161823"
+        android:id="@+id/history_content"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="10dp"
+        android:maxWidth="300dp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/remove_history"
+        app:layout_constraintStart_toEndOf="@+id/history_icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

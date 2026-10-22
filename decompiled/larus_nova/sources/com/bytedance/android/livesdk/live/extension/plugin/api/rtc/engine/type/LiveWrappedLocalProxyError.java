@@ -1,0 +1,58 @@
+package com.bytedance.android.livesdk.live.extension.plugin.api.rtc.engine.type;
+
+import com.ss.android.cert.manager.constants.BytedCertConstant;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes10.dex */
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\b\n\u0002\b\f\b\u0086\u0001\u0018\u0000 \u00052\b\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\u0006J\u0006\u0010\u0003\u001a\u00020\u0002R\u0016\u0010\u0003\u001a\u00020\u00028\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0003\u0010\u0004j\u0002\b\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\r¨\u0006\u000e"}, d2 = {"Lcom/bytedance/android/livesdk/live/extension/plugin/api/rtc/engine/type/LiveWrappedLocalProxyError;", "", "", "value", "I", "Companion", BytedCertConstant.ReflectionConfigKey.COLOR_ARRAY, "OK", "SOCKS5_VERSION_ERROR", "SOCKS5_FORMAT_ERROR", "SOCKS5_INVALID_VALUE", "SOCKS5_USER_PASS_NOT_GIVEN", "SOCKS5_TCP_CLOSED", "HTTP_TUNNEL_FAILED", "live_extension_plugin_api_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final enum LiveWrappedLocalProxyError extends Enum<LiveWrappedLocalProxyError> {
+    public static final a Companion = null;
+    public static final LiveWrappedLocalProxyError HTTP_TUNNEL_FAILED = null;
+    public static final LiveWrappedLocalProxyError OK = null;
+    public static final LiveWrappedLocalProxyError SOCKS5_FORMAT_ERROR = null;
+    public static final LiveWrappedLocalProxyError SOCKS5_INVALID_VALUE = null;
+    public static final LiveWrappedLocalProxyError SOCKS5_TCP_CLOSED = null;
+    public static final LiveWrappedLocalProxyError SOCKS5_USER_PASS_NOT_GIVEN = null;
+    public static final LiveWrappedLocalProxyError SOCKS5_VERSION_ERROR = null;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ LiveWrappedLocalProxyError[] f147423a = null;
+    private int value;
+
+    /* JADX WARN: Type inference failed for: r0v2, types: [com.bytedance.android.livesdk.live.extension.plugin.api.rtc.engine.type.LiveWrappedLocalProxyError$a] */
+    static {
+        LiveWrappedLocalProxyError r100 = new LiveWrappedLocalProxyError("OK", 0, 0);
+        OK = r100;
+        LiveWrappedLocalProxyError r101 = new LiveWrappedLocalProxyError("SOCKS5_VERSION_ERROR", 1, 1);
+        SOCKS5_VERSION_ERROR = r101;
+        LiveWrappedLocalProxyError r102 = new LiveWrappedLocalProxyError("SOCKS5_FORMAT_ERROR", 2, 2);
+        SOCKS5_FORMAT_ERROR = r102;
+        LiveWrappedLocalProxyError r103 = new LiveWrappedLocalProxyError("SOCKS5_INVALID_VALUE", 3, 3);
+        SOCKS5_INVALID_VALUE = r103;
+        LiveWrappedLocalProxyError r104 = new LiveWrappedLocalProxyError("SOCKS5_USER_PASS_NOT_GIVEN", 4, 4);
+        SOCKS5_USER_PASS_NOT_GIVEN = r104;
+        LiveWrappedLocalProxyError r105 = new LiveWrappedLocalProxyError("SOCKS5_TCP_CLOSED", 5, 5);
+        SOCKS5_TCP_CLOSED = r105;
+        LiveWrappedLocalProxyError r106 = new LiveWrappedLocalProxyError("HTTP_TUNNEL_FAILED", 6, 6);
+        HTTP_TUNNEL_FAILED = r106;
+        f147423a = new LiveWrappedLocalProxyError[]{r100, r101, r102, r103, r104, r105, r106};
+        Companion = new a();
+    }
+
+    public static LiveWrappedLocalProxyError valueOf(String r100) {
+        return (LiveWrappedLocalProxyError) r27.a.a(LiveWrappedLocalProxyError.class, r100);
+    }
+
+    public static LiveWrappedLocalProxyError[] values() {
+        return (LiveWrappedLocalProxyError[]) f147423a.clone();
+    }
+
+    public final int value() {
+        return this.value;
+    }
+
+    public LiveWrappedLocalProxyError(String r100, int r101, int r102) {
+        super(r100, r101);
+        this.value = r102;
+    }
+}

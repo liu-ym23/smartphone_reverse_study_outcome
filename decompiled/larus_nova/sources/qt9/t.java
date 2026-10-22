@@ -1,0 +1,80 @@
+package qt9;
+
+import com.google.gson.annotations.SerializedName;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes31.dex */
+@Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\t\n\u0002\b\u000f\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u0086\b\u0018\u00002\u00020\u0001B%\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0003¢\u0006\u0004\b\u0007\u0010\bJ\t\u0010\u000e\u001a\u00020\u0003HÆ\u0003J\t\u0010\u000f\u001a\u00020\u0005HÆ\u0003J\t\u0010\u0010\u001a\u00020\u0003HÆ\u0003J'\u0010\u0011\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00052\b\b\u0002\u0010\u0006\u001a\u00020\u0003HÆ\u0001J\u0013\u0010\u0012\u001a\u00020\u00032\b\u0010\u0013\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u0014\u001a\u00020\u0015HÖ\u0001J\t\u0010\u0016\u001a\u00020\u0017HÖ\u0001R\u0016\u0010\u0002\u001a\u00020\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0016\u0010\u0004\u001a\u00020\u00058\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0016\u0010\u0006\u001a\u00020\u00038\u0006X\u0087\u0004¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\n¨\u0006\u0018"}, d2 = {"Lcom/larus/settings/provider/BlockDetectConfig;", "", "enableDetect", "", "threshold", "", "depthLimit", "<init>", "(ZJZ)V", "getEnableDetect", "()Z", "getThreshold", "()J", "getDepthLimit", "component1", "component2", "component3", "copy", "equals", "other", "hashCode", "", "toString", "", "settings_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class t {
+
+    @SerializedName("depth_limit")
+    private final boolean depthLimit;
+
+    @SerializedName("enable_detect")
+    private final boolean enableDetect;
+
+    @SerializedName("threshold")
+    private final long threshold;
+
+    public t() {
+        this(0);
+    }
+
+    public final boolean equals(Object r100) {
+        if (this != r100) goto L6;
+        return true;
+    L6:
+        if ((r100 instanceof t) == true) goto L8;
+        return false;
+    L8:
+        t r101 = (t) r100;
+        if (this.enableDetect == r101.enableDetect) goto L12;
+        return false;
+    L12:
+        if (this.threshold == r101.threshold) goto L15;
+        return false;
+    L15:
+        if (this.depthLimit == r101.depthLimit) goto L17;
+        return false;
+    L17:
+        return true;
+    }
+
+    public final int hashCode() {
+        int r100 = 1231;
+        if (this.enableDetect == false) goto L5;
+        int r101 = 1231;
+    L6:
+        long r102 = this.threshold;
+        int r103 = ((r101 * 31) + ((int) (r102 ^ (r102 >>> 32)))) * 31;
+        if (this.depthLimit == true) goto L11;
+        r100 = 1237;
+    L11:
+        return r103 + r100;
+    L5:
+        r101 = 1237;
+        goto L6
+    }
+
+    public final String toString() {
+        return "BlockDetectConfig(enableDetect=" + this.enableDetect + ", threshold=" + this.threshold + ", depthLimit=" + this.depthLimit + ')';
+    }
+
+    public final boolean a() {
+        return this.depthLimit;
+    }
+
+    public final boolean b() {
+        return this.enableDetect;
+    }
+
+    public final long c() {
+        return this.threshold;
+    }
+
+    public t(int r100) {
+        this.enableDetect = false;
+        this.threshold = 1000;
+        this.depthLimit = false;
+    }
+}

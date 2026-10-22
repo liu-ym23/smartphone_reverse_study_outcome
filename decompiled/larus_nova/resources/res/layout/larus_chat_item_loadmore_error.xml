@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_64">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/load_more_error_icon"
+        android:layout_width="?attr/larus_dp_13"
+        android:layout_height="?attr/larus_dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/load_more_error_text"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/larus_ic_loadmore_error"/>
+    <TextView
+        android:textColor="?attr/larus_neutral_50"
+        android:id="@+id/load_more_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/larus_botsComment_commentPanel_toast_scrollFail"
+        android:layout_marginStart="?attr/larus_dp_8"
+        app:layout_constraintBottom_toBottomOf="@+id/load_more_error_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/load_more_error_icon"
+        app:layout_constraintTop_toTopOf="@+id/load_more_error_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

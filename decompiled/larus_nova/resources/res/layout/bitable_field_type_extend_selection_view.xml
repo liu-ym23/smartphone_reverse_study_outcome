@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/extendScopeTvLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_kit_len_14"
+        android:layout_marginBottom="@dimen/space_kit_len_2">
+        <TextView
+            android:textSize="@dimen/space_kit_font_14"
+            android:textColor="@color/text_placeholder"
+            android:id="@+id/extendScopeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <FrameLayout
+        android:background="@drawable/facade_round_around_xl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/bg_float">
+        <com.bytedance.ee.bear.bitable.fieldedit.view.edit.extendfield.ExtendFieldListView
+            android:id="@+id/itemRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

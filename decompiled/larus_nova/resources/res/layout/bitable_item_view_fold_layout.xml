@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="6dp"
+    android:paddingTop="8dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fold_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:tint="@color/icon_n2"
+        app:srcCompat="@drawable/ud_icon_invisible_outlined"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="14sp"
+        android:textColor="@color/text_caption"
+        android:id="@+id/fold_title"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:singleLine="true"
+        android:layout_weight="1"
+        android:lineSpacingExtra="0dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fold_desc_icon"
+        android:padding="3dp"
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:tint="@color/icon_n2"
+        app:srcCompat="@drawable/ud_icon_info_outlined"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fold_arrow_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="4dp"
+        android:tint="@color/icon_n2"
+        android:rotation="180"
+        app:srcCompat="@drawable/ud_icon_right_small_ccm_outlined"/>
+</LinearLayout>

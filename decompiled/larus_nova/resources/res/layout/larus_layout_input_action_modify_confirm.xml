@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/action_modify_confirm"
+    android:visibility="gone"
+    android:duplicateParentState="true"
+    android:layout_width="?attr/larus_dp_32"
+    android:layout_height="?attr/larus_dp_32"
+    android:layout_marginBottom="?attr/larus_dp_24"
+    android:layout_marginEnd="?attr/larus_dp_12"
+    app:layout_constraintBottom_toBottomOf="@+id/input_area_container"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:srcCompat="?attr/larus_ic_input_modify_confirm"/>

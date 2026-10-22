@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ec_tabkit_mix_frame_wrapper"
+    android:background="@color/ec_store_tab_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_list_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bytedance.android.ec.hybrid.list.view.ECHybridListContainer
+            android:id="@+id/ec_store_mix_tab_hybridContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <com.bytedance.android.ec.core.widget.StatusView
+        android:id="@+id/ec_store_mix_frame_tab_status"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"/>
+</FrameLayout>

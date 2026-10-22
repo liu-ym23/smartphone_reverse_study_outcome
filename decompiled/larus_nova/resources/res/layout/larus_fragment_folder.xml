@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/larus_bg_task_mode_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_52"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/larus_layout_bottom_sheet_header"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_folders"
+        android:background="@drawable/larus_bg_task_skill_recycler"
+        android:visibility="gone"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/larus_dp_16"
+        android:layout_marginTop="?attr/larus_dp_8"
+        android:layout_marginRight="?attr/larus_dp_16"
+        android:layout_marginBottom="?attr/larus_dp_20"
+        android:overScrollMode="never"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_header"
+        app:layout_constraintVertical_bias="0"/>
+    <include
+        android:id="@+id/folder_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/larus_dp_86"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_header"
+        layout="@layout/larus_layout_task_skill_state"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

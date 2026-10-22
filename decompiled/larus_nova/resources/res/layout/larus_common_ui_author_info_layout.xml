@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larus.common_ui.widget.roundlayout.CircleFrameLayout
+        android:id="@+id/head_parent"
+        android:layout_width="?attr/larus_dp_16"
+        android:layout_height="?attr/larus_dp_16">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/head_picture"
+            android:layout_width="?attr/larus_dp_16"
+            android:layout_height="?attr/larus_dp_16"
+            app:placeholderImage="@drawable/larus_icon_avatar_empty"/>
+    </com.larus.common_ui.widget.roundlayout.CircleFrameLayout>
+    <TextView
+        android:textSize="?attr/larus_dp_12"
+        android:textColor="?attr/larus_neutral_70"
+        android:ellipsize="end"
+        android:id="@+id/name_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:layout_weight="1"
+        android:layout_marginStart="?attr/larus_dp_4"/>
+    <TextView
+        android:textSize="?attr/larus_dp_12"
+        android:textColor="?attr/larus_neutral_70"
+        android:id="@+id/use_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_4"/>
+</merge>

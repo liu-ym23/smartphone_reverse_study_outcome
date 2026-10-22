@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <TextView
+        android:textSize="15dp"
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_auto_gen_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_weight="1"/>
+    <com.bytedance.android.ui.base.widget.icon.IconImageView
+        android:id="@+id/iv_selected"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ec_dux_ic_s_s_checkmark_outlined"
+        app:icon_color="@color/ec_color_FE2C55"
+        app:icon_size="24dp"/>
+</LinearLayout>

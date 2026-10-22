@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="8dp"
+                android:bottomRightRadius="8dp"/>
+            <solid android:color="?attr/cj_pay_bg_card_press"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="8dp"
+                android:bottomRightRadius="8dp"/>
+            <solid android:color="?attr/cj_pay_bg_card"/>
+        </shape>
+    </item>
+</selector>

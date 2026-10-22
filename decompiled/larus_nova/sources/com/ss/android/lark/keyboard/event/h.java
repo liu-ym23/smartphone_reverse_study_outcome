@@ -1,0 +1,6 @@
+package com.ss.android.lark.keyboard.event;
+
+/* JADX INFO: loaded from: classes36.dex */
+public interface h {
+    void a(Object r100);
+}

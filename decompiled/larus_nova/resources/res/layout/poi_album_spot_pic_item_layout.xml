@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.locallife.photo.view.RoundedRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_album_highlight_pic_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp">
+    <com.bytedance.lighten.loader.SmartImageView
+        android:id="@+id/poi_album_highlight_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"/>
+    <com.bytedance.locallife.photo.photopage.view.PoiAlbumHighLightDetailView
+        android:id="@+id/poi_album_highlight_detail"
+        android:paddingLeft="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+    <com.bytedance.dux.image.DuxImageView
+        android:id="@+id/poi_album_video_play"
+        android:paddingRight="8dp"
+        android:paddingBottom="12dp"
+        android:layout_width="22dp"
+        android:layout_height="26dp"
+        android:src="@drawable/poi_head_video_play"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+</com.bytedance.locallife.photo.view.RoundedRelativeLayout>

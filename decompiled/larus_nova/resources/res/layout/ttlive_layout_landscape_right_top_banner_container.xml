@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/landscape_top_banner_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="14dp"
+    android:layout_marginTop="55dp"
+    android:layout_marginRight="14dp"
+    android:layout_alignParentRight="true"
+    android:layout_marginEnd="14dp"
+    android:layout_alignParentEnd="true">
+    <FrameLayout
+        android:id="@+id/landscape_top_left_task_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_toLeftOf="@+id/banner_container"/>
+    <FrameLayout
+        android:id="@+id/banner_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="4dp">
+        <FrameLayout
+            android:id="@+id/landscape_top_left_activity_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:id="@+id/landscape_predictor_entrance_container"
+            android:visibility="gone"
+            android:layout_width="@dimen/ttlive_multi_top_right_banner_width"
+            android:layout_height="@dimen/ttlive_multi_top_right_banner_height"/>
+    </FrameLayout>
+    <com.bytedance.android.livesdk.widget.opt.MeasureOptFrameLayout
+        android:id="@+id/short_term_indicator_container_new"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ttlive_short_term_indicator_height"
+        android:layout_toLeftOf="@+id/landscape_top_left_task_banner"
+        android:layout_toStartOf="@+id/landscape_top_left_task_banner"/>
+</RelativeLayout>

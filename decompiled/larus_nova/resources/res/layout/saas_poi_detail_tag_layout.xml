@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/poi_detail_tag_layout_1123818535"
+    android:background="@drawable/poi_bg_city_label"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+    <com.bytedance.dux.text.DuxTextView
+        android:id="@+id/poi_detail_tag_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="PingFangSC-Medium"
+        style="@style/font_size_26_sp"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/poi_detail_tag_lottie"
+        android:visibility="gone"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="4dp"/>
+</LinearLayout>

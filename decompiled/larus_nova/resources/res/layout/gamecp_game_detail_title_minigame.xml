@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="13dp"
+    android:textColor="@color/gamecp_white"
+    android:gravity="center"
+    android:id="@+id/btn_play"
+    android:background="@drawable/shape_bg_fe2c55_corner_4"
+    android:layout_width="70dp"
+    android:layout_height="28dp"
+    android:text="@string/gamecp_mini_game_instant_play"/>

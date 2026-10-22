@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp">
+    <FrameLayout
+        android:id="@+id/btn_cancel"
+        android:background="@drawable/kb_reedit_btn_cancel"
+        android:layout_width="44dp"
+        android:layout_height="32dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:tint="@color/icon_n1"
+            app:srcCompat="@drawable/ud_icon_close_small_outlined"/>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/btn_confirm"
+        android:background="@drawable/kb_reedit_btn_confirm_selector"
+        android:layout_width="44dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="12dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:tint="@color/static_white"
+            app:srcCompat="@drawable/ud_icon_list_check_bold_outlined"/>
+    </FrameLayout>
+</LinearLayout>

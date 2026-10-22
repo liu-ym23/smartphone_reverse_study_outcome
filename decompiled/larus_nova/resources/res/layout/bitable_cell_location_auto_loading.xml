@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.ee.bear.bitable.card.view.cell.location.view.LoadingView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:id="@+id/location_edit_icon_loading"
+    android:background="@drawable/facade_round_around_s"
+    android:padding="@dimen/space_kit_len_4"
+    android:visibility="gone"
+    android:layout_width="@dimen/space_kit_len_24"
+    android:layout_height="@dimen/space_kit_len_24"
+    android:tint="@color/icon_n3"
+    android:backgroundTint="@color/bitable_page_field_item_right_icon_color"
+    app:centerRadius="@dimen/space_kit_len_5"
+    app:loadingColor="@color/primary_fill_default"
+    app:strokeWidth="@dimen/space_kit_len_2"/>

@@ -1,0 +1,186 @@
+{
+  "type": "View",
+  "style": {
+    "width": "100%",
+    "bg_img": "https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/2c5a8e57f5344eb2866fa12628a9738e~tplv-8jisjyls3a-3:0:0:q75.png",
+    "height": "38",
+    "margin": ["0", "0", "12", "0"],
+    "padding": ["0", "8", "0", "13"],
+    ":display": "option(data.custom.hide, 'none', null)",
+    "align_items": "center",
+    "justify_content": "space-between"
+  },
+  "elements": [
+    {
+      "type": "View",
+      "style": {
+        "align_items": "center"
+      },
+      "elements": [
+        {
+          "type": "View",
+          "style": {
+            "width": 40,
+            "bg_img": "https://p3-piu.byteimg.com/tos-cn-i-8jisjyls3a/2e5afefe7d7b457788242e80b449b458~tplv-8jisjyls3a-3:0:0:q75.png",
+            "height": 34,
+            "align_items": "center",
+            "flex_shrink": 0,
+            "justify_content": "center"
+          },
+          "elements": [
+            {
+              "attr": {
+                "role": "text",
+                ":aria_label": "data.aria_benefit_amount"
+              },
+              "type": "View",
+              "style": {
+                "align_items": "baseline"
+              },
+              "elements": [
+                {
+                  "for": {
+                    "items": "data.benefit_amount"
+                  },
+                  "attr": {
+                    ":text": "item.content",
+                    "aria_hidden": true
+                  },
+                  "type": "Text",
+                  "style": {
+                    ":font_size": "item.font_size",
+                    ":font_color": "item.font_color",
+                    "flex_shrink": 0,
+                    ":font_weight": "item.font_weight"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Text",
+          "style": {
+            "attr": {
+              ":aria_label": "data.aria_benefit_text"
+            },
+            "margin": ["0", "0", "0", "7"],
+            ":display": "option(data.show_mall_lead_text, 'none', 'flex')",
+            "flex_shrink": 0
+          },
+          "elements": [
+            {
+              "for": {
+                "items": "data.benefit_text"
+              },
+              "attr": {
+                ":text": "item.content",
+                "aria_hidden": true
+              },
+              "type": "InlineText",
+              "style": {
+                ":font_size": "item.font_size",
+                ":font_color": "item.font_color",
+                "white_space": "pre",
+                ":font_weight": "item.font_weight"
+              }
+            }
+          ]
+        },
+        {
+          "attr": {
+            "role": "text",
+            ":aria_label": "data.aria_lead_text"
+          },
+          "type": "Text",
+          "style": {
+            "margin": ["0", "0", "0", "7"],
+            ":display": "option(data.show_mall_lead_text, 'flex', 'none')",
+            "flex_shrink": 0
+          },
+          "elements": [
+            {
+              "for": {
+                "items": "data.lead_text"
+              },
+              "attr": {
+                ":text": "item.content",
+                "aria_hidden": true
+              },
+              "type": "InlineText",
+              "style": {
+                ":font_size": "item.font_size",
+                ":font_color": "item.font_color",
+                "white_space": "nowrap",
+                ":font_weight": "item.font_weight"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "attr": {
+        "role": "button",
+        "aria_label": "向下逛逛"
+      },
+      "type": "View",
+      "style": {
+        ":display": "option(data.show_default_button, 'flex', 'none')",
+        "align_items": "center",
+        "flex_shrink": 0
+      },
+      "_explain": "向下逛逛",
+      "elements": [
+        {
+          "attr": {
+            "text": "向下逛逛",
+            "aria_hidden": true
+          },
+          "type": "Text",
+          "style": {
+            "font_size": 13,
+            "font_color": "#b2161823",
+            "font_weight": 600
+          }
+        },
+        {
+          "attr": {
+            "src": "https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/6547532be1cf47ec85b49ccc1aa31e18~tplv-8jisjyls3a-3:0:0:q75.png",
+            "aria_hidden": true
+          },
+          "type": "Image",
+          "style": {
+            "width": 12,
+            "height": 12,
+            "margin": [0, 0, 0, 2]
+          }
+        }
+      ],
+      "click_action": {
+        "type": "scrollTo"
+      }
+    },
+    {
+      "attr": {
+        ":src": "data.benefit_button.url",
+        "role": "button",
+        "aria_label": "去商城逛逛"
+      },
+      "type": "Image",
+      "style": {
+        "width": 76,
+        "height": 24,
+        ":display": "option(data.show_mall_button, 'flex', 'none')",
+        "align_items": "center",
+        "flex_shrink": 0,
+        "border_radius": 100,
+        "justify_content": "center"
+      },
+      "_explain": "商场逛逛",
+      "click_action": {
+        "type": "toMall"
+      }
+    }
+  ]
+}

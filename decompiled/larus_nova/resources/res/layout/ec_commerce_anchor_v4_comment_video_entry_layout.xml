@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/ec_commerce_anchor_v4_comment_video_entry_layout_227220813"
+    android:background="@drawable/anchor_v4_head_comment_video_entry"
+    android:paddingLeft="4dp"
+    android:paddingTop="3dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="3dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextWithOneIconElementView
+        android:id="@+id/author_head"
+        android:layout_width="14dp"
+        android:layout_height="14dp"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextWithOneIconElementView
+        android:id="@+id/author_name"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"/>
+    <com.bytedance.android.shopping.anchorv4.voavhs.base.elements.TextWithOneIconElementView
+        android:id="@+id/more_text"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

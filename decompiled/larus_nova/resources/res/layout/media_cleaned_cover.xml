@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flag_container"
+    android:background="@color/bg_mask"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="80dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/error_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_54"
+        android:layout_marginStart="@dimen/dp_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/video_ctrl_close"/>
+    <TextView
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/static_white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/flag_resource_cleaned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Lark_IM_VideoCleanedByAdmin_Error"
+        android:drawablePadding="@dimen/dp_12"
+        android:textAlignment="center"
+        app:drawableTopCompat="@drawable/ud_icon_warning_outlined"
+        app:tint="@color/static_white"/>
+</FrameLayout>

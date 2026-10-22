@@ -1,0 +1,106 @@
+package com.bytedance.android.live.liveinteract.voicechat.radio.asr;
+
+import com.google.gson.annotations.SerializedName;
+import com.ss.android.cert.manager.constants.BytedCertConstant;
+import e7.j0;
+import kotlin.Metadata;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes46.dex */
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\t\u0018\u00002\u00020\u0001:\u0001\u0018B\u0007¢\u0006\u0004\b\u0016\u0010\u0017R$\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR$\u0010\n\u001a\u0004\u0018\u00010\t8\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR$\u0010\u0011\u001a\u0004\u0018\u00010\u00108\u0006@\u0006X\u0087\u000e¢\u0006\u0012\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0011\u0010\u0013\"\u0004\b\u0014\u0010\u0015¨\u0006\u0019"}, d2 = {"Lcom/bytedance/android/live/liveinteract/voicechat/radio/asr/AsrStateChangeEvent;", "", "Lcom/bytedance/android/live/liveinteract/voicechat/radio/asr/AsrStateChangeEvent$Type;", "type", "Lcom/bytedance/android/live/liveinteract/voicechat/radio/asr/AsrStateChangeEvent$Type;", "getType", "()Lcom/bytedance/android/live/liveinteract/voicechat/radio/asr/AsrStateChangeEvent$Type;", "b", "(Lcom/bytedance/android/live/liveinteract/voicechat/radio/asr/AsrStateChangeEvent$Type;)V", "", "textMsg", "Ljava/lang/String;", "getTextMsg", "()Ljava/lang/String;", BytedCertConstant.ReflectionConfigKey.COLOR_ARRAY, "(Ljava/lang/String;)V", "", "isConnected", "Ljava/lang/Boolean;", "()Ljava/lang/Boolean;", "setConnected", "(Ljava/lang/Boolean;)V", "<init>", "()V", "Type", "liveinteract-impl_saasRelease"}, k = 1, mv = {1, 5, 1})
+public final class AsrStateChangeEvent {
+
+    @SerializedName("isConnected")
+    private Boolean isConnected;
+
+    @SerializedName("textMsg")
+    private String textMsg;
+
+    @SerializedName("type")
+    private Type type;
+
+    @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\r\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u00012\u00020\u0002J\b\u0010\u0004\u001a\u00020\u0003H\u0016R\u0017\u0010\u0005\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\rj\u0002\b\u000ej\u0002\b\u000f¨\u0006\u0010"}, d2 = {"Lcom/bytedance/android/live/liveinteract/voicechat/radio/asr/AsrStateChangeEvent$Type;", "", "Le7/j0;", "", "getCode", "value", "I", "getValue", "()I", "Started", "GetResulted", "Finished", "Failed", "WebSocketStateChanged", "GetPartialResulted", "GetAudioFile", "liveinteract-impl_saasRelease"}, k = 1, mv = {1, 5, 1})
+    public static final enum Type extends Enum<Type> implements j0 {
+        public static final Type Failed = null;
+        public static final Type Finished = null;
+        public static final Type GetAudioFile = null;
+        public static final Type GetPartialResulted = null;
+        public static final Type GetResulted = null;
+        public static final Type Started = null;
+        public static final Type WebSocketStateChanged = null;
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ Type[] f80482a = null;
+        private final int value;
+
+        static {
+            Type r100 = new Type("Started", 0, 100);
+            Started = r100;
+            Type r101 = new Type("GetResulted", 1, 101);
+            GetResulted = r101;
+            Type r102 = new Type("Finished", 2, 102);
+            Finished = r102;
+            Type r103 = new Type("Failed", 3, 103);
+            Failed = r103;
+            Type r104 = new Type("WebSocketStateChanged", 4, 104);
+            WebSocketStateChanged = r104;
+            Type r105 = new Type("GetPartialResulted", 5, 105);
+            GetPartialResulted = r105;
+            Type r106 = new Type("GetAudioFile", 6, 106);
+            GetAudioFile = r106;
+            f80482a = new Type[]{r100, r101, r102, r103, r104, r105, r106};
+        }
+
+        public static Type valueOf(String r100) {
+            return (Type) r27.a.a(Type.class, r100);
+        }
+
+        public static Type[] values() {
+            return (Type[]) f80482a.clone();
+        }
+
+        @Override // e7.j0
+        public int getCode() {
+            return this.value;
+        }
+
+        public final int getValue() {
+            return this.value;
+        }
+
+        public Type(String r100, int r101, int r102) {
+            super(r100, r101);
+            this.value = r102;
+        }
+    }
+
+    public AsrStateChangeEvent() {
+    }
+
+    public final JSONObject c() {
+        JSONObject r100 = new JSONObject();
+        Type r101 = this.type;
+        if (r101 == null) goto L5;
+        Integer r102 = Integer.valueOf(r101.getCode());
+    L6:
+        r100.put("type", r102);
+        r100.put("textMsg", this.textMsg);
+        r100.put("isConnected", this.isConnected);
+        return r100;
+    L5:
+        r102 = null;
+        goto L6
+    }
+
+    public final Type getType() {
+        return this.type;
+    }
+
+    public final void a(String r100) {
+        this.textMsg = r100;
+    }
+
+    public final void b(Type r100) {
+        this.type = r100;
+    }
+}

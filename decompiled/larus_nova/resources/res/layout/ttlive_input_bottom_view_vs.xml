@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.livesdk.interactivity.interactive.dialog.framework.VSInputPanelSectionContainer
+        android:id="@+id/input_panel_bottom_view"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.bytedance.android.livesdk.interactivity.interactive.dialog.framework.VSInputPanelSectionContainer
+        android:layout_gravity="bottom"
+        android:id="@+id/input_panel_bottom_tip_view"
+        android:visibility="gone"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"/>
+</FrameLayout>

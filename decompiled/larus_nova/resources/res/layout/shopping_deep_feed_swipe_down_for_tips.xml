@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="12dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/deep_feed_swipe_down_tips_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <com.bytedance.android.shopping.deepfeed.weights.common.ProductTextView
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#ff003c"
+            android:id="@+id/deep_feed_swipe_down_tips_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上滑查看"
+            android:layout_marginStart="8dp"
+            app:customWeight="500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deep_feed_swipe_down_tips_image"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <com.bytedance.android.shopping.deepfeed.weights.common.ProductTextView
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#161823"
+            android:id="@+id/deep_feed_swipe_down_tips_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="下一条相关商品"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deep_feed_swipe_down_tips_1"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

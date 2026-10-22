@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp">
+    <ImageView
+        android:id="@+id/icon"
+        android:background="@drawable/ttlive_ic_transform_widget"
+        android:padding="5.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:id="@+id/view_red_dot"
+        android:background="@drawable/ttlive_ic_filter_red_point"
+        android:visibility="gone"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="2dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

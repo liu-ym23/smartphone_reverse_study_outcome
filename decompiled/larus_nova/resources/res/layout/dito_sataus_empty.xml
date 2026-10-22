@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/dito_sataus_empty_931881792"
+    android:paddingTop="120dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/layout_default_with_pic"/>
+    <com.bytedance.dux.text.DuxTextView
+        android:textSize="14sp"
+        android:textColor="@color/TextPrimary"
+        android:gravity="center"
+        android:id="@+id/poi_collect_status_button"
+        android:background="@drawable/poi_bg_dynamic_status_button"
+        android:layout_width="230dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="160dp"
+        android:text="@string/retry"/>
+</LinearLayout>

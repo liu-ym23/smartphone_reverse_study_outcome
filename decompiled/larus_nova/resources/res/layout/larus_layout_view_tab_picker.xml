@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.camera.impl.widget.SwipeVerticalRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:id="@+id/tab_container"
+    android:scrollbars="none"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/larus_dp_40"
+    android:overScrollMode="never"/>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <item
+        android:left="?attr/larus_dp_64"
+        android:right="?attr/larus_dp_0">
+        <shape>
+            <size android:height="1px"/>
+            <solid android:color="@color/larus_neutral_transparent_2_night"/>
+        </shape>
+    </item>
+</layer-list>

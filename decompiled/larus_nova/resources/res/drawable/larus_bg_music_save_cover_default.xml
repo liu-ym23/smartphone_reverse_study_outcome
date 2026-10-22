@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/static_white_transparent_2"/>
+            <size
+                android:height="?attr/larus_dp_72"
+                android:width="?attr/larus_dp_72"/>
+            <corners android:radius="?attr/larus_dp_8"/>
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/larus_ic_music_white_trans"
+        android:left="?attr/larus_dp_22"
+        android:top="?attr/larus_dp_22"
+        android:right="?attr/larus_dp_22"
+        android:bottom="?attr/larus_dp_22"/>
+</layer-list>

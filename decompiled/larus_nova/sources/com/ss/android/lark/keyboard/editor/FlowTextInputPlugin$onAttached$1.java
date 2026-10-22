@@ -1,0 +1,32 @@
+package com.ss.android.lark.keyboard.editor;
+
+import com.bytedance.mira.hook.proxy.AbsMethodDelegate;
+import com.ss.android.lark.keyboard.event.q;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Lambda;
+
+/* JADX INFO: loaded from: classes36.dex */
+@Metadata(d1 = {"\u0000\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001*\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u0004H\n¢\u0006\u0002\b\u0005"}, d2 = {"<anonymous>", "", "Lcom/ss/android/lark/keyboard/event/IEventContext;", "it", "Lcom/ss/android/lark/keyboard/event/Notify$MessageSend;", AbsMethodDelegate.TAG_INVOKE}, k = 3, mv = {2, 1, 0}, xi = 48)
+final class FlowTextInputPlugin$onAttached$1 extends Lambda implements Function2<com.ss.android.lark.keyboard.event.g, q.a, Unit> {
+    final /* synthetic */ i this$0;
+
+    public FlowTextInputPlugin$onAttached$1(i r100) {
+        super(2);
+    }
+
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final void invoke2(com.ss.android.lark.keyboard.event.g r100, q.a r101) {
+        Intrinsics.checkNotNullParameter(r100, "$this$selectNotify");
+        Intrinsics.checkNotNullParameter(r101, "it");
+        throw null;
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public /* bridge */ /* synthetic */ Unit invoke(com.ss.android.lark.keyboard.event.g r100, q.a r101) {
+        invoke2(r100, r101);
+        return Unit.INSTANCE;
+    }
+}

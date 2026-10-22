@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="18dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp">
+    <ImageView
+        android:id="@+id/date_indicator"
+        android:background="@drawable/ttlive_program_date_indicator"
+        android:layout_width="2dp"
+        android:layout_height="12dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginEnd="6dp"/>
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/white"
+        android:id="@+id/program_date"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"/>
+</LinearLayout>

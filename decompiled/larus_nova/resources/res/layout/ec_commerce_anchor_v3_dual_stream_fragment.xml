@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ec_commerce_anchor_v3_dual_stream_1174485418"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.android.shopping.anchorv3.widget.AnchorV3SwipeRefreshLayout
+        android:id="@+id/dual_stream_refresh_layout"
+        android:background="@color/shopping_color_0D161823"
+        android:paddingTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.bytedance.android.shopping.anchorv3.widget.FixedRecyclerView
+            android:id="@+id/dual_stream_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.bytedance.android.shopping.anchorv3.widget.AnchorV3SwipeRefreshLayout>
+    <include
+        android:id="@+id/ec_commerce_dual_stream_network_error_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/ec_commerce_comment_network_error_layout"/>
+    <com.bytedance.android.ui.ec.widget.loading.ECSloganLoadingAnimationView
+        android:id="@+id/dual_stream_loading_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

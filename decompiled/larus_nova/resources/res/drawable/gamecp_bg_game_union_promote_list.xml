@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners
+                android:topLeftRadius="12dp"
+                android:topRightRadius="12dp"/>
+            <solid android:color="#161823"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="top|fill_horizontal"
+            android:src="@drawable/gamecp_top_bg_game_promote_list"/>
+    </item>
+</layer-list>

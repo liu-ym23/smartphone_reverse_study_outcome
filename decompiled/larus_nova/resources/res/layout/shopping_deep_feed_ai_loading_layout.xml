@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/deep_feed_ai_loading_lottie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_loop="true"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/guideline_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.7312"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="36sp"
+        android:textColor="#d9ffffff"
+        android:id="@+id/deep_feed_ai_loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_percent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="14sp"
+        android:textColor="#b2ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在努力为你寻找 ..."
+        app:layout_constraintStart_toStartOf="@+id/deep_feed_ai_loading_text"
+        app:layout_constraintTop_toBottomOf="@+id/deep_feed_ai_loading_text"/>
+</merge>

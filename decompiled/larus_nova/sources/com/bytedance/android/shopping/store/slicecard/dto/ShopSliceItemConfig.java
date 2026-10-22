@@ -1,0 +1,29 @@
+package com.bytedance.android.shopping.store.slicecard.dto;
+
+import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes14.dex */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002R$\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u00048\u0006@\u0006X\u0087\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"Lcom/bytedance/android/shopping/store/slicecard/dto/ShopSliceItemConfig;", "Ljava/io/Serializable;", "()V", "templates", "", "Lcom/bytedance/android/shopping/store/slicecard/dto/SliceTemplate;", "getTemplates", "()Ljava/util/List;", "setTemplates", "(Ljava/util/List;)V", "ec-biz-store-impl_saasRelease"}, k = 1, mv = {1, 4, 3})
+public final class ShopSliceItemConfig implements Serializable {
+
+    @SerializedName("templates")
+    private List<SliceTemplate> templates;
+
+    public ShopSliceItemConfig() {
+        this.templates = CollectionsKt.emptyList();
+    }
+
+    public final List<SliceTemplate> getTemplates() {
+        return this.templates;
+    }
+
+    public final void setTemplates(List<SliceTemplate> r100) {
+        Intrinsics.checkNotNullParameter(r100, "<set-?>");
+        this.templates = r100;
+    }
+}

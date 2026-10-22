@@ -1,0 +1,75 @@
+package androidx.compose.ui.autofill;
+
+import kotlin.Metadata;
+import kotlin.jvm.JvmInline;
+
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0003\b\u0083@\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0004\b\u0004\u0010\u0005J\u001a\u0010\b\u001a\u00020\t2\b\u0010\n\u001a\u0004\u0018\u00010\u000bHÖ\u0003¢\u0006\u0004\b\f\u0010\rJ\u0010\u0010\u000e\u001a\u00020\u0003HÖ\u0001¢\u0006\u0004\b\u000f\u0010\u0005J\u0010\u0010\u0010\u001a\u00020\u0011HÖ\u0001¢\u0006\u0004\b\u0012\u0010\u0013R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007\u0088\u0001\u0002¨\u0006\u0014"}, d2 = {"Landroidx/compose/ui/autofill/AndroidContentDataType;", "Landroidx/compose/ui/autofill/ContentDataType;", "androidAutofillType", "", "constructor-impl", "(I)I", "getAndroidAutofillType", "()I", "equals", "", "other", "", "equals-impl", "(ILjava/lang/Object;)Z", "hashCode", "hashCode-impl", "toString", "", "toString-impl", "(I)Ljava/lang/String;", "ui_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@JvmInline
+final class AndroidContentDataType implements ContentDataType {
+    private final int androidAutofillType;
+
+    /* JADX INFO: renamed from: box-impl, reason: not valid java name */
+    public static final /* synthetic */ AndroidContentDataType m4328boximpl(int r100) {
+        return new AndroidContentDataType(r100);
+    }
+
+    /* JADX INFO: renamed from: constructor-impl, reason: not valid java name */
+    public static int m4329constructorimpl(int r100) {
+        return r100;
+    }
+
+    /* JADX INFO: renamed from: equals-impl, reason: not valid java name */
+    public static boolean m4330equalsimpl(int r100, Object r101) {
+        if ((r101 instanceof AndroidContentDataType) == true) goto L6;
+        return false;
+    L6:
+        if (r100 == ((AndroidContentDataType) r101).m4334unboximpl()) goto L8;
+        return false;
+    L8:
+        return true;
+    }
+
+    /* JADX INFO: renamed from: equals-impl0, reason: not valid java name */
+    public static final boolean m4331equalsimpl0(int r100, int r101) {
+        if (r100 != r101) goto L4;
+        return true;
+    L4:
+        return false;
+    }
+
+    /* JADX INFO: renamed from: hashCode-impl, reason: not valid java name */
+    public static int m4332hashCodeimpl(int r100) {
+        return r100;
+    }
+
+    /* JADX INFO: renamed from: toString-impl, reason: not valid java name */
+    public static String m4333toStringimpl(int r100) {
+        return "AndroidContentDataType(androidAutofillType=" + r100 + ')';
+    }
+
+    public boolean equals(Object r100) {
+        return m4330equalsimpl(this.androidAutofillType, r100);
+    }
+
+    public int hashCode() {
+        return m4332hashCodeimpl(this.androidAutofillType);
+    }
+
+    public String toString() {
+        return m4333toStringimpl(this.androidAutofillType);
+    }
+
+    /* JADX INFO: renamed from: unbox-impl, reason: not valid java name */
+    public final /* synthetic */ int m4334unboximpl() {
+        return this.androidAutofillType;
+    }
+
+    public final int getAndroidAutofillType() {
+        return this.androidAutofillType;
+    }
+
+    private /* synthetic */ AndroidContentDataType(int r100) {
+        this.androidAutofillType = r100;
+    }
+}

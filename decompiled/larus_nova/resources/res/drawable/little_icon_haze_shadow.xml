@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/weather_icon_cloud_color"
+        android:pathData="M9.5,4C8.137,4 6.858,4.364 5.756,5H13.245C12.143,4.364 10.864,4 9.5,4Z"/>
+    <path
+        android:fillColor="@color/weather_icon_cloud_color"
+        android:pathData="M14.599,6H4.401C4.072,6.305 3.77,6.64 3.5,7H15.501C15.231,6.64 14.929,6.305 14.599,6Z"/>
+    <path
+        android:fillColor="@color/weather_icon_cloud_color"
+        android:pathData="M19.318,8H2.865C2.696,8.32 2.549,8.654 2.427,9H20.473C20.132,8.62 19.744,8.283 19.318,8Z"/>
+    <path
+        android:fillColor="@color/weather_icon_cloud_color"
+        android:pathData="M21.198,10H2.15C2.084,10.326 2.039,10.66 2.016,11H21.659C21.536,10.651 21.381,10.316 21.198,10Z"/>
+    <path
+        android:fillColor="@color/weather_icon_cloud_color"
+        android:pathData="M21.918,12H2.016C2.039,12.34 2.084,12.674 2.15,13H22.001C22.001,12.659 21.972,12.325 21.918,12Z"/>
+    <path
+        android:fillColor="@color/weather_icon_cloud_color"
+        android:pathData="M21.918,14H2.427C2.549,14.346 2.696,14.68 2.865,15H21.66C21.773,14.678 21.86,14.344 21.918,14Z"/>
+    <path
+        android:fillColor="@color/weather_icon_cloud_color"
+        android:pathData="M21.198,16H3.499C3.769,16.36 4.071,16.694 4.4,17H20.473C20.748,16.693 20.991,16.358 21.198,16Z"/>
+    <path
+        android:fillColor="@color/weather_icon_cloud_color"
+        android:pathData="M19.319,18H5.755C6.831,18.621 8.076,18.983 9.404,19H16.09C17.283,18.983 18.392,18.617 19.319,18Z"/>
+</vector>

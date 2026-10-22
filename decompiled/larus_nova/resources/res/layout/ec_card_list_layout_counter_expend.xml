@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/ll_expend"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/btn_decrease"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:srcCompat="@drawable/card_list_counter_minus_enable_optimize"/>
+    <EditText
+        android:textSize="14sp"
+        android:textColor="#161823"
+        android:gravity="center"
+        android:id="@+id/et_quantity"
+        android:background="@null"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:text="@string/ec_card_list_counter_default_num"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:textCursorDrawable="@drawable/card_list_shopping_counter_edit_cursor"/>
+    <ImageView
+        android:id="@+id/btn_increase"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:srcCompat="@drawable/card_list_counter_plus_enable_optimize"/>
+</LinearLayout>

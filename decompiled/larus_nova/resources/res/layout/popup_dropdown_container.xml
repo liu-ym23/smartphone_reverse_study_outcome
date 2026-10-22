@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/larus_chat_common_shadow_bg"
+    android:padding="?attr/larus_dp_14"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.larus.bmhome.view.item.ItemGroup
+        android:orientation="vertical"
+        android:id="@+id/item_group_container"
+        android:background="@drawable/larus_bg_round_full"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

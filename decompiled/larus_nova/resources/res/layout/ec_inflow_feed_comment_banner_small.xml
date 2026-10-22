@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:background="@drawable/commerce_inflow_feed_comment_bg"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+    <com.bytedance.android.ui.base.widget.viewflipper.ECViewFlipper
+        android:id="@+id/inflow_feed_comment_flipper_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_weight="1"/>
+    <View
+        android:background="@drawable/commerce_inflow_feed_comment_divider"
+        android:layout_width="0.5dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/commerce_color_E5161823"
+        android:id="@+id/inflow_feed_comment_good_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"/>
+</LinearLayout>

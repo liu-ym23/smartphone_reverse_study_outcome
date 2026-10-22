@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.larksuite.component.universe_design.shadow.UDShadowLayout
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ud_shadow_radius="16dp"
+        style="@style/UDShadow.S2.Down">
+        <androidx.recyclerview.widget.RecyclerView
+            android:scrollbarSize="8dp"
+            android:scrollbarThumbVertical="@drawable/bitable_superagent_at_thumb_scrollbar"
+            android:scrollbarStyle="outsideOverlay"
+            android:id="@+id/bitable_superagent_at_list"
+            android:background="@drawable/bitable_superagent_at_card_bg"
+            android:paddingTop="16dp"
+            android:scrollbars="vertical"
+            android:clipToPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:fadeScrollbars="true"
+            android:overScrollMode="ifContentScrolls"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:clipToOutline="true"/>
+    </com.larksuite.component.universe_design.shadow.UDShadowLayout>
+</merge>

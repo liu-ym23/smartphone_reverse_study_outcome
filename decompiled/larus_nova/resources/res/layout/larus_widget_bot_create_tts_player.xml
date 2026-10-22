@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.lynx.lottieadapter.LottieAdapterView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tts_icon"
+        android:layout_width="?attr/larus_dp_16"
+        android:layout_height="?attr/larus_dp_16"
+        android:scaleType="centerInside"/>
+    <TextView
+        android:textSize="?attr/larus_dp_14"
+        android:textStyle="bold"
+        android:textColor="@color/larus_primary_50"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tts_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/larus_dp_4"/>
+</merge>

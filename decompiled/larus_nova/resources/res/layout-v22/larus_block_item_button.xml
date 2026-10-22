@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="?attr/larus_bg_block_button_card"
+    android:padding="?attr/larus_dp_10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="?attr/larus_sp_16"
+        android:textColor="?attr/larus_neutral_100"
+        android:gravity="center"
+        android:id="@+id/button_lock_view_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textFontWeight="500"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/button_lock_view_text_right_icon"
+        android:layout_width="?attr/larus_dp_24"
+        android:layout_height="?attr/larus_dp_24"
+        android:layout_marginStart="?attr/larus_dp_2"/>
+</LinearLayout>

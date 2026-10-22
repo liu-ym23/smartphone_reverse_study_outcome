@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="14dp"
+    android:width="14dp"
+    android:autoMirrored="true"
+    android:viewportWidth="14"
+    android:viewportHeight="14">
+    <path
+        android:fillColor="@color/larus_tool_header_arrow"
+        android:pathData="M5.057,0.813C5.474,0.568 6.01,0.708 6.255,1.125L9.097,5.967C9.472,6.605 9.472,7.395 9.097,8.033L6.255,12.875C6.01,13.292 5.474,13.432 5.057,13.187C4.64,12.942 4.501,12.406 4.746,11.989L7.588,7.148C7.641,7.056 7.641,6.944 7.588,6.852L4.746,2.011C4.501,1.594 4.64,1.058 5.057,0.813Z"/>
+</vector>

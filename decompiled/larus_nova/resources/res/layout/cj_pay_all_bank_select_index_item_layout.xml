@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@+id/ll_index"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cj_pay_padding_48">
+    <View
+        android:id="@+id/top_divider"
+        android:background="@color/cj_pay_color_divider"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <TextView
+        android:textSize="?attr/cj_pay_page_size_14"
+        android:textStyle="bold"
+        android:textColor="@color/cj_pay_color_black_161823"
+        android:gravity="center"
+        android:id="@+id/tv_index"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/cj_pay_padding_24"
+        android:layout_marginLeft="@dimen/cj_pay_padding_16"
+        android:layout_marginTop="11.5dp"
+        android:layout_marginBottom="11.5dp"/>
+    <View
+        android:id="@+id/bottom_divider"
+        android:background="@color/cj_pay_color_divider"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

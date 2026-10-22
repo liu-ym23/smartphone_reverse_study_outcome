@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.locallife.dito.baseview.RoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_item_feed_lynx_container_2_90714781"
+    android:background="@color/POIBgPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/group_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.bytedance.locallife.dito.baseview.RoundRelativeLayout>

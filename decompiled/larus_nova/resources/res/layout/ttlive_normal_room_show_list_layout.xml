@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/show_list_container"
+    android:background="@drawable/ttlive_bg_round_item_new"
+    android:layout_width="wrap_content"
+    android:layout_height="22dp">
+    <View
+        android:id="@+id/show_list"
+        android:background="@drawable/ttlive_mic_room_show_list_entrance_img"
+        android:layout_width="62dp"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:id="@+id/show_list_text"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:text="@string/ttlive_normal_room_mic_show_list_text"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"/>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/dp_16"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_kit_len_54">
+    <com.larksuite.component.ui.button.LKUICheckBox
+        android:id="@+id/select_type_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_12"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:textSize="@dimen/dp_16"
+        android:textColor="@color/text_title"
+        android:id="@+id/select_type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/select_type_checkbox"
+        android:layout_centerVertical="true"/>
+    <View
+        android:id="@+id/divider"
+        android:background="@color/line_divider_default"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/select_type_tv"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

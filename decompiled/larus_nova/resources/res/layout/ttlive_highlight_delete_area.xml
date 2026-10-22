@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#33000000"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <TextView
+        android:textSize="11dp"
+        android:textColor="@color/ttlive_white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/delete_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ttlive_core_share_dialog_action_delete"
+        android:drawableTop="@drawable/ttlive_icon_highllight_delete"
+        android:drawablePadding="11dp"/>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/poi_detail_feeds_status_view_51304257"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/status_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.bytedance.ies.dmt.ui.widget.DmtStatusView
+            android:id="@+id/status_view"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"/>
+    </FrameLayout>
+</FrameLayout>

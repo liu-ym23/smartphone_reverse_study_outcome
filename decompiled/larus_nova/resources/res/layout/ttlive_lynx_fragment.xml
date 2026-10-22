@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/lynx_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"/>
+    <include
+        android:layout_gravity="top"
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ttlive_title_bar_height"
+        android:layout_alignParentTop="true"
+        layout="@layout/ttlive_browser_title_bar"/>
+    <include
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/ttlive_hybrid_base_title_bar_layout"/>
+    <include
+        android:layout_gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        layout="@layout/ttlive_pull_down_close_layout"/>
+    <ViewStub
+        android:layout_gravity="end|bottom"
+        android:id="@+id/view_stub_loading"
+        android:layout="@layout/ttlive_layout_douyin_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

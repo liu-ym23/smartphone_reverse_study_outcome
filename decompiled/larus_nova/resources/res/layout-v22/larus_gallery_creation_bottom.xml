@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larus.uaigc.creation.gallery.providers.CreationBottomView
+        android:id="@+id/bottomToolsContainer"
+        android:paddingLeft="?attr/larus_dp_12"
+        android:paddingTop="?attr/larus_dp_11"
+        android:paddingRight="?attr/larus_dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="?attr/larus_dp_12"/>
+</FrameLayout>

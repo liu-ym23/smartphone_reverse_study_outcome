@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_tab_root_view"
+    android:background="@drawable/commerce_bg_indicator_container_v4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_gravity="center_vertical"
+        android:id="@+id/head_indicator_selected_background"
+        android:background="@drawable/anchor_v4_head_indicator_anim_background"
+        android:layout_width="0dp"
+        android:layout_height="24dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/head_indicator_fold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/head_indicator_expand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

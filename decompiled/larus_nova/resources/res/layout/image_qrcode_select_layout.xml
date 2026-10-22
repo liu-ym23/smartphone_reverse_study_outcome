@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/qrcode_select_layout"
+    android:background="@color/static_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/qrcode_bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:background="@color/static_black_55"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="17sp"
+        android:textColor="@color/static_white"
+        android:id="@+id/qrcode_cancel_view"
+        android:padding="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="@string/Lark_Legacy_Cancel"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="16sp"
+        android:textColor="@color/static_white"
+        android:gravity="center"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/qrcode_bottom_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="@string/Lark_QRcodeScan_MultiCodeTapToChoose_Text"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+    <FrameLayout
+        android:id="@+id/qrcode_bubbles_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

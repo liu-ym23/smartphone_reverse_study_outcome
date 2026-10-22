@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_60"
+        android:layout_gravity="top"
+        android:id="@+id/tv_service_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cj_pay_service_details"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/cj_pay_color_gray_161823_opacity_75"
+        android:gravity="left"
+        android:layout_gravity="top"
+        android:id="@+id/tv_service_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

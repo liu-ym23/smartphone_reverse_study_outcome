@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_fragment_slide_photos_view_1693519901"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.bytedance.lighten.loader.SmartImageView
+        android:layout_gravity="center"
+        android:id="@+id/poi_photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/poi_image_load_fail"
+        android:visibility="gone"
+        android:clickable="false"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/life_poi_media_ic_slide_more"/>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/poi_image_loading_view"
+        android:visibility="gone"
+        android:clickable="false"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+</FrameLayout>

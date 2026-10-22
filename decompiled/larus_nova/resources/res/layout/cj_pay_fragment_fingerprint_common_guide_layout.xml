@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/cj_pay_fragment_fingerprint_common_guide_root_view"
+    android:background="@drawable/cj_pay_bg_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>

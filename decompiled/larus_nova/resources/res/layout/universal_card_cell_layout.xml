@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.ui.layout.LKUIRoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.larksuite.component.ui.layout.LKUIRoundableLayout
+        android:id="@+id/universal_card_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ViewStub
+        android:id="@+id/vt_loading_layout"
+        android:layout="@layout/universal_card_default_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ViewStub
+        android:id="@+id/vt_error_layout"
+        android:layout="@layout/universal_card_default_error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.larksuite.component.ui.layout.LKUIRoundLinearLayout>

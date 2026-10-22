@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="44dp"
+    android:width="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <path
+        android:fillColor="@color/larus_neutral_100_night"
+        android:pathData="M31,22C31,26.971 26.971,31 22,31C17.029,31 13,26.971 13,22C13,17.029 17.029,13 22,13C26.971,13 31,17.029 31,22ZM33,22C33,28.075 28.075,33 22,33C15.925,33 11,28.075 11,22C11,15.925 15.925,11 22,11C28.075,11 33,15.925 33,22ZM22,17C22.552,17 23,17.448 23,18V21H26C26.552,21 27,21.448 27,22C27,22.552 26.552,23 26,23H23V26C23,26.552 22.552,27 22,27C21.448,27 21,26.552 21,26V23H18C17.448,23 17,22.552 17,22C17,21.448 17.448,21 18,21H21V18C21,17.448 21.448,17 22,17Z"
+        android:fillType="evenOdd"/>
+</vector>

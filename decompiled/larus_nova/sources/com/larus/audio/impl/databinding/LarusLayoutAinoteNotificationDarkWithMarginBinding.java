@@ -1,0 +1,12 @@
+package com.larus.audio.impl.databinding;
+
+import android.view.View;
+import androidx.viewbinding.ViewBinding;
+
+/* JADX INFO: loaded from: classes24.dex */
+public final class LarusLayoutAinoteNotificationDarkWithMarginBinding implements ViewBinding {
+    @Override // androidx.viewbinding.ViewBinding
+    public final /* bridge */ /* synthetic */ View getRoot() {
+        return null;
+    }
+}

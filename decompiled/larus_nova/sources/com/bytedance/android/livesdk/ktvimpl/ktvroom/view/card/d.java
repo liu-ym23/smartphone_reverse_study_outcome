@@ -1,0 +1,22 @@
+package com.bytedance.android.livesdk.ktvimpl.ktvroom.view.card;
+
+import io.reactivex.functions.Consumer;
+
+/* JADX INFO: loaded from: classes10.dex */
+public final class d<T> implements Consumer {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final d f145010a = null;
+
+    static {
+        f145010a = new d();
+    }
+
+    public d() {
+    }
+
+    @Override // io.reactivex.functions.Consumer
+    public final /* bridge */ /* synthetic */ void accept(Object r100) {
+        String r101 = (String) r100;
+    }
+}

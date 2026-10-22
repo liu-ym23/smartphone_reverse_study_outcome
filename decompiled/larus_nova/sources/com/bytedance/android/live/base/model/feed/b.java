@@ -1,0 +1,5 @@
+package com.bytedance.android.live.base.model.feed;
+
+/* JADX INFO: loaded from: classes45.dex */
+public final class b {
+}

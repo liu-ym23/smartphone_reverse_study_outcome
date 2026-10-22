@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.awemeopen.infra.base.image.AoImageView
+        android:id="@+id/story_follow_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="3dp"/>
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@color/aos_story_bottom_text_color"
+        android:id="@+id/story_follow_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已关注"/>
+</LinearLayout>

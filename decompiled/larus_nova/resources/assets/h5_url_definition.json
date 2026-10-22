@@ -1,0 +1,23 @@
+{
+  "urls": [
+    {
+      "name": "mirror",
+      "h5Url": "https://loginglobaltestlf11.hwcloudtest.cn/oauth2/v3/authorize",
+      "callBackUrl": "https://lfcontentcenterdev.hwcloudtest.cn/sandbox/cch5/healthkit/oauth-h5/oauth-callback.html"
+
+    },
+
+    {
+      "name": "product",
+      "h5Url": "https://oauth-login.cloud.huawei.com/oauth2/v3/authorize",
+      "callBackUrl": "https://h5hosting.dbankcdn.com/cch5/healthkit/oauth-h5/oauth-callback.html"
+
+    },
+    {
+      "name": "safety",
+      "h5Url": "https://oauth-login.cloud.huawei.com/oauth2/v3/authorize",
+      "callBackUrl": "https://h5hosting.dbankcdn.com/cch5/healthkit/oauth-h5/oauth-callback.html"
+
+    }
+  ]
+}

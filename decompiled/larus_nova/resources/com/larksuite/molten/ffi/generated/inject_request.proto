@@ -1,0 +1,103 @@
+/* Generated code, DO NOT EDIT.
+ * source: inject_request.yaml
+ */
+
+syntax = "proto2";
+
+package inject_request.proto;
+
+enum RequestMethod {
+    VAR_REQUEST_METHOD_GET = 0;
+    VAR_REQUEST_METHOD_POST = 1;
+    VAR_REQUEST_METHOD_DELETE = 2;
+    VAR_REQUEST_METHOD_PUT = 3;
+    VAR_REQUEST_METHOD_PATCH = 4;
+    VAR_REQUEST_METHOD_HEAD = 5;
+    VAR_REQUEST_METHOD_CONNECT = 6;
+    VAR_REQUEST_METHOD_OPTIONS = 7;
+    VAR_REQUEST_METHOD_TRACE = 8;
+}
+enum RequestHandleAction {
+    VAR_REQUEST_HANDLE_ACTION_ADD = 0;
+    VAR_REQUEST_HANDLE_ACTION_REPLACE = 1;
+    VAR_REQUEST_HANDLE_ACTION_REDIRECT_POLICY = 2;
+}
+enum RequestHandleTarget {
+    VAR_REQUEST_HANDLE_TARGET_HEADER = 0;
+    VAR_REQUEST_HANDLE_TARGET_HOST = 1;
+}
+message InjectRequestHandler {
+    required RequestHandleAction action = 1;
+    required RequestHandleTarget target = 2;
+     optional string key = 3;
+    required string value = 4;
+}
+
+message InjectRequest {
+    required string request_id = 1;
+    required uint64 user_id = 2;
+    required string url = 3;
+    required RequestMethod method = 4;
+     map<string, string> headers = 5;
+     repeated InjectRequestHandler handler = 6;
+     optional bytes body = 7;
+     optional uint32 timeout = 8;
+}
+
+message HeaderPair {
+    required string key = 1;
+    required string value = 2;
+}
+
+message ResponseContent {
+    required string request_id = 1;
+    required int32 status_code = 2;
+     repeated HeaderPair header = 3;
+     optional bytes body = 4;
+     optional string extension_info = 5;
+}
+
+message InjectResponse {
+    required int32 code = 1;
+     optional string msg = 2;
+     optional ResponseContent resp = 3;
+}
+
+
+enum FetchInfoType {
+    VAR_FETCH_INFO_TYPE_COOKIE = 0;
+}
+
+
+message FuncParamsX3740a52db2e4f4f6 
+{
+    required FetchInfoType info_type = 1;
+     map<string, string> fetch_info_param = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX62eaddf6feaab503 
+{
+    required InjectRequest request = 1;
+    required MoltenFfiInstanceMsg response_callback = 2;
+    required MoltenFfiInstanceMsg info_callback = 3;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX86ed4514fb0c7c6f 
+{
+    required int32 code = 1;
+     optional string msg = 2;
+      optional bytes _molten_ctx = 255;
+}message FuncParamsX889d318db1c4181f 
+{
+    required InjectResponse resp = 1;
+      optional bytes _molten_ctx = 255;
+}message FuncReturnXb35c5fb68bddc07e 
+{
+     map<string, string> ret = 1;
+    optional bytes _molten_ctx = 255;
+}message MoltenFfiInstanceMsg {
+  required int64 type_id = 1;
+  required int64 instance_id = 2;
+}
+message MoltenContextExtra {
+  optional bytes _molten_ctx = 255;
+}
+message __molten_ffi_placeholder {}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shopping_layout_sku_discount_price_1688604440"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="24dp">
+    <ImageView
+        android:id="@+id/iv_sku_discount_price_divider"
+        android:layout_width="0.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/shopping_ic_sku_divider"
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/tv_sku_discount_price_text"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/tv_sku_discount_price_text"/>
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_sku_discount_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        style="@style/font_size_22"/>
+    <com.bytedance.android.ec.core.widget.PriceView
+        android:id="@+id/tv_sku_discount_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_sku_discount_price_divider"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iv_sku_discount_price_divider"
+        app:extraTextSize="11dp"
+        app:prefixSpaceSize="2dp"
+        app:priceBold="true"
+        app:priceDecimalTextSize="11dp"
+        app:priceTextSize="15dp"
+        app:spaceSize="1dp"
+        app:thinDecimal="true"
+        app:yangTextSize="11dp"/>
+</RelativeLayout>

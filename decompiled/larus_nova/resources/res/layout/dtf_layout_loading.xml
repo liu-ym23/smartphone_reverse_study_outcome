@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/toyger_face_eye_loading_page"
+    android:background="#88000000"
+    android:paddingTop="194dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.dtf.face.ui.widget.iOSLoadingView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/loading_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_custom_icon"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/dtf_face_submit_txt_color"
+        android:gravity="center_horizontal"
+        android:id="@+id/process_loading_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/dtf_face_processing"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="180dp"
+    android:layout_height="42dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/tv_content"
+        android:background="@drawable/ttlive_bg_float_window_tips"
+        android:paddingBottom="2dp"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:text="@string/ttlive_guide_float_window_tip"/>
+</LinearLayout>

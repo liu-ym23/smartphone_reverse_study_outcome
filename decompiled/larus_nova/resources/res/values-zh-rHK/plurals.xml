@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="Bitable_AdvancedPermission_CanEditNumTable">
+        <item quantity="one">可編輯 %d 個數據表</item>
+        <item quantity="other">可編輯 %d 個數據表</item>
+    </plurals>
+    <plurals name="Bitable_AdvancedPermission_CanViewNumTable">
+        <item quantity="one">可閱讀 %d 個數據表</item>
+        <item quantity="other">可閱讀 %d 個數據表</item>
+    </plurals>
+    <plurals name="Bitable_AdvancedPermissions_Dashboard_ViewNumDashboards_Desc_Mob">
+        <item quantity="one">可閱讀 %d 個儀錶盤</item>
+        <item quantity="other">可閱讀 %d 個儀錶盤</item>
+    </plurals>
+    <plurals name="Bitable_Field_DigitMobileVer">
+        <item quantity="other">位</item>
+    </plurals>
+    <plurals name="Bitable_Field_NumHiddenField">
+        <item quantity="other">%d 個隱藏欄位</item>
+    </plurals>
+    <plurals name="Bitable_Form_TableQuestion_MaxLmtOfRowsInTable_Toast">
+        <item quantity="other">最多可新增 %d 列</item>
+    </plurals>
+    <plurals name="Bitable_LinkField_MaxNumOfRecordsToBeLinked_Tooltip">
+        <item quantity="other">最多支援關聯 %d 項記錄</item>
+    </plurals>
+    <plurals name="Calendar_Plural_RRuleDay">
+        <item quantity="other">天</item>
+    </plurals>
+    <plurals name="Calendar_Plural_RRuleMonth">
+        <item quantity="other">個月</item>
+    </plurals>
+    <plurals name="Calendar_Plural_RRuleWeek">
+        <item quantity="other">週</item>
+    </plurals>
+    <plurals name="Calendar_Plural_RRuleYear">
+        <item quantity="one">年</item>
+        <item quantity="other">年</item>
+    </plurals>
+    <plurals name="CreationMobile_Template_ProvidedByDocsUsedBy2">
+        <item quantity="one">%d 人已使用</item>
+        <item quantity="other">%d 人已使用</item>
+    </plurals>
+    <plurals name="Doc_Feed_NewMessage">
+        <item quantity="one">%d 則新訊息</item>
+        <item quantity="other">%d 則新訊息</item>
+    </plurals>
+    <plurals name="Doc_List_UploadedFail">
+        <item quantity="one">有 %d 個檔案上載失敗</item>
+        <item quantity="other">有 %d 個檔案上載失敗</item>
+    </plurals>
+    <plurals name="Doc_Share_CollaboratorNum">
+        <item quantity="one">協作者 (%d)</item>
+        <item quantity="other">協作者 (%d)</item>
+    </plurals>
+    <plurals name="Doc_Util_HoursAgo">
+        <item quantity="one">%d 小時前</item>
+        <item quantity="other">%d 小時前</item>
+    </plurals>
+    <plurals name="Doc_Util_MinsAgo">
+        <item quantity="one">%d 分鐘前</item>
+        <item quantity="other">%d 分鐘前</item>
+    </plurals>
+    <plurals name="LarkCCM_CM_Search_NumFolderSelected_Placeholder">
+        <item quantity="one">已選 %d 個資料夾</item>
+        <item quantity="other">已選 %d 個資料夾</item>
+    </plurals>
+    <plurals name="LarkCCM_CM_Search_NumSelected_Placeholder">
+        <item quantity="one">已選 %d 個類型</item>
+        <item quantity="other">已選 %d 個類型</item>
+    </plurals>
+    <plurals name="LarkCCM_CM_Search_NumWorkspaceSelected_Placeholder">
+        <item quantity="one">已選 %d 個知識庫</item>
+        <item quantity="other">已選 %d 個知識庫</item>
+    </plurals>
+    <plurals name="LarkCCM_ChatShare_ExternalSharingRequestPending_Desc">
+        <item quantity="one">External sharing has already been requested by {members}. It will be allowed once the request is approved.</item>
+        <item quantity="other">External sharing has already been requested by {members}. It will be allowed once any of the requests is approved.</item>
+    </plurals>
+    <plurals name="LarkCCM_Docs_AppLinkDoc_Linked_Toast">
+        <item quantity="other">已關聯文件</item>
+    </plurals>
+    <plurals name="LarkCCM_Docs_ContentUnderReview_Toast">
+        <item quantity="other">由於企業安全策略設定，正在檢查內容，請 %d 分鐘後重試</item>
+    </plurals>
+    <plurals name="LarkCCM_Docs_InlineRef_NumRef_Text">
+        <item quantity="other">共 %d 篇參考資料</item>
+    </plurals>
+    <plurals name="LarkCCM_Docs_RetryTransferUnderReview_Toast">
+        <item quantity="other">由於企業安全策略設定，正在檢查部分文件內容，請 %d 分鐘後重試</item>
+    </plurals>
+    <plurals name="LarkCCM_Docs_SyncBlock_Hidden_Description">
+        <item quantity="one">已隱藏 %d 個無權限存取的文件</item>
+        <item quantity="other">已隱藏 %d 個無權限存取的文件</item>
+    </plurals>
+    <plurals name="LarkCCM_Docx_Poll_VoteDetails_Header">
+        <item quantity="other">投票詳情 (%d 票)</item>
+    </plurals>
+    <plurals name="LarkCCM_Doubao_Drive_BatchDeleteConfirm_Title">
+        <item quantity="other">確認要刪除 %d 項內容嗎？</item>
+    </plurals>
+    <plurals name="LarkCCM_Doubao_Drive_DeletedCount_Toast">
+        <item quantity="other">已刪除 %d 項</item>
+    </plurals>
+    <plurals name="LarkCCM_Doubao_Drive_RemovedCount_Toast">
+        <item quantity="other">已移除 %d 項</item>
+    </plurals>
+    <plurals name="LarkCCM_Doubao_Drive_UploadedCount_Toast">
+        <item quantity="other">已上載 %d 項</item>
+    </plurals>
+    <plurals name="LarkCCM_Growth_DiscoverTemplate_Used_Text">
+        <item quantity="other">使用次數：%d</item>
+    </plurals>
+    <plurals name="LarkCCM_InviteExternalCollab_ConfirmRequest_Desc">
+        <item quantity="one">已有 {members} 提交了開啟對外分享該文件的申請，任何申請審批通過即生效</item>
+        <item quantity="other">已有 {members} 提交了對外分享此文件的申請，任何申請審批通過即生效</item>
+    </plurals>
+    <plurals name="LarkCCM_InviteExternalCollab_ConfirmRequest_NumPpl_Button">
+        <item quantity="other">%d 人</item>
+    </plurals>
+    <plurals name="LarkCCM_InviteExternalCollab_RequestedByNum_Text">
+        <item quantity="other">%d 人已申請允許對外分享</item>
+    </plurals>
+    <plurals name="LarkCCM_Workspace_SecLeviI_AdjustRequest_xpplRequested_Tag">
+        <item quantity="other">%d 人已發起申請</item>
+    </plurals>
+    <plurals name="LarkIM_Feed_NumNewMsg_Text">
+        <item quantity="other">{num} 則</item>
+    </plurals>
+    <plurals name="LarkIM_Group_GroupMemberCount_Text">
+        <item quantity="other">{num} 名群組成員</item>
+    </plurals>
+    <plurals name="LarkIM_Group_GroupMemberNum_Title">
+        <item quantity="other">{num} 名群組成員</item>
+    </plurals>
+    <plurals name="LarkIM_Group_ReplyCount_Text">
+        <item quantity="other">{num} 則回覆</item>
+    </plurals>
+    <plurals name="LarkIM_Msg_NumNew_Button">
+        <item quantity="other">%d 則新訊息</item>
+    </plurals>
+    <plurals name="LarkIM_Msg_NumRead_Desc">
+        <item quantity="other">{num} 人已讀</item>
+    </plurals>
+    <plurals name="LarkIM_Thread_ViewEarlier_Button">
+        <item quantity="other">查看更早 {num} 則回覆</item>
+    </plurals>
+    <plurals name="Lark_ASLSearch_CumstomSearch_NumberOfFilterSelected_Mobile">
+        <item quantity="other">已選擇 %d 個篩選條件</item>
+    </plurals>
+    <plurals name="Lark_ASLSearch_DocsTabFilters_InFolder_SelectMultipleFoldersMobile">
+        <item quantity="other">已選擇 %d 個資料夾</item>
+    </plurals>
+    <plurals name="Lark_ASLSearch_DocsTabFilters_InWorkspace_SelectMultipleWorkspacesMobile">
+        <item quantity="other">已選擇 %d 個知識庫</item>
+    </plurals>
+    <plurals name="Lark_ChatHistory_ViewablePeriod_ChatGroup">
+        <item quantity="one">根據企業管理員設定，只能查看最近 %d 日的聊天記錄</item>
+        <item quantity="other">根據企業管理員設定，只能查看最近 %d 日的聊天記錄</item>
+    </plurals>
+    <plurals name="Lark_Group_TitleNumberMembers">
+        <item quantity="other">%d 名群組成員</item>
+    </plurals>
+    <plurals name="Lark_Groups_MobileSelectedCountMembers">
+        <item quantity="one">%d 個人</item>
+        <item quantity="other">%d 個人</item>
+    </plurals>
+    <plurals name="Lark_Groups_NumEnterGroupApplication">
+        <item quantity="one">[%d 個加入群組申請]</item>
+        <item quantity="other">[%d 個加入群組申請]</item>
+    </plurals>
+    <plurals name="Lark_IM_AgentCot_CalledToolTime_Text">
+        <item quantity="other">已調用 %d 次工具</item>
+    </plurals>
+    <plurals name="Lark_IM_Attach_TopicGroupUnsupported_Text">
+        <item quantity="other">[該訊息包含 %d 個附件，暫不支援在話題群組中顯示]</item>
+    </plurals>
+    <plurals name="Lark_IM_CodeBlockNum_Text">
+        <item quantity="one">%d 行程式碼</item>
+        <item quantity="other">%d 行程式碼</item>
+    </plurals>
+    <plurals name="Lark_IM_EditMessage_AdminAllowEditWithinNumDays_Toast">
+        <item quantity="one">管理員已設定只能編輯 %d 日內的訊息</item>
+        <item quantity="other">管理員已設定只能編輯 %d 日內的訊息</item>
+    </plurals>
+    <plurals name="Lark_IM_GroupChat_NumBot_Text">
+        <item quantity="one">%d 個機械人</item>
+        <item quantity="other">%d 個機械人</item>
+    </plurals>
+    <plurals name="Lark_IM_Picker_UserGroupNum_Text">
+        <item quantity="other">%d 個用戶群組</item>
+    </plurals>
+    <plurals name="Lark_IM_QuotedReply_Test_Desc">
+        <item quantity="other">%d 條引用</item>
+    </plurals>
+    <plurals name="Lark_IM_RecallMessage_AdminAllowRecallWithinNumDays_Toast">
+        <item quantity="one">管理員已設定只能撤回 %d 日內的訊息</item>
+        <item quantity="other">管理員已設定只能撤回 %d 日內的訊息</item>
+    </plurals>
+    <plurals name="Lark_IM_SwitchedTopicGroup_ViewNumMoreTopicReplies_Text">
+        <item quantity="one">查看更早 %d 條主題回覆</item>
+        <item quantity="other">查看更早 %d 條主題回覆</item>
+    </plurals>
+    <plurals name="Lark_IM_Thread_NumRepliesToThread_Tooltip">
+        <item quantity="one">%d 條主題回覆</item>
+        <item quantity="other">%d 條主題回覆</item>
+    </plurals>
+    <plurals name="Lark_Legacy_NumberChats">
+        <item quantity="one">%d 個群組</item>
+        <item quantity="other">%d 個群組</item>
+    </plurals>
+    <plurals name="Lark_Legacy_NumberOrganizations">
+        <item quantity="one">%d 個部門</item>
+        <item quantity="other">%d 個部門</item>
+    </plurals>
+    <plurals name="Lark_NewSearch_SecondarySearch_LinkResultsDisplayIncomplete_ShowTheRestClickable">
+        <item quantity="other">查看其他 %d 個連結結果</item>
+    </plurals>
+    <plurals name="Todo_GanttView_CompleteBlockedBy_Desc">
+        <item quantity="other">此任務仍有 %d 個前置任務未完成</item>
+    </plurals>
+    <plurals name="Todo_NumTaskOwners_ICU">
+        <item quantity="one">%d 人負責</item>
+        <item quantity="other">%d 人負責</item>
+    </plurals>
+    <plurals name="Todo_TaskAttachment_ICU_Variable">
+        <item quantity="one">%d 個附件</item>
+        <item quantity="other">%d 個附件</item>
+    </plurals>
+    <plurals name="Todo_TaskListUpdates_InvieteNewCanView_Text">
+        <item quantity="other">{user} 邀請 {user2} 加入清單並開通可閱讀權限</item>
+    </plurals>
+    <plurals name="Todo_TaskListUpdates_inviteNewCanEdit_Text">
+        <item quantity="other">{user} 邀請 {user2} 加入清單並開通可編輯權限</item>
+    </plurals>
+    <plurals name="Todo_TaskUpdates_AddOwner_Text">
+        <item quantity="other">{user} 將 {user2} 新增為任務負責人</item>
+    </plurals>
+    <plurals name="Todo_TaskUpdates_DeleteSubscriber_Text">
+        <item quantity="other">{user} 移除了追蹤者 {follower}</item>
+    </plurals>
+    <plurals name="Todo_TaskUpdates_RemoveAttachment_Text">
+        <item quantity="other">{user} 移除了附件：</item>
+    </plurals>
+    <plurals name="Todo_TaskUpdates_UploadAttachment_Text">
+        <item quantity="other">{user} 上載了附件：</item>
+    </plurals>
+    <plurals name="Todo_Task_AlertTimeNDaysBefore">
+        <item quantity="one">截止前 1 天</item>
+        <item quantity="other">截止前 %d 天</item>
+    </plurals>
+    <plurals name="Todo_Task_AlertTimeNHoursBefore">
+        <item quantity="one">截止前 1 小時</item>
+        <item quantity="other">截止前 %d 小時</item>
+    </plurals>
+    <plurals name="Todo_Task_AlertTimeNMinutesBefore">
+        <item quantity="one">截止前 1 分鐘</item>
+        <item quantity="other">截止前 %d 分鐘</item>
+    </plurals>
+    <plurals name="Todo_Task_AlertTimeNWeeksBefore">
+        <item quantity="one">截止前 1 星期</item>
+        <item quantity="other">截止前 %d 星期</item>
+    </plurals>
+    <plurals name="Todo_Task_NumFollower">
+        <item quantity="one">%d 人追蹤</item>
+        <item quantity="other">%d 人追蹤</item>
+    </plurals>
+    <plurals name="Todo_Updates_NumListsIncluding_Title">
+        <item quantity="other">{name}，+ %d 個清單</item>
+    </plurals>
+    <plurals name="View_MemPopeSCW_FilesSynced_Text">
+        <item quantity="other">已同步 %d 個檔案</item>
+    </plurals>
+    <plurals name="View_MemPopeSCW_SyncedNumFile_Text">
+        <item quantity="other">同步了 %d 個檔案</item>
+    </plurals>
+    <plurals name="larus_DeepThink_thinkingComplete_status">
+        <item quantity="one">已完成思考，參考 %s 篇資料</item>
+        <item quantity="other">已完成思考，參考 %s 篇資料</item>
+    </plurals>
+    <plurals name="larus_LarkIM_Feed_NumNewMsg_Text">
+        <item quantity="one">%s 則</item>
+        <item quantity="other">%s 則</item>
+    </plurals>
+    <plurals name="larus_LarkIM_Forward_NumMsg_Text">
+        <item quantity="one">%d 則訊息</item>
+        <item quantity="other">%d 則訊息</item>
+    </plurals>
+    <plurals name="larus_LarkIM_Group_GroupMemberCount_Text">
+        <item quantity="one">%s 名群組成員</item>
+        <item quantity="other">%s 名群組成員</item>
+    </plurals>
+    <plurals name="larus_LarkIM_Group_GroupMemberNum_Title">
+        <item quantity="one">%s 名群組成員</item>
+        <item quantity="other">%s 名群組成員</item>
+    </plurals>
+    <plurals name="larus_LarkIM_Group_ReplyCount_Text">
+        <item quantity="one">%s 則回覆</item>
+        <item quantity="other">%s 則回覆</item>
+    </plurals>
+    <plurals name="larus_LarkIM_Msg_NumNew_Button">
+        <item quantity="one">%d 則新訊息</item>
+        <item quantity="other">%d 則新訊息</item>
+    </plurals>
+    <plurals name="larus_LarkIM_Msg_NumRead_Desc">
+        <item quantity="one">%s 人已讀</item>
+        <item quantity="other">%s 人已讀</item>
+    </plurals>
+    <plurals name="larus_LarkIM_Thread_ViewEarlier_Button">
+        <item quantity="one">查看更早 %s 則回覆</item>
+        <item quantity="other">查看更早 %s 則回覆</item>
+    </plurals>
+    <plurals name="larus_SuiteAdmin_DoubaoPersonal_PaidPlan_PendingAssignNotice_Text">
+        <item quantity="other">還有 %d 人待指派，請前往 PC 端操作</item>
+    </plurals>
+    <plurals name="larus_SuiteAdmin_DoubaoPersonal_PaidPlan_PendingAssignUsers_Desc">
+        <item quantity="other">%d 人待指派</item>
+    </plurals>
+    <plurals name="larus_SuiteAdmin_DoubaoPersonal_PaidPlan_PluralPeople_Text">
+        <item quantity="other">%d 人</item>
+    </plurals>
+    <plurals name="larus_SuiteAdmin_DoubaoPersonal_Pricing_UsedCardsCount_Field">
+        <item quantity="other">已用 num1/%d 張</item>
+    </plurals>
+    <plurals name="larus_SuiteAdmin_DoubaoPersonal_Pricing_UsedMinutesCount_Field">
+        <item quantity="other">已用 num1/%d 分鐘</item>
+    </plurals>
+    <plurals name="larus_SuiteAdmin_DoubaoPersonal_Pricing_UsedTimesCount_Field">
+        <item quantity="other">已用 num1/%d 次</item>
+    </plurals>
+    <plurals name="larus_WorkAgent_search_enterprise_knowledge_result">
+        <item quantity="one">參考 %s 篇企業資料</item>
+        <item quantity="other">參考 %s 篇企業資料</item>
+    </plurals>
+    <plurals name="larus_WorkAgent_search_enterprise_knowledge_result_done">
+        <item quantity="one">已完成思考，參考 %s 篇企業資料</item>
+        <item quantity="other">已完成思考，參考 %s 篇企業資料</item>
+    </plurals>
+    <plurals name="larus_add_multibots_to_chat_popup_title">
+        <item quantity="one">邀請 %s、%s 及其他 %d 個機器人加入聊天室？</item>
+        <item quantity="other">邀請 %s、%s 及其他 %d 個機器人加入聊天室？</item>
+    </plurals>
+    <plurals name="larus_aiCreation_modelConstraint_imageAudioVido1">
+        <item quantity="one">該模型最多支援 %s 張圖片，</item>
+        <item quantity="other">該模型最多支援 %s 張圖片，</item>
+    </plurals>
+    <plurals name="larus_aiCreation_modelConstraint_imageAudioVido2">
+        <item quantity="one">%s 段影片，</item>
+        <item quantity="other">%s 段影片，</item>
+    </plurals>
+    <plurals name="larus_aiCreation_modelConstraint_imageAudioVido3">
+        <item quantity="one">%s 段音訊。</item>
+        <item quantity="other">%s 段音訊。</item>
+    </plurals>
+    <plurals name="larus_aiCreation_modelConstraint_imageAudioVido4">
+        <item quantity="one">參考影片/音訊總時間長度不能超過 %s 秒。</item>
+        <item quantity="other">參考影片/音訊總時間長度不能超過 %s 秒。</item>
+    </plurals>
+    <plurals name="larus_aiCreation_modelConstraint_imageNo">
+        <item quantity="one">該模型最多支援匯入 %s 張參考圖片</item>
+        <item quantity="other">該模型最多支援匯入 %s 張參考圖片</item>
+    </plurals>
+    <plurals name="larus_aiCreation_publicReference_botMessage_confirmGen_global">
+        <item quantity="one">Dreamina Seedance 2.0 單次最多支援生成 %1$s 秒影片。%2$s</item>
+        <item quantity="other">Dreamina Seedance 2.0 單次最多支援生成 %1$s 秒影片。%2$s</item>
+    </plurals>
+    <plurals name="larus_aiCreation_publicReference_botMessage_confirmGen_placeholder_global">
+        <item quantity="one">本次生成預計將消耗 %s 個額度。確定要繼續生成影片嗎？</item>
+        <item quantity="other">本次生成預計將消耗 %s 個額度。確定要繼續生成影片嗎？</item>
+    </plurals>
+    <plurals name="larus_aiCreation_publicReference_toast_imageNo">
+        <item quantity="one">最多上傳 %s 張圖片</item>
+        <item quantity="other">最多上傳 %s 張圖片</item>
+    </plurals>
+    <plurals name="larus_aiCreation_publicReference_toast_videoLength">
+        <item quantity="one">單一影片最大時間長度 %s 秒</item>
+        <item quantity="other">單一影片最大時間長度 %s 秒</item>
+    </plurals>
+    <plurals name="larus_aiCreation_publicReference_toast_videoNo">
+        <item quantity="one">最多支援上傳 %s 部影片</item>
+        <item quantity="other">最多支援上傳 %s 部影片</item>
+    </plurals>
+    <plurals name="larus_aiCreation_publishPage_toast_imageRefNum">
+        <item quantity="one">圖片生成僅支援小於 %s 張的圖片素材</item>
+        <item quantity="other">圖片生成僅支援小於 %s 張的圖片素材</item>
+    </plurals>
+    <plurals name="larus_aiDoc_editHistory_moreEditors_new">
+        <item quantity="one">還有 %d 位編輯者</item>
+        <item quantity="other">還有 %d 位編輯者</item>
+    </plurals>
+    <plurals name="larus_appEntryManage_bottomSheet_toast_exceedPinItem">
+        <item quantity="one">可置頂最多 %s 個服務</item>
+        <item quantity="other">可置頂最多 %s 個服務</item>
+    </plurals>
+    <plurals name="larus_appEntry_aiCreation_taskStatus_desc_readyDay">
+        <item quantity="one">預期需要 %1$s 天。%2$s</item>
+        <item quantity="other">預期需要 %1$s 天。%2$s</item>
+    </plurals>
+    <plurals name="larus_appEntry_aiCreation_taskStatus_desc_readyHour">
+        <item quantity="one">預計需要 %1$s 小時。%2$s</item>
+        <item quantity="other">預計需要 %1$s 小時。%2$s</item>
+    </plurals>
+    <plurals name="larus_appEntry_aiCreation_taskStatus_desc_readyMin">
+        <item quantity="one">預計需要 %1$s 分鐘。%2$s</item>
+        <item quantity="other">預計需要 %1$s 分鐘。%2$s</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_done_fail">
+        <item quantity="one">影片已生成完畢，其中 %d 部影片生成失敗，影片生成額度未扣除，%2s</item>
+        <item quantity="other">影片已生成完畢，其中 %d 部影片生成失敗，影片生成額度未扣除，%2s</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_done_fail_2">
+        <item quantity="one">今日還剩餘 %d 個影片生成額度。</item>
+        <item quantity="other">今日還剩餘 %d 個影片生成額度。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_done_fail_new">
+        <item quantity="one">你的內容已生成完畢，其中 %d 部影片生成失敗，失敗影片的生成額度未扣除。</item>
+        <item quantity="other">你的內容已生成完畢，其中 %d 部影片生成失敗，失敗影片的生成額度未扣除。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating">
+        <item quantity="one">影片生成大約需要 %s 分鐘，請耐心等待，生成完畢後我會主動發送給你。</item>
+        <item quantity="other">影片生成大約需要 %s 分鐘，請耐心等待，生成完畢後我會主動發送給你。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_count">
+        <item quantity="one">今日剩餘 %s 個影片生成額度。</item>
+        <item quantity="other">今日剩餘 %s 個影片生成額度。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_count_30b">
+        <item quantity="one">本日還可生成 %s 個影片。</item>
+        <item quantity="other">本日還可生成 %s 個影片。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time">
+        <item quantity="one">影片生成大約需要 %s 分鐘，生成好後我會主動發送給你。</item>
+        <item quantity="other">影片生成大約需要 %s 分鐘，生成好後我會主動發送給你。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_1.5">
+        <item quantity="one">本次使用 **Seedance 1.5 Pro 有聲影片模型**生成，大約需要 %s 分鐘，生成完畢後我會主動發送給你，</item>
+        <item quantity="other">本次使用 **Seedance 1.5 Pro 有聲影片模型**生成，大約需要 %s 分鐘，生成完畢後我會主動發送給你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_15_noPoint">
+        <item quantity="one">本次使用 **Seedance 1.5 Pro 有聲影片模型**生成，大約需要 %s 分鐘，生成完畢後我會主動發送給你。</item>
+        <item quantity="other">本次使用 **Seedance 1.5 Pro 有聲影片模型**生成，大約需要 %s 分鐘，生成完畢後我會主動發送給你。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_2.0">
+        <item quantity="one">本次使用 **Seedance 2.0 Fast** 生成，大約需要 %s 分鐘。影片生成好後，我會主動傳送給你，</item>
+        <item quantity="other">本次使用 **Seedance 2.0 Fast** 生成，大約需要 %s 分鐘。影片生成好後，我會主動傳送給你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_20_noPoint">
+        <item quantity="one">本次使用 **Seedance 2.0 Fast** 生成，大約需要 %s 分鐘。影片生成好後，我會主動傳送給你。</item>
+        <item quantity="other">本次使用 **Seedance 2.0 Fast** 生成，大約需要 %s 分鐘。影片生成好後，我會主動傳送給你。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_25_global">
+        <item quantity="one">本次使用 **Dreamina Seedance 2.5**生成，大約需要 %s 分鐘。影片生成好後，我會主動傳送給你，</item>
+        <item quantity="other">本次使用 **Dreamina Seedance 2.5**生成，大約需要 %s 分鐘。影片生成好後，我會主動傳送給你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_2_global">
+        <item quantity="one">本次使用 **Dreamina Seedance 2.0 全能影片模型**生成，大約需要 %s 分鐘。影片生成好後，我會主動傳送給你，</item>
+        <item quantity="other">本次使用 **Dreamina Seedance 2.0 全能影片模型**生成，大約需要 %s 分鐘。影片生成好後，我會主動傳送給你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_30b">
+        <item quantity="one">本次使用 **Seedance 1.0 Pro** 高品質模型生成，大約需要 %s 分鐘，生成好後我會主動發送給你，</item>
+        <item quantity="other">本次使用 **Seedance 1.0 Pro** 高品質模型生成，大約需要 %s 分鐘，生成好後我會主動發送給你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_30b2">
+        <item quantity="one">本次使用 %s 高品質模型生成，大約需要 %s 分鐘，生成後我會主動發送給你，</item>
+        <item quantity="other">本次使用 %s 高品質模型生成，大約需要 %s 分鐘，生成後我會主動發送給你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_generating_time_noPoint">
+        <item quantity="one">影片生成大約需要 %s 分鐘，生成完畢後我會主動傳送給你。</item>
+        <item quantity="other">影片生成大約需要 %s 分鐘，生成完畢後我會主動傳送給你。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_notice_basic_startGen_dola">
+        <item quantity="one">本次影片生成將消耗 %1s 個影片生成額度，預計等待 %2s。影片生成完畢後，我會及時通知你，</item>
+        <item quantity="other">本次影片生成將消耗 %1s 個影片生成額度，預計等待 %2s。影片生成完畢後，我會及時通知你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_notice_limit_left">
+        <item quantity="one">%s，影片生成後我會主動通知你。今日還剩餘 %d 個影片生成額度。</item>
+        <item quantity="other">%s，影片生成後我會主動通知你。今日還剩餘 %d 個影片生成額度。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_notice_pro_startGen_2.0_dola">
+        <item quantity="one">本次使用 **Dreamina Seedance 2.0** 生成，將消耗 %1s 個影片生成額度，預計等待 %2s。影片生成好後，我會主動傳送給你，</item>
+        <item quantity="other">本次使用 **Dreamina Seedance 2.0** 生成，將消耗 %1s 個影片生成額度，預計等待 %2s。影片生成好後，我會主動傳送給你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_notice_pro_startGen_25_global">
+        <item quantity="one">本次使用 **Dreamina Seedance 2.5** 生成，將消耗 %1s 個影片生成額度，預計等待 %2s。影片生成好後，我會主動傳送給你，</item>
+        <item quantity="other">本次使用 **Dreamina Seedance 2.5** 生成，將消耗 %1s 個影片生成額度，預計等待 %2s。影片生成好後，我會主動傳送給你，</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_notice_startGen_remaining_new">
+        <item quantity="one">今日剩餘 %s 個積积分。</item>
+        <item quantity="other">今日剩餘 %s 個積积分。</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_wait_day">
+        <item quantity="one">%s 天</item>
+        <item quantity="other">%s 天</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_wait_hour">
+        <item quantity="one">%s 小時</item>
+        <item quantity="other">%s 小時</item>
+    </plurals>
+    <plurals name="larus_bot_videoGen_msg_wait_minute">
+        <item quantity="one">%s 分鐘</item>
+        <item quantity="other">%s 分鐘</item>
+    </plurals>
+    <plurals name="larus_botsComment_commentPanel_label_expand">
+        <item quantity="one">查看 %d 則回覆</item>
+        <item quantity="other">查看 %d 則回覆</item>
+    </plurals>
+    <plurals name="larus_ccmob_chatCount">
+        <item quantity="one">%s 則對話</item>
+        <item quantity="other">%s 則對話</item>
+    </plurals>
+    <plurals name="larus_chatPage_deleteRecord_deleteMessageNo">
+        <item quantity="one">你刪除了 %s 則訊息</item>
+        <item quantity="other">你刪除了 %s 則訊息</item>
+    </plurals>
+    <plurals name="larus_chatPage_deleteRecord_recallMessageNo">
+        <item quantity="one">你撤回了 %s 則訊息</item>
+        <item quantity="other">你撤回了 %s 則訊息</item>
+    </plurals>
+    <plurals name="larus_chat_addFile_selectedFiles_number_new">
+        <item quantity="one">已選 %s 個檔案</item>
+        <item quantity="other">已選 %s 個檔案</item>
+    </plurals>
+    <plurals name="larus_chat_upload_selected_files_count_desc_global">
+        <item quantity="one">已選擇 %s 個檔案</item>
+        <item quantity="other">已選擇 %s 個檔案</item>
+    </plurals>
+    <plurals name="larus_cici_complex_search_card_dropdown">
+        <item quantity="one">已完成 %s 個步驟</item>
+        <item quantity="other">已完成 %s 個步驟</item>
+    </plurals>
+    <plurals name="larus_cloneVoice_reachLimitToast">
+        <item quantity="one">複製的語音數量已達上限 %s 個</item>
+        <item quantity="other">複製的語音數量已達上限 %s 個</item>
+    </plurals>
+    <plurals name="larus_collections_songs">
+        <item quantity="one">%s 首歌</item>
+        <item quantity="other">%s 首歌</item>
+    </plurals>
+    <plurals name="larus_cot_status_askedQs">
+        <item quantity="one">已詢問 %s 個問題</item>
+        <item quantity="other">已詢問 %s 個問題</item>
+    </plurals>
+    <plurals name="larus_creationComment_inboxNotif_comment_multiple">
+        <item quantity="one">你的作品%s新增了 %d 則評論</item>
+        <item quantity="other">你的作品%s新增了 %d 則評論</item>
+    </plurals>
+    <plurals name="larus_creation_user_count">
+        <item quantity="one">%d 人使用</item>
+        <item quantity="other">%d 人使用</item>
+    </plurals>
+    <plurals name="larus_creation_user_count_2">
+        <item quantity="one">使用次數 %s</item>
+        <item quantity="other">使用次數 %s</item>
+    </plurals>
+    <plurals name="larus_credit_imageGen_message_consume">
+        <item quantity="one">本次生成圖片消耗 %s 積分，</item>
+        <item quantity="other">本次生成圖片消耗 %s 積分，</item>
+    </plurals>
+    <plurals name="larus_credit_message_credit_left">
+        <item quantity="one">今日剩餘 %s 積分。</item>
+        <item quantity="other">今日剩餘 %s 積分。</item>
+    </plurals>
+    <plurals name="larus_credit_message_credit_notEnough_fail">
+        <item quantity="one">目前剩餘 %s 積分，</item>
+        <item quantity="other">目前剩餘 %s 積分，</item>
+    </plurals>
+    <plurals name="larus_credit_message_credit_notEnough_fail2">
+        <item quantity="one">本次生成至少需要 %s 積分。無法生成，積分未扣除。</item>
+        <item quantity="other">本次生成至少需要 %s 積分。無法生成，積分未扣除。</item>
+    </plurals>
+    <plurals name="larus_credit_message_video_gen_credit_consume">
+        <item quantity="one">將消耗 %s 積分，</item>
+        <item quantity="other">將消耗 %s 積分，</item>
+    </plurals>
+    <plurals name="larus_credit_message_wait_time_24h">
+        <item quantity="one">預計等待 %s 小時。影片生成後，我會及時通知您。</item>
+        <item quantity="other">預計等待 %s 小時。影片生成後，我會及時通知您。</item>
+    </plurals>
+    <plurals name="larus_credit_message_wait_time_60min">
+        <item quantity="one">預計等待 %s 分鐘。影片生成後，我會及時通知您。</item>
+        <item quantity="other">預計等待 %s 分鐘。影片生成後，我會及時通知您。</item>
+    </plurals>
+    <plurals name="larus_credit_portraitGen_message_consume">
+        <item quantity="one">本次寫真消耗 %s 積分，</item>
+        <item quantity="other">本次寫真消耗 %s 積分，</item>
+    </plurals>
+    <plurals name="larus_credit_replicaGen_message_consume">
+        <item quantity="one">本次建立分身將消耗 %s 積分，</item>
+        <item quantity="other">本次建立分身將消耗 %s 積分，</item>
+    </plurals>
+    <plurals name="larus_deepResearch_message_complete_download">
+        <item quantity="one">本次深度研究已完成，今天還能繼續使用 %d 次。前往%s電腦版可使用更多次數。</item>
+        <item quantity="other">本次深度研究已完成，今天還能繼續使用 %d 次。前往%s電腦版可使用更多次數。</item>
+    </plurals>
+    <plurals name="larus_deepResearch_message_complete_limit_left">
+        <item quantity="one">本次深度研究已完成，今天還能使用 %d 次。</item>
+        <item quantity="other">本次深度研究已完成，今天還能使用 %d 次。</item>
+    </plurals>
+    <plurals name="larus_deepThink_modalTitle_search_thinking">
+        <item quantity="one">正根據 %s 個資料來源思考中</item>
+        <item quantity="other">正根據 %s 個資料來源思考中</item>
+    </plurals>
+    <plurals name="larus_deepThink_modalTitle_search_thinking_done">
+        <item quantity="one">已參考 %s 篇資料完成思考</item>
+        <item quantity="other">已參考 %s 篇資料完成思考</item>
+    </plurals>
+    <plurals name="larus_deepThink_modalTitle_search_thinking_done_global">
+        <item quantity="one">已參考 %s 篇資料完成思考 (R1)</item>
+        <item quantity="other">已參考 %s 篇資料完成思考 (R1)</item>
+    </plurals>
+    <plurals name="larus_deepThink_modalTitle_search_thinking_global">
+        <item quantity="one">正根據 %s 個資料來源思考中 (R1)</item>
+        <item quantity="other">正根據 %s 個資料來源思考中 (R1)</item>
+    </plurals>
+    <plurals name="larus_deepThink_modal_label_refer">
+        <item quantity="one">%s 個來源：</item>
+        <item quantity="other">%s 個來源：</item>
+    </plurals>
+    <plurals name="larus_deepThink_search_label_keywords">
+        <item quantity="one">已搜尋 %s 個關鍵字，</item>
+        <item quantity="other">已搜尋 %s 個關鍵字，</item>
+    </plurals>
+    <plurals name="larus_deepThink_search_label_sources">
+        <item quantity="one">參考 %s 篇資料</item>
+        <item quantity="other">參考 %s 篇資料</item>
+    </plurals>
+    <plurals name="larus_doubao_member_order_refund_expand_rest_global">
+        <item quantity="one">展開其餘 %s 項</item>
+        <item quantity="other">展開其餘 %s 項</item>
+    </plurals>
+    <plurals name="larus_drive_searchWindow_selectedFile_number">
+        <item quantity="one">已選取 %s 個檔案</item>
+        <item quantity="other">已選取 %s 個檔案</item>
+    </plurals>
+    <plurals name="larus_drive_toast_uploaded_number_new">
+        <item quantity="one">已上傳 %s 個檔案</item>
+        <item quantity="other">已上傳 %s 個檔案</item>
+    </plurals>
+    <plurals name="larus_genImage_message_more">
+        <item quantity="one">已爲你生成 %s 張圖片，有需要我可以繼續生成更多圖片。</item>
+        <item quantity="other">已爲你生成 %s 張圖片，有需要我可以繼續生成更多圖片。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_message_aiReplicaQueuing">
+        <item quantity="one">預計排隊 %s 分鐘，寫真生成完畢後，我會及時通知你。</item>
+        <item quantity="other">預計排隊 %s 分鐘，寫真生成完畢後，我會及時通知你。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_message_aiReplicaQueuing_hour">
+        <item quantity="one">預計排隊 %s 小時，寫真生成完畢後，我會及時通知你。</item>
+        <item quantity="other">預計排隊 %s 小時，寫真生成完畢後，我會及時通知你。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_message_imageQueuing">
+        <item quantity="one">預計排隊 %s 分鐘，圖片生成好後，我會及時通知你。</item>
+        <item quantity="other">預計排隊 %s 分鐘，圖片生成好後，我會及時通知你。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_message_imageQueuing_hour">
+        <item quantity="one">預計排隊 %s 小時，圖片生成完畢後，我會及時通知你。</item>
+        <item quantity="other">預計排隊 %s 小時，圖片生成完畢後，我會及時通知你。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_message_musicQueuing">
+        <item quantity="one">預計排隊 %s 分鐘，音樂生成完畢後，我會及時通知你。</item>
+        <item quantity="other">預計排隊 %s 分鐘，音樂生成完畢後，我會及時通知你。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_message_musicQueuing_hour">
+        <item quantity="one">預計排隊 %s 小時，音樂生成完畢後，我會及時通知你。</item>
+        <item quantity="other">預計排隊 %s 小時，音樂生成完畢後，我會及時通知你。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_message_videoQueuing">
+        <item quantity="one">預計排隊 %s 分鐘，影片生成完畢後，我會及時通知你。</item>
+        <item quantity="other">預計排隊 %s 分鐘，影片生成完畢後，我會及時通知你。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_message_videoQueuing_hour">
+        <item quantity="one">預計排隊 %s 小時，影片生成完畢後，我會及時通知你。</item>
+        <item quantity="other">預計排隊 %s 小時，影片生成完畢後，我會及時通知你。</item>
+    </plurals>
+    <plurals name="larus_generateQueue_pushDesc_videoFail_remainCount">
+        <item quantity="one">你的影片生成失敗了，生成額度未扣除，今日剩餘 %s 個影片生成额度。</item>
+        <item quantity="other">你的影片生成失敗了，生成額度未扣除，今日剩餘 %s 個影片生成额度。</item>
+    </plurals>
+    <plurals name="larus_imageThink_status_label_search_image_done">
+        <item quantity="one">找到 %d 張圖片參考</item>
+        <item quantity="other">找到 %d 張圖片參考</item>
+    </plurals>
+    <plurals name="larus_infra_globalSearch_multiplePeopleSelected">
+        <item quantity="one">{s_username} and {s_num} more</item>
+        <item quantity="other">{s_username} and {s_num} more</item>
+    </plurals>
+    <plurals name="larus_local_file_runtime_message_do_events_omitted">
+        <item quantity="one">已省略前 %s 條 DO 事件</item>
+        <item quantity="other">已省略前 %s 條 DO 事件</item>
+    </plurals>
+    <plurals name="larus_local_file_runtime_message_expand_tool_records">
+        <item quantity="one">展開 %s 條工具記錄</item>
+        <item quantity="other">展開 %s 條工具記錄</item>
+    </plurals>
+    <plurals name="larus_local_file_runtime_message_expanded_cap_notice">
+        <item quantity="one">僅顯示最近 %1$s 條工具紀錄，已省略 %2$s 條</item>
+        <item quantity="other">僅顯示最近 %1$s 條工具紀錄，已省略 %2$s 條</item>
+    </plurals>
+    <plurals name="larus_moa_agentGeneral_searchKey_foundSource">
+        <item quantity="one">找到 %d 個參考資料</item>
+        <item quantity="other">找到 %d 個參考資料</item>
+    </plurals>
+    <plurals name="larus_moa_agentGeneral_searchKeywordsSource">
+        <item quantity="one">搜尋 %d 個關鍵字，%s</item>
+        <item quantity="other">搜尋 %d 個關鍵字，%s</item>
+    </plurals>
+    <plurals name="larus_moa_comms_taskListRetrieved">
+        <item quantity="one">查詢定時任務清單成功 (共查詢 %d 項任務)：</item>
+        <item quantity="other">查詢定時任務清單成功 (共查詢 %d 項任務)：</item>
+    </plurals>
+    <plurals name="larus_moa_comms_taskWatiTime">
+        <item quantity="one">預計等待 %d 分鐘後開始</item>
+        <item quantity="other">預計等待 %d 分鐘後開始</item>
+    </plurals>
+    <plurals name="larus_multi_file_image_uploading_toast_maximum_number_global">
+        <item quantity="one">最多支援上傳 %s 個圖片或檔案</item>
+        <item quantity="other">最多支援上傳 %s 個圖片或檔案</item>
+    </plurals>
+    <plurals name="larus_multi_file_uploading_toast_maximum_number_new">
+        <item quantity="one">最多支援上傳 %s 個檔案</item>
+        <item quantity="other">最多支援上傳 %s 個檔案</item>
+    </plurals>
+    <plurals name="larus_multi_photo_uploading_toast_maximum_number_global">
+        <item quantity="one">最多支援上傳 %s 張圖片</item>
+        <item quantity="other">最多支援上傳 %s 張圖片</item>
+    </plurals>
+    <plurals name="larus_multi_photo_uploading_toast_maximum_number_new">
+        <item quantity="one">最多支援上傳 %s 張圖片</item>
+        <item quantity="other">最多支援上傳 %s 張圖片</item>
+    </plurals>
+    <plurals name="larus_notif_comment_creation_multi">
+        <item quantity="one">和其他 %d 人都評論了你的作品。</item>
+        <item quantity="other">和其他 %d 人都評論了你的作品。</item>
+    </plurals>
+    <plurals name="larus_notif_like_bot_body_with_multi_names">
+        <item quantity="one">和其他 %d 人對你的機器人 %s 按讚</item>
+        <item quantity="other">和其他 %d 人對你的機器人 %s 按讚</item>
+    </plurals>
+    <plurals name="larus_notif_like_creation_multi">
+        <item quantity="one">和其他 %d 人都喜歡你的作品。</item>
+        <item quantity="other">和其他 %d 人都喜歡你的作品。</item>
+    </plurals>
+    <plurals name="larus_pushVideo_desc_generating_summary">
+        <item quantity="one">正在生成 %s 個影片</item>
+        <item quantity="other">正在生成 %s 個影片</item>
+    </plurals>
+    <plurals name="larus_replica_bottomsheet_desc_upgrade_notice">
+        <item quantity="one">AI 寫真效果升級啦，升級後舊的分身將不會保留。</item>
+        <item quantity="other">AI 寫真效果升級啦，升級後舊的分身將不會保留。</item>
+    </plurals>
+    <plurals name="larus_replica_bottomsheet_option_desc_portrait">
+        <item quantity="one">正在建立分身，預計需 %d 分鐘</item>
+        <item quantity="other">正在建立分身，預計需 %d 分鐘</item>
+    </plurals>
+    <plurals name="larus_replica_gen_msg_prompt1">
+        <item quantity="one">正在建立你的分身，預計需要 %s 分鐘，首次耗時較長，分身建立完成後，我會及時通知你，之後每次生成寫真不到 1 分鐘。</item>
+        <item quantity="other">正在建立你的分身，預計需要 %s 分鐘，首次耗時較長，分身建立完成後，我會及時通知你，之後每次生成寫真不到 1 分鐘。</item>
+    </plurals>
+    <plurals name="larus_replica_gen_msg_prompt1_hour">
+        <item quantity="one">正在建立你的分身，預計需要 %s 小時，首次耗時較長，分身建立完成後，我會及時通知你，之後每次生成寫真不到一分鐘。</item>
+        <item quantity="other">正在建立你的分身，預計需要 %s 小時，首次耗時較長，分身建立完成後，我會及時通知你，之後每次生成寫真不到一分鐘。</item>
+    </plurals>
+    <plurals name="larus_replica_gen_msg_prompt2">
+        <item quantity="one">每月可建立 %d 次分身，</item>
+        <item quantity="other">每月可建立 %d 次分身，</item>
+    </plurals>
+    <plurals name="larus_replica_gen_msg_prompt3">
+        <item quantity="one">目前剩餘次數 %d 次。</item>
+        <item quantity="other">目前剩餘次數 %d 次。</item>
+    </plurals>
+    <plurals name="larus_replica_gen_msg_prompt4">
+        <item quantity="one">正在建立你的分身，預計還需要 %s 分鐘，分身建立完成後，會立刻為你生成寫真。</item>
+        <item quantity="other">正在建立你的分身，預計還需要 %s 分鐘，分身建立完成後，會立刻為你生成寫真。</item>
+    </plurals>
+    <plurals name="larus_replica_gen_msg_prompt4_hour">
+        <item quantity="one">正在建立你的分身，預計還需要 %s 小時，分身建立完成後，會立刻為你生成寫真。</item>
+        <item quantity="other">正在建立你的分身，預計還需要 %s 小時，分身建立完成後，會立刻為你生成寫真。</item>
+    </plurals>
+    <plurals name="larus_replica_gen_msg_prompt_week_limit">
+        <item quantity="one">每週可建立 %d 次分身，</item>
+        <item quantity="other">每週可建立 %d 次分身，</item>
+    </plurals>
+    <plurals name="larus_replica_modal_my_replica_subtitle_1">
+        <item quantity="one">可免費建立 %d 次分身，</item>
+        <item quantity="other">可免費建立 %d 次分身，</item>
+    </plurals>
+    <plurals name="larus_searchWeb_status_foundSource">
+        <item quantity="one">找到 %s 篇資料參考</item>
+        <item quantity="other">找到 %s 篇資料參考</item>
+    </plurals>
+    <plurals name="larus_searchWeb_status_location">
+        <item quantity="one">找到 %s 個地點</item>
+        <item quantity="other">找到 %s 個地點</item>
+    </plurals>
+    <plurals name="larus_searchWeb_status_produts_found">
+        <item quantity="one">找到 %s 個商品</item>
+        <item quantity="other">找到 %s 個商品</item>
+    </plurals>
+    <plurals name="larus_skill_hub_folder_file_count_exceeded_global">
+        <item quantity="one">資料夾內不能超過 %s 個檔案</item>
+        <item quantity="other">資料夾內不能超過 %s 個檔案</item>
+    </plurals>
+    <plurals name="larus_skill_hub_uploading_multiple_files_global">
+        <item quantity="one">正在上傳 %1$s 及其他 %2$s 個檔案</item>
+        <item quantity="other">正在上傳 %1$s 及其他 %2$s 個檔案</item>
+    </plurals>
+    <plurals name="larus_skill_writing_input_reference_uploadDoc_limitation_toast_new">
+        <item quantity="one">最多支援上傳 %d 個文件</item>
+        <item quantity="other">最多支援上傳 %d 個文件</item>
+    </plurals>
+    <plurals name="larus_slides_tool_foundImage">
+        <item quantity="one">找到 %s 張參考圖片</item>
+        <item quantity="other">找到 %s 張參考圖片</item>
+    </plurals>
+    <plurals name="larus_slides_tool_foundSource">
+        <item quantity="one">找到 %s 筆參考資料</item>
+        <item quantity="other">找到 %s 筆參考資料</item>
+    </plurals>
+    <plurals name="larus_slides_tool_searchedKeyWord">
+        <item quantity="one">搜尋 %1$s 個關鍵字，%2$s</item>
+        <item quantity="other">搜尋 %1$s 個關鍵字，%2$s</item>
+    </plurals>
+    <plurals name="larus_subscription_billing_desc_trialEnd">
+        <item quantity="one">試用體驗還剩 %s 天。</item>
+        <item quantity="other">試用體驗還剩 %s 天。</item>
+    </plurals>
+    <plurals name="larus_videoSum_select_errToast_limit_global">
+        <item quantity="one">最多支援 %s 個圖片/影片</item>
+        <item quantity="other">最多支援 %s 個圖片/影片</item>
+    </plurals>
+    <plurals name="larus_vlmImage_label_imageSource">
+        <item quantity="one">找到 %s 張圖片參考</item>
+        <item quantity="other">找到 %s 張圖片參考</item>
+    </plurals>
+    <plurals name="larus_vlmImage_label_keywordSource">
+        <item quantity="one">搜尋 %s 個關鍵字，</item>
+        <item quantity="other">搜尋 %s 個關鍵字，</item>
+    </plurals>
+    <plurals name="larus_vlmImage_label_keywordSource2">
+        <item quantity="one">參考 %s 篇資料</item>
+        <item quantity="other">參考 %s 篇資料</item>
+    </plurals>
+    <plurals name="larus_vlm_status_text_foundImage">
+        <item quantity="one">找到 %s 張圖片</item>
+        <item quantity="other">找到 %s 張圖片</item>
+    </plurals>
+</resources>

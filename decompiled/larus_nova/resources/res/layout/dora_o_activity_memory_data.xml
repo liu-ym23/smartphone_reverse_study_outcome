@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dora_o_bg_page"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.obric.oui.titlebar.OFloatingTitleBar
+        android:id="@+id/memory_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:oFloatingTitleBar_maskBlurRadius="8"
+        app:oFloatingTitleBar_statusBarImmersion="true"/>
+    <FrameLayout
+        android:id="@+id/memory_tab_container"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_56"
+        android:translationZ="?attr/larus_dp_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/memory_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_0"
+        android:layout_marginTop="?attr/larus_dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memory_tab_container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

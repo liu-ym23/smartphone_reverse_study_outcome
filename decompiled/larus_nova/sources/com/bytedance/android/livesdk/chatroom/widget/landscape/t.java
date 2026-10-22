@@ -1,0 +1,25 @@
+package com.bytedance.android.livesdk.chatroom.widget.landscape;
+
+import io.reactivex.functions.Function;
+import kotlin.Unit;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes8.dex */
+public final class t<T, R> implements Function {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final t f119132a = null;
+
+    static {
+        f119132a = new t();
+    }
+
+    public t() {
+    }
+
+    @Override // io.reactivex.functions.Function
+    public final Object apply(Object r100) {
+        Intrinsics.checkNotNullParameter((Long) r100, "it");
+        return Unit.INSTANCE;
+    }
+}

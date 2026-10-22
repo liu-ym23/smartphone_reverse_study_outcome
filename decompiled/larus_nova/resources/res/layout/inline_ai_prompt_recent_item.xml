@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.android.lark.docs.ui.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/item_content"
+        layout="@layout/inline_ai_prompt_child_item"/>
+    <include
+        android:id="@+id/item_menu"
+        layout="@layout/inline_ai_prompt_recent_item_right"/>
+</com.ss.android.lark.docs.ui.widget.SwipeMenuLayout>

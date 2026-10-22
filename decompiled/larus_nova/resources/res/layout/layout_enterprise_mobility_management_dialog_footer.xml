@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.larksuite.component.universe_design.checkbox.UDCheckBox
+        android:id="@+id/cbEMMCPDialog"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ud_checkbox_size="small"
+        app:ud_checkbox_type="radio"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/ud_N900"
+        android:id="@+id/tvEMMCPDialogCBTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Lark_TerminalSecurity_Button_DoNotShowAgain"
+        app:layout_constraintBottom_toBottomOf="@+id/cbEMMCPDialog"
+        app:layout_constraintStart_toEndOf="@+id/cbEMMCPDialog"
+        app:layout_constraintTop_toTopOf="@+id/cbEMMCPDialog"/>
+    <View
+        android:id="@+id/viewEMMCPDialogDivider"
+        android:background="@color/ud_N900_15"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbEMMCPDialog"/>
+    <com.larksuite.component.universe_design.button.UDButton
+        android:textSize="17sp"
+        android:textColor="@color/colorful_blue"
+        android:id="@+id/btnEMMCPDialog"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        app:layout_constraintTop_toBottomOf="@+id/viewEMMCPDialogDivider"
+        app:ud_radius="xxl"
+        style="@style/UDButton.Big.Primary"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

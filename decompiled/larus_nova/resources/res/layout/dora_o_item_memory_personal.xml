@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obric.oui.lisitem.OCardListItem xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/memory_personal_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/larus_dp_16"
+    android:layout_marginStart="?attr/larus_dp_12"
+    android:layout_marginEnd="?attr/larus_dp_12"
+    app:ocardlistitem_cardType="type_normal"
+    app:ocardlistitem_showCardBg="false"
+    app:ocardlistitem_showTitle="true"/>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textSize="13sp"
+    android:textColor="@color/ttlive_link_text_color"
+    android:id="@+id/tv_host_nick_name"
+    android:paddingBottom="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    app:layout_constraintBottom_toTopOf="@+id/new_profile_tags_flow_layout"
+    app:layout_constraintStart_toStartOf="@+id/new_live_profile_user_name"/>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/aweme_post_list"
+        android:background="?attr/larus_bg_gradient_related_video_flow"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:textSize="?attr/larus_dp_12"
+        android:textColor="?attr/larus_neutral_70"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/view_more"
+        android:background="?attr/larus_bg_btn_r16_base_2_overlay"
+        android:layout_width="?attr/larus_dp_72"
+        android:layout_height="?attr/larus_dp_30"
+        android:layout_marginTop="?attr/larus_dp_8"
+        android:text="@string/larus_db_feed_chatList_viewMore_cn"/>
+</FrameLayout>

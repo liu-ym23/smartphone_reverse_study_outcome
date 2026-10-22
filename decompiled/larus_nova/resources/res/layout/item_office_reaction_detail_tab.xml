@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/tabRoot"
+        android:background="@drawable/bg_office_reaction_detail_tab_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="10dp">
+        <ImageView
+            android:id="@+id/tabIcon"
+            android:duplicateParentState="true"
+            android:layout_width="@dimen/office_reaction_detail_tab_icon_size"
+            android:layout_height="@dimen/office_reaction_detail_tab_icon_size"
+            android:contentDescription="@null"/>
+        <TextView
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/office_reaction_detail_tab_count_selector"
+            android:id="@+id/tabCount"
+            android:duplicateParentState="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+</FrameLayout>

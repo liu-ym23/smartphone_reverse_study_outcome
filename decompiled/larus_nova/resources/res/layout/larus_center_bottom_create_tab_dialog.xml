@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/create_tab_dialog_shadow"
+        android:background="@drawable/larus_bg_dialog_top_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/larus_dp_50"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:fillViewport="true">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@+id/item_container"
+            android:background="@drawable/larus_bg_bottom_sheet"
+            android:paddingBottom="?attr/larus_dp_28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:background="@drawable/larus_bg_dialog_sheet_top"
+                android:layout_width="?attr/larus_dp_36"
+                android:layout_height="?attr/larus_dp_4"
+                android:layout_marginTop="?attr/larus_dp_10"
+                android:layout_marginBottom="?attr/larus_dp_18"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

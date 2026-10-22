@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larksuite.component.universe_design.shadow.UDShadowLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="44dp"
+    app:ud_shadow_radius="18dp"
+    style="@style/UDShadow.S2">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/littleAppCapsuleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMore"
+            android:padding="4dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:tint="@color/flow_ud_neutral_100"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/office_sdk_mm_ic_more_doubao"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:padding="4dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:tint="@color/flow_ud_neutral_100"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/office_sdk_mm_ic_little_app_close_doubao"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.larksuite.component.universe_design.shadow.UDShadowLayout>

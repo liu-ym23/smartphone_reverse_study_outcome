@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/notify_content"
+    android:background="@drawable/ttlive_bg_room_push_notify_message_v2"
+    android:paddingLeft="8dp"
+    android:paddingTop="4dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="fitCenter"/>
+    <com.bytedance.android.live.core.widget.LiveTextView
+        android:textSize="15dp"
+        android:textColor="@color/ttlive_core_hs_s5"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:minWidth="100dp"
+        android:layout_weight="1"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"/>
+    <com.bytedance.android.live.uikit.rtl.AutoRTLImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/right_icon"
+        android:background="@drawable/ttlive_ic_rich_text_arrow"
+        android:layout_width="16dp"
+        android:layout_height="16dp"/>
+</LinearLayout>

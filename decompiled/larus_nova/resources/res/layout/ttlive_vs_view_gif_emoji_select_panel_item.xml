@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bytedance.android.livesdk.widget.roundcorner.RoundCornerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    app:ttlive_allRadius="10dp">
+    <com.bytedance.android.live.core.widget.HSImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ttlive_vs_danmu_gif_emoji_panel_item_image"
+        android:background="@drawable/ttlive_bg_vs_item_vs_danmu_gif_panel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:scaleType="centerInside"
+        app:actualImageScaleType="centerInside"/>
+    <FrameLayout
+        android:id="@+id/ttlive_vs_danmu_gif_panel_load_error_layer"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/ttlive_vs_danmu_gif_panel_load_error_img"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ttlive_vs_ic_gif_panel_danmu_emoji_firsttime_loading_fail"
+            android:scaleType="centerInside"/>
+        <ProgressBar
+            android:layout_gravity="end|top"
+            android:id="@+id/ttlive_vs_danmu_gif_panel_loading_view"
+            android:background="@drawable/uicomponent_bg_upload_progress"
+            android:visibility="gone"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_margin="4dp"
+            android:indeterminateTint="@color/ttlive_std_brand"/>
+        <ImageView
+            android:layout_gravity="end|top"
+            android:id="@+id/ttlive_vs_danmu_gif_panel_download_icon"
+            android:visibility="gone"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ttlive_vs_ic_panel_gif_danmu_download"
+            android:scaleType="centerCrop"/>
+    </FrameLayout>
+</com.bytedance.android.livesdk.widget.roundcorner.RoundCornerFrameLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <View
+        android:id="@+id/bg_midi_left"
+        android:background="@drawable/ttlive_bg_ktv_midi_left"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:id="@+id/bg_midi_right"
+        android:background="@drawable/ttlive_bg_ktv_midi_right"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <com.bytedance.android.live.ktv.common.midi.KSongToneLinesView
+        android:id="@+id/toneLines"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:background="#33ffffff"
+        android:visibility="gone"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="68dp"
+        android:layout_marginStart="68dp"/>
+    <ImageView
+        android:id="@+id/tonePoint"
+        android:layout_width="15dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="48dp"
+        android:src="@drawable/ttlive_ktv_tone_point"
+        android:layout_marginStart="48dp"/>
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <item
+        android:drawable="@drawable/larus_icon_ai_generating"
+        android:left="?attr/larus_dp_4"
+        android:top="?attr/larus_dp_4"
+        android:right="?attr/larus_dp_4"
+        android:bottom="?attr/larus_dp_4"/>
+</layer-list>

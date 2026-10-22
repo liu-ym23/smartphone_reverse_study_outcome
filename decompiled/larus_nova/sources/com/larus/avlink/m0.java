@@ -1,0 +1,11 @@
+package com.larus.avlink;
+
+/* JADX INFO: loaded from: classes24.dex */
+public final class m0 {
+
+    public static final class a {
+    }
+
+    static {
+    }
+}

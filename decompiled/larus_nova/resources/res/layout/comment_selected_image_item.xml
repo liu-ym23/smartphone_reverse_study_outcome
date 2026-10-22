@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/comment_image_bg_border"
+    android:layout_width="@dimen/space_kit_len_80"
+    android:layout_height="@dimen/space_kit_len_80">
+    <com.bytedance.ee.bear.middleground.comment.image.CommentImageView
+        android:id="@+id/iv_selected_comment_image"
+        android:background="@color/ud_N200"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/space_kit_len_1"
+        android:scaleType="centerCrop"
+        app:radius="@dimen/space_kit_len_4"/>
+    <ImageView
+        android:layout_gravity="end|top"
+        android:id="@+id/iv_delete_selected_comment_image"
+        android:layout_width="@dimen/space_kit_len_30"
+        android:layout_height="@dimen/space_kit_len_30"
+        android:layout_margin="@dimen/space_kit_len_1"
+        android:src="@drawable/icon_comment_delete_img"
+        android:scaleType="centerInside"/>
+    <View
+        android:id="@+id/image_mask"
+        android:background="@color/bg_body_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="start|bottom"
+        android:id="@+id/comment_badge"
+        android:background="@drawable/bg_comment_badge"
+        android:padding="@dimen/space_kit_len_2"
+        android:visibility="gone"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/space_kit_len_6"
+        android:scaleType="centerInside"
+        android:layout_marginStart="@dimen/space_kit_len_6"
+        app:srcCompat="@drawable/ud_icon_contact_outlined"
+        app:tint="@android:color/white"/>
+</FrameLayout>

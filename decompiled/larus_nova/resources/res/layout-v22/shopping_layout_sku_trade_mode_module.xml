@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/commerce_sku_trade_root_view"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="12dp">
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/shopping_color_161823"
+        android:id="@+id/tv_sku_trade_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        style="@style/font_size_28"/>
+    <com.bytedance.android.ec.common.impl.common.ECHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/ll_sku_trade_container"
+            android:clipChildren="false"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"/>
+    </com.bytedance.android.ec.common.impl.common.ECHorizontalScrollView>
+</LinearLayout>

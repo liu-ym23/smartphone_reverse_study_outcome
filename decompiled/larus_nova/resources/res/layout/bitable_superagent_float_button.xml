@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.larksuite.component.universe_design.shadow.UDShadowLayout
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ud_shadow_radius="23dp"
+        style="@style/UDShadow.S2.Down">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/bitable_superagent_float_root"
+            android:background="@drawable/bitable_superagent_float_bg"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bitable_superagent_float_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/icon_n1"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ud_icon_meeting_ai_outlined"/>
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/text_caption"
+                android:ellipsize="end"
+                android:id="@+id/bitable_superagent_float_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </com.larksuite.component.universe_design.shadow.UDShadowLayout>
+</merge>

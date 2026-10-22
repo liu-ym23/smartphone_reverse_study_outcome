@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textAppearance="@style/UDText.Body2"
+        android:id="@+id/audio_panel_inner_view_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/audio_panel_inner_view_main_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <com.larksuite.component.universe_design.button.UDButton
+        android:gravity="center"
+        android:id="@+id/audio_panel_inner_view_main_button"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        app:ud_backgroundColor="@color/function_info_content_default"
+        app:ud_isRadiusAdjustBounds="true"
+        app:ud_radius="round"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textAppearance="@style/UDText.Body2"
+        android:id="@+id/audio_panel_inner_view_switch_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:drawablePadding="2dp"
+        app:drawableEndCompat="@drawable/ud_icon_down_bold_outlined"
+        app:drawableTint="@color/icon_n2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audio_panel_inner_view_main_button"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

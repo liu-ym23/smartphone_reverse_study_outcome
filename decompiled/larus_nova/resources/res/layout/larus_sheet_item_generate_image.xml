@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_gravity="center"
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/larus_bg_ugc_create_placeholder"
+        app:placeholderImageScaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/progress_container"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.lynx.lottieadapter.LottieAdapterView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/progress_icon"
+            android:layout_width="?attr/larus_dp_40"
+            android:layout_height="?attr/larus_dp_40"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/larus_static_white"
+            android:id="@+id/progress_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/larus_dp_12"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_gravity="end|bottom"
+        android:id="@+id/watermark"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/larus_dp_40"
+        android:src="@drawable/larus_bg_ugc_create_placeholder"
+        android:scaleType="fitCenter"/>
+    <include
+        android:id="@+id/error_lay"
+        android:visibility="gone"
+        layout="@layout/larus_sheet_layout_bot_edit_error_lay"/>
+</FrameLayout>

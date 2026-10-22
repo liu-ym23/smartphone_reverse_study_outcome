@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.larus.common_ui.view.SearchAccountEntryView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/larus_white_bg_item_middle"
+    android:paddingTop="?attr/larus_dp_14"
+    android:paddingBottom="?attr/larus_dp_14"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/larus_dp_76"
+    android:paddingStart="?attr/larus_dp_16"
+    android:paddingEnd="?attr/larus_dp_16">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_search_account_icon"
+        android:layout_width="?attr/larus_dp_48"
+        android:layout_height="?attr/larus_dp_48"
+        android:src="@drawable/avatar"/>
+    <TextView
+        android:textSize="?attr/larus_sp_17"
+        android:textStyle="bold"
+        android:textColor="@color/larus_neutral_100"
+        android:ellipsize="end"
+        android:id="@+id/text_search_account_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:layout_marginStart="?attr/larus_dp_16"/>
+</com.larus.common_ui.view.SearchAccountEntryView>

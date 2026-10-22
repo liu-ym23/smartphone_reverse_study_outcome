@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/case_layout"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/normal_bottom_case_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:textSize="?attr/larus_sp_17"
+            android:textStyle="bold"
+            android:textColor="@color/larus_static_white"
+            android:id="@+id/case_continue_chat"
+            android:background="?attr/larus_bg_bottom_action_button_new"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/larus_dp_56"
+            android:layout_marginTop="?attr/larus_dp_12"
+            android:layout_marginBottom="?attr/larus_dp_12"
+            android:text="@string/larus_chat_btn"
+            android:textAllCaps="false"
+            android:layout_marginStart="?attr/larus_dp_12"
+            android:layout_marginEnd="?attr/larus_dp_12"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </LinearLayout>
+</LinearLayout>

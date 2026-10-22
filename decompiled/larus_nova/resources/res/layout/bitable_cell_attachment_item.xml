@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/attachment_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.ee.bear.bitable.card.view.cell.attachment.view.PageAttachmentView
+        android:id="@+id/attachment_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <FrameLayout
+        android:id="@+id/add_attachment_button_fl"
+        android:background="@drawable/facade_round_around_s"
+        android:padding="12dp"
+        android:focusable="true"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/space_kit_len_12"
+        android:backgroundTint="@color/bitable_page_field_item_right_icon_color">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:id="@+id/add_attachment_button_image"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:scaleType="centerInside"
+            android:tint="@color/icon_n3"
+            app:srcCompat="@drawable/ud_icon_add_outlined"/>
+    </FrameLayout>
+</LinearLayout>

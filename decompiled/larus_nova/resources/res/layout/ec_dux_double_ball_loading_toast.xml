@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.bytedance.android.ui.base.widget.round.RoundLinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/root_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bg_color="@color/ec_dux_black_393B44"
+        app:bg_cornerRadius="12dp"
+        style="@style/ec_popup_toast_layout">
+        <com.bytedance.android.ui.ec.widget.loading.ECDuxLoadingAnimationView
+            android:id="@+id/loading_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/ec_loading"/>
+    </com.bytedance.android.ui.base.widget.round.RoundLinearLayout>
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@+id/close_btn"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/root_view"
+        android:layout_alignEnd="@+id/root_view">
+        <com.bytedance.android.ui.base.widget.icon.IconImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ec_dux_ic_s_s_xmark_outlined_12"
+            android:cropToPadding="true"
+            app:icon_color="@color/white_34"/>
+    </RelativeLayout>
+</RelativeLayout>

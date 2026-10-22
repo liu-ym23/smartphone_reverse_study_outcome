@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/button_node_bg"
+    android:background="@drawable/ec_commerce_shop_node_btn_bg"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp">
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/shopping_color_161823"
+        android:id="@+id/button_node_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/button_node_arrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/ec_shop_card_enter_shop_arrow"/>
+</LinearLayout>

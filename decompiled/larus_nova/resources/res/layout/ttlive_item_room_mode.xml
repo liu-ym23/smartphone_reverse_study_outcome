@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/room_container"
+    android:layout_width="match_parent"
+    android:layout_height="128dp">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/room_mode_icon"
+        android:layout_width="84dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/ttlive_audience_link_tips"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/room_mode_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"/>
+    <TextView
+        android:textSize="12dp"
+        android:textColor="@color/ttlive_audience_link_small_tips"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/room_mode_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"/>
+</LinearLayout>

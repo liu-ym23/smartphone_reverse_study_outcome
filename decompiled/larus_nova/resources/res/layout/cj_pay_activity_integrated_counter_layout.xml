@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cj_pay_single_fragment_activity_root_view"
+    android:background="@color/cj_pay_color_layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:visibility="gone"
+        layout="@layout/cj_pay_activity_outer_counter"/>
+    <FrameLayout
+        android:id="@+id/cj_pay_single_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"/>
+    <com.android.ttcjpaysdk.base.ui.widget.CJPayTextLoadingView
+        android:id="@+id/cj_pay_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

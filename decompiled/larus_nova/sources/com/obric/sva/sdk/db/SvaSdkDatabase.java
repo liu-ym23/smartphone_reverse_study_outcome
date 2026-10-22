@@ -1,0 +1,83 @@
+package com.obric.sva.sdk.db;
+
+import android.content.Context;
+import androidx.room.DatabaseConfiguration;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
+import androidx.room.migration.Migration;
+import com.obric.sva.sdk.utils.LogUtils;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b'\u0018\u0000 \n2\u00020\u0001:\u0002\n\u000bB\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\b\u0010\u0004\u001a\u00020\u0005H&J\u0010\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tH\u0016¨\u0006\f"}, d2 = {"Lcom/obric/sva/sdk/db/SvaSdkDatabase;", "Landroidx/room/RoomDatabase;", "<init>", "()V", "VoicePrintDao", "Lcom/obric/sva/sdk/db/VoicePrintDao;", "init", "", "configuration", "Landroidx/room/DatabaseConfiguration;", "Companion", "Migrations", "libs_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public abstract class SvaSdkDatabase extends RoomDatabase {
+    public static final Companion Companion = null;
+    public static final String DB_NAME = "sva_sdk";
+    private static final String TAG = "SvaSdkDatabase";
+    private static volatile SvaSdkDatabase sMe;
+
+    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u000e\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\u000bR\u000e\u0010\u0004\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0005X\u0082T¢\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\bX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\f"}, d2 = {"Lcom/obric/sva/sdk/db/SvaSdkDatabase$Companion;", "", "<init>", "()V", "DB_NAME", "", "TAG", "sMe", "Lcom/obric/sva/sdk/db/SvaSdkDatabase;", "instance", "c", "Landroid/content/Context;", "libs_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(DefaultConstructorMarker r100) {
+            this();
+        }
+
+        public final SvaSdkDatabase instance(Context r100) {
+            Intrinsics.checkNotNullParameter(r100, "c");
+            if (SvaSdkDatabase.access$getSMe$cp() != null) goto L5;
+            LogUtils.i(SvaSdkDatabase.TAG, "SvaSdkDatabase instance ...", new Object[0]);
+            SvaSdkDatabase.access$setSMe$cp((SvaSdkDatabase) Room.databaseBuilder(r100, SvaSdkDatabase.class, SvaSdkDatabase.DB_NAME).addMigrations(new Migration[]{Migrations.INSTANCE.getMIGRATION_1_2()}).fallbackToDestructiveMigration().build());
+        L5:
+            SvaSdkDatabase r101 = SvaSdkDatabase.access$getSMe$cp();
+            Intrinsics.checkNotNull(r101);
+            return r101;
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lcom/obric/sva/sdk/db/SvaSdkDatabase$Migrations;", "", "<init>", "()V", "MIGRATION_1_2", "Landroidx/room/migration/Migration;", "getMIGRATION_1_2", "()Landroidx/room/migration/Migration;", "libs_mainlandRelease"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class Migrations {
+        public static final Migrations INSTANCE = null;
+        private static final Migration MIGRATION_1_2 = null;
+
+        private Migrations() {
+        }
+
+        static {
+            INSTANCE = new Migrations();
+            MIGRATION_1_2 = new SvaSdkDatabase$Migrations$MIGRATION_1_2$1();
+        }
+
+        public final Migration getMIGRATION_1_2() {
+            return MIGRATION_1_2;
+        }
+    }
+
+    static {
+        Companion = new Companion(null);
+    }
+
+    public abstract VoicePrintDao VoicePrintDao();
+
+    public SvaSdkDatabase() {
+    }
+
+    public static final /* synthetic */ SvaSdkDatabase access$getSMe$cp() {
+        return sMe;
+    }
+
+    public static final /* synthetic */ void access$setSMe$cp(SvaSdkDatabase r100) {
+        sMe = r100;
+    }
+
+    @Override // androidx.room.RoomDatabase
+    public void init(DatabaseConfiguration r100) {
+        Intrinsics.checkNotNullParameter(r100, "configuration");
+        super.init(r100);
+        LogUtils.i(TAG, "init with configuration " + r100, new Object[0]);
+    }
+}

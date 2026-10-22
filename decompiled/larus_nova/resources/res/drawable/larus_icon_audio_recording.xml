@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="16dp"
+    android:width="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:fillColor="?attr/primary_transparent_2"
+        android:pathData="M4,0L12,0A4,4 0,0 1,16 4L16,12A4,4 0,0 1,12 16L4,16A4,4 0,0 1,0 12L0,4A4,4 0,0 1,4 0z"/>
+    <path
+        android:fillColor="?attr/larus_primary_50"
+        android:pathData="M11.613,6.867C11.871,6.856 12.088,7.055 12.1,7.313L12.102,7.356C12.203,9.691 10.337,11.639 8,11.639C5.663,11.639 3.797,9.691 3.898,7.356L3.9,7.313C3.912,7.055 4.129,6.856 4.387,6.867C4.644,6.879 4.844,7.096 4.833,7.354L4.831,7.397C4.753,9.201 6.194,10.706 8,10.706C9.806,10.706 11.247,9.2 11.169,7.396L11.167,7.354C11.156,7.096 11.356,6.879 11.613,6.867ZM8,3.333C9.215,3.333 10.2,4.318 10.2,5.533V7.533C10.2,8.748 9.215,9.734 8,9.734C6.785,9.734 5.8,8.748 5.8,7.533V5.533C5.8,4.318 6.785,3.333 8,3.333Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M8,11.333V12.667"
+        android:strokeColor="?attr/larus_primary_50"
+        android:strokeWidth="1.0667"
+        android:strokeLineCap="round"/>
+</vector>

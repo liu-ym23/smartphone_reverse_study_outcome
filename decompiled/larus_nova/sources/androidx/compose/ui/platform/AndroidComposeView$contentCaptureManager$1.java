@@ -1,0 +1,26 @@
+package androidx.compose.ui.platform;
+
+import android.view.View;
+import androidx.compose.ui.platform.coreshims.ContentCaptureSessionCompat;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
+public /* synthetic */ class AndroidComposeView$contentCaptureManager$1 extends FunctionReferenceImpl implements Function0<ContentCaptureSessionCompat> {
+    public AndroidComposeView$contentCaptureManager$1(Object r100) {
+        super(0, r100, AndroidComposeView_androidKt.class, "getContentCaptureSessionCompat", "getContentCaptureSessionCompat(Landroid/view/View;)Landroidx/compose/ui/platform/coreshims/ContentCaptureSessionCompat;", 1);
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // kotlin.jvm.functions.Function0
+    public final ContentCaptureSessionCompat invoke() {
+        return AndroidComposeView_androidKt.access$getContentCaptureSessionCompat((View) this.receiver);
+    }
+
+    @Override // kotlin.jvm.functions.Function0
+    public /* bridge */ /* synthetic */ ContentCaptureSessionCompat invoke() {
+        return invoke();
+    }
+}
