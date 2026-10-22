@@ -1,0 +1,65 @@
+syntax = "proto3";
+package com.zyql.task.engine;
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.task.engine";
+option java_outer_classname = "TaskInternal";
+
+service TaskEngine {
+
+    rpc Invoke(InvokeReq) returns (InvokeResp){} //提交
+    rpc TaskStateQuery(TaskStateReq) returns (TaskStateResp){}//查询状态
+    rpc TaskDeal(TaskDealReq) returns (TaskDealResp){}//任务处理
+    rpc Subscribe(SubscribeReq) returns (SubscribeResp){}//订阅
+}
+
+enum InvokeState {
+    OK = 0;
+    fail = 1;
+}
+
+enum TaskState {
+    Running = 0;
+    Stop = 1;
+    Pending = 2;
+    Complete = 3;
+    Failed = 4;
+    Canceled =5;
+}
+message TaskStateReq {
+    string taskId =1;
+}
+message TaskStateResp {
+
+    TaskState state = 1;// 任务状态
+}
+
+message TaskDealReq {
+    string taskId =1;
+    string commond =2; //cancel
+}
+
+message TaskDealResp {
+    InvokeState  state=1;
+}
+
+message SubscribeReq {
+    string taskId =1;
+}
+message SubscribeResp {
+    // 订阅状态
+    InvokeState state = 1;
+}
+
+message InvokeReq {
+    string module = 1;
+    string command = 2;
+    string msgId = 3; // 消息id
+    bytes body = 4;  // agent 需要的结构
+}
+
+message InvokeResp {
+    // 任务id
+    string taskId = 1;
+    // 执行状态
+    InvokeState state = 2;
+}

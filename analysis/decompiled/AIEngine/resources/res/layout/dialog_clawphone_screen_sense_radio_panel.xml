@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/fd_sys_color_on_surface_default"
+        android:id="@+id/tv_scope_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clawphone_screen_sense_dialog_scope_label"
+        android:includeFontPadding="false"
+        android:alpha="0.8"
+        android:fontFamily="sans-serif-medium"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/radio_group_scope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/clawphone_dialog_scope_label_bottom_margin"/>
+</LinearLayout>

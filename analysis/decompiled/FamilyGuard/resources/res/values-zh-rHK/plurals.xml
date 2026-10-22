@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="us_widget_hour">
+        <item quantity="one">小時</item>
+        <item quantity="other">小時</item>
+    </plurals>
+    <plurals name="us_widget_minute">
+        <item quantity="one">分鐘</item>
+        <item quantity="other">分鐘</item>
+    </plurals>
+    <plurals name="us_widget_second">
+        <item quantity="one">秒</item>
+        <item quantity="other">秒</item>
+    </plurals>
+</resources>

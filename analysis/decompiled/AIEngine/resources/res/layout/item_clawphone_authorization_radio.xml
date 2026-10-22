@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/clawphone_radio_item_row"
+    android:background="@drawable/clawphone_dialog_radio_item_bg"
+    android:paddingTop="@dimen/clawphone_dialog_radio_item_padding_vertical"
+    android:paddingBottom="@dimen/clawphone_dialog_radio_item_padding_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/clawphone_dialog_radio_item_padding_start"
+    android:paddingEnd="@dimen/clawphone_dialog_radio_item_padding_start">
+    <RadioButton
+        android:id="@+id/clawphone_radio_button"
+        android:background="@null"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/clawphone_dialog_radio_selector"
+        android:minWidth="0dp"
+        android:minHeight="0dp"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/fd_sys_color_on_surface_default"
+        android:id="@+id/clawphone_radio_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

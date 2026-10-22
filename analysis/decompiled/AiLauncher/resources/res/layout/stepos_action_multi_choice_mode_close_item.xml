@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="?attr/steposMultiChoiceViewItemTextAppearance"
+    android:ellipsize="middle"
+    android:id="@+id/stepos_action_multi_choice_close_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="26dp"
+    android:text="@string/stepos_action_bar_multi_choice_cancel"
+    style="?attr/steposControlTitleBarNegativeButtonStyle"/>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/receive_message_bg"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:paddingHorizontal="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintEnd_toStartOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:id="@+id/tool_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="20sp"
+        android:textColor="#ffcccccc"
+        android:id="@+id/tool_execute_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tool_title"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

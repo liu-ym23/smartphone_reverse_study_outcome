@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:title="@string/personal_information_collection_list"
+        android:key="personal_information_collection_list"
+        android:widgetLayout="@layout/stepos_right_arrow"/>
+    <Preference
+        android:title="@string/third_party_information_shared_list"
+        android:key="third_party_information_shared_list"
+        android:widgetLayout="@layout/stepos_right_arrow"/>
+    <Preference
+        android:title="@string/personal_information_protection_rules_of_children"
+        android:key="personal_information_protection_rules_of_children"
+        android:widgetLayout="@layout/stepos_right_arrow"/>
+    <Preference
+        android:title="@string/privacy_policy"
+        android:key="privacy_policy"
+        android:widgetLayout="@layout/stepos_right_arrow"/>
+    <Preference
+        android:title="@string/aicy_privacy_pp_revocation"
+        android:key="revocation_privacy_policy"/>
+</PreferenceScreen>

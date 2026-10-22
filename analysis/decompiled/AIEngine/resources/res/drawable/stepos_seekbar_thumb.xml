@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <layer-list>
+            <item
+                android:height="22dp"
+                android:width="22dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/transparent"/>
+                </shape>
+            </item>
+            <item
+                android:gravity="end"
+                android:height="22dp"
+                android:width="11dp"
+                android:start="11dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/stepos_seekbar_thumb_state_color"/>
+                    <corners
+                        android:topRightRadius="22dp"
+                        android:bottomRightRadius="22dp"/>
+                </shape>
+            </item>
+            <item
+                android:gravity="center"
+                android:height="14dp"
+                android:width="14dp">
+                <shape android:shape="oval">
+                    <solid android:color="?attr/colorOnPrimary"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item
+                android:gravity="center"
+                android:height="22dp"
+                android:width="22dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/stepos_seekbar_thumb_state_color"/>
+                </shape>
+            </item>
+            <item
+                android:gravity="center"
+                android:height="14dp"
+                android:width="14dp">
+                <shape android:shape="oval">
+                    <solid android:color="?attr/colorOnPrimary"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

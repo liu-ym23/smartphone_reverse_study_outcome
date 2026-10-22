@@ -1,0 +1,23 @@
+// 简单 SF 特效：将下层背景去色为灰阶。
+// 复用 sf_wave_glow.agsl 中验证过的 sksl_background/sksl_layer 采样写法，
+// 仅用于演示「运行时切换不同 .agsl」。fadeAlpha 由 SF 通道驱动入场/退场。
+
+uniform shader sksl_background;
+uniform shader sksl_layer;
+uniform vec2 textureSize;
+uniform vec2 resolution;
+uniform float fadeAlpha;
+
+vec4 texture(vec2 coords) {
+    vec2 uv = coords * textureSize;
+    vec4 layerColor = sksl_layer.eval(uv);
+    vec4 backgroundColor = sksl_background.eval(uv);
+    return vec4((1.0 - layerColor.a) * backgroundColor.rgb + layerColor.rgb, 1.0);
+}
+
+vec4 main(vec2 coords) {
+    vec2 safeRes = max(resolution, vec2(1.0));
+    vec4 c = texture(coords / safeRes);
+    float g = dot(c.rgb, vec3(0.299, 0.587, 0.114));
+    return vec4(mix(c.rgb, vec3(g), fadeAlpha), 1.0);
+}

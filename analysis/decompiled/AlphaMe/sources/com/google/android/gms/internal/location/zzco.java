@@ -1,0 +1,27 @@
+package com.google.android.gms.internal.location;
+
+import android.os.RemoteException;
+import com.google.android.gms.location.zzu;
+import f1.AbstractC0557a;
+import l1.C0758c;
+
+/* loaded from: classes.dex */
+final class zzco extends zzj {
+    final /* synthetic */ C0758c zza;
+    final /* synthetic */ zzu zzb;
+
+    public zzco(C0758c c0758c, zzu zzuVar) {
+        this.zza = c0758c;
+        this.zzb = zzuVar;
+    }
+
+    @Override // com.google.android.gms.internal.location.zzk
+    public final void zzd(zzg zzgVar) {
+        AbstractC0557a.a0(zzgVar.f10004a, null, this.zza);
+    }
+
+    @Override // com.google.android.gms.internal.location.zzk
+    public final void zze() throws RemoteException {
+        this.zzb.zze();
+    }
+}

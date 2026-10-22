@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="72dp"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/chat_color_on_surface"
+            android:id="@+id/tvSettingTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/chat_color_on_surface_variant"
+            android:id="@+id/tvVolumeValue"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <com.stepos.ailauncher.chat.widget.FigmaSlider
+        android:id="@+id/sbVolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"/>
+</LinearLayout>

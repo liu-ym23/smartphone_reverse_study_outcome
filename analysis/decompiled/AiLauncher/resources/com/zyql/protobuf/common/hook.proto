@@ -1,0 +1,424 @@
+// Hook System Protocol
+//
+// This protocol defines the Hook mechanism for both layers:
+// - App <-> Runtime hooks
+// - Runtime <-> Agent hooks
+//
+// Hooks are declarative: they are registered with the Runtime, and Runtime
+// invokes them at appropriate lifecycle points (e.g., before/after tool calls).
+//
+// Design Principles:
+// - Declarative hook registration
+// - Support for pattern matching (regex) on tool names
+// - Hooks can modify data or just observe
+// - Hooks can block execution (e.g., validation hooks)
+// - Async execution support for non-blocking hooks
+
+syntax = "proto3";
+
+package cortex.adk.common;
+
+import "com/zyql/protobuf/common/content.proto";
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.common";
+option java_outer_classname = "AgentHook";
+
+// ====================
+// Hook Types
+// ====================
+
+// HookPoint defines when a hook should be triggered
+enum HookPoint {
+  HOOK_POINT_UNSPECIFIED = 0;
+
+  // Session lifecycle hooks
+  HOOK_POINT_SESSION_START = 1;      // When session is created
+  HOOK_POINT_SESSION_END = 2;        // When session is closed
+
+  // Tool call hooks
+  HOOK_POINT_TOOL_CALL_PRE = 5;     // Before tool execution
+  HOOK_POINT_TOOL_CALL_POST = 6;    // After tool execution
+  HOOK_POINT_TOOL_CALL_ERROR = 7;   // When tool execution fails
+
+  // Model call hooks
+  HOOK_POINT_MODEL_CALL_PRE = 10;    // Before model invocation
+  HOOK_POINT_MODEL_CALL_POST = 11;   // After model invocation
+  HOOK_POINT_MODEL_CALL_ERROR = 12;  // When model call fails
+
+  // Agent lifecycle hooks
+  HOOK_POINT_AGENT_START = 15;       // When agent starts processing
+  HOOK_POINT_AGENT_COMPLETE = 16;    // When agent completes processing
+  HOOK_POINT_AGENT_ERROR = 17;       // When agent encounters error
+
+  // Handoff hooks
+  HOOK_POINT_HANDOFF_PRE = 18;       // Before agent handoff
+  HOOK_POINT_HANDOFF_POST = 19;      // After agent handoff
+
+  // Message hooks
+  HOOK_POINT_MESSAGE_PRE = 20;       // Before processing user message
+  HOOK_POINT_MESSAGE_POST = 21;      // After processing user message
+}
+
+// HookLayer defines which layer the hook belongs to
+enum HookLayer {
+  HOOK_LAYER_UNSPECIFIED = 0;
+  HOOK_LAYER_APP = 1;      // App <-> Runtime
+  HOOK_LAYER_AGENT = 2;    // Runtime <-> Agent
+}
+
+// HookExecutionMode defines how the hook should be executed
+enum HookExecutionMode {
+  HOOK_EXECUTION_MODE_UNSPECIFIED = 0;
+  HOOK_EXECUTION_MODE_SYNC = 1;   // Block until hook completes
+  HOOK_EXECUTION_MODE_ASYNC = 2;  // Fire and forget, don't wait
+}
+
+// PreToolCallMode defines the behavior of PreToolCall hooks
+enum PreToolCallMode {
+  PRE_TOOL_CALL_MODE_UNSPECIFIED = 0;
+  PRE_TOOL_CALL_MODE_ALLOW = 1;   // Allow tool execution to continue
+  PRE_TOOL_CALL_MODE_DENY = 2;    // Deny tool execution (provide reason to LLM)
+  PRE_TOOL_CALL_MODE_ASK = 3;     // Ask user for confirmation (can modify parameters)
+}
+
+// PostToolCallMode defines the behavior of PostToolCall hooks
+enum PostToolCallMode {
+  POST_TOOL_CALL_MODE_UNSPECIFIED = 0;
+  POST_TOOL_CALL_MODE_IGNORE = 1;  // Continue normally, pass result to LLM
+  POST_TOOL_CALL_MODE_BLOCK = 2;   // Block result from LLM (provide reason)
+}
+
+// ====================
+// Hook Definition
+// ====================
+
+// HookDefinition defines a hook to be registered with Runtime
+message HookDefinition {
+  string name = 1;                 // Human-readable name
+  string description = 2;          // Hook description
+  HookLayer layer = 3;             // Which layer this hook belongs to
+  HookPoint hook_point = 4;        // When to trigger this hook
+  HookExecutionMode mode = 5;      // Sync or async execution
+
+  // Pattern matching for tool-related hooks
+  optional string tool_name_pattern = 6;  // Regex pattern to match tool names
+  int32 timeout_ms = 7;           // Timeout in milliseconds (0 = no timeout)
+}
+
+// ====================
+// Hook Registration (App <-> Runtime)
+// ====================
+
+// RegisterHookRequest is sent by App to register a hook
+message RegisterHookRequest {
+  HookDefinition hook = 1;
+  string session_id = 2;           // Optional: scope hook to specific session
+}
+
+message RegisterHookResponse {
+  bool success = 1;
+  string hook_id = 2;              // Registered hook ID
+  string error = 3;
+}
+
+// UnregisterHookRequest is sent by App to remove a hook
+message UnregisterHookRequest {
+  string hook_id = 1;
+  string session_id = 2;           // Optional: if hook was session-scoped
+}
+
+message UnregisterHookResponse {
+  bool success = 1;
+  string error = 2;
+}
+
+// ListHooksRequest lists all registered hooks
+message ListHooksRequest {
+  HookLayer layer = 1;             // Filter by layer (optional)
+  HookPoint hook_point = 2;        // Filter by hook point (optional)
+  string session_id = 3;           // Filter by session (optional)
+}
+
+message ListHooksResponse {
+  repeated HookDefinition hooks = 1;
+  string error = 2;
+}
+
+// ====================
+// Hook Invocation (Runtime → App/Agent)
+// ====================
+
+// HookInvocation is sent by Runtime to invoke a hook
+message HookInvocation {
+  string invocation_id = 1;        // Unique invocation ID
+  string hook_id = 2;              // Hook being invoked
+  HookPoint hook_point = 3;        // Hook point
+  int64 timestamp = 4;             // When hook was triggered
+
+  // Context
+  string session_id = 5;
+  string run_id = 6;
+  string agent_id = 7;
+
+  // Hook-specific data (serialized as JSON or protobuf)
+  bytes hook_data = 8;
+
+  // Metadata
+  map<string, string> metadata = 9;
+}
+
+// HookResult is sent by App/Agent back to Runtime
+message HookResult {
+  string invocation_id = 1;        // Same as HookInvocation
+  string hook_id = 2;
+  bool success = 3;
+
+  // Control flow
+  bool continue_execution = 4;     // Whether to continue execution (false = block)
+  string block_reason = 5;         // If blocked, why?
+
+  // Hook modes (for TOOL_CALL_PRE and TOOL_CALL_POST hooks)
+  PreToolCallMode pre_mode = 11;   // Mode for PreToolCall hooks
+  PostToolCallMode post_mode = 12; // Mode for PostToolCall hooks
+  string reason = 13;              // Reason for deny/block modes (shown to LLM)
+
+  // Data modification (if can_modify = true)
+  bool modified = 6;               // Whether data was modified
+  bytes modified_data = 7;         // Modified data (if modified = true)
+
+  // Result metadata
+  int64 duration_ms = 8;
+  string error = 9;
+  map<string, string> metadata = 10;
+}
+
+// ====================
+// Hook Data Payloads
+// ====================
+
+// ToolCallPreHookData is the data passed to HOOK_POINT_TOOL_CALL_PRE
+message ToolCallPreHookData {
+  string tool_call_id = 1;
+  string tool_name = 2;
+  string arguments_json = 3;       // Tool arguments as JSON
+  string session_id = 4;
+  string agent_id = 5;
+  map<string, string> context = 6;
+}
+
+// ToolCallPostHookData is the data passed to HOOK_POINT_TOOL_CALL_POST
+message ToolCallPostHookData {
+  string tool_call_id = 1;
+  string tool_name = 2;
+  string arguments_json = 3;
+  bool success = 4;
+  string output = 5;
+  string content_type = 6;
+  int64 duration_ms = 7;
+  string session_id = 8;
+  string agent_id = 9;
+  map<string, string> context = 10;
+}
+
+// ToolCallErrorHookData is the data passed to HOOK_POINT_TOOL_CALL_ERROR
+message ToolCallErrorHookData {
+  string tool_call_id = 1;
+  string tool_name = 2;
+  string arguments_json = 3;
+  string error = 4;
+  string error_code = 5;
+  int64 duration_ms = 6;
+  string session_id = 7;
+  string agent_id = 8;
+  map<string, string> context = 9;
+}
+
+// ModelCallPreHookData is the data passed to HOOK_POINT_MODEL_CALL_PRE
+message ModelCallPreHookData {
+  string model_name = 1;
+  string provider = 2;
+  repeated cortex.adk.common.FunctionCall tool_calls = 3;
+  string session_id = 4;
+  string agent_id = 5;
+  map<string, string> settings = 6;
+}
+
+// ModelCallPostHookData is the data passed to HOOK_POINT_MODEL_CALL_POST
+message ModelCallPostHookData {
+  string model_name = 1;
+  string provider = 2;
+  bool success = 3;
+  string response_text = 4;
+  int32 input_tokens = 5;
+  int32 output_tokens = 6;
+  int64 duration_ms = 7;
+  string session_id = 8;
+  string agent_id = 9;
+  map<string, string> metadata = 10;
+}
+
+// SessionStartHookData is the data passed to HOOK_POINT_SESSION_START
+message SessionStartHookData {
+  string session_id = 1;
+  string app_id = 2;
+  string user_id = 3;
+  string agent_id = 4;
+  int64 created_at = 5;
+  map<string, string> metadata = 6;
+}
+
+// SessionEndHookData is the data passed to HOOK_POINT_SESSION_END
+message SessionEndHookData {
+  string session_id = 1;
+  string reason = 2;
+  int32 message_count = 3;
+  int64 duration_ms = 4;
+  map<string, string> metadata = 5;
+}
+
+// AgentStartHookData is the data passed to HOOK_POINT_AGENT_START
+message AgentStartHookData {
+  string agent_id = 1;
+  string agent_name = 2;
+  string session_id = 3;
+  string run_id = 4;
+  string input_text = 5;
+  map<string, string> context = 6;
+}
+
+// AgentCompleteHookData is the data passed to HOOK_POINT_AGENT_COMPLETE
+message AgentCompleteHookData {
+  string agent_id = 1;
+  string agent_name = 2;
+  string session_id = 3;
+  string run_id = 4;
+  string output_text = 5;
+  int32 turns_taken = 6;
+  int64 duration_ms = 7;
+  map<string, string> metadata = 8;
+}
+
+// HandoffPreHookData is the data passed to HOOK_POINT_HANDOFF_PRE
+message HandoffPreHookData {
+  string from_agent_id = 1;
+  string to_agent_id = 2;
+  string reason = 3;
+  string session_id = 4;
+  map<string, string> context = 5;
+}
+
+// HandoffPostHookData is the data passed to HOOK_POINT_HANDOFF_POST
+message HandoffPostHookData {
+  string from_agent_id = 1;
+  string to_agent_id = 2;
+  bool success = 3;
+  string session_id = 4;
+  int64 duration_ms = 5;
+  map<string, string> metadata = 6;
+}
+
+// MessagePreHookData is the data passed to HOOK_POINT_MESSAGE_PRE
+message MessagePreHookData {
+  string session_id = 1;
+  string agent_id = 2;
+  string role = 3;                  // Message role as string (e.g., "user", "assistant")
+  string content = 4;
+  map<string, string> metadata = 5;
+}
+
+// MessagePostHookData is the data passed to HOOK_POINT_MESSAGE_POST
+message MessagePostHookData {
+  string session_id = 1;
+  string agent_id = 2;
+  string role = 3;                  // Message role as string (e.g., "user", "assistant")
+  string content = 4;
+  bool success = 5;
+  int64 duration_ms = 6;
+  map<string, string> metadata = 7;
+}
+
+// ====================
+// Hook Events (for streaming)
+// ====================
+
+// HookEvent is sent as a notification when a hook is executed
+// Used for observability and debugging
+message HookEvent {
+  string hook_id = 1;
+  string hook_name = 2;
+  HookPoint hook_point = 3;
+  string invocation_id = 4;
+  string session_id = 5;
+  string agent_id = 6;
+  int64 timestamp = 7;
+
+  // Execution result
+  bool success = 8;
+  bool blocked_execution = 9;
+  bool modified_data = 10;
+  int64 duration_ms = 11;
+  string error = 12;
+
+  // Metadata
+  map<string, string> metadata = 13;
+}
+
+// ====================
+// Hook Service (App <-> Runtime)
+// ====================
+
+service HookService {
+  // Register a hook
+  rpc RegisterHook(RegisterHookRequest) returns (RegisterHookResponse);
+
+  // Unregister a hook
+  rpc UnregisterHook(UnregisterHookRequest) returns (UnregisterHookResponse);
+
+  // List registered hooks
+  rpc ListHooks(ListHooksRequest) returns (ListHooksResponse);
+
+  // Handle hook invocation (Runtime calls App's hook)
+  // This is typically implemented via callback or webhook
+  rpc InvokeHook(HookInvocation) returns (HookResult);
+}
+
+// ====================
+// Examples
+// ====================
+
+// Example 1: Register a hook that logs all tool calls
+// {
+//   "name": "tool_call_logger",
+//   "layer": "HOOK_LAYER_APP",
+//   "hook_point": "HOOK_POINT_TOOL_CALL_POST",
+//   "mode": "HOOK_EXECUTION_MODE_ASYNC",
+//   "tool_name_patterns": [".*"],  // Match all tools
+//   "can_modify": false,
+//   "can_block": false,
+//   "priority": 100
+// }
+
+// Example 2: Register a hook that validates file operations
+// {
+//   "name": "file_validator",
+//   "layer": "HOOK_LAYER_APP",
+//   "hook_point": "HOOK_POINT_TOOL_CALL_PRE",
+//   "mode": "HOOK_EXECUTION_MODE_SYNC",
+//   "tool_name_patterns": ["file_.*", "write_.*"],  // Match file-related tools
+//   "can_modify": false,
+//   "can_block": true,  // Can block dangerous operations
+//   "priority": 10,  // High priority
+//   "timeout_ms": 1000
+// }
+
+// Example 3: Register a hook that modifies model responses
+// {
+//   "name": "response_filter",
+//   "layer": "HOOK_LAYER_AGENT",
+//   "hook_point": "HOOK_POINT_MODEL_CALL_POST",
+//   "mode": "HOOK_EXECUTION_MODE_SYNC",
+//   "can_modify": true,  // Can modify model response
+//   "can_block": false,
+//   "priority": 50
+// }

@@ -1,0 +1,7 @@
+#!/bin/bash
+# STEPX phone adb wrapper - device connected to mac-mini-ts via USB
+# Usage: ./stepx-adb <adb args...>   (args are safely re-quoted for ssh)
+DEV=ZYPZ261A01M687000QL
+args=()
+for a in "$@"; do args+=("$(printf %q "$a")"); done
+exec ssh -o BatchMode=yes mac-mini-ts /opt/homebrew/bin/adb -s "$DEV" "${args[@]}"

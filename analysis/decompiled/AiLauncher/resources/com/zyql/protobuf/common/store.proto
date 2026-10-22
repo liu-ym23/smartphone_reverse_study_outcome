@@ -1,0 +1,200 @@
+syntax = "proto3";
+
+package cortex.adk.common;
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.common";
+option java_outer_classname = "AgentStore";
+
+// StoreScope defines the scope/lifetime of a key-value pair
+enum StoreScope {
+  STORE_SCOPE_UNSPECIFIED = 0;
+
+  // NORMAL: Default scope, persisted across sessions
+  // Data survives agent restarts and sessions
+  STORE_SCOPE_NORMAL = 1;
+
+  // USER: User-specific data, persisted per user
+  // Data is isolated by user_id and survives sessions
+  STORE_SCOPE_USER = 2;
+
+  // APP: Application-level data, shared across all users
+  // Global configuration, shared state
+  STORE_SCOPE_APP = 3;
+
+  // SESSION: Session-specific data, cleared when session ends
+  // Data is isolated by session_id and deleted after session
+  STORE_SCOPE_SESSION = 4;
+
+  // TEMP: Temporary data, cleared when agent process exits
+  // In-memory only, not persisted
+  STORE_SCOPE_TEMP = 5;
+}
+
+// StoreGetRequest retrieves a value from the store
+message StoreGetRequest {
+  // Scope of the key-value pair
+  StoreScope scope = 1;
+
+  // Key to retrieve
+  string key = 2;
+
+  // Context identifiers (optional, depends on scope)
+  string user_id = 3;    // Required for USER scope
+  string session_id = 4; // Required for SESSION scope
+  string app_id = 5;     // Required for APP scope
+
+  // Default value to return if key doesn't exist
+  optional string default_value = 6;
+}
+
+// StoreGetResponse returns the value from the store
+message StoreGetResponse {
+  // Whether the key exists
+  bool found = 1;
+
+  // Value (empty if not found and no default)
+  string value = 2;
+
+  // Timestamp when the value was last updated (Unix milliseconds)
+  int64 updated_at = 3;
+
+  // TTL in seconds (0 means no expiration)
+  int64 ttl_seconds = 4;
+}
+
+// StoreSetRequest sets a value in the store
+message StoreSetRequest {
+  // Scope of the key-value pair
+  StoreScope scope = 1;
+
+  // Key to set
+  string key = 2;
+
+  // Value to store
+  string value = 3;
+
+  // Context identifiers (optional, depends on scope)
+  string user_id = 4;    // Required for USER scope
+  string session_id = 5; // Required for SESSION scope
+  string app_id = 6;     // Required for APP scope
+
+  // Time-to-live in seconds (0 means no expiration)
+  int64 ttl_seconds = 7;
+
+  // If true, only set if key doesn't exist (set-if-not-exists)
+  bool if_not_exists = 8;
+
+  // If true, only set if key already exists (update-only)
+  bool if_exists = 9;
+}
+
+// StoreSetResponse confirms the set operation
+message StoreSetResponse {
+  // Whether the operation succeeded
+  bool success = 1;
+
+  // Whether the value was actually set (may be false if if_not_exists=true and key exists)
+  bool updated = 2;
+
+  // Previous value (if any)
+  optional string previous_value = 3;
+}
+
+// StoreDeleteRequest deletes a key from the store
+message StoreDeleteRequest {
+  // Scope of the key-value pair
+  StoreScope scope = 1;
+
+  // Key to delete
+  string key = 2;
+
+  // Context identifiers (optional, depends on scope)
+  string user_id = 3;    // Required for USER scope
+  string session_id = 4; // Required for SESSION scope
+  string app_id = 5;     // Required for APP scope
+}
+
+// StoreDeleteResponse confirms the delete operation
+message StoreDeleteResponse {
+  // Whether the key was found and deleted
+  bool deleted = 1;
+
+  // Previous value (if any)
+  optional string previous_value = 2;
+}
+
+// StoreListRequest lists keys in the store
+message StoreListRequest {
+  // Scope to list keys from
+  StoreScope scope = 1;
+
+  // Context identifiers (optional, depends on scope)
+  string user_id = 2;    // Required for USER scope
+  string session_id = 3; // Required for SESSION scope
+  string app_id = 4;     // Required for APP scope
+
+  // Optional prefix filter (e.g., "config." to list all config keys)
+  string prefix = 5;
+
+  // Cursor for pagination (use "0" for first call, then use returned cursor)
+  // Similar to Redis SCAN, cursor "0" means start from beginning
+  string cursor = 6;
+
+  // Count hint (number of keys to attempt to return, not a strict limit)
+  // Similar to Redis SCAN COUNT, actual returned count may vary
+  int32 count = 7;  // Default 10 if not specified
+}
+
+// StoreListResponse returns a list of keys
+message StoreListResponse {
+  // List of keys in this batch
+  repeated string keys = 1;
+
+  // Next cursor to continue scanning
+  // If cursor is "0", scanning is complete (no more keys)
+  string next_cursor = 2;
+}
+
+// StoreClearRequest clears all keys in a scope
+message StoreClearRequest {
+  // Scope to clear
+  StoreScope scope = 1;
+
+  // Context identifiers (optional, depends on scope)
+  string user_id = 2;    // Required for USER scope
+  string session_id = 3; // Required for SESSION scope
+  string app_id = 4;     // Required for APP scope
+
+  // Optional prefix filter (only clear keys with this prefix)
+  string prefix = 5;
+}
+
+// StoreClearResponse confirms the clear operation
+message StoreClearResponse {
+  // Number of keys deleted
+  int32 deleted_count = 1;
+}
+
+// StoreEntry represents a single key-value pair with metadata
+message StoreEntry {
+  // Scope of the entry
+  StoreScope scope = 1;
+
+  // Key
+  string key = 2;
+
+  // Value
+  string value = 3;
+
+  // Context identifiers
+  string user_id = 4;
+  string session_id = 5;
+  string app_id = 6;
+
+  // Metadata
+  int64 created_at = 7;  // Unix milliseconds
+  int64 updated_at = 8;  // Unix milliseconds
+  int64 expires_at = 9;  // Unix milliseconds (0 means no expiration)
+  int64 ttl_seconds = 10; // Time-to-live in seconds
+}

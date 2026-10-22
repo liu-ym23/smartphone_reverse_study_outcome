@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stepos_dialog_recycler_view"
+    android:paddingTop="@dimen/stepos_dialog_recycler_padding_vertical"
+    android:paddingBottom="@dimen/stepos_dialog_recycler_padding_vertical"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never"
+    android:paddingStart="@dimen/stepos_dialog_recycler_padding_horizontal"
+    android:paddingEnd="@dimen/stepos_dialog_recycler_padding_horizontal"/>

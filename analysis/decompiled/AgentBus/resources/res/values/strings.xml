@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="androidx_startup">androidx.startup</string>
+    <string name="app_name">Agent Bus</string>
+    <string name="context_is_null">Improper parameter</string>
+    <string name="error_is_throwed">Authorization failed, please retry later.</string>
+    <string name="future_result_is_null">Authorization failed, please retry later.</string>
+    <string name="get_cancel">Canceled by user</string>
+    <string name="get_token_failed">Authorization failed, please check network or system time and try again</string>
+    <string name="in_progress">In progress</string>
+    <string name="indeterminate">Partially checked</string>
+    <string name="not_selected">Not selected</string>
+    <string name="scope_null_token">Authorization failed. Error getting info about %s</string>
+    <string name="selected">Selected</string>
+    <string name="state_empty">Empty</string>
+    <string name="sync_timeout">Request timeout. Please retry.</string>
+    <string name="template_percent">%1$d percent.</string>
+    <string name="uid_not_match">uid not match package name</string>
+    <string name="unkown_error">Authorization failed, please retry later.</string>
+    <string name="unsupport_operation">Your request is too frequent</string>
+</resources>

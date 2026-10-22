@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT App SDK 中间层</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        function universalBase64Decode(base64) {
+                // 1. 预处理：清洗字符串
+                // 去除空格、换行符
+                // 将 URL Safe 的字符 '-' 替换回 '+'，'_' 替换回 '/'
+                let cleaned = base64.replace(/[\s\n\r]/g, '')
+                    .replace(/-/g, '+')
+                    .replace(/_/g, '/');
+
+                // 2. 补齐填充符（虽然位运算不一定需要，但为了逻辑严谨加上）
+                while (cleaned.length % 4 !== 0) {
+                    cleaned += '=';
+                }
+
+                // 3. 定义索引表
+                const lookup = new Uint8Array(256);
+                const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+                for (let i = 0; i < alphabet.length; i++) {
+                    lookup[alphabet.charCodeAt(i)] = i;
+                }
+
+                // 4. 计算输出长度
+                let len = cleaned.length;
+                let placeholder = 0;
+                if (cleaned[len - 1] === '=') placeholder++;
+                if (cleaned[len - 2] === '=') placeholder++;
+
+                const outputLen = (len * 3) / 4 - placeholder;
+                const bytes = new Uint8Array(outputLen);
+
+                // 5. 位运算解码
+                for (let i = 0, j = 0; i < len; i += 4) {
+                    // 获取 4 个字符对应的 6 位索引值
+                    const a = lookup[cleaned.charCodeAt(i)];
+                    const b = lookup[cleaned.charCodeAt(i + 1)];
+                    const c = lookup[cleaned.charCodeAt(i + 2)];
+                    const d = lookup[cleaned.charCodeAt(i + 3)];
+
+                    // 将 4 个 6-bit 组合成 3 个 8-bit
+                    bytes[j++] = (a << 2) | (b >> 4);
+                    if (j < outputLen) bytes[j++] = ((b & 15) << 4) | (c >> 2);
+                    if (j < outputLen) bytes[j++] = ((c & 3) << 6) | d;
+                }
+
+                return bytes;
+            }
+        function bytesToString(bytes) {
+            return new TextDecoder().decode(bytes);
+        }
+
+        function monitorOpenAi() {
+            if (window.openai) return;
+            window.openai = {};
+            window.webplus = {};
+            window.openai.callTool = (params) => {
+                console.log("callTool", params);
+                window.androidJsBridge.callTool(JSON.stringify(params));
+            };
+            window.openai.sendFollowUpMessage = (params) => {
+                console.log("sendFollowUpMessage", params);
+                window.androidJsBridge.sendFollowUpMessage(JSON.stringify(params));
+            };
+
+            window.openai.openExternal = (params) => {
+                console.log("openExternal", params);
+                window.androidJsBridge.openExternal(JSON.stringify(params));
+            };
+
+            window.openai.requestDisplayMode = (params) => {
+                console.log("requestDisplayMode", params);
+                window.androidJsBridge.requestDisplayMode(JSON.stringify(params));
+            };
+
+            window.webplus.requestDisplayMode = (params) => {
+                console.log("requestDisplayMode", params);
+                window.androidJsBridge.requestDisplayMode(JSON.stringify(params));
+            };
+
+            window.setGlobal = (params) => {
+                console.log("setGlobal base64====", params);
+                try {
+                    const binary = atob(params.replace(/-/g, '+').replace(/_/g, '/'));
+                    let rawStr = new TextDecoder().decode(new Uint8Array(Array.from(binary, c => c.charCodeAt(0)))).trim();
+
+                    const unescape = (str) => {
+                        return str.replace(/\\(["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, (match) => {
+                            try {
+                                return JSON.parse(`"${match}"`);
+                            } catch {
+                                return match;
+                            }
+                        });
+                    };
+
+                    let current = rawStr;
+                    let json = null;
+                    let attempts = 0;
+
+                    while (attempts < 3) {
+                        try {
+                            json = JSON.parse(current);
+                            break;
+                        } catch (e) {
+                            if (current.includes('\\')) {
+                                current = unescape(current);
+                                attempts++;
+                            } else {
+                                throw e;
+                            }
+                        }
+                    }
+
+                    if (json) {
+                        window.openai = { ...window.openai, ...json };
+                        console.log("setGlobal json====:", json);
+                    }
+
+                } catch (err) {
+                    console.error("❌ 最终解析失败，错误详情:", err.message);
+                }
+            };
+
+            window.setHtml = (params) => {
+                console.log("setHtml base64", params);
+                const decoded = universalBase64Decode(params);
+                const html = bytesToString(decoded).replace(/\\"/g, '"');
+                console.log("setHtml html", html);
+                const appRoot = document.getElementById("app");
+                if (!appRoot) return;
+
+                appRoot.innerHTML = "";
+
+                const template = document.createElement("template");
+                template.innerHTML = html;
+
+                document.head
+                    .querySelectorAll('link[data-app-sdk-ui="dynamic"]')
+                    .forEach((link) => link.remove());
+
+                template.content
+                    .querySelectorAll('link[rel="stylesheet"]')
+                    .forEach((linkNode) => {
+                        const link = document.createElement("link");
+                        Array.from(linkNode.attributes).forEach((attr) => {
+                            link.setAttribute(attr.name, attr.value);
+                        });
+                        link.setAttribute("data-app-sdk-ui", "dynamic");
+                        document.head.appendChild(link);
+                        linkNode.remove();
+                    });
+
+                while (template.content.firstChild) {
+                    const node = template.content.firstChild;
+                    template.content.removeChild(node);
+
+                    if (node.nodeName.toLowerCase() === "script") {
+                        const script = document.createElement("script");
+                        Array.from(node.attributes).forEach((attr) => {
+                            script.setAttribute(attr.name, attr.value);
+                        });
+                        script.textContent = node.textContent;
+                        appRoot.appendChild(script);
+                    } else {
+                        appRoot.appendChild(node);
+                    }
+                }
+            };
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            monitorOpenAi();
+        });
+    </script>
+</body>
+
+</html>

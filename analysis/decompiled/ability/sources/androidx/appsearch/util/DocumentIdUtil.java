@@ -1,0 +1,48 @@
+package androidx.appsearch.util;
+
+import androidx.appsearch.app.GenericDocument;
+import androidx.core.util.Preconditions;
+import com.fasterxml.jackson.core.JsonPointer;
+
+/* loaded from: classes.dex */
+public class DocumentIdUtil {
+    private static final String BACKSLASH_REPLACEMENT = "\\\\";
+    private static final String NAMESPACE_DELIMITER = "#";
+    private static final String NAMESPACE_DELIMITER_REPLACEMENT = "\\#";
+
+    private DocumentIdUtil() {
+    }
+
+    public static String createQualifiedId(String str, String str2, GenericDocument genericDocument) {
+        return createQualifiedId(str, str2, genericDocument.getNamespace(), genericDocument.getId());
+    }
+
+    private static String escapeNsDelimiters(String str) {
+        StringBuilder sb = null;
+        for (int i = 0; i < str.length(); i++) {
+            char cCharAt = str.charAt(i);
+            if (cCharAt == '\\') {
+                if (sb == null) {
+                    sb = new StringBuilder(str.substring(0, i));
+                }
+                sb.append(BACKSLASH_REPLACEMENT);
+            } else if (cCharAt == '#') {
+                if (sb == null) {
+                    sb = new StringBuilder(str.substring(0, i));
+                }
+                sb.append(NAMESPACE_DELIMITER_REPLACEMENT);
+            } else if (sb != null) {
+                sb.append(cCharAt);
+            }
+        }
+        return sb == null ? str : sb.toString();
+    }
+
+    public static String createQualifiedId(String str, String str2, String str3, String str4) {
+        Preconditions.checkNotNull(str);
+        Preconditions.checkNotNull(str2);
+        Preconditions.checkNotNull(str3);
+        Preconditions.checkNotNull(str4);
+        return escapeNsDelimiters(str) + '$' + escapeNsDelimiters(str2) + JsonPointer.SEPARATOR + escapeNsDelimiters(str3) + NAMESPACE_DELIMITER + escapeNsDelimiters(str4);
+    }
+}

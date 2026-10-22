@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetTop="@dimen/stepos_switch_thumb_inset"
+    android:insetBottom="@dimen/stepos_switch_thumb_inset">
+    <shape android:shape="oval">
+        <solid android:color="@android:color/white"/>
+        <size
+            android:height="@dimen/stepos_switch_thumb_size"
+            android:width="@dimen/stepos_switch_thumb_size"/>
+    </shape>
+</inset>

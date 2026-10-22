@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="agent_lines_awaiting_user">
+        <item>Need a decision from you.</item>
+        <item>Tap to confirm and I\'ll keep going.</item>
+    </array>
+    <array name="agent_lines_browsing">
+        <item>Browsing the skill market…</item>
+        <item>So many skills to explore!</item>
+    </array>
+    <array name="agent_lines_bubbling">
+        <item>Hi! �� Got a sec?</item>
+        <item>Hey, I\'m over here!</item>
+    </array>
+    <array name="agent_lines_error">
+        <item>Hmm, looks like I broke something.</item>
+        <item>That run failed — sorry.</item>
+        <item>Let me head to the fix-it room.</item>
+    </array>
+    <array name="agent_lines_html_pet">
+        <item>I\'m a tiny WebView pet now. Try tapping me!</item>
+        <item>Yes — this body is just HTML + CSS.</item>
+    </array>
+    <array name="agent_lines_idle">
+        <item>I\'m here when you need me.</item>
+        <item>Just doodling. Ping me anytime.</item>
+    </array>
+    <array name="agent_lines_idle_night">
+        <item>Good night — I\'m resting.</item>
+        <item>Shh… night mode on.</item>
+    </array>
+    <array name="agent_lines_installed">
+        <item>All set — install complete!</item>
+        <item>Ready to go. Try it out!</item>
+    </array>
+    <array name="agent_lines_installing">
+        <item>Installing… almost there.</item>
+        <item>Hang on — setting things up.</item>
+    </array>
+    <array name="agent_lines_interrupted">
+        <item>Got it, stopping there.</item>
+        <item>Pausing on your cue.</item>
+    </array>
+    <array name="agent_lines_invoking">
+        <item>Calling a tool — hang tight.</item>
+        <item>Plugging into the side-helper.</item>
+    </array>
+    <array name="agent_lines_listening">
+        <item>I\'m listening.</item>
+        <item>Go on, I\'m here.</item>
+    </array>
+    <array name="agent_lines_listening_music">
+        <item>�� humming along…</item>
+        <item>Nice tune. Keeping me company.</item>
+    </array>
+    <array name="agent_lines_loafing">
+        <item>(stretching at desk…)</item>
+        <item>Coffee break.</item>
+    </array>
+    <array name="agent_lines_morning_stretch">
+        <item>Good morning!</item>
+        <item>Pulling the curtains — let\'s see the day.</item>
+    </array>
+    <array name="agent_lines_observing">
+        <item>Just looking around.</item>
+        <item>Anything fun out there?</item>
+    </array>
+    <array name="agent_lines_responding">
+        <item>Streaming the answer your way.</item>
+        <item>Here\'s what I\'ve got…</item>
+    </array>
+    <array name="agent_lines_sleeping">
+        <item>(zzz…)</item>
+        <item>Tap to wake me.</item>
+    </array>
+    <array name="agent_lines_speaking">
+        <item>Reading it back to you.</item>
+        <item>(speaking out loud)</item>
+    </array>
+    <array name="agent_lines_success">
+        <item>Done — task complete.</item>
+        <item>Got it. Maybe I\'m halfway useful after all.</item>
+        <item>Mission accomplished.</item>
+    </array>
+    <array name="agent_lines_thinking">
+        <item>Thinking… give me a moment.</item>
+        <item>Crunching that for you.</item>
+    </array>
+    <array name="agent_lines_timeout">
+        <item>That took too long — I gave up.</item>
+        <item>Timed out. Want to retry?</item>
+    </array>
+    <array name="agent_lines_watching_snow">
+        <item>Look — it\'s snowing! ❄️</item>
+        <item>So quiet out there.</item>
+    </array>
+    <array name="agent_lines_watching_stars">
+        <item>The sky\'s pretty tonight.</item>
+        <item>Counting constellations.</item>
+    </array>
+    <array name="amoo_home_screen_frames">
+        <item>amoo_home_screen_00</item>
+        <item>amoo_home_screen_01</item>
+        <item>amoo_home_screen_02</item>
+        <item>amoo_home_screen_03</item>
+        <item>amoo_home_screen_04</item>
+        <item>amoo_home_screen_05</item>
+        <item>amoo_home_screen_06</item>
+        <item>amoo_home_screen_07</item>
+        <item>amoo_home_screen_08</item>
+        <item>amoo_home_screen_09</item>
+        <item>amoo_home_screen_10</item>
+        <item>amoo_home_screen_11</item>
+        <item>amoo_home_screen_12</item>
+        <item>amoo_home_screen_13</item>
+        <item>amoo_home_screen_14</item>
+        <item>amoo_home_screen_15</item>
+        <item>amoo_home_screen_16</item>
+        <item>amoo_home_screen_17</item>
+        <item>amoo_home_screen_18</item>
+        <item>amoo_home_screen_19</item>
+        <item>amoo_home_screen_20</item>
+        <item>amoo_home_screen_21</item>
+        <item>amoo_home_screen_22</item>
+        <item>amoo_home_screen_23</item>
+        <item>amoo_home_screen_24</item>
+        <item>amoo_home_screen_25</item>
+        <item>amoo_home_screen_26</item>
+        <item>amoo_home_screen_27</item>
+        <item>amoo_home_screen_28</item>
+        <item>amoo_home_screen_29</item>
+        <item>amoo_home_screen_30</item>
+        <item>amoo_home_screen_31</item>
+        <item>amoo_home_screen_32</item>
+        <item>amoo_home_screen_33</item>
+        <item>amoo_home_screen_34</item>
+        <item>amoo_home_screen_35</item>
+        <item>amoo_home_screen_36</item>
+        <item>amoo_home_screen_37</item>
+        <item>amoo_home_screen_38</item>
+        <item>amoo_home_screen_39</item>
+        <item>amoo_home_screen_40</item>
+        <item>amoo_home_screen_41</item>
+        <item>amoo_home_screen_42</item>
+        <item>amoo_home_screen_43</item>
+        <item>amoo_home_screen_44</item>
+        <item>amoo_home_screen_45</item>
+        <item>amoo_home_screen_46</item>
+        <item>amoo_home_screen_47</item>
+        <item>amoo_home_screen_48</item>
+        <item>amoo_home_screen_49</item>
+        <item>amoo_home_screen_50</item>
+        <item>amoo_home_screen_51</item>
+        <item>amoo_home_screen_52</item>
+        <item>amoo_home_screen_53</item>
+        <item>amoo_home_screen_54</item>
+        <item>amoo_home_screen_55</item>
+        <item>amoo_home_screen_56</item>
+        <item>amoo_home_screen_57</item>
+        <item>amoo_home_screen_58</item>
+        <item>amoo_home_screen_59</item>
+    </array>
+    <array name="amoo_keyboard_shown_frames">
+        <item>amoo_keyboard_shown_00</item>
+        <item>amoo_keyboard_shown_01</item>
+        <item>amoo_keyboard_shown_02</item>
+        <item>amoo_keyboard_shown_03</item>
+        <item>amoo_keyboard_shown_04</item>
+        <item>amoo_keyboard_shown_05</item>
+        <item>amoo_keyboard_shown_06</item>
+        <item>amoo_keyboard_shown_07</item>
+        <item>amoo_keyboard_shown_08</item>
+        <item>amoo_keyboard_shown_09</item>
+        <item>amoo_keyboard_shown_10</item>
+        <item>amoo_keyboard_shown_11</item>
+        <item>amoo_keyboard_shown_12</item>
+        <item>amoo_keyboard_shown_13</item>
+        <item>amoo_keyboard_shown_14</item>
+        <item>amoo_keyboard_shown_15</item>
+        <item>amoo_keyboard_shown_16</item>
+        <item>amoo_keyboard_shown_17</item>
+        <item>amoo_keyboard_shown_18</item>
+        <item>amoo_keyboard_shown_19</item>
+    </array>
+    <array name="awaiting_user_danger_frames">
+        <item>awaiting_user_danger_00</item>
+        <item>awaiting_user_danger_01</item>
+        <item>awaiting_user_danger_02</item>
+        <item>awaiting_user_danger_03</item>
+        <item>awaiting_user_danger_04</item>
+        <item>awaiting_user_danger_05</item>
+        <item>awaiting_user_danger_06</item>
+        <item>awaiting_user_danger_07</item>
+        <item>awaiting_user_danger_08</item>
+        <item>awaiting_user_danger_09</item>
+        <item>awaiting_user_danger_10</item>
+        <item>awaiting_user_danger_11</item>
+        <item>awaiting_user_danger_12</item>
+        <item>awaiting_user_danger_13</item>
+        <item>awaiting_user_danger_14</item>
+        <item>awaiting_user_danger_15</item>
+        <item>awaiting_user_danger_16</item>
+        <item>awaiting_user_danger_17</item>
+        <item>awaiting_user_danger_18</item>
+        <item>awaiting_user_danger_19</item>
+        <item>awaiting_user_danger_20</item>
+        <item>awaiting_user_danger_21</item>
+        <item>awaiting_user_danger_22</item>
+        <item>awaiting_user_danger_23</item>
+        <item>awaiting_user_danger_24</item>
+        <item>awaiting_user_danger_25</item>
+        <item>awaiting_user_danger_26</item>
+        <item>awaiting_user_danger_27</item>
+        <item>awaiting_user_danger_28</item>
+        <item>awaiting_user_danger_29</item>
+        <item>awaiting_user_danger_30</item>
+        <item>awaiting_user_danger_31</item>
+        <item>awaiting_user_danger_32</item>
+        <item>awaiting_user_danger_33</item>
+        <item>awaiting_user_danger_34</item>
+        <item>awaiting_user_danger_35</item>
+        <item>awaiting_user_danger_36</item>
+        <item>awaiting_user_danger_37</item>
+        <item>awaiting_user_danger_38</item>
+        <item>awaiting_user_danger_39</item>
+        <item>awaiting_user_danger_40</item>
+        <item>awaiting_user_danger_41</item>
+        <item>awaiting_user_danger_42</item>
+        <item>awaiting_user_danger_43</item>
+        <item>awaiting_user_danger_44</item>
+    </array>
+    <array name="gui_operate_frames">
+        <item>gui_operate_00</item>
+        <item>gui_operate_01</item>
+        <item>gui_operate_02</item>
+        <item>gui_operate_03</item>
+        <item>gui_operate_04</item>
+        <item>gui_operate_05</item>
+        <item>gui_operate_06</item>
+        <item>gui_operate_07</item>
+        <item>gui_operate_08</item>
+        <item>gui_operate_09</item>
+        <item>gui_operate_10</item>
+        <item>gui_operate_11</item>
+        <item>gui_operate_12</item>
+        <item>gui_operate_13</item>
+        <item>gui_operate_14</item>
+        <item>gui_operate_15</item>
+        <item>gui_operate_16</item>
+        <item>gui_operate_17</item>
+        <item>gui_operate_18</item>
+        <item>gui_operate_19</item>
+        <item>gui_operate_20</item>
+        <item>gui_operate_21</item>
+        <item>gui_operate_22</item>
+        <item>gui_operate_23</item>
+        <item>gui_operate_24</item>
+        <item>gui_operate_25</item>
+        <item>gui_operate_26</item>
+        <item>gui_operate_27</item>
+        <item>gui_operate_28</item>
+        <item>gui_operate_29</item>
+        <item>gui_operate_30</item>
+        <item>gui_operate_31</item>
+        <item>gui_operate_32</item>
+        <item>gui_operate_33</item>
+        <item>gui_operate_34</item>
+        <item>gui_operate_35</item>
+        <item>gui_operate_36</item>
+        <item>gui_operate_37</item>
+        <item>gui_operate_38</item>
+        <item>gui_operate_39</item>
+        <item>gui_operate_40</item>
+        <item>gui_operate_41</item>
+        <item>gui_operate_42</item>
+        <item>gui_operate_43</item>
+        <item>gui_operate_44</item>
+        <item>gui_operate_45</item>
+    </array>
+    <array name="idle_safe_frames">
+        <item>idle_safe_00</item>
+        <item>idle_safe_01</item>
+        <item>idle_safe_02</item>
+        <item>idle_safe_03</item>
+        <item>idle_safe_04</item>
+        <item>idle_safe_05</item>
+        <item>idle_safe_06</item>
+        <item>idle_safe_07</item>
+        <item>idle_safe_08</item>
+        <item>idle_safe_09</item>
+        <item>idle_safe_10</item>
+        <item>idle_safe_11</item>
+        <item>idle_safe_12</item>
+        <item>idle_safe_13</item>
+        <item>idle_safe_14</item>
+        <item>idle_safe_15</item>
+        <item>idle_safe_16</item>
+        <item>idle_safe_17</item>
+        <item>idle_safe_18</item>
+        <item>idle_safe_19</item>
+    </array>
+    <array name="interrupted_frames">
+        <item>interrupted_00</item>
+        <item>interrupted_01</item>
+        <item>interrupted_02</item>
+        <item>interrupted_03</item>
+        <item>interrupted_04</item>
+        <item>interrupted_05</item>
+        <item>interrupted_06</item>
+        <item>interrupted_07</item>
+        <item>interrupted_08</item>
+        <item>interrupted_09</item>
+        <item>interrupted_10</item>
+        <item>interrupted_11</item>
+        <item>interrupted_12</item>
+        <item>interrupted_13</item>
+        <item>interrupted_14</item>
+        <item>interrupted_15</item>
+        <item>interrupted_16</item>
+        <item>interrupted_17</item>
+        <item>interrupted_18</item>
+        <item>interrupted_19</item>
+        <item>interrupted_20</item>
+        <item>interrupted_21</item>
+        <item>interrupted_22</item>
+        <item>interrupted_23</item>
+        <item>interrupted_24</item>
+        <item>interrupted_25</item>
+        <item>interrupted_26</item>
+        <item>interrupted_27</item>
+        <item>interrupted_28</item>
+        <item>interrupted_29</item>
+        <item>interrupted_30</item>
+        <item>interrupted_31</item>
+        <item>interrupted_32</item>
+        <item>interrupted_33</item>
+        <item>interrupted_34</item>
+    </array>
+    <array name="place_repair_room_grid">
+        <item> [-]   [#]   [-]   [#]   [-] </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>=============================</item>
+    </array>
+    <array name="place_skill_market_grid">
+        <item> [SHOP] [SHOP] [SHOP] [SHOP] </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item>                             </item>
+        <item> $$$  $$$  $$$  $$$  $$$  $$</item>
+    </array>
+    <array name="place_workshop_grid">
+        <item>  [#]      [_]      [O]     </item>
+        <item>                            </item>
+        <item>                            </item>
+        <item>                            </item>
+        <item>                            </item>
+        <item>                            </item>
+        <item>                            </item>
+        <item>____________________________</item>
+    </array>
+    <array name="thinking_safe_frames">
+        <item>thinking_safe_00</item>
+        <item>thinking_safe_01</item>
+        <item>thinking_safe_02</item>
+        <item>thinking_safe_03</item>
+        <item>thinking_safe_04</item>
+        <item>thinking_safe_05</item>
+        <item>thinking_safe_06</item>
+        <item>thinking_safe_07</item>
+        <item>thinking_safe_08</item>
+        <item>thinking_safe_09</item>
+        <item>thinking_safe_10</item>
+        <item>thinking_safe_11</item>
+        <item>thinking_safe_12</item>
+        <item>thinking_safe_13</item>
+        <item>thinking_safe_14</item>
+        <item>thinking_safe_15</item>
+        <item>thinking_safe_16</item>
+        <item>thinking_safe_17</item>
+        <item>thinking_safe_18</item>
+        <item>thinking_safe_19</item>
+        <item>thinking_safe_20</item>
+        <item>thinking_safe_21</item>
+        <item>thinking_safe_22</item>
+        <item>thinking_safe_23</item>
+        <item>thinking_safe_24</item>
+        <item>thinking_safe_25</item>
+        <item>thinking_safe_26</item>
+        <item>thinking_safe_27</item>
+        <item>thinking_safe_28</item>
+        <item>thinking_safe_29</item>
+        <item>thinking_safe_30</item>
+        <item>thinking_safe_31</item>
+        <item>thinking_safe_32</item>
+        <item>thinking_safe_33</item>
+        <item>thinking_safe_34</item>
+        <item>thinking_safe_35</item>
+        <item>thinking_safe_36</item>
+        <item>thinking_safe_37</item>
+        <item>thinking_safe_38</item>
+        <item>thinking_safe_39</item>
+        <item>thinking_safe_40</item>
+        <item>thinking_safe_41</item>
+        <item>thinking_safe_42</item>
+        <item>thinking_safe_43</item>
+        <item>thinking_safe_44</item>
+        <item>thinking_safe_45</item>
+        <item>thinking_safe_46</item>
+        <item>thinking_safe_47</item>
+        <item>thinking_safe_48</item>
+        <item>thinking_safe_49</item>
+        <item>thinking_safe_50</item>
+        <item>thinking_safe_51</item>
+        <item>thinking_safe_52</item>
+        <item>thinking_safe_53</item>
+        <item>thinking_safe_54</item>
+        <item>thinking_safe_55</item>
+        <item>thinking_safe_56</item>
+        <item>thinking_safe_57</item>
+        <item>thinking_safe_58</item>
+        <item>thinking_safe_59</item>
+        <item>thinking_safe_60</item>
+    </array>
+    <array name="weather_foggy_grid">
+        <item> ~ ~ ~ ~ ~ ~ ~ </item>
+        <item>~ ~ ~ ~ ~ ~ ~ ~</item>
+        <item>   ~ ~ ~ ~ ~   </item>
+        <item>~ ~ ~ ~ ~ ~ ~ ~</item>
+    </array>
+    <array name="weather_rainy_grid">
+        <item>  /   /   /   /  </item>
+        <item> /   /   /   /   </item>
+        <item>   /   /   /   / </item>
+        <item> /   /   /   /   </item>
+    </array>
+    <array name="weather_snowy_grid">
+        <item>  *   .   *   .   </item>
+        <item>.   *   .   *   . </item>
+        <item>  *   .   *   .   </item>
+        <item>.   *   .   *   . </item>
+    </array>
+    <array name="weather_sunny_grid">
+        <item>.   .   *   .   </item>
+        <item>  .   .   .   * </item>
+        <item>*   .   .   .   </item>
+        <item>  .   *   .   . </item>
+    </array>
+    <array name="weather_thunder_grid">
+        <item>\\   Z   \\   Z   </item>
+        <item>  Z   \\   Z   \\ </item>
+        <item>\\   Z   \\   Z   </item>
+        <item>  Z   \\   Z   \\ </item>
+    </array>
+    <array name="weather_windy_grid">
+        <item>~~&gt;       ~~&gt;     </item>
+        <item>   _~~~       _~~~</item>
+        <item>~~&gt;       ~~&gt;     </item>
+        <item>   _~~~       _~~~</item>
+    </array>
+</resources>

@@ -1,0 +1,141 @@
+{
+  "views": [
+    {
+      "views": [
+        {
+          "views": [],
+          "properties": [
+            {
+              "value": "oneline_top",
+              "type": "ref",
+              "name": "id"
+            },
+            {
+              "value": "wrap_content",
+              "type": "dimen",
+              "name": "layout_width"
+            },
+            {
+              "value": "wrap_content",
+              "type": "dimen",
+              "name": "layout_height"
+            },
+            {
+              "value": "sans-serif-medium",
+              "type": "string",
+              "name": "fontFamily"
+            },
+            {
+              "value": "content",
+              "type": "string",
+              "name": "tag"
+            },
+            {
+              "value": "#000000",
+              "type": "color",
+              "name": "textColor"
+            },
+            {
+              "value": "20sp",
+              "type": "dimen",
+              "name": "textSize"
+            }
+          ],
+          "widget": "TextView"
+        },
+        {
+          "views": [],
+          "properties": [
+            {
+              "value": "oneline_bottom",
+              "type": "ref",
+              "name": "id"
+            },
+            {
+              "value": "wrap_content",
+              "type": "dimen",
+              "name": "layout_width"
+            },
+            {
+              "value": "wrap_content",
+              "type": "dimen",
+              "name": "layout_height"
+            },
+            {
+              "value": "description",
+              "type": "string",
+              "name": "tag"
+            },
+            {
+              "value": "5dp",
+              "type": "dimen",
+              "name": "layout_marginTop"
+            },
+            {
+              "value": "#66000000",
+              "type": "color",
+              "name": "textColor"
+            },
+            {
+              "value": "12sp",
+              "type": "dimen",
+              "name": "textSize"
+            }
+          ],
+          "widget": "TextView"
+        }
+      ],
+      "properties": [
+        {
+          "value": "body_content_oneline",
+          "type": "ref",
+          "name": "id"
+        },
+        {
+          "value": "match_parent",
+          "type": "dimen",
+          "name": "layout_width"
+        },
+        {
+          "value": "wrap_content",
+          "type": "dimen",
+          "name": "layout_height"
+        },
+        {
+          "value": "21dp",
+          "type": "dimen",
+          "name": "layout_marginBottom"
+        },
+        {
+          "value": "21dp",
+          "type": "dimen",
+          "name": "layout_marginTop"
+        },
+        {
+          "value": "vertical",
+          "type": "string",
+          "name": "orientation"
+        }
+      ],
+      "widget": "LinearLayout"
+    }
+  ],
+  "properties": [
+    {
+      "value": "match_parent",
+      "type": "dimen",
+      "name": "layout_width"
+    },
+    {
+      "value": "match_parent",
+      "type": "dimen",
+      "name": "layout_height"
+    },
+    {
+      "value": "vertical",
+      "type": "string",
+      "name": "orientation"
+    }
+  ],
+  "widget": "LinearLayout"
+}

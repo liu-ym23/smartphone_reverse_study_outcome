@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bg_agent_artifacts_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+        <View
+            android:layout_gravity="center"
+            android:background="@drawable/bg_agent_artifacts_handle"
+            android:layout_width="40dp"
+            android:layout_height="4dp"/>
+    </FrameLayout>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="#e6ffffff"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/agent_menu_artifacts"
+        android:fontFamily="sans-serif-medium"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_artifacts"
+        android:paddingBottom="24dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingHorizontal="24dp"/>
+</LinearLayout>

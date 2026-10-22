@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:stepos="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.stepos.common.widget.InstallProgressBar
+        android:orientation="horizontal"
+        android:id="@+id/round_corner_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.stepos.common.widget.InstallProgressBarText
+            android:id="@+id/round_corner_progress_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            stepos:mcProgressTextSize="@dimen/online_theme_download_install_font_size"
+            stepos:mcTextChangeColor="#ff0000"
+            stepos:mcTextOriginColor="@color/white"
+            stepos:mcTextProgress="0"/>
+        <TextView
+            android:textSize="@dimen/online_theme_detail_description_font_size"
+            android:textColor="#7fffffff"
+            android:gravity="center"
+            android:id="@+id/round_corner_promotion_status_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"/>
+    </LinearLayout>
+</RelativeLayout>

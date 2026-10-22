@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stepos.common.drawble.SurroundShaderDrawable xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:shaderGlowColors="@array/stepos_shader_glow_inner_colors"
+    app:shaderGlowCornerRadius="20dp"
+    app:shaderGlowInner="true"
+    app:shaderGlowIntensity="@integer/stepos_shade_blur_intensity_inner"
+    app:shaderGlowRadius="@dimen/stepos_shader_blur_radius_inner"
+    app:shaderGlowSolidColor="@color/stepos_shader_glow_solid_inner_color"/>

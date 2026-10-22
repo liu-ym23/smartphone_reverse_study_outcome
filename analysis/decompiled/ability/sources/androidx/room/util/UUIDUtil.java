@@ -1,0 +1,29 @@
+package androidx.room.util;
+
+import androidx.annotation.RestrictTo;
+import com.stepos.aiengine.args.SingleFileBundle;
+import java.nio.ByteBuffer;
+import java.util.UUID;
+import kotlin.Metadata;
+import kotlin.jvm.internal.k;
+
+@Metadata(d1 = {"\u0000\u0010\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0002\b\u0003\u001a\u000e\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003\u001a\u000e\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0005\u001a\u00020\u0001¨\u0006\u0006"}, d2 = {"convertByteToUUID", "Ljava/util/UUID;", SingleFileBundle.KEY_BYTES, "", "convertUUIDToByte", "uuid", "room-runtime"}, k = 2, mv = {2, 1, 0}, xi = 48)
+@RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
+/* loaded from: classes2.dex */
+public final class UUIDUtil {
+    public static final UUID convertByteToUUID(byte[] bytes) {
+        k.f(bytes, "bytes");
+        ByteBuffer byteBufferWrap = ByteBuffer.wrap(bytes);
+        return new UUID(byteBufferWrap.getLong(), byteBufferWrap.getLong());
+    }
+
+    public static final byte[] convertUUIDToByte(UUID uuid) {
+        k.f(uuid, "uuid");
+        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[16]);
+        byteBufferWrap.putLong(uuid.getMostSignificantBits());
+        byteBufferWrap.putLong(uuid.getLeastSignificantBits());
+        byte[] bArrArray = byteBufferWrap.array();
+        k.e(bArrArray, "array(...)");
+        return bArrArray;
+    }
+}

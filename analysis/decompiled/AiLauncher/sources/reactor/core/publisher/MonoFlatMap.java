@@ -1,0 +1,279 @@
+package reactor.core.publisher;
+
+import java.util.Objects;
+import java.util.concurrent.Callable;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
+import java.util.function.Function;
+import java.util.stream.Stream;
+import reactor.core.CoreSubscriber;
+import reactor.core.Fuseable;
+import reactor.core.Scannable;
+import reactor.util.annotation.Nullable;
+import reactor.util.context.Context;
+
+/* loaded from: classes5.dex */
+final class MonoFlatMap<T, R> extends InternalMonoOperator<T, R> implements Fuseable {
+    final Function<? super T, ? extends Mono<? extends R>> mapper;
+
+    public static final class FlatMapInner<R> implements InnerConsumer<R> {
+        static final FlatMapInner<?> CANCELLED = new FlatMapInner<>(null);
+        boolean done;
+        final FlatMapMain<?, R> parent;
+
+        /* renamed from: s, reason: collision with root package name */
+        qc.d f39654s;
+
+        public FlatMapInner(FlatMapMain<?, R> flatMapMain) {
+            this.parent = flatMapMain;
+        }
+
+        @Override // reactor.core.CoreSubscriber
+        public Context currentContext() {
+            return this.parent.currentContext();
+        }
+
+        @Override // reactor.core.publisher.InnerConsumer, reactor.core.CoreSubscriber, qc.c
+        public void onComplete() {
+            if (this.done) {
+                return;
+            }
+            this.done = true;
+            this.parent.secondComplete();
+        }
+
+        @Override // reactor.core.publisher.InnerConsumer, reactor.core.CoreSubscriber, qc.c
+        public void onError(Throwable th) {
+            if (this.done) {
+                Operators.onErrorDropped(th, this.parent.currentContext());
+            } else {
+                this.done = true;
+                this.parent.secondError(th);
+            }
+        }
+
+        @Override // reactor.core.publisher.InnerConsumer, reactor.core.CoreSubscriber, qc.c
+        public void onNext(R r10) {
+            if (this.done) {
+                Operators.onNextDropped(r10, this.parent.currentContext());
+            } else {
+                this.done = true;
+                this.parent.secondComplete(r10);
+            }
+        }
+
+        @Override // reactor.core.CoreSubscriber, qc.c
+        public void onSubscribe(qc.d dVar) {
+            if (Operators.validate(this.f39654s, dVar)) {
+                this.f39654s = dVar;
+                if (this.parent.setSecond(this)) {
+                    dVar.request(Long.MAX_VALUE);
+                } else {
+                    dVar.cancel();
+                }
+            }
+        }
+
+        @Override // reactor.core.Scannable
+        @Nullable
+        public Object scanUnsafe(Scannable.Attr attr) {
+            if (attr == Scannable.Attr.PARENT) {
+                return this.f39654s;
+            }
+            if (attr == Scannable.Attr.ACTUAL) {
+                return this.parent;
+            }
+            if (attr == Scannable.Attr.TERMINATED) {
+                return Boolean.valueOf(this.done);
+            }
+            if (attr == Scannable.Attr.CANCELLED) {
+                return Boolean.valueOf(this.f39654s == Operators.cancelledSubscription());
+            }
+            if (attr == Scannable.Attr.RUN_STYLE) {
+                return Scannable.Attr.RunStyle.SYNC;
+            }
+            return null;
+        }
+    }
+
+    public MonoFlatMap(Mono<? extends T> mono, Function<? super T, ? extends Mono<? extends R>> function) {
+        super(mono);
+        Objects.requireNonNull(function, "mapper");
+        this.mapper = function;
+    }
+
+    @Override // reactor.core.publisher.InternalMonoOperator, reactor.core.publisher.MonoOperator, reactor.core.Scannable
+    public Object scanUnsafe(Scannable.Attr attr) {
+        return attr == Scannable.Attr.RUN_STYLE ? Scannable.Attr.RunStyle.SYNC : super.scanUnsafe(attr);
+    }
+
+    @Override // reactor.core.publisher.InternalMonoOperator, reactor.core.publisher.OptimizableOperator
+    public CoreSubscriber<? super T> subscribeOrReturn(CoreSubscriber<? super R> coreSubscriber) {
+        if (FluxFlatMap.trySubscribeScalarMap(this.source, coreSubscriber, this.mapper, true, false)) {
+            return null;
+        }
+        return new FlatMapMain(coreSubscriber, this.mapper);
+    }
+
+    public static final class FlatMapMain<T, R> implements InnerOperator<T, R>, Fuseable, Fuseable.QueueSubscription<R> {
+        static final AtomicReferenceFieldUpdater<FlatMapMain, FlatMapInner> SECOND = AtomicReferenceFieldUpdater.newUpdater(FlatMapMain.class, FlatMapInner.class, "second");
+        final CoreSubscriber<? super R> actual;
+        boolean done;
+        final Function<? super T, ? extends Mono<? extends R>> mapper;
+
+        /* renamed from: s, reason: collision with root package name */
+        qc.d f39655s;
+        volatile FlatMapInner<R> second;
+
+        public FlatMapMain(CoreSubscriber<? super R> coreSubscriber, Function<? super T, ? extends Mono<? extends R>> function) {
+            this.actual = coreSubscriber;
+            this.mapper = function;
+        }
+
+        @Override // reactor.core.publisher.InnerProducer
+        public CoreSubscriber<? super R> actual() {
+            return this.actual;
+        }
+
+        @Override // reactor.core.publisher.InnerOperator, reactor.core.publisher.InnerProducer, qc.d
+        public void cancel() {
+            this.f39655s.cancel();
+            FlatMapInner<R> flatMapInner = this.second;
+            FlatMapInner<?> flatMapInner2 = FlatMapInner.CANCELLED;
+            if (flatMapInner == flatMapInner2 || !SECOND.compareAndSet(this, flatMapInner, flatMapInner2) || flatMapInner == null) {
+                return;
+            }
+            flatMapInner.f39654s.cancel();
+        }
+
+        @Override // java.util.Collection
+        public void clear() {
+        }
+
+        @Override // reactor.core.Scannable
+        public Stream<? extends Scannable> inners() {
+            return Stream.of(this.second);
+        }
+
+        @Override // java.util.Collection
+        public boolean isEmpty() {
+            return true;
+        }
+
+        @Override // reactor.core.publisher.InnerOperator, reactor.core.publisher.InnerConsumer, reactor.core.CoreSubscriber, qc.c
+        public void onComplete() {
+            if (this.done) {
+                return;
+            }
+            this.done = true;
+            this.actual.onComplete();
+        }
+
+        @Override // reactor.core.publisher.InnerOperator, reactor.core.publisher.InnerConsumer, reactor.core.CoreSubscriber, qc.c
+        public void onError(Throwable th) {
+            if (this.done) {
+                Operators.onErrorDropped(th, this.actual.currentContext());
+            } else {
+                this.done = true;
+                this.actual.onError(th);
+            }
+        }
+
+        @Override // reactor.core.publisher.InnerOperator, reactor.core.publisher.InnerConsumer, reactor.core.CoreSubscriber, qc.c
+        public void onNext(T t10) {
+            if (this.done) {
+                Operators.onNextDropped(t10, this.actual.currentContext());
+                return;
+            }
+            this.done = true;
+            try {
+                qc.b bVar = (Mono<? extends R>) this.mapper.apply(t10);
+                Objects.requireNonNull(bVar, "The mapper returned a null Mono");
+                qc.b bVar2 = (Mono) bVar;
+                if (!(bVar2 instanceof Callable)) {
+                    try {
+                        Mono.fromDirect(bVar2).subscribe((CoreSubscriber) new FlatMapInner(this));
+                        return;
+                    } catch (Throwable th) {
+                        CoreSubscriber<? super R> coreSubscriber = this.actual;
+                        coreSubscriber.onError(Operators.onOperatorError(this, th, t10, coreSubscriber.currentContext()));
+                        return;
+                    }
+                }
+                try {
+                    Object objCall = ((Callable) bVar2).call();
+                    if (objCall == null) {
+                        this.actual.onComplete();
+                    } else {
+                        this.actual.onNext(objCall);
+                        this.actual.onComplete();
+                    }
+                } catch (Throwable th2) {
+                    this.actual.onError(Operators.onOperatorError(this.f39655s, th2, t10, this.actual.currentContext()));
+                }
+            } catch (Throwable th3) {
+                CoreSubscriber<? super R> coreSubscriber2 = this.actual;
+                coreSubscriber2.onError(Operators.onOperatorError(this.f39655s, th3, t10, coreSubscriber2.currentContext()));
+            }
+        }
+
+        @Override // reactor.core.CoreSubscriber, qc.c
+        public void onSubscribe(qc.d dVar) {
+            if (Operators.validate(this.f39655s, dVar)) {
+                this.f39655s = dVar;
+                this.actual.onSubscribe(this);
+            }
+        }
+
+        @Override // java.util.Queue
+        public R poll() {
+            return null;
+        }
+
+        @Override // reactor.core.publisher.InnerOperator, reactor.core.publisher.InnerProducer, qc.d
+        public void request(long j10) {
+            this.f39655s.request(j10);
+        }
+
+        @Override // reactor.core.Fuseable.QueueSubscription
+        public int requestFusion(int i10) {
+            return 0;
+        }
+
+        @Override // reactor.core.Scannable
+        @Nullable
+        public Object scanUnsafe(Scannable.Attr attr) {
+            if (attr == Scannable.Attr.PARENT) {
+                return this.f39655s;
+            }
+            if (attr == Scannable.Attr.PREFETCH) {
+                return 0;
+            }
+            if (attr == Scannable.Attr.CANCELLED) {
+                return Boolean.valueOf(this.second == FlatMapInner.CANCELLED);
+            }
+            return attr == Scannable.Attr.TERMINATED ? Boolean.valueOf(this.done) : attr == Scannable.Attr.RUN_STYLE ? Scannable.Attr.RunStyle.SYNC : super.scanUnsafe(attr);
+        }
+
+        public void secondComplete(R r10) {
+            this.actual.onNext(r10);
+            this.actual.onComplete();
+        }
+
+        public void secondError(Throwable th) {
+            this.actual.onError(th);
+        }
+
+        public boolean setSecond(FlatMapInner<R> flatMapInner) {
+            return this.second == null && SECOND.compareAndSet(this, null, flatMapInner);
+        }
+
+        @Override // java.util.Collection
+        public int size() {
+            return 0;
+        }
+
+        public void secondComplete() {
+            this.actual.onComplete();
+        }
+    }
+}

@@ -1,0 +1,397 @@
+// SF 三合一窗口特效 (水波 / 色差 / 边缘流光)
+// 由 ViewRootImpl#createStepOSEffect 在 SurfaceFlinger 侧编译执行 (SKSL)。
+// SF 注入内置输入 sksl_background (下层合成结果) 与 sksl_layer (当前 layer)。
+//
+// 要替换为别的特效：直接改这个文件，或新建一个 .agsl 文件并把
+// Effects.WaveGlow 的 shaderAsset 改成对应文件名即可。
+
+uniform shader uContent;
+uniform int enable; // 保留兼容
+uniform int enableWave;   // 1=水波/色差路径
+uniform int enableGlow;   // 1=边缘流光
+uniform float fadeAlpha; // 特效消失的alpha
+//***************************************水波特效参数**************************************************/
+uniform float waveTime; // 时间
+uniform float aspect; // 屏幕宽高比
+uniform shader sksl_background; // 纹理
+uniform shader sksl_layer; // 纹理
+uniform vec2 textureSize; // 纹理尺寸
+//***************************************颜色偏移特效参数***********************************************/
+uniform vec2 resolution;
+uniform vec3 colorSet1;     // 第一个颜色
+uniform vec3 colorSet2;     // 第二个颜色
+uniform vec3 colorSet3;     // 第三个颜色
+uniform vec3 colorSet4;     // 第四个颜色
+uniform vec3 colorSet5;     // 第五个颜色
+uniform float alpha;
+uniform float alphaValue;     // 混合强度（透明度）
+uniform float displacement;   // 色差位移量
+//uniform vec2 circleCenter;  // 圆心坐标 (px)
+uniform float circleRadius;   // 圆半径
+uniform float feather;        // 边缘模糊范围（羽化宽度）
+uniform vec2 circleOffset;  // 新增：蒙版位置偏移量 (px)
+uniform float percent;        // 半径增长进度
+uniform int horizontal; // 是否是水平的
+//uniform sampler2D sksl_background;
+//***************************************边缘流光特效参数***********************************************/
+uniform float time;
+//uniform vec2 resolution;
+uniform float speed;
+uniform float glowIntensity;
+uniform float radiusRatio;
+uniform float glowRadiusRatio;
+uniform float innerGlowStrength;
+uniform float innerGlowSpread;
+uniform float noiseStrength;
+uniform float inner;
+uniform vec4 color1;
+uniform vec4 color2;
+uniform vec4 color3;
+uniform vec4 color4;
+uniform vec4 color5;
+// 新增的 uniform 变量
+uniform float maskSizeX;
+uniform float maskSizeY;
+uniform float cornerRadius;
+uniform float edgeBlur;
+// 底部可见区域高度
+uniform float visibleHeight;
+uniform float glowAlpha;
+ // 侧边水波纹 中心点位置
+uniform float circleCenterLocationRatio;
+
+vec4 texture(vec2 coords) {
+    vec2 uv = coords * textureSize;
+    vec4 layerColor = sksl_layer.eval(uv);
+    vec4 backgroundColor = sksl_background.eval(uv);
+    return vec4((1.0 - layerColor.a) * backgroundColor.rgb + layerColor.rgb, 1.0);
+}
+
+//***************************************颜色偏移特效**************************************************/
+vec4 getChromaticColor(vec2 texCoord) {
+    vec2 fragCoord = texCoord * resolution;
+    // ------------- 原图颜色 -------------
+    vec4 originalColor = texture(texCoord);
+
+    // ------------- 特效颜色 -------------
+    // 1) Chromatic Aberration（色差） - 上下错位
+    vec3 chromaColor;
+    chromaColor.g = originalColor.g;
+    if (horizontal == 1) {
+        chromaColor.r = texture(vec2(texCoord.x - displacement / resolution.y, texCoord.y)).r;
+        chromaColor.b = texture(vec2(texCoord.x + displacement / resolution.y, texCoord.y)).b;
+    } else {
+        chromaColor.r = texture(vec2(texCoord.x, texCoord.y - displacement / resolution.y)).r;
+        chromaColor.b = texture(vec2(texCoord.x, texCoord.y + displacement / resolution.y)).b;
+    }
+
+    // 2) 线性渐变 - 平滑过渡，无空隙
+    // 定义起点和终点
+    vec2 startPoint = vec2(0.0, 0.5); // 左中
+    vec2 endPoint = vec2(1.0, 0.5);   // 右中
+
+    // 计算当前点到起点的投影比例
+    vec2 currentToStart = texCoord - startPoint;
+    vec2 endToStart = endPoint - startPoint;
+    float projection = dot(currentToStart, endToStart) / dot(endToStart, endToStart);
+
+    // 限制在0到1之间
+    float leftRightGradient = clamp(projection, 0.0, 1.0);
+
+    // 创建多方向渐变
+    float topBottomGradient = texCoord.y;
+    float diagonalGradient = (texCoord.x + texCoord.y) * 0.5;
+
+    // 使用线性渐变因子
+    float w1 = leftRightGradient;
+    float w2 = 1.0 - leftRightGradient;
+    float w3 = topBottomGradient;
+    float w4 = 1.0 - topBottomGradient;
+    float w5 = diagonalGradient;
+
+    // 规范化权重确保总和为1
+    float totalWeight = w1 + w2 + w3 + w4 + w5;
+    w1 /= totalWeight;
+    w2 /= totalWeight;
+    w3 /= totalWeight;
+    w4 /= totalWeight;
+    w5 /= totalWeight;
+
+    vec3 blendedColor = colorSet1 * w1 +
+                       colorSet2 * w2 +
+                       colorSet3 * w3 +
+                       colorSet4 * w4 +
+                       colorSet5 * w5;
+
+    // 适度增强颜色，但保持自然
+    blendedColor = normalize(blendedColor) * 1.2;
+
+    // 3) 使用差值混合和排除混合的组合 - 在白色背景上也有明显效果
+    vec3 differenceBlend = abs(chromaColor - blendedColor);
+    vec3 exclusionBlend = chromaColor + blendedColor - 2.0 * chromaColor * blendedColor;
+
+    // 组合两种效果以获得更好的颜色表现
+    vec3 combinedEffect = mix(differenceBlend, exclusionBlend, 0.5);
+
+    // 使用组合效果，并保留一些原始色彩特性
+    vec3 effectColor = mix(chromaColor, combinedEffect, alphaValue * 0.7);
+
+    // 检测黑色区域和白色区域
+    float whiteness = min(min(originalColor.r, originalColor.g), originalColor.b);
+    float blackness = 1.0 - max(max(originalColor.r, originalColor.g), originalColor.b);
+
+    // 白色区域处理 - 使用更亮、更饱和的颜色
+    if (whiteness > 0.85) {
+        vec3 whiteAreaEffect = blendedColor * 1.4; // 增加亮度而不是降低
+        effectColor = mix(effectColor, whiteAreaEffect, smoothstep(0.85, 0.95, whiteness) * 0.9);
+    }
+
+    // 黑色区域处理 - 使用正片叠底(Multiply)混合模式
+    if (blackness > 0.7) {
+        // 正片叠底混合: 用彩色与黑色混合时保持黑色，与亮色混合时产生较暗的色调
+        vec3 multiplyBlend = blendedColor * originalColor.rgb;
+        // 使用平滑过渡确保自然混合
+        effectColor = mix(effectColor, multiplyBlend, smoothstep(0.7, 0.9, blackness) * 0.9);
+    }
+
+    // 适度提升效果亮度
+    effectColor = effectColor * 1.1;
+
+    // ------------- 圆形蒙版计算 -------------
+    // 应用蒙版偏移量
+    vec2 adjustedFragCoord = fragCoord - circleOffset;
+
+    vec2 circleCenter;
+    if (horizontal == 1) {
+        circleCenter = vec2(resolution.x, resolution.y * circleCenterLocationRatio);
+    } else {
+        circleCenter = vec2(resolution.x * 0.5, resolution.y);
+    }
+    // 与圆心的距离
+    float dist = distance(adjustedFragCoord, circleCenter);
+
+    // 使用 smoothstep 做平滑过渡
+    float mask = smoothstep(circleRadius - feather, circleRadius, dist);
+
+    // 微调蒙版对比度，保持自然过渡
+    mask = pow(mask, 1.3);
+
+    // ------------- 根据 mask 进行混合 -------------
+    // 适度提升对比度
+    float contrastBoost = 1.1;
+    vec3 adjustedEffect = effectColor * contrastBoost;
+
+    // 最终颜色混合
+    vec3 finalColor = mix(adjustedEffect, originalColor.rgb, mask);
+
+    // 应用全局透明度，但使效果更微妙
+    finalColor = mix(originalColor.rgb, finalColor, alpha * fadeAlpha * 0.9);
+
+    return vec4(finalColor, 1.0);
+}
+
+//***************************************水波特效*****************************************************/
+vec4 getWaveColor(vec2 coords) {
+    // Normalize coordinates to [0,1] range
+    vec2 uv = coords / resolution;
+    float ratio = aspect;
+    //uv.y = uv.y * ratio;
+    uv.x = uv.x * ratio;
+
+    // Parameters (can be adjusted)
+    float amplitude = 0.10;   // 波纹位移幅度（越大扭曲越强）
+    float frequency = 8.0;    // Frequency of the ripple
+    float decay = 5.5;         // 衰减越小，波纹影响范围越大
+    float speed = 3.0;         // Speed of ripple propagation
+
+    // Origin of the ripple (can be controlled by mouse)
+    vec2 origin;
+    vec2 n;
+    float distance;
+    if (horizontal == 1) {
+        origin = vec2(1.0 * ratio, circleCenterLocationRatio);
+        n = vec2(-1.0, 0.0);
+        distance = length(uv.x - origin.x);
+    } else {
+        origin = vec2(0.5 * ratio, 1.0);
+        n = vec2(0.0, -1.0);
+        distance = length(uv.y - origin.y);
+    }
+    // 使用小数相位驱动 ripple；原 (time-floor(time))/time 在 time 为整数时会把 time 置 0 导致水波停滞
+    float time = fract(waveTime * 0.5);
+    time = max(time, 0.001);
+
+    // Current pixel position (normalized)
+    vec2 position = uv;
+
+    // The distance of the current pixel position from origin
+    //float distance = length(position - origin);
+    //float distance = length(position.y - origin.y);
+
+    // The amount of time it takes for the ripple to arrive at the current pixel position
+    //float delay = distance / speed;
+    float delay = length(position - origin) / speed;
+
+    // Adjust for delay, clamp to 0
+    time -= delay;
+    time = max(0.0, time);
+
+    // The ripple is a sine wave scaled by an exponential decay function
+    float rippleAmount = amplitude * sin(frequency * time) * exp(-decay * time);
+
+    // A vector of length 'amplitude' that points away from origin
+    //vec2 n = normalize(position - origin);
+
+    // Scale n by the ripple amount and add it to the current pixel position
+    // This new position moves toward or away from origin based on rippleAmount
+    //vec2 newPosition = position + rippleAmount * n;
+    float waveGate = max(smoothstep(1.0, 0.5, waveTime), 0.4) * fadeAlpha;
+    vec2 newPosition = position + rippleAmount * n * waveGate;
+    newPosition.x = newPosition.x / ratio;
+
+    // Sample the texture at the new position
+    // In Shadertoy, we use iChannel0 as our input texture
+    //vec4 color = texture(newPosition);
+    vec4 color = getChromaticColor(newPosition);
+
+    // Lighten or darken the color based on the ripple amount and its alpha component
+    color.rgb += 0.3 * (rippleAmount / amplitude) * fadeAlpha;
+
+    // Output the final color
+    return color;
+}
+
+//***************************************边缘流光特效**************************************************/
+float random(vec2 coords) {
+    return fract(sin(dot(coords, vec2(12.9898, 78.233))) * 43758.5453);
+}
+float roundedRectSDF(vec2 position, vec2 box, float radius) {
+    vec2 q = abs(position) - box + vec2(radius);
+    return length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - radius;
+}
+float innerRoundedRectSDF(vec2 position, vec2 box, float radius) {
+    vec2 q = abs(position) - box + vec2(radius);
+    float outer = length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - radius;
+    vec2 innerBox = box - vec2(radius * 2.0);
+    vec2 qi = abs(position) - innerBox;
+    float inner = -(length(max(qi, 0.0)) + min(max(qi.x, q.y), 0.0) - radius);
+    return max(outer, -inner);
+}
+float smoothCornerGlow(vec2 pos, vec2 box, float radius, float glowRadius) {
+    vec2 q = abs(pos) - box;
+    float cornerDist = length(max(q, 0.0));
+    float cornerFade = smoothstep(0.0, radius * 2.0, cornerDist);
+    float glowFade = smoothstep(glowRadius, 0.0, cornerDist);
+    return mix(1.0, glowFade, cornerFade);
+}
+float centerMask(vec2 pos, vec2 size, float maskSizeX, float maskSizeY, float cornerRadius) {
+    vec2 center = size / 2.0;
+    vec2 maskBox = vec2(size.x * maskSizeX, size.y * maskSizeY); // 使用传入的 maskSizeX 和 maskSizeY
+    float maskRadius = min(maskBox.x, maskBox.y) * cornerRadius; // 使用传入的 cornerRadius
+    float dist = roundedRectSDF(pos - center, maskBox/2.0, maskRadius);
+    return smoothstep(-2.0, edgeBlur, dist); // 使用传入的 edgeBlur
+}
+
+vec4 getGlowColor(vec2 coords, vec4 texColor) {
+    vec2 fragCoord = coords;
+    // 计算显示区域和渐变
+    // float visibleHeight = 0.35; // 底部可见区域高度
+    float gradientSize = 0.4; // 渐变过渡区域大小
+    // 计算渐变透明度
+    float normalizedY = fragCoord.y / resolution.y;
+    /*float glowFadeAlpha = smoothstep(
+    1.0 - visibleHeight - gradientSize,
+    1.0 - visibleHeight,
+    normalizedY
+    );*/
+
+    float vh = max(visibleHeight, 0.01);
+    float glowFadeAlpha = smoothstep(
+    1.0 - vh - vh,
+    1.0 - vh,
+    normalizedY
+    );
+
+    vec2 size = resolution;
+    float radius = min(resolution.x, resolution.y) * radiusRatio;
+    float glowRadius = min(resolution.x, resolution.y) * glowRadiusRatio;
+    vec2 center = size / 2.0;
+    vec2 pos = fragCoord - center;
+    float dist = roundedRectSDF(pos, size/2.0, radius);
+    float innerDist = innerRoundedRectSDF(pos, size/2.0 - vec2(2.0), radius);
+    float inside = step(innerDist, 0.0);
+    dist = dist * inner;
+    float hasGlow = step(dist, 0.0);
+    float normalizedDist = max(0.0, -dist) / glowRadius;
+    float dynamicGlowIntensity = glowIntensity * (0.9 + 0.1 * sin(2.0 * 3.14159 * fract(time * speed)));
+    const float NOISE_GRANULARITY = 0.5/255.0;
+    vec2 noiseCoord = fragCoord + time * 10.0;
+    float noise = mix(-NOISE_GRANULARITY, NOISE_GRANULARITY, random(noiseCoord)) * noiseStrength;
+    vec2 box = size/2.0 - vec2(radius);
+    float cornerEffect = smoothCornerGlow(pos, box, radius, glowRadius);
+    //    float glow = (5.0 / (1.0 + 8.0 * normalizedDist)) * dynamicGlowIntensity * hasGlow;
+    float glow = 10. / (-dist + 0.1) * glowIntensity;
+    glow *= cornerEffect;
+    float innerGlow = (1. - smoothstep(0.0, innerGlowSpread, abs(innerDist))) * innerGlowStrength;
+    glow = max(glow, innerGlow);
+    glow += noise * glow;
+    glow = clamp(glow, 0.0, 1.0);
+    // 应用可调节的中心遮罩
+    float mask = centerMask(fragCoord, size, maskSizeX, maskSizeY, cornerRadius);
+    glow *= mask;
+    //vec4 rectColor = vec4(0.0, 0.0, 0.0, 0.0);
+    vec4 rectColor = texColor;
+    //vec4 baseColor = mix(vec4(0.0), rectColor, inside);
+    vec4 baseColor = mix(texColor, rectColor, inside);
+    //baseColor = mix(vec4(0.0), texColor, hasGlow); // 开启背景裁角
+    float angle = atan(pos.y, pos.x);
+    if (angle < 0.0) {
+        angle += 2.0 * 3.14159;
+    }
+    float phase = fract((-angle / (2.0 * 3.14159)) + time * speed);
+    float transitionPoint = phase * 5.0;
+    float blur = 0.1;
+    vec4 finalGlowColor;
+    float t;
+    if (transitionPoint < 1.0) {
+        t = fract(transitionPoint);
+        t = smoothstep(0.0 - blur, 1.0 + blur, t);
+        finalGlowColor = mix(color1, color2, t);
+    } else if (transitionPoint < 2.0) {
+        t = fract(transitionPoint);
+        t = smoothstep(0.0 - blur, 1.0 + blur, t);
+        finalGlowColor = mix(color2, color3, t);
+    } else if (transitionPoint < 3.0) {
+        t = fract(transitionPoint);
+        t = smoothstep(0.0 - blur, 1.0 + blur, t);
+        finalGlowColor = mix(color3, color4, t);
+    } else if (transitionPoint < 4.0) {
+        t = fract(transitionPoint);
+        t = smoothstep(0.0 - blur, 1.0 + blur, t);
+        finalGlowColor = mix(color4, color5, t);
+    } else {
+        t = fract(transitionPoint);
+        t = smoothstep(0.0 - blur, 1.0 + blur, t);
+        finalGlowColor = mix(color5, color1, t);
+    }
+    float finalNoise = noise * 0.5;
+    //vec4 finalColor = mix(baseColor, finalGlowColor, glow + finalNoise);
+    vec4 finalColor = mix(baseColor, finalGlowColor, (glow + finalNoise) * glowAlpha);
+    //return finalColor * glowFadeAlpha;
+    finalColor = mix(baseColor, finalColor, glowFadeAlpha * fadeAlpha);
+    return finalColor;
+}
+
+vec4 sampleContent(vec2 coords) {
+    vec2 safeRes = max(resolution, vec2(1.0));
+    vec2 uv = coords / safeRes;
+    return texture(uv);
+}
+
+vec4 main(vec2 coords) {
+    vec4 base = enableWave != 0 ? getWaveColor(coords) : sampleContent(coords);
+    if (enableGlow == 0) {
+        return base;
+    }
+    return getGlowColor(coords, base);
+}

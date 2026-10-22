@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="18dp"
+    android:width="18dp"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+    <path
+        android:fillColor="@color/cta_dialog_checkbox_checked"
+        android:pathData="M9,0 A9,9 0 1,1 9,18 A9,9 0 1,1 9,0 Z"/>
+    <path
+        android:fillColor="@color/cta_dialog_checkbox_mark"
+        android:pathData="M13.1,5.9 L7.7,11.3 L4.9,8.5 L3.9,9.5 L7.7,13.3 L14.1,6.9 Z"/>
+</vector>

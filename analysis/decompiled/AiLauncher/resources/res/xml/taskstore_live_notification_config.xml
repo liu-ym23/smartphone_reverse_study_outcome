@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<live-notification-config>
+    <title>@string/taskstore_live_notification_app_name
+    </title>
+    <description>@string/taskstore_live_notification_description
+    </description>
+    <icon>@drawable/taskstore_live_small_icon
+    </icon>
+    <task>1
+    </task>
+</live-notification-config>

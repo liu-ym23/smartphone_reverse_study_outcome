@@ -1,0 +1,88 @@
+package androidx.recyclerview.widget;
+
+import android.util.SparseArray;
+import java.lang.reflect.Array;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+class TileList<T> {
+    Tile<T> mLastAccessedTile;
+    final int mTileSize;
+    private final SparseArray<Tile<T>> mTiles = new SparseArray<>(10);
+
+    /* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+    public static class Tile<T> {
+        public int mItemCount;
+        public final T[] mItems;
+        Tile<T> mNext;
+        public int mStartPosition;
+
+        public Tile(Class<T> cls, int i) {
+            this.mItems = (T[]) ((Object[]) Array.newInstance((Class<?>) cls, i));
+        }
+
+        public boolean containsPosition(int i) {
+            int i3 = this.mStartPosition;
+            return i3 <= i && i < i3 + this.mItemCount;
+        }
+
+        public T getByPosition(int i) {
+            return this.mItems[i - this.mStartPosition];
+        }
+    }
+
+    public TileList(int i) {
+        this.mTileSize = i;
+    }
+
+    public Tile<T> addOrReplace(Tile<T> tile) {
+        int iIndexOfKey = this.mTiles.indexOfKey(tile.mStartPosition);
+        SparseArray<Tile<T>> sparseArray = this.mTiles;
+        if (iIndexOfKey < 0) {
+            sparseArray.put(tile.mStartPosition, tile);
+            return null;
+        }
+        Tile<T> tileValueAt = sparseArray.valueAt(iIndexOfKey);
+        this.mTiles.setValueAt(iIndexOfKey, tile);
+        if (this.mLastAccessedTile == tileValueAt) {
+            this.mLastAccessedTile = tile;
+        }
+        return tileValueAt;
+    }
+
+    public void clear() {
+        this.mTiles.clear();
+    }
+
+    public Tile<T> getAtIndex(int i) {
+        if (i < 0 || i >= this.mTiles.size()) {
+            return null;
+        }
+        return this.mTiles.valueAt(i);
+    }
+
+    public T getItemAt(int i) {
+        Tile<T> tile = this.mLastAccessedTile;
+        if (tile == null || !tile.containsPosition(i)) {
+            int iIndexOfKey = this.mTiles.indexOfKey(i - (i % this.mTileSize));
+            if (iIndexOfKey < 0) {
+                return null;
+            }
+            this.mLastAccessedTile = this.mTiles.valueAt(iIndexOfKey);
+        }
+        return this.mLastAccessedTile.getByPosition(i);
+    }
+
+    public Tile<T> removeAtPos(int i) {
+        Tile<T> tile = this.mTiles.get(i);
+        if (this.mLastAccessedTile == tile) {
+            this.mLastAccessedTile = null;
+        }
+        this.mTiles.delete(i);
+        return tile;
+    }
+
+    public int size() {
+        return this.mTiles.size();
+    }
+}

@@ -1,0 +1,863 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA-256-Digest-Manifest: uA2M3VbOhR6+02N6yOXlnPqfUGt7TZcT8oMOlKWvGsc=
+X-Android-APK-Signed: 2, 3
+
+Name: AndroidManifest.xml
+SHA-256-Digest: rmLR0OP711R/mXFgcoA5CNYAckxeH6udkOM57udzKOM=
+
+Name: META-INF/agent_pickerChinaRelease.kotlin_module
+SHA-256-Digest: WpiF/X+ziwXns0UWuOhM2MAWxnkWzln0eSd2J74Frrw=
+
+Name: META-INF/aggregation_release.kotlin_module
+SHA-256-Digest: SA+J95mmpa8aHzwdRw3mpNB/KdHSSRY7U/5arWHQEmg=
+
+Name: META-INF/kotlin-stdlib-jdk7.kotlin_module
+SHA-256-Digest: WQQoBZ0WNDaqK7V6jykPFb4vnkTLP8ciNS37pzv4aJ4=
+
+Name: META-INF/kotlin-stdlib-jdk8.kotlin_module
+SHA-256-Digest: S7T691bjlkGe18aenYUvhS3F03hnVRTOGMqbL1D089w=
+
+Name: META-INF/kotlin-stdlib.kotlin_module
+SHA-256-Digest: HnDgN1vt2nITbv+XmBz1YwHrd/VPbxY6XSBTyJl/rjs=
+
+Name: META-INF/maven/com.google.code.gson/gson/pom.properties
+SHA-256-Digest: Jj7xFsrdgYp5Yc1Xi6VudpwAxfvf90Go5LIFx1VXozA=
+
+Name: META-INF/maven/com.google.code.gson/gson/pom.xml
+SHA-256-Digest: ryVZLcH6azDrh7IrCQDa8XCZuLWKkRg/oQS7IyIaxk8=
+
+Name: META-INF/okhttp.kotlin_module
+SHA-256-Digest: oRIr/cAxZkR4Y9lfakCGaw74WYnAFXK8hFCal9U8YbM=
+
+Name: META-INF/okio.kotlin_module
+SHA-256-Digest: oaxUNSIXDsC9rBgRQ0/tLK5qImeRuwZ6f80h0wsecOc=
+
+Name: META-INF/proguard/okhttp3.pro
+SHA-256-Digest: mLcPHCVBk9tsJQqXE1rIwpmZ4KUFU1HYY7N2MKzzAf0=
+
+Name: assets/android.intent.action.BATTERY_CHANGED.dat
+SHA-256-Digest: VZafEeYZgZ38bKwsJRHlGZ0g0wO+decov5W6sDkKDbQ=
+
+Name: assets/android.intent.action.BOOT_COMPLETED.dat
+SHA-256-Digest: kjMVs56yhardKF2BJf0bZPCLitmYU77ZcH1ZFeXLn/g=
+
+Name: assets/android.intent.action.CLOSE_SYSTEM_DIALOGS.dat
+SHA-256-Digest: JgjdzV0C3nqMu7fOGSJitjqzM7Xy4qzXQVk0VnN9Utw=
+
+Name: assets/android.intent.action.CONFIGURATION_CHANGED.dat
+SHA-256-Digest: e80s9vftB/gB++htHyUiy/tluyUsapOz3kuSDkMFK/E=
+
+Name: assets/android.intent.action.PACKAGE_ADDED.dat
+SHA-256-Digest: 1VcwAEIjgg2cmuf5h/vXAoKCicHysecxbUMuT/UATvc=
+
+Name: assets/android.intent.action.PACKAGE_CHANGED.dat
+SHA-256-Digest: kENGCCV9Wn8YTFD2Hw3/hn/LA86iyfPI2PiLt4J54Ec=
+
+Name: assets/android.intent.action.PACKAGE_REMOVED.dat
+SHA-256-Digest: Nc8qAAzkvEqbGMCYOfMs6cDK4jFeBAfMky9McKzSgHM=
+
+Name: assets/android.intent.action.PACKAGE_RESTARTED.dat
+SHA-256-Digest: oRfccLCntmxPUBhfc1xVyhdI1CaSAyrXgV9p/NFFOLU=
+
+Name: assets/android.intent.action.SCREEN_OFF.dat
+SHA-256-Digest: 3hIhZcWyxPNNJHVFvSTzR42AfWdO61Xyqo+kEvIoeqI=
+
+Name: assets/android.intent.action.SCREEN_ON.dat
+SHA-256-Digest: rhHG9pG+Gx49FZtIwYf4L8zytM6VK4DbE0U+4gSwEr0=
+
+Name: assets/android.intent.action.SERVICE_STATE.dat
+SHA-256-Digest: 18leiauNeeTxg9MdskJX8wqEHzaGHM5hwqv/KOdzLXw=
+
+Name: assets/android.intent.action.TIME_TICK.dat
+SHA-256-Digest: RUSpsBdOxFeyRhSbFql0sdeDYNqDig0oDizsxMMrtdQ=
+
+Name: assets/android.intent.action.USER_PRESENT.dat
+SHA-256-Digest: 990ay2XBNPQFVRxhaQ0BbwclyByVa7ypKOWH+LdBPz0=
+
+Name: assets/android.net.wifi.RSSI_CHANGED.dat
+SHA-256-Digest: WqmCEWSeu7AbxqlF5AI8PA6cZ7Tv5rcUczT5y/LSOOQ=
+
+Name: assets/android.net.wifi.supplicant.STATE_CHANGE.dat
+SHA-256-Digest: yjAGnpSitdrdAszeC2+ysyZEcqNFHpQL3sflpoMh1ys=
+
+Name: assets/batterysaver/LowPowerConstants.conf
+SHA-256-Digest: aFY3k2HdpntKgMdjthw1gyJxyrT68cpCLzzR/8jrdok=
+
+Name: assets/batterysaver/SuperPowerConstants.conf
+SHA-256-Digest: DPUn/jY+FIucHMmppl/raoaeyraWAHV3JrKO3cirP2k=
+
+Name: assets/broadcast_blacklist.dat
+SHA-256-Digest: U69TV4o9Dmv7/7v4M0nRQhbG0OC1AP14+ECejw7sgaM=
+
+Name: assets/bugreport/dumpbugreport
+SHA-256-Digest: pRDmgxAw8QkfTkCzmxGMTPFT0e9FlWNwlH1G5+RumZw=
+
+Name: assets/cabc.dat
+SHA-256-Digest: P3HNbm++sXCBO2bGOduS/sGMgPXnZ6DG2miR/2ZAsNU=
+
+Name: assets/datacollect.xml
+SHA-256-Digest: sWq9dSTtOy2oK8tRjELfu68UovJ1BpdlKOWeRS3Q85Q=
+
+Name: assets/dcr_m1822.dat
+SHA-256-Digest: 1dgTiAfWm+v+H1WF/mdhyha2jCZRJLc75mpz9RM2a3Q=
+
+Name: assets/dcr_m1852.dat
+SHA-256-Digest: nAF2SkTyMRRf4Q1JB1XlrhF9IF8ioWQRqEc081CC08k=
+
+Name: assets/dcr_m1871.dat
+SHA-256-Digest: UiaY3OgfIm0GHuFUBscIZRyAKWVtOC9kanxDtdQ19h8=
+
+Name: assets/dcr_m1881.dat
+SHA-256-Digest: cWYui06IBRjWKKH4pSuVdxI+o5uRypoUoxQq0lkOxGw=
+
+Name: assets/dcr_m1882.dat
+SHA-256-Digest: 2UKxHlzZWmgri+K98I8jcRvsVedlbabGCE7uDDbKk7Q=
+
+Name: assets/dcr_m1891.dat
+SHA-256-Digest: moZqDKCbaE/gPZ+WZ5yiqjBHAYuJINgUqf0VO+zMv8o=
+
+Name: assets/dcr_m1892.dat
+SHA-256-Digest: JQH57ifRh5yRclGp9YXFb/KpvELuq2qMSs3y0labQHU=
+
+Name: assets/perf/0255/perf_game_scene_boost_level.conf
+SHA-256-Digest: s8xzAWD8w6ikIqhEa9gNRa1rD2uAkeZN7J/igiZvFYM=
+
+Name: assets/perf/0255/perf_scene_boost_level.conf
+SHA-256-Digest: mrSM1aQMv4RJlY7hgoq89LoH/U6NWWaaYrfKiNdr+ao=
+
+Name: assets/perf/1621/perf_game_scene_boost_level.conf
+SHA-256-Digest: U5WSw2uFuDLO9SoFulAipehPRHnKfd/WZ3+kU0JbCKg=
+
+Name: assets/perf/1621/perf_scene_boost_level.conf
+SHA-256-Digest: S8p3Ux3k7nTsxKzAvJLSi6Ox2orEsidftRsGDVk8CiQ=
+
+Name: assets/perf/1721/perf_game_scene_boost_level.conf
+SHA-256-Digest: 6tR0JS49K0981LovVUjGpAVghIGSgTCw22iSSCawnD4=
+
+Name: assets/perf/1721/perf_scene_boost_level.conf
+SHA-256-Digest: 4N8JRATmEzzIXEUzRqTbFiTh8hQYJk63ncZy3dC4ovc=
+
+Name: assets/perf/1851/perf_game_scene_boost_level.conf
+SHA-256-Digest: ZNLmHuYr/1lpaHSt6tPnSu0n3hrMcbzKzJ0VSjFwqus=
+
+Name: assets/perf/1851/perf_scene_boost_level.conf
+SHA-256-Digest: QCu99oNGPo3owYoxdALNsdiDMSgu6AlfZcNTumTazFg=
+
+Name: assets/perf/2555/perf_game_scene_boost_level.conf
+SHA-256-Digest: d5LPRHN5JVZsDf/F9n5dXF4DnO2Y0tmFoRYEzRg+A1A=
+
+Name: assets/perf/2555/perf_scene_boost_level.conf
+SHA-256-Digest: X6vUQexfOcz0Asn/Y6Nk4Q844VW8xHiSwHGeBEWhBIg=
+
+Name: assets/perf/8097/perf_game_scene_boost_level.conf
+SHA-256-Digest: aSw+4k7j9L5n4EXDu/aGMOOIt9UYwLtNz3o0K+Zg/g0=
+
+Name: assets/perf/8097/perf_scene_boost_level.conf
+SHA-256-Digest: hp0S2ti7bJnJHf5MfM8+LEQ7SXQiBiEO62Fuk6/f30M=
+
+Name: assets/perf/9597/perf_game_scene_boost_level.conf
+SHA-256-Digest: TnW6ZhDq9DH5AOCmsBmCtARcjKNz8/IF/ayumX86k1M=
+
+Name: assets/perf/9597/perf_scene_boost_level.conf
+SHA-256-Digest: k2rJanHHDuio4E4b/Ohh5KzZhjA3VkY9+LmqABPL344=
+
+Name: assets/perf/9690/perf_game_scene_boost_level.conf
+SHA-256-Digest: aMixBXeP8DLKHAQ8cyAJTza8KVgIiudBELwEcv8lj70=
+
+Name: assets/perf/9690/perf_scene_boost_level.conf
+SHA-256-Digest: Mg6Jg89yKAGaww9LwroMh+nU6pztwoLpxXGgX8MRapc=
+
+Name: assets/perf/ar31/perf_game_scene_boost_level.conf
+SHA-256-Digest: sATl5nsw15ynr/vabyPOv1Ab6KklccWaQm4XjuH9Sm4=
+
+Name: assets/perf/ar31/perf_scene_boost_level.conf
+SHA-256-Digest: BBzFqBKfCPFUA8xanH2FQgsQuN8g7TgCzLfRbPGbrEU=
+
+Name: assets/perf/m1711/perf_game_scene_boost_level.conf
+SHA-256-Digest: rOmiUcwuveLFyXrjOZb7OWHHAGRHkEpcldt/exo310c=
+
+Name: assets/perf/m1711/perf_scene_boost_level.conf
+SHA-256-Digest: UHqyByJa1Co96bu/WMiyE5YLSHYazxJpmupLeqC8jR0=
+
+Name: assets/perf/m1712/perf_game_scene_boost_level.conf
+SHA-256-Digest: blpFOd2X44v+JZ9bW1DfQRAQcoJR1i2pREJ19VEk3ns=
+
+Name: assets/perf/m1712/perf_scene_boost_level.conf
+SHA-256-Digest: BbAw8ln+Wr+G8ySdQUzqgEAEjx+lEcMCC5EAr34nJMs=
+
+Name: assets/perf/m1792/perf_game_scene_boost_level.conf
+SHA-256-Digest: epW3tPKiqbYsNAe/fnu2syEjFxw9VQkKXMRPWol0Uac=
+
+Name: assets/perf/m1792/perf_scene_boost_level.conf
+SHA-256-Digest: 4On3I2GkAZcCrB5Qi9oCBurjAg6Y9hSZFNT/yWNC67w=
+
+Name: assets/perf/m1792l/perf_game_scene_boost_level.conf
+SHA-256-Digest: fYycU32tSQrsKKtxomC+JB4KXr/g8sGdNqn3wnbgyT4=
+
+Name: assets/perf/m1792l/perf_scene_boost_level.conf
+SHA-256-Digest: B+2WOTk+SPi+0w3WFzK7ZrsU8kJHC5wBptXP7wO4kBc=
+
+Name: assets/perf/m1793/perf_game_scene_boost_level.conf
+SHA-256-Digest: 9bCykyDLwFQ8s8XObPY3BfRaDBlWTjGpURD4hyNobX8=
+
+Name: assets/perf/m1793/perf_scene_boost_level.conf
+SHA-256-Digest: nmyxUt5rF2omj+QFCjoe/AQmlTYKWlDrPcVLHT5Hbaw=
+
+Name: assets/perf/m1813/perf_scene_boost_level.conf
+SHA-256-Digest: B3DDDQGyzjZwOvIdhSuplQ4BNqg/NCj8tQS568PxFLE=
+
+Name: assets/perf/m1816/perf_scene_boost_level.conf
+SHA-256-Digest: Oi9zt27nM4lFHURCWHE/rTbeLqTOx5BPIG5lzXMX4Mc=
+
+Name: assets/perf/m1822/perf_game_scene_boost_level.conf
+SHA-256-Digest: hpIaq7BwWAdXB1lcHMNLzLgSmGWb0G1YOm4HUmHNey0=
+
+Name: assets/perf/m1822/perf_scene_boost_level.conf
+SHA-256-Digest: lqj16+wM1BkoX4ZFW7tZu8QFpNBt4rsP8DQeMZi1iok=
+
+Name: assets/perf/m1852/perf_game_scene_boost_level.conf
+SHA-256-Digest: B3FKEQekAXW/zcqcpiFENEkIodjoGtdSPHTHCRY7pqg=
+
+Name: assets/perf/m1852/perf_scene_boost_level.conf
+SHA-256-Digest: WDZXDY21KJ4JWXfCom8QJXsSM0Xe6hU/LkJ/tSGqSb4=
+
+Name: assets/perf/m1871/perf_game_scene_boost_level.conf
+SHA-256-Digest: Rw3RO364nAH1dl+Qj00vPEN2t2dAx0uWF8HvFB5E+jo=
+
+Name: assets/perf/m1871/perf_scene_boost_level.conf
+SHA-256-Digest: oXu6zsqj+Y7bhPiu4JDT7rYVU1lUtzpZLgjB/xe3/KY=
+
+Name: assets/perf/m1872/perf_game_scene_boost_level.conf
+SHA-256-Digest: hSBSvTiILctXLfjjVCItZkPnM9OuzCLgNNuJ7ziFSno=
+
+Name: assets/perf/m1872/perf_scene_boost_level.conf
+SHA-256-Digest: WuMq1uPKQM7EkWqftK9gJ3vcy9wpUroUWNFTtjM4sMM=
+
+Name: assets/perf/m1881/perf_game_scene_boost_level.conf
+SHA-256-Digest: yaGV9UpsaF9TQvqGraQMVeN6+HF2kQDri1vhvFVqH9Q=
+
+Name: assets/perf/m1881/perf_scene_boost_level.conf
+SHA-256-Digest: MMsQLT3sNk8waVsMzuQ+d20Ltgs6a7l87JBQ7RBqdms=
+
+Name: assets/perf/m1882/perf_game_scene_boost_level.conf
+SHA-256-Digest: 5Ydjj2MiztOgDx8xwE4iDxh0SbqAmc1x20aqIyjc0hQ=
+
+Name: assets/perf/m1882/perf_scene_boost_level.conf
+SHA-256-Digest: z/aHZk3s8OO8j3NbukjngXJTpCWmQtwcqkYf/XzuOrg=
+
+Name: assets/perf/m1891/perf_game_scene_boost_level.conf
+SHA-256-Digest: /WQxY4N5v8U5wxZqw46ZQdqm0o4LyasUNm5p3sXCM58=
+
+Name: assets/perf/m1891/perf_scene_boost_level.conf
+SHA-256-Digest: AVKuoskVeYMO5Fo+rS3X7tVnpS85xBofblKg2ivb0Gs=
+
+Name: assets/perf/m1892/perf_game_scene_boost_level.conf
+SHA-256-Digest: WjrEC0L2nnk/5Vavcf0M6FDJH0zWtek332VRdDPSHcE=
+
+Name: assets/perf/m1892/perf_scene_boost_level.conf
+SHA-256-Digest: I39aghHTCOfmVHkahW+XfYzsZGmqqqrkjtnEDWdP7uU=
+
+Name: assets/perf/m1923/perf_game_scene_boost_level.conf
+SHA-256-Digest: PEj69edAaQyC5GYzYl+C7uAs39dp3EZJ7NycapxQwA8=
+
+Name: assets/perf/m1923/perf_scene_boost_level.conf
+SHA-256-Digest: dcxZbpOXDTEW0dqSgrhQvdevn+9Y3y8HeQka5UGIiwc=
+
+Name: assets/perf/m1926/perf_game_scene_boost_level.conf
+SHA-256-Digest: tXC0D2XfvRyGyB8ksePFzal6CXgrE8kQP8tWb0vC0xM=
+
+Name: assets/perf/m1926/perf_scene_boost_level.conf
+SHA-256-Digest: oOkgamR16R4kGRMHSmuB/tetng2/AVtz/lf2xzLTbvo=
+
+Name: assets/perf/m1928/perf_game_scene_boost_level.conf
+SHA-256-Digest: zLjNVFE1MPDrDGm/QYx+jFsYGrjUA4yuFwuacPX4psg=
+
+Name: assets/perf/m1928/perf_scene_boost_level.conf
+SHA-256-Digest: Bu3coIkS+8RbyKIgyan71SDVjeGIVV42sj9Dbp7wvdE=
+
+Name: assets/perf/m1928/thermal_scene_level.conf
+SHA-256-Digest: VG8kNeoj5sLa9/yQNY7YkUjxFm+bZ0HSu0N01+JR5NY=
+
+Name: assets/perf/m1971/perf_game_scene_boost_level.conf
+SHA-256-Digest: n6j7YBRAv+VCA+4Pph8OaDTz4AJRtHQSUWrvuc/6Ybo=
+
+Name: assets/perf/m1971/perf_scene_boost_level.conf
+SHA-256-Digest: ygoLb4PJxqRcYO0Ej8RyW35W6gODNKlHvfmKdwzSwuM=
+
+Name: assets/perf/m1971/thermal_scene_level.conf
+SHA-256-Digest: ha+bUvbTHhJj6y5lE/i0hPxOgwVSSk7mnPO9pIIs/Vc=
+
+Name: assets/perf/m1973/perf_game_scene_boost_level.conf
+SHA-256-Digest: tpm0VkSdo/LR0DYqSBArr/9t3xJ2Xx0pSjV2tWwyGhk=
+
+Name: assets/perf/m1973/perf_scene_boost_level.conf
+SHA-256-Digest: HhqhUTM22TkLYYI3Lo0RDQ6OX/UHBOZ+ic7S3DJayCM=
+
+Name: assets/perf/m1973/thermal_scene_level.conf
+SHA-256-Digest: mIQsHw4qcr0y5RDDRMLNiYqFDBbBmvC8veG3buBlt/I=
+
+Name: assets/perf/m2081/black_list_120Hz.conf
+SHA-256-Digest: PSc9tvLthcU+Yme0ykGMbZT2LYyeV15afP7eD/7G46Y=
+
+Name: assets/perf/m2081/black_list_90Hz.conf
+SHA-256-Digest: fYIXwWo2zpq3Tv591M/d8LOmWuNDhlZyqv8gPb/SUcg=
+
+Name: assets/perf/m2081/perf_game_scene_boost_level.conf
+SHA-256-Digest: iCuunadyD5WiVg5SGmnawxyZyRjJ3/xoPVgcNkrH4wI=
+
+Name: assets/perf/m2081/perf_scene_boost_level.conf
+SHA-256-Digest: kR7cCL2MgJ5kkWGkAfksPpmIKDxzoFsuVTfuIq0+V6A=
+
+Name: assets/perf/m2081/thermal_scene_level.conf
+SHA-256-Digest: 94jIN5ACenR5QKGF5oSu3iwr0SbzZtF58ylc4R//KNQ=
+
+Name: assets/perf/m2081/white_list_120Hz.conf
+SHA-256-Digest: EkhtLvJABTe/zlJhoDb72+ozGickwnyP+d+QDmFxcDM=
+
+Name: assets/perf/m2081/white_list_90Hz.conf
+SHA-256-Digest: 3h1GWYLq1xrcSgs27RftAKzzUh9IQbiUNZomQncmwyM=
+
+Name: assets/perf/m2091/black_list_120Hz.conf
+SHA-256-Digest: cOcf/UtvYX97jC7A6+GBY4uah1HGfA3G1MiNjoluBfU=
+
+Name: assets/perf/m2091/black_list_90Hz.conf
+SHA-256-Digest: Ls+yZlkEyfKHXxd1HgtKWDiOeK1UrkDUBo3w5qkAUmQ=
+
+Name: assets/perf/m2091/perf_game_scene_boost_level.conf
+SHA-256-Digest: FK5bk2/yGpci6FiEts3UR2Z373beGpyw9CRsENn2JJQ=
+
+Name: assets/perf/m2091/perf_scene_boost_level.conf
+SHA-256-Digest: eeqxKucUz6BxQMYm16liGcU81owk6F2/TLWMeOrBtNY=
+
+Name: assets/perf/m2091/thermal_scene_level.conf
+SHA-256-Digest: 9POyjUIm1UJhQhf2sWGnzatFqXb1LQdE+6NgUWMAVyU=
+
+Name: assets/perf/m2091/white_list_120Hz.conf
+SHA-256-Digest: xa1MKaNzhjSwbXFI6dzp/D0bPMXXy2MqRY7FDDhi6N0=
+
+Name: assets/perf/m2091/white_list_90Hz.conf
+SHA-256-Digest: 3lKmFXY4GeNjFYgfCE0TGUhF86eKYBLPeax4F41kb8Q=
+
+Name: assets/perf/m2172/black_list_120Hz.conf
+SHA-256-Digest: KGU8evfqnBpjZFmnqHXAj7u7aeBNJJTeBwxeX4hNYpw=
+
+Name: assets/perf/m2172/black_list_90Hz.conf
+SHA-256-Digest: 7R867PRnOTE1/53X2a4BBsD2oTrqwALw1QOVLZFyzTI=
+
+Name: assets/perf/m2172/white_list_120Hz.conf
+SHA-256-Digest: 3byRHkYa0K07Rvx+WWVm/lkusxhJuTTEEKS27vvBpF8=
+
+Name: assets/perf/m2172/white_list_90Hz.conf
+SHA-256-Digest: Bg14jBMTe9jcyparzzeCrkY4DbP5N1KDb7hKkxBHpwM=
+
+Name: assets/perf/m2181/black_list_120Hz.conf
+SHA-256-Digest: /ilKI/ZHyuAesVigvbfEyta5jd65ssF45UVHclxMpq8=
+
+Name: assets/perf/m2181/black_list_90Hz.conf
+SHA-256-Digest: KAEPYazSHu17VFIvJV8jaRQKFp4Boi38DciF/loY/7k=
+
+Name: assets/perf/m2181/thermal_scene_level.conf
+SHA-256-Digest: oX2QJNpT0CFvuIWljrppRtG9dWLexhfq1Bsyp7+6cEE=
+
+Name: assets/perf/m2181/white_list_120Hz.conf
+SHA-256-Digest: d92jzDGoWEe0A41WByPXB5pxQ3wjC7jHGSxXyBzJzZQ=
+
+Name: assets/perf/m2181/white_list_90Hz.conf
+SHA-256-Digest: zAyNRcetZFSPnLtLOP94FqfHyZkNLs7hTTi4y1B4gTg=
+
+Name: assets/perf/m2182/black_list_120Hz.conf
+SHA-256-Digest: 4bqKl00Ua9bbfqXrQxA3gQsKg+SfwtxJ9bYx9s57/Sc=
+
+Name: assets/perf/m2182/black_list_90Hz.conf
+SHA-256-Digest: QZRl1PlDRBVmECBA07TrXmexZPAw3XpjfSQ7x6W9nrc=
+
+Name: assets/perf/m2182/thermal_scene_level.conf
+SHA-256-Digest: T2D7Uu087nyUAoLZhFEd9H/78NYpZWvhSJpkJnCwWL4=
+
+Name: assets/perf/m2182/white_list_120Hz.conf
+SHA-256-Digest: YdE5LErR70R2vSWxVdozPTU32pbQW8+wGM8/J5yWY+8=
+
+Name: assets/perf/m2182/white_list_90Hz.conf
+SHA-256-Digest: mLYWDJWz5t/zWapDVMBQ6+K+SIjCm9HrQHjbCt1Zhkw=
+
+Name: assets/perf/m2191/black_list_120Hz.conf
+SHA-256-Digest: fB1uZKsM/csmPQZgEXxUJ1INLHhkOMHUL8FoWCi/ZSU=
+
+Name: assets/perf/m2191/black_list_90Hz.conf
+SHA-256-Digest: hbs80N3zG3EwWulZW4OblFkrNCslkYs2+57V3nRVuP4=
+
+Name: assets/perf/m2191/thermal_scene_level.conf
+SHA-256-Digest: CbUPH8BE3Oqk8fUriaSQSc6iXmOcch+1IHpfpM0wBhQ=
+
+Name: assets/perf/m2191/white_list_120Hz.conf
+SHA-256-Digest: Vk2y87WkPG7h7KFLhrP87b1DUvTCfaqslOfVNdwsveM=
+
+Name: assets/perf/m2191/white_list_90Hz.conf
+SHA-256-Digest: 4MOwHVWUbJlG4g8M8Nq6HQCt6LC+hIFGRwj5Ic3UKb8=
+
+Name: assets/perf/m2192/black_list_120Hz.conf
+SHA-256-Digest: WClEZ8ySsGHevs0mi78rvIniFTxrDP8ewI6fWPsQa1Y=
+
+Name: assets/perf/m2192/black_list_90Hz.conf
+SHA-256-Digest: FlQbb3vcWxrLMsqY6ZqmO4Dnvx76XBKUpqO2TnXPQFQ=
+
+Name: assets/perf/m2192/thermal_scene_level.conf
+SHA-256-Digest: 4qjs5cVl8GeZS50eCKDFescPbzuI8EIck/fCWyt/Vpc=
+
+Name: assets/perf/m2192/white_list_120Hz.conf
+SHA-256-Digest: kcm62EltjVBg7cpvaoEmBv2PnA9KNI/Jxc2fVJ6Xlbs=
+
+Name: assets/perf/m2192/white_list_90Hz.conf
+SHA-256-Digest: wyb7Ps/YO0v+4hRZCakWngTsgxxrE5gOjA39uwnWIIA=
+
+Name: assets/perf/m2381/black_list_120Hz.conf
+SHA-256-Digest: 76g6xKnXB7KXlB9rdi/WNiPS3OKu4KVWCpSF4ub9JH4=
+
+Name: assets/perf/m2381/black_list_144Hz.conf
+SHA-256-Digest: xGcvvSFOcnqQmAcw5kGqcgB51TrtbEMeDsQm9ANYaXs=
+
+Name: assets/perf/m2381/black_list_90Hz.conf
+SHA-256-Digest: Ezc/nndSIyv57sIt26UYpf35YwVjalYeQCli662XHVc=
+
+Name: assets/perf/m2381/default_refresh_rates.json
+SHA-256-Digest: 2PEqCihycN82HEJ7Y3gMgqJUPgrIFM/r2F8tUF6x8JQ=
+
+Name: assets/perf/m2381/thermal_scene_level.conf
+SHA-256-Digest: 86K00ruaCMuE4WAXxGaXCaDgZJxl6dPcKGj2TX1aNEs=
+
+Name: assets/perf/m2381/white_list_120Hz.conf
+SHA-256-Digest: 9m/HXpsam0LqEXu+ondsySZuLJlXnmqi2rQRCh7MI50=
+
+Name: assets/perf/m2381/white_list_90Hz.conf
+SHA-256-Digest: Ts7O8frqAOQeIfZYzyK+a0EVrOdU3E6QsjvqCDRKz9k=
+
+Name: assets/perf/m2391/black_list_120Hz.conf
+SHA-256-Digest: xJOdi2uPCpY/pVC4Rlo5RxL8ZpaMrbSM46bxaE5kGmc=
+
+Name: assets/perf/m2391/black_list_90Hz.conf
+SHA-256-Digest: 5zjNEoPtDq5OkwsC5/Sv1tRht8IqqthnqQgX//l42N0=
+
+Name: assets/perf/m2391/default_refresh_rates.json
+SHA-256-Digest: kUl3fsz7CVfMvxrzNdWH6aorUSYrxfEPfjWdHfwYCa0=
+
+Name: assets/perf/m2391/thermal_scene_level.conf
+SHA-256-Digest: 3pRYwo8pa87n9mfHWLmK1ptRO+JW61EZeEEAqBC+KIM=
+
+Name: assets/perf/m2391/white_list_120Hz.conf
+SHA-256-Digest: +36OaCafguD4JbhmjRZChrjI/894Qiid6U+Fe6XmTcM=
+
+Name: assets/perf/m2391/white_list_90Hz.conf
+SHA-256-Digest: T+aOnH5nBrNiad6PyoCZpUKurQl1VKnR36dd0BUR76k=
+
+Name: assets/perf/m2392/black_list_120Hz.conf
+SHA-256-Digest: KpNmFibk1TZjyWv+e6cV1kisFNx9FdkH0RfsWejdwo8=
+
+Name: assets/perf/m2392/black_list_90Hz.conf
+SHA-256-Digest: 1TlZ0zsaJhFbZUd7CWCYPrJEuzsGU2apn3Ks1wPYYRo=
+
+Name: assets/perf/m2392/default_refresh_rates.json
+SHA-256-Digest: EDV24it6qZTTC4aYMxf2GD7OWaKlpyueE+kIM1K5MMk=
+
+Name: assets/perf/m2392/thermal_scene_level.conf
+SHA-256-Digest: EwcySgLcRUvIqWtuBI4bEkwJfTR2fw+qLzdWdAIJvII=
+
+Name: assets/perf/m2392/white_list_120Hz.conf
+SHA-256-Digest: KrS3+k6irlLZExgjn/SNaL0a5pr2CNcbfnqGSiIkNNc=
+
+Name: assets/perf/m2392/white_list_90Hz.conf
+SHA-256-Digest: rE3o1jV6t6FvcPUSMcHedYtopvdsAH3H1uuYtZXXjbQ=
+
+Name: assets/perf/m2431/black_list_120Hz.conf
+SHA-256-Digest: wBWqCpYiC04cx+jdtzWx4h/xyfXl1HbgJXi7WZsCn/s=
+
+Name: assets/perf/m2431/black_list_144Hz.conf
+SHA-256-Digest: 7q2cYU0E49mGAaSqiS22FHFDuZRrdVQ/7CsZs/MSFIM=
+
+Name: assets/perf/m2431/black_list_90Hz.conf
+SHA-256-Digest: XezW1oYcPgQSAQOIjBEKf2rAe+YZeu28lcA+lDGeTQg=
+
+Name: assets/perf/m2431/default_refresh_rates.json
+SHA-256-Digest: y91tIZlLbNxczGacpqThzUhWiB9PYipvTerZ34dcda4=
+
+Name: assets/perf/m2431/thermal_scene_level.conf
+SHA-256-Digest: 0jvdncefjQ9D1aaqqOAokL8VInY3Lw6BpJA3sw6cuJA=
+
+Name: assets/perf/m2431/white_list_120Hz.conf
+SHA-256-Digest: HpCbAaf9Jc8MCzzM33zFFo6cSCPtrkztDIV6PceZh7Q=
+
+Name: assets/perf/m2431/white_list_90Hz.conf
+SHA-256-Digest: 2zvpIX9EhXJSKOvAvYRu+m2lRGutd+o+sKU/OQSv4YQ=
+
+Name: assets/perf/m2461/black_list_120Hz.conf
+SHA-256-Digest: SoApftwB36DFhCuZlQsfQe0ATJ4vfz6uxH+Zp6N/qnM=
+
+Name: assets/perf/m2461/black_list_90Hz.conf
+SHA-256-Digest: wUUD5Rp9jXcQ+Ulr+xEhuJBtqafr8ZJj/InkifWlUQQ=
+
+Name: assets/perf/m2461/default_refresh_rates.json
+SHA-256-Digest: qsWNzGzq9l8B1IND21hDy/OifArPt6KrHmqHrE2Vs3s=
+
+Name: assets/perf/m2461/thermal_scene_level.conf
+SHA-256-Digest: KpZhFs4R3J5Vn/lM8DBS5T+/d9loJDIYiu5BwC17fEI=
+
+Name: assets/perf/m2461/white_list_120Hz.conf
+SHA-256-Digest: sYGRXWH1IvhFxYzfHVcyy/iiREHZWgCfoPNuLc+7t5c=
+
+Name: assets/perf/m2461/white_list_90Hz.conf
+SHA-256-Digest: QwbfljBfHrYwz7Z3o5lIJM/+LKRyDOCaGLjmWsGG+6A=
+
+Name: assets/perf/m2468/black_list_120Hz.conf
+SHA-256-Digest: NsghZlsc3Y3Xms7T0Icae7dSwAYdpQwt9DUFBcNHGbA=
+
+Name: assets/perf/m2468/black_list_90Hz.conf
+SHA-256-Digest: m5CGWpY7Moe5wIZ+x6G87ipA6bQvovTfn8AmNCFhf20=
+
+Name: assets/perf/m2468/default_refresh_rates.json
+SHA-256-Digest: xquNh4iS+vHIlq2tqrABizZVha8MioXjr7mpwAxLw4U=
+
+Name: assets/perf/m2468/thermal_scene_level.conf
+SHA-256-Digest: 4W5sKiYz/bn2o5g+ylo3QOrSbCeDcMWi9YteqYdiNk0=
+
+Name: assets/perf/m2468/white_list_120Hz.conf
+SHA-256-Digest: IxSuUvZ7RjLltc+nG/2vzpKYcAaG/+XXiNlHEocmuiw=
+
+Name: assets/perf/m2468/white_list_90Hz.conf
+SHA-256-Digest: B2pZbY9wncb7yKCinxaox1NeHdLbjRCJBx9V679msco=
+
+Name: assets/perf/m2481/black_list_120Hz.conf
+SHA-256-Digest: Iq0oeGpZHFOspFgEWYST2taxzGBAeRgDvxaRQWX2g9c=
+
+Name: assets/perf/m2481/black_list_90Hz.conf
+SHA-256-Digest: HedSumGq4Yt5iboBjDO5mYk2sQ+0q+w7Vof9Gu/M+ro=
+
+Name: assets/perf/m2481/default_refresh_rates.json
+SHA-256-Digest: 0E8egrdCU8hk8r/Ul6GqYAQ0hGghqAReGaTOXy8o/sg=
+
+Name: assets/perf/m2481/thermal_scene_level.conf
+SHA-256-Digest: BPEjlupbN85F+nIFqUvjZCaEzDvTfoElehItOQSI3pg=
+
+Name: assets/perf/m2481/white_list_120Hz.conf
+SHA-256-Digest: rVZOxXf9/OnmrCAYJ1d4A2kUpKiszimS1A569XTJh60=
+
+Name: assets/perf/m2481/white_list_90Hz.conf
+SHA-256-Digest: vfXlB6ZcxuM+2cLkdAEczMIGt0WFxRl02u6Gct2SLuM=
+
+Name: assets/perf/m2518/default_refresh_rates.json
+SHA-256-Digest: DCQsJ2m9qJLscGG5Yh0nsSWLA994JCHypNS4W4sejcg=
+
+Name: assets/perf/m2521/default_refresh_rates.json
+SHA-256-Digest: YSAM+/e3Wt6tqLqB+rqvewQunp3QzAP2/XLLJpAuiUM=
+
+Name: assets/perf/m2531/default_refresh_rates.json
+SHA-256-Digest: 3UHg6E3V/qYHwaepvPoEE8eNokWewU6KnrPhmh3FyKE=
+
+Name: assets/perf/m2582/default_refresh_rates.json
+SHA-256-Digest: CPsp1hj3QYl4F1SlPRs6OQIVMhTzArg+X3LQkI/kMwU=
+
+Name: assets/perf/m86/perf_game_scene_boost_level.conf
+SHA-256-Digest: fUo0mJpaJhbZTy/qa8yojO2a+8cJuS+S+xz8rxRdYVI=
+
+Name: assets/perf/m86/perf_scene_boost_level.conf
+SHA-256-Digest: tslvNe8MKAzmNFUH3RYR5dURkSzqs/4DgGnJHrrp8kA=
+
+Name: assets/perf/perf_feature_common.conf
+SHA-256-Digest: mi9S0ITYHyPxn8RjwUI0HUr9FzowjpO0EcDG6U88QVc=
+
+Name: assets/power/FiveGWhiteList.conf
+SHA-256-Digest: QKbZV/o7awOsag2rtGn3vEgTnGgieZyT1DIdhqKkL08=
+
+Name: assets/power/IdleFreezeExemptWhitelist.conf
+SHA-256-Digest: RVrgj4LjPsFTrZeGg9e+zRi9krJaKmR8/k4UEF9bBvw=
+
+Name: assets/power/anti_burn_screen_config.json
+SHA-256-Digest: R+HguIkJs5hs71V3V4b7+AFe3ySTYlUgN/RLR5+ALqw=
+
+Name: assets/pp_0.html
+SHA-256-Digest: aBtmeMJ6ceOUe2WjTkvFRLXxPTUYAvcrbUqnVRrrit4=
+
+Name: assets/shrink/2G_memory.conf
+SHA-256-Digest: yqV4rPYohAfwsUEWX0ATxUJWLLadihYFk5e3jMiAIm8=
+
+Name: assets/shrink/4G_memory.conf
+SHA-256-Digest: kLciMK+Ln0Ao6KqrHOE9Rp+sJ+XhuzL/37Zrk+BTd3I=
+
+Name: assets/shrink/6G_memory.conf
+SHA-256-Digest: qEH7WXhKC+e2hW31W2lXCnE6L1cRNhZMCWt7FNkYEO8=
+
+Name: assets/shrink/8G_memory.conf
+SHA-256-Digest: rDY75OJ4nt4bjptnAheeboTdhusGIMFwJziTQ70x76I=
+
+Name: assets/shrink/camera.conf
+SHA-256-Digest: 6OssHhVO2ntqvOpHUwZTnUDS3fRQgbpisbt1/qpttSY=
+
+Name: assets/thermal/m1923.config
+SHA-256-Digest: i9e3aIqxHgRYFe1Ef1QQesrPftzXGU4P3r6bAKhDSbw=
+
+Name: assets/thermal/m1926.config
+SHA-256-Digest: ZXp/4hTpMppRy1D/Bedpx0KgpNT6qZeFBRDVTiv+6SU=
+
+Name: assets/thermal/m1971.config
+SHA-256-Digest: avc8546QTDVuzHwN/pqsOXkA8HlU6EJpFL3or5enpDk=
+
+Name: assets/thermal/m2081.config
+SHA-256-Digest: gL/meSjAbCTq6ZAQuYyOBXFY72NiN99FvaxHwaTy3rY=
+
+Name: assets/thermal/m2091.config
+SHA-256-Digest: rYjO6FJV3NDZfFhpiqLH0ANwGd1sJGw9P7INBWdwI1M=
+
+Name: assets/thermal/m2110.config
+SHA-256-Digest: HbI2hg5AOl4Qu4+GnOtFBdSC7DBoYiFRrATr4phfoIs=
+
+Name: assets/thermal/m2172.config
+SHA-256-Digest: N1z69UnUigVou/R4xOBiLVx+pf+0+ZIDVQiigNybQs8=
+
+Name: assets/thermal/m2181.config
+SHA-256-Digest: 9fCOYNuME3BLp6jzk02UFwVnfFFI8mQmoaq57cwXsn0=
+
+Name: assets/thermal/m2182.config
+SHA-256-Digest: WOsd1Mdq5r0437xtup5FaVvB6M/602VmgA+vT+RIUIg=
+
+Name: assets/thermal/m2191.config
+SHA-256-Digest: SFVHnXqX8fbx0jY0NIjE598i6SateLBrpmkCWtFNjlU=
+
+Name: assets/thermal/m2192.config
+SHA-256-Digest: uszs8VMWXAit5Md1ibHk5GIHwvkVfHtUUHSlTonw71E=
+
+Name: assets/thermal/m2381.config
+SHA-256-Digest: w12JZcJXG7mdHNVERuoGk04eV90OWwqRpkaOVguTCII=
+
+Name: assets/thermal/m2391.config
+SHA-256-Digest: 6j1j1sjmLxw56PtbQiHEhrh/bFTHX8smc0s2SSCl43Q=
+
+Name: assets/thermal/m2392.config
+SHA-256-Digest: dU0xET4FV7ctW5HsJ0dWH6c2pr7drrxsS1POM4cU44I=
+
+Name: assets/thermal/m2431.config
+SHA-256-Digest: gvC21NVVOlcKjOPwlsFXmmgZPeX5s29bNxX4fG8GdHs=
+
+Name: assets/thermal/m2461.config
+SHA-256-Digest: LtmI1cPqZv6+Yiq0ntoyapvrvBlm2auyX1v28KP6L+A=
+
+Name: assets/thermal/m2468.config
+SHA-256-Digest: 1Rh61de8ohe77tAKXbUGGnQp9QbKELHNSM2AfR50YyE=
+
+Name: assets/thermal/m2481.config
+SHA-256-Digest: aBeea0+XJ7RMHziyumIU4dnVkQpnDZSmLhLUO9sZd/8=
+
+Name: assets/thermal/m2518.config
+SHA-256-Digest: lYJOXNCHYYX4p/15Xpqu08UAxDRoExardi3j7OcbFDY=
+
+Name: assets/thermal/m2521.config
+SHA-256-Digest: cOM3pi8J5Ru2Tv3OkWrgcf4hnLCEGae986fSQ1W3uRQ=
+
+Name: assets/thermal/m2531.config
+SHA-256-Digest: GO823+ZqKNcyhuJN0UwbkjnX5gKSwrvfjCxSeHJsPEI=
+
+Name: assets/thermal/m2582.config
+SHA-256-Digest: VjbOyGKct28u3MC9pslvRCon/Wz7YoJ4a42u8qaGr6Y=
+
+Name: assets/transitbroadcastinfo/broadcastinfo.json
+SHA-256-Digest: ZANNtuUDbdVXL/EmTZWL75BEuRt49tw8sEl0eSzKuZ8=
+
+Name: assets/up_0.html
+SHA-256-Digest: uCBCMu9C8LITiCdhYSnagbrhIS8Oi39V+6wLLqYMPKw=
+
+Name: assets/wechatspeed.dat
+SHA-256-Digest: P1jAeYDfQ5bH1+B2KbLuO+yRkj8Pa7Pc4oLn1pLTIJk=
+
+Name: classes.dex
+SHA-256-Digest: 938hSpI10RxHD6NkrFzS9xK2ASitFP4Xj9zj/62FUUo=
+
+Name: kotlin/annotation/annotation.kotlin_builtins
+SHA-256-Digest: 37WDWfmYN6iX75eAXUXFlMf/SlVVztjbh/wKm8XgEWU=
+
+Name: kotlin/collections/collections.kotlin_builtins
+SHA-256-Digest: Q7jZRv9+2qLROmcpCDWJWzGOsq/s4QM2TNcA5RrXm70=
+
+Name: kotlin/coroutines/coroutines.kotlin_builtins
+SHA-256-Digest: QETf+Rc+3vjnIqvzEpc9ejAXaloigQfzV2j4bU5faEU=
+
+Name: kotlin/internal/internal.kotlin_builtins
+SHA-256-Digest: qWjFefItkz/FFM0931o0I9QAMQd6m7pJzUdFC+5vViU=
+
+Name: kotlin/kotlin.kotlin_builtins
+SHA-256-Digest: VkN63WmmMvTy5+7sWhLjfsu1S8gsbvGzd2OXMHK4TbY=
+
+Name: kotlin/ranges/ranges.kotlin_builtins
+SHA-256-Digest: 6esJbrjuBmuBEM7N5TrVnjx2L2UG1oEIWu89qSZC99U=
+
+Name: kotlin/reflect/reflect.kotlin_builtins
+SHA-256-Digest: zBEXYLudzDOWieNRqhO7zPVOF7qW6Y/rdLS+68iJOG8=
+
+Name: okhttp3/internal/publicsuffix/NOTICE
+SHA-256-Digest: jX9JruGK5ez+/1XZmYyo2xyogqpjI2P4C6YwmN2E9Kw=
+
+Name: okhttp3/internal/publicsuffix/publicsuffixes.gz
+SHA-256-Digest: hR8ufO8/D5GcYBZhmLzVDu86F650cFNT5ZHECCmnq3o=
+
+Name: okio/ArrayIndexOutOfBoundsException.kotlin_metadata
+SHA-256-Digest: t5vgChHd8wRd1BnLag+EgCl/f+CUBQwVLsomXg8eRPM=
+
+Name: okio/Base64Kt.kotlin_metadata
+SHA-256-Digest: tg1k0CpXLf5K49n9XLdk6N6hsDtTYJf0ahy02AXsNWg=
+
+Name: okio/BlackholeSink.kotlin_metadata
+SHA-256-Digest: gWyYscCX+vYUlH+eK0euM3GRD+GVa7FIyntelC/OiBo=
+
+Name: okio/Buffer.kotlin_metadata
+SHA-256-Digest: jrYnd5QgqRlc3bOw281wJ0OBHyolXYTVEd1nJ2yxuyM=
+
+Name: okio/BufferedSink.kotlin_metadata
+SHA-256-Digest: cRY4u1pVxvh7J4CHRGm0k/47NfMQ8dsi0FdQkPldAQA=
+
+Name: okio/BufferedSource.kotlin_metadata
+SHA-256-Digest: xO+annBSNZXAXPEx4dS5SihNe2dT59+dSQarpPrjEEw=
+
+Name: okio/ByteString.kotlin_metadata
+SHA-256-Digest: AB9lBnuX7O+oh4yKpoPAmMCIEadi26xZ5+dEswf6N98=
+
+Name: okio/Closeable.kotlin_metadata
+SHA-256-Digest: zXq8Xa0ULWZynbE9cLad2TuT/+dDFQG2WDJdITriR28=
+
+Name: okio/CommonPlatformKt.kotlin_metadata
+SHA-256-Digest: Qg0myPX4AYXhErTWpx7LwvJayIYjatHM9u0Ih7HynaA=
+
+Name: okio/EOFException.kotlin_metadata
+SHA-256-Digest: mD7BGjoWciOtByXBZbqQUK1tOGDyEzXuUfz/B45I29U=
+
+Name: okio/ExperimentalFileSystem.kotlin_metadata
+SHA-256-Digest: UdZCvoIHhGCebPuOt9KdTSFFkxdmbSmvOHAtj40MlXU=
+
+Name: okio/FileHandle.kotlin_metadata
+SHA-256-Digest: LzbaiHIrm4j6CJf93u7dh9oDaFITN1EcNtyuFklw6Cw=
+
+Name: okio/FileMetadata.kotlin_metadata
+SHA-256-Digest: V0Ue/sinOEiMBD2XYWO5J7UtVji+DMMoouMPyUi3Nt0=
+
+Name: okio/FileNotFoundException.kotlin_metadata
+SHA-256-Digest: akETJiYEyu6SfIfgZyS+Drp9va51t3tiR/qwBLR8M8U=
+
+Name: okio/FileSystem.kotlin_metadata
+SHA-256-Digest: qaQReqCpP+zcsZJhyhk8TRoiCGGEMg1wXk6MVSH7cAY=
+
+Name: okio/ForwardingFileSystem.kotlin_metadata
+SHA-256-Digest: 5rJv2Ht/ZKuoHEvPoL3yEJaJgPU2fVBMV02GAjaQoY8=
+
+Name: okio/ForwardingSource.kotlin_metadata
+SHA-256-Digest: wI3QI6TfPO05GFrPZzKaQMCHEPDvHvoWIJRGZhuxfJU=
+
+Name: okio/HashingSink.kotlin_metadata
+SHA-256-Digest: mbmmpkqunWlhsiK/7KL+GLxvYQTrRjBJv5aTyPXksHk=
+
+Name: okio/HashingSource.kotlin_metadata
+SHA-256-Digest: K2bbA62ZT373NHHa0RqKm5xhqDJbKW0dOyTBQOYkBLA=
+
+Name: okio/IOException.kotlin_metadata
+SHA-256-Digest: qD/duLNo78XDHjm/Kgu3svaZ3BmRffj0fR+TT/37oc4=
+
+Name: okio/Lock.kotlin_metadata
+SHA-256-Digest: PwjYtoh+vyuO7Are4xPepsX5V192eNvmsf3fB9Wfvzg=
+
+Name: okio/OkioKt.kotlin_metadata
+SHA-256-Digest: uqk86r1VbX5blr/Q4HbjpjczGdQHbeXrBGcb7GJJRwc=
+
+Name: okio/Options.kotlin_metadata
+SHA-256-Digest: OO9O1Sle2RXkqVwBZV66JsBnS8qCELhTT+k5jRfvwps=
+
+Name: okio/Path.kotlin_metadata
+SHA-256-Digest: V/hZcBQaKwj8B6rIdyKAvKW6XSBz1sfyaTOPB6w7Gi4=
+
+Name: okio/PeekSource.kotlin_metadata
+SHA-256-Digest: 5Hyw2UreJlXQqj10jWNVJqeZ3Y4Vv5uVzXtK91CAZYE=
+
+Name: okio/ProtocolException.kotlin_metadata
+SHA-256-Digest: eYvfizr0Ik4+7Qi4cCBkakg2KFQxHe/1omJzL67frH4=
+
+Name: okio/RealBufferedSink.kotlin_metadata
+SHA-256-Digest: yf7M6662PDxXxtttFVZV7u99lbQK41tKrqaLwzR1uB4=
+
+Name: okio/RealBufferedSource.kotlin_metadata
+SHA-256-Digest: 7TMISOqSfLTd5XLRfGwIonKUZJ447TTcCf7f78oAb9k=
+
+Name: okio/Segment.kotlin_metadata
+SHA-256-Digest: MoAWZzUvk0GYh/2ilVKDjrJ0Rmr71vGgYaFu7R8Huzg=
+
+Name: okio/SegmentPool.kotlin_metadata
+SHA-256-Digest: s4YTWwUNYGyi7yOSUuoc/nG71c1hLdJtQhBfyQQ8V7E=
+
+Name: okio/SegmentedByteString.kotlin_metadata
+SHA-256-Digest: E3xCmA7tfLgUUbgWTE5vKiESDXIKqFH8xCMkkzpKpBg=
+
+Name: okio/Sink.kotlin_metadata
+SHA-256-Digest: 4HT0qCux+Yg0uHi2DX96tNy8SjVbiGgiF4QxQCP64fc=
+
+Name: okio/Source.kotlin_metadata
+SHA-256-Digest: x64T6Hndha52hbTuI0MYPVYriZSPCOBkDMIivncQYt8=
+
+Name: okio/Timeout.kotlin_metadata
+SHA-256-Digest: oFVdkiQzEQxDFsfli8lYnPrtt0xt8Mvij/hxmOJLxaE=
+
+Name: okio/Utf8Kt.kotlin_metadata
+SHA-256-Digest: tyVZnGG+4l0g7bRz0RRFLoMMl1VU+SarvFTldw+SVF8=
+
+Name: okio/UtilKt.kotlin_metadata
+SHA-256-Digest: mU00ud71A2m0A5U2NTBREwpggGZwwBRadmHOydhCJqg=
+
+Name: okio/internal/BufferKt.kotlin_metadata
+SHA-256-Digest: KxTSIg0pUbqOeMRB2Gmz+D041nAdDkcXEWi2kh/CvRE=
+
+Name: okio/internal/ByteStringKt.kotlin_metadata
+SHA-256-Digest: w61Y+zL8tuBpXPuLIRlm5eEXFRar35g/YYDcvrCSCVM=
+
+Name: okio/internal/FileSystemKt.kotlin_metadata
+SHA-256-Digest: BkVmZC01uo/3mIQOVHwlgrZOnwYdbrNrFfgBf18PA4Q=
+
+Name: okio/internal/PathKt.kotlin_metadata
+SHA-256-Digest: tf0d/hyPue1KAEIIC2MrBAPgMJIZMG1Py7LPh2ViKB8=
+
+Name: okio/internal/RealBufferedSinkKt.kotlin_metadata
+SHA-256-Digest: hqFPuc8iAB8tpWnvwvEVp5zSlJW9o+XQ6AvtliKwYus=
+
+Name: okio/internal/RealBufferedSourceKt.kotlin_metadata
+SHA-256-Digest: bYy1cP52I868gfkV0MTmDmUbjwwbZEUIpJ5hVbf3XlE=
+
+Name: okio/internal/SegmentedByteStringKt.kotlin_metadata
+SHA-256-Digest: b2ndnMKrJVtST+mJu30wcDYZV7lrdH6IR6W5YZooq/0=
+
+Name: okio/internal/_Utf8Kt.kotlin_metadata
+SHA-256-Digest: obOxw25xs+nRAU26biHqV1FBWVBSYrRG9Lw0VQHcdd0=
+
+Name: res/drawable-xxhdpi-v4/high_performance_notificaion_icon.png
+SHA-256-Digest: zRuEYx8n8fPUuSCAFhnMiOfPaNCXyKOtfjSQlXw7fII=
+
+Name: res/drawable-xxhdpi-v4/high_performance_status_bar_icon.png
+SHA-256-Digest: IM+imL1v+YHRr17qy+JABcvGh5iP3KUBJx+dciHVmfo=
+
+Name: res/drawable-xxhdpi-v4/ic_energy_low.png
+SHA-256-Digest: +rsJRj0ypSSB3Zl89wZIh0ZdtK8RAe1GE7PqqLsn9JQ=
+
+Name: res/drawable-xxhdpi-v4/ic_status_energy_low.png
+SHA-256-Digest: 1XbeIHGUiosczA7gcAGRR6VjbdUOF/cP6gj7pZ4RKGg=
+
+Name: res/drawable/ic_notification_bypass_charge.xml
+SHA-256-Digest: jv9F3Sl5J5hSSmw4irdQNmZvg4B50mHouXq+ajMeeQA=
+
+Name: res/drawable/ic_notification_bypass_charge_status_bar.xml
+SHA-256-Digest: HeDKqRGaon1fJEcXUoGHpApBtmguaaOa0OolRT0luHo=
+
+Name: res/layout/applog_activity_simulate.xml
+SHA-256-Digest: iJaNurazDljGfKtILrVE7zHETuSBCRuiODPFA0dRJr4=
+
+Name: res/mipmap-xxhdpi-v4/onemind.png
+SHA-256-Digest: /05uVG7kwyd6f1lt8S//CXV6EORbE1+0l4UWfdYrtVY=
+
+Name: res/xml/data_extraction_rules.xml
+SHA-256-Digest: lyn60pTAYOeS/2U7+gjIA5XaZ/6h4/EthLeKgjmVHDc=
+
+Name: res/xml/network_security_config.xml
+SHA-256-Digest: PW1SdXsRK/mhnVZlM0Wyx+8FE6iAFh/30llBMMI1DEs=
+
+Name: resources.arsc
+SHA-256-Digest: Q6tdhktjkgqRU+f4xJAS1PGzXD0J+eQs8lRffPhDv2o=
+

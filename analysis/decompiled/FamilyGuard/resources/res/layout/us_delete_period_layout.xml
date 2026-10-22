@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingStart="?attr/marginExtraHeavy"
+    android:paddingEnd="?attr/marginExtraHeavy"
+    android:paddingVertical="?attr/marginMedium"
+    style="@style/Widget.StepOS.Preference.ContentLinearLayout">
+    <ImageView
+        android:id="@android:id/icon"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="@dimen/stepos_preference_icon_margin_horizontal"
+        style="@style/Widget.StepOS.Preference.Icon"/>
+    <LinearLayout
+        android:id="@+id/preference_text_layout"
+        style="@style/Widget.StepOS.Preference.TextContentLayout">
+        <TextView
+            android:textColor="#ffff0000"
+            android:id="@android:id/title"
+            style="@style/Widget.StepOS.Preference.Title"/>
+        <TextView
+            android:id="@android:id/summary"
+            style="@style/Widget.StepOS.Preference.Desc.Normal.AdjoinTitle"/>
+    </LinearLayout>
+</LinearLayout>

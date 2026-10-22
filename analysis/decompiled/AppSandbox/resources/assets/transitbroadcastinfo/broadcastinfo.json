@@ -1,0 +1,40 @@
+{
+  "android.intent.action.PACKAGE_ADDED": [
+    {
+      "pkgName": "com.stepos.sceneinfo",
+      "recName": "com.stepos.digitalwellbeing.server.limit.PackageChangedReceiver"
+    },
+    {
+      "pkgName": "com.stepos.netcontactservice",
+      "recName": "com.stepos.breakingscam.CompatPackageReceiver"
+    }
+  ],
+  "android.intent.action.PACKAGE_REMOVED": [
+    {
+      "pkgName": "com.stepos.sceneinfo",
+      "recName": "com.stepos.digitalwellbeing.server.limit.PackageChangedReceiver"
+    },
+    {
+      "pkgName": "com.stepos.netcontactservice",
+      "recName": "com.stepos.breakingscam.CompatPackageReceiver"
+    }
+  ],
+  "android.intent.action.PACKAGE_REPLACED": [
+    {
+      "pkgName": "com.stepos.netcontactservice",
+      "recName": "com.stepos.breakingscam.CompatPackageReceiver"
+    }
+  ],
+  "android.intent.action.DATE_CHANGED": [
+    {
+      "pkgName": "com.stepos.sceneinfo",
+      "recName": "com.stepos.digitalwellbeing.server.limit.NextDayReceiver"
+    }
+  ],
+  "android.intent.action.ACTION_POWER_CONNECTED": [
+    {
+      "pkgName": "com.stepos.media.gallery",
+      "recName": "com.stepos.media.gallery.common.ChargingWorkTrigger"
+    }
+  ]
+}

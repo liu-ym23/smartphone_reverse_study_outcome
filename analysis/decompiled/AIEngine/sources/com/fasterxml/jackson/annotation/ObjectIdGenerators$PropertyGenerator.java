@@ -1,0 +1,19 @@
+package com.fasterxml.jackson.annotation;
+
+/* compiled from: r8-map-id-111c466502ad74cb356cc021579a8ddb0a2e23c510d1cc7af75a11a7c889eebb */
+/* loaded from: classes.dex */
+public abstract class ObjectIdGenerators$PropertyGenerator extends ObjectIdGenerators$Base<Object> {
+    public ObjectIdGenerators$PropertyGenerator(Class<?> cls) {
+        super(cls);
+    }
+
+    @Override // com.fasterxml.jackson.annotation.ObjectIdGenerator
+    public boolean a(ObjectIdGenerator objectIdGenerator) {
+        return objectIdGenerator.getClass() == getClass() && objectIdGenerator.d() == this.f3500a;
+    }
+
+    @Override // com.fasterxml.jackson.annotation.ObjectIdGenerator
+    public final Class d() {
+        return this.f3500a;
+    }
+}

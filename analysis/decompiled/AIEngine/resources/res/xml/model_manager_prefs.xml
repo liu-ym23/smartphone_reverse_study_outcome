@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreferenceCompat
+        app:defaultValue="true"
+        app:iconSpaceReserved="false"
+        app:key="mm_wifi_only"
+        app:summary="@string/mm_pref_wifi_only_summary"
+        app:title="@string/mm_pref_wifi_only_title"/>
+    <SwitchPreferenceCompat
+        app:defaultValue="false"
+        app:iconSpaceReserved="false"
+        app:key="mm_auto_update"
+        app:summary="@string/mm_pref_auto_update_summary"
+        app:title="@string/mm_pref_auto_update_title"/>
+    <SwitchPreferenceCompat
+        app:defaultValue="false"
+        app:iconSpaceReserved="false"
+        app:key="mm_charging_only"
+        app:summary="@string/mm_pref_charging_only_summary"
+        app:title="@string/mm_pref_charging_only_title"/>
+</PreferenceScreen>

@@ -1,0 +1,19 @@
+package b0;
+
+import java.util.List;
+import s1.f0;
+import s1.g0;
+import s1.h0;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public final class o implements f0 {
+
+    /* renamed from: a, reason: collision with root package name */
+    public xb.a f1774a;
+
+    @Override // s1.f0
+    public final g0 c(h0 h0Var, List list, long j10) {
+        return h0Var.Y(o2.a.i(j10), o2.a.h(j10), kb.t.f7405c, new n(1, list, this));
+    }
+}

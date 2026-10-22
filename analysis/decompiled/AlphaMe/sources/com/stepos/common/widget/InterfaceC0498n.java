@@ -1,0 +1,6 @@
+package com.stepos.common.widget;
+
+/* renamed from: com.stepos.common.widget.n, reason: case insensitive filesystem */
+/* loaded from: classes.dex */
+public interface InterfaceC0498n {
+}

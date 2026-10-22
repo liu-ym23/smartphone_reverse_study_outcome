@@ -1,0 +1,2 @@
+## Workspace
+Path: {{workspaceDir}}

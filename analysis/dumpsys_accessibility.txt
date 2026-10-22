@@ -1,0 +1,49 @@
+ACCESSIBILITY MANAGER (dumpsys accessibility)
+
+currentUserId=0
+hasMagnificationConnection=false
+Magnifier on display#0
+    MagnificationConfig[mode: 1, activated: false, scale: 1.0, centerX: 600.0, centerY: 1276.5] 
+    Magnification region=SkRegion((0,0,1200,2553))
+    IdOfLastServiceToMagnify=-1
+    SupportWindowMagnification=true
+    WindowMagnificationConnectionState=DISCONNECTED
+User state[
+     attributes:{id=0, touchExplorationEnabled=false, serviceHandlesDoubleTap=false, requestMultiFingerGestures=false, requestTwoFingerPassthrough=false, sendMotionEventsEnabledfalse, displayMagnificationEnabled=false, autoclickEnabled=false, nonInteractiveUiTimeout=0, interactiveUiTimeout=0, installedServiceCount=6, magnificationModes={0=1}, magnificationCapabilities=3, audioDescriptionByDefaultEnabled=false, magnificationFollowTypingEnabled=true, alwaysOnMagnificationEnabled=true}
+     button mode: 1
+     shortcut key:{}
+     button:{}
+     button target:{null}
+     gesture:{}
+     qs shortcut targets:{}
+     a11y tiles in QS panel:{}
+     Bound services:{}
+     Enabled services:{}
+     Binding services:{}
+     Crashed services:{}
+     Client list info:{
+          Client list callbacks: 4
+          Client list killed: false
+          Client list broadcasts count: -1
+          Registered clients:{
+[com.stepos.alivewallpaper][com.tencent.mm][com.tencent.mm][com.stepos.ailauncher]}]
+Global Info [ Top focused display Id = 0
+     Active Window Id = -1
+     Top Focused Window Id = -1
+     Accessibility Focused Window Id = -1 ]
+
+
+Window attributes:[{}]
+Global client list info:{
+    Client list callbacks: 11
+    Client list killed: false
+    Client list broadcasts count: -1
+    Registered clients:{
+[com.android.systemui, com.stepos.systemuiex, com.stepos.systemuitools][com.android.mms.service, vendor.qti.imsrcs, vendor.qti.imsdatachannel, com.android.providers.telephony, com.stepos.telephony.upperlayercalltracker, com.android.ons, com.android.stk, vendor.qti.data.ntnsatapp, com.qualcomm.atfwd, com.qti.dpmserviceapp, com.stepos.telephony.engineermode, com.stepos.phone.ext, com.android.phone][com.stepos.account][com.stepos.exserviceui, com.android.DeviceAsWebcam, com.qualcomm.qti.xrvd.service, com.stepos.datacenter, com.stepos.systemuieditor, com.android.dynsystem, com.tencent.soter.soterserver, com.stepos.sdkstage, com.android.inputdevices, vendor.qti.frameworks.utils, android, com.stepos.powerelf, com.wapi.wapicertmanage, com.stepos.agentbus, com.android.settings, com.android.localtransport, com.android.server.telecom, com.stepos.stepclaw, com.android.keychain, com.stepos.fido.asm, com.stepos.ems, com.android.providers.settings, org.ifaa.aidl.manager, com.stepos.aiengine, com.stepos.secureservice, com.stepos.update, com.stepos.radio, com.val.hardware, com.android.location.fused, com.stepos.connectivitysettings, com.stepos.wlanmonitor, com.stepos.ability, com.stepos.pps, com.stepos.logreport, com.stepos.battery, com.stepos.appplatform][com.stepos.systemuiex, com.android.systemui, com.stepos.systemuitools][com.android.dynsystem, com.android.server.telecom, com.tencent.soter.soterserver, com.val.hardware, com.stepos.pps, com.stepos.battery, com.stepos.stepclaw, com.stepos.datacenter, com.stepos.ability, com.android.keychain, vendor.qti.frameworks.utils, com.stepos.sdkstage, com.android.localtransport, com.stepos.secureservice, com.stepos.powerelf, com.qualcomm.qti.xrvd.service, com.android.inputdevices, com.android.location.fused, com.android.DeviceAsWebcam, com.stepos.systemuieditor, org.ifaa.aidl.manager, com.stepos.appplatform, com.stepos.exserviceui, com.stepos.agentbus, com.stepos.wlanmonitor, com.stepos.connectivitysettings, android, com.wapi.wapicertmanage, com.stepos.aiengine, com.stepos.fido.asm, com.stepos.update, com.android.settings, com.stepos.logreport, com.android.providers.settings, com.stepos.radio, com.stepos.ems][com.android.launcher3][com.sohu.inputmethod.sogou.oem][com.stepos.media.camera][com.stepos.appstore][org.ifaa.aidl.manager, com.stepos.stepclaw, com.stepos.radio, com.qualcomm.qti.xrvd.service, com.stepos.exserviceui, com.stepos.secureservice, com.android.dynsystem, com.stepos.connectivitysettings, com.stepos.datacenter, com.android.localtransport, com.stepos.wlanmonitor, android, com.stepos.systemuieditor, com.stepos.agentbus, com.val.hardware, com.android.settings, com.stepos.update, com.stepos.ability, com.stepos.pps, com.stepos.ems, com.stepos.logreport, com.stepos.powerelf, com.android.inputdevices, vendor.qti.frameworks.utils, com.stepos.aiengine, com.android.location.fused, com.android.keychain, com.android.server.telecom, com.android.providers.settings, com.wapi.wapicertmanage, com.tencent.soter.soterserver, com.stepos.fido.asm, com.stepos.battery, com.stepos.appplatform, com.android.DeviceAsWebcam, com.stepos.sdkstage]
+
+Proxy manager state:
+    Number of proxy connections: 0
+    Registered proxy connections:
+Accessibility Display Listener:
+    SystemUI uid: 10065
+    1 valid display: 0

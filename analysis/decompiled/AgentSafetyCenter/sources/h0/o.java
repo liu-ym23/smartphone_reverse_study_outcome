@@ -1,0 +1,41 @@
+package h0;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public final class o {
+
+    /* renamed from: a, reason: collision with root package name */
+    public final long f5088a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public final long f5089b;
+
+    /* renamed from: c, reason: collision with root package name */
+    public final long f5090c;
+
+    /* renamed from: d, reason: collision with root package name */
+    public final long f5091d;
+
+    public o(long j10, long j11, long j12, long j13) {
+        this.f5088a = j10;
+        this.f5089b = j11;
+        this.f5090c = j12;
+        this.f5091d = j13;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof o)) {
+            return false;
+        }
+        o oVar = (o) obj;
+        return d1.p.d(this.f5088a, oVar.f5088a) && d1.p.d(this.f5089b, oVar.f5089b) && d1.p.d(this.f5090c, oVar.f5090c) && d1.p.d(this.f5091d, oVar.f5091d);
+    }
+
+    public final int hashCode() {
+        int i = d1.p.f3025h;
+        return Long.hashCode(this.f5091d) + k0.a.i(this.f5090c, k0.a.i(this.f5089b, Long.hashCode(this.f5088a) * 31, 31), 31);
+    }
+}

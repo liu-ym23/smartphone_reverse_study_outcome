@@ -1,0 +1,87 @@
+package androidx.room;
+
+import com.bytedance.apm.agent.v2.instrumentation.AppAgent;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0006\bÆ\u0002\u0018\u00002\u00020\u0001:\u0002\t\nB\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u000e\u0010\u0004\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000¨\u0006\u000b"}, d2 = {"Landroidx/room/FtsOptions;", "", AppAgent.CONSTRUCT, "()V", "TOKENIZER_SIMPLE", "", "TOKENIZER_PORTER", "TOKENIZER_ICU", "TOKENIZER_UNICODE61", "MatchInfo", "Order", "room-common"}, k = 1, mv = {2, 1, 0}, xi = 48)
+/* loaded from: classes2.dex */
+public final class FtsOptions {
+    public static final FtsOptions INSTANCE = new FtsOptions();
+    public static final String TOKENIZER_ICU = "icu";
+    public static final String TOKENIZER_PORTER = "porter";
+    public static final String TOKENIZER_SIMPLE = "simple";
+    public static final String TOKENIZER_UNICODE61 = "unicode61";
+
+    /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+    /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0005\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005¨\u0006\u0006"}, d2 = {"Landroidx/room/FtsOptions$MatchInfo;", "", AppAgent.CONSTRUCT, "(Ljava/lang/String;I)V", "FTS3", "FTS4", "room-common"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class MatchInfo {
+        private static final /* synthetic */ K7.a $ENTRIES;
+        private static final /* synthetic */ MatchInfo[] $VALUES;
+        public static final MatchInfo FTS3 = new MatchInfo("FTS3", 0);
+        public static final MatchInfo FTS4 = new MatchInfo("FTS4", 1);
+
+        private static final /* synthetic */ MatchInfo[] $values() {
+            return new MatchInfo[]{FTS3, FTS4};
+        }
+
+        static {
+            MatchInfo[] matchInfoArr$values = $values();
+            $VALUES = matchInfoArr$values;
+            $ENTRIES = kotlin.enums.a.a(matchInfoArr$values);
+        }
+
+        private MatchInfo(String str, int i) {
+        }
+
+        public static K7.a getEntries() {
+            return $ENTRIES;
+        }
+
+        public static MatchInfo valueOf(String str) {
+            return (MatchInfo) Enum.valueOf(MatchInfo.class, str);
+        }
+
+        public static MatchInfo[] values() {
+            return (MatchInfo[]) $VALUES.clone();
+        }
+    }
+
+    /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+    /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0005\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005¨\u0006\u0006"}, d2 = {"Landroidx/room/FtsOptions$Order;", "", AppAgent.CONSTRUCT, "(Ljava/lang/String;I)V", "ASC", "DESC", "room-common"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class Order {
+        private static final /* synthetic */ K7.a $ENTRIES;
+        private static final /* synthetic */ Order[] $VALUES;
+        public static final Order ASC = new Order("ASC", 0);
+        public static final Order DESC = new Order("DESC", 1);
+
+        private static final /* synthetic */ Order[] $values() {
+            return new Order[]{ASC, DESC};
+        }
+
+        static {
+            Order[] orderArr$values = $values();
+            $VALUES = orderArr$values;
+            $ENTRIES = kotlin.enums.a.a(orderArr$values);
+        }
+
+        private Order(String str, int i) {
+        }
+
+        public static K7.a getEntries() {
+            return $ENTRIES;
+        }
+
+        public static Order valueOf(String str) {
+            return (Order) Enum.valueOf(Order.class, str);
+        }
+
+        public static Order[] values() {
+            return (Order[]) $VALUES.clone();
+        }
+    }
+
+    private FtsOptions() {
+    }
+}

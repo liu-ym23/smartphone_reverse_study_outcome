@@ -1,0 +1,22 @@
+{
+  "modelEncryption": {
+    "enabled": true,
+    "excludeModelIds": [
+      "ten-vad"
+    ]
+  },
+  "memoryRelease": {
+    "rssTargetBgOnlyMb": 3000,
+    "rssTargetWithFgMb": 5000,
+    "absoluteTargetLowMb": 2500,
+    "absoluteTargetUltraLowMb": 1500,
+    "fgTaskWindowMs": 60000,
+    "ultraLowCancelWaitMs": 2000,
+    "cameraCooldownMs": 30000,
+    "cameraResumeDelayMs": 10000,
+    "thermalRecoverCooldownMs": 5000,
+    "pressureNormalCooldownMs": 60000,
+    "pressureLowCooldownMs": 30000,
+    "pressureUltraLowCooldownMs": 5000
+  }
+}

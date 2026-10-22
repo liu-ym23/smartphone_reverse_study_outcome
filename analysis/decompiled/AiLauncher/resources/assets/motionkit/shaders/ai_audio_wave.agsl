@@ -1,0 +1,322 @@
+// Audio Wave —— 三条相位偏移正弦曲线，中间高、两端收窄。
+// 双层结构：Layer A 曲线下方的内部填充，Layer B 曲线上的发光描边。
+//
+// 移植自设计原型 Amoo-AI-AudioWave.html（WebGL1 → 官方 AGSL 导出），该原型逆向自
+// QuartzCore glass_background shader 并按 After Effects 重建校准。
+//
+// ★ 单位约定（这是相对上一版最重要的变化）：
+//   SIZE     用 dp，经 uPxPerDp 换算 —— 任何视图尺寸/屏幕密度下物理高度恒定
+//            （uAmp / uGlowUp / uGlowDn / uFillSoft）
+//   POSITION 用视图占比 —— 跟着画面走（uLen / uOffsetY / uTaper / uFade）
+//
+// 两层 taper 相互独立，不要合并：
+//   1) cos² raised-cosine 窗  -> 作用于【几何幅度】（曲线向两端压平）
+//   2) exp(-(k·x)²) 高斯      -> 作用于【颜色与覆盖度】（两端整体淡出，
+//                                避免留下矩形的 alpha 硬边）
+//
+// 输出预乘半透明，纯生成型：不采样背景，直接叠在任意内容之上。
+
+uniform float2 iResolution;   // 由后端注入：View 尺寸(px)
+uniform float  iTime;         // 由后端注入：秒。走 localElapsedMs，故 setSpeed/暂停有效
+uniform float  uPxPerDp;      // 由后端注入：Resources.displayMetrics.density
+// dp 的参考口径 —— 设计原型预览、官方 Kotlin 导出、全屏宿主，三者不能共用同一套「÷视图高」：
+//   HTML 预览:  uPxPerDp = canvasPx / 1080，画布是 ~方的 1110×1080，
+//               Amplitude 150 = 13.9% × 1080 画布高（≈150px），不是 13.9% × 手机高。
+//   官方导出:   uPxPerDp = density ⇒ 150 是真实 150dp。设计画布比手机宽约 3 倍，会偏大。
+//   uDpRef > 0  → 把【短边】当成 uDpRef 个设计单位（1080 = 复刻原型画布，默认）。
+//                 全屏竖屏上短边≈宽，150 保持「1080 画布上的 150」，贴底部，不再随屏高被拉高。
+//   uDpRef = 0  → 用真实 density（官方导出口径，固定物理高）
+uniform float  uDpRef;
+
+// ── 波形几何 ──
+uniform float uAmp;      // 峰值幅度，dp
+uniform float uFreq;     // 长度窗内的波数
+uniform float uSpeed;    // 漂移速度，弧度/秒
+uniform float uLen;      // 有效长度 / 视图宽，居中
+uniform float uTaper;    // cos² 窗宽度（1.0 = 恰好在两端归零）
+uniform float uFade;     // 高斯淡出陡度
+uniform float uOffsetY;  // 基线偏移 / 视图高，正值向【上】。-0.5 = 贴视图底部
+
+// ── 三条曲线：相位 + 描边色 + 填充色 ──
+uniform float uPhase1;
+uniform float uPhase2;
+uniform float uPhase3;
+uniform float3 uCol1;
+uniform float3 uCol2;
+uniform float3 uCol3;
+uniform float3 uFillCol1;
+uniform float3 uFillCol2;
+uniform float3 uFillCol3;
+
+// ── Layer B：发光描边（非对称，见 glowProfile）──
+uniform float uGlowUp;   // 曲线【上方】衰减长度，dp
+uniform float uGlowDn;   // 曲线【下方】衰减长度，dp
+uniform float uInten;    // 描边曝光强度
+
+// ── Layer A：内部填充 ──
+uniform float uFillSoft; // 从曲线到满填充的斜坡距离，dp
+uniform float uFillOp;   // 填充不透明度 0..1
+uniform float uFillAdd;  // 0 = 三层 src-over 叠（画家顺序 1→2→3）；1 = 相加（重叠处裁到白）
+
+// ── 入场（非设计参数，规格见下）──
+// 规格 AudioWave · Slider_B 2，总时长 500ms，两项同用 PathInterpolator(0.3, 0, 0.1, 1)：
+//   Speed 5 → 3      Amplitude 0 → 150dp
+// uIntro 由 app 侧一条 OneShot 轨道驱动 0→1，shader 把它作用在幅度和速度上，
+// 这样 uAmp / uSpeed 保持为「入场结束后的目标值」，仍可自由调参，互不干扰。
+uniform float uIntro;          // 兼容旧 CPU 轨道；uIntroDur>0 时由 localT 算
+uniform float uIntroDur;       // 入场时长（秒）。>0 时 CubicBezier(0.3,0,0.1,1)
+uniform float uIntroSpeedFrom; // 入场起始漂移速度（规格 5.0）
+uniform float uWaveTime;       // < -1.5 用 iTime；-1=隐藏；>=0 为场景墙钟（秒）
+uniform float uStartAt;        // 仅 uWaveTime < -1.5 时用
+uniform float uReleaseAt;      // ≥0 时从该秒开始退场。单位与 localT 相同
+uniform float uExitDur;        // 退场总时长，默认 0.433 = 300ms + 133ms
+
+// ── 能量驱动 ──
+uniform float uExtEnergy;   // 0 = 内置 synth，1 = 读 uEnergyIn，中间值按比例混合
+uniform float uEnergyIn;    // 外部驱动 0..1（业务侧喂音频 RMS）
+// 内置 synth 的时间缩放（非设计参数）。设计公式里 band 频率写死，包络最高频成分
+// 0.367Hz 已逼近载波 0.477Hz —— 一次起伏内幅度就变 36%~75%，观感偏「飘」。
+// 调小只放慢包络，不动 uSpeed。1.0 = 设计原值。
+uniform float uEnergySpeed;
+
+// ── 运动模糊（非设计参数）──
+// 细亮线每帧位移超过自身宽度就会频闪，而 60Hz 下这靠调参补不掉。
+// > 0 时对【描边层】做时间超采样，沿运动轨迹抹开。0 = 关，逐字等于设计行为。
+uniform float uMotionBlur;
+
+const float PI = 3.141592653589793;
+
+float bez(float p1, float p2, float u) {
+    float v = 1.0 - u;
+    return 3.0 * v * v * u * p1 + 3.0 * v * u * u * p2 + u * u * u;
+}
+
+float bezDeriv(float p1, float p2, float u) {
+    float v = 1.0 - u;
+    return 3.0 * v * v * p1 + 6.0 * v * u * (p2 - p1) + 3.0 * u * u * (1.0 - p2);
+}
+
+float pathEase(float x1, float y1, float x2, float y2, float x) {
+    if (x <= 0.0) return 0.0;
+    if (x >= 1.0) return 1.0;
+    float u = x;
+    for (int i = 0; i < 6; ++i) {
+        float dx = bez(x1, x2, u) - x;
+        float d  = bezDeriv(x1, x2, u);
+        if (abs(d) > 1e-6) u = clamp(u - dx / d, 0.0, 1.0);
+    }
+    return bez(y1, y2, u);
+}
+
+// ---------------------------------------------------------------------
+// 能量：当前这一刻波应该多大。
+// 每个 band 是「两个互质频率的正弦相乘」——乘积永不精确重复，这正是运动
+// 读起来像有机波动而不像循环动画的原因。这些是混音推子，不是画出来的线。
+// ---------------------------------------------------------------------
+float bandf(float t, float a, float f1, float p1, float f2, float p2) {
+    return clamp(a + a * sin(t * f1 + p1) * sin(t * f2 + p2), 0.0, 1.0);
+}
+
+float synthEnergy(float t) {
+    float low  = bandf(t, 0.45, 0.80, 0.0, 0.37, 1.0);
+    float mid  = bandf(t, 0.40, 1.70, 2.0, 0.53, 0.0);
+    float high = bandf(t, 0.30, 2.90, 4.0, 0.71, 2.0);
+    return 0.5 + 0.5 * low + 0.35 * mid + 0.15 * high;   // 0.614 .. 1.221
+}
+
+// cos² raised-cosine (Hann) 窗：中心 1，两端趋 0
+float envelope(float xn) {
+    float c = cos(PI * 0.5 * min(abs(uTaper * xn), 1.0));
+    return c * c;
+}
+
+// xn 处的曲线高度（视图占比，y 从底部向上）。ampF 已从 dp 换算成视图占比。
+// uOffsetY 是纯竖直平移：两层 taper 和长度窗都只是 x 的函数，不受它影响。
+//
+// 入场速度 5→3。相位必须积 ∫speed dt：用 t*speed 会在速度下降时倒退，露脸一段会顿。
+// 幅度仍走贝塞尔；漂移用线性 5→3 的解析积分，保证单调、每像素常数时间。
+float waveDrift(float t) {
+    float s0 = uIntroSpeedFrom;
+    float s1 = uSpeed;
+    if (uIntroDur <= 0.001) return t * mix(s0, s1, clamp(uIntro, 0.0, 1.0));
+    float d = max(uIntroDur, 0.05);
+    if (t <= 0.0) return 0.0;
+    if (t < d) {
+        float u = t / d;
+        return s0 * t + (s1 - s0) * t * u * 0.5;
+    }
+    return 0.5 * (s0 + s1) * d + s1 * (t - d);
+}
+
+// 三条线共用一条载波 sin(k·x + drift)。uPhase ≡ x 偏移·(π·uFreq)
+// ≡ 入场结束后的 t 偏移·uSpeed，所以不必各算一遍完整波形。
+float3 curveYs(float drift, float xn, float mag, float3 phase) {
+    float theta = xn * PI * uFreq + drift;
+    return float3(0.5 + uOffsetY) + mag * sin(float3(theta) + phase);
+}
+
+float curveYAt(float drift, float xn, float ampF, float env, float energy, float phase) {
+    return curveYs(drift, xn, ampF * energy * env, float3(phase)).x;
+}
+
+// Layer B —— 发光描边。剖面【不对称】：曲线两侧各有自己的衰减长度，
+// 一侧锐利、另一侧渗出柔光。喂有符号距离，按符号选长度：
+//   sd > 0  像素在曲线【上方】 -> up
+//   sd < 0  像素在曲线【下方】 -> dn
+// 长度越短边缘越锐。哪一侧柔纯粹是造型选择：出厂值 up 56dp > dn 27dp，
+// 即【柔光在上、下缘清晰】；而 AE 渲染图实测是反过来的（上 13dp / 下 32dp）。
+// up == dn 则退化成普通对称线。
+float glowProfile(float sd, float up, float dn) {
+    return exp(-abs(sd) / max(sd >= 0.0 ? up : dn, 1e-5));
+}
+
+// Layer A —— 内部填充。把曲线下方一直封到视图底部，等同 AE comp 里的
+// 填充蒙版（Fill Base = comp 底边）：
+//   曲线处 (sd = 0)  -> 0
+//   下方 soft 处      -> 1，并一直保持 1 到底
+//   曲线上方          -> 0
+// 斜坡【从曲线处】起算而不是以曲线为中心，正是描边下缘柔光与填充体之间那道
+// 细暗缝的来源 —— 参考图里有这道缝，保留。
+float fillAmt(float sd, float soft) {
+    return 1.0 - smoothstep(-max(soft, 1e-5), 0.0, sd);
+}
+
+// 描边层的一条曲线。uMotionBlur > 0 时做时间超采样（4 个子采样求平均），
+// 让亮线沿运动轨迹抹开。只对描边做：填充有 120dp 斜坡，边缘本就柔，不会走样。
+float strokeAt(
+    float t, float drift, float uvy, float xn, float ampF, float env, float energy, float phase,
+    float up, float dn
+) {
+    if (uMotionBlur <= 0.001) {
+        return glowProfile(uvy - curveYAt(drift, xn, ampF, env, energy, phase), up, dn);
+    }
+    float w = uMotionBlur / 60.0;
+    float acc = 0.0;
+    acc += glowProfile(uvy - curveYAt(drift, xn, ampF, env, energy, phase), up, dn);
+    acc += glowProfile(uvy - curveYAt(waveDrift(t - w * 0.25), xn, ampF, env, energy, phase), up, dn);
+    acc += glowProfile(uvy - curveYAt(waveDrift(t - w * 0.50), xn, ampF, env, energy, phase), up, dn);
+    acc += glowProfile(uvy - curveYAt(waveDrift(t - w * 0.75), xn, ampF, env, energy, phase), up, dn);
+    return acc * 0.25;
+}
+
+half4 main(float2 fragCoord) {
+    float2 uv = fragCoord / iResolution;
+    uv.y = 1.0 - uv.y;                       // AGSL 的 y 向下，翻成 y 向上
+
+    // dp -> 视图高占比。所有 SIZE 都过这一步。
+    // uDpRef > 0：把短边当成 uDpRef 个设计单位（复刻 1110×1080 方画布）。
+    //   旧式 1/uDpRef 会把 150 做成「整屏高的 13.9%」—— 2400px 高的宿主上变成 ~333px，
+    //   比 HTML 画布上的 150px 大约高一倍。短边映射后 amp_px = uAmp * min(w,h) / uDpRef。
+    // uDpRef = 0：官方导出口径，真实 density。
+    float hostH = max(iResolution.y, 1.0);
+    float dp = uDpRef > 0.5
+             ? min(iResolution.x, iResolution.y) / (uDpRef * hostH)
+             : uPxPerDp / hostH;
+
+    // 居中的长度窗
+    float x0  = 0.5 - 0.5 * uLen;
+    float u   = (uv.x - x0) / max(uLen, 1e-4);
+    float xn  = u * 2.0 - 1.0;               // 窗内 -1 .. 1
+    float win = smoothstep(0.0, 0.012, u) * smoothstep(0.0, 0.012, 1.0 - u);
+
+    // 场景墙钟 uWaveTime 和退场同一套，避免跟 backend iTime 对不齐：
+    // 松手写的 uReleaseAt 比 iTime 快一截时，会继续播一会才退场。
+    if (uWaveTime < 0.0 && uWaveTime > -1.5) return half4(0.0);
+    if (uReleaseAt >= 0.0 && uStartAt >= 0.0 && uReleaseAt <= uStartAt) return half4(0.0);
+    if (uWaveTime < -1.5 && uStartAt >= 0.0 && iTime < uStartAt) return half4(0.0);
+
+    // 声波只在底部一条带。上半屏直接退出。
+    float maxBand = 0.5 + uOffsetY + abs(uAmp) * dp * 1.35 + max(uGlowUp, uGlowDn) * dp + 0.04;
+    if (uv.y > maxBand) return half4(0.0);
+
+    float localT = uWaveTime >= 0.0
+        ? uWaveTime
+        : (uStartAt >= 0.0 ? max(iTime - uStartAt, 0.0) : iTime);
+    float intro;
+    if (uIntroDur > 0.001) {
+        intro = pathEase(0.3, 0.0, 0.1, 1.0, clamp(localT / uIntroDur, 0.0, 1.0));
+    } else {
+        intro = clamp(uIntro, 0.0, 1.0);
+    }
+    // setVolume(0..1)：0 = 默认 Amplitude×0.25，1 = ×1.1，中间线性 0.25+0.85*v。
+    float vol = clamp(uEnergyIn, 0.0, 1.0);
+    float volumeAmp = mix(0.25, 1.10, vol);
+    float listenEnergy = mix(synthEnergy(localT * uEnergySpeed),
+                             volumeAmp,
+                             clamp(uExtEnergy, 0.0, 1.0));
+    float energy = mix(1.0, listenEnergy, intro);
+    float liveAmp = uAmp * intro;
+    float cover = 1.0;
+    if (uReleaseAt >= 0.0 && localT > uReleaseAt) {
+        float te = localT - uReleaseAt;
+        float exitDur = max(uExitDur, 0.05);
+        float p0 = exitDur * (0.300 / 0.433);
+        float p1 = max(exitDur - p0, 0.001);
+        if (te >= exitDur) return half4(0.0);
+        if (te < p0) {
+            float e = pathEase(0.35, 0.0, 0.67, 1.0, clamp(te / max(p0, 0.001), 0.0, 1.0));
+            liveAmp = mix(uAmp, -9.07, e);
+        } else {
+            float e = pathEase(0.33, 0.0, 0.62, 1.0, clamp((te - p0) / p1, 0.0, 1.0));
+            liveAmp = mix(-9.07, 0.0, e);
+        }
+        cover = 1.0 - pathEase(0.33, 0.0, 0.62, 1.0, clamp(te / exitDur, 0.0, 1.0));
+    }
+    // Amplitude=0 时三条曲线塌成一条基线，描边光（56dp）仍会画出来，
+    // 从「未开始」切到这一帧就是跳变。幅度为 0 整层透明；光晕/填充跟着幅度长。
+    float ampK = clamp(abs(liveAmp) / max(abs(uAmp), 1.0), 0.0, 1.0);
+    if (ampK <= 0.0005) return half4(0.0);
+    float env = envelope(xn);
+    float ampF = liveAmp * dp;
+    float up   = uGlowUp * dp * ampK;
+    float dn   = uGlowDn * dp * ampK;
+    float soft = uFillSoft * dp * ampK;
+    float drift = waveDrift(localT);
+    float3 phase = float3(uPhase1, uPhase2, uPhase3);
+
+    // 一次载波 + 三个相位偏移 → 三条线的有符号距离（正 = 像素在曲线上方）。
+    float3 sd = uv.y - curveYs(drift, xn, ampF * energy * env, phase);
+    float sd1 = sd.x;
+    float sd2 = sd.y;
+    float sd3 = sd.z;
+
+    // ── Layer A：内部填充，预乘 ──
+    float a1 = fillAmt(sd1, soft) * uFillOp;
+    float a2 = fillAmt(sd2, soft) * uFillOp;
+    float a3 = fillAmt(sd3, soft) * uFillOp;
+    float3 fc;
+    float  fa;
+    if (uFillAdd > 0.5) {                    // 相加：重叠处裁到白
+        fc = uFillCol1 * a1 + uFillCol2 * a2 + uFillCol3 * a3;
+        fa = clamp(a1 + a2 + a3, 0.0, 1.0);
+    } else {                                 // src-over，画家顺序 1 → 2 → 3
+        fc = uFillCol1 * a1;                      fa = a1;
+        fc = uFillCol2 * a2 + fc * (1.0 - a2);    fa = a2 + fa * (1.0 - a2);
+        fc = uFillCol3 * a3 + fc * (1.0 - a3);    fa = a3 + fa * (1.0 - a3);
+    }
+
+    // ── Layer B：发光描边，自发光，相加叠在填充之上 ──
+    // 默认无运动模糊：复用上面的 sd，不再为描边重算三遍 sin。
+    float3 sc;
+    if (uMotionBlur <= 0.001) {
+        sc = uCol1 * glowProfile(sd1, up, dn)
+           + uCol2 * glowProfile(sd2, up, dn)
+           + uCol3 * glowProfile(sd3, up, dn);
+    } else {
+        sc = uCol1 * strokeAt(localT, drift, uv.y, xn, ampF, env, energy, uPhase1, up, dn)
+           + uCol2 * strokeAt(localT, drift, uv.y, xn, ampF, env, energy, uPhase2, up, dn)
+           + uCol3 * strokeAt(localT, drift, uv.y, xn, ampF, env, energy, uPhase3, up, dn);
+    }
+    sc *= uInten;
+
+    // 两层 taper 同时作用在颜色和覆盖度上，两端才会真正淡出而不是留矩形 alpha 边
+    float g    = xn * uFade;
+    float hwin = win * exp(-g * g);          // 用 g*g 而非 pow(g,2)：pow 对负底数未定义
+    float3 col = (fc + sc) * hwin;
+
+    // 预乘自发光：对加法和做裁剪，正是重叠处发白的原因。
+    // alpha 取「亮度」与「填充真实覆盖度」的较大者，深色填充才不会变透明。
+    float da  = clamp(max(max(col.r, col.g), col.b), 0.0, 1.0);
+    float aOut = max(da, clamp(fa * hwin, 0.0, 1.0)) * cover;
+    return half4(half3(min(col, float3(1.0)) * cover), half(aOut));
+}

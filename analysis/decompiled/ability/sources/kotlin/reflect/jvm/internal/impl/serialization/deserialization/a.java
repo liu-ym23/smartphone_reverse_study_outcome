@@ -1,0 +1,225 @@
+package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
+
+import D7.v;
+import H4.o;
+import N9.j;
+import T8.C;
+import T8.D;
+import T8.m;
+import V8.u;
+import W8.i;
+import X8.A;
+import X8.C0276g;
+import X8.C0280k;
+import X8.H;
+import X8.K;
+import X8.N;
+import X8.w;
+import Z7.f;
+import h8.InterfaceC1507O;
+import h8.InterfaceC1522e;
+import h8.InterfaceC1527j;
+import i8.InterfaceC1561g;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import kotlin.collections.EmptyList;
+import kotlin.jvm.internal.PropertyReference1;
+import kotlin.jvm.internal.k;
+import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type;
+import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeParameter;
+import kotlin.reflect.jvm.internal.impl.storage.b;
+
+/* loaded from: classes4.dex */
+public final class a {
+
+    /* renamed from: a, reason: collision with root package name */
+    public final m f5127a;
+    public final a b;
+    public final String c;
+    public final String d;
+    public final b e;
+    public final b f;
+    public final Object g;
+
+    public a(m mVar, a aVar, List typeParameterProtos, String debugName, String str) {
+        Map linkedHashMap;
+        k.f(typeParameterProtos, "typeParameterProtos");
+        k.f(debugName, "debugName");
+        this.f5127a = mVar;
+        this.b = aVar;
+        this.c = debugName;
+        this.d = str;
+        i iVar = mVar.f1228a.f1222a;
+        this.e = iVar.d(new C(this, 0));
+        this.f = iVar.d(new C(this, 1));
+        if (typeParameterProtos.isEmpty()) {
+            linkedHashMap = kotlin.collections.a.M();
+        } else {
+            linkedHashMap = new LinkedHashMap();
+            Iterator it = typeParameterProtos.iterator();
+            int i = 0;
+            while (it.hasNext()) {
+                ProtoBuf$TypeParameter protoBuf$TypeParameter = (ProtoBuf$TypeParameter) it.next();
+                linkedHashMap.put(Integer.valueOf(protoBuf$TypeParameter.d), new u(this.f5127a, protoBuf$TypeParameter, i));
+                i++;
+            }
+        }
+        this.g = linkedHashMap;
+    }
+
+    public static A a(A a3, w wVar) {
+        e8.i iVarX = U7.a.x(a3);
+        InterfaceC1561g annotations = a3.getAnnotations();
+        w wVarD0 = M.a.d0(a3);
+        List listW = M.a.W(a3);
+        List listX0 = v.x0(1, M.a.f0(a3));
+        ArrayList arrayList = new ArrayList(D7.w.c0(listX0, 10));
+        Iterator it = listX0.iterator();
+        while (it.hasNext()) {
+            arrayList.add(((N) it.next()).b());
+        }
+        return M.a.M(iVarX, annotations, wVarD0, listW, arrayList, wVar, true).f0(a3.W());
+    }
+
+    public static final ArrayList e(ProtoBuf$Type protoBuf$Type, a aVar) {
+        List list = protoBuf$Type.d;
+        k.e(list, "getArgumentList(...)");
+        List list2 = list;
+        ProtoBuf$Type protoBuf$TypeA = D8.i.a(protoBuf$Type, aVar.f5127a.d);
+        Iterable iterableE = protoBuf$TypeA != null ? e(protoBuf$TypeA, aVar) : null;
+        if (iterableE == null) {
+            iterableE = EmptyList.f4893a;
+        }
+        return v.Q0(iterableE, list2);
+    }
+
+    public static H f(List list, InterfaceC1561g interfaceC1561g, K k, InterfaceC1527j interfaceC1527j) {
+        H hL;
+        List list2 = list;
+        ArrayList arrayList = new ArrayList(D7.w.c0(list2, 10));
+        Iterator it = list2.iterator();
+        while (it.hasNext()) {
+            ((C0280k) it.next()).getClass();
+            if (interfaceC1561g.isEmpty()) {
+                H.b.getClass();
+                hL = H.c;
+            } else {
+                O2.a aVar = H.b;
+                List listM = o.M(new C0276g(interfaceC1561g));
+                aVar.getClass();
+                hL = O2.a.l(listM);
+            }
+            arrayList.add(hL);
+        }
+        ArrayList arrayList2 = new ArrayList();
+        Iterator it2 = arrayList.iterator();
+        while (it2.hasNext()) {
+            D7.A.e0((Iterable) it2.next(), arrayList2);
+        }
+        H.b.getClass();
+        return O2.a.l(arrayList2);
+    }
+
+    public static final InterfaceC1522e h(a aVar, ProtoBuf$Type protoBuf$Type, int i) {
+        m mVar = aVar.f5127a;
+        G8.b bVarS = j.s(mVar.b, i);
+        i9.o oVarM0 = kotlin.sequences.a.m0(kotlin.sequences.a.k0(new C(aVar, 2), protoBuf$Type), D.b);
+        ArrayList arrayList = new ArrayList();
+        Iterator it = oVarM0.f4627a.iterator();
+        while (it.hasNext()) {
+            arrayList.add(oVarM0.b.invoke(it.next()));
+        }
+        int iD0 = kotlin.sequences.a.d0(kotlin.sequences.a.k0(new PropertyReference1() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.TypeDeserializer$typeConstructor$notFoundClass$classNestingLevel$1
+            @Override // Z7.s
+            public final Object get(Object obj) {
+                return ((G8.b) obj).e();
+            }
+
+            @Override // kotlin.jvm.internal.CallableReference, Z7.c
+            public final String getName() {
+                return "outerClassId";
+            }
+
+            @Override // kotlin.jvm.internal.CallableReference
+            public final f getOwner() {
+                return kotlin.jvm.internal.m.f4928a.b(G8.b.class);
+            }
+
+            @Override // kotlin.jvm.internal.CallableReference
+            public final String getSignature() {
+                return "getOuterClassId()Lorg/jetbrains/kotlin/name/ClassId;";
+            }
+        }, bVarS));
+        while (arrayList.size() < iD0) {
+            arrayList.add(0);
+        }
+        return mVar.f1228a.l.S(bVarS, arrayList);
+    }
+
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.lang.Object, java.util.Map] */
+    public final List b() {
+        return v.f1(this.g.values());
+    }
+
+    /* JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object, java.util.Map] */
+    public final InterfaceC1507O c(int i) {
+        InterfaceC1507O interfaceC1507O = (InterfaceC1507O) this.g.get(Integer.valueOf(i));
+        if (interfaceC1507O != null) {
+            return interfaceC1507O;
+        }
+        a aVar = this.b;
+        if (aVar != null) {
+            return aVar.c(i);
+        }
+        return null;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:106:0x029e  */
+    /* JADX WARN: Removed duplicated region for block: B:145:0x0354  */
+    /* JADX WARN: Removed duplicated region for block: B:146:0x0360  */
+    /* JADX WARN: Removed duplicated region for block: B:44:0x010e  */
+    /* JADX WARN: Removed duplicated region for block: B:46:0x0127  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final X8.A d(kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type r19, boolean r20) {
+        /*
+            Method dump skipped, instructions count: 962
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.serialization.deserialization.a.d(kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type, boolean):X8.A");
+    }
+
+    public final w g(ProtoBuf$Type proto) {
+        k.f(proto, "proto");
+        if ((proto.c & 2) != 2) {
+            return d(proto, true);
+        }
+        m mVar = this.f5127a;
+        String string = mVar.b.getString(proto.f);
+        A aD = d(proto, true);
+        D8.j jVar = mVar.d;
+        int i = proto.c;
+        ProtoBuf$Type protoBuf$TypeB = (i & 4) == 4 ? proto.g : (i & 8) == 8 ? jVar.b(proto.h) : null;
+        k.c(protoBuf$TypeB);
+        return mVar.f1228a.f1223j.b(proto, string, aD, d(protoBuf$TypeB, true));
+    }
+
+    public final String toString() {
+        String str;
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.c);
+        a aVar = this.b;
+        if (aVar == null) {
+            str = "";
+        } else {
+            str = ". Child of " + aVar.c;
+        }
+        sb.append(str);
+        return sb.toString();
+    }
+}

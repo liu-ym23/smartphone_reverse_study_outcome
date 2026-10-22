@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/allow_to_use_personal_information_and_preference"
+        android:iconSpaceReserved="false">
+        <com.stepos.common.preference.SwitchPreferenceCompat
+            android:title="@string/voice_app"
+            android:key="voice_app"
+            android:summary="@string/use_address_information"
+            android:defaultValue="true"/>
+        <com.stepos.common.preference.SwitchPreferenceCompat
+            android:title="@string/note_app"
+            android:key="note_app"
+            android:summary="@string/use_address_information"
+            android:defaultValue="true"/>
+        <com.stepos.common.preference.SwitchPreferenceCompat
+            android:title="@string/setting_app"
+            android:key="setting_app"
+            android:summary="@string/use_car_information"
+            android:defaultValue="true"/>
+        <com.stepos.common.preference.SwitchPreferenceCompat
+            android:title="@string/system_ui_tool_app"
+            android:key="system_ui_tool_app"
+            android:summary="@string/use_car_information"
+            android:defaultValue="true"/>
+        <com.stepos.common.preference.SwitchPreferenceCompat
+            android:title="@string/aicy_butler"
+            android:key="aicy_butler_app"
+            android:summary="@string/use_sleep_and_game_andrcommuting_and_time"
+            android:defaultValue="true"/>
+        <com.stepos.common.preference.SwitchPreferenceCompat
+            android:title="@string/weather"
+            android:key="weather_app"
+            android:summary="@string/use_address_information"
+            android:defaultValue="true"/> /&gt; 
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="20dp"
+    android:width="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M13.4057,11.6827L14.2271,11.6827C15.6078,11.6826 16.7271,10.5634 16.7271,9.18265L16.7271,5.01635C16.7271,3.63564 15.6078,2.51635 14.2271,2.51635L11.1772,2.51635M13.4057,11.6827L13.4057,4.74487C13.4057,3.51409 12.408,2.51635 11.1772,2.51635M13.4057,11.6827C12.9063,11.6827 12.4451,11.9504 12.1975,12.3841L9.82609,16.5379C9.46075,17.1778 8.66,17.4222 7.99959,17.0953C6.94836,16.575 6.43108,15.3679 6.77939,14.2478L7.57709,11.6827L5.75658,11.6827C4.15699,11.6827 2.96889,10.2012 3.31624,8.63978L4.24305,4.47348C4.49745,3.3299 5.51186,2.51635 6.6834,2.51635L11.1772,2.51635"
+        android:strokeColor="@color/chat_popup_icon_default"
+        android:strokeWidth="1.6667"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+</vector>

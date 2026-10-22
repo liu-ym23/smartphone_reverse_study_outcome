@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package stepos.cloud.connection;
+
+option java_multiple_files = true;
+option java_package = "com.stepos.agentbus.agents.bff.proto";
+option java_outer_classname = "BffConnectionProto";
+
+message Head {
+    uint32 frame_type = 1;
+    uint32 msg_type = 2;
+    string msg_id = 3;
+    string module = 4;
+    string command = 5;
+    map<string, string> meta = 6;
+}
+
+message StreamMsg {
+    Head head = 1;
+    bytes body = 2;
+}
+
+message AuthBindReq {
+    string product = 1;
+    string uid = 2;
+    string token = 3;
+    string token_type = 4;
+    uint32 platform = 5;
+    string device = 6;
+    string app_version = 7;
+    string channel = 8;
+    string did = 9;
+    map<string, string> reserved = 10;
+}
+
+message AuthBindResp {
+    int32 code = 1;
+    string error = 2;
+    string conn = 4;
+    string uid = 5;
+    int32 logined = 6;
+    bool new = 7;
+}
+
+message HeartbeatReq {
+}
+
+message HeartbeatResp {
+    uint32 interval = 1;
+}
+
+message ErrorResp {
+    int32 code = 1;
+    string reason = 2;
+}

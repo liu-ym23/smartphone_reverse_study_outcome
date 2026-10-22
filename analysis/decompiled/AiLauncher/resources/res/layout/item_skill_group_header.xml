@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/skill_bg_group_header"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp">
+    <TextView
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/skill_text_secondary"
+        android:id="@+id/tv_group_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:textColor="@color/skill_text_secondary"
+        android:gravity="center_vertical"
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/iv_chevron"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="@string/more_item_label"
+        android:drawableEnd="@drawable/ic_chevron_right_24dp"/>
+</LinearLayout>

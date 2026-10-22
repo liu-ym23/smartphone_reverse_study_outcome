@@ -1,0 +1,34 @@
+[
+  {
+    "package_name": "com.UCMobile",
+    "refresh_rates": {
+      "60Hz": {"min": 0, "max": 60},
+      "90Hz": {"min": 0, "max": 60},
+      "120Hz": {"min": 30, "max": 60}
+    }
+  },
+  {
+    "package_name": "com.miHoYo.Yuanshen",
+    "refresh_rates": {
+      "60Hz": {"min": 0, "max": 60},
+      "90Hz": {"min": 60, "max": 60},
+      "120Hz": {"min": 60, "max": 60}
+    }
+  },
+  {
+    "package_name": "com.tencent.lolm.db",
+    "refresh_rates": {
+      "60Hz": {"min": 0, "max": 60},
+      "90Hz": {"min": 0, "max": 90},
+      "120Hz": {"min": 0, "max": 120}
+    }
+  },
+  {
+    "package_name": "com.tencent.lolmtyf",
+    "refresh_rates": {
+      "60Hz": {"min": 0, "max": 60},
+      "90Hz": {"min": 0, "max": 90},
+      "120Hz": {"min": 0, "max": 120}
+    }
+  }
+]

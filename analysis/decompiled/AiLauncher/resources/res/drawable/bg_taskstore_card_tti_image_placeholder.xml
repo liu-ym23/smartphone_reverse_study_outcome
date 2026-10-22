@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:startColor="#1a9bff"
+        android:endColor="#0a3a6b"
+        android:angle="135"
+        android:type="linear"
+        android:centerColor="#2b7cff"/>
+    <corners android:radius="@dimen/taskstore_card_tti_image_corner"/>
+</shape>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mc_partition_header"
+    android:background="#f2f2f2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/stepos_list_partition_header_large_height">
+    <TextView
+        android:textColor="@color/stepos_text_view_color_black_alpha_40"
+        android:id="@+id/list_partition_header_text1"
+        android:paddingTop="@dimen/stepos_list_partition_header_title_padding_top"
+        android:paddingBottom="@dimen/stepos_list_partition_header_title_padding_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginStart="@dimen/stepos_list_partition_header_title_padding_left"
+        android:layout_alignParentStart="true"
+        style="@style/Widget.StepOS.Light.TextView.Little.Medium"/>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stepos.support.v7.widget.PopupNestedScrollingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nested_scrolling_layout"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/stepos_lite_popup_padding_horizontal_f">
+    <LinearLayout
+        android:id="@+id/action_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <stepos.support.v7.widget.Toolbar
+            android:id="@+id/title_bar"
+            android:background="@drawable/stepos_lite_popup_title_bar_bg_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+    </LinearLayout>
+    <stepos.support.v7.widget.LitePopupContentFrameLayout
+        android:id="@+id/content_panel"
+        android:background="@color/lite_popup_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_nested_scrollview="true"/>
+</stepos.support.v7.widget.PopupNestedScrollingLayout>

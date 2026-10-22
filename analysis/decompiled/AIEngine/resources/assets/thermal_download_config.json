@@ -1,0 +1,20 @@
+{
+  "active": "scheme_1",
+  "schemes": {
+    "scheme_1": [
+      { "below": 32, "mode": "throttle", "rateMBps": 5 },
+      { "below": 34, "mode": "throttle", "rateMBps": 5 },
+      { "below": 36, "mode": "throttle", "rateMBps": 5 },
+      { "below": 38, "mode": "throttle", "rateMBps": 5 },
+      { "mode": "throttle", "rateMBps": 5 }
+    ],
+    "scheme_2": [
+      { "below": 32, "mode": "throttle", "rateMBps": 5 },
+      { "below": 34, "mode": "throttle", "rateMBps": 5 },
+      { "below": 36, "mode": "throttle", "rateMBps": 5 },
+      { "below": 38, "mode": "throttle", "rateMBps": 5 },
+      { "below": 40, "mode": "throttle", "rateMBps": 5 },
+      { "mode": "throttle", "rateMBps": 5 }
+    ]
+  }
+}

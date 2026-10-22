@@ -1,0 +1,24 @@
+syntax = "proto3";
+package com.zyql.protobuf.client_agent;
+
+
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.client_agent";
+option java_outer_classname = "ClientAgentService";
+
+// llm request
+message ChatCompletionReq {
+  bytes body = 1;
+}
+
+// llm response
+message ChatCompletionResponse {
+  bytes body = 1;
+}
+
+// 客户端上行item使用的service
+service ClientAgent {
+    // 调用llm
+  rpc ChatCompletionStream(ChatCompletionReq) returns (ChatCompletionResponse);
+}

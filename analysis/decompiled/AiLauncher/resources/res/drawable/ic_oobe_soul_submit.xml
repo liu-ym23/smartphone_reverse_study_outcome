@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="36dp"
+    android:width="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <path
+        android:fillColor="@color/oobe_agreement_checkbox_checked"
+        android:pathData="M18,0C27.941,0 36,8.059 36,18C36,27.941 27.941,36 18,36C8.059,36 0,27.941 0,18C0,8.059 8.059,0 18,0Z"/>
+    <path
+        android:pathData="M11.611,17.662L15.816,22.563L24.39,13.37"
+        android:strokeColor="@color/white"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+</vector>

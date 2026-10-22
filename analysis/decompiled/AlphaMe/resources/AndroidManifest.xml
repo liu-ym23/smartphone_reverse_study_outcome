@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="10002"
+    android:versionName="1.0.0_20260924_180508"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    coreApp="true"
+    package="com.stepos.alphame"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="33"
+        android:targetSdkVersion="34"/>
+    <permission
+        android:name="stepos.alphame.dump"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="stepos.alphame.USER_BEHAVIOR"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS"
+        android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="com.stepos.appplatform.permission.ACCESS_IPC_SERVICE"/>
+    <uses-permission android:name="com.stepos.permission.RECEIVE_KEEP_ALIVE"/>
+    <queries>
+        <package android:name="com.stepos.appplatform"/>
+        <package android:name="com.stepos.dataservice"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <package android:name="com.stepos.pushservice"/>
+    </queries>
+    <uses-permission android:name="com.stepos.secureservice.permission.OPEN_DATA_PROVIDER"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true"/>
+    <permission
+        android:name="com.stepos.alphame.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.stepos.alphame.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="com.stepos.permission.PUSH"/>
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/aicy_app_name"
+        android:icon="@drawable/aicy_engine"
+        android:name="com.stepos.alphame.ApplicationImpl"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/alphame_backup_rules"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:forceQueryable="true"
+        android:allowNativeHeapPointerTagging="false"
+        android:dataExtractionRules="@xml/alphame_data_extraction_rules">
+        <activity
+            android:theme="@style/WhiteBackgroundStyle"
+            android:name="com.stepos.alphame.persona.information_used.ui.PersonalInfoAuthorizationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/WhiteBackgroundStyle"
+            android:name="com.stepos.alphame.persona.ui.PersonalMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.alphame.action.personal_preference"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/PopupActivity"
+            android:name="com.stepos.alphame.persona.common.time.PersonalCommonTimePickerActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.alphame.action.TIME_PICKER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.stepos.alphame.persona.common.list.PersonalCommonListActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/PopupActivity"
+            android:name="com.stepos.alphame.persona.wifi.WifiListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.alphame.action.SELECT_WIFI"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/PopupActivity"
+            android:name="com.stepos.alphame.persona.carbluetooth.CarBluetoothListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.alphame.action.SELECT_CAR_BLUETOOTH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/PopupActivity"
+            android:name="com.stepos.alphame.persona.address.ui.AddressMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.alphame.action.ADDRESS_PICKER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/WhiteBackgroundStyle"
+            android:name="com.stepos.alphame.persona.privacy.PrivacySettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+        <service android:name="com.stepos.alphame.AliveService"/>
+        <provider
+            android:name="com.stepos.alphame.appinfo.AlphaMeContentProvider"
+            android:exported="false"
+            android:multiprocess="false"
+            android:authorities="com.stepos.alphame.sceneupdate.provider"/>
+        <provider
+            android:name="com.stepos.alphame.userbehavior.UserBehaviorContentProvider"
+            android:permission="stepos.alphame.USER_BEHAVIOR"
+            android:exported="true"
+            android:multiprocess="false"
+            android:authorities="com.stepos.alphame.behavior.provider"/>
+        <provider
+            android:name="com.stepos.alphame.dailyusage.DailyUsageContentProvider"
+            android:permission="stepos.alphame.USER_BEHAVIOR"
+            android:exported="true"
+            android:multiprocess="false"
+            android:authorities="com.stepos.alphame.dailyusage.provider"/>
+        <provider
+            android:name="com.stepos.alphame.dailyusage.DailyUsageRestrictContentProvider"
+            android:permission="stepos.alphame.USER_BEHAVIOR"
+            android:exported="true"
+            android:multiprocess="false"
+            android:authorities="com.stepos.alphame.dailyusage.restrictprovider"/>
+        <provider
+            android:name="com.stepos.alphame.suggest.AppSuggestContentProvider"
+            android:permission="stepos.alphame.USER_BEHAVIOR"
+            android:exported="true"
+            android:multiprocess="false"
+            android:authorities="com.stepos.alphame.suggest.provider"/>
+        <receiver
+            android:name="com.stepos.alphame.apprequest.MyPushMsgReceiver"
+            android:permission="com.stepos.cloud.push.permission.MESSAGE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.stepos.push.intent.MESSAGE"/>
+                <action android:name="com.stepos.push.intent.REGISTER.FEEDBACK"/>
+                <action android:name="com.stepos.push.intent.UNREGISTER.FEEDBACK"/>
+                <category android:name="com.stepos.alphame"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.alphame.dailyusage.MidnightAlarmReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver
+            android:name="com.stepos.alphame.dailyusage.BootReceiver"
+            android:permission="com.stepos.permission.RECEIVE_KEEP_ALIVE"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.stepos.alphame.KEEP_ALIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.alphame.userbehavior.UserBehaviorTimeReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.stepos.alphame.ocr.OcrTestActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <activity
+            android:theme="@style/Policy.AppTheme"
+            android:name="com.stepos.policy.sdk.activity.PolicyWebViewActivity"
+            android:screenOrientation="portrait"
+            android:inheritShowWhenLocked="true"/>
+        <activity
+            android:theme="@style/Policy.AppTheme"
+            android:name="com.stepos.policy.sdk.activity.PolicyPermissionDesActivity"
+            android:screenOrientation="portrait"
+            android:inheritShowWhenLocked="true"/>
+        <provider
+            android:name="com.stepos.policy.sdk.util.PolicySdkFileProvider"
+            android:exported="false"
+            android:authorities="com.stepos.alphame.PolicySdk.FileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/policy_sdk_file_paths"/>
+        </provider>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.stepos.alphame.androidx-startup">
+            <meta-data
+                android:name="com.stepos.alphame.dailyusage.initializer.DailyUsageInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.StepOS.AppCompat.Light.WebViewActivity"
+            android:name="stepos.support.v7.app.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.StepOS.AppCompat.Light.LitePopup.Color.Blue"
+            android:name="stepos.support.v7.app.palette.StepOSPalettePopupActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:finishOnCloseSystemDialogs="true"
+            android:documentLaunchMode="never"
+            android:relinquishTaskIdentity="true"
+            android:visibleToInstantApps="true"
+            android:showWhenLocked="true"/>
+        <provider
+            android:name="com.stepos.common.app.LibraryInitProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.stepos.alphame.steposcommon"/>
+        <provider
+            android:name="com.stepos.common.app.PAGReporterPreventProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.stepos.alphame.steposcommon.pag"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <uses-library
+            android:name="steposcore-framework"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.stepos.renderfilter.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.stepos.alphame.renderfilter-startup"/>
+    </application>
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="32dp"
+    android:width="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="@color/status_bar_stop_indicator"
+        android:pathData="M14,11 L18,11 A3,3 0 0 1 21,14 L21,18 A3,3 0 0 1 18,21 L14,21 A3,3 0 0 1 11,18 L11,14 A3,3 0 0 1 14,11 Z"/>
+</vector>

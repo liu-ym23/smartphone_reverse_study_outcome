@@ -1,0 +1,213 @@
+package com.stepos.taskrobot.common.bean;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import androidx.appfunctions.metadata.a;
+import androidx.compose.foundation.b;
+import com.bytedance.apm.agent.v2.instrumentation.AppAgent;
+import kotlin.Metadata;
+import kotlin.jvm.internal.e;
+import kotlin.jvm.internal.k;
+
+@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0010\u0000\n\u0002\b\u000e\b\u0087\b\u0018\u00002\u00020\u0001BA\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0005\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\n\u001a\u00020\b\u0012\b\b\u0002\u0010\u000b\u001a\u00020\u0005¢\u0006\u0004\b\f\u0010\rJ\r\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b\u000f\u0010\u0010J\u001d\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0013\u001a\u00020\u000e¢\u0006\u0004\b\u0015\u0010\u0016J\u0010\u0010\u0017\u001a\u00020\u0002HÆ\u0003¢\u0006\u0004\b\u0017\u0010\u0018J\u0010\u0010\u0019\u001a\u00020\u0002HÆ\u0003¢\u0006\u0004\b\u0019\u0010\u0018J\u0010\u0010\u001a\u001a\u00020\u0005HÆ\u0003¢\u0006\u0004\b\u001a\u0010\u001bJ\u0010\u0010\u001c\u001a\u00020\u0005HÆ\u0003¢\u0006\u0004\b\u001c\u0010\u001bJ\u0010\u0010\u001d\u001a\u00020\bHÆ\u0003¢\u0006\u0004\b\u001d\u0010\u001eJ\u0010\u0010\u001f\u001a\u00020\bHÆ\u0003¢\u0006\u0004\b\u001f\u0010\u001eJ\u0010\u0010 \u001a\u00020\u0005HÆ\u0003¢\u0006\u0004\b \u0010\u001bJV\u0010!\u001a\u00020\u00002\b\b\u0002\u0010\u0003\u001a\u00020\u00022\b\b\u0002\u0010\u0004\u001a\u00020\u00022\b\b\u0002\u0010\u0006\u001a\u00020\u00052\b\b\u0002\u0010\u0007\u001a\u00020\u00052\b\b\u0002\u0010\t\u001a\u00020\b2\b\b\u0002\u0010\n\u001a\u00020\b2\b\b\u0002\u0010\u000b\u001a\u00020\u0005HÆ\u0001¢\u0006\u0004\b!\u0010\"J\u0010\u0010#\u001a\u00020\u0005HÖ\u0001¢\u0006\u0004\b#\u0010\u001bJ\u0010\u0010$\u001a\u00020\u000eHÖ\u0001¢\u0006\u0004\b$\u0010\u0010J\u001a\u0010'\u001a\u00020\u00022\b\u0010&\u001a\u0004\u0018\u00010%HÖ\u0003¢\u0006\u0004\b'\u0010(R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010)\u001a\u0004\b*\u0010\u0018R\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0004\u0010)\u001a\u0004\b+\u0010\u0018R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b\u0006\u0010,\u001a\u0004\b-\u0010\u001bR\u0017\u0010\u0007\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b\u0007\u0010,\u001a\u0004\b.\u0010\u001bR\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b\t\u0010/\u001a\u0004\b0\u0010\u001eR\u0017\u0010\n\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b\n\u0010/\u001a\u0004\b1\u0010\u001eR\u0017\u0010\u000b\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b\u000b\u0010,\u001a\u0004\b2\u0010\u001b¨\u00063"}, d2 = {"Lcom/stepos/taskrobot/common/bean/MainDisplayTopAppHistory;", "Landroid/os/Parcelable;", "", "watching", "changed", "", "baselinePackage", "currentPackage", "", "baselineAt", "lastChangeAt", "chatSessionId", AppAgent.CONSTRUCT, "(ZZLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "LC7/r;", "writeToParcel", "(Landroid/os/Parcel;I)V", "component1", "()Z", "component2", "component3", "()Ljava/lang/String;", "component4", "component5", "()J", "component6", "component7", "copy", "(ZZLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)Lcom/stepos/taskrobot/common/bean/MainDisplayTopAppHistory;", "toString", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "Z", "getWatching", "getChanged", "Ljava/lang/String;", "getBaselinePackage", "getCurrentPackage", "J", "getBaselineAt", "getLastChangeAt", "getChatSessionId", "common_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+/* loaded from: classes3.dex */
+public final /* data */ class MainDisplayTopAppHistory implements Parcelable {
+    public static final Parcelable.Creator<MainDisplayTopAppHistory> CREATOR = new Creator();
+    private final long baselineAt;
+    private final String baselinePackage;
+    private final boolean changed;
+    private final String chatSessionId;
+    private final String currentPackage;
+    private final long lastChangeAt;
+    private final boolean watching;
+
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    public static final class Creator implements Parcelable.Creator<MainDisplayTopAppHistory> {
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final MainDisplayTopAppHistory createFromParcel(Parcel parcel) {
+            boolean z10;
+            k.f(parcel, "parcel");
+            boolean z11 = false;
+            if (parcel.readInt() != 0) {
+                z10 = false;
+                z11 = true;
+            } else {
+                z10 = false;
+            }
+            return new MainDisplayTopAppHistory(z11, parcel.readInt() == 0 ? z10 : true, parcel.readString(), parcel.readString(), parcel.readLong(), parcel.readLong(), parcel.readString());
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final MainDisplayTopAppHistory[] newArray(int i) {
+            return new MainDisplayTopAppHistory[i];
+        }
+    }
+
+    public MainDisplayTopAppHistory(boolean z10, boolean z11, String baselinePackage, String currentPackage, long j5, long j6, String chatSessionId) {
+        k.f(baselinePackage, "baselinePackage");
+        k.f(currentPackage, "currentPackage");
+        k.f(chatSessionId, "chatSessionId");
+        this.watching = z10;
+        this.changed = z11;
+        this.baselinePackage = baselinePackage;
+        this.currentPackage = currentPackage;
+        this.baselineAt = j5;
+        this.lastChangeAt = j6;
+        this.chatSessionId = chatSessionId;
+    }
+
+    public static /* synthetic */ MainDisplayTopAppHistory copy$default(MainDisplayTopAppHistory mainDisplayTopAppHistory, boolean z10, boolean z11, String str, String str2, long j5, long j6, String str3, int i, Object obj) {
+        if ((i & 1) != 0) {
+            z10 = mainDisplayTopAppHistory.watching;
+        }
+        if ((i & 2) != 0) {
+            z11 = mainDisplayTopAppHistory.changed;
+        }
+        if ((i & 4) != 0) {
+            str = mainDisplayTopAppHistory.baselinePackage;
+        }
+        if ((i & 8) != 0) {
+            str2 = mainDisplayTopAppHistory.currentPackage;
+        }
+        if ((i & 16) != 0) {
+            j5 = mainDisplayTopAppHistory.baselineAt;
+        }
+        if ((i & 32) != 0) {
+            j6 = mainDisplayTopAppHistory.lastChangeAt;
+        }
+        if ((i & 64) != 0) {
+            str3 = mainDisplayTopAppHistory.chatSessionId;
+        }
+        String str4 = str3;
+        long j10 = j6;
+        long j11 = j5;
+        return mainDisplayTopAppHistory.copy(z10, z11, str, str2, j11, j10, str4);
+    }
+
+    /* renamed from: component1, reason: from getter */
+    public final boolean getWatching() {
+        return this.watching;
+    }
+
+    /* renamed from: component2, reason: from getter */
+    public final boolean getChanged() {
+        return this.changed;
+    }
+
+    /* renamed from: component3, reason: from getter */
+    public final String getBaselinePackage() {
+        return this.baselinePackage;
+    }
+
+    /* renamed from: component4, reason: from getter */
+    public final String getCurrentPackage() {
+        return this.currentPackage;
+    }
+
+    /* renamed from: component5, reason: from getter */
+    public final long getBaselineAt() {
+        return this.baselineAt;
+    }
+
+    /* renamed from: component6, reason: from getter */
+    public final long getLastChangeAt() {
+        return this.lastChangeAt;
+    }
+
+    /* renamed from: component7, reason: from getter */
+    public final String getChatSessionId() {
+        return this.chatSessionId;
+    }
+
+    public final MainDisplayTopAppHistory copy(boolean watching, boolean changed, String baselinePackage, String currentPackage, long baselineAt, long lastChangeAt, String chatSessionId) {
+        k.f(baselinePackage, "baselinePackage");
+        k.f(currentPackage, "currentPackage");
+        k.f(chatSessionId, "chatSessionId");
+        return new MainDisplayTopAppHistory(watching, changed, baselinePackage, currentPackage, baselineAt, lastChangeAt, chatSessionId);
+    }
+
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof MainDisplayTopAppHistory)) {
+            return false;
+        }
+        MainDisplayTopAppHistory mainDisplayTopAppHistory = (MainDisplayTopAppHistory) other;
+        return this.watching == mainDisplayTopAppHistory.watching && this.changed == mainDisplayTopAppHistory.changed && k.b(this.baselinePackage, mainDisplayTopAppHistory.baselinePackage) && k.b(this.currentPackage, mainDisplayTopAppHistory.currentPackage) && this.baselineAt == mainDisplayTopAppHistory.baselineAt && this.lastChangeAt == mainDisplayTopAppHistory.lastChangeAt && k.b(this.chatSessionId, mainDisplayTopAppHistory.chatSessionId);
+    }
+
+    public final long getBaselineAt() {
+        return this.baselineAt;
+    }
+
+    public final String getBaselinePackage() {
+        return this.baselinePackage;
+    }
+
+    public final boolean getChanged() {
+        return this.changed;
+    }
+
+    public final String getChatSessionId() {
+        return this.chatSessionId;
+    }
+
+    public final String getCurrentPackage() {
+        return this.currentPackage;
+    }
+
+    public final long getLastChangeAt() {
+        return this.lastChangeAt;
+    }
+
+    public final boolean getWatching() {
+        return this.watching;
+    }
+
+    public int hashCode() {
+        return this.chatSessionId.hashCode() + a.c(a.c(B7.a.c(B7.a.c(a.d(Boolean.hashCode(this.watching) * 31, 31, this.changed), 31, this.baselinePackage), 31, this.currentPackage), 31, this.baselineAt), 31, this.lastChangeAt);
+    }
+
+    public String toString() {
+        boolean z10 = this.watching;
+        boolean z11 = this.changed;
+        String str = this.baselinePackage;
+        String str2 = this.currentPackage;
+        long j5 = this.baselineAt;
+        long j6 = this.lastChangeAt;
+        String str3 = this.chatSessionId;
+        StringBuilder sb = new StringBuilder("MainDisplayTopAppHistory(watching=");
+        sb.append(z10);
+        sb.append(", changed=");
+        sb.append(z11);
+        sb.append(", baselinePackage=");
+        androidx.constraintlayout.core.dsl.a.A(sb, str, ", currentPackage=", str2, ", baselineAt=");
+        sb.append(j5);
+        b.y(j6, ", lastChangeAt=", ", chatSessionId=", sb);
+        return B7.a.q(sb, str3, ")");
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel dest, int flags) {
+        k.f(dest, "dest");
+        dest.writeInt(this.watching ? 1 : 0);
+        dest.writeInt(this.changed ? 1 : 0);
+        dest.writeString(this.baselinePackage);
+        dest.writeString(this.currentPackage);
+        dest.writeLong(this.baselineAt);
+        dest.writeLong(this.lastChangeAt);
+        dest.writeString(this.chatSessionId);
+    }
+
+    public /* synthetic */ MainDisplayTopAppHistory(boolean z10, boolean z11, String str, String str2, long j5, long j6, String str3, int i, e eVar) {
+        this(z10, z11, str, str2, j5, j6, (i & 64) != 0 ? "" : str3);
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/stepos_list_item_accessory_size"
+    android:width="@dimen/stepos_list_item_arrow_width"
+    android:autoMirrored="true"
+    android:viewportWidth="12"
+    android:viewportHeight="24">
+    <group>
+        <clip-path android:pathData="M4,0h8v24h-8z"/>
+        <path
+            android:fillColor="@android:color/transparent"
+            android:pathData="M6,7.19995L10.8,12L6,16.8"
+            android:strokeColor="@color/stepos_list_item_arrow_stroke"
+            android:strokeWidth="1.5"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeAlpha="0.3"/>
+    </group>
+</vector>

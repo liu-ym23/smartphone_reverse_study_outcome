@@ -1,0 +1,66 @@
+package com.google.crypto.tink.shaded.protobuf;
+
+import com.google.crypto.tink.shaded.protobuf.Internal;
+import g5.f;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public enum NullValue implements Internal.EnumLite {
+    NULL_VALUE(0),
+    UNRECOGNIZED(-1);
+
+    public static final int NULL_VALUE_VALUE = 0;
+    private static final Internal.EnumLiteMap<NullValue> internalValueMap = new Internal.EnumLiteMap<NullValue>() { // from class: com.google.crypto.tink.shaded.protobuf.NullValue.1
+        @Override // com.google.crypto.tink.shaded.protobuf.Internal.EnumLiteMap
+        public NullValue findValueByNumber(int i) {
+            return NullValue.forNumber(i);
+        }
+    };
+    private final int value;
+
+    /* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+    public static final class NullValueVerifier implements Internal.EnumVerifier {
+        static final Internal.EnumVerifier INSTANCE = new NullValueVerifier();
+
+        private NullValueVerifier() {
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.Internal.EnumVerifier
+        public boolean isInRange(int i) {
+            return NullValue.forNumber(i) != null;
+        }
+    }
+
+    NullValue(int i) {
+        this.value = i;
+    }
+
+    public static NullValue forNumber(int i) {
+        if (i != 0) {
+            return null;
+        }
+        return NULL_VALUE;
+    }
+
+    public static Internal.EnumLiteMap<NullValue> internalGetValueMap() {
+        return internalValueMap;
+    }
+
+    public static Internal.EnumVerifier internalGetVerifier() {
+        return NullValueVerifier.INSTANCE;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.Internal.EnumLite
+    public final int getNumber() {
+        if (this != UNRECOGNIZED) {
+            return this.value;
+        }
+        f.s("Can't get the number of an unknown enum value.");
+        return 0;
+    }
+
+    @Deprecated
+    public static NullValue valueOf(int i) {
+        return forNumber(i);
+    }
+}

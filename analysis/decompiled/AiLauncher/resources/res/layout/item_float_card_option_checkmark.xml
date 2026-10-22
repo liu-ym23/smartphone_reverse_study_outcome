@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_float_card_option_selector"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/float_card_option_text"
+        android:id="@+id/tv_option_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/iv_option_trailing"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_float_card_check_unselected"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="12dp"/>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_layout"
+    android:background="?attr/colorSurfaceContainerLow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/stepos_list_category_title_height">
+    <TextView
+        android:textAppearance="@style/TextAppearance.StepOS.B6.Medium"
+        android:textColor="#ffcc00"
+        android:gravity="bottom"
+        android:id="@android:id/text2"
+        android:paddingTop="@dimen/stepos_list_category_header_normal_B1_more_padding_vertical"
+        android:paddingBottom="@dimen/stepos_list_category_header_normal_B1_more_padding_vertical"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/stepos_list_category_title_height"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="@dimen/stepos_list_category_header_normal_B1_more_padding_horizontal"
+        android:paddingEnd="@dimen/stepos_list_category_header_normal_B1_more_padding_horizontal"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.StepOS.list.Category.Normal.Title"
+        android:id="@android:id/text1"
+        android:paddingTop="@dimen/stepos_list_category_header_normal_B1_more_padding_vertical"
+        android:paddingBottom="@dimen/stepos_list_category_header_normal_B1_more_padding_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="@dimen/stepos_list_publish_padding"
+        android:paddingEnd="@dimen/stepos_list_category_header_normal_padding_end"
+        android:layout_toStartOf="@android:id/text2"/>
+</RelativeLayout>

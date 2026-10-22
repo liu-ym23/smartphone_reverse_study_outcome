@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/tab_layout"
+    android:clipChildren="false"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/stepos_action_bar_stacked_max_height">
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/stepos_tool_bar_tab_view_dot_width_height"
+        style="?attr/actionBarTabTextStyle"/>
+    <stepos.support.v7.widget.TitleBarBadgeView
+        android:id="@+id/tab_badge"
+        android:layout_width="@dimen/stepos_tool_bar_tab_view_dot_width_height"
+        android:layout_height="@dimen/stepos_tool_bar_tab_view_dot_width_height"
+        android:layout_alignTop="@+id/tab_text"
+        android:layout_marginStart="1dp"
+        android:layout_toEndOf="@+id/tab_text"/>
+</RelativeLayout>

@@ -1,0 +1,1 @@
+com.stepos.core.ability.initializer.DefaultAbilityInitializer

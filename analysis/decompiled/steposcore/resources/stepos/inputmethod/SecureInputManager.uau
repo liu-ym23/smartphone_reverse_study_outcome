@@ -1,0 +1,6 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lstepos/inputmethod/SecureInputManager;->getInstance()Lstepos/inputmethod/SecureInputManager;,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/SecureInputManager.java,67,5,67,25,
+Lstepos/inputmethod/SecureInputManager;->exitSecureMode()V,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/SecureInputManager.java,105,5,105,25,
+Lstepos/inputmethod/SecureInputManager;->isSecureModeActive()Z,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/SecureInputManager.java,122,5,122,25,
+Lstepos/inputmethod/SecureInputManager;->registerSecureModeListener(Lstepos/inputmethod/SecureInputModeListener;)V,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/SecureInputManager.java,141,5,141,25,
+Lstepos/inputmethod/SecureInputManager;->unregisterSecureModeListener(Lstepos/inputmethod/SecureInputModeListener;)V,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/SecureInputManager.java,168,5,168,25,

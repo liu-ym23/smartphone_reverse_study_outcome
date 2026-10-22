@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:checked="true"
+            android:title="@string/us_today"/>
+        <item android:title="@string/us_last_7_days"/>
+    </group>
+</menu>

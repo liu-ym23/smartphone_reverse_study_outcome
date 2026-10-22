@@ -1,0 +1,326 @@
+// InputBar 声波：底部主视效 + 顶部反色镜像，同一趟 main() 里算完。
+// SIZE 用本视图真实 density（uDpRef=0）。主波颜色/辉光/填充与最新 Audio Wave 对齐。
+// 主视效：Y 偏移 + 整体 Size + edge fade。顶部：镜像距离 / 透明度 / 模糊 / XY 大小 / edge fade。
+
+uniform float2 iResolution;
+uniform float  iTime;
+uniform float  uPxPerDp;
+uniform float  uDpRef;
+
+uniform float uAmp;
+uniform float uFreq;
+uniform float uSpeed;
+uniform float uLen;
+uniform float uTaper;
+uniform float uFade;
+uniform float uOffsetY;
+uniform float uWaveX;
+uniform float uWaveY;
+uniform float uSize;
+
+uniform float uPhase1;
+uniform float uPhase2;
+uniform float uPhase3;
+uniform float3 uCol1;
+uniform float3 uCol2;
+uniform float3 uCol3;
+uniform float3 uFillCol1;
+uniform float3 uFillCol2;
+uniform float3 uFillCol3;
+
+uniform float uGlowUp;
+uniform float uGlowDn;
+uniform float uInten;
+uniform float uFillSoft;
+uniform float uFillOp;
+uniform float uFillAdd;
+
+uniform float uEnergySpeed;
+uniform float uExtEnergy;
+uniform float uEnergyIn;
+
+// 与聆听 AudioWave 同一套进/退场：墙钟 uWaveTime，入场 1s CubicBezier(0.3,0,0.1,1)，
+// 退场 0.433s 两段塌幅度。uWaveTime=-1 隐藏。
+uniform float uIntro;
+uniform float uIntroDur;
+uniform float uIntroSpeedFrom;
+uniform float uWaveTime;
+uniform float uStartAt;
+uniform float uReleaseAt;
+uniform float uExitDur;
+
+uniform float uReflX;
+uniform float uReflY;
+uniform float uReflScaleW;
+uniform float uReflScaleH;
+uniform float uReflAlpha;
+uniform float uReflBlur;
+uniform float uReflFade;
+uniform float uCornerPx;
+uniform float uShaderRefract;
+uniform float uRefractStr;
+uniform float uRefractWidth;
+uniform float uRefractDepth;
+
+const float PI = 3.141592653589793;
+
+float bez(float p1, float p2, float u) {
+    float v = 1.0 - u;
+    return 3.0 * v * v * u * p1 + 3.0 * v * u * u * p2 + u * u * u;
+}
+
+float bezDeriv(float p1, float p2, float u) {
+    float v = 1.0 - u;
+    return 3.0 * v * v * p1 + 6.0 * v * u * (p2 - p1) + 3.0 * u * u * (1.0 - p2);
+}
+
+float pathEase(float x1, float y1, float x2, float y2, float x) {
+    if (x <= 0.0) return 0.0;
+    if (x >= 1.0) return 1.0;
+    float u = x;
+    for (int i = 0; i < 6; ++i) {
+        float dx = bez(x1, x2, u) - x;
+        float d = bezDeriv(x1, x2, u);
+        if (abs(d) > 1e-6) u = clamp(u - dx / d, 0.0, 1.0);
+    }
+    return bez(y1, y2, u);
+}
+
+float waveDrift(float t) {
+    float s0 = uIntroSpeedFrom;
+    float s1 = uSpeed;
+    if (uIntroDur <= 0.001) return t * mix(s0, s1, clamp(uIntro, 0.0, 1.0));
+    float d = max(uIntroDur, 0.05);
+    if (t <= 0.0) return 0.0;
+    if (t < d) {
+        float u = t / d;
+        return s0 * t + (s1 - s0) * t * u * 0.5;
+    }
+    return 0.5 * (s0 + s1) * d + s1 * (t - d);
+}
+
+float bandf(float t, float a, float f1, float p1, float f2, float p2) {
+    return clamp(a + a * sin(t * f1 + p1) * sin(t * f2 + p2), 0.0, 1.0);
+}
+
+float synthEnergy(float t) {
+    float low  = bandf(t, 0.45, 0.80, 0.0, 0.37, 1.0);
+    float mid  = bandf(t, 0.40, 1.70, 2.0, 0.53, 0.0);
+    float high = bandf(t, 0.30, 2.90, 4.0, 0.71, 2.0);
+    return 0.5 + 0.5 * low + 0.35 * mid + 0.15 * high;
+}
+
+float envelope(float xn) {
+    float c = cos(PI * 0.5 * min(abs(uTaper * xn), 1.0));
+    return c * c;
+}
+
+float glowProfile(float sd, float up, float dn) {
+    return exp(-abs(sd) / max(sd >= 0.0 ? up : dn, 1e-5));
+}
+
+float fillAmt(float sd, float soft) {
+    return 1.0 - smoothstep(-max(soft, 1e-5), 0.0, sd);
+}
+
+float curveY(float drift, float xn, float ampF, float env, float energy, float phase) {
+    return 0.5 + uOffsetY + uWaveY + ampF * energy * env * sin(xn * PI * uFreq + drift + phase);
+}
+
+float sdRoundBox(float2 p, float2 b, float r) {
+    float2 q = abs(p) - b + r;
+    return min(max(q.x, q.y), 0.0) + length(max(q, 0.0)) - r;
+}
+
+// 复刻上层纯透玻璃：边缘斜面折射 + 轻微透镜，无模糊/磨砂/色散。
+float2 clearGlassUv(float2 uv, float2 fragCoord) {
+    if (uShaderRefract < 0.01) return uv;
+    float2 p = fragCoord - 0.5 * iResolution;
+    float2 b = 0.5 * iResolution;
+    float cr = max(uCornerPx, 1.0);
+    float sd = sdRoundBox(p, b, cr);
+    float distIn = max(-sd, 0.0);
+    float band = max((uRefractWidth / 100.0) * min(iResolution.x, iResolution.y) * 0.28, 6.0);
+    float t = 1.0 - smoothstep(0.0, band, distIn);
+    t *= t;
+    float e = 2.0;
+    float2 grad = float2(
+        sdRoundBox(p + float2(e, 0.0), b, cr) - sdRoundBox(p - float2(e, 0.0), b, cr),
+        sdRoundBox(p + float2(0.0, e), b, cr) - sdRoundBox(p - float2(0.0, e), b, cr)
+    );
+    float2 n = normalize(grad + float2(1e-5));
+    float strPx = (uRefractStr / 100.0) * 22.0;
+    uv += float2(n.x, -n.y) * strPx * t / max(iResolution, float2(1.0));
+    float lens = clamp(uRefractDepth, 0.0, 1.0) * 0.07;
+    uv = 0.5 + (uv - 0.5) * (1.0 - lens * (1.0 - t));
+    return uv;
+}
+
+half4 shadeAtY(
+    float y, float y1, float y2, float y3,
+    float up, float dn, float soft, float hwin
+) {
+    float sd1 = y - y1;
+    float sd2 = y - y2;
+    float sd3 = y - y3;
+    float a1 = fillAmt(sd1, soft) * uFillOp;
+    float a2 = fillAmt(sd2, soft) * uFillOp;
+    float a3 = fillAmt(sd3, soft) * uFillOp;
+    float3 fc;
+    float fa;
+    if (uFillAdd > 0.5) {
+        fc = uFillCol1 * a1 + uFillCol2 * a2 + uFillCol3 * a3;
+        fa = clamp(a1 + a2 + a3, 0.0, 1.0);
+    } else {
+        fc = uFillCol1 * a1;                   fa = a1;
+        fc = uFillCol2 * a2 + fc * (1.0 - a2); fa = a2 + fa * (1.0 - a2);
+        fc = uFillCol3 * a3 + fc * (1.0 - a3); fa = a3 + fa * (1.0 - a3);
+    }
+    float3 sc = uCol1 * glowProfile(sd1, up, dn)
+              + uCol2 * glowProfile(sd2, up, dn)
+              + uCol3 * glowProfile(sd3, up, dn);
+    sc *= uInten;
+    float3 col = (fc + sc) * hwin;
+    float da = clamp(max(max(col.r, col.g), col.b), 0.0, 1.0);
+    float aOut = max(da, clamp(fa * hwin, 0.0, 1.0));
+    return half4(half3(min(col, float3(1.0))), half(aOut));
+}
+
+half4 sampleWaveAt(
+    float t, float sampleX, float sampleY,
+    float energy, float ampF, float up, float dn, float soft, float len,
+    float fade
+) {
+    float x0 = 0.5 - 0.5 * len + uWaveX;
+    float u = (sampleX - x0) / max(len, 1e-4);
+    float xn = u * 2.0 - 1.0;
+    float win = smoothstep(0.0, 0.02, u) * smoothstep(0.0, 0.02, 1.0 - u);
+    float hwin = win * exp(-(xn * fade) * (xn * fade));
+    float env = envelope(xn);
+    float y1 = curveY(t, xn, ampF, env, energy, uPhase1);
+    float y2 = curveY(t, xn, ampF, env, energy, uPhase2);
+    float y3 = curveY(t, xn, ampF, env, energy, uPhase3);
+    return shadeAtY(sampleY, y1, y2, y3, up, dn, soft, hwin);
+}
+
+float2 reflSrc(float2 uv, float baseline, float scaleW, float scaleH) {
+    // uReflY：相对顶边的镜像距离。1.0=贴顶，>1 探出顶外，<1 向框内。
+    // 不跟底部 baseline 走，拉高 bar 时倒影贴着顶边一起动。
+    float reflPos = uReflY;
+    float srcY = baseline - (uv.y - reflPos) / scaleH;
+    float cx = 0.5 + uWaveX + uReflX;
+    float srcX = cx + (uv.x - cx) / scaleW;
+    return float2(srcX, srcY);
+}
+
+half4 main(float2 fragCoord) {
+    float2 uv = fragCoord / iResolution;
+    uv.y = 1.0 - uv.y;
+    float2 p0 = fragCoord - 0.5 * iResolution;
+    float2 b0 = 0.5 * iResolution;
+    float cr0 = max(uCornerPx, 1.0);
+    float distIn0 = max(-sdRoundBox(p0, b0, cr0), 0.0);
+    float band0 = max((uRefractWidth / 100.0) * min(iResolution.x, iResolution.y) * 0.28, 6.0);
+    float rim = 1.0 - smoothstep(0.0, band0, distIn0);
+    uv = clearGlassUv(uv, fragCoord);
+
+    if (uWaveTime < 0.0 && uWaveTime > -1.5) return half4(0.0);
+    if (uReleaseAt >= 0.0 && uStartAt >= 0.0 && uReleaseAt <= uStartAt) return half4(0.0);
+    if (uWaveTime < -1.5 && uStartAt >= 0.0 && iTime < uStartAt) return half4(0.0);
+
+    float hostH = max(iResolution.y, 1.0);
+    float dp = uDpRef > 0.5
+        ? min(iResolution.x, iResolution.y) / (uDpRef * hostH)
+        : uPxPerDp / hostH;
+
+    float localT = uWaveTime >= 0.0
+        ? uWaveTime
+        : (uStartAt >= 0.0 ? max(iTime - uStartAt, 0.0) : iTime);
+    // 退场冻结入场进度，快速上滑松手也从当前高度开始，不跳回满高。
+    float introT = uReleaseAt >= 0.0 ? min(localT, uReleaseAt) : localT;
+    float intro;
+    if (uIntroDur > 0.001) {
+        intro = pathEase(0.3, 0.0, 0.1, 1.0, clamp(introT / uIntroDur, 0.0, 1.0));
+    } else {
+        intro = clamp(uIntro, 0.0, 1.0);
+    }
+    // setVolume(0..1)：0 = 默认 Amplitude×0.25，1 = ×1.1，中间线性 0.25+0.85*v。
+    float vol = clamp(uEnergyIn, 0.0, 1.0);
+    float volumeAmp = mix(0.25, 1.10, vol);
+    float listenEnergy = mix(synthEnergy(localT * uEnergySpeed),
+                       volumeAmp,
+                       clamp(uExtEnergy, 0.0, 1.0));
+    float energy = mix(1.0, listenEnergy, intro);
+    float size = max(uSize, 0.05);
+    float len = max(uLen * size, 0.05);
+    float targetAmp = uAmp * size;
+    float liveAmp = targetAmp * intro;
+    float cover = 1.0;
+    if (uReleaseAt >= 0.0 && localT > uReleaseAt) {
+        float te = localT - uReleaseAt;
+        float exitDur = max(uExitDur, 0.05);
+        if (te >= exitDur - 0.001) return half4(0.0);
+        float p0 = exitDur * (0.300 / 0.433);
+        float p1 = max(exitDur - p0, 0.001);
+        // 聆听塌到 -9.07 是相对 Amplitude≈191 的过冲；这里按目标幅度同比，避免 InputBar 最后反折闪一下。
+        float dip = -9.07 * targetAmp / 191.0;
+        if (te < p0) {
+            float e = pathEase(0.35, 0.0, 0.67, 1.0, clamp(te / max(p0, 0.001), 0.0, 1.0));
+            liveAmp = mix(targetAmp * intro, dip, e);
+        } else {
+            float e = pathEase(0.33, 0.0, 0.62, 1.0, clamp((te - p0) / p1, 0.0, 1.0));
+            liveAmp = mix(dip, 0.0, e);
+        }
+        cover = 1.0 - pathEase(0.33, 0.0, 0.62, 1.0, clamp(te / exitDur, 0.0, 1.0));
+        if (cover <= 0.002) return half4(0.0);
+    }
+    float ampK = clamp(abs(liveAmp) / max(abs(targetAmp), 1.0), 0.0, 1.0);
+    if (ampK <= 0.0005) return half4(0.0);
+    float ampF = liveAmp * dp;
+    float up = uGlowUp * size * dp * ampK;
+    float dn = uGlowDn * size * dp * ampK;
+    float soft = uFillSoft * size * dp * ampK;
+    float drift = waveDrift(localT);
+
+    half4 mainCol = sampleWaveAt(drift, uv.x, uv.y, energy, ampF, up, dn, soft, len, uFade);
+
+    // 顶部反色：镜像距离相对顶边 + 独立 XY 缩放 + 透明度 + 模糊 + 两端 edge fade。
+    float baseline = 0.5 + uOffsetY + uWaveY;
+    float scaleH = max(uReflScaleH, 0.05);
+    float scaleW = max(uReflScaleW, 0.05);
+    float reflFade = max(uReflFade, 0.0);
+    float2 src = reflSrc(uv, baseline, scaleW, scaleH);
+    half4 reflCol = sampleWaveAt(drift, src.x, src.y, energy, ampF, up, dn, soft, len, reflFade);
+    float blurUv = max(uReflBlur, 0.0) * dp;
+    if (blurUv > 1e-4) {
+        half4 acc = half4(0.0);
+        float wsum = 0.0;
+        for (int j = -1; j <= 1; ++j) {
+            for (int i = -1; i <= 1; ++i) {
+                float2 d = float2(float(i), float(j));
+                float w = exp(-dot(d, d) * 0.45);
+                float2 srcB = reflSrc(uv + d * blurUv, baseline, scaleW, scaleH);
+                acc += sampleWaveAt(drift, srcB.x, srcB.y, energy, ampF, up, dn, soft, len, reflFade) * w;
+                wsum += w;
+            }
+        }
+        reflCol = acc / max(wsum, 1e-5);
+    }
+    float ra = clamp(uReflAlpha, 0.0, 1.0);
+    reflCol = half4(reflCol.rgb * ra, reflCol.a * ra);
+
+    float keep = 1.0 - float(mainCol.a);
+    half4 outc = half4(mainCol.rgb + reflCol.rgb * keep, clamp(float(mainCol.a) + float(reflCol.a) * keep, 0.0, 1.0));
+    if (uShaderRefract > 0.01) {
+        float fres = rim * rim * 0.16;
+        outc = half4(min(outc.rgb * (1.0 + fres), half3(1.0)), outc.a);
+    }
+
+    float2 p = fragCoord - 0.5 * iResolution;
+    float2 b = 0.5 * iResolution;
+    float cr = max(uCornerPx, 0.0);
+    float2 q = abs(p) - b + cr;
+    float sdRound = min(max(q.x, q.y), 0.0) + length(max(q, 0.0)) - cr;
+    float clip = 1.0 - smoothstep(-1.0, 1.5, sdRound);
+    return half4(min(outc.rgb, half3(1.0)) * clip * cover, outc.a * clip * cover);
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_select_txt_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#eeeeee"
+        android:gravity="center"
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/chat_menu_select_text"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_select_txt_close"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"/>
+    <com.stepos.agentframework.chatui.dialog.SelectTxtContentView
+        android:textSize="16sp"
+        android:textColor="#eeeeee"
+        android:id="@+id/tvContent"
+        android:scrollbars="vertical"
+        android:clipToPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="26dp"
+        android:lineSpacingMultiplier="1.15"
+        android:fadeScrollbars="true"
+        android:textIsSelectable="true"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

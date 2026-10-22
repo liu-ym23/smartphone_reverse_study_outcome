@@ -1,0 +1,5 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lstepos/inputmethod/QsItemActionService;->mActionItemData:Lstepos/inputmethod/QsActionItem;,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/QsItemActionService.java,18,5,18,25,
+Lstepos/inputmethod/QsItemActionService;->mDisplayEnables:Landroid/util/SparseBooleanArray;,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/QsItemActionService.java,20,5,20,25,
+Lstepos/inputmethod/QsItemActionService;->getActionItemData()Lstepos/inputmethod/QsActionItem;,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/QsItemActionService.java,24,5,24,25,
+Lstepos/inputmethod/QsItemActionService;->isEnable(I)Z,vendor/stepos/frameworks/base/steposbase/core/java/stepos/inputmethod/QsItemActionService.java,29,5,29,25,

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/list_item_split"
+        android:paddingStart="@dimen/stepos_list_publish_padding"
+        android:paddingEnd="@dimen/stepos_list_item_divider_margin_start"
+        style="@style/Widget.StepOS.SingleList.ContainerRelativeLayout">
+        <TextView
+            android:id="@+id/title"
+            style="@style/Widget.StepOS.SingleList.Title"/>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/stepos_list_publish_padding">
+        <View
+            android:id="@+id/divider"
+            android:layout_marginEnd="@dimen/stepos_list_item_divider_margin_end"
+            style="@style/Widget.StepOS.List.Vertical.Divider"/>
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,256 @@
+[
+  {
+    "name": "mdi_task_create",
+    "description": "在 MDI SDK 中创建一个自动化任务（Task），自动创建并绑定虚拟显示屏，作为后续所有操作的执行环境。同名 Task 已存在时可通过 reuse 参数选择复用或销毁重建。用户说法示例：创建任务、新建一个 Task、开始自动化、初始化任务环境、创建虚拟屏任务。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "taskName": { "type": "string", "description": "task 名，缺省 default" },
+        "reuse": { "type": "boolean", "default": true, "description": "已存在同名 task 时是否复用" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_task_finish",
+    "description": "结束并清理 MDI SDK 中的自动化任务（Task），释放虚拟显示屏等资源。ignoreActions 为 true 时立即中断未完成操作并清理，为 false 时等待当前操作完成后清理。用户说法示例：结束任务、关闭 Task、停止自动化、销毁任务、释放虚拟屏、任务完成清理资源。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "taskName": { "type": "string" },
+        "ignoreActions": { "type": "boolean", "default": false, "description": "是否忽略未完成的 actions" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_open_app",
+    "description": "在 MDI SDK 虚拟显示屏中启动指定包名的应用，应用将在 Task 关联的虚拟屏上运行。用户说法示例：打开应用、启动 App、在虚拟屏上打开微信、在虚拟屏上打开抖音、启动目标应用、运行指定应用。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "packageName": { "type": "string", "description": "应用包名" },
+        "taskName": { "type": "string" }
+      },
+      "required": ["packageName"]
+    }
+  },
+  {
+    "name": "mdi_move_app",
+    "description": "在 MDI SDK 中将指定包名的应用从当前屏幕移动到目标 Display ID 对应的屏幕，可选择是否将应用置于栈顶。用户说法示例：移动应用到另一个屏幕、把 App 切到主屏、应用跨屏移动、移动到指定 display、把应用挪到虚拟屏上。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "packageName": { "type": "string" },
+        "toDisplayId": { "type": "integer", "description": "目标 display ID" },
+        "toTop": { "type": "boolean", "default": true, "description": "是否置顶" },
+        "taskName": { "type": "string" }
+      },
+      "required": ["packageName", "toDisplayId"]
+    }
+  },
+  {
+    "name": "mdi_top_app",
+    "description": "获取 MDI SDK 中指定 Display ID 屏幕上当前栈顶（前台）应用的包名，不指定时取系统默认屏幕。用户说法示例：当前前台是哪个应用、查看栈顶 App、获取当前运行的应用、哪个应用在最前面、查看前台包名。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "displayId": { "type": "integer" },
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_click",
+    "description": "在 MDI SDK 虚拟屏上执行点击操作。可通过 x/y 坐标精确点击，也可通过 contentDesc 或 text 在 UI 树中定位元素后点击，支持设置点击持续时间。用户说法示例：点击屏幕、点击坐标、点击按钮、点一下这个位置、按文字找到元素并点击、点一下确定按钮。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "contentDesc": { "type": "string", "description": "x/y 缺省时按 contentDesc 定位元素" },
+        "text": { "type": "string", "description": "x/y 缺省时按 text 定位元素" },
+        "durationMs": { "type": "integer", "default": 0 },
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_tap",
+    "description": "在 MDI SDK 虚拟屏上执行点击操作，功能与 mdi_click 完全一致，支持坐标点击和按 contentDesc/text 定位点击。用户说法示例：轻触屏幕、tap 一下、触摸指定位置、点一下。区别：与 mdi_click 功能重复，建议合并。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "contentDesc": { "type": "string" },
+        "text": { "type": "string" },
+        "durationMs": { "type": "integer", "default": 0 },
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_long_click",
+    "description": "在 MDI SDK 虚拟屏上的指定 x/y 坐标执行长按操作，默认持续 1000 毫秒，可通过 durationMs 自定义时长。用户说法示例：长按屏幕、长按这个位置、按住不放、长按图标、长摁一下、长按弹出菜单。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "durationMs": { "type": "integer", "default": 1000 },
+        "taskName": { "type": "string" }
+      },
+      "required": ["x", "y"]
+    }
+  },
+  {
+    "name": "mdi_swipe",
+    "description": "在 MDI SDK 虚拟屏上执行滑动手势，从起始坐标 (startX, startY) 滑动到结束坐标 (endX, endY)，可控制持续时间和插值步数。用户说法示例：滑动屏幕、向上滑、向下滑、左滑、右滑、从上往下划一下。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "startX": { "type": "number" },
+        "startY": { "type": "number" },
+        "endX": { "type": "number" },
+        "endY": { "type": "number" },
+        "durationMs": { "type": "integer", "default": 300 },
+        "steps": { "type": "integer", "default": 10 },
+        "taskName": { "type": "string" }
+      },
+      "required": ["startX", "startY", "endX", "endY"]
+    }
+  },
+  {
+    "name": "mdi_fling",
+    "description": "在 MDI SDK 虚拟屏上执行快速惯性滑动（抛掷）手势，从起始坐标以 velocityX/velocityY 指定的速度方向进行快速滑动，适用于快速翻页和列表滚动。用户说法示例：快速滑动、快速翻页、惯性滚动、用力往上划、快速滚动列表。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "startX": { "type": "number" },
+        "startY": { "type": "number" },
+        "velocityX": { "type": "number" },
+        "velocityY": { "type": "number" },
+        "durationMs": { "type": "integer", "default": 500 },
+        "taskName": { "type": "string" }
+      },
+      "required": ["startX", "startY", "velocityX", "velocityY"]
+    }
+  },
+  {
+    "name": "mdi_scale",
+    "description": "在 MDI SDK 虚拟屏上执行双指缩放（捏合）手势，以指定中心点 (centerX, centerY) 从 startDistance 缩放到 endDistance，startDistance 小于 endDistance 为放大，反之为缩小。用户说法示例：放大图片、缩小画面、双指缩放、捏合放大、两指捏合缩小。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "centerX": { "type": "number" },
+        "centerY": { "type": "number" },
+        "startDistance": { "type": "number" },
+        "endDistance": { "type": "number" },
+        "durationMs": { "type": "integer", "default": 500 },
+        "taskName": { "type": "string" }
+      },
+      "required": ["centerX", "centerY", "startDistance", "endDistance"]
+    }
+  },
+  {
+    "name": "mdi_set_text",
+    "description": "在 MDI SDK 虚拟屏上指定 x/y 坐标位置的输入框（EditText）中设置文本内容，用于搜索框输入、表单填写等文字录入场景。用户说法示例：输入文字、在搜索框输入内容、填写文本、设置输入框文字、往输入框里打字、输入搜索关键词。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "content": { "type": "string" },
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "taskName": { "type": "string" }
+      },
+      "required": ["content", "x", "y"]
+    }
+  },
+  {
+    "name": "mdi_key_event",
+    "description": "在 MDI SDK 虚拟屏上注入指定 KeyCode 的按键事件，支持所有 Android KeyEvent.KEYCODE_* 按键码，如回车键、音量键、电源键等。用户说法示例：模拟按键、发送回车键、按下音量键、注入按键事件、模拟物理按键。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "keyCode": { "type": "integer", "description": "KeyEvent.KEYCODE_* 数值" },
+        "taskName": { "type": "string" }
+      },
+      "required": ["keyCode"]
+    }
+  },
+  {
+    "name": "mdi_back",
+    "description": "在 MDI SDK 虚拟屏上发送返回键（KEYCODE_BACK）事件，模拟用户按下系统返回键，用于返回上一页或关闭弹窗。用户说法示例：返回、按返回键、回到上一页、退出当前页面、返回上一级、关掉这个弹窗。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_home",
+    "description": "在 MDI SDK 虚拟屏上发送主屏键（KEYCODE_HOME）事件，模拟用户按下系统 Home 键回到桌面。用户说法示例：回到桌面、按 Home 键、返回主屏、回主页、回到首页、退到桌面。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_wait",
+    "description": "在 MDI SDK 自动化任务中暂停等待指定毫秒数，最大支持 30000 毫秒（30 秒），默认等待 1000 毫秒，用于等待页面加载、动画完成等场景。用户说法示例：等一下、等待页面加载、暂停一秒、等两秒再操作、延时等待。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "durationMs": { "type": "integer", "default": 1000 },
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_capture",
+    "description": "对 MDI SDK 虚拟屏上指定包名的应用或栈顶应用进行屏幕截图，返回 PNG 格式 base64 编码的图片数据，可用于界面识别和状态判断。用户说法示例：截图、截屏、屏幕截图、获取当前画面、抓取屏幕内容、截取应用界面。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "targetPackageName": { "type": "string", "description": "缺省取栈顶 App 包名" },
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_snapshot",
+    "description": "获取 MDI SDK 虚拟屏上指定包名或栈顶应用的 UI 视图树快照，返回扁平化的文本树结构，包含控件类型、坐标、文本等信息，用于界面元素定位和分析。用户说法示例：获取 UI 树、抓取页面结构、查看界面布局、获取控件信息、分析页面元素、获取视图树。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "packageName": { "type": "string", "description": "缺省取栈顶 App 包名" },
+        "timeoutMs": { "type": "integer", "default": 5000 },
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "mdi_ime_enable",
+    "description": "控制 MDI SDK 虚拟屏（OmniDisplay）的输入法（IME）所有权开关。开启后输入法将显示在虚拟屏上，关闭后输入法恢复到主屏。IME 所有权为独占模式，同一时刻只有一个屏幕可拥有。用户说法示例：启用输入法、开启虚拟屏键盘、关闭虚拟屏输入法、切换输入法到虚拟屏、打开键盘。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "enable": { "type": "boolean", "default": false },
+        "taskName": { "type": "string" }
+      },
+      "required": []
+    }
+  }
+]

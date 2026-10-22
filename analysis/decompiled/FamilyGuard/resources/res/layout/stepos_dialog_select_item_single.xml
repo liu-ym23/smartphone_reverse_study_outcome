@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textAppearance="@style/StepOSTextAppearance.Dialog.ListItem"
+    android:ellipsize="end"
+    android:gravity="start|center_vertical"
+    android:id="@+id/stepos_dialog_list_item_text"
+    android:background="@drawable/stepos_bg_dialog_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checkMark="@drawable/stepos_icon_dialog_check_single"
+    android:minHeight="@dimen/stepos_dialog_list_item_min_height"
+    android:paddingStart="@dimen/stepos_dialog_list_item_padding_horizontal"
+    android:paddingEnd="@dimen/stepos_dialog_list_item_padding_horizontal"
+    android:checkMarkTint="@null"/>

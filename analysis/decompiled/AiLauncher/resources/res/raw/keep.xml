@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  shrinkResources 兜底：以下资源仅通过 resources.getIdentifier(name) 按名引用，
+  资源收缩的静态分析抓不到，会被误删，这里显式保留。
+  - pop_view_anim：VoiceAssistantSupportService / VoiceServiceBinder 弹窗动画 style
+  - AppTheme：VoiceAssistantSupportService 按名取主题（虽也被 manifest 引用，一并保留更稳）
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@style/pop_view_anim,@style/AppTheme" />
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude
+        domain="database"
+        path="AlphaMe.db"/>
+    <exclude
+        domain="database"
+        path="AlphaMe.db-journal"/>
+    <exclude
+        domain="database"
+        path="AlphaMe.db-wal"/>
+    <exclude
+        domain="database"
+        path="AlphaMe.db-shm"/>
+    <exclude
+        domain="database"
+        path="AlphaMe.db.enc.tmp"/>
+    <exclude
+        domain="database"
+        path="AlphaMe.db.plain.bak"/>
+</full-backup-content>

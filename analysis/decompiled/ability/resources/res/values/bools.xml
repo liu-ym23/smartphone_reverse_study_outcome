@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_action_bar_embed_tabs_pre_jb">false</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="abc_config_allowActionMenuItemTextWithIcon">true</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="isLightWindowBar">true</bool>
+    <bool name="isTablet">false</bool>
+    <bool name="is_mini_square">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="stepos_collapsible_tabbar_glass_light">true</bool>
+    <bool name="stepos_dialog_glass_light">true</bool>
+    <bool name="stepos_lite_sheet_light_system_bars">true</bool>
+    <bool name="stepos_menu_glass_light">true</bool>
+    <bool name="stepos_menu_item_press_plus_blend">false</bool>
+    <bool name="stepos_split_action_bar_is_narrow">true</bool>
+    <bool name="stepos_tabbar_glass_light">true</bool>
+</resources>

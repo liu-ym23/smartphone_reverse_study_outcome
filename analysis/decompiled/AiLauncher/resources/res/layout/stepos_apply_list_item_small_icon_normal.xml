@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/Widget.StepOS.IconList.ContentLinearLayout.Small">
+        <com.stepos.common.widget.SmoothCornerView
+            app:steposCornerRadius="@dimen/stepos_list_icon_item_icon_corner_radius"
+            style="@style/Widget.StepOS.IconList.Icon.Small">
+            <ImageView
+                android:id="@+id/icon"
+                style="@style/Widget.StepOS.IconList.Icon.Small"/>
+        </com.stepos.common.widget.SmoothCornerView>
+        <LinearLayout style="@style/Widget.StepOS.IconList.TextContentLinearLayout">
+            <TextView
+                android:id="@+id/title"
+                style="@style/Widget.StepOS.IconList.Title.Single"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

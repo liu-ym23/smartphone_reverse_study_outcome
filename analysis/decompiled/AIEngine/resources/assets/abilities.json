@@ -1,0 +1,897 @@
+[
+  {
+    "id": "mobile-chat",
+    "type": "chat",
+    "name": "Chat Ability (CPU)",
+    "model": {
+      "modelId": "MobileVLM-1.7B-Q4_K",
+      "modelFile": "MobileVLM-1.7B-Q4_K.gguf",
+      "backend": "llama_cpp",
+      "enable": true,
+      "description": "MobileVLM 1.7B GGUF for CPU inference",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced",
+        "quantizationType": "q4_k"
+      },
+      "tags": []
+    }
+  },
+  {
+    "id": "stepos-chat",
+    "type": "chat",
+    "name": "Chat Ability (QNN legacy id)",
+    "requires": "qnn",
+    "model": {
+      "modelId": "llm",
+      "modelFile": "qwen3-4b-htp-v81.json",
+      "backend": "qnn_llm",
+      "enable": true,
+      "description": "Same as chat",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    },
+    "params": {
+      "maxTokens": 500,
+      "temperature": 0.8,
+      "topK": 40,
+      "topP": 0.95
+    }
+  },
+  {
+    "id": "stepos-chat-vision",
+    "type": "chat-vision",
+    "name": "Vision chat（id: stepos-chat-vision，多模态）",
+    "protocol": "multimodal",
+    "requires": "qnn",
+    "model": {
+      "modelId": "vlm",
+      "modelFile": "model_config.json",
+      "backend": "qnn_vlm",
+      "enable": true,
+      "description": "Qwen3 VL 4B",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-highlight",
+    "type": "highlight",
+    "name": "高光（视频 + 文本，QNN VLM）",
+    "protocol": "multimodal",
+    "requires": "qnn",
+    "model": {
+      "modelId": "vlm-highlight",
+      "modelFile": "model_config.json",
+      "backend": "qnn_vlm",
+      "enable": true,
+      "description": "高光（Highlight）：QnnVLMModel；部署于 models/highlight；Input.Mixed 含 Video 路径与 Text",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-sms-parse",
+    "type": "chat-smsparse",
+    "name": "SMS parse（专属 smsparse 模型）",
+    "model": {
+      "modelId": "smsparse-cpu",
+      "modelFile": "bundle_config.json",
+      "backend": "smsparse_cpu",
+      "enable": true,
+      "mock": false,
+      "description": "短信解析 ONNX CPU 路径（分类 + 槽位提取）",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    },
+    "params": {
+      "maxTokens": 500,
+      "temperature": 0.3,
+      "topK": 40,
+      "topP": 0.95
+    }
+  },
+  {
+    "id": "bge-embedding",
+    "type": "embedding",
+    "name": "文本分类",
+    "model": {
+      "modelId": "bge-embedding",
+      "modelFile": "bge-small-zh-v1.5.gguf",
+      "backend": "llama_cpp",
+      "enable": true,
+      "description": "用于文本语义向量化，支撑任务搜索、笔记与收藏等内容的语义检索与匹配",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced",
+        "quantizationType": "q8_0"
+      },
+      "tags": ["embedding"]
+    }
+  },
+  {
+    "id": "stepos-privacy-classify",
+    "type": "privacy_classify",
+    "name": "隐私守护",
+    "model": {
+      "modelId": "privacy-classify",
+      "modelFile": "bundle_config.json",
+      "backend": "LLAMA_PRIVACY_CLASSIFY",
+      "enable": true,
+      "description": "用于对话过程中的文本隐私识别与拦截，支持对敏感文字内容进行检测与阻断",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    },
+    "params": {
+      "threshold": 0.8
+    }
+  },
+  {
+    "id": "stepos-risk-classify",
+    "type": "risk_classify",
+    "name": "SCP Risk Classify (text → 29 risk heads)",
+    "protocol": "text",
+    "model": {
+      "modelId": "risk-classify",
+      "modelFile": "bundle_config.json",
+      "backend": "LLAMA_RISK_CLASSIFY",
+      "enable": true,
+      "description": "SCP BERT 29维内容风险分类（Android arm64 CPU）",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced",
+        "warmupEnabled": false
+      },
+      "tags": ["risk_classify", "content_safety"]
+    },
+    "quota": {
+      "maxConcurrent": 1
+    }
+  },
+  {
+    "id": "stepos-embedding",
+    "type": "embedding",
+    "name": "Embedding Ability (MNN)",
+    "model": {
+      "modelId": "mnn-embedding",
+      "modelFile": "bge-small-zh-v1.5.mnn",
+      "backend": "MNN_EMBEDDING",
+      "enable": true,
+      "description": "BGE Small Chinese v1.5，MNN 格式，CPU 推理",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-reranking",
+    "type": "reranking",
+    "name": "Reranking",
+    "protocol": "multimodal",
+    "model": {
+      "modelId": "qnn-reranking",
+      "modelFile": "bundle_config.json",
+      "backend": "QNN_RERANKING",
+      "enable": true,
+      "description": "BCE Reranker（QNN）；bundle 在 models/reranking/，bin + sentencepiece.bpe.model 同目录，由 ModelPathResolver 解析",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "npu",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-chinese-clip",
+    "type": "chinese_clip",
+    "name": "Chinese CLIP",
+    "protocol": "multimodal",
+    "model": {
+      "modelId": "mnn-clip",
+      "modelFile": "bundle_config.json",
+      "backend": "MNN_CLIP",
+      "enable": true,
+      "description": "Chinese-CLIP MNN；实际 bundle 在 models/chineseclip/<下发子目录>/，由 ModelPathResolver 自动解析",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    }
+  },
+  {
+    "id": "stepos-image-matting",
+    "type": "image_matting",
+    "name": "Image matting",
+    "protocol": "vision",
+    "model": {
+      "modelId": "qnn-matting",
+      "modelFile": "bundle_config.json",
+      "backend": "QNN_MATTING",
+      "enable": true,
+      "description": "QNN matting；bundle 在 models/imagematting/<子目录>/，由 ModelPathResolver 解析",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "npu",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-image-inpaint",
+    "type": "image_inpaint",
+    "name": "Image inpaint",
+    "protocol": "multimodal",
+    "model": {
+      "modelId": "mnn-inpaint",
+      "modelFile": "bundle_config.json",
+      "backend": "MNN_INPAINT",
+      "enable": true,
+      "description": "MNN inpaint；bundle 在 models/imageinpaint/<子目录>/，由 ModelPathResolver 解析",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    }
+  },
+  {
+    "id": "stepos-image-inpaint-aigc",
+    "type": "image_inpaint_aigc",
+    "name": "Image inpaint AIGC",
+    "protocol": "multimodal",
+    "model": {
+      "modelId": "qnn-image-inpaint-aigc",
+      "modelFile": "bundle_config.json",
+      "backend": "QNN_INPAINT_AIGC",
+      "enable": true,
+      "description": "SD AIGC 消除（QNN），与 image_extend 共用 models/imageextend/<子目录>/；与轻量 MNN 消除 image_inpaint 不同",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-image-extend",
+    "type": "image_extend",
+    "name": "Image extend",
+    "protocol": "vision",
+    "model": {
+      "modelId": "qnn-image-extend",
+      "modelFile": "bundle_config.json",
+      "backend": "QNN_IMAGE_EXTEND",
+      "enable": true,
+      "description": "SD 图像外延（QNN）；bundle 在 models/imageextend/<子目录>/，与 AIGC 消除共资源，由 ModelPathResolver 取最新",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-super-resolution",
+    "type": "super_resolution",
+    "name": "Super resolution",
+    "protocol": "vision",
+    "model": {
+      "modelId": "mnn-super-res",
+      "modelFile": "superres_stub.mnn",
+      "backend": "MNN_SUPER_RES",
+      "enable": true,
+      "otaEnabled": false,
+      "description": "MNN super-resolution stub",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    }
+  },
+  {
+    "id": "stepos-interactive-segment",
+    "type": "interactive_segment",
+    "name": "Interactive segment",
+    "protocol": "vision",
+    "model": {
+      "modelId": "mnn-segment",
+      "modelFile": "bundle_config.json",
+      "backend": "MNN_SEGMENT",
+      "enable": true,
+      "description": "MNN 交互分割；bundle 在 models/interactive_segment/<子目录>/，由 ModelPathResolver 解析",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    }
+  },
+  {
+    "id": "stepos-face-detect",
+    "type": "face_detect",
+    "name": "Face Detection",
+    "protocol": "vision",
+    "model": {
+      "modelId": "mnn-face-detect",
+      "modelFile": "detect_face.mnn",
+      "backend": "MNN_FACE_DETECT",
+      "enable": true,
+      "description": "人脸检测：detect_face.mnn，输出 bbox + 置信度 + 姿态角",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    }
+  },
+  {
+    "id": "stepos-face-embed",
+    "type": "face_embed",
+    "name": "Face Embedding",
+    "protocol": "vision",
+    "model": {
+      "modelId": "mnn-face-embed",
+      "modelFile": "recognize_face.mnn",
+      "backend": "MNN_FACE_EMBED",
+      "enable": true,
+      "description": "人脸特征：recognize_face.mnn，输出 embedding；",
+      "inferenceConfig": {
+        "threads": 4,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    },
+    "quota": {
+      "maxConcurrent": 4
+    }
+  },
+  {
+    "id": "stepos-face-quality",
+    "type": "face_quality",
+    "name": "Face Quality",
+    "protocol": "vision",
+    "model": {
+      "modelId": "mnn-face-quality",
+      "modelFile": "faceqla_0510.mnn",
+      "backend": "MNN_FACE_QUALITY",
+      "enable": true,
+      "description": "人脸质量评估：faceqla_0510.mnn，输出质量分 [0,1]",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    },
+    "quota": {
+      "maxConcurrent": 4
+    }
+  },
+  {
+    "id": "stepos-asr",
+    "type": "asr",
+    "name": "ASR",
+    "protocol": "audio",
+    "model": {
+      "modelId": "step-asr",
+      "modelFile": "model_config.json",
+      "backend": "QNN_AUDIO",
+      "enable": true,
+      "description": "step_infer ASREngine（Genie 流式 ASR 包，入口 model_config.json，OTA 目录 voice_asr，支持流式分段与端云协同）",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "dsp",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    },
+    "cloud": {
+      "enable": true,
+      "timeout": 30000,
+      "download_url_expires_seconds": 7200,
+      "scene_type_by_package": {
+        "com.android.soundrecorder": { "stream": "recorder_streaming_asr", "file": "recorder_file_asr" },
+        "com.stepos.ailauncher": { "stream": "ailauncher_streaming_asr" },
+        "com.stepos.aiengine.test": { "stream": "aiengine_test", "file": "aiengine_test" }
+      },
+      "params": {
+        "stream": {
+          "format": { "type": "pcm", "codec": "pcm_s16le", "rate": 16000, "bits": 16, "channel": 1 },
+          "transcription": { "model": "stepaudio-2.5-asr-stream", "language": "zh", "enable_itn": true, "full_rerun_on_commit": false, "enable_timestamp_align": true },
+          "turn_detection": { "type": "server_vad", "silence_duration_ms": 800, "threshold": 0.5 },
+          "preempt": { "close_ack_timeout_ms": 2000 }
+        },
+        "file": {
+          "audio": { "format": "wav", "codec": "pcm" },
+          "request": {
+            "model_name": "stepaudio-2.5-asr",
+            "show_utterances": true,
+            "enable_speaker_info": true,
+            "enable_speaker_embedding": true,
+            "enable_channel_split": false,
+            "prompt": ""
+          }
+        }
+      },
+      "params_by_package": {
+        "com.stepos.ailauncher": { "stream": { "turn_detection": { "type": "server_vad", "silence_duration_ms": 1500, "threshold": 0.7 } } }
+      }
+    },
+    "segmentation": {
+      "max_chars": 0,
+      "punct_window": 80,
+      "apply_to": "all",
+      "package_override": {
+        "com.android.soundrecorder": { "max_chars": 500, "punct_window": 50 }
+      }
+    }
+  },
+  {
+    "id": "stepos-asr-realtime",
+    "type": "asr-realtime",
+    "name": "ASR Realtime",
+    "protocol": "audio",
+    "model": {
+      "modelId": "step-asr",
+      "modelFile": "model_config.json",
+      "backend": "QNN_AUDIO",
+      "enable": true,
+      "description": "实时双向流式识别专用能力：云端 RealtimeAsrProxy(WSS) + 端侧 QNN 流式；端侧沿用 step-asr，与 stepos-asr / stepos-asr-file 独立配额、可并行",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "dsp",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    },
+    "cloud": {
+      "enable": true,
+      "timeout": 30000,
+      "scene_type_by_package": {
+        "com.android.soundrecorder": "recorder_streaming_asr",
+        "com.stepos.ailauncher": "ailauncher_streaming_asr",
+        "com.stepos.aiengine.test": "aiengine_test"
+      },
+      "params": {
+        "format": { "type": "pcm", "codec": "pcm_s16le", "rate": 16000, "bits": 16, "channel": 1 },
+        "transcription": { "model": "stepaudio-2.5-asr-stream", "language": "zh", "enable_itn": true, "full_rerun_on_commit": false, "enable_timestamp_align": true },
+        "turn_detection": { "type": "server_vad", "silence_duration_ms": 800, "threshold": 0.5 },
+        "preempt": { "close_ack_timeout_ms": 2000 }
+      },
+      "params_by_package": {
+        "com.stepos.ailauncher": { "turn_detection": { "type": "server_vad", "silence_duration_ms": 1500, "threshold": 0.7 } }
+      }
+    },
+    "segmentation": {
+      "max_chars": 0,
+      "punct_window": 80,
+      "apply_to": "all",
+      "package_override": {
+        "com.android.soundrecorder": { "max_chars": 500, "punct_window": 50 }
+      }
+    }
+  },
+  {
+    "id": "stepos-asr-file",
+    "type": "asr-file",
+    "name": "ASR File",
+    "protocol": "audio",
+    "model": {
+      "modelId": "step-asr",
+      "modelFile": "model_config.json",
+      "backend": "QNN_AUDIO",
+      "enable": true,
+      "description": "文件 ASR（BFF submit/poll + 端侧 QNN 分段），独立配额桶",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "dsp",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    },
+    "cloud": {
+      "enable": true,
+      "timeout": 30000,
+      "download_url_expires_seconds": 7200,
+      "scene_type_by_package": {
+        "com.android.soundrecorder": "recorder_file_asr",
+        "com.stepos.aiengine.test": "aiengine_test"
+      },
+      "params": {
+        "audio": { "format": "wav", "codec": "pcm" },
+        "request": {
+          "model_name": "stepaudio-2.5-asr",
+          "show_utterances": true,
+          "enable_speaker_info": true,
+          "enable_speaker_embedding": true,
+          "enable_channel_split": false,
+          "prompt": ""
+        }
+      }
+    },
+    "quota": {
+      "maxConcurrent": 4
+    }
+  },
+  {
+    "id": "stepos-asr-sse",
+    "type": "asr-sse",
+    "name": "ASR SSE",
+    "protocol": "audio",
+    "vad": {
+      "threshold": 0.5,
+      "minSpeechRms": 0.01,
+      "speechStartMs": 32,
+      "silenceDurationMs": 800,
+      "leadingSilenceTimeoutMs": 5000,
+      "maxDurationMs": 180000,
+      "maxDurationCeilingMs": 600000,
+      "levelEnabled": false,
+      "levelIntervalMs": 100
+    },
+    "model": {
+      "modelId": "step-asr",
+      "modelFile": "model_config.json",
+      "backend": "QNN_AUDIO",
+      "enable": true,
+      "description": "SSE 流式文本识别：整段音频 POST + SSE delta/done；端侧沿用 step-asr；与 stepos-asr / stepos-asr-file / stepos-asr-realtime 独立配额",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "dsp",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    },
+    "cloud": {
+      "enable": true,
+      "timeout": 120000,
+      "scene_type_by_package": {
+        "com.stepos.ailauncher": "ailauncher_sse_asr",
+        "com.stepos.aiengine.test": "aiengine_test"
+      },
+      "params": {
+        "sse": {
+          "transcription": {
+            "language": "zh",
+            "model": "stepaudio-2.5-asr",
+            "enable_itn": true,
+            "enable_timestamp": false,
+            "hotwords": []
+          },
+          "format": {},
+          "audioMaxBytes": 33554432
+        }
+      }
+    },
+    "quota": {
+      "maxConcurrent": 4
+    }
+  },
+  {
+    "id": "stepos-vad",
+    "type": "vad",
+    "name": "语音活动检测（端侧判停 + 能量波形）",
+    "protocol": "audio",
+    "model": {
+      "modelId": "ten-vad",
+      "modelFile": "ten_vad.onnx",
+      "backend": "TEN_VAD_ONNX",
+      "enable": true,
+      "mock": true,
+      "description": "ten-vad 端侧 VAD：起说/判停端点事件 + 能量波形，不出文本。mock=true 不表示假模型——模型真实存在于 APK assets，由 TenVadOnnxModel 自行拷到 cacheDir 加载；置 mock 是为跳过 ability 层的 ModelCache 托管与 models 目录文件校验（VAD 引擎实例按会话独占、不进 ModelCache，因为 hidden state 与单条音频流一一绑定）。注意：本 model 块除 enable/mock 外均为占位，不参与运行——modelId/modelFile 由 TenVadOnnxModel 自行决定（会话实例用 ten-vad-session / ten-vad-stream），threads 固定 1（单帧 256 sample 的推理拆多线程只会增加调度开销）",
+      "inferenceConfig": {
+        "threads": 1,
+        "computeDevice": "cpu",
+        "performanceProfile": "balanced"
+      }
+    },
+    "vad": {
+      "threshold": 0.5,
+      "minSpeechRms": 0.01,
+      "speechStartMs": 32,
+      "silenceDurationMs": 800,
+      "leadingSilenceTimeoutMs": 5000,
+      "maxDurationMs": 60000,
+      "maxDurationCeilingMs": 600000,
+      "levelEnabled": false,
+      "levelIntervalMs": 100
+    },
+    "quota": {
+      "maxConcurrent": 2
+    }
+  },
+  {
+    "id": "stepos-sla",
+    "type": "sla",
+    "name": "语音指令",
+    "protocol": "audio",
+    "keepAlive": true,
+    "model": {
+      "modelId": "sla",
+      "modelFile": "sla_v4_ptq.json",
+      "backend": "QNN_AUDIO",
+      "enable": true,
+      "description": "用于端侧语音指令理解与意图执行，支撑 Amoo / AILauncher 对话中的本地能力调度",
+      "inferenceConfig": {
+        "threads": 3,
+        "computeDevice": "npu",
+        "performanceProfile": "balanced"
+      },
+      "supportedSocs": ["SM8845"]
+    },
+    "quota": {
+      "maxConcurrent": 4
+    }
+  },
+  {
+    "id": "stepos-tts",
+    "type": "tts",
+    "name": "Speech Synthesis Ability",
+    "protocol": "speech",
+    "requires": "qnn",
+    "model": {
+      "modelId": "step4audio-tts",
+      "modelFile": "step4audio_tts.json",
+      "backend": "qnn_tts",
+      "enable": true,
+      "description": "Step4Audio TTS model for NPU speech synthesis",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    },
+    "params": {
+      "sampleRate": 16000
+    },
+    "cloud": {
+      "enable": true,
+      "timeout": 60000,
+      "scene_type_by_package": {
+        "com.stepos.sdkstage": "translate_tts",
+        "com.stepos.common.ability.proxy": "common_ability_tts",
+        "com.stepos.aiengine.test": "aiengine_test"
+      },
+      "params": {
+        "model": "stepaudio-2.5-tts",
+        "voice": "cixingnansheng",
+        "response_format": "pcm",
+        "sample_rate": 24000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "stream_format": "sse",
+        "instruction": "",
+        "text_normalization": "enhanced",
+        "markdown_filter": true,
+        "max_chars_per_segment": 1000
+      },
+      "policy": {
+        "stream": {
+          "prebufferTargetMs": 460,
+          "prebufferTtftBudgetMs": 1500
+        }
+      }
+    }
+  },
+  {
+    "id": "stepos-tts-stream",
+    "type": "tts-stream",
+    "name": "Streaming Speech Synthesis",
+    "protocol": "speech",
+    "requires": "qnn",
+    "model": {
+      "modelId": "step4audio-tts",
+      "modelFile": "step4audio_tts.json",
+      "modelDir": "tts",
+      "backend": "qnn_tts",
+      "enable": true,
+      "description": "Same on-device weights as stepos-tts; streaming input semantics",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "dsp",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    },
+    "params": {
+      "sampleRate": 16000
+    },
+    "quota": {
+      "maxConcurrent": 4
+    },
+    "cloud": {
+      "enable": true,
+      "timeout": 60000,
+      "scene_type_by_package": {
+        "com.stepos.ailauncher": "ailauncher_streaming_tts",
+        "com.stepos.aiengine.test": "aiengine_test"
+      },
+      "params": {
+        "model": "stepaudio-2.5-tts-zhiyue",
+        "voice": "zhaoqixiaoduo",
+        "response_format": "pcm",
+        "sample_rate": 24000,
+        "speed": 1.0,
+        "volume": 1.0,
+        "instruction": "",
+        "markdown_filter": true,
+        "text_normalization": "enhanced",
+        "mode": "conversation"
+      },
+      "policy": {
+        "uplink": {
+          "max_chars_per_delta": 60,
+          "prefer_sentence_split": true,
+          "commit_min_chars": 30,
+          "commit_max_hold_chars": 60,
+          "commit_hold_timeout_ms": 2000,
+          "adaptive_pacing": true,
+          "max_backlog_ms": 8000,
+          "est_ms_per_char": 200,
+          "pacing_max_wait_ms": 4000,
+          "wire_min_interval_ms": 300,
+          "sentence_pipeline": false,
+          "sentence_pacing_timeout_ms": 8000
+        },
+        "stream": {
+          "mode": "SUSPEND",
+          "bufferSize": 256,
+          "batchChunks": 4,
+          "maxBinderQueueMs": 500,
+          "tailSilencePadMs": 1800
+        }
+      }
+    }
+  },
+  {
+    "id": "stepos-memory",
+    "type": "memory",
+    "name": "Memory Ability",
+    "protocol": "multimodal",
+    "requires": "qnn",
+    "model": {
+      "modelId": "vlm-memory",
+      "modelFile": "model_config.json",
+      "backend": "qnn_vlm",
+      "enable": true,
+      "description": "Qwen3 VL 4B for memory/context analysis",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8735"]
+    }
+  },
+  {
+    "id": "stepos-privacy-guard",
+    "type": "privacy-guard",
+    "name": "图片隐私守护",
+    "protocol": "multimodal",
+    "requires": "qnn",
+    "model": {
+      "modelId": "privacy-guard",
+      "modelFile": "model_config.json",
+      "backend": "qnn_vlm",
+      "enable": true,
+      "description": "用于对话过程中的图片隐私识别与拦截，支持对敏感图像内容进行检测与阻断",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-compsmooth",
+    "type": "compsmooth",
+    "name": "Composition Smooth (image + prompt → crop suggestion)",
+    "protocol": "multimodal",
+    "requires": "qnn",
+    "model": {
+      "modelId": "vlm-compsmooth",
+      "modelFile": "model_config.json",
+      "backend": "qnn_vlm",
+      "enable": true,
+      "description": "Qwen3-VL composition recommendation, bundle in models/vlm-compsmooth/",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"],
+      "disabledDevices": ["PZ261A"]
+    }
+  },
+  {
+    "id": "stepos-gui-agent",
+    "type": "gui-agent",
+    "name": "GUI Agent (screenshot + user prompt → streaming action)",
+    "protocol": "multimodal",
+    "requires": "qnn",
+    "model": {
+      "modelId": "vlm-gui-agent",
+      "modelFile": "model_config.json",
+      "backend": "qnn_vlm",
+      "enable": true,
+      "description": "Qwen3-VL GUI fix768 (QNN HTP context binary, autosmooth + lpbq, VIT 384×768)；bundle 在 models/gui-agent/<子目录>/，由 ModelPathResolver 解析",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-perception",
+    "type": "perception",
+    "name": "Perception UI Summary (screenshot + prompt → streaming summary)",
+    "protocol": "multimodal",
+    "requires": "qnn",
+    "model": {
+      "modelId": "vlm-perception",
+      "modelFile": "configs/apex-vl-master.json",
+      "backend": "QNN_PERCEPTION",
+      "enable": true,
+      "description": "APEX-VL e2t UI summary VLM (ViT 768×1344 + text encoder/decoder, weight-sharing, Qwen3-VL family, SoC ID 97 / HTP V81 / QAIRT 2.46.0)；bundle 在 models/perception/，运行时 dlopen libaios_infer_ui_summary.so (RTLD_LOCAL) 隔离 step_infer::LLMEngine 符号，复用进程公共 libGenie.so",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  },
+  {
+    "id": "stepos-task-classify",
+    "type": "task_classify",
+    "name": "Task Complexity Classifier",
+    "requires": "qnn",
+    "model": {
+      "modelId": "llm",
+      "modelFile": "qwen3-4b-htp-v81.json",
+      "backend": "qnn_llm",
+      "enable": true,
+      "description": "Task complexity classification (reuses chat LLM)",
+      "inferenceConfig": {
+        "threads": 2,
+        "computeDevice": "npu",
+        "performanceProfile": "performance"
+      },
+      "supportedSocs": ["SM8845"]
+    }
+  }
+
+]

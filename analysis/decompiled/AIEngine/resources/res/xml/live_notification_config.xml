@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<live-notification-config>
+    <title>@string/live_dl_config_title
+    </title>
+    <description>@string/live_dl_config_desc
+    </description>
+    <icon>@drawable/ic_live_dl_download
+    </icon>
+    <event>PROGRESS
+    </event>
+    <channelid>model_download_state
+    </channelid>
+</live-notification-config>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agent连接服务</string>
+    <string name="context_is_null">非法参数</string>
+    <string name="error_is_throwed">获取授权失败，请稍后重试！</string>
+    <string name="future_result_is_null">获取授权失败，请稍后重试！</string>
+    <string name="get_cancel">用户取消</string>
+    <string name="get_token_failed">获取授权失败，请检查网络或系统时间后重试</string>
+    <string name="in_progress">进行中</string>
+    <string name="indeterminate">部分选中</string>
+    <string name="not_selected">未选择</string>
+    <string name="scope_null_token">获取授权失败，无此%s对应的授权信息</string>
+    <string name="selected">已选择</string>
+    <string name="state_empty">空白</string>
+    <string name="sync_timeout">请求超时了，请重试</string>
+    <string name="template_percent">百分之 %1$d。</string>
+    <string name="uid_not_match">uid与包名不匹配</string>
+    <string name="unkown_error">获取授权失败，请稍后重试！</string>
+    <string name="unsupport_operation">请求过于频繁</string>
+</resources>

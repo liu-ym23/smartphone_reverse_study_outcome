@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/item_menu_uninstall"
+    android:background="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="154dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="12dp"
+    android:elevation="4dp"
+    android:paddingVertical="8dp">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_amoo_trash_red"
+            android:contentDescription="@null"/>
+        <TextView
+            android:textSize="15sp"
+            android:textColor="#e7000c"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/agent_uninstall"
+            android:includeFontPadding="false"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="8dp"
+            android:lineHeight="24sp"/>
+    </LinearLayout>
+</LinearLayout>

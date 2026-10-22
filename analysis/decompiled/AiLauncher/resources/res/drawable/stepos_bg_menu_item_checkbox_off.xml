@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:inset="@dimen/stepos_menu_item_checkbox_inset">
+    <shape android:shape="rectangle">
+        <stroke
+            android:width="@dimen/stepos_menu_item_checkbox_stroke_width"
+            android:color="@color/stepos_menu_item_checkbox_stroke_color"/>
+        <corners android:radius="@dimen/stepos_menu_item_checkbox_radius"/>
+        <solid android:color="@android:color/transparent"/>
+    </shape>
+</inset>

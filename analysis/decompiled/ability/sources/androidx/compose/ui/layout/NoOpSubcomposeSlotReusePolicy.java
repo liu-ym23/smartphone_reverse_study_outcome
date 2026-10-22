@@ -1,0 +1,24 @@
+package androidx.compose.ui.layout;
+
+import androidx.compose.ui.layout.SubcomposeSlotReusePolicy;
+import com.bytedance.apm.agent.v2.instrumentation.AppAgent;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\bÂ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ#\u0010\r\u001a\u00020\f2\b\u0010\n\u001a\u0004\u0018\u00010\t2\b\u0010\u000b\u001a\u0004\u0018\u00010\tH\u0016¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Landroidx/compose/ui/layout/NoOpSubcomposeSlotReusePolicy;", "Landroidx/compose/ui/layout/SubcomposeSlotReusePolicy;", AppAgent.CONSTRUCT, "()V", "Landroidx/compose/ui/layout/SubcomposeSlotReusePolicy$SlotIdsSet;", "slotIds", "LC7/r;", "getSlotsToRetain", "(Landroidx/compose/ui/layout/SubcomposeSlotReusePolicy$SlotIdsSet;)V", "", "slotId", "reusableSlotId", "", "areCompatible", "(Ljava/lang/Object;Ljava/lang/Object;)Z", "ui_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+/* loaded from: classes.dex */
+final class NoOpSubcomposeSlotReusePolicy implements SubcomposeSlotReusePolicy {
+    public static final NoOpSubcomposeSlotReusePolicy INSTANCE = new NoOpSubcomposeSlotReusePolicy();
+
+    private NoOpSubcomposeSlotReusePolicy() {
+    }
+
+    @Override // androidx.compose.ui.layout.SubcomposeSlotReusePolicy
+    public boolean areCompatible(Object slotId, Object reusableSlotId) {
+        return false;
+    }
+
+    @Override // androidx.compose.ui.layout.SubcomposeSlotReusePolicy
+    public void getSlotsToRetain(SubcomposeSlotReusePolicy.SlotIdsSet slotIds) {
+        slotIds.clear();
+    }
+}

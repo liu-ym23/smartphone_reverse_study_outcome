@@ -1,0 +1,147 @@
+package kotlinx.serialization.internal;
+
+import c5.s;
+import com.stepos.stepclaw.SecurePrefs;
+import com.stepos.stepclaw.provider.contract.ExtensionCallContract;
+import java.lang.annotation.Annotation;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.jvm.internal.i;
+import kotlin.jvm.internal.p;
+import kotlinx.serialization.descriptors.SerialDescriptor;
+import kotlinx.serialization.descriptors.SerialKind;
+import kotlinx.serialization.descriptors.StructureKind;
+import x5.u;
+
+/* compiled from: r8-map-id-ca86e8b578419e4708a9a7ee3f056b062b20ba338a8b13e201aefe3710dbf238 */
+@Metadata(d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0007\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010 \n\u0002\u0010\u001b\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b0\u0018\u00002\u00020\u0001B!\bD\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0001¢\u0006\u0004\b\u0006\u0010\u0007J\u0012\u0010\u0015\u001a\u00020\u00032\u0006\u0010\u0016\u001a\u00020\u0012H\u0096\u0080\u0004J\u0012\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0018\u001a\u00020\u0003H\u0096\u0080\u0004J\u0012\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u0016\u001a\u00020\u0012H\u0096\u0080\u0004J\u0018\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u001d0\u001c2\u0006\u0010\u0016\u001a\u00020\u0012H\u0096\u0080\u0004J\u0012\u0010\u001e\u001a\u00020\u00012\u0006\u0010\u0016\u001a\u00020\u0012H\u0096\u0080\u0004J\u0014\u0010\u001f\u001a\u00020\u001a2\b\u0010 \u001a\u0004\u0018\u00010!H\u0096\u0082\u0004J\n\u0010\"\u001a\u00020\u0012H\u0096\u0080\u0004J\n\u0010#\u001a\u00020\u0003H\u0096\u0080\u0004R\u0015\u0010\u0002\u001a\u00020\u0003X\u0096\u0084\b¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0015\u0010\u0004\u001a\u00020\u0001X\u0086\u0084\b¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u0015\u0010\u0005\u001a\u00020\u0001X\u0086\u0084\b¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\u000bR\u0015\u0010\r\u001a\u00020\u000e8VX\u0096\u0084\b¢\u0006\u0006\u001a\u0004\b\u000f\u0010\u0010R\u0015\u0010\u0011\u001a\u00020\u0012X\u0096Ä\b¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0014\u0082\u0001\u0002$%¨\u0006&"}, d2 = {"Lkotlinx/serialization/internal/MapLikeDescriptor;", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "serialName", SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, "keyDescriptor", "valueDescriptor", "<init>", "(Ljava/lang/String;Lkotlinx/serialization/descriptors/SerialDescriptor;Lkotlinx/serialization/descriptors/SerialDescriptor;)V", "getSerialName", "()Ljava/lang/String;", "getKeyDescriptor", "()Lkotlinx/serialization/descriptors/SerialDescriptor;", "getValueDescriptor", ExtensionCallContract.KIND, "Lkotlinx/serialization/descriptors/SerialKind;", "getKind", "()Lkotlinx/serialization/descriptors/SerialKind;", "elementsCount", SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, "getElementsCount", "()I", "getElementName", "index", "getElementIndex", "name", "isElementOptional", SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, "getElementAnnotations", SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, "getElementDescriptor", "equals", "other", SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, "hashCode", "toString", "Lkotlinx/serialization/internal/HashMapClassDesc;", "Lkotlinx/serialization/internal/LinkedHashMapClassDesc;", "kotlinx-serialization-core"}, k = 1, mv = {2, 3, 0}, xi = 48)
+/* loaded from: classes.dex */
+public abstract class MapLikeDescriptor implements SerialDescriptor {
+    private final int elementsCount;
+    private final SerialDescriptor keyDescriptor;
+    private final String serialName;
+    private final SerialDescriptor valueDescriptor;
+
+    public /* synthetic */ MapLikeDescriptor(String str, SerialDescriptor serialDescriptor, SerialDescriptor serialDescriptor2, i iVar) {
+        this(str, serialDescriptor, serialDescriptor2);
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof MapLikeDescriptor)) {
+            return false;
+        }
+        MapLikeDescriptor mapLikeDescriptor = (MapLikeDescriptor) other;
+        return p.a(getSerialName(), mapLikeDescriptor.getSerialName()) && p.a(this.keyDescriptor, mapLikeDescriptor.keyDescriptor) && p.a(this.valueDescriptor, mapLikeDescriptor.valueDescriptor);
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public /* bridge */ List<Annotation> getAnnotations() {
+        return super.getAnnotations();
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public List<Annotation> getElementAnnotations(int index) {
+        if (index >= 0) {
+            return s.f1092a;
+        }
+        StringBuilder sbS = a8.b.s(index, "Illegal index ", ", ");
+        sbS.append(getSerialName());
+        sbS.append(" expects only non-negative indices");
+        throw new IllegalArgumentException(sbS.toString().toString());
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public SerialDescriptor getElementDescriptor(int index) {
+        if (index < 0) {
+            StringBuilder sbS = a8.b.s(index, "Illegal index ", ", ");
+            sbS.append(getSerialName());
+            sbS.append(" expects only non-negative indices");
+            throw new IllegalArgumentException(sbS.toString().toString());
+        }
+        int i8 = index % 2;
+        if (i8 == 0) {
+            return this.keyDescriptor;
+        }
+        if (i8 == 1) {
+            return this.valueDescriptor;
+        }
+        throw new IllegalStateException("Unreached");
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public int getElementIndex(String name) {
+        p.e(name, "name");
+        Integer numD1 = u.d1(name);
+        if (numD1 != null) {
+            return numD1.intValue();
+        }
+        throw new IllegalArgumentException(name.concat(" is not a valid map index"));
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public String getElementName(int index) {
+        return String.valueOf(index);
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public int getElementsCount() {
+        return this.elementsCount;
+    }
+
+    public final SerialDescriptor getKeyDescriptor() {
+        return this.keyDescriptor;
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public SerialKind getKind() {
+        return StructureKind.MAP.INSTANCE;
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public String getSerialName() {
+        return this.serialName;
+    }
+
+    public final SerialDescriptor getValueDescriptor() {
+        return this.valueDescriptor;
+    }
+
+    public int hashCode() {
+        return this.valueDescriptor.hashCode() + ((this.keyDescriptor.hashCode() + (getSerialName().hashCode() * 31)) * 31);
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public boolean isElementOptional(int index) {
+        if (index >= 0) {
+            return false;
+        }
+        StringBuilder sbS = a8.b.s(index, "Illegal index ", ", ");
+        sbS.append(getSerialName());
+        sbS.append(" expects only non-negative indices");
+        throw new IllegalArgumentException(sbS.toString().toString());
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public /* bridge */ boolean isInline() {
+        return super.isInline();
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public /* bridge */ boolean isNullable() {
+        return super.isNullable();
+    }
+
+    public String toString() {
+        return getSerialName() + '(' + this.keyDescriptor + ", " + this.valueDescriptor + ')';
+    }
+
+    private MapLikeDescriptor(String str, SerialDescriptor serialDescriptor, SerialDescriptor serialDescriptor2) {
+        this.serialName = str;
+        this.keyDescriptor = serialDescriptor;
+        this.valueDescriptor = serialDescriptor2;
+        this.elementsCount = 2;
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tint="?attr/colorOnSurface"
+    android:height="24dp"
+    android:width="24dp"
+    android:autoMirrored="true"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M10.4,4.2C11.059,3.706 12,4.176 12,5V19C12,19.824 11.059,20.294 10.4,19.8L6.667,17H4C3.448,17 3,16.552 3,16V8C3,7.448 3.448,7 4,7H6.667L10.4,4.2ZM10,7L7.333,9H5V15H7.333L10,17V7Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M16.086,12L14.146,10.061C13.951,9.865 13.951,9.549 14.146,9.354L14.854,8.647C15.049,8.451 15.365,8.451 15.561,8.647L17.5,10.586L19.439,8.647C19.635,8.451 19.951,8.451 20.146,8.647L20.854,9.354C21.049,9.549 21.049,9.865 20.854,10.061L18.914,12L20.854,13.939C21.049,14.135 21.049,14.451 20.854,14.646L20.146,15.354C19.951,15.549 19.635,15.549 19.439,15.354L17.5,13.414L15.561,15.354C15.365,15.549 15.049,15.549 14.854,15.354L14.146,14.646C13.951,14.451 13.951,14.135 14.146,13.939L16.086,12Z"/>
+</vector>

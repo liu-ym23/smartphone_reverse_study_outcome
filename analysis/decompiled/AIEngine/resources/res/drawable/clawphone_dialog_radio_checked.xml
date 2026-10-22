@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:height="@dimen/clawphone_dialog_radio_icon_size"
+                android:width="@dimen/clawphone_dialog_radio_icon_size"/>
+            <solid android:color="@color/fd_sys_color_primary_blue"/>
+        </shape>
+    </item>
+    <item
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <item
+        android:left="6dp"
+        android:top="6dp"
+        android:right="6dp"
+        android:bottom="6dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/fd_sys_color_primary_blue"/>
+        </shape>
+    </item>
+</layer-list>

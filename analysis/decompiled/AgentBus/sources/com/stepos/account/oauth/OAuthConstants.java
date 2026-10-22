@@ -1,0 +1,53 @@
+package com.stepos.account.oauth;
+
+/* loaded from: classes.dex */
+public class OAuthConstants {
+    public static final String ACCESS_TOKEN_PARAM = "access_token";
+    public static final String ACCOUNT_TYPE = "com.stepos.account";
+    protected static final String ACCOUNT_UNKOWN_NAME = "unknown";
+    public static final String BIND_OASIS_PARAM = "bind_oasis";
+    public static final String CODE_INVALID_TOKEN = "198001";
+    public static final int ERROR_CODE_BAD_ARGUMENTS = 7;
+    public static final int ERROR_CODE_BAD_AUTHENTICATION = 9;
+    public static final int ERROR_CODE_BAD_REQUEST = 8;
+    public static final int ERROR_CODE_CANCELED = 4;
+    public static final int ERROR_CODE_GET_TOKEN_FAILED = 2;
+    public static final int ERROR_CODE_INVALID_RESPONSE = 5;
+    public static final int ERROR_CODE_NETWORK_ERROR = 3;
+    public static final int ERROR_CODE_REMOTE_EXCEPTION = 1;
+    public static final int ERROR_CODE_TIME_OUT = 10;
+    public static final int ERROR_CODE_UNKOWN = 11;
+    public static final int ERROR_CODE_UNSUPPORTED_OPERATION = 6;
+    public static final String FACTOR_ACTION = "com.stepos.account.factor.authentication";
+    public static final String FACTOR_ERROR_CANCEL = "103";
+    public static final String FACTOR_ERROR_MODE_NULL = "102";
+    public static final String FACTOR_ERROR_TOKEN_NULL = "101";
+    public static final String FACTOR_MODE_LOCAL = "local_validate";
+    public static final String FACTOR_MODE_STRICT = "remote_validate";
+    public static final String FACTOR_PARAMS_MODE = "factor_mode";
+    public static final String FACTOR_PARAMS_PACKAGE_NAME = "packageName";
+    public static final String FACTOR_PARAMS_SERVICE_NAME = "serviceName";
+    public static final String FACTOR_PARAMS_TOKEN = "factor_token";
+    public static final String FACTOR_RESULT_MESSAGE = "message";
+    public static final String FACTOR_RESULT_MODE = "validate_mode";
+    public static final String FACTOR_RESULT_STATE = "validate_state";
+    public static final String FACTOR_RESULT_VALIDATE_CODE = "validate_code";
+    protected static final String INVALIDATE_TOKEN_KEY = "invalidateToken";
+    public static final String KEY_ICON = "account_icon";
+    public static final String KEY_NICKNAME = "nickname";
+    public static final String KEY_OASIS_ACCOUNT_BOUND = "oasisAccountBound";
+    public static final String KEY_PHONE = "phone";
+    public static final String LANG_PARAM = "lang";
+    public static final String LINK_OASIS_ACCOUNT_ACTION = "com.stepos.account.action.LINK_OASIS_ACCOUNT";
+    protected static final String MSG_ARGUMENTS_ERROR = "params not legal!";
+    protected static final String MSG_CONTEXT_IS_NULL = "context is null";
+    protected static final String MSG_GET_TOKEN_FAILED = "get token failed!";
+    protected static final String MSG_NEED_HANDLE_INTENT = "intent need to be handled.";
+    protected static final String MSG_NOT_MATCH_PACKAGE = "not match package";
+    protected static final String MSG_UNKOWN_TYPE = "unknown type : ";
+    public static final int RESPONSE_CODE_OK = 200;
+    protected static final String RETRY_KEY = "retry";
+    protected static final String SCOPE_BASIC = "basic";
+    public static final int UNKOWN_ERROR_CODE = -1000;
+    public static final String UNKOWN_ERROR_MSG = "unkown errror";
+}

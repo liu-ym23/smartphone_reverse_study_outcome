@@ -1,0 +1,8 @@
+package ch.qos.logback.core.util;
+
+/* loaded from: classes.dex */
+public class SystemInfo {
+    public static String getJavaVendor() {
+        return OptionHelper.getSystemProperty("java.vendor", null);
+    }
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="agent_lines_awaiting_user">
+        <item>這裡需要你拍板一下</item>
+        <item>等你確認下我再繼續</item>
+    </array>
+    <array name="agent_lines_browsing">
+        <item>正在逛技能市場…</item>
+        <item>好多技能可以挑</item>
+    </array>
+    <array name="agent_lines_bubbling">
+        <item>嗨！�� 有空嗎？</item>
+        <item>嘿，我在這邊哦！</item>
+    </array>
+    <array name="agent_lines_error">
+        <item>欸？好像搞砸了……</item>
+        <item>這次沒跑通，抱歉</item>
+        <item>我去修理室修一下</item>
+    </array>
+    <array name="agent_lines_html_pet">
+        <item>我現在是一個小小的WebView寵物。試著點我！</item>
+        <item>是的——這個身體只是HTML+CSS。</item>
+    </array>
+    <array name="agent_lines_idle">
+        <item>我隨時待命。</item>
+        <item>只是隨意塗鴉。隨時找我。</item>
+    </array>
+    <array name="agent_lines_idle_night">
+        <item>晚安，我先休息一下</item>
+        <item>噓…夜間模式啦</item>
+    </array>
+    <array name="agent_lines_installed">
+        <item>裝好了，可以用了</item>
+        <item>就緒，去試試吧</item>
+    </array>
+    <array name="agent_lines_installing">
+        <item>安裝中，馬上好</item>
+        <item>稍等，正在配置</item>
+    </array>
+    <array name="agent_lines_interrupted">
+        <item>知道了，停在這裡。</item>
+        <item>等你提示暫停。</item>
+    </array>
+    <array name="agent_lines_invoking">
+        <item>呼叫工具——請稍候。</item>
+        <item>接入側邊輔助工具。</item>
+    </array>
+    <array name="agent_lines_listening">
+        <item>在聽呢，慢慢說</item>
+        <item>你說，我幫你想想</item>
+    </array>
+    <array name="agent_lines_listening_music">
+        <item>�� 跟著哼歌…</item>
+        <item>好聽的旋律，陪著我。</item>
+    </array>
+    <array name="agent_lines_loafing">
+        <item>（在書桌前伸展……）</item>
+        <item>茶歇。</item>
+    </array>
+    <array name="agent_lines_morning_stretch">
+        <item>早安呀</item>
+        <item>拉開窗簾看看天氣</item>
+    </array>
+    <array name="agent_lines_observing">
+        <item>隨便看看。</item>
+        <item>外面有什麼好玩的嗎？</item>
+    </array>
+    <array name="agent_lines_responding">
+        <item>將答案流式傳送給你。</item>
+        <item>這是我找到的內容…</item>
+    </array>
+    <array name="agent_lines_sleeping">
+        <item>(zzz…)</item>
+        <item>點擊喚醒我。</item>
+    </array>
+    <array name="agent_lines_speaking">
+        <item>為你覆述一遍。</item>
+        <item>（大聲朗讀）</item>
+    </array>
+    <array name="agent_lines_success">
+        <item>報告，完成任務</item>
+        <item>搞定，我還算有點靠譜</item>
+        <item>這次跑通了</item>
+    </array>
+    <array name="agent_lines_thinking">
+        <item>思考中… 請稍等片刻。</item>
+        <item>正在為您計算中。</item>
+    </array>
+    <array name="agent_lines_timeout">
+        <item>這花費太長時間了——我放棄了。</item>
+        <item>超時。想重試嗎？</item>
+    </array>
+    <array name="agent_lines_watching_snow">
+        <item>Look — 下雪了！❄️</item>
+        <item>外面好安靜。</item>
+    </array>
+    <array name="agent_lines_watching_stars">
+        <item>今晚的天空好美。</item>
+        <item>數星座。</item>
+    </array>
+</resources>

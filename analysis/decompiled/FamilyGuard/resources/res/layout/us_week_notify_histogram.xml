@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="?attr/marginLarge"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/us_stepos_list_item_padding">
+    <com.stepos.familyguard.ui.widget.chart.histogram.BalloonHistogramView
+        android:id="@+id/day_histogram_view"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="242dp"
+        app:averageStrokeWidth="1dp"
+        app:averageText="@string/us_average"
+        app:balloonLineColor="@color/us_balloon_line_color_notify"
+        app:dimensionAtStart="true"
+        app:histogramStateColors="@array/us_notify_state_colors"
+        app:histogramWidth="?attr/marginLarge"
+        app:hoverable="true"
+        app:hoveredDimensionTextColor="?attr/colorPrimary"
+        app:needAverage="true"
+        app:roundRadio="3dp"
+        app:selectable="false"
+        app:topspace="82dp"
+        app:xDimensionAlignType="dimension_align_center_between_tow_divider"
+        app:xSegmentSize="7"
+        app:yDimensionAlignType="dimension_align_center"
+        app:ySegmentSize="2"
+        style="@style/BalloonHistogram"/>
+</FrameLayout>

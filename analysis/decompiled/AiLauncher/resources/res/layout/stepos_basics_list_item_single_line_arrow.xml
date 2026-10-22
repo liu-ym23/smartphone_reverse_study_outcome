@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" style="@style/Widget.StepOS.List.Layout">
+    <LinearLayout style="@style/Widget.StepOS.SingleList.ContainerRelativeLayout">
+        <TextView
+            android:id="@+id/title"
+            style="@style/Widget.StepOS.SingleList.Title"/>
+    </LinearLayout>
+    <View
+        android:layout_gravity="center_vertical"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+    <com.stepos.common.widget.ImageFontCompatView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontTextColor="@color/stepos_icon_font_text_color"
+        app:textResName="@string/icon_font_arrow_next"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:autoMirrored="true"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group
+        android:pivotX="12"
+        android:pivotY="12"
+        android:scaleX="-1">
+        <path
+            android:fillColor="@android:color/transparent"
+            android:pathData="M9.59863,5.19678L16.4021,12.0002L9.59863,18.8036"
+            android:strokeColor="@color/stepos_icon_full"
+            android:strokeWidth="2.5"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"/>
+    </group>
+</vector>

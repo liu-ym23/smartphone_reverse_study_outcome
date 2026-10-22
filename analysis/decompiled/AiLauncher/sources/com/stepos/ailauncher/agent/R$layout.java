@@ -1,0 +1,57 @@
+package com.stepos.ailauncher.agent;
+
+/* loaded from: classes3.dex */
+public final class R$layout {
+    public static final int activity_agent_market_detail = 2131623969;
+    public static final int activity_connect_external_agent = 2131623970;
+    public static final int activity_connect_step_agent = 2131623971;
+    public static final int activity_connected_agents = 2131623972;
+    public static final int activity_detail = 2131623974;
+    public static final int activity_feishu_connect = 2131623976;
+    public static final int activity_installed_skill = 2131623978;
+    public static final int activity_scan_qr = 2131623989;
+    public static final int activity_select_external_agent = 2131623990;
+    public static final int activity_skill_detail = 2131623992;
+    public static final int activity_skill_essential = 2131623993;
+    public static final int activity_wecom_connect = 2131624001;
+    public static final int dialog_add_agent = 2131624026;
+    public static final int dialog_agent_auth_consent = 2131624027;
+    public static final int dialog_delete = 2131624033;
+    public static final int dialog_feishu_auto_summary = 2131624038;
+    public static final int dialog_feishu_need_install = 2131624039;
+    public static final int dialog_rename_device = 2131624047;
+    public static final int dialog_skill_uninstall = 2131624052;
+    public static final int dialog_wecom_need_install = 2131624055;
+    public static final int dialog_wecom_scan_no_result = 2131624056;
+    public static final int fragment_connected_agents = 2131624080;
+    public static final int fragment_installed_skill = 2131624082;
+    public static final int fragment_skill_readme = 2131624089;
+    public static final int include_connect_step = 2131624107;
+    public static final int item_agent_connected_device = 2131624111;
+    public static final int item_agent_market_card = 2131624112;
+    public static final int item_agent_skill_row = 2131624113;
+    public static final int item_chat_file = 2131624127;
+    public static final int item_chat_pick_img = 2131624132;
+    public static final int item_external_agent = 2131624140;
+    public static final int item_feishu_recommended = 2131624141;
+    public static final int item_installed_skill_lite = 2131624151;
+    public static final int item_my_agent_external_entry = 2131624163;
+    public static final int item_my_agent_market = 2131624164;
+    public static final int item_skill_card = 2131624184;
+    public static final int item_skill_detail_meta_row = 2131624185;
+    public static final int item_skill_group_header = 2131624186;
+    public static final int item_skill_loading_footer = 2131624187;
+    public static final int item_skill_test_zone = 2131624188;
+    public static final int popup_agent_menu = 2131624406;
+    public static final int popup_aispace_menu = 2131624408;
+    public static final int popup_task_card = 2131624414;
+    public static final int sheet_skill_readme = 2131624438;
+    public static final int view_agent_tab = 2131624601;
+    public static final int view_agent_tab_connected = 2131624602;
+    public static final int view_agent_tab_empty = 2131624603;
+    public static final int view_ai_space = 2131624605;
+    public static final int view_aispace_tab_item = 2131624606;
+    public static final int view_dynamic_island = 2131624642;
+    public static final int view_my_agent_sections = 2131624647;
+    public static final int view_skill_tab = 2131624650;
+}

@@ -1,0 +1,5 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lstepos/view/effects/StepOSBackgroundBlur;->createBackgroundBlurDrawable(Landroid/view/View;)Landroid/graphics/drawable/Drawable;,vendor/stepos/frameworks/base/steposbase/core/java/stepos/view/effects/StepOSBackgroundBlur.java,34,5,34,25,
+Lstepos/view/effects/StepOSBackgroundBlur;->setBlurRadius(Landroid/graphics/drawable/Drawable;I)V,vendor/stepos/frameworks/base/steposbase/core/java/stepos/view/effects/StepOSBackgroundBlur.java,50,5,50,25,
+Lstepos/view/effects/StepOSBackgroundBlur;->setCornerRadius(Landroid/graphics/drawable/Drawable;F)V,vendor/stepos/frameworks/base/steposbase/core/java/stepos/view/effects/StepOSBackgroundBlur.java,56,5,56,25,
+Lstepos/view/effects/StepOSBackgroundBlur;->setColor(Landroid/graphics/drawable/Drawable;I)V,vendor/stepos/frameworks/base/steposbase/core/java/stepos/view/effects/StepOSBackgroundBlur.java,62,5,62,25,

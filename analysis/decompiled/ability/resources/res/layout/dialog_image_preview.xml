@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#cc000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="截图预览"/>
+    <ImageView
+        android:layout_gravity="end|top"
+        android:id="@+id/iv_close"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="关闭"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:ellipsize="middle"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/tv_image_path"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:maxLines="2"
+        android:paddingHorizontal="16dp"/>
+</FrameLayout>

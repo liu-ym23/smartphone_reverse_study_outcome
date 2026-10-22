@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stepos_dialog_button_panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepos_dialog_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.stepos.widget.button.StepOSButton
+            android:ellipsize="end"
+            android:id="@+id/stepos_dialog_button_negative"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stepos_dialog_button_height"
+            android:maxLines="1"
+            style="@style/StepOSWidget.Dialog.Button"/>
+        <com.stepos.widget.button.StepOSButton
+            android:ellipsize="end"
+            android:id="@+id/stepos_dialog_button_neutral"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stepos_dialog_button_height"
+            android:maxLines="1"
+            style="@style/StepOSWidget.Dialog.Button"/>
+        <com.stepos.widget.button.StepOSButton
+            android:ellipsize="end"
+            android:id="@+id/stepos_dialog_button_positive"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/stepos_dialog_button_height"
+            android:maxLines="1"
+            style="@style/StepOSWidget.Dialog.Button"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

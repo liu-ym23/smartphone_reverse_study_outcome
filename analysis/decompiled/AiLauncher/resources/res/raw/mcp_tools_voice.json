@@ -1,0 +1,132 @@
+[
+  {
+    "name": "assistant_change_voice_id",
+    "description": "# description\n切换 TTS 引擎回复朗读使用的声音音色，无需用户手动操作。新音色通过 MMKV（key='tts_voice_id'）持久化，随后所有 TTS 朗读都会使用新音色，跨进程跨 session 全局生效。voice_id 必须是 assistant_get_voice_list 返回的 15 个内置音色之一，否则会被拒绝。\n\n# positive_samples\n- 把回复声音切换成温柔女声\n- 以后用 elegantgentle-female 这个音色回答我\n- 让 TTS 用 jingdiannvsheng 朗读\n\n# negative_samples\n- 列举一下当前支持哪些音色 → 应走 assistant_get_voice_list\n\n# return\nvoice_id 缺失返回 '参数 voice_id 不能为空'（isError=true）；voice_id 不在内置 15 项白名单内返回 '暂不支持此音色'（isError=true）；成功返回 '音色已切换，快来试试吧'（isError=false），切换后 MMKV 'tts_voice_id' 立即更新，对全部后续 TTS 朗读生效。",
+    "inputSchema": {
+      "properties": {
+        "voice_id": {
+          "type": "string",
+          "description": "作用: 目标音色 ID，写入 MMKV 'tts_voice_id'。\n枚举语义: 必须是 assistant_get_voice_list 返回的 15 个内置音色之一——livelybreezy-female / zhengpaiqingnian / shuangkuainansheng / ganliannvsheng / qinhenvsheng / huolinvsheng / elegantgentle-female / wenrounansheng / jingdiannvsheng / wenroushunv / tianmeinvsheng / qingchunshaonv / yuanqinansheng / cixingnansheng / xingjiejie。\n缺省处理: 必填且非空——空白返回错误 '参数 voice_id 不能为空'，未命中白名单返回 '暂不支持此音色'。"
+        }
+      },
+      "required": [
+        "voice_id"
+      ],
+      "type": "object"
+    },
+    "outputSchema": null,
+    "annotations": null
+  },
+  {
+    "name": "assistant_get_voice_list",
+    "description": "# description\n返回当前 TTS 引擎支持的全部音色列表（id + 文案描述），用于让用户/上层挑选目标音色后调用 assistant_change_voice_id 切换。当前实现把 15 个内置音色硬编码为 markdown 字符串返回（后续将改为服务器动态获取，届时 SUPPORTED_VOICE_IDS 需同步更新）。无需入参。\n\n# positive_samples\n- 现在有哪些声音可以选？\n- 查询一下支持的音色列表\n- 给我列一下 TTS 都有哪些声音\n\n# negative_samples\n- 切换到指定音色 → 应走 assistant_change_voice_id\n\n# return\n单个 TextContent，内容为 markdown 文本：以 '## 支持的音色(voice_id)和描述' 为小标题，逐行列出 15 个音色的 voice_id 与中文描述（如 '-livelybreezy-female: 活力轻快女声…'），调用方可直接展示给用户或用作 LLM 选择素材。isError=false。",
+    "inputSchema": {
+      "properties": {
+      },
+      "required": [
+      ],
+      "type": "string"
+    },
+    "outputSchema": null,
+    "annotations": null
+  },
+  {
+    "name": "assistant_show_risk_statement",
+    "description": "# description\n向用户弹出风险提示卡片并等待用户做出选择：当聊天界面（com.stepos.ailauncher.chat.* 包下 Activity）或 TaskSpaceView/HomeSpaceView/TaskDetailActivity 在前台时以 PopupWindow 形式展示，否则以实况通知（RiskStatementLiveNotification）形式展示；当 scene=unlock 时强制以弹窗形式展示，并在锁屏之上呈现。用户点 reject / 遮罩 / 返回视为 cancelled；点非 reject 且设备仍处锁屏时先唤起解锁页，解锁成功返回 success，设备已解锁返回 already_unlocked，取消解锁返回 cancelled，超时返回 timeout，唤起失败返回 failed。\n\n# positive_samples\n- 这个操作有隐私风险，先弹个风险提示让我授权\n- 发邮件之前先弹风险卡片\n- 调三方接口前给我确认风险\n- 锁屏时弹出风险确认并等待解锁后再继续\n\n# negative_samples\n- 切换 TTS 音色 → 应走 assistant_change_voice_id\n- 列举可用音色 → 应走 assistant_get_voice_list\n\n# return\n默认场景：用户点中按钮 JSON {trace_id, choice, title, level, description?}，isError=false；取消为纯文本 isError=true。scene=unlock 时统一返回 JSON {scene:\"unlock\", result:\"success\"|\"already_unlocked\"|\"cancelled\"|\"timeout\"|\"failed\"}，success/already_unlocked 时 isError=false，其余 isError=true。",
+    "inputSchema": {
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "作用: 风险卡片标题，一句话概括本次风险操作（例如：相册与媒体授权 / 通过你的身份发送邮件给「王总」）。\n缺省处理: 必填且非空——空白时直接返回错误 '参数 title / description 不能为空'。"
+        },
+        "level": {
+          "type": "string",
+          "description": "作用: 风险等级，影响卡片顶部小圆点颜色。\n枚举语义: low / medium / high。\n缺省处理: 选填，留空或缺失时按 'medium' 处理。"
+        },
+        "description": {
+          "type": "string",
+          "description": "作用: 风险正文，详细说明本次操作的风险内容（例如：允许AmooAI编辑相册 / 此动作会以你的名义对外发邮件，接收方会看到邮件来自你的账户）。\n缺省处理: 必填且非空——空白时直接返回错误 '参数 title / description 不能为空'。"
+        },
+        "tags": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "enum": ["reject", "allow_once", "always_allow"],
+            "description": "作用: 单个按钮 tag，同时作为按钮 id（用户选中后以 choice=tag 大写值回传）。\n枚举语义: reject=拒绝（红） / allow_once=仅本次允许（普通） / always_allow=始终允许（强调）。"
+          },
+          "description": "作用: 按钮 tag 数组，决定卡片底部展示的按钮顺序与样式。\n格式约束: 元素需为枚举之一，非法元素会被过滤；过滤后数量必须落在 [2,3]，否则返回错误 'tags 数量必须为 2 或 3'。\n缺省处理: 必填。"
+        },
+        "scene": {
+          "type": "string",
+          "enum": ["unlock"],
+          "description": "作用: 展示场景。unlock=在锁屏之上展示弹窗，非 reject 需先解锁再回传 {scene, result}。\n缺省处理: 选填，缺失时沿用默认风险提示逻辑。"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "tags"
+      ],
+      "type": "object"
+    },
+    "outputSchema": null,
+    "annotations": null
+  },
+  {
+    "name": "ailauncher_load_tripartite_common_card",
+    "description": "# description\n用途：当你已经拿到一条来自第三方平台的结构化业务结果，需要在聊天界面里以一张「卡片」的形式直观展示给用户时，调用本能力。它会把你给的字段渲染成带标题/状态/摘要/跳转按钮的可视卡片，比纯文字回复更清晰，用户可直接在卡片上点按钮跳转到对应三方 App 或网页。\n\n何时使用：手里有需要可视化展示的三方业务数据，且希望用户能一眼看懂并可点击跳转，就用本能力，而不是把这些信息以纯文本罗列。\n\n关键参数：templateType 决定渲染成哪一类三方卡片；businessData 放该业务的明细数据；summary/links 决定卡片的摘要文案与跳转按钮。\n\n# positive_samples\n- 用卡片展示，带个跳转的按钮\n- 把这个三方订单结果渲染成一张可点击的卡片\n\n# negative_samples\n- 创建/触发桌面任务 → 应走 ailauncher_task_trigger\n- 把任务 id 渲染成复杂任务卡片 → 应走 create_app_ui\n- 只是纯文字回答用户，不需要卡片 → 直接文本回复即可\n\n# return\n成功：返回一张三方卡片并由聊天界面渲染（result='加载三方通用卡片[templateType]'）。templateType 或 taskId 缺失返回 'Params Error: <字段>'。",
+    "inputSchema": {
+      "properties": {
+        "templateType": {
+          "type": "string",
+          "description": "作用: 卡片类型，是卡片中心唯一路由键，决定渲染哪张卡片。\n缺省处理: 必填，缺失返回 'Params Error: templateType'。"
+        },
+        "taskId": {
+          "type": "string",
+          "description": "作用: 卡片唯一标识，作为 live-view key 用于卡片的持有/复用/释放。\n缺省处理: 必填，缺失返回 'Params Error: taskId'。"
+        },
+        "taskTitle": {
+          "type": "string",
+          "description": "作用: 卡片标题，公共区域渲染。\n缺省处理: 选填，缺省时标题区留空。"
+        },
+        "taskStatus": {
+          "type": "integer",
+          "description": "作用: 卡片状态码（整数），由消费方按需读取，当前公共区域不直接展示，需展示文案请用 summary。\n缺省处理: 选填。"
+        },
+        "displayMode": {
+          "type": "string",
+          "description": "作用: 展示模式标识，公共区域使用。\n缺省处理: 选填。"
+        },
+        "bizChannel": {
+          "type": "string",
+          "description": "作用: 业务渠道标识（同一卡片类型下的不同业务），是数据字段，不参与路由。\n缺省处理: 选填。"
+        },
+        "summary": {
+          "type": "object",
+          "description": "作用: 卡片摘要，公共区域渲染。结构: {title, desc, updatedAt}，均为字符串。\n缺省处理: 选填，缺省字段对应控件隐藏。"
+        },
+        "links": {
+          "type": "object",
+          "description": "作用: 卡片跳转信息，公共区域生成跳转按钮，deeplink(app) 优先、web 兜底。结构: {app, web, list:{app, web}}，list 为单对象（附属跳转）。\n缺省处理: 选填，缺省时不展示跳转按钮。"
+        },
+        "searchSource": {
+          "type": "object",
+          "description": "作用: 卡片「搜索来源」可折叠头，公共区域渲染。结构: {label, expanded}。\n缺省处理: 选填，缺省时折叠头隐藏，正文恒展示。"
+        },
+        "businessData": {
+          "type": "object",
+          "description": "作用: 该卡片类型私有业务数据，保留原始结构透传，由对应卡片的 Provider 二次解析渲染到自定义区。\n缺省处理: 选填，结构随 templateType 而定。"
+        },
+        "error": {
+          "type": "string",
+          "description": "作用: 错误信息，透传字段，由消费方按需读取。\n缺省处理: 选填，正常下发为空。"
+        }
+      },
+      "type": "object"
+    },
+    "outputSchema": null,
+    "annotations": null
+  }
+]

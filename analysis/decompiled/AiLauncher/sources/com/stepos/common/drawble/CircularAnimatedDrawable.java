@@ -1,0 +1,151 @@
+package com.stepos.common.drawble;
+
+import android.animation.Animator;
+import android.animation.Keyframe;
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
+import android.view.animation.LinearInterpolator;
+
+/* loaded from: classes3.dex */
+public class CircularAnimatedDrawable extends Drawable implements Animatable {
+    public static final String START_ANGLE_PROPERTY = "startAngle";
+    public static final String SWEEP_ANGLE_PROPERTY = "sweepAngle";
+    private final long LOADING_ANIM_DURATION = 1760;
+    private final RectF fBounds = new RectF();
+    private boolean mAllowLoading = true;
+    private float mBorderWidth;
+    private Animator mLoadingAnimator;
+    private Paint mPaint;
+    private boolean mRunning;
+    private float mStartAngle;
+    private float mSweepAngle;
+
+    public CircularAnimatedDrawable(int i10, float f10) {
+        this.mLoadingAnimator = null;
+        this.mBorderWidth = f10;
+        Paint paint = new Paint();
+        this.mPaint = paint;
+        paint.setAntiAlias(true);
+        this.mPaint.setStyle(Paint.Style.STROKE);
+        this.mPaint.setStrokeWidth(f10);
+        this.mPaint.setColor(i10);
+        this.mPaint.setStrokeCap(Paint.Cap.ROUND);
+        this.mLoadingAnimator = createLoadingAnimator();
+    }
+
+    private Animator createLoadingAnimator() {
+        ObjectAnimator objectAnimatorOfPropertyValuesHolder = ObjectAnimator.ofPropertyValuesHolder(this, PropertyValuesHolder.ofKeyframe("startAngle", Keyframe.ofFloat(0.0f, -90.0f), Keyframe.ofFloat(0.5f, 330.0f), Keyframe.ofFloat(1.0f, 630.0f)), PropertyValuesHolder.ofFloat("sweepAngle", 0.0f, -120.0f, 0.0f));
+        objectAnimatorOfPropertyValuesHolder.setDuration(1760L);
+        objectAnimatorOfPropertyValuesHolder.setInterpolator(new LinearInterpolator());
+        objectAnimatorOfPropertyValuesHolder.setRepeatCount(-1);
+        return objectAnimatorOfPropertyValuesHolder;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void draw(Canvas canvas) {
+        canvas.drawArc(this.fBounds, this.mStartAngle, this.mSweepAngle, false, this.mPaint);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getOpacity() {
+        return -2;
+    }
+
+    public float getStartAngle() {
+        return this.mStartAngle;
+    }
+
+    public float getSweepAngle() {
+        return this.mSweepAngle;
+    }
+
+    @Override // android.graphics.drawable.Animatable
+    public boolean isRunning() {
+        return this.mRunning;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void onBoundsChange(Rect rect) {
+        super.onBoundsChange(rect);
+        RectF rectF = this.fBounds;
+        float f10 = rect.left;
+        float f11 = this.mBorderWidth;
+        rectF.left = f10 + (f11 / 2.0f);
+        rectF.right = rect.right - (f11 / 2.0f);
+        rectF.top = rect.top + (f11 / 2.0f);
+        rectF.bottom = rect.bottom - (f11 / 2.0f);
+    }
+
+    public void setAllowLoading(boolean z10) {
+        this.mAllowLoading = z10;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setAlpha(int i10) {
+        this.mPaint.setAlpha(i10);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setColorFilter(ColorFilter colorFilter) {
+        this.mPaint.setColorFilter(colorFilter);
+    }
+
+    public void setIndicatorColor(int i10) {
+        Paint paint = this.mPaint;
+        if (paint != null) {
+            paint.setColor(i10);
+        }
+    }
+
+    public void setStartAngle(float f10) {
+        this.mStartAngle = f10;
+        if (this.mAllowLoading) {
+            invalidateSelf();
+        }
+    }
+
+    public void setStrokeWidth(int i10) {
+        if (i10 <= 0 || ((int) this.mBorderWidth) == i10) {
+            return;
+        }
+        this.mBorderWidth = i10;
+        onBoundsChange(getBounds());
+        Paint paint = this.mPaint;
+        if (paint != null) {
+            paint.setStrokeWidth(this.mBorderWidth);
+        }
+    }
+
+    public void setSweepAngle(float f10) {
+        this.mSweepAngle = f10;
+        if (this.mAllowLoading) {
+            invalidateSelf();
+        }
+    }
+
+    @Override // android.graphics.drawable.Animatable
+    public void start() {
+        if (isRunning()) {
+            return;
+        }
+        this.mRunning = true;
+        this.mLoadingAnimator.start();
+        invalidateSelf();
+    }
+
+    @Override // android.graphics.drawable.Animatable
+    public void stop() {
+        if (isRunning()) {
+            this.mRunning = false;
+            this.mLoadingAnimator.cancel();
+            invalidateSelf();
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/Widget.StepOS.List.Layout">
+    <LinearLayout style="@style/Widget.StepOS.SingleList.ContainerRelativeLayout">
+        <TextView
+            android:id="@+id/title"
+            style="@style/Widget.StepOS.SingleList.Title"/>
+    </LinearLayout>
+    <View
+        android:layout_gravity="center_vertical"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="?attr/colorPrimary"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/textlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"/>
+</LinearLayout>

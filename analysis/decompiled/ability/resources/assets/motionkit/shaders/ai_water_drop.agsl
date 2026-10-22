@@ -1,0 +1,357 @@
+// 波前仍是产品椭圆（AE 起止 w/h + 贝塞尔）。
+// 设计师 shader 只叠高点、高光透明度、折射强度和折射消失百分比。
+
+uniform shader sksl_background;
+uniform shader sksl_layer;
+uniform float2 iResolution;
+uniform float  iTime;
+uniform float  uPxPerDp;
+uniform float2 uScreenSize;
+uniform float2 uViewOrigin;
+uniform float  uCoordScale;
+
+uniform float uCenterX;
+uniform float uCenterY;
+uniform float uDuration;
+uniform float uExitDur;
+uniform float uStartWidth;
+uniform float uEndWidth;
+uniform float uRefract0;
+uniform float uRefract1;
+uniform float uDispersion0;
+uniform float uDispersion1;
+uniform float uHighlight;
+uniform float uHighlight0;
+uniform float uReleaseAt;
+uniform float uHold;
+uniform float uRings;
+uniform float uRingGap;
+uniform float uMaxRadius;
+uniform float uSizeRef;
+uniform float uCrestBlur0;
+uniform float uCrestBlur1;
+uniform float uHighlightAlpha;
+uniform float uRefractFadeAt;
+
+uniform float uSizeW0;
+uniform float uSizeH0;
+uniform float uSizeW1;
+uniform float uSizeH1;
+uniform float uEaseX1;
+uniform float uEaseY1;
+uniform float uEaseX2;
+uniform float uEaseY2;
+uniform float uBlur0;
+uniform float uBlur1;
+uniform float uFeatherX1;
+uniform float uFeatherY1;
+uniform float uFeatherX2;
+uniform float uFeatherY2;
+
+uniform float uWaveHeight;
+uniform float uEndHeight;
+uniform float uWaveCount;
+uniform float uShininess;
+uniform float uSurfaceDepth;
+uniform float uHighlightBlend;
+uniform float uListenTime;
+uniform float uRippleTime;
+uniform float uRCenterX;
+uniform float uRCenterY;
+uniform float uRSizeW0;
+uniform float uRSizeH0;
+uniform float uRSizeW1;
+uniform float uRSizeH1;
+uniform float uRDuration;
+uniform float uRExitDur;
+uniform float uRRingGap;
+uniform float uRRings;
+uniform float uREaseX1;
+uniform float uREaseY1;
+uniform float uREaseX2;
+uniform float uREaseY2;
+uniform float uRStartWidth;
+uniform float uREndWidth;
+uniform float uRRefract0;
+uniform float uRRefract1;
+uniform float uRRefractFadeAt;
+uniform float uRCrestBlur0;
+uniform float uRCrestBlur1;
+uniform float uRHighlightAlpha;
+uniform float uRBlur0;
+uniform float uRBlur1;
+uniform float uRFeatherX1;
+uniform float uRFeatherY1;
+uniform float uRFeatherX2;
+uniform float uRFeatherY2;
+uniform float uRDispersion0;
+uniform float uRDispersion1;
+uniform float uRHighlight;
+uniform float uRHighlight0;
+uniform float uRHighlightBlend;
+uniform float uRWaveHeight;
+uniform float uREndHeight;
+uniform float uRHold;
+uniform float uRReleaseAt;
+uniform float uGpuReady;
+uniform float4 uGpuListenEA;
+uniform float4 uGpuListenFade;
+uniform float4 uGpuRing1;
+uniform float4 uGpuRing2;
+uniform float4 uGpuRippleEA;
+uniform float4 uGpuRippleRing;
+
+const float DESIGN_TOTAL = 1.767;
+
+float bez(float p1, float p2, float u) {
+    float v = 1.0 - u;
+    return 3.0 * v * v * u * p1 + 3.0 * v * u * u * p2 + u * u * u;
+}
+
+float bezDeriv(float p1, float p2, float u) {
+    float v = 1.0 - u;
+    return 3.0 * v * v * p1 + 6.0 * v * u * (p2 - p1) + 3.0 * u * u * (1.0 - p2);
+}
+
+float pathEase(float x1, float y1, float x2, float y2, float x) {
+    if (x <= 0.0) return 0.0;
+    if (x >= 1.0) return 1.0;
+    float u = x;
+    for (int i = 0; i < 6; ++i) {
+        float dx = bez(x1, x2, u) - x;
+        float d  = bezDeriv(x1, x2, u);
+        if (abs(d) > 1e-6) u = clamp(u - dx / d, 0.0, 1.0);
+    }
+    return bez(y1, y2, u);
+}
+
+half4 sampleContent(float2 coord) {
+    half4 layer = sksl_layer.eval(coord);
+    half4 bg    = sksl_background.eval(coord);
+    return half4((1.0 - layer.a) * bg.rgb + layer.rgb, 1.0);
+}
+
+float circleAlpha(float t, float inDelay, float inDur, float outDelay, float outDur) {
+    if (t < inDelay) return 0.0;
+    if (t < inDelay + inDur) {
+        return pathEase(0.17, 0.0, 0.83, 1.0, (t - inDelay) / max(inDur, 0.001));
+    }
+    if (t < outDelay) return 1.0;
+    if (t < outDelay + outDur) {
+        return 1.0 - pathEase(0.3, 0.0, 0.66, 1.0, (t - outDelay) / max(outDur, 0.001));
+    }
+    return 0.0;
+}
+
+float4 ringPack(
+    float2 p, float2 size0, float2 size1, float e, float alpha,
+    float px, float density, float stroke0, float stroke1, float blur0, float blur1, float eF
+) {
+    if (alpha < 0.001) return float4(0.0);
+    float2 radii = max(mix(size0, size1, e) * px * 0.5, float2(1.0));
+    float2 qn = p / radii;
+    float ell = length(qn);
+    if (ell < 1e-5) return float4(0.0);
+    float2 g = qn / ell;
+    float distPx = (ell - 1.0) * length(radii * g);
+    float strokePx = mix(stroke0, stroke1, e) * px;
+    float blurPx = mix(blur0, blur1, eF) * density;
+    float bandPx = max(strokePx * 0.5 + blurPx, 1.0);
+    float q = distPx / bandPx;
+    float warp = exp(-q * q) * alpha;
+    if (abs(q) > 2.8) warp = 0.0;
+    float inside = 1.0 - smoothstep(0.82, 1.0, abs(q));
+    if (inside < 0.001 && warp < 0.001) return float4(0.0);
+    float oneMinusQ2 = max(1.0 - q * q, 0.0);
+    float env = oneMinusQ2 * oneMinusQ2 * inside * alpha;
+    float dEnv = -4.0 * q * oneMinusQ2 * inside * alpha;
+    return float4(env, dEnv, bandPx, warp);
+}
+
+float3 overlayBlend(float3 base, float3 layer) {
+    float3 low = 2.0 * base * layer;
+    float3 high = 1.0 - 2.0 * (1.0 - base) * (1.0 - layer);
+    return mix(low, high, step(float3(0.5), base));
+}
+
+float3 softLightBlend(float3 base, float3 layer) {
+    return (1.0 - 2.0 * layer) * base * base + 2.0 * layer * base;
+}
+
+float3 applyHighlightBlend(float3 base, float3 lightColor, float strength, float mode) {
+    float a = clamp(strength, 0.0, 1.0);
+    if (mode > 3.5) return mix(base, overlayBlend(base, lightColor), a);
+    if (mode > 2.5) return mix(base, softLightBlend(base, lightColor), a);
+    if (mode > 1.5) return mix(base, 1.0 - (1.0 - base) * (1.0 - lightColor), a);
+    if (mode > 0.5) return base + lightColor * strength;
+    return mix(base, lightColor, a);
+}
+
+half4 main(float2 fragCoord) {
+    float2 uSize = max(iResolution, float2(1.0));
+    float density = max(uPxPerDp, 1.0);
+    float coordScale = max(uCoordScale, 1.0);
+    float2 screen = uScreenSize.x > 1.0 ? uScreenSize : uSize * coordScale;
+    float2 world = fragCoord * coordScale + uViewOrigin;
+    float unusedPad = (uMaxRadius + uSizeRef + uWaveCount + iTime
+        + uHighlightAlpha + uRHighlightAlpha
+        + uGpuReady + uGpuListenEA.x + uGpuListenFade.x
+        + uGpuRing1.x + uGpuRing2.x + uGpuRippleEA.x + uGpuRippleRing.x) * 0.0;
+    float2 lim = uSize - float2(1.0);
+    float px = screen.x / 1080.0;
+    float2 off = float2(0.0);
+    float2 dispOff = float2(0.0);
+    float env = 0.0;
+    float dispMask = 0.0;
+    float crestBlurR = 0.0;
+    float highlight = 0.0;
+
+    if (uListenTime >= 0.0) {
+        float t = uListenTime;
+        float fade = 1.0;
+        float dur = max(uDuration, 0.1);
+        float exitDur = max(uExitDur, 0.05);
+        if (uReleaseAt >= 0.0 && t > uReleaseAt) {
+            fade = 1.0 - pathEase(0.3, 0.0, 0.66, 1.0, clamp((t - uReleaseAt) / exitDur, 0.0, 1.0));
+        }
+        if (fade >= 0.001) {
+            float2 p = world - float2(uCenterX, uCenterY) * screen;
+            float2 size0 = float2(uSizeW0, uSizeH0);
+            float2 size1 = float2(uSizeW1, uSizeH1);
+            float envL = 0.0;
+            float dEnv = 0.0;
+            float bandPx = 1.0;
+            float warp = 0.0;
+            float eMix = 0.0;
+            if (uRings > 1.5) {
+                float s = dur / DESIGN_TOTAL;
+                float e1 = pathEase(0.21, 0.32, 0.83, 0.74, clamp(t / max(1.550 * s, 0.001), 0.0, 1.0));
+                float a1 = circleAlpha(t, 0.0, 0.167 * s, 1.100 * s, 0.450 * s) * fade;
+                float4 r1 = ringPack(p, size0, size1, e1, a1, px, density,
+                    uStartWidth, uEndWidth, uBlur0, uBlur1, e1);
+                float gap = max(uRingGap, 0.0);
+                float e2 = pathEase(0.21, 0.28, 0.83, 0.77, clamp((t - gap) / max(1.367 * s, 0.001), 0.0, 1.0));
+                float a2 = circleAlpha(t, gap, 0.167 * s, gap + 0.917 * s, 0.450 * s) * fade;
+                float4 r2 = ringPack(p, size0, size1, e2, a2, px, density,
+                    uStartWidth, uEndWidth, uBlur0, uBlur1, e2);
+                envL = r1.x + r2.x;
+                dEnv = r1.y + r2.y;
+                bandPx = max(max(r1.z, r2.z), 1.0);
+                warp = max(r1.w, r2.w);
+                eMix = max(e1 * step(0.001, a1), e2 * step(0.001, a2));
+            } else {
+                float progress = min(t / dur, 1.0);
+                if (uReleaseAt >= 0.0 && t > uReleaseAt) {
+                    progress = mix(progress, 1.0, clamp((t - uReleaseAt) / exitDur, 0.0, 1.0));
+                }
+                float e = pathEase(uEaseX1, uEaseY1, uEaseX2, uEaseY2, progress);
+                float eF = pathEase(uFeatherX1, uFeatherY1, uFeatherX2, uFeatherY2, progress);
+                float a = fade;
+                if (uHold < 0.5 && t > dur) {
+                    a *= 1.0 - pathEase(0.3, 0.0, 0.66, 1.0, clamp((t - dur) / exitDur, 0.0, 1.0));
+                }
+                float4 r = ringPack(p, size0, size1, e, a, px, density,
+                    uStartWidth, uEndWidth, uBlur0, uBlur1, eF);
+                envL = r.x;
+                dEnv = r.y;
+                bandPx = max(r.z, 1.0);
+                warp = r.w;
+                eMix = e;
+            }
+            float fadeAt = clamp(uRefractFadeAt * 0.01, 0.02, 0.98);
+            float endFade = 1.0 - smoothstep(fadeAt, 1.0, min(t / dur, 1.0));
+            float2 radial = length(p) > 0.000001 ? normalize(p) : float2(0.0);
+            float crestSoft = 1.0 + clamp(mix(uCrestBlur0, uCrestBlur1, eMix) * 0.08, 0.0, 3.2) * envL * endFade;
+            float slope = uWaveHeight * mix(1.0, uEndHeight, eMix) * endFade * dEnv / (bandPx * crestSoft);
+            float3 normal = normalize(float3(-radial * slope * max(uSurfaceDepth, 0.001), 1.0));
+            float refractPx = mix(uRefract0, uRefract1, eMix) * endFade;
+            off += normal.xy * refractPx * warp / crestSoft;
+            float dispPx = mix(uDispersion0, uDispersion1, eMix);
+            float nLen = length(normal.xy);
+            float2 dispDir = nLen > 1e-4 ? normal.xy / nLen : radial;
+            float peak = 1.0 - smoothstep(0.0, 0.12, nLen);
+            dispOff += dispDir * mix(dispPx, min(dispPx, 3.2), peak) * envL * endFade;
+            dispMask = max(dispMask, step(0.001, dispPx) * envL * endFade);
+            crestBlurR = max(crestBlurR, clamp(mix(uCrestBlur0, uCrestBlur1, eMix) * 0.28, 0.0, 2.8)
+                * envL * endFade);
+            env += envL;
+            float spec = pow(max(dot(normal, normalize(float3(0.0, 0.0, 1.0) + normalize(float3(-0.34, -0.42, 0.84)))), 0.0), max(uShininess, 1.0));
+            highlight += (spec + 0.22 * pow(1.0 - max(normal.z, 0.0), 2.0))
+                * mix(uHighlight0, uHighlight, eMix) * envL * endFade;
+        }
+    }
+
+    if (uRippleTime >= 0.0) {
+        float t = uRippleTime;
+        float fade = 1.0;
+        float dur = max(uRDuration, 0.1);
+        float exitDur = max(uRExitDur, 0.05);
+        if (uRReleaseAt >= 0.0 && t > uRReleaseAt) {
+            fade = 1.0 - pathEase(0.3, 0.0, 0.66, 1.0, clamp((t - uRReleaseAt) / exitDur, 0.0, 1.0));
+        }
+        if (fade >= 0.001) {
+            float2 p = world - float2(uRCenterX, uRCenterY) * screen;
+            float progress = min(t / dur, 1.0);
+            if (uRReleaseAt >= 0.0 && t > uRReleaseAt) {
+                progress = mix(progress, 1.0, clamp((t - uRReleaseAt) / exitDur, 0.0, 1.0));
+            }
+            float e = pathEase(uREaseX1, uREaseY1, uREaseX2, uREaseY2, progress);
+            float eF = pathEase(uRFeatherX1, uRFeatherY1, uRFeatherX2, uRFeatherY2, progress);
+            float a = fade;
+            if (uRHold < 0.5 && t > dur) {
+                a *= 1.0 - pathEase(0.3, 0.0, 0.66, 1.0, clamp((t - dur) / exitDur, 0.0, 1.0));
+            }
+            float4 r = ringPack(p, float2(uRSizeW0, uRSizeH0), float2(uRSizeW1, uRSizeH1), e, a, px, density,
+                uRStartWidth, uREndWidth, uRBlur0, uRBlur1, eF);
+            float fadeAt = clamp(uRRefractFadeAt * 0.01, 0.02, 0.98);
+            float endFade = 1.0 - smoothstep(fadeAt, 1.0, min(t / dur, 1.0));
+            float2 radial = length(p) > 0.000001 ? normalize(p) : float2(0.0);
+            float crestSoft = 1.0 + clamp(mix(uRCrestBlur0, uRCrestBlur1, e) * 0.08, 0.0, 3.2) * r.x * endFade;
+            float slope = uRWaveHeight * mix(1.0, uREndHeight, e) * endFade * r.y / (max(r.z, 1.0) * crestSoft);
+            float3 normal = normalize(float3(-radial * slope * max(uSurfaceDepth, 0.001), 1.0));
+            off += normal.xy * mix(uRRefract0, uRRefract1, e) * endFade * r.w / crestSoft;
+            float dispPx = mix(uRDispersion0, uRDispersion1, e);
+            float nLen = length(normal.xy);
+            float2 dispDir = nLen > 1e-4 ? normal.xy / nLen : radial;
+            float peak = 1.0 - smoothstep(0.0, 0.12, nLen);
+            dispOff += dispDir * mix(dispPx, min(dispPx, 3.2), peak) * r.x * endFade;
+            dispMask = max(dispMask, step(0.001, dispPx) * r.x * endFade);
+            crestBlurR = max(crestBlurR, clamp(mix(uRCrestBlur0, uRCrestBlur1, e) * 0.28, 0.0, 2.8)
+                * r.x * endFade);
+            env += r.x;
+            float spec = pow(max(dot(normal, normalize(float3(0.0, 0.0, 1.0) + normalize(float3(-0.34, -0.42, 0.84)))), 0.0), max(uShininess, 1.0));
+            highlight += (spec + 0.22 * pow(1.0 - max(normal.z, 0.0), 2.0))
+                * mix(uRHighlight0, uRHighlight, e) * r.x * endFade;
+        }
+    }
+
+    if ((length(off) < 0.45 && highlight < 0.025) || env < 0.001) {
+        return half4(0.0) + half4(unusedPad);
+    }
+    float2 samplePx = clamp(fragCoord + off / coordScale, float2(0.0), lim);
+    float3 col = float3(sampleContent(samplePx).rgb);
+    if (dispMask > 0.001) {
+        float2 warmPx = clamp(samplePx + dispOff / coordScale, float2(0.0), lim);
+        float2 coolPx = clamp(samplePx - dispOff / coordScale, float2(0.0), lim);
+        float3 warmSample = float3(sampleContent(warmPx).rgb);
+        float3 coolSample = float3(sampleContent(coolPx).rgb);
+        float3 dispersed = float3(warmSample.r, mix(warmSample.g, coolSample.g, 0.42), coolSample.b);
+        float warmEdge = abs(dot(warmSample - col, float3(0.299, 0.587, 0.114)));
+        float coolEdge = abs(dot(coolSample - col, float3(0.299, 0.587, 0.114)));
+        dispersed += 0.7 * (warmEdge * float3(1.0, 0.28, 0.02) + coolEdge * float3(0.02, 0.32, 1.0));
+        col = mix(col, dispersed, dispMask);
+    }
+    if (crestBlurR > 0.35) {
+        float2 bx = float2(crestBlurR, 0.0);
+        float2 by = float2(0.0, crestBlurR);
+        float3 blurCol = col
+            + float3(sampleContent(clamp(samplePx + bx, float2(0.0), lim)).rgb)
+            + float3(sampleContent(clamp(samplePx - bx, float2(0.0), lim)).rgb)
+            + float3(sampleContent(clamp(samplePx + by, float2(0.0), lim)).rgb)
+            + float3(sampleContent(clamp(samplePx - by, float2(0.0), lim)).rgb);
+        col = mix(col, blurCol * 0.2, clamp(crestBlurR / 2.8, 0.0, 1.0));
+    }
+    float blendMode = mix(uRHighlightBlend, uHighlightBlend, step(0.0, uListenTime));
+    col = applyHighlightBlend(col, float3(1.0, 0.98, 0.94), highlight, blendMode);
+    return half4(half3(col), 1.0);
+}

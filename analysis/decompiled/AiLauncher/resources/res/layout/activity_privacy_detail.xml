@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/chat_color_surface"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:paddingTop="@dimen/stepos_titlebar_collapsed_height"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/bg_voice_setting_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:divider="@drawable/divider_setting_list"
+                android:showDividers="middle"
+                android:dividerPadding="14dp"
+                android:clipToOutline="true">
+                <include
+                    android:id="@+id/itemServiceAgreement"
+                    layout="@layout/item_voice_setting_arrow"/>
+                <include
+                    android:id="@+id/itemPrivacyPolicy"
+                    layout="@layout/item_voice_setting_arrow"/>
+                <include
+                    android:id="@+id/itemRevokeConsent"
+                    layout="@layout/item_voice_setting_arrow"/>
+                <include
+                    android:id="@+id/itemChildProtection"
+                    layout="@layout/item_voice_setting_arrow"/>
+                <include
+                    android:id="@+id/itemModelFiling"
+                    layout="@layout/item_voice_setting_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_setting_top_bar"/>
+</FrameLayout>

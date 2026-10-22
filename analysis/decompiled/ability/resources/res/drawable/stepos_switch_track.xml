@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@android:color/white"/>
+    <corners android:radius="@dimen/stepos_radius_full"/>
+    <size
+        android:height="@dimen/stepos_switch_track_height"
+        android:width="@dimen/stepos_switch_track_width"/>
+    <padding
+        android:left="@dimen/stepos_switch_thumb_inset"
+        android:top="@dimen/stepos_switch_thumb_inset"
+        android:right="@dimen/stepos_switch_thumb_inset"
+        android:bottom="@dimen/stepos_switch_thumb_inset"/>
+</shape>

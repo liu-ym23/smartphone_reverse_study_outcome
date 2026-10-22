@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stepos.ailauncher.container.OverlayRootLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/content_container"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.stepos.ailauncher.container.ViewPagerTouchWrapper
+            android:id="@+id/view_pager_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.stepos.ailauncher.container.ViewPagerTouchWrapper>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/animationView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"/>
+    <FrameLayout
+        android:id="@+id/anim_view"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.stepos.ailauncher.container.OverlayRootLayout>

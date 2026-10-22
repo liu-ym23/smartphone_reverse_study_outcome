@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/stepos_recipient_list_item_height"
+    android:text="@string/stepos_recipient_global_search"
+    android:paddingStart="@dimen/stepos_recipient_padding_horizontal"
+    android:paddingEnd="@dimen/stepos_recipient_padding_horizontal"
+    style="@style/StepOSTextAppearance.Recipient.DropdownSubtitle"/>

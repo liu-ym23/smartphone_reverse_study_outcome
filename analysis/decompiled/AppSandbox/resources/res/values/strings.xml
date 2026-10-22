@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abnormal_report_reason_thermal_charge">Overheating of the device, possibly due to charging</string>
+    <string name="abnormal_report_title_power">Abnormal power consumption</string>
+    <string name="abnormal_report_title_thermal">Temperature anomaly</string>
+    <string name="app_name">Quality Sense</string>
+    <string name="battery_normal_charging">Battery normal charging</string>
+    <string name="battery_protection_charging">Started to optimize charging</string>
+    <string name="battery_protection_sub_title">planed %s completed for slow-down charging</string>
+    <string name="change_optimize_tip_button_text">Continue Charging</string>
+    <string name="change_optimize_tip_message" formatted="false">When in a state of high power consumption for a long time, the battery power will be temporarily maintained at 90% to delay battery aging. After the charging is completed, the upper limit will be restored to 100%</string>
+    <string name="change_optimize_tip_title">Intelligent charging optimization has been activated and postpone charging</string>
+    <string name="cpu_exception_notification_channel_name">Abnormal power consumption</string>
+    <string name="cpu_exception_notification_title">Battery Manager</string>
+    <string name="first_launch_low_power_by_control_center_message">Low Power Mode can extend battery life while reducing some visual effects and performance</string>
+    <string name="first_launch_low_power_by_control_center_message_ring">Low Power Mode can extend battery life while reducing some visual effects and performance</string>
+    <string name="first_launch_low_power_by_control_center_title">Enable Low Power Mode</string>
+    <string name="high_performance_notify_channel_name">High performance mode</string>
+    <string name="high_performance_notify_content">May cause overheat and high power consumption. Tap to switch</string>
+    <string name="high_performance_notify_title">In high performance mode now</string>
+    <string name="message_3c">Your device is overheated and it is suggested to suspend it, otherwise it will cause the following issues:\n- Screen darkens;\n- Device slows down;\n- Turn off some features;\nAfter removing the charger, the device can be used.</string>
+    <string name="notification_bypass_charge_battery">Battery</string>
+    <string name="notification_bypass_charge_btn_close">Turn off bypass charging</string>
+    <string name="notification_bypass_charge_btn_settings">settings</string>
+    <string name="notification_bypass_charge_close">Bypass charging disabled</string>
+    <string name="notification_bypass_charge_content">%1$s is active — disconnecting the charger will turn it off automatically</string>
+    <string name="notification_bypass_charge_content_suspend">Bypass charging will take effect when charging reaches %1$s%%</string>
+    <string name="notification_bypass_charge_content_suspend_game">Bypass charging will take effect after enter game mode</string>
+    <string name="notification_bypass_charge_mode_game">In game mode</string>
+    <string name="notification_bypass_charge_mode_global">Whole system</string>
+    <string name="notification_bypass_charge_title">Bypass charging enabled</string>
+    <string name="ok_3c">Got it</string>
+    <string name="scheduled_dialog_cancel">Cancel</string>
+    <string name="scheduled_dialog_ok">Enable now</string>
+    <string name="scheduled_dialog_ok2">Enable</string>
+    <string name="scheduled_supermode_on">Enable by schedule</string>
+    <string name="scheduled_time_dialog_message_standard">Low power mode will be enabled in %s sec.</string>
+    <string name="scheduled_time_dialog_message_supper">Super saving mode will be enabled in %s sec.</string>
+    <string name="scheduled_time_dialog_message_userdefine">Custom power saving mode will be enabled in %s sec.</string>
+    <string name="thermal_level_warning_button_text">I see</string>
+    <string name="thermal_level_warning_message">Continuous temperature rise will restrict the use of the equipment. If necessary, it will be forced to shut down.</string>
+    <string name="thermal_level_warning_title">The temperature is relatively high. It is recommended to wait until the device cools down before using it</string>
+    <string name="tink_3c">Overheat alert</string>
+    <string name="uninstall_pps">uninstall One mind update!</string>
+    <string name="uninstall_pps_detail">The current version of Quality Sense is incompatible, which will cause the system to become unstable, please uninstall the update.</string>
+</resources>

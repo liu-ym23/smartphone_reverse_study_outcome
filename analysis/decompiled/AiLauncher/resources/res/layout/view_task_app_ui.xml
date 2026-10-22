@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.stepos.ailauncher.task.detail.TaskWebView
+        android:id="@+id/webAppView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/robotContainer"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp">
+        <com.stepos.agentframework.chatui.appui.taskrobot.RobotAppUIHostView
+            android:id="@+id/robotAppUi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+</merge>

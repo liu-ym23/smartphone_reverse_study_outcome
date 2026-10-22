@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="center"
+        android:height="24dp"
+        android:width="24dp">
+        <inset android:inset="1dp">
+            <shape android:shape="oval">
+                <stroke
+                    android:width="2dp"
+                    android:color="@color/stepos_btn_checkbox_outline_color_state"/>
+                <solid android:color="@color/stepos_btn_checkbox_uncheck_solid_color_state"/>
+            </shape>
+        </inset>
+    </item>
+</layer-list>

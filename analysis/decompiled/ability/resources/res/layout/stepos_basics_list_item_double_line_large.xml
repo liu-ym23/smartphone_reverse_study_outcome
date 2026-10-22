@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/Widget.StepOS.DoubleLineList.ContainerLinearLayout.Large">
+        <TextView
+            android:id="@+id/title"
+            style="@style/Widget.StepOS.MultipleList.Title"/>
+        <TextView
+            android:textColor="@color/stepos_secondary_text_light"
+            android:id="@+id/descOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stepos_list_summary_item_text_padding_top_level1"
+            style="@style/TextAppearance.StepOS.Body.Mini"/>
+    </LinearLayout>
+</RelativeLayout>

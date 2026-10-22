@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_model_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintTextColor="@color/droidrun_primary"
+        style="@style/Widget.Droidrun.TextInputLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:id="@+id/et_model_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入模型ID"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_model_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="解析 Cell（默认自动推断）"
+        app:boxStrokeColor="@color/droidrun_primary"
+        app:hintTextColor="@color/droidrun_primary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:id="@+id/actv_model_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

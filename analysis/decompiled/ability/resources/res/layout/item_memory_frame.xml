@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/droidrun_secondary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+    <FrameLayout
+        android:background="@drawable/rounded_corner_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/image"
+            android:background="@drawable/rounded_image_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"/>
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:background="@drawable/frame_desc_background"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="12sp"
+                android:textColor="#80ffffff"
+                android:id="@+id/timestamp"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="时间戳"/>
+            <TextView
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="操作描述"/>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

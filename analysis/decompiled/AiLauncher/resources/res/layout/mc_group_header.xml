@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/title_layout"
+    android:background="#08000000"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/stepos_list_partition_header_large_height">
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:gravity="center_vertical"
+        android:id="@android:id/text2"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stepos_list_card_2_little_title_height"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"/>
+    <TextView
+        android:textSize="@dimen/stepos_text_size_little"
+        android:textColor="@color/stepos_list_text_color_alpha_50"
+        android:gravity="center_vertical"
+        android:id="@android:id/text1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.7dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"/>
+    <ImageView
+        android:gravity="bottom"
+        android:id="@android:id/background"
+        android:background="@drawable/stepos_card_new_list_divider"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stepos_group_interval_header_divider_height"/>
+</LinearLayout>

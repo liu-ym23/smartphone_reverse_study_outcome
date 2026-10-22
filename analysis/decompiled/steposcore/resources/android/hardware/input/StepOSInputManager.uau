@@ -1,0 +1,3 @@
+signature,file,startline,startcol,endline,endcol,properties
+Landroid/hardware/input/StepOSInputManager;->getInstance()Landroid/hardware/input/StepOSInputManager;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/input/StepOSInputManager.java,35,5,35,25,
+Landroid/hardware/input/StepOSInputManager;->updateInputMonitorTouchRegionWithCrop(Landroid/os/IBinder;Landroid/graphics/Rect;)V,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/input/StepOSInputManager.java,43,5,43,25,

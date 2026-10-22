@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/us_stepos_list_item_padding"
+    android:paddingEnd="@dimen/us_stepos_list_item_padding">
+    <com.stepos.familyguard.ui.widget.RoundedImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/us_progress_item_image_size"
+        android:layout_height="@dimen/us_progress_item_image_size"
+        android:layout_marginTop="?attr/marginMedium"
+        android:layout_marginBottom="?attr/marginMedium"
+        app:enable_border="true"
+        app:img_border_color="?attr/colorOutlineVariant"
+        app:img_border_width="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.US.ListItem.Title"
+        android:textColor="?attr/colorOnSurface"
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="?attr/marginSmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

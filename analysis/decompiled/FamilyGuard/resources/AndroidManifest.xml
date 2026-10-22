@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="10040"
+    android:versionName="1.0.0_20260928_173807"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
+    package="com.stepos.familyguard"
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
+    <uses-sdk
+        android:minSdkVersion="33"
+        android:targetSdkVersion="36"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.OBSERVE_APP_USAGE"/>
+    <uses-permission android:name="stepos.permission.OBSERVE_APP_USAGE"/>
+    <uses-permission android:name="android.permission.SUSPEND_APPS"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="stepos.permission.READ_PERMISSION_STATE"/>
+    <uses-permission android:name="stepos.permission.ENTER_PASSWORD"/>
+    <uses-permission android:name="stepos.permission.CONFIRM_PASSWORD"/>
+    <uses-permission android:name="stepos.permission.SELECT_PHOTO"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_TASKS"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="com.stepos.alphame.permission.APP_EVENT"/>
+    <uses-permission android:name="com.stepos.alphame.permission.SCREEN_EVENT"/>
+    <uses-permission android:name="stepos.alphame.USER_BEHAVIOR"/>
+    <uses-permission android:name="com.stepos.permission.RECEIVE_KEEP_ALIVE"/>
+    <permission
+        android:name="com.stepos.familyguard.MinorProvider.READ"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.stepos.familyguard.MinorProvider.WRITE"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.stepos.familyguard.permission.APP_EVENT"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.stepos.familyguard.permission.SCREEN_EVENT"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.stepos.familyguard.permission.CONFIRM_PASSWORD"
+        android:protectionLevel="knownSigner|signature"
+        android:knownCerts="@array/knownSigners"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature
+        android:glEsVersion="0x30000"
+        android:required="false"/>
+    <permission
+        android:name="com.stepos.familyguard.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.stepos.familyguard.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.stepos.permission.DataService"/>
+    <queries>
+        <package android:name="com.stepos.dataservice"/>
+    </queries>
+    <uses-permission android:name="com.stepos.secureservice.permission.OPEN_DATA_PROVIDER"/>
+    <application
+        android:theme="@style/FamilyGuard.Themes"
+        android:label="@string/fg_app_name"
+        android:icon="@mipmap/ic_launcher_dw"
+        android:name="com.stepos.familyguard.FamilyGuardApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:extractNativeLibs="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data
+            android:name="com.stepos.adaptiveicon.mask.type"
+            android:value="circle_mask_type"/>
+        <service
+            android:name="com.stepos.digitalwellbeing.appwidget.AppWidgetManagerService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="systemExempted"/>
+        <receiver
+            android:theme="@style/FamilyGuard.DigitalWellbeing.Themes"
+            android:label="@string/us_screen_usage"
+            android:name="com.stepos.digitalwellbeing.appwidget.DigitalWellbeingWidgetProvider4X4"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/us_digital_wellbeing_widget_4x4_info"/>
+        </receiver>
+        <receiver
+            android:label="@string/us_screen_usage"
+            android:name="com.stepos.digitalwellbeing.appwidget.DigitalWellbeingWidgetProvider4X2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/us_digital_wellbeing_widget_4x2_info"/>
+        </receiver>
+        <receiver
+            android:label="@string/us_usage_statistics"
+            android:name="com.stepos.digitalwellbeing.appwidget.DigitalWellbeingWidgetProvider2X2Text"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/us_digital_wellbeing_widget_2x2_text_info"/>
+        </receiver>
+        <receiver
+            android:label="@string/us_screen_usage"
+            android:name="com.stepos.digitalwellbeing.appwidget.DigitalWellbeingWidgetProvider2X2Histogram"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/us_digital_wellbeing_widget_2x2_histogram_info"/>
+        </receiver>
+        <activity
+            android:theme="@android:style/Theme.NoDisplay"
+            android:label="@string/us_usage_statistics"
+            android:name="com.stepos.familyguard.ui.usage.UsageDirectActivity"
+            android:exported="true"
+            android:taskAffinity=".digital_wellbeing"
+            android:screenOrientation="portrait"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="com.stepos.digitalwellbeing.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.UsageActivity.Themes"
+            android:name="com.stepos.familyguard.ui.usage.UsageActivity"
+            android:exported="false"
+            android:taskAffinity=".digital_wellbeing"
+            android:launchMode="singleInstancePerTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.PreferenceActivity.Themes"
+            android:name="com.stepos.familyguard.ui.limit.PackageLimitActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.PreferenceActivity.Themes"
+            android:name="com.stepos.familyguard.ui.limit.CategoryLimitActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.PreferenceActivity.Themes"
+            android:label="@string/us_usage_time"
+            android:name="com.stepos.familyguard.ui.limit.GlobalLimitActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.PreferenceActivity.EditPeriod.Blue"
+            android:name="com.stepos.familyguard.ui.limit.EditPeriodPopupLiteActivity"
+            android:exported="false"
+            android:taskAffinity=".digital_wellbeing"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.Themes"
+            android:label="@string/us_usage_statistics"
+            android:name="com.stepos.familyguard.ui.usage.DigitalWellbeingActivity"
+            android:exported="true"
+            android:taskAffinity=".digital_wellbeing"
+            android:launchMode="singleInstancePerTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.PreferenceActivity.Themes"
+            android:label="@string/fg_settings"
+            android:name="com.stepos.familyguard.ui.main.DigitalWellbeingSettingsActivity"
+            android:exported="false"
+            android:taskAffinity=".digital_wellbeing"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.PreferenceActivity.Themes"
+            android:label="@string/fg_privacy_settings_title"
+            android:name="com.stepos.familyguard.ui.PrivacySettingsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.PreferenceActivity.Themes"
+            android:label="@string/fg_privacy_settings_title"
+            android:name="com.stepos.familyguard.ui.DigitalWellbeingPrivacySettingsActivity"
+            android:exported="false"
+            android:taskAffinity=".digital_wellbeing"
+            android:launchMode="singleTop"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.Themes"
+            android:label="@string/us_every_week"
+            android:name="com.stepos.familyguard.ui.usage.WeekDigitalWellbeingActivity"
+            android:exported="true"
+            android:taskAffinity=".digital_wellbeing"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.Themes"
+            android:label="@string/us_usage_limit"
+            android:name="com.stepos.familyguard.ui.usage.LimitManagerActivity"
+            android:exported="true"
+            android:taskAffinity=".digital_wellbeing"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.Themes"
+            android:label="@string/us_usage_limit"
+            android:name="com.stepos.familyguard.ui.usage.LimitSearchActivity"
+            android:exported="true"
+            android:taskAffinity=".digital_wellbeing"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.Themes"
+            android:label="@string/us_usage_limit"
+            android:name="com.stepos.familyguard.ui.ReopenDigitalWellbeingActivity"
+            android:exported="true"
+            android:taskAffinity=".digital_wellbeing"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@style/FamilyGuard.Blue.WhiteTitleBar"
+            android:label="@string/mm_minor_mode"
+            android:name="com.stepos.minor.ui.MinorMainActivity"
+            android:exported="true"
+            android:taskAffinity="minor.mode"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|mnc|mcc">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="stepos.minor.intent.action.CONFIG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.Themes"
+            android:label="@string/us_usage_limit"
+            android:name="com.stepos.minor.ui.MinorLimitManagerActivity"
+            android:exported="true"
+            android:taskAffinity="minor.mode"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.Themes"
+            android:label="@string/us_usage_limit"
+            android:name="com.stepos.minor.ui.MinorLimitSearchActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.StepOS.AppCompat.Light.LitePopup.Color.Blue"
+            android:name="com.stepos.minor.ui.MinorEditActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"/>
+        <activity
+            android:theme="@style/Theme.StepOS.AppCompat.Light.LitePopup.Color.Blue"
+            android:name="com.stepos.minor.ui.MinorSelectActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/FamilyGuard.Blue"
+            android:label="@string/mm_minor_whitelist_title"
+            android:name="com.stepos.minor.ui.MinorWhitelistAppActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.PreferenceActivity.Themes"
+            android:name="com.stepos.familyguard.ui.limit.MinorPackageLimitActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.DigitalWellbeing.PreferenceActivity.Themes"
+            android:name="com.stepos.familyguard.ui.limit.MinorCategoryLimitActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Activity.Transparent"
+            android:name="com.stepos.minor.AddMinorShortcutsActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"/>
+        <activity
+            android:theme="@style/Activity.Transparent"
+            android:name="com.stepos.minor.ui.MinorPasswordConfirmActivity"
+            android:permission="com.stepos.familyguard.permission.CONFIRM_PASSWORD"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="stepos.minor.intent.action.CONFIRM_PASSWORD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/FamilyGuard.Minor.AddPhone"
+            android:name="com.stepos.minor.ui.MinorVerifyAddPhoneActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FamilyGuard.Blue.WhiteTitleBar"
+            android:name="com.stepos.minor.ui.MinorVerifyResetPasswordActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.familyguard.MINOR_MODE_RESET_PASSWORD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/FamilyGuard.Minor.AddPhone"
+            android:name="com.stepos.minor.ui.MinorVerifyResetPhoneActivity"
+            android:exported="false"
+            android:taskAffinity="minor.mode"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="com.stepos.minor.MinorProvider"
+            android:readPermission="com.stepos.familyguard.MinorProvider.READ"
+            android:writePermission="com.stepos.familyguard.MinorProvider.WRITE"
+            android:exported="true"
+            android:authorities="com.stepos.familyguard.MinorProvider"/>
+        <service
+            android:name="com.stepos.digitalwellbeing.server.DigitalWellbeingService"
+            android:exported="false"
+            android:foregroundServiceType="systemExempted">
+            <intent-filter>
+                <action android:name="com.stepos.digitalwellbeing.dws"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.stepos.familyguard.receiver.KeepAliveReceiver"
+            android:permission="com.stepos.permission.RECEIVE_KEEP_ALIVE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.stepos.familyguard.KEEP_ALIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.familyguard.receiver.PackageDataClearedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <action android:name="android.intent.action.PACKAGE_RESTARTED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.digitalwellbeing.server.limit.PackageChangedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.digitalwellbeing.server.limit.LimitApproachedReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.stepos.digitalwellbeing.action.limit_approached"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.digitalwellbeing.server.limit.NextDayReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.digitalwellbeing.server.limit.NextDayAlarmReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.stepos.digitalwellbeing.action.next_day"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.digitalwellbeing.server.limit.TimeLimitApproachReceiver"
+            android:exported="false"/>
+        <receiver
+            android:name="com.stepos.digitalwellbeing.server.limit.UserPresentReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.familyguard.admin.AdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin"/>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.stepos.familyguard"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <receiver
+            android:name="com.stepos.digitalwellbeing.server.AlphaMeServiceStartRetryReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.stepos.digitalwellbeing.action.ALPHAME_SERVICE_RETRY"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.AlphaMeUsageEventReceiver"
+            android:permission="com.stepos.alphame.permission.APP_EVENT"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.stepos.alphame.intent.action.APP_EVENT"/>
+                <action android:name="com.stepos.alphame.intent.action.SCREEN_EVENT"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule"/>
+        <activity
+            android:theme="@style/Theme.StepOS.AppCompat.Light.WebViewActivity"
+            android:name="stepos.support.v7.app.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.StepOS.AppCompat.Light.LitePopup.Color.Blue"
+            android:name="stepos.support.v7.app.palette.StepOSPalettePopupActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:finishOnCloseSystemDialogs="true"
+            android:documentLaunchMode="never"
+            android:relinquishTaskIdentity="true"
+            android:visibleToInstantApps="true"
+            android:showWhenLocked="true"/>
+        <provider
+            android:name="com.stepos.common.app.LibraryInitProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.stepos.familyguard.steposcommon"/>
+        <provider
+            android:name="com.stepos.common.app.PAGReporterPreventProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.stepos.familyguard.steposcommon.pag"/>
+        <uses-library
+            android:name="steposcore-framework"
+            android:required="false"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.stepos.familyguard.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <provider
+            android:name="org.extra.tools.ContextProvider"
+            android:exported="false"
+            android:authorities="com.stepos.familyguard.org.libpag.contextprovider"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Policy.AppTheme"
+            android:name="com.stepos.policy.sdk.activity.PolicyHtmlViewerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:inheritShowWhenLocked="true"/>
+        <activity
+            android:theme="@style/Policy.AppTheme"
+            android:name="com.stepos.policy.sdk.activity.PolicyPermissionDesActivity"
+            android:screenOrientation="portrait"
+            android:inheritShowWhenLocked="true"/>
+        <provider
+            android:name="com.stepos.policy.sdk.util.PolicySdkFileProvider"
+            android:exported="false"
+            android:authorities="com.stepos.familyguard.PolicySdk.FileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/policy_sdk_file_paths"/>
+        </provider>
+    </application>
+</manifest>

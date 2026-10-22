@@ -1,0 +1,231 @@
+// App to Agent Protocol
+//
+// This protocol defines communication between Application (App SDK) and
+// Agent/Runtime. Simple request-response pattern for app developers.
+
+syntax = "proto3";
+
+package cortex.adk.runtime;
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.runtime";
+option java_outer_classname = "AgentRuntime";
+
+import "com/zyql/protobuf/common/content.proto";
+import "com/zyql/protobuf/common/log.proto";
+import "google/protobuf/struct.proto";
+
+// ====================
+// App Agent Service
+// ====================
+
+service AppAgentService {
+  rpc ChatStream(stream ChatRequest) returns (stream ChatResponse);
+
+  // Get agent information (name, description, capabilities, etc.)
+  rpc GetAgentInfo(GetAgentInfoRequest) returns (GetAgentInfoResponse);
+
+  // Health check
+  rpc Ping(PingRequest) returns (PongResponse);
+}
+
+// ====================
+// Streaming Chat
+// ====================
+
+message ChatRequest {
+  // 一次长链内唯一id
+  uint64 id = 1;
+  oneof payload {
+    StartAgentRequest start_agent_request = 2;
+    SendInputRequest send_input_request = 3;
+    CancelRequest cancel_request = 4;
+  }
+}
+
+// ====================
+// Execution Options
+// ====================
+message ExecutionOptions {
+  // Whether to include FunctionCall details in the output
+  // When false (default), FunctionCall messages are filtered out (Agent handles
+  // them internally) When true, FunctionCall and FunctionResponse are included
+  // in the output
+  optional bool include_function_call_output = 1;
+
+  // Send complete message at the end of streaming
+  // When false (default), only streaming messages are sent
+  // When true, after streaming completes, send one more Task with complete
+  // LLMResponse
+  optional bool send_complete_message = 2;
+
+  // Whether to include the sub-agent's output
+  // When false (default), the sub-agent's output is filtered out
+  // When true, the sub-agent's output is included in the output
+  optional bool include_sub_agent_output = 3;
+
+  // Whether to run in observer mode, in this mode, the agent will not
+  // process the input, but will only observe the output of the agents
+  // When false (default), the agent runs in normal mode
+  // When true, the agent runs in observer mode
+  optional bool observer_mode = 4;
+
+  // Log level for this execution
+  // Controls which log messages are sent back to the client
+  // Default: LOG_LEVEL_OFF (no logs by default)
+  optional cortex.adk.common.LogLevel log_level = 5;
+}
+
+// ====================
+// Start a new Agent execution in a session
+// ====================
+message StartAgentRequest {
+  string agent_id = 1;
+  string user_id = 2;
+  optional string session_id = 3; // If not set, create new session
+  repeated cortex.adk.common.Content messages = 4;
+  google.protobuf.Struct metadata = 5;
+  optional ExecutionOptions options = 6;
+}
+
+// ====================
+// Send new user input during ongoing Agent execution
+// Input will be queued and processed after current task completes
+// Execution behavior follows the options set in StartAgentRequest
+// ====================
+message SendInputRequest {
+  string session_id = 1;                    // Must specify session
+  repeated cortex.adk.common.Content messages = 2; // New messages from user
+  google.protobuf.Struct metadata = 3;
+}
+
+// ====================
+// Cancel the ongoing Agent execution
+// ====================
+message CancelRequest {
+  string session_id = 1;
+  string reason = 2;
+}
+
+// ====================
+// Response Message
+// ====================
+
+message ChatResponse {
+  oneof content {
+    RequestAck ack = 1;
+    Task task = 2;
+  }
+  optional string session_id = 10;
+}
+
+// ========== Request Ack ==========
+
+message RequestAck {
+  uint64 request_id = 1;
+  optional int32 error_code = 2; // If set, indicates failure
+  optional string error_message = 3;
+
+  oneof ack_type {
+    StartAgentAck start_agent_ack = 4;
+    SendInputAck send_input_ack = 5;
+    CancelAck cancel_ack = 6;
+  }
+}
+
+message StartAgentAck {
+  string session_id = 1;
+  optional uint64 task_id = 2;
+  optional string agent_name = 3;         // Agent name (方案C)
+  optional string agent_description = 4;  // Agent description (方案C)
+}
+
+message SendInputAck {
+}
+
+message CancelAck {
+  optional string details = 1;
+}
+
+message Task {
+  string id = 1;
+  uint64 timestamp = 2;
+
+  oneof output {
+    LLMResponse llm_response = 5;
+    AgentTaskStateNotification agent_task_state = 6;
+    InputMessageStateNotification input_message_state = 7;
+    TaskError task_error = 8;
+    cortex.adk.common.LogNotification log_notification = 9;  // 方案A：支持日志推送
+  }
+}
+
+message LLMResponse {
+  cortex.adk.common.Content content = 1;
+  bool partial = 2;
+  bool turn_complete = 3;
+  optional string finish_reason = 4;
+  optional uint64 sequence_index = 5;
+  optional google.protobuf.Struct metadata = 6;
+}
+
+// ====================
+// Agent execution loop state
+// ====================
+message AgentTaskStateNotification {
+  enum State {
+    STATE_UNSPECIFIED = 0;
+    STATE_INITIALIZED = 1; // Task created, ready to process
+    STATE_PROCESSING = 2;  // Agent is actively processing
+    STATE_COMPLETED = 3;   // Task completed successfully
+    STATE_INTERRUPTED = 4; // Task interrupted by cancellation
+  }
+  State state = 1;
+  optional string details = 2;
+}
+
+// ====================
+// Input message queue state
+// ====================
+message InputMessageStateNotification {
+  enum State {
+    STATE_UNSPECIFIED = 0;
+    STATE_QUEUED = 1;    // Input received and queued
+    STATE_SUBMITTED = 2; // Input dequeued and submitted to Agent
+  }
+  State state = 1;
+  optional string details = 2;
+}
+
+message TaskError {
+  int32 code = 1;
+  string message = 2;
+}
+
+// ====================
+// Health Check
+// ====================
+
+message PingRequest { int64 timestamp = 1; }
+
+message PongResponse {
+  int64 timestamp = 1;
+  string version = 2;
+}
+
+// ====================
+// Get Agent Info (方案B)
+// ====================
+
+message GetAgentInfoRequest {
+  string agent_id = 1;
+}
+
+message GetAgentInfoResponse {
+  string agent_id = 1;
+  string agent_name = 2;
+  optional string description = 3;
+  optional string version = 4;
+  repeated string capabilities = 5;  // 支持的功能列表
+  google.protobuf.Struct metadata = 6;  // 其他元数据
+}

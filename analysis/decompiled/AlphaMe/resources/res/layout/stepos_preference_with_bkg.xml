@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/stepos_recyclerview_selector_f10"
+    style="@style/Widget.StepOS.Preference.ContentLinearLayout">
+    <com.stepos.common.widget.SmoothCornerView
+        android:id="@android:id/icon_frame"
+        android:layout_marginEnd="@dimen/stepos_preference_icon_margin_horizontal"
+        app:steposCornerRadius="@dimen/stepos_list_icon_item_icon_corner_radius"
+        style="@style/Widget.StepOS.Preference.Icon">
+        <ImageView
+            android:id="@android:id/icon"
+            android:scaleType="centerInside"
+            style="@style/Widget.StepOS.Preference.Icon"/>
+    </com.stepos.common.widget.SmoothCornerView>
+    <LinearLayout
+        android:id="@+id/preference_text_layout"
+        style="@style/Widget.StepOS.Preference.TextContentLayout">
+        <TextView
+            android:id="@android:id/title"
+            style="@style/Widget.StepOS.Preference.Title"/>
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:lineSpacingExtra="4dp"
+            style="@style/TextAppearance.StepOS.Body.Mini"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:visibility="gone"
+        style="@style/Widget.StepOS.List.Vertical.Divider"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@android:id/widget_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/stepos_list_item_divider_margin_end"/>
+</LinearLayout>

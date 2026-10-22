@@ -1,0 +1,80 @@
+{
+  "id": "prompt-engine",
+  "name": "StepClaw Prompt Engine",
+  "description": "Replaces OpenClaw default system prompt with StepClaw-optimized Android AIOS templates",
+  "version": "1.1.0",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "description": "Enable system prompt replacement. Omit or true to enable; set false to disable.",
+        "default": true
+      },
+      "debug": {
+        "type": "boolean",
+        "description": "When true or omitted, writes the assembled system prompt to workspace/.prompt-debug-latest.md (async). Set false to disable.",
+        "default": false
+      },
+      "skillsSummaryFormat": {
+        "type": "string",
+        "enum": ["full", "compact", "names-only", "hybrid"],
+        "description": "Skills summary format.",
+        "default": "full"
+      },
+      "skillsMaxDescriptionLength": {
+        "type": "number",
+        "description": "Max chars per skill description in compact/hybrid mode.",
+        "default": 10000
+      },
+      "skillsAlwaysInclude": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Skill names always included inline in hybrid mode."
+      },
+      "taskClassification": {
+        "type": "object",
+        "description": "Task hierarchical classification settings. All fields have defaults; omitting the entire block enables classification with defaults.",
+        "properties": {
+          "enabled":              { "type": "boolean", "default": true },
+          "modelClassification":  { "type": "boolean", "default": true },
+          "classifierBackend":    { "type": "string", "enum": ["node", "llm-provider"], "default": "node" },
+          "classifierModel":      { "type": "string", "description": "Classifier model; defaults to the primary model from agents.defaults.model if omitted" },
+          "classifierEndpoint":   { "type": "string", "default": "" },
+          "modelTimeoutMs":       { "type": "number", "default": 3000 },
+          "cacheTtlMs":           { "type": "number", "default": 300000 },
+          "cacheMaxSize":         { "type": "number", "default": 128 },
+          "defaultTier":          { "type": "string", "enum": ["LITE", "STANDARD", "FULL"], "default": "FULL" },
+          "skipForSessionTypes":  { "type": "array", "items": { "type": "string" }, "default": ["cron", "subagent"] },
+          "longMessageThreshold": { "type": "number", "default": 200 },
+          "longMessageDefaultTier": { "type": "string", "enum": ["LITE", "STANDARD", "FULL"], "default": "STANDARD" },
+          "customRules": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "pattern": { "type": "string" },
+                "tier":    { "type": "string", "enum": ["LITE", "STANDARD", "FULL"] }
+              },
+              "required": ["pattern", "tier"]
+            },
+            "default": []
+          }
+        }
+      },
+      "tierOverrides": {
+        "type": "object",
+        "description": "Per-tier config overrides. Keys: LITE, STANDARD, FULL. Each can override sections, bootstrapWhitelist, toolSummaries, llmOverrides.",
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "sections":           { "type": "object", "additionalProperties": { "type": "string", "enum": ["on", "off", "lite"] } },
+            "bootstrapWhitelist": { "type": "array", "items": { "type": "string" } },
+            "toolSummaries":      { "type": ["array", "null"], "items": { "type": "string" } },
+            "llmOverrides":       { "type": "object" }
+          }
+        }
+      }
+    }
+  }
+}

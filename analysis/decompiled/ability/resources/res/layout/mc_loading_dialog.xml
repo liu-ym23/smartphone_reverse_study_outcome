@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:stepos="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/parentPanel"
+    android:paddingTop="@dimen/mc_loadingviewdialog_padding_top"
+    android:paddingBottom="@dimen/mc_loadingviewdialog_padding_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:paddingStart="@dimen/mc_loadingviewdialog_padding"
+    android:paddingEnd="@dimen/mc_loadingviewdialog_padding">
+    <com.stepos.common.widget.LoadingView
+        android:id="@+id/loadingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        stepos:mcLBackground="#19ffffff"
+        stepos:mcLForeground="#ffffffff"
+        stepos:mcLoadingRadius="6.5dp"
+        stepos:mcRingWidth="1.5dp"/>
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffffff"
+        android:id="@+id/message"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mc_loadingviewdialog_message_margin_left"/>
+</LinearLayout>

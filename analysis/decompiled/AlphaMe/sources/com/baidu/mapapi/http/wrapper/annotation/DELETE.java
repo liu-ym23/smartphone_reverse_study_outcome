@@ -1,0 +1,10 @@
+package com.baidu.mapapi.http.wrapper.annotation;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
+/* loaded from: classes.dex */
+public @interface DELETE {
+    String value();
+}

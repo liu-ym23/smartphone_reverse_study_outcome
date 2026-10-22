@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/Widget.StepOS.List.Layout">
+    <LinearLayout style="@style/Widget.StepOS.SearchList.ContentLinearLayout">
+        <ImageView
+            android:id="@+id/stepos_search_icon"
+            style="@style/Widget.StepOS.SearchList.SearchIcon"/>
+        <LinearLayout style="@style/Widget.StepOS.SearchList.TextContentLinearLayout">
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextAppearance.StepOS.SearchList.Title"/>
+            <TextView
+                android:id="@+id/descOne"
+                android:visibility="gone"
+                style="@style/Widget.StepOS.SearchList.Desc.Normal.AdjoinTitle"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/stepos_cancel_icon"
+            android:visibility="gone"
+            style="@style/Widget.StepOS.SearchList.OperationIcon"/>
+    </LinearLayout>
+</LinearLayout>

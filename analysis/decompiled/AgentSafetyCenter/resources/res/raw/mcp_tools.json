@@ -1,0 +1,60 @@
+[
+  {
+    "name": "file_safe_delete",
+    "description": "# description\n安全删除外部存储中的文件或目录到可恢复回收站。图片和视频优先进入 MediaStore/图库回收站，其他文件进入文件管理器回收站；目录删除默认递归。path 与 paths 互斥，必须二选一传入。\n\n# positive_samples\n- 安全删除这个文件\n- 把这个目录移到回收站\n- 可恢复删除这个文件\n\n# negative_samples\n- 永久删除这个文件 → 不应走本能力\n- 从回收站恢复文件 → 应走 file_restore",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "要安全删除的外部存储原始路径，例如 /storage/emulated/0/Download/a.txt 或 /sdcard/Download/a.txt。与 paths 二选一。"
+        },
+        "paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "要安全删除的外部存储原始路径列表。与 path 二选一，用于批量删除多个文件或目录。"
+        },
+        "recursive": {
+          "type": "boolean",
+          "description": "目录删除是否递归，默认 true；false 时目录删除会失败，对普通文件无影响。"
+        },
+        "truth_id": {
+          "type": "string",
+          "description": "与本次工具调用对应的 tool_call_id，用于本机删除较真与云端可撤 step 关联；缺省时跳过较真记录。"
+        }
+      },
+      "required": []
+    },
+    "outputSchema": null,
+    "annotations": null
+  },
+  {
+    "name": "file_restore",
+    "description": "# description\n按删除前的外部存储原始路径从回收站恢复文件或目录。目录恢复默认包含原路径前缀下的项目；recursive=false 时只恢复精确匹配路径。path 与 paths 互斥，必须二选一传入。\n\n# positive_samples\n- 恢复这个文件\n- 把刚才删除的目录还原\n- 按原来的路径从回收站恢复文件\n\n# negative_samples\n- 把文件移到回收站 → 应走 file_safe_delete\n- 永久删除回收站文件 → 不应走本能力",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "要恢复的文件或目录在删除前的外部存储原始路径，例如 /storage/emulated/0/Download/a.txt 或 /sdcard/Download/a.txt。与 paths 二选一。"
+        },
+        "paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "要恢复的外部存储原始路径列表。与 path 二选一，用于批量恢复多个文件或目录。"
+        },
+        "recursive": {
+          "type": "boolean",
+          "description": "目录恢复是否包含原路径前缀下的项目，默认 true；false 时只恢复精确匹配路径。"
+        }
+      },
+      "required": []
+    },
+    "outputSchema": null,
+    "annotations": null
+  }
+]

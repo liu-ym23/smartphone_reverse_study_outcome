@@ -1,0 +1,41 @@
+package Y8;
+
+import La.C0951a;
+import com.autonavi.aps.amapapi.config.Const;
+import com.stepos.statsapp.v3.lib.plugin.constants.UxipConstants;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\t\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\u001a\u001f\u0010\u0003\u001a\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0000H\u0001¢\u0006\u0004\b\u0003\u0010\u0004\u001a\u001f\u0010\u0006\u001a\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u00052\u0006\u0010\u0002\u001a\u00020\u0005H\u0001¢\u0006\u0004\b\u0006\u0010\u0007\u001a\u001f\u0010\u000b\u001a\u00020\n2\u0006\u0010\b\u001a\u00020\u00052\u0006\u0010\t\u001a\u00020\u0000H\u0000¢\u0006\u0004\b\u000b\u0010\f¨\u0006\r"}, d2 = {"", "v1", "v2", Const.INTENT_KEY_APIKEY, "(II)I", "", Const.INTENT_KEY_PKGNAME, "(JJ)I", UxipConstants.f30680s, "base", "", "c", "(JI)Ljava/lang/String;", "kotlin-stdlib"}, k = 2, mv = {2, 2, 0}, xi = 48)
+/* loaded from: classes4.dex */
+public final class u {
+    public static final int a(int i10, int i11) {
+        return kotlin.jvm.internal.p.k(i10 ^ Integer.MIN_VALUE, i11 ^ Integer.MIN_VALUE);
+    }
+
+    public static final int b(long j10, long j11) {
+        return kotlin.jvm.internal.p.l(j10 ^ Long.MIN_VALUE, j11 ^ Long.MIN_VALUE);
+    }
+
+    public static final String c(long j10, int i10) {
+        if (j10 >= 0) {
+            String string = Long.toString(j10, C0951a.a(i10));
+            kotlin.jvm.internal.p.h(string, "toString(...)");
+            return string;
+        }
+        long j11 = i10;
+        long j12 = ((j10 >>> 1) / j11) << 1;
+        long j13 = j10 - (j12 * j11);
+        if (j13 >= j11) {
+            j13 -= j11;
+            j12++;
+        }
+        StringBuilder sb2 = new StringBuilder();
+        String string2 = Long.toString(j12, C0951a.a(i10));
+        kotlin.jvm.internal.p.h(string2, "toString(...)");
+        sb2.append(string2);
+        String string3 = Long.toString(j13, C0951a.a(i10));
+        kotlin.jvm.internal.p.h(string3, "toString(...)");
+        sb2.append(string3);
+        return sb2.toString();
+    }
+}

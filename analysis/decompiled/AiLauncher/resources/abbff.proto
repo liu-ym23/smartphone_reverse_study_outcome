@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package com.stepos.agentframework.protobuf;
+
+message Head {
+    uint32 frame_type = 1;          // 0=text, 1=pb（pb 负载填 1）
+    uint32 msg_type = 2;          // 0=上行req 1=req回包rsp 2=下行push 3=push回包ack 4=上行req异常回包(body=ErrorResp)
+    string msg_id = 3;          // 关联上行req/rsp；push 唯一 id。基于 uuid
+    string module = 4;          // 模块名，路由用，固定 "agentproxy"
+    string command = 5;          // 方法名，与 module 唯一确定 RPC（Chat/Receive/...）
+    map<string, string> meta = 6;    // 保留/扩展（client-stream 的 stream_id/stream_event 走这里）
+}
+message StreamMsg {
+    Head head = 1;
+    bytes body = 2;                 // 业务 Message / Event 的 protobuf 字节
+}
+
+enum Role {ROLE_UNSPECIFIED = 0; USER = 1; ASSISTANT = 2; SYSTEM = 3; TOOL = 4;}
+enum ToolStatus {TOOL_STATUS_UNSPECIFIED = 0; PENDING = 1; RUNNING = 2; OK = 3; ERROR = 4; CANCELLED = 5;}
+
+message Attachment {
+    string type = 1; string blob = 2; string mime = 3; string sha256 = 4;
+    int32 size = 5; int32 width = 6; int32 height = 7; int64 duration_ms = 8;
+    map<string, string> metadata = 9;
+}
+message ToolCall {
+    string id = 1; string name = 2; map<string, string> arguments = 3;
+    ToolStatus status = 4; map<string, string> result = 5;
+    string error_code = 6; string error_message = 7;
+    // 工具展示名，已是「正在xxx」动作短语；为空时端侧回退本地工具名映射
+    string display_name = 8;
+}
+message Message {
+    Role role = 1;                  // 消息角色
+    string content = 2;               // 正文（纯文本；流式时仅终帧给完整文本）
+    string reply_to = 3;              // 回复关联的消息 id（指向用户消息 message_id）
+    string delta = 4;                 // 流式增量片段
+    map<string, string> metadata = 5;  // 扩展元数据，见 §3.2.1
+    repeated Attachment attachments = 6;
+    repeated ToolCall tool_calls = 7;
+}
+
+enum EventType {
+    EVENT_TYPE_UNSPECIFIED = 0;
+    MESSAGE_RECEIVED = 1;   // 收到/已下发
+    MESSAGE_SENT = 2;       // 发送成功
+    MESSAGE_FAILED = 3;     // 发送失败
+    SESSION_CREATED = 4; SESSION_DELETED = 5; SESSION_RENAMED = 6;
+    DEVICE_PAIRED = 7; DEVICE_UNPAIRED = 8;
+    DEVICE_HEARTBEAT = 9;   // 设备心跳（cli Heartbeat 用）
+}
+message Event {
+    string event_id = 1;
+    int64 timestamp = 2;
+    EventType event_type = 3;
+    map<string, string> metadata = 4;  // key 字典同 §3.2.1（事件侧常用 code/error_message/request_id/decision 等）
+}
+
+// 上行req异常错误回包
+message ErrorResp {
+    int32 code = 1;     // 错误状态码
+    string reason = 2;  // 错误信息
+}

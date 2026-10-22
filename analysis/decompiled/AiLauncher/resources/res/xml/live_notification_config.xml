@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<live-notification-config>
+    <title>@string/live_notification_title
+    </title>
+    <description>@string/live_notification_description
+    </description>
+    <icon>@drawable/live_notification
+    </icon>
+    <task>1
+    </task>
+</live-notification-config>

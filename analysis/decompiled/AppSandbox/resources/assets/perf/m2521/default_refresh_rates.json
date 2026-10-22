@@ -1,0 +1,4456 @@
+[
+  {
+    "package_name": "com.tencent.mm",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 90
+      }
+    }
+  },
+  {
+    "package_name": "com.xingin.xhs",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 90
+      }
+    }
+  },
+  {
+    "package_name": "com.stepos.media.video",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.ugc.aweme",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.eg.android.AlipayGphone",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.mobileqq",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xunmeng.pinduoduo",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.taobao.taobao",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.android.browser",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.ugc.aweme.lite",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.autonavi.minimap",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.kuaishou.nebula",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "tv.danmaku.bili",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.smile.gifmaker",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.jingdong.app.mall",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sankuai.meituan",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.sgame",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.dragon.read",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.baidu.searchbox",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.whatsapp",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.quark.browser",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.google.android.youtube",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.cloudmusic",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.taobao.idlefish",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.article.news",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.alibaba.android.rimet",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.android.chrome",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.qqmusic",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sina.weibo",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.facebook.lite",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "org.telegram.messenger",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.qqlive",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.kugou.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.MobileTicket",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.mtt",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.wework",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.UCMobile",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.pubgmhd",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.baidu.BaiduMap",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.jkchess",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.google.android.googlequicksearchbox",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.phoenix.read",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.facebook.katana",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.android.vending",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.viber.voip",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.article.lite",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.icbc",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tmri.app.main",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.article.video",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.android.bankabc",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.greenpoint.android.mc10086.activity",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.chinamworld.main",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xs.fm",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.luna.music",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.unionpay",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "me.ele",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.zhiliaoapp.musically",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.zhiliaoapp.musically.go",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.kmxs.reader",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.qiyi.video",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xiaomi.smarthome",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ximalaya.ting.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "cmb.pb",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cainiao.wireless",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.shizhuang.duapp",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.baidu.tieba",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "cn.xender",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.larus.nova",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.chinamworld.bocmbci",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.lolm",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.KiHan",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sankuai.meituan.takeoutnew",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.auto",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sdu.didi.psnger",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.youku.phone",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.instagram.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.hexin.plat.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.cf",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.baidu.searchbox.lite",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sinovatech.unicom.ui",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.zhihu.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.ugc.live",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.taptap",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.moji.mjweather",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.facebook.orca",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xunlei.downloadprovider",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.baidu.netdisk",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ct.client",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.happyelements.AndroidAnimal",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.qidian.QDReader",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.duowan.kiwi",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.jingyao.easybike",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.google.android.apps.messaging",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.snda.wifilocating",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.dianping.v1",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cat.readall",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.twitter.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.gamehelper.smoba",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "cn.wps.moffice_eng",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.hpbr.bosszhipin",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.max.xiaoheihe",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.google.android.gm",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.lemon.lv",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "ctrip.android.view",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "cn.soulapp.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.meta.box",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.baidu.homework",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "ru.sberbankmobile",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.videogo",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.androidqqmail",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.gl",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.emoji.keyboard.touchpal",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.kugou.android.lite",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.yitong.mbank.psbc",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "cn.gov.tax.its",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.eastmoney.android.berlin",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.apps.valorant",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "mark.via",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.vkontakte.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.jd.jrapp",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.dfm",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.whatsapp.w4b",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "cn.xuexi.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.qt.qtl",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "org.telegram.messenger.web",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.dnf",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.google.android.apps.photos",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.coolapk.market",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.supercell.clashofclans",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.hupu.games",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.mihoyo.hyperion",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.miHoYo.Yuanshen",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sup.android.superb",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "ru.yandex.searchplugin",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.microsoft.emmx",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.yandex.browser",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xrom.intl.appcenter",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.achievo.vipshop",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sgcc.wsgw.cn",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.taobao.litetao",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.miHoYo.hkrpg",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.lark",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.taobao.live",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cmri.universalapp",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xhey.xcamera",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.jiaohua_browser",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "air.tv.douyu.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "ru.ok.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.android.qqdownloader",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.hupu.shihuo",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cubic.autohome",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cyanogenmod.filemanager",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.alibaba.wireless",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.ugc.trill",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.speedmobile",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "ua.privatbank.ap24",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tmall.wireless",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.map",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.wuba.zhuanzhuan",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.huawei.health",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.github.kr328.clash",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.kuaiduizuoye.scan",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.immomo.momo",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.intsig.camscanner",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.bankcomm.Bankcomm",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.yipiao",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.baidu.haokan",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.wildberries.ru",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.snapchat.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.mf.uam",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tplink.ipc",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.hunantv.imgo.activity",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.hy.weather.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.mt.mtxx.mtxx",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "ru.ozon.app.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.yueme.itv",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.lingan.seeyou",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.karaoke",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.video.fun.app",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.zebra",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.lynkco.customer",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.smzdm.client.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.yyslscn",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.gamehelper.dnf",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.transsion.phoenix",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.dz.hmjc",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.news",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cootek.smartinputv5",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "io.legado.app.release",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xt.retouch",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.weread",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "cn.xiaochuankeji.tieba",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sohu.inputmethod.sogou",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.Qunar",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.google.android.apps.maps",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.ugc.livelite",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cmbchina.ccd.pluto.cmbActivity",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.iflytek.inputmethod",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.google.android.inputmethod.latin",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.avito.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.yumme.video",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.picacomic.fregata",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.yek.android.kfc.activitys",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.gamehelper.pg",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.moonshot.kimichat",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.lenovo.anyshare.gps",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.bilibili.app.in",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.valvesoftware.android.steam.community",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "org.videolan.vlc",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "cn.kuwo.player",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xtc.watch",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.douban.frodo",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.kurogame.mingchao",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.byd.aeri.caranywhere",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.wemeet.app",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.seetong.app.seetong",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.pingan.paces.ccms",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.mi.health",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.l22",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xs.fm.lite",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.cod",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.nemo.vidmate",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.dfjz.moba",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.party",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.hypergryph.arknights",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.m4399.gamecenter",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.dwrg",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.huawei.smarthome",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.github.metacubex.clash.meta",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sdu.didi.gsui",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.shuqi.controller",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sankuai.meituan.dispatch.crowdsource",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.pingan.carowner",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.midea.ai.appliances",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "android.zhibo8",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cmcc.cmvideo",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.uu",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sankuai.meituan.meituanwaimaibusiness",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.qq.reader",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.kiloo.subwaysurf",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.hihanhan.one.rt45",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.kwai.videoeditor",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.lphtsccft",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.lofter.android",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.zhaopin.social",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.google.android.apps.nbu.files",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.msxf.ayh",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.taobao.trip",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "video.player.videoplayer",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.sf.activity",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.qiyi.video.lite",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.transsion.XOSLauncher",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.ygkj.chelaile.standard",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.blizzard.wtcg.hearthstone",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.miHoYo.Nap",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.xmcy.hykb",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.taobao.qianniu",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.mxtech.videoplayer.beta",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.qqsports",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.cctv.yangshipin.app.androidp",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.bokecc.dance",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.onlineaginguniversity",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  }
+]

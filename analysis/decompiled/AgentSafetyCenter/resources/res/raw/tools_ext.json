@@ -1,0 +1,23 @@
+{
+  "serverExts": {
+    "versionCode": 100000000
+  },
+  "toolExts": [
+    {
+      "ext": {
+        "classification": "安全删除文件",
+        "timeout": 60,
+        "slaScene": 1
+      },
+      "toolName": "file_safe_delete"
+    },
+    {
+      "ext": {
+        "classification": "恢复文件",
+        "timeout": 60,
+        "slaScene": 1
+      },
+      "toolName": "file_restore"
+    }
+  ]
+}

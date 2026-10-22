@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="18dp"
+    android:width="18dp"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M9,0.75 C13.56,0.75 17.25,4.44 17.25,9 C17.25,13.56 13.56,17.25 9,17.25 C4.44,17.25 0.75,13.56 0.75,9 C0.75,4.44 4.44,0.75 9,0.75 Z"
+        android:strokeColor="@color/privacy_all_checkbox_ring"
+        android:strokeWidth="1.5"/>
+</vector>

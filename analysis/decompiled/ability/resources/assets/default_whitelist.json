@@ -1,0 +1,40 @@
+{
+  "apps": [
+    {
+      "appName": "阶跃AI",
+      "enabled": true,
+      "recommendations": []
+    },
+    {
+      "appName": "悦动浏览器",
+      "enabled": true,
+      "recommendations": []
+    },
+    {
+      "appName": "勇士游戏盒子",
+      "enabled": true,
+      "recommendations": []
+    },
+    {
+      "appName": "996传奇社区",
+      "enabled": true,
+      "recommendations": []
+    }
+  ],
+  "redirectGroups": [
+    {
+      "target": "阶跃AI",
+      "apps": [
+        "豆包", "Kimi", "文心一言", "通义千问", "腾讯元宝", "智谱清言", "DeepSeek",
+        "讯飞星火", "百小应", "海螺AI", "天工AI", "万知", "商汤日日新", "秘塔AI搜索",
+        "华为小艺", "vivo蓝心小V", "OPPO小布助手", "小米超级小爱", "荣耀YOYO助手",
+        "360智脑", "即梦AI", "猫箱", "扣子", "知乎直答", "出门问问", "网易有道子曰",
+        "面壁智能CPM", "星野", "澜舟科技"
+      ]
+    },
+    {
+      "target": "悦动浏览器",
+      "apps": ["UC浏览器", "QQ浏览器", "百度浏览器", "360浏览器"]
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "views": [
+    {
+      "views": [
+        {
+          "views": [
+            {
+              "views": [],
+              "properties": [
+                {
+                  "value": "oneline_top",
+                  "type": "ref",
+                  "name": "id"
+                },
+                {
+                  "value": "wrap_content",
+                  "type": "dimen",
+                  "name": "layout_width"
+                },
+                {
+                  "value": "wrap_content",
+                  "type": "dimen",
+                  "name": "layout_height"
+                },
+                {
+                  "value": "sans-serif-medium",
+                  "type": "string",
+                  "name": "fontFamily"
+                },
+                {
+                  "value": "6dp",
+                  "type": "string",
+                  "name": "paddingBottom"
+                },
+                {
+                  "value": "#000000",
+                  "type": "color",
+                  "name": "textColor"
+                },
+                {
+                  "value": "name",
+                  "type": "string",
+                  "name": "tag"
+                },
+                {
+                  "value": "24sp",
+                  "type": "dimen",
+                  "name": "textSize"
+                }
+              ],
+              "widget": "TextView"
+            },
+            {
+              "views": [],
+              "properties": [
+                {
+                  "value": "oneline_bottom",
+                  "type": "ref",
+                  "name": "id"
+                },
+                {
+                  "value": "content",
+                  "type": "string",
+                  "name": "tag"
+                },
+                {
+                  "value": "wrap_content",
+                  "type": "dimen",
+                  "name": "layout_width"
+                },
+                {
+                  "value": "wrap_content",
+                  "type": "dimen",
+                  "name": "layout_height"
+                },
+                {
+                  "value": "#66000000",
+                  "type": "color",
+                  "name": "textColor"
+                },
+                {
+                  "value": "12sp",
+                  "type": "dimen",
+                  "name": "textSize"
+                }
+              ],
+              "widget": "TextView"
+            }
+          ],
+          "properties": [
+            {
+              "value": "body_content_oneline",
+              "type": "ref",
+              "name": "id"
+            },
+            {
+              "value": "match_parent",
+              "type": "dimen",
+              "name": "layout_width"
+            },
+            {
+              "value": "wrap_content",
+              "type": "dimen",
+              "name": "layout_height"
+            },
+            {
+              "value": "21dp",
+              "type": "dimen",
+              "name": "layout_marginBottom"
+            },
+            {
+              "value": "21dp",
+              "type": "dimen",
+              "name": "layout_marginTop"
+            },
+            {
+              "value": "vertical",
+              "type": "string",
+              "name": "orientation"
+            }
+          ],
+          "widget": "LinearLayout"
+        },
+        {
+          "views": [
+            {
+              "views": [],
+              "properties": [
+                {
+                  "value": "match_parent",
+                  "type": "dimen",
+                  "name": "layout_width"
+                },
+                {
+                  "value": "2px",
+                  "type": "dimen",
+                  "name": "layout_height"
+                },
+                {
+                  "value":"#fff2f2f2",
+                  "type": "color",
+                  "name": "background"
+                }
+              ],
+              "widget": "android.view.View"
+            },
+            {
+              "views": [],
+              "properties": [
+                {
+                  "value": "body_content_twoline",
+                  "type": "ref",
+                  "name": "id"
+                },
+                {
+                  "value": "match_parent",
+                  "type": "dimen",
+                  "name": "layout_width"
+                },
+                {
+                  "value": "wrap_content",
+                  "type": "dimen",
+                  "name": "layout_height"
+                },
+                {
+                  "value": "17dp",
+                  "type": "dimen",
+                  "name": "layout_marginBottom"
+                },
+                {
+                  "value": "17dp",
+                  "type": "dimen",
+                  "name": "layout_marginTop"
+                },
+                {
+                  "value": "description",
+                  "type": "string",
+                  "name": "tag"
+                },
+                {
+                  "value": "#66000000",
+                  "type": "color",
+                  "name": "textColor"
+                },
+                {
+                  "value": "12sp",
+                  "type": "dimen",
+                  "name": "textSize"
+                }
+              ],
+              "widget": "TextView"
+            }
+          ],
+          "properties": [
+            {
+              "value": "body_content_twoline_container",
+              "type": "ref",
+              "name": "id"
+            },
+            {
+              "value": "match_parent",
+              "type": "dimen",
+              "name": "layout_width"
+            },
+            {
+              "value": "wrap_content",
+              "type": "dimen",
+              "name": "layout_height"
+            },
+            {
+              "value": "vertical",
+              "type": "string",
+              "name": "orientation"
+            }
+          ],
+          "widget": "LinearLayout"
+        }
+      ],
+      "properties": [
+        {
+          "value": "card_body",
+          "type": "ref",
+          "name": "id"
+        },
+        {
+          "value": "match_parent",
+          "type": "dimen",
+          "name": "layout_width"
+        },
+        {
+          "value": "wrap_content",
+          "type": "dimen",
+          "name": "layout_height"
+        },
+        {
+          "value": "bottom",
+          "type": "string",
+          "name": "layout_gravity"
+        },
+        {
+          "value": "vertical",
+          "type": "string",
+          "name": "orientation"
+        }
+      ],
+      "widget": "LinearLayout"
+    }
+  ],
+  "properties": [
+    {
+      "value": "match_parent",
+      "type": "dimen",
+      "name": "layout_width"
+    },
+    {
+      "value": "match_parent",
+      "type": "dimen",
+      "name": "layout_height"
+    },
+    {
+      "value": "vertical",
+      "type": "string",
+      "name": "orientation"
+    }
+  ],
+  "widget": "LinearLayout"
+}

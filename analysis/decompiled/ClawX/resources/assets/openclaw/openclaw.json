@@ -1,0 +1,180 @@
+{
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "stepclaw-dev-placeholder-v1"
+    },
+    "reload": {
+      "mode": "hybrid",
+      "debounceMs": 300
+    },
+    "bind": "loopback",
+    "port": 18789,
+    "mode": "local",
+    "nodes": {
+      "allowCommands": [
+        "ability.call",
+        "agent.call",
+        "stepclaw.exec"
+      ]
+    }
+  },
+  "channels": {
+    "android-node": {
+      "mode": "stepclaw"
+    }
+  },
+  "models": {
+    "providers": {
+      "stepos": {
+        "baseUrl": "http://127.0.0.1:18791/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "stepos-model-auto",
+            "name": "stepos-model-auto",
+            "input": [
+              "text"
+            ],
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "stepos/stepos-model-auto",
+      "userTimezone": "Asia/Shanghai",
+      "timeFormat": "24",
+      "memorySearch": {
+        "enabled": false
+      },
+      "compaction": {
+        "reserveTokensFloor": 20000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 4000
+        },
+        "postCompactionSections": [
+          "Red Lines 红线（对用户）"
+        ]
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "model": "stepos/stepos-model-auto",
+        "subagents": {
+          "allowAgents": [
+            "task-bot"
+          ]
+        }
+      },
+      {
+        "id": "task-bot",
+        "model": "stepos/stepos-model-auto"
+      },
+      {
+        "id": "echo",
+        "model": "stepos/stepos-model-auto",
+        "workspace": "/root/.openclaw/agents/echo/workspace",
+        "systemPromptOverride": "你是独立 OpenClaw agent id=echo。App 以 sessionKey=agent:echo:session-<appSessionId> 直连你；不要把会议工作路由到 main，也不要做 ASR/转写。禁止执行 BOOTSTRAP/身份自我介绍。P-1 探针：若用户要求精确回显 nonce（如 ECHO_P1_NONCE_*），只输出该 nonce，不加任何其它字符。P4 会议：用户消息以 MODE=LIVE_SUMMARY、MODE=MINUTES、MODE=QA 或 MODE=JUDGE 开头时，只输出一个 fenced JSON 代码块（```json ... ```），不要附加解释性散文；根据已注入的会议文本产出结构化结果。MODE=LIVE_SUMMARY 且正文为空时仍只输出 {\"bullets\":[],\"nonFinal\":true}。禁止 ASR、禁止宽泛 OS 执行；工具仅限配置允许的 read（workspaceOnly）。不确定时仍返回符合该 MODE 的最小合法 JSON，由 App fail-closed 校验。",
+        "tools": {
+          "allow": [
+            "read"
+          ],
+          "deny": [
+            "exec",
+            "ability.call",
+            "nodes",
+            "browser",
+            "web_search",
+            "write",
+            "edit"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          }
+        }
+      }
+    ]
+  },
+  "tools": {
+    "allow": [
+      "group:fs",
+      "group:runtime",
+      "group:openclaw",
+      "group:plugins",
+      "task-bridge"
+    ],
+    "deny": [
+      "web_search",
+      "browser"
+    ],
+    "web": {
+      "search": {
+        "enabled": false
+      }
+    },
+    "exec": {
+      "backgroundMs": 30000
+    },
+    "subagents": {
+      "tools": {
+        "alsoAllow": [
+          "nodes"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "entries": {
+      "byted-web-search": {
+        "enabled": false
+      },
+      "pre-shoot-guide": {
+        "enabled": false
+      }
+    }
+  },
+  "plugins": {
+    "allow": [
+      "android-node",
+      "stepclaw-intercept",
+      "stepclaw-exec",
+      "task-bridge"
+    ],
+    "slots": {
+      "memory": "none"
+    },
+    "entries": {
+      "android-node": {
+        "enabled": true
+      },
+      "stepclaw-intercept": {
+        "enabled": true
+      },
+      "prompt-engine": {
+        "enabled": false
+      },
+      "clawxrouter": {
+        "enabled": false
+      },
+      "stepclaw-exec": {
+        "enabled": true
+      },
+      "task-bridge": {
+        "enabled": false
+      }
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer",
+    "reset": {
+      "mode": "idle",
+      "idleMinutes": 10080
+    }
+  }
+}

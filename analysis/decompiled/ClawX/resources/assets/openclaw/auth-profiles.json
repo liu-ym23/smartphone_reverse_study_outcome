@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "profiles": {
+    "stepos:default": {
+      "type": "api_key",
+      "provider": "stepos",
+      "key": "proxy-placeholder"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+signature,file,startline,startcol,endline,endcol,properties
+Landroid/hardware/display/BackScreenAnimationInfo;->TYPE_AGENT:Ljava/lang/String;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,23,5,23,25,
+Landroid/hardware/display/BackScreenAnimationInfo;->TYPE_INPUT:Ljava/lang/String;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,27,5,27,25,
+Landroid/hardware/display/BackScreenAnimationInfo;->TYPE_OS_STATE:Ljava/lang/String;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,31,5,31,25,
+Landroid/hardware/display/BackScreenAnimationInfo;->TYPE_CUSTOM:Ljava/lang/String;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,35,5,35,25,
+Landroid/hardware/display/BackScreenAnimationInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,43,5,43,25,
+Landroid/hardware/display/BackScreenAnimationInfo;->getId()Ljava/lang/String;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,67,5,67,25,
+Landroid/hardware/display/BackScreenAnimationInfo;->getName()Ljava/lang/String;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,77,5,77,25,
+Landroid/hardware/display/BackScreenAnimationInfo;->getState()Ljava/lang/String;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,88,5,88,25,
+Landroid/hardware/display/BackScreenAnimationInfo;->getType()Ljava/lang/String;,vendor/stepos/frameworks/base/steposbase/core/java/android/hardware/display/BackScreenAnimationInfo.java,99,5,99,25,

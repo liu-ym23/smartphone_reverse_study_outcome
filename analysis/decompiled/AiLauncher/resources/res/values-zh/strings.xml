@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="amoo_agent_search_initial_hint">搜索智能体</string>
+    <string name="amoo_app_detail_install_app">安装应用</string>
+    <string name="amoo_store_agent_search_hint">搜索智能体</string>
+    <string name="amoo_store_agent_test_zone">智能体测试区</string>
+    <string name="amoo_store_connect_remote">连接远程智能体</string>
+    <string name="amoo_store_installed_skills">已安装Skill</string>
+    <string name="amoo_store_market_section">智能体市场</string>
+    <string name="amoo_store_my_agent">我的智能体</string>
+    <string name="amoo_store_placeholder">%1$s 内容待迁移</string>
+    <string name="amoo_store_search_empty_subtitle">试试其它关键词</string>
+    <string name="amoo_store_search_empty_title">没有匹配的已安装内容</string>
+    <string name="amoo_store_search_initial_hint">搜索技能</string>
+    <string name="amoo_store_search_title">搜索</string>
+    <string name="amoo_store_skill_community_works">社区作品</string>
+    <string name="amoo_store_skill_must_haves">装机必备</string>
+    <string name="amoo_store_skill_other">更多</string>
+    <string name="amoo_store_skill_search_hint">搜索技能名称</string>
+    <string name="amoo_store_skill_test_zone">Skill 测试区</string>
+    <string name="amoo_store_tab_agent">智能体</string>
+    <string name="amoo_store_tab_skill">技能</string>
+    <string name="amoo_tag_expired">已失效</string>
+    <string name="amoo_tag_new_version">新版本</string>
+    <string name="amoo_tag_testing">测试</string>
+    <string name="chat_artifact_expired_suffix">（已失效或不存在）</string>
+    <string name="chat_asr_waiting">正在识别语音</string>
+    <string name="list_page_empty">暂无内容</string>
+    <string name="list_page_loading">加载中…</string>
+    <string name="list_page_more">加载更多</string>
+    <string name="list_page_retry">加载失败，点击重试</string>
+    <string name="permissionx_access_background_location">后台访问位置信息</string>
+    <string name="permissionx_body_sensor_background">后台访问身体传感器</string>
+    <string name="permissionx_manage_external_storage">所有文件访问权限</string>
+    <string name="permissionx_post_notification">通知</string>
+    <string name="permissionx_request_install_packages">安装未知应用</string>
+    <string name="permissionx_system_alert_window">显示在其他应用的上层</string>
+    <string name="permissionx_write_settings">修改系统设置</string>
+    <string name="relative_time_days_ago">%1$d天前</string>
+    <string name="relative_time_hours_ago">%1$d小时前</string>
+    <string name="relative_time_just_now">刚刚</string>
+    <string name="relative_time_minutes_ago">%1$d分钟前</string>
+    <string name="relative_time_yesterday">昨天</string>
+    <string name="test_space_app_page_open_failed">无法打开应用页面</string>
+    <string name="test_space_env_prod">正式</string>
+</resources>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配Android WebView屏幕 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+    <title>图片查看器</title>
+    <style>
+        /* 页面基础样式 */
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 缩略图容器 */
+        .thumbnail-container {
+            width: 100%;
+            max-width: 300px; /* 初始小图宽度 */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* 缩略图样式 */
+        .thumbnail-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* 大图遮罩层（默认隐藏） */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* 大图样式 */
+        .large-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        /* 关闭按钮 */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<!-- 缩略图 -->
+<div class="thumbnail-container" id="thumbnail">
+    <img src="https://sns-na-i11.xhscdn.com/1040g2sg31qjetk5fnoj05o90u6ogbt2rs298jvo?imageView2/2/w/5000/h/5000/format/webp/q/90&ap=1&sc=ORIGINAL&sign=f285bbc9c4d4828197017e838761c73b&t=6952bb43"
+         alt="图片" class="thumbnail-img">
+</div>
+
+<!-- 大图查看层 -->
+<div class="overlay" id="overlay">
+    <button class="close-btn" id="closeBtn">×</button>
+    <img src="https://sns-na-i11.xhscdn.com/1040g2sg31qjetk5fnoj05o90u6ogbt2rs298jvo?imageView2/2/w/5000/h/5000/format/webp/q/90&ap=1&sc=ORIGINAL&sign=f285bbc9c4d4828197017e838761c73b&t=6952bb43"
+         alt="大图" class="large-img">
+</div>
+
+<script>
+    // 获取DOM元素
+    const thumbnail = document.getElementById('thumbnail');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // 点击缩略图显示大图
+    thumbnail.addEventListener('click', function() {
+        overlay.style.display = 'flex';
+    });
+
+    // 点击关闭按钮隐藏大图
+    closeBtn.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+
+    // 点击遮罩层空白处关闭大图
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            overlay.style.display = 'none';
+        }
+    });
+
+    // 支持返回键关闭（适配Android物理返回键）
+    window.addEventListener('popstate', function() {
+        if (overlay.style.display === 'flex') {
+            overlay.style.display = 'none';
+            // 阻止WebView返回上一页
+            history.pushState(null, null, window.location.href);
+        }
+    });
+    // 初始化历史记录
+    history.pushState(null, null, window.location.href);
+</script>
+</body>
+</html>

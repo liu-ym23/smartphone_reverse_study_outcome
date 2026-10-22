@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ack_card_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/ack_card_blur_tint"
+            android:background="@drawable/bg_takeover_ack_card_blur"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ack_card_content"
+            app:layout_constraintEnd_toEndOf="@+id/ack_card_content"
+            app:layout_constraintStart_toStartOf="@+id/ack_card_content"
+            app:layout_constraintTop_toTopOf="@+id/ack_card_content"/>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/ack_card_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/takeover_ack_padding_horizontal"
+            android:paddingVertical="@dimen/takeover_ack_padding_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/takeover_ack_icon_size"
+                android:layout_height="@dimen/takeover_ack_icon_size"
+                android:src="@drawable/ic_takeover_press"
+                android:contentDescription="@null"/>
+            <TextView
+                android:textSize="@dimen/takeover_ack_text_size"
+                android:textColor="@color/takeover_ack_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fullscreen_takeover_ack_card"
+                android:layout_marginStart="@dimen/takeover_ack_icon_text_gap"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

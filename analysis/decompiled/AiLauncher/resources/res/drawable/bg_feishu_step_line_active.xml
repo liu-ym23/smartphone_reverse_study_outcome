@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="center_vertical"
+        android:height="2dp">
+        <shape android:shape="line">
+            <stroke
+                android:width="2dp"
+                android:color="@color/feishu_step_dot_active"
+                android:dashWidth="4dp"
+                android:dashGap="3dp"/>
+        </shape>
+    </item>
+</layer-list>

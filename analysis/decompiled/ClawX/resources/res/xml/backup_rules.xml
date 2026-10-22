@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include
+        domain="file"
+        path="."/>
+    <exclude
+        domain="file"
+        path="user-data/credentials"/>
+    <exclude
+        domain="file"
+        path="user-data/identity"/>
+    <exclude
+        domain="file"
+        path="user-data/memory"/>
+    <exclude
+        domain="file"
+        path="openclaw/identity"/>
+</full-backup-content>

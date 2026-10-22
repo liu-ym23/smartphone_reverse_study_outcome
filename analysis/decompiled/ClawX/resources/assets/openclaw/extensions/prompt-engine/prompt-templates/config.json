@@ -1,0 +1,21 @@
+{
+  "version": "2.1",
+  "language": "zh",
+  "injectCurrentTime": "user",
+  "injectProjectContext": "user",
+  "injectRuntimeLine": "user",
+  "sections": {
+    "identity":        { "channel": "system", "source": "identity.md" },
+    "tooling":         { "channel": "system", "source": "tooling-header.md" },
+    "tool-call-style": { "channel": "system", "source": "tool-call-style.md" },
+    "safety":          { "channel": "system", "source": "safety.md" },
+    "skills-header":   { "channel": "system", "source": "skills-header.md" },
+    "memory-recall":   { "channel": "off",    "source": "memory-recall.md" },
+    "android-context": { "channel": "system", "source": "android-context.md" },
+    "cron-guidance":   { "channel": "system", "source": "cron-guidance.md" },
+    "workspace-info":  { "channel": "system", "source": "workspace-info.md" },
+    "silent-replies":  { "channel": "system", "source": "silent-replies.md" },
+    "heartbeat":       { "channel": "system", "source": "heartbeat.md" },
+    "messaging":       { "channel": "system", "source": "messaging.md" }
+  }
+}

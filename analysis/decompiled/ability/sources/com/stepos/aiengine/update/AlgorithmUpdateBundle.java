@@ -1,0 +1,66 @@
+package com.stepos.aiengine.update;
+
+import android.os.Bundle;
+import com.bytedance.apm.agent.v2.instrumentation.AppAgent;
+import java.util.List;
+import kotlin.Metadata;
+import kotlin.jvm.internal.k;
+
+@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0005\u0018\u0000 \u001a2\u00020\u0001:\u0001\u001aB\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0015\u0010\b\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u0006¢\u0006\u0004\b\b\u0010\tJ\u0015\u0010\f\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u0007¢\u0006\u0004\b\f\u0010\rJ\u0015\u0010\u000e\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u0007¢\u0006\u0004\b\u000e\u0010\rJ\u001d\u0010\u0010\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u00072\u0006\u0010\u000f\u001a\u00020\u0007¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0014\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0012\u001a\u00020\u0007¢\u0006\u0004\b\u0014\u0010\u0015R\u0011\u0010\u0019\u001a\u00020\u00168F¢\u0006\u0006\u001a\u0004\b\u0017\u0010\u0018¨\u0006\u001b"}, d2 = {"Lcom/stepos/aiengine/update/AlgorithmUpdateBundle;", "", "Landroid/os/Bundle;", "bundle", AppAgent.CONSTRUCT, "(Landroid/os/Bundle;)V", "", "", "getUpdatableAlgorithms", "()Ljava/util/List;", "algorithm", "", "hasBaseUpdate", "(Ljava/lang/String;)Z", "hasBaseModelUpdate", "plugin", "hasPluginUpdate", "(Ljava/lang/String;Ljava/lang/String;)Z", "algorithmId", "Lcom/stepos/aiengine/update/RemoteModelListBundle;", "getRemoteModels", "(Ljava/lang/String;)Lcom/stepos/aiengine/update/RemoteModelListBundle;", "", "getCheckTime", "()J", "checkTime", "Companion", "aiengine-api_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+/* loaded from: classes3.dex */
+public final class AlgorithmUpdateBundle {
+    public static final String KEY_CHECK_TIME = "check_time";
+    public static final String KEY_SUFFIX_MODEL = "model";
+    public static final String KEY_UPDATES = "updates";
+
+    /* renamed from: a, reason: collision with root package name */
+    public final Bundle f3535a;
+
+    public AlgorithmUpdateBundle(Bundle bundle) {
+        k.f(bundle, "bundle");
+        this.f3535a = bundle;
+    }
+
+    public final long getCheckTime() {
+        return this.f3535a.getLong(KEY_CHECK_TIME, -1L);
+    }
+
+    public final RemoteModelListBundle getRemoteModels(String algorithmId) {
+        k.f(algorithmId, "algorithmId");
+        Bundle bundle = this.f3535a.getBundle(algorithmId.concat(".model"));
+        if (bundle == null) {
+            return null;
+        }
+        return new RemoteModelListBundle(bundle);
+    }
+
+    public final List<String> getUpdatableAlgorithms() {
+        if (getCheckTime() == -1) {
+            return null;
+        }
+        return this.f3535a.getStringArrayList(KEY_UPDATES);
+    }
+
+    public final boolean hasBaseModelUpdate(String algorithm) {
+        k.f(algorithm, "algorithm");
+        return hasBaseUpdate(algorithm);
+    }
+
+    public final boolean hasBaseUpdate(String algorithm) {
+        k.f(algorithm, "algorithm");
+        List<String> updatableAlgorithms = getUpdatableAlgorithms();
+        return updatableAlgorithms != null && updatableAlgorithms.contains(algorithm);
+    }
+
+    public final boolean hasPluginUpdate(String algorithm, String plugin) {
+        k.f(algorithm, "algorithm");
+        k.f(plugin, "plugin");
+        List<String> updatableAlgorithms = getUpdatableAlgorithms();
+        if (updatableAlgorithms != null) {
+            if (updatableAlgorithms.contains(algorithm + "-" + plugin)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}

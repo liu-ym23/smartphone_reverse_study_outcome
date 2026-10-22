@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/stepos_dialog_list_item_pressed"/>
+            <corners android:radius="@dimen/stepos_dialog_list_item_corner_radius"/>
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/stepos_dialog_list_item_selected"/>
+            <corners android:radius="@dimen/stepos_dialog_list_item_corner_radius"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="@dimen/stepos_dialog_list_item_corner_radius"/>
+        </shape>
+    </item>
+</selector>

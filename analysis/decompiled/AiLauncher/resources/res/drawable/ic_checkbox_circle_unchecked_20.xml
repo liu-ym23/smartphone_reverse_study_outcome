@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="20dp"
+    android:width="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="@color/oobe_agreement_checkbox_fill"
+        android:pathData="M10,1.11 C14.91,1.11 18.89,5.09 18.89,10 C18.89,14.91 14.91,18.89 10,18.89 C5.09,18.89 1.11,14.91 1.11,10 C1.11,5.09 5.09,1.11 10,1.11 Z"
+        android:strokeColor="@color/oobe_agreement_checkbox_stroke"
+        android:strokeWidth="1.11"/>
+</vector>

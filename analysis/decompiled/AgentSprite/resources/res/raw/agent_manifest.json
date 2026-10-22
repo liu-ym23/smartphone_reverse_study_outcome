@@ -1,0 +1,842 @@
+{
+  "_doc": [
+    "manifest v2: 每个 AgentState = 一场表演 = 可选 background + 必填 body。",
+    "place 不再声明 background；同一场景下不同 state 可有或无背景。",
+    "lines 仅写在 body 内。",
+    "Entry 格式见 SDK AssetManifest 文档。"
+  ],
+  "agents": {
+    "default": {
+
+      "_states_doc": [
+        "顶层 states = place=NONE 或 place 未覆盖时的默认表演。",
+        "{ \"background\": [...], \"body\": { drawable|pag|frames|... } }"
+      ],
+      "states": {
+        "thinking": {
+          "meta": { "name": "任务执行中-工作中", "desc": "任务执行中循环动画" },
+          "body": {
+            "pag": "thinking.pag",
+            "loop": -1
+          }
+        },
+        "awaiting_user": {
+          "meta": { "name": "任务待处理-等待用户确认", "desc": "任务待处理循环动画" },
+          "body": {
+            "pag": "awaiting_user.pag",
+            "loop": -1
+          }
+        },
+        "success": {
+          "meta": { "name": "任务完成-庆祝", "desc": "任务完成单次动画" },
+          "body": {
+            "pag": "success.pag",
+            "loop": 1
+          }
+        },
+        "error": {
+          "meta": { "name": "任务失败-沮丧", "desc": "任务失败单次动画" },
+          "body": {
+            "pag": "error.pag",
+            "loop": 1
+          }
+        },
+        "idle_listening_music": {
+          "meta": { "name": "空闲态-听歌", "desc": "空闲态下的小跃听歌动画" },
+          "body": {
+            "pag": "idle_listening_music.pag",
+            "loop": -1
+          }
+        },
+        "idle_loafing": {
+          "meta": { "name": "空闲态-摸鱼", "desc": "空闲态下的小跃摸鱼动画" },
+          "body": {
+            "pag": "idle_loafing.pag",
+            "loop": -1
+          }
+        },
+        "idle_exercise": {
+          "meta": { "name": "空闲态-锻炼", "desc": "空闲态下的小跃锻炼动画" },
+          "body": {
+            "pag": "idle_exercise.pag",
+            "loop": -1
+          }
+        },
+        "idle_flying": {
+          "meta": { "name": "空闲态-飞起来了", "desc": "空闲态下的小跃飞行动画" },
+          "body": {
+            "pag": "idle_flying.pag",
+            "loop": -1
+          }
+        },
+        "idle_night": {
+          "meta": { "name": "睡眠时间-睡觉", "desc": "睡眠时间循环动画" },
+          "body": {
+            "pag": "idle_night.pag",
+            "loop": -1
+          }
+        },
+        "idle_wakeup": {
+          "meta": { "name": "交互-戳醒", "desc": "睡眠状态下单击小跃后被戳醒动画" },
+          "body": {
+            "pag": "idle_wakeup.pag",
+            "loop": -1
+          }
+        },
+
+        "_html_pet_doc": "Gamification demo — agent body is a tiny WebView.",
+        "html_pet": {
+          "meta": { "name": "HTML 宠物（演示）", "desc": "" },
+          "body": {
+            "html": "<!DOCTYPE html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><style>html,body{margin:0;padding:0;height:100%;background:transparent;display:flex;align-items:center;justify-content:center;font-family:sans-serif;}.pet{width:88%;height:88%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#FFD86A 0%,#E9692E 60%,#A03C12 100%);border-radius:50%;box-shadow:0 6px 18px rgba(176,79,18,.45);animation:bounce 1.6s ease-in-out infinite;}.face{font-size:2.2rem;text-shadow:0 2px 4px rgba(0,0,0,.25);}@keyframes bounce{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-6%) scale(1.04);}}</style></head><body><div class='pet'><span class='face'>(\u00b4\u30fb\u03c9\u30fb\u0060)</span></div></body></html>",
+            "sandbox": true,
+            "lines": "agent_lines_html_pet"
+          }
+        }
+      },
+
+      "emotions": {
+        "leisure":    "emo_leisure",
+        "love":       "emo_love",
+        "sweat":      "emo_sweat",
+        "celebrate":  "emo_celebrate",
+        "question":   "emo_question",
+        "fallen":     "emo_fallen",
+        "thumbs_up":  "emo_thumbs_up",
+        "star_eyes":  "emo_star_eyes",
+        "frustrated": "emo_frustrated",
+        "cry":        "emo_cry"
+      },
+
+      "_places_doc": [
+        "每个 place 可声明 states（该场景下的 state 覆盖）与 foreground。",
+        "未覆盖的 state 回落到顶层 states（整段 StateSpec，不拆 bg/body）。"
+      ],
+      "places": {
+
+        "launcher": {
+          "_doc": "桌面 / 系统启动器 — agent 在桌面待机，用通用 idle 形象，无额外背景",
+          "states": {
+            "thinking": {
+              "meta": { "name": "任务执行中-工作中", "desc": "任务执行中循环动画" },
+              "body": {
+                "pag": "thinking.pag",
+                "loop": -1
+              }
+            },
+            "awaiting_user": {
+              "meta": { "name": "任务待处理-等待用户确认", "desc": "任务待处理循环动画" },
+              "body": {
+                "pag": "awaiting_user.pag",
+                "loop": -1
+              }
+            },
+            "success": {
+              "meta": { "name": "任务完成-庆祝", "desc": "任务完成单次动画" },
+              "body": {
+                "pag": "success.pag",
+                "loop": 1
+              }
+            },
+            "error": {
+              "meta": { "name": "任务失败-沮丧", "desc": "任务失败单次动画" },
+              "body": {
+                "pag": "error.pag",
+                "loop": 1
+              }
+            },
+            "speed_up": {
+              "meta": { "name": "交互-催促干活", "desc": "执行任务中单击小跃后加速干活动画" },
+              "body": {
+                "pag": "speed_up.pag",
+                "loop": -1,
+                "speed": 2.0
+              }
+            },
+            "idle_listening_music": {
+              "meta": { "name": "空闲态-听歌", "desc": "空闲态下的小跃听歌动画" },
+              "body": {
+                "pag": "idle_listening_music.pag",
+                "loop": -1
+              }
+            },
+            "idle_exercise": {
+              "meta": { "name": "空闲态-锻炼", "desc": "空闲态下的小跃锻炼动画" },
+              "body": {
+                "pag": "idle_exercise.pag",
+                "loop": -1
+              }
+            },
+            "idle_loafing": {
+              "meta": { "name": "空闲态-摸鱼", "desc": "空闲态下的小跃摸鱼动画" },
+              "body": {
+                "pag": "idle_loafing.pag",
+                "loop": -1
+              }
+            },
+            "idle_flying": {
+              "meta": { "name": "空闲态-飞起来了", "desc": "空闲态下的小跃飞行动画" },
+              "body": {
+                "pag": "idle_flying.pag",
+                "loop": -1
+              }
+            },
+            "idle_night": {
+              "meta": { "name": "睡眠时间-睡觉", "desc": "睡眠时间循环动画" },
+              "body": {
+                "pag": "idle_night.pag",
+                "loop": -1
+              }
+            },
+            "idle_wakeup": {
+              "meta": { "name": "交互-戳醒", "desc": "睡眠状态下单击小跃后被戳醒动画" },
+              "body": {
+                "pag": "idle_wakeup.pag",
+                "loop": -1
+              }
+            },
+            "idle_safe": {
+              "meta": { "name": "安全态-环境安全待机", "desc": "安全态下的安全待机动画" },
+              "body": {
+                "frames": "idle_safe_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "thinking_safe": {
+              "meta": { "name": "安全态-安全模式执行中", "desc": "安全态下的安全执行动画" },
+              "body": {
+                "frames": "thinking_safe_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "gui_operate": {
+              "meta": { "name": "安全态-GUI Agent执行操作中", "desc": "安全态下的GUIAgent执行动画" },
+              "body": {
+                "frames": "gui_operate_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "awaiting_user_danger": {
+              "meta": { "name": "安全态-高风险动作检测", "desc": "安全态下的高风险动作检测动画" },
+              "body": {
+                "frames": "awaiting_user_danger_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "interrupted": {
+              "meta": { "name": "安全态-已拦截", "desc": "安全态下的拦截动画" },
+              "body": {
+                "frames": "interrupted_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "awaiting_user_authorize": {
+              "meta": { "name": "安全态-等待用户授权", "desc": "安全态下的等待用户授权动画" },
+              "body": {
+                "pag": "awaiting_user_authorize.pag",
+                "loop": -1
+              }
+            },
+            "amoo_home_screen": {
+              "meta": { "name": "AMOO-首页", "desc": "Amoo首页动画" },
+              "body": {
+                "frames": "amoo_home_screen_frames",
+                "fps": 30,
+                "loop": 1
+              }
+            },
+            "amoo_keyboard_shown": {
+              "meta": { "name": "AMOO-键盘弹出", "desc": "Amoo键盘弹出时动画" },
+              "body": {
+                "frames": "amoo_keyboard_shown_frames",
+                "fps": 30,
+                "loop": 1
+              }
+            },
+            "network_offline": {
+              "meta": { "name": "断网态-网络断开", "desc": "断网状态使用任务失败的error循环动画" },
+              "body": {
+                "pag": "error.pag",
+                "loop": 1
+              }
+            }
+          }
+        },
+
+        "skill_market": {
+          "_doc": "Skill 市场 — 技能商店，agent 展示/选购技能",
+          "states": {
+            "browsing": {
+              "meta": { "name": "水产市场-浏览中", "desc": "水产市场浏览中动画" },
+              "background": ["skill_market_bg"],
+              "body": {
+                "pag": "skill_market_browsing.pag",
+                "loop": -1,
+                "fps": 30
+              }
+            },
+            "early_installing": {
+              "meta": { "name": "水产市场-即将开始安装", "desc": "开始安装后的前10s动画" },
+              "background": ["skill_market_bg"],
+              "body": {
+                "pag": "skill_market_early_installing.pag",
+                "loop": -1
+              }
+            },
+            "installing": {
+              "meta": { "name": "水产市场-安装中", "desc": "水产市场安装中动画" },
+              "background": ["skill_market_bg"],
+              "body": {
+                "pag": "skill_market_installing.pag",
+                "loop": -1
+              }
+            },
+            "installed": {
+              "meta": { "name": "水产市场-安装完成", "desc": "水产市场安装完成动画" },
+              "background": ["skill_market_bg"],
+              "body": {
+                "pag": "skill_market_installed.pag",
+                "loop": -1
+              }
+            }
+          }
+        },
+
+        "repair_room": {
+          "_doc": "修理室 — 错误/故障恢复场景",
+          "states": {
+            "idle": {
+              "meta": { "name": "修理室-自检", "desc": "修理室固定动画" },
+              "background": ["repair_room_idle_bg"],
+              "body": {
+                "pag": "repair_room_idle.pag",
+                "loop": -1,
+                "fps": 30
+              }
+            }
+          }
+        },
+
+        "agent_space": {
+          "_doc": "Agent 空间 — AgentPlace.AGENTSPACE 对应场景",
+          "states": {
+            "idle": {
+              "meta": { "name": "Agent空间-首页", "desc": "Agent空间固定动画" },
+              "background": ["agent_space_bg"],
+              "body": {
+                "pag": "agent_space_idle.pag",
+                "loop": -1,
+                "fps": 30
+              }
+            }
+          }
+        },
+
+        "chat_view": {
+          "_doc": "对话界面 — agent 与用户实时交流",
+          "states": {
+            "idle": {
+              "meta": { "name": "对话界面-首页", "desc": "显示对话界面首页图片" },
+              "body": { "drawable": "chat_view_idle"}
+            },
+            "thinking": {
+              "meta": { "name": "对话界面-任务执行中", "desc": "显示对话界面任务执行中图片" },
+              "body": { "drawable": "chat_view_thinking"}
+            }
+          }
+        },
+
+        "lock_screen": {
+          "_doc": "锁屏界面 — AgentPlace.LOCK_SCREEN 对应场景",
+          "states": {
+            "thinking": {
+              "meta": { "name": "任务执行中-工作中", "desc": "任务执行中循环动画" },
+              "body": {
+                "pag": "thinking.pag",
+                "loop": -1
+              }
+            },
+            "awaiting_user": {
+              "meta": { "name": "任务待处理-等待用户确认", "desc": "任务待处理循环动画" },
+              "body": {
+                "pag": "awaiting_user.pag",
+                "loop": -1
+              }
+            },
+            "success": {
+              "meta": { "name": "任务完成-庆祝", "desc": "任务完成单次动画" },
+              "body": {
+                "pag": "success.pag",
+                "loop": 1
+              }
+            },
+            "error": {
+              "meta": { "name": "任务失败-沮丧", "desc": "任务失败单次动画" },
+              "body": {
+                "pag": "error.pag",
+                "loop": 1
+              }
+            },
+            "speed_up": {
+              "meta": { "name": "交互-催促干活", "desc": "执行任务中单击小跃后加速干活动画" },
+              "body": {
+                "pag": "speed_up.pag",
+                "loop": -1,
+                "speed": 2.0
+              }
+            },
+            "idle_listening_music": {
+              "meta": { "name": "空闲态-听歌", "desc": "空闲态下的小跃听歌动画" },
+              "body": {
+                "pag": "idle_listening_music.pag",
+                "loop": -1
+              }
+            },
+            "idle_exercise": {
+              "meta": { "name": "空闲态-锻炼", "desc": "空闲态下的小跃锻炼动画" },
+              "body": {
+                "pag": "idle_exercise.pag",
+                "loop": -1
+              }
+            },
+            "idle_loafing": {
+              "meta": { "name": "空闲态-摸鱼", "desc": "空闲态下的小跃摸鱼动画" },
+              "body": {
+                "pag": "idle_loafing.pag",
+                "loop": -1
+              }
+            },
+            "idle_flying": {
+              "meta": { "name": "空闲态-飞起来了", "desc": "空闲态下的小跃飞行动画" },
+              "body": {
+                "pag": "idle_flying.pag",
+                "loop": -1
+              }
+            },
+            "idle_night": {
+              "meta": { "name": "睡眠时间-睡觉", "desc": "睡眠时间循环动画" },
+              "body": {
+                "pag": "idle_night.pag",
+                "loop": -1
+              }
+            },
+            "idle_wakeup": {
+              "meta": { "name": "交互-戳醒", "desc": "睡眠状态下单击小跃后被戳醒动画" },
+              "body": {
+                "pag": "idle_wakeup.pag",
+                "loop": -1
+              }
+            },
+            "idle_safe": {
+              "meta": { "name": "安全态-环境安全待机", "desc": "安全态下的安全待机动画" },
+              "body": {
+                "frames": "idle_safe_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "thinking_safe": {
+              "meta": { "name": "安全态-安全模式执行中", "desc": "安全态下的安全执行动画" },
+              "body": {
+                "frames": "thinking_safe_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "gui_operate": {
+              "meta": { "name": "安全态-GUI Agent执行操作中", "desc": "安全态下的GUIAgent执行动画" },
+              "body": {
+                "frames": "gui_operate_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "awaiting_user_danger": {
+              "meta": { "name": "安全态-高风险动作检测", "desc": "安全态下的高风险动作检测动画" },
+              "body": {
+                "frames": "awaiting_user_danger_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "interrupted": {
+              "meta": { "name": "安全态-已拦截", "desc": "安全态下的拦截动画" },
+              "body": {
+                "frames": "interrupted_frames",
+                "fps": 8,
+                "loop": -1
+              }
+            },
+            "awaiting_user_authorize": {
+              "meta": { "name": "安全态-等待用户授权", "desc": "安全态下的等待用户授权动画" },
+              "body": {
+                "pag": "awaiting_user_authorize.pag",
+                "loop": -1
+              }
+            },
+            "network_offline": {
+              "meta": { "name": "断网态-网络断开", "desc": "断网状态使用任务失败的error循环动画" },
+              "body": {
+                "pag": "error.pag",
+                "loop": 1
+              }
+            }
+          }
+        },
+
+        "oobe": {
+          "states": {
+            "oobe_entry": {
+              "meta": { "name": "OOBE-首入场", "desc": "OOBE首入场动画" },
+              "body": {
+                "pag": "oobe_entry.pag",
+                "loop": -1
+              }
+            },
+            "oobe_entry_idle": {
+              "meta": { "name": "OOBE-首入场待机", "desc": "OOBE首入场待机动画" },
+              "body": {
+                "pag": "oobe_entry_idle.pag",
+                "loop": -1
+              }
+            },
+            "oobe_entry_slide": {
+              "meta": { "name": "OOBE-侧入场", "desc": "OOBE侧入场动画" },
+              "body": {
+                "pag": "oobe_entry_slide.pag",
+                "loop": -1
+              }
+            },
+            "oobe_listening_right": {
+              "meta": { "name": "OOBE-录制唤醒词聆听(右)", "desc": "OOBE聆听(右)动画" },
+              "body": {
+                "pag": "oobe_listening_right.pag",
+                "loop": -1
+              }
+            },
+            "oobe_listening_left": {
+              "meta": { "name": "OOBE-录制唤醒词聆听(左)", "desc": "OOBE聆听(左)动画" },
+              "body": {
+                "pag": "oobe_listening_left.pag",
+                "loop": -1
+              }
+            },
+            "oobe_all_passed": {
+              "meta": { "name": "OOBE-录制唤醒词全部正确", "desc": "OOBE录制唤醒词全部正确动画" },
+              "body": {
+                "pag": "oobe_all_passed.pag",
+                "loop": -1
+              }
+            },
+            "oobe_excellent": {
+              "meta": { "name": "OOBE-唤醒非常棒", "desc": "OOBE唤醒非常棒动画" },
+              "body": {
+                "pag": "oobe_excellent.pag",
+                "loop": -1
+              }
+            },
+            "oobe_wake": {
+              "meta": { "name": "OOBE-呼唤", "desc": "OOBE呼唤动画" },
+              "body": {
+                "pag": "oobe_wake.pag",
+                "loop": -1
+              }
+            },
+            "oobe_greet": {
+              "meta": { "name": "OOBE-打招呼", "desc": "OOBE打招呼动画" },
+              "body": {
+                "pag": "oobe_greet.pag",
+                "loop": -1
+              }
+            },
+            "oobe_wear_glasses": {
+              "meta": { "name": "OOBE-戴眼镜", "desc": "OOBE戴眼镜动画" },
+              "body": {
+                "pag": "oobe_wear_glasses.pag",
+                "loop": -1
+              }
+            },
+            "oobe_wear_glasses_ok": {
+              "meta": { "name": "OOBE-戴眼镜且显示OK", "desc": "OOBE戴眼镜OK动画" },
+              "body": {
+                "pag": "oobe_wear_glasses_ok.pag",
+                "loop": -1
+              }
+            },
+            "oobe_smile": {
+              "meta": { "name": "OOBE-微笑", "desc": "OOBE微笑动画" },
+              "body": {
+                "pag": "oobe_smile.pag",
+                "loop": -1
+              }
+            },
+            "oobe_confirm": {
+              "meta": { "name": "OOBE-确认", "desc": "OOBE确认动画" },
+              "body": {
+                "pag": "oobe_confirm.pag",
+                "loop": -1
+              }
+            },
+            "oobe_waiting": {
+              "meta": { "name": "OOBE-等待", "desc": "OOBE等待动画" },
+              "body": {
+                "pag": "oobe_waiting.pag",
+                "loop": -1
+              }
+            }
+          }
+        },
+
+        "back_screen": {
+          "_doc": "副屏 / 背屏 — states=应用 AgentState；input_events=硬件瞬时；os_states=基础 OS；special=开机向导等 SPECIAL；basic=天气轮播等 Basic；repeat=0 循环，>=1 播完恢复",
+          "states": {
+            "idle": {
+              "meta": { "name": "空闲态", "desc": "系统无任务、无用户交互、无通知时的待机动画" },
+              "body": { "raw": "agent_pixel_idle", "repeat": 0 }
+            },
+            "wake_voice": {
+              "meta": { "name": "唤醒态-语音唤醒", "desc": "通过语音唤醒 Amoo 后显示的状态" },
+              "body": { "raw": "agent_pixel_wake_voice", "repeat": 1 }
+            },
+            "wake_ai_key_click": {
+              "meta": { "name": "唤醒态-AI键单击", "desc": "单击 AI 键唤醒 Amoo 后显示的状态" },
+              "body": { "raw": "agent_pixel_wake_ai_key_click", "repeat": 1 }
+            },
+            "wake_ai_key_long_click": {
+              "meta": { "name": "唤醒态-AI键长按", "desc": "长按 AI 键唤醒 Amoo 后显示的状态" },
+              "body": { "raw": "agent_pixel_wake_ai_key_long_click", "repeat": 1 }
+            },
+            "wake_headset": {
+              "meta": { "name": "唤醒态-耳机按键", "desc": "按耳机键唤醒 Amoo 后显示的状态" },
+              "body": { "raw": "agent_pixel_wake_headset", "repeat": 1 }
+            },
+            "listening": {
+              "meta": { "name": "活跃态-聆听", "desc": "语音输入时的聆听循环动画" },
+              "body": { "raw": "agent_pixel_listening", "repeat": 0 }
+            },
+            "thinking": {
+              "meta": { "name": "活跃态-思考中", "desc": "agent 任务思考中循环动画" },
+              "body": { "raw": "agent_pixel_thinking", "repeat": 0 }
+            },
+            "executing": {
+              "meta": { "name": "活跃态-执行中", "desc": "agent 任务开始执行的循环动画" },
+              "body": { "raw": "agent_pixel_executing", "repeat": 0 }
+            },
+            "speaking": {
+              "meta": { "name": "活跃态-说话中", "desc": "TTS 播报时的循环动画" },
+              "body": { "raw": "agent_pixel_speaking", "repeat": 0 }
+            },
+            "success": {
+              "meta": { "name": "任务状态-完成", "desc": "任务执行完成的动画" },
+              "body": { "raw": "agent_pixel_success", "repeat": 0 }
+            },
+            "error": {
+              "meta": { "name": "任务状态-失败", "desc": "任务执行失败的动画" },
+              "body": { "raw": "agent_pixel_error", "repeat": 0 }
+            },
+            "pending": {
+              "meta": { "name": "任务状态-待接管", "desc": "任务待接管循环动画" },
+              "body": { "raw": "agent_pixel_awaiting_user", "repeat": 0 }
+            },
+            "task_wait": {
+              "meta": { "name": "任务状态-等待", "desc": "任务等待循环动画" },
+              "body": { "raw": "agent_pixel_awaiting_user", "repeat": 0 }
+            },
+            "task_running": {
+              "meta": { "name": "任务状态-执行中", "desc": "任务执行中循环动画" },
+              "body": { "raw": "agent_pixel_executing", "repeat": 0 }
+            },
+            "task_success": {
+              "meta": { "name": "任务状态-成功", "desc": "任务执行完成的动画" },
+              "body": { "raw": "agent_pixel_success", "repeat": 0 }
+            },
+            "task_error": {
+              "meta": { "name": "任务状态-错误", "desc": "任务执行失败的动画" },
+              "body": { "raw": "agent_pixel_error", "repeat": 0 }
+            },
+            "thinking_safe": {
+              "meta": { "name": "安全态-安全模式执行中", "desc": "安全态下的安全执行动画" },
+              "body": { "raw": "agent_pixel_thinking", "repeat": 0 }
+            },
+            "awaiting_user": {
+              "meta": { "name": "任务待处理-等待用户确认", "desc": "任务待处理循环动画" },
+              "body": { "raw": "agent_pixel_awaiting_user", "repeat": 0 }
+            },
+            "awaiting_user_danger": {
+              "meta": { "name": "安全态-高风险动作检测", "desc": "安全态下的高风险动作检测动画" },
+              "body": { "raw": "agent_pixel_awaiting_user", "repeat": 0 }
+            },
+            "awaiting_user_authorize": {
+              "meta": { "name": "安全态-等待用户授权", "desc": "安全态下的等待用户授权动画" },
+              "body": { "raw": "agent_pixel_awaiting_user", "repeat": 0 }
+            },
+            "idle_loafing": {
+              "meta": { "name": "空闲态-摸鱼", "desc": "空闲态下的小跃摸鱼动画" },
+              "body": { "raw": "agent_pixel_idle_loafing", "repeat": 0 }
+            },
+            "idle_night": {
+              "meta": { "name": "睡眠时间-睡觉", "desc": "睡眠时间循环动画" },
+              "body": { "raw": "agent_pixel_idle_night", "repeat": 0 }
+            },
+            "idle_safe": {
+              "meta": { "name": "安全态-环境安全待机", "desc": "安全态下的安全待机动画" },
+              "body": { "raw": "agent_pixel_idle", "repeat": 0 }
+            },
+            "fallback": {
+              "meta": { "name": "兜底默认", "desc": "默认兜底动画" },
+              "body": { "raw": "agent_pixel_idle", "repeat": 0 }
+            }
+          },
+          "input_events": {
+            "capactive_key_double_tap": {
+                "meta": { "name": "交互-电容键双击", "desc": "电容键双击后的瞬态动画" },
+                "body": { "raw": "agent_pixel_error", "repeat": 1 }
+            }
+          },
+          "_os_states_doc": "基础 OS 状态（占位素材，待 UI 替换）：优先级 incoming_call>missed_call>super_low_battery>low_battery>unread_sms；持续状况模型，repeat=0 循环常驻显示，状况解除后回落 agent。incoming_call 为特权态：豁免主屏亮门禁、延长超时、不被灭屏消费（详见 BackScreen_OS_State_Design.md）",
+          "os_states": {
+            "incoming_call": {
+              "meta": { "name": "系统提醒-来电中", "desc": "来电响铃中循环动画" },
+              "body": { "raw": "agent_pixel_incoming_call", "repeat": 0 }
+            },
+            "missed_call": {
+              "meta": { "name": "系统提醒-未接来电", "desc": "未接来电提醒循环动画" },
+              "body": { "raw": "agent_pixel_missed_call", "repeat": 0 }
+            },
+            "super_low_battery": {
+              "meta": { "name": "系统提醒-电量极低", "desc": "电量低于10%提醒循环动画" },
+              "body": { "raw": "agent_pixel_super_low_battery", "repeat": 0 }
+            },
+            "low_battery": {
+              "meta": { "name": "系统提醒-电量偏低", "desc": "电量低于20%提醒循环动画" },
+              "body": { "raw": "agent_pixel_low_battery", "repeat": 0 }
+            },
+            "unread_sms": {
+              "meta": { "name": "系统提醒-未读短信", "desc": "未读短信提醒循环动画" },
+              "body": { "raw": "agent_pixel_unread_sms", "repeat": 0 }
+            }
+          },
+          "_special_doc": "SPECIAL 层（system_server）：与 states 隔离，无命中不回落 states.fallback。boot_guide=首次开机/OTA 背屏朝上引导，finite repeat。scene_camera/scene_alarm=占用循环图标。camera_capturing/alarm_ringing=倒计时结束有限动画。",
+          "special": {
+            "boot_guide": {
+              "meta": { "name": "开机向导-背屏引导", "desc": "首次开机/恢复出厂/OTA 后首次背屏朝上播放（占位）" },
+              "body": { "raw": "agent_pixel_boot_guide", "repeat": 1 }
+            },
+            "scene_camera_preview": {
+              "meta": { "name": "相机-占用", "desc": "识别到相机使用时图标"},
+              "body": { "raw": "agent_pixel_scene_camera", "repeat": 0 }
+            },
+            "camera_capturing": { 
+              "meta": { "name": "相机-拍照", "desc": "相机拍照动画" },
+              "body": { "raw": "agent_pixel_camera_capturing", "repeat": 1 }
+            },
+            "camera_capture_loading": {
+              "meta": { "name": "相机-拍照中", "desc": "相机拍照中动画" },
+              "body": { "raw": "agent_pixel_loading", "repeat": 0 }
+            }
+          },
+          "_notify_doc": "NOTIFY 层：IM 三方应用图标动画。只含图标（入场缩放），未读数由 framework 叠在下行。repeat=0+loop=false：播完停在末帧。",
+          "notify": {
+            "im_lark": {
+              "meta": { "name": "IM-飞书", "desc": "飞书未读图标" },
+              "body": { "raw": "agent_pixel_im_lark", "repeat": 0 }
+            },
+            "im_wechat": {
+              "meta": { "name": "IM-微信", "desc": "微信未读图标" },
+              "body": { "raw": "agent_pixel_im_wechat", "repeat": 0 }
+            },
+            "im_dingtalk": {
+              "meta": { "name": "IM-钉钉", "desc": "钉钉未读图标" },
+              "body": { "raw": "agent_pixel_im_dingtalk", "repeat": 0 }
+            },
+            "im_wework": {
+              "meta": { "name": "IM-企微", "desc": "企业微信未读图标" },
+              "body": { "raw": "agent_pixel_im_wework", "repeat": 0 }
+            }
+          },
+          "_basic_doc": "Basic 层（system_server）：TIME↔天气轮播用 weather_*；与 states 隔离，无 binding 不切换、不回落 fallback。",
+          "basic": {
+            "weather_sunny": {
+              "meta": { "name": "天气-晴/sunny", "desc": "天气-晴" },
+              "body": { "raw": "agent_pixel_weather_sunny", "repeat": 0 }
+            },
+            "weather_cloudy": {
+              "meta": { "name": "天气-多云", "desc": "天气-多云" },
+              "body": { "raw": "agent_pixel_weather_cloudy", "repeat": 0 }
+            },
+            "weather_rain": {
+              "meta": { "name": "天气-雨", "desc": "天气-雨" },
+              "body": { "raw": "agent_pixel_weather_rain", "repeat": 0 }
+            },
+            "weather_snow": {
+              "meta": { "name": "天气-雪", "desc": "天气-雪" },
+              "body": { "raw": "agent_pixel_weather_snow", "repeat": 0 }
+            },
+            "weather_wind": {
+              "meta": { "name": "天气-风", "desc": "天气-风" },
+              "body": { "raw": "agent_pixel_weather_wind", "repeat": 0 }
+            },
+            "weather_fog": {
+              "meta": { "name": "天气-雾", "desc": "天气-雾" },
+              "body": { "raw": "agent_pixel_weather_wind", "repeat": 0 }
+            }
+          }
+        },
+
+        "game_lobby": {
+          "_doc": "游戏大厅 — agent 形象用 HTML 渲染，展示游戏化角色（非全屏）",
+          "states": {
+            "idle": {
+              "meta": { "name": "游戏大厅-待机态", "desc": "游戏大厅待机态动画" },
+              "body": {
+                "html": "<!DOCTYPE html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><style>*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%;background:transparent;display:flex;align-items:center;justify-content:center;overflow:hidden}.char{position:relative;width:80px;height:80px}.body{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);box-shadow:0 8px 24px rgba(102,126,234,.4);display:grid;place-items:center;animation:float 3s ease-in-out infinite}.face{font-size:1.6rem;filter:drop-shadow(0 2px 3px rgba(0,0,0,.2))}.ring{position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(102,126,234,.3);animation:spin 8s linear infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}.tag{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:9px;color:#667eea;font-family:monospace;white-space:nowrap;background:rgba(102,126,234,.1);padding:2px 6px;border-radius:8px}</style></head><body><div class='char'><div class='ring'></div><div class='body'><span class='face'>\u2728</span></div><div class='tag'>IDLE</div></div></body></html>",
+                "sandbox": true,
+                "lines": "agent_lines_idle"
+              }
+            },
+            "thinking": {
+              "meta": { "name": "游戏大厅-任务执行中", "desc": "游戏大厅任务执行中动画" },
+              "body": {
+                "html": "<!DOCTYPE html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><style>*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%;background:transparent;display:flex;align-items:center;justify-content:center;overflow:hidden}.char{position:relative;width:80px;height:80px}.body{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);box-shadow:0 8px 24px rgba(240,147,251,.4);display:grid;place-items:center;animation:pulse 1.2s ease-in-out infinite}.face{font-size:1.6rem;filter:drop-shadow(0 2px 3px rgba(0,0,0,.2))}.dots{position:absolute;top:-14px;left:50%;transform:translateX(-50%);display:flex;gap:4px}.dot{width:6px;height:6px;border-radius:50%;background:#f5576c;animation:blink 1.4s ease-in-out infinite}.dot:nth-child(2){animation-delay:.2s}.dot:nth-child(3){animation-delay:.4s}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}.tag{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:9px;color:#f5576c;font-family:monospace;white-space:nowrap;background:rgba(245,87,108,.1);padding:2px 6px;border-radius:8px}</style></head><body><div class='char'><div class='dots'><div class='dot'></div><div class='dot'></div><div class='dot'></div></div><div class='body'><span class='face'>\ud83e\udde0</span></div><div class='tag'>THINK</div></div></body></html>",
+                "sandbox": true,
+                "lines": "agent_lines_thinking"
+              }
+            },
+            "listening": {
+              "meta": { "name": "游戏大厅-监听中", "desc": "游戏大厅监听中" },
+              "body": {
+                "html": "<!DOCTYPE html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><style>*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%;background:transparent;display:flex;align-items:center;justify-content:center;overflow:hidden}.char{position:relative;width:80px;height:80px}.body{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);box-shadow:0 8px 24px rgba(79,172,254,.4);display:grid;place-items:center;animation:bob 2s ease-in-out infinite}.face{font-size:1.6rem;filter:drop-shadow(0 2px 3px rgba(0,0,0,.2))}.waves{position:absolute;inset:-10px;border-radius:50%;border:2px solid rgba(0,242,254,.4);animation:wave 2s ease-out infinite}.waves2{position:absolute;inset:-18px;border-radius:50%;border:1.5px solid rgba(0,242,254,.2);animation:wave 2s ease-out .5s infinite}@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-3px) rotate(-2deg)}75%{transform:translateY(2px) rotate(2deg)}}@keyframes wave{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.3);opacity:0}}.tag{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:9px;color:#00c6fb;font-family:monospace;white-space:nowrap;background:rgba(0,198,251,.1);padding:2px 6px;border-radius:8px}</style></head><body><div class='char'><div class='waves'></div><div class='waves2'></div><div class='body'><span class='face'>\ud83c\udfa7</span></div><div class='tag'>LISTEN</div></div></body></html>",
+                "sandbox": true,
+                "lines": "agent_lines_listening"
+              }
+            },
+            "fallback": {
+              "meta": { "name": "兜底默认", "desc": "默认兜底动画" },
+              "body": {
+                "html": "<!DOCTYPE html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><style>*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%;background:transparent;display:flex;align-items:center;justify-content:center;overflow:hidden}.char{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%);box-shadow:0 6px 16px rgba(168,237,234,.3);display:grid;place-items:center;animation:float 3s ease-in-out infinite}.face{font-size:1.6rem}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}</style></head><body><div class='char'><span class='face'>\ud83d\udc7e</span></div></body></html>",
+                "sandbox": true
+              }
+            }
+          }
+        }
+      },
+
+      "_weather_doc": "天气特效 — 叠加在场景之上的大气粒子层，与 place 独立组合。",
+      "weather": {
+        "sunny":   { "text": "weather_sunny_grid",   "tileMode": "repeat", "color": "#88FFB300" },
+        "rainy":   { "text": "weather_rainy_grid",   "tileMode": "repeat", "color": "#884FC3F7" },
+        "snowy":   { "text": "weather_snowy_grid",   "tileMode": "repeat", "color": "#CCFFFFFF" },
+        "foggy":   { "text": "weather_foggy_grid",   "tileMode": "repeat", "color": "#88B0B6BC" },
+        "thunder": { "text": "weather_thunder_grid", "tileMode": "repeat", "color": "#CCFFD24A" },
+        "windy":   { "text": "weather_windy_grid",   "tileMode": "repeat", "color": "#E0E0E0" }
+      },
+
+      "fallback": "agent_idle"
+    }
+  }
+}

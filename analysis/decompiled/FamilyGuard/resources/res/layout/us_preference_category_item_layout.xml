@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="@dimen/us_stepos_page_content_gap"
+    android:paddingBottom="@dimen/stepos_section_header_padding_vertical"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/stepos_section_header_padding_start"
+    android:paddingEnd="@dimen/stepos_section_header_padding_end">
+    <TextView
+        android:textAppearance="@style/TextAppearance.US.SectionHeader"
+        android:layout_gravity="start|bottom"
+        android:id="@android:id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"/>
+    <TextView
+        android:textColor="@color/stepos_section_header_text"
+        android:layout_gravity="end|bottom"
+        android:id="@android:id/summary"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:fontFamily="sans-serif-medium"
+        style="@style/TextAppearance.StepOS.Label.Medium"/>
+    <ImageView
+        android:id="@android:id/icon"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+</FrameLayout>

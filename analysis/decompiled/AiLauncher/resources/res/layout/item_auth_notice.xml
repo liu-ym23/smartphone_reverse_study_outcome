@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/ic_auth_notice_dot"
+        android:contentDescription="@null"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#80ffffff"
+        android:textColorLink="#ff206cff"
+        android:id="@+id/tv_notice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:lineHeight="18sp"/>
+</LinearLayout>

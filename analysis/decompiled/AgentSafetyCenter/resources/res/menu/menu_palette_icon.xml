@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/open_color_pick_manifier"
+        android:id="@+id/palette_open_pick"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        app:showAsAction="always"/>
+</menu>

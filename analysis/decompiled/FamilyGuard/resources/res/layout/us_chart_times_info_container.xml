@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/marginRegular"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextAppearance.US.Digital"/>
+    <TextView
+        android:id="@+id/times_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginStart="?attr/marginExtraMini"
+        app:layout_constraintBaseline_toBaselineOf="@+id/times"
+        app:layout_constraintStart_toEndOf="@+id/times"
+        style="@style/TextAppearance.US.Digital.Label"/>
+    <TextView
+        android:id="@+id/average_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/marginRegular"
+        app:layout_constraintBaseline_toBaselineOf="@+id/times"
+        app:layout_constraintStart_toEndOf="@+id/times_label"
+        style="@style/TextAppearance.US.Des"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

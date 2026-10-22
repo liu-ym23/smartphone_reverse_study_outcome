@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agent連接服務</string>
+    <string name="context_is_null">非法參數</string>
+    <string name="error_is_throwed">獲得授權失敗，請稍後重試！</string>
+    <string name="future_result_is_null">獲得授權失敗，請稍後重試！</string>
+    <string name="get_cancel">使用者取消</string>
+    <string name="get_token_failed">獲得授權失敗，請檢查網路或系統時間後重試</string>
+    <string name="in_progress">處理中</string>
+    <string name="indeterminate">部分檢查</string>
+    <string name="not_selected">未選取</string>
+    <string name="scope_null_token">獲得授權失敗，無與此%s對應的授權資訊</string>
+    <string name="selected">已選取</string>
+    <string name="state_empty">空白</string>
+    <string name="sync_timeout">請求已逾時，請重試</string>
+    <string name="template_percent">百分之 %1$d。</string>
+    <string name="uid_not_match">uid與套件名稱不相符</string>
+    <string name="unkown_error">獲得授權失敗，請稍後重試！</string>
+    <string name="unsupport_operation">請求過於頻繁</string>
+</resources>

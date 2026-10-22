@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quality Sense</string>
+    <string name="battery_normal_charging">Resuming Normal Charging</string>
+    <string name="battery_protection_charging">Optimizing Charging Started</string>
+    <string name="battery_protection_sub_title">To slow battery aging, charging will be completed in %s</string>
+    <string name="cpu_exception_notification_channel_name">Battery Drain Alert</string>
+    <string name="cpu_exception_notification_title">Battery Management</string>
+    <string name="first_launch_low_power_by_control_center_message">Low Power Mode can extend battery life while reducing some visual effects and performance</string>
+    <string name="first_launch_low_power_by_control_center_title">Enable Low Power Mode</string>
+    <string name="high_performance_notify_channel_name">High-Performance Mode</string>
+    <string name="high_performance_notify_content">May result in higher power consumption and heat. Click to switch</string>
+    <string name="high_performance_notify_title">Currently in High-Performance Mode</string>
+    <string name="message_3c">Your device is overheating. It is recommended to pause usage, or it may lead to the following issues:\n- Dimmed screen;\n- Slower device performance;\n- Partial function shutdown;\nAfter removing the charger, the device can be used</string>
+    <string name="ok_3c">Got It</string>
+    <string name="scheduled_dialog_cancel">Cancel</string>
+    <string name="scheduled_dialog_ok">Activate Now</string>
+    <string name="scheduled_dialog_ok2">Activate</string>
+    <string name="scheduled_supermode_on">Scheduled Power-Saving Mode Activation</string>
+    <string name="scheduled_time_dialog_message_standard">Your phone will activate Low Battery Mode (Recommended) in %s seconds</string>
+    <string name="scheduled_time_dialog_message_supper">Your phone will activate Extreme Power-Saving Mode in %s seconds</string>
+    <string name="scheduled_time_dialog_message_userdefine">Your phone will activate Custom Power-Saving Mode in %s seconds</string>
+    <string name="tink_3c">High Temperature Warning</string>
+    <string name="uninstall_pps">Please Uninstall the Quality Sense Update</string>
+    <string name="uninstall_pps_detail">The current version of Quality Sense is incompatible and may lead to system instability. Please uninstall and update</string>
+</resources>

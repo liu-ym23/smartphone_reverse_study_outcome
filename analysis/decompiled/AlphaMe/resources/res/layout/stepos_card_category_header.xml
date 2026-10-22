@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/stepos_card_title_height"
+    android:paddingStart="@dimen/stepos_list_publish_padding"
+    android:paddingEnd="@dimen/stepos_list_publish_padding">
+    <TextView
+        android:textAppearance="@style/TextAppearance.StepOS.Card.Category.Title"
+        android:id="@android:id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/stepos_card_title_margin_bottom"/>
+</LinearLayout>

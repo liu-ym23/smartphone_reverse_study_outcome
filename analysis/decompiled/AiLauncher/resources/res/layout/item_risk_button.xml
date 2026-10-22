@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_risk_pill_button"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="44dp"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="10dp">
+    <TextView
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/risk_text_primary"
+        android:gravity="center"
+        android:id="@+id/tvButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="11sp"
+        android:textColor="@color/risk_text_tertiary"
+        android:gravity="center"
+        android:id="@+id/tvButtonSubtext"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"/>
+</LinearLayout>

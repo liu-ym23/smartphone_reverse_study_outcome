@@ -1,0 +1,19 @@
+package ge;
+
+import com.stepos.common.widget.q;
+
+/* compiled from: r8-map-id-111c466502ad74cb356cc021579a8ddb0a2e23c510d1cc7af75a11a7c889eebb */
+/* loaded from: classes.dex */
+public final class c extends a {
+
+    /* renamed from: b, reason: collision with root package name */
+    public q f9163b;
+
+    @Override // ge.a, android.graphics.drawable.Drawable
+    public final void setAlpha(int i10) {
+        super.setAlpha(i10);
+        q qVar = this.f9163b;
+        qVar.h.setAlpha(i10);
+        qVar.f7182i.setAlpha(i10);
+    }
+}

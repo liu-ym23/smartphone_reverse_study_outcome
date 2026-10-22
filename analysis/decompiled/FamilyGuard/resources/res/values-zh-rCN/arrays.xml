@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="mc_custom_time_picker_lunar_day">
+        <item>初一</item>
+        <item>初二</item>
+        <item>初三</item>
+        <item>初四</item>
+        <item>初五</item>
+        <item>初六</item>
+        <item>初七</item>
+        <item>初八</item>
+        <item>初九</item>
+        <item>初十</item>
+        <item>十一</item>
+        <item>十二</item>
+        <item>十三</item>
+        <item>十四</item>
+        <item>十五</item>
+        <item>十六</item>
+        <item>十七</item>
+        <item>十八</item>
+        <item>十九</item>
+        <item>廿十</item>
+        <item>廿一</item>
+        <item>廿二</item>
+        <item>廿三</item>
+        <item>廿四</item>
+        <item>廿五</item>
+        <item>廿六</item>
+        <item>廿七</item>
+        <item>廿八</item>
+        <item>廿九</item>
+        <item>三十</item>
+    </array>
+    <array name="mc_custom_time_picker_lunar_month">
+        <item>正</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>七</item>
+        <item>八</item>
+        <item>九</item>
+        <item>十</item>
+        <item>冬</item>
+        <item>腊</item>
+    </array>
+    <array name="mc_custom_weekday">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </array>
+    <array name="us_category_limit_time_array">
+        <item>完全禁用</item>
+        <item>1 小时</item>
+        <item>2 小时</item>
+        <item>3 小时</item>
+        <item>自定义</item>
+    </array>
+    <array name="us_child_weekday_type">
+        <item>每天</item>
+        <item>上课日</item>
+        <item>休息日</item>
+    </array>
+    <array name="us_limit_over_array">
+        <item>强制关闭应用</item>
+        <item>仅提示应用超时</item>
+    </array>
+    <array name="us_package_limit_time_array">
+        <item>完全禁用</item>
+        <item>30 分钟</item>
+        <item>1 小时</item>
+        <item>2 小时</item>
+        <item>自定义</item>
+    </array>
+    <array name="us_week">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </array>
+    <array name="us_weekday_type">
+        <item>每天</item>
+        <item>工作日</item>
+        <item>休息日</item>
+    </array>
+</resources>

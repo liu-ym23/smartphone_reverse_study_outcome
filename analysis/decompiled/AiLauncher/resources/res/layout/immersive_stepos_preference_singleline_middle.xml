@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/immersive_item_bkg_middle"
+    android:paddingTop="18dp"
+    android:paddingBottom="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp">
+    <TextView
+        android:ellipsize="end"
+        android:id="@android:id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_weight="1"
+        android:textDirection="locale"
+        android:paddingEnd="@dimen/preference_item_padding_inner"
+        style="@style/Widget.StepOS.MultipleList.Title"/>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/fd_sys_margin_medium"
+        style="@style/Widget.StepOS.List.Vertical.Divider"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@android:id/widget_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

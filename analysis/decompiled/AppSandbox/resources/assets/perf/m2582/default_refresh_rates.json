@@ -1,0 +1,1504 @@
+[
+  {
+    "package_name": "com.UCMobile",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "package_name": "com.miHoYo.Yuanshen",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 60
+      }
+    },
+    "temperature": {
+      "high_temp_threshold": 46,
+      "normal_target_fps": 60,
+      "high_temp_target_fps": 40,
+      "high_temp_strategy": "GRADUAL",
+      "totle_duration": 600
+    }
+  },
+  {
+    "package_name": "com.yinhan.skzh",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.yinhan.skzh.yinhan",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.yinhan.skzh.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.onmyoji",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.onmyoji.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.shootgame",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.speedmobile",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.game.rhythmmaster",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.cmplay.tiles2_cn",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.cmplay.tiles2_cn.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.brianbaek.popstar",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.mfp.jelly",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.mfp.jelly.stepos",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.fgol",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.af",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.lztg.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.lztg",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.YiRen",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.miHoYo.bh3.uc",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.miHoYo.bh3.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.miHoYo.bh3",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.pwrd.xxajh.nearme.gamecenter",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.qs",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.WePop",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.nd.he.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.sincetimes.games.worldship.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "#com.aligames.kuang.kybc.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.fifamobile",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.minecraft.stepos",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.bf.sgs.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.ztgame.bob",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.turbochilli.rollingsky_cn.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "yuanqiqishi.game.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.sgame",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    },
+    "temperature": {
+      "high_temp_threshold": 46,
+      "totle_duration": 300
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.sgamece",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.KiHan",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.cf",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.cod",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.lolm",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.stepos.demonstrationassistant",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.prpr.musedash.TapTap",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.supercell.clashofclans",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.moba.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.mc.aligames",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.x19",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.mojang.minecraftpe",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.mf.uam",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.gnyx",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.codev",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.vgamecrty.projv",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.supercell.clashroyale",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.supercell.clashroyale",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.youku.phone",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.youku.zrealauth",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.allstar",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.openai.chatgpt",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.aceracer",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.aceracer.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.hyxd.mz",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.moba",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.xfight",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.netease.blsmg119",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.pubgmhd",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    },
+    "resolution":{
+      "scaling" : 0.553,
+      "mode" : 1
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.dfm",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    },
+    "temperature": {
+      "high_temp_threshold": 43,
+      "totle_duration": 300
+    }
+  },
+  {
+    "package_name": "com.tencent.tmgp.mproj",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.lolm.db",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.lolmtyf",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.tencent.projectc",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 120
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "package_name": "com.ss.android.ugc.aweme",
+    "refresh_rates": {
+      "60Hz": {
+        "min": 0,
+        "max": 60
+      },
+      "90Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "120Hz": {
+        "min": 0,
+        "max": 90
+      },
+      "144Hz": {
+        "min": 0,
+        "max": 90
+      }
+    }
+  }
+]

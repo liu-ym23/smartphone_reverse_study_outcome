@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="44dp"
+    android:width="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <path
+        android:fillColor="@color/card_auther_input_bg"
+        android:pathData="M12,0L32,0A12,12 0 0,1 44,12L44,32A12,12 0 0,1 32,44L12,44A12,12 0 0,1 0,32L0,12A12,12 0 0,1 12,0Z"/>
+    <path
+        android:fillColor="@color/card_text_secondary"
+        android:pathData="M13,13h7v7h-7zM24,13h7v7h-7zM13,24h7v7h-7zM24,24h7v7h-7z"/>
+</vector>

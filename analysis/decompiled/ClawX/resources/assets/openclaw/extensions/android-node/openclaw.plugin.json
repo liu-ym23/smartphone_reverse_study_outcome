@@ -1,0 +1,10 @@
+{
+  "id": "android-node",
+  "version": "1.0.0",
+  "channels": ["android-node"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

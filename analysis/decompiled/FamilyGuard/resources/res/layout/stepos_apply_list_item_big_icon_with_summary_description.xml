@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/Widget.StepOS.IconList.ContentLinearLayout">
+        <com.stepos.common.widget.SmoothCornerView
+            app:steposCornerRadius="@dimen/stepos_list_icon_item_icon_corner_radius"
+            style="@style/Widget.StepOS.IconList.Icon.Large">
+            <ImageView
+                android:id="@+id/icon"
+                style="@style/Widget.StepOS.IconList.Icon.Large"/>
+        </com.stepos.common.widget.SmoothCornerView>
+        <LinearLayout style="@style/Widget.StepOS.IconList.TextContentLinearLayout">
+            <TextView
+                android:id="@+id/title"
+                style="@style/Widget.StepOS.IconList.Title.Multiple"/>
+            <TextView
+                android:id="@+id/descOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/stepos_list_summary_item_text_padding_top_level1"
+                style="@style/TextAppearance.StepOS.Body.Mini"/>
+            <TextView
+                android:id="@+id/descTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/stepos_list_summary_item_text_padding_top_level1"
+                style="@style/TextAppearance.StepOS.Body.Mini"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

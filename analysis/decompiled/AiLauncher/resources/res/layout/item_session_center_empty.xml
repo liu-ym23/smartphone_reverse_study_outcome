@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stepos.ailauncher.chat.view.RemainingSpaceLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/ll_session_center_empty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/session_center_on_glass_secondary"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chat_history_empty_title"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/session_center_on_glass_secondary"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/chat_history_empty_subtitle"/>
+</com.stepos.ailauncher.chat.view.RemainingSpaceLinearLayout>

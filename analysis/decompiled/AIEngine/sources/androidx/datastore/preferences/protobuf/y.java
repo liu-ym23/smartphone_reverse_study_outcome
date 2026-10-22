@@ -1,0 +1,15 @@
+package androidx.datastore.preferences.protobuf;
+
+import java.util.List;
+
+/* compiled from: r8-map-id-111c466502ad74cb356cc021579a8ddb0a2e23c510d1cc7af75a11a7c889eebb */
+/* loaded from: classes.dex */
+public interface y extends List {
+    List<?> C();
+
+    Object C0(int i10);
+
+    void g0(ByteString byteString);
+
+    y x0();
+}

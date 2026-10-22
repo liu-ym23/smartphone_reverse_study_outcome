@@ -1,0 +1,46 @@
+package androidx.core.graphics;
+
+import android.graphics.Typeface;
+import android.graphics.fonts.Font;
+import android.text.TextUtils;
+import android.util.Log;
+import androidx.annotation.RequiresApi;
+import androidx.annotation.RestrictTo;
+import androidx.core.provider.FontsContractCompat;
+import java.io.IOException;
+
+@RequiresApi(31)
+@RestrictTo({RestrictTo.Scope.LIBRARY})
+/* loaded from: classes2.dex */
+public class TypefaceCompatApi31Impl extends TypefaceCompatApi29Impl {
+    private static final String TAG = "TypefaceCompatApi31Impl";
+
+    private static Typeface getSystemFontFamily(String str) {
+        Typeface typefaceCreate = Typeface.create(str, 0);
+        Typeface typefaceCreate2 = Typeface.create(Typeface.DEFAULT, 0);
+        if (typefaceCreate == null || typefaceCreate.equals(typefaceCreate2)) {
+            return null;
+        }
+        return typefaceCreate;
+    }
+
+    @Override // androidx.core.graphics.TypefaceCompatApi29Impl
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public Font getFontFromSystemFont(FontsContractCompat.FontInfo fontInfo) {
+        Typeface systemFontFamily;
+        Font fontGuessPrimaryFont;
+        String systemFont = fontInfo.getSystemFont();
+        if (systemFont == null || (systemFontFamily = getSystemFontFamily(systemFont)) == null || (fontGuessPrimaryFont = TypefaceCompat.guessPrimaryFont(systemFontFamily)) == null) {
+            return null;
+        }
+        if (TextUtils.isEmpty(fontInfo.getVariationSettings())) {
+            return fontGuessPrimaryFont;
+        }
+        try {
+            return new Font.Builder(fontGuessPrimaryFont).setFontVariationSettings(fontInfo.getVariationSettings()).build();
+        } catch (IOException unused) {
+            Log.e(TAG, "Failed to clone Font instance. Fall back to provider font.");
+            return null;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="16dp"
+    android:width="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:pathData="M8,0.333008C12.2342,0.333008 15.667,3.76582 15.667,8C15.667,12.2342 12.2342,15.667 8,15.667C3.76582,15.667 0.333008,12.2342 0.333008,8C0.333008,3.76582 3.76582,0.333008 8,0.333008Z"
+        android:strokeColor="@color/card_didi_checkbox_unchecked"
+        android:strokeWidth="0.6667"/>
+</vector>

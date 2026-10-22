@@ -1,0 +1,37 @@
+{
+  "id": "stepclaw-intercept",
+  "name": "StepClaw Intercept",
+  "description": "Forwards before_tool_call events to StepClaw Android for policy evaluation",
+  "version": "1.0.6",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "description": "Enable hook forwarding to StepClaw Android. Omit or true to enable; set false to disable.",
+        "default": true
+      },
+      "promptStats": {
+        "type": "object",
+        "description": "lib/prompt-stats.js only: trace JSON and its console logs, independent of other plugin diagnostics.",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "description": "Enable prompt-stats (per-trace JSON under logDir). Off unless explicitly set to true together with logDir; trace JSON contains the full prompt.",
+            "default": false
+          },
+          "debug": {
+            "type": "boolean",
+            "description": "Verbose console logging from prompt-stats only. Off unless explicitly set to true.",
+            "default": false
+          },
+          "logDir": {
+            "type": "string",
+            "description": "Directory for per-trace JSON files. No default: prompt-stats does not write anything unless this is set.",
+            "default": ""
+          }
+        }
+      }
+    }
+  }
+}

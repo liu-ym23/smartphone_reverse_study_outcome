@@ -1,0 +1,73 @@
+package com.stepos.ailauncher.chat.fragment;
+
+import Ua.C1056g;
+import com.stepos.ailauncher.foundation.task.entity.UiTask;
+import e9.InterfaceC4014c;
+import f9.C4063a;
+import g9.InterfaceC4112d;
+import java.util.ArrayList;
+import java.util.List;
+import kotlin.C4849c;
+import kotlin.Metadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"LUa/M;", "LY8/t;", "<anonymous>", "(LUa/M;)V"}, k = 3, mv = {2, 2, 0})
+@InterfaceC4112d(c = "com.stepos.ailauncher.chat.fragment.ChatInputFragment$reportTaskInterrupt$1", f = "ChatInputFragment.kt", l = {914}, m = "invokeSuspend", v = 1)
+/* loaded from: classes3.dex */
+public final class ChatInputFragment$reportTaskInterrupt$1 extends SuspendLambda implements p9.p<Ua.M, InterfaceC4014c<? super Y8.t>, Object> {
+    final /* synthetic */ String $sid;
+    final /* synthetic */ String $source;
+    int label;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public ChatInputFragment$reportTaskInterrupt$1(String str, String str2, InterfaceC4014c<? super ChatInputFragment$reportTaskInterrupt$1> interfaceC4014c) {
+        super(2, interfaceC4014c);
+        this.$sid = str;
+        this.$source = str2;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final InterfaceC4014c<Y8.t> create(Object obj, InterfaceC4014c<?> interfaceC4014c) {
+        return new ChatInputFragment$reportTaskInterrupt$1(this.$sid, this.$source, interfaceC4014c);
+    }
+
+    @Override // p9.p
+    public final Object invoke(Ua.M m10, InterfaceC4014c<? super Y8.t> interfaceC4014c) {
+        return ((ChatInputFragment$reportTaskInterrupt$1) create(m10, interfaceC4014c)).invokeSuspend(Y8.t.f7040a);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) throws Throwable {
+        Object objG = C4063a.g();
+        int i10 = this.label;
+        if (i10 == 0) {
+            C4849c.b(obj);
+            Ua.I iB = Ua.Y.b();
+            ChatInputFragment$reportTaskInterrupt$1$tasks$1 chatInputFragment$reportTaskInterrupt$1$tasks$1 = new ChatInputFragment$reportTaskInterrupt$1$tasks$1(null);
+            this.label = 1;
+            obj = C1056g.j(iB, chatInputFragment$reportTaskInterrupt$1$tasks$1, this);
+            if (obj == objG) {
+                return objG;
+            }
+        } else {
+            if (i10 != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            C4849c.b(obj);
+        }
+        String str = this.$sid;
+        ArrayList<UiTask> arrayList = new ArrayList();
+        for (Object obj2 : (List) obj) {
+            if (kotlin.jvm.internal.p.d(((UiTask) obj2).getRequestedSessionKey(), str)) {
+                arrayList.add(obj2);
+            }
+        }
+        String str2 = this.$sid;
+        String str3 = this.$source;
+        for (UiTask uiTask : arrayList) {
+            M5.c cVar = M5.c.INSTANCE;
+            cVar.u(uiTask.getTaskId(), str2, cVar.v(uiTask.getStatus()), str3);
+        }
+        return Y8.t.f7040a;
+    }
+}

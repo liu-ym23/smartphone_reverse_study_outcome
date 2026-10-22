@@ -1,0 +1,894 @@
+package com.fasterxml.jackson.core.sym;
+
+import androidx.activity.b;
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.exc.StreamConstraintsException;
+import com.fasterxml.jackson.core.util.InternCache;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
+import k0.a;
+import od.f;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public final class ByteQuadsCanonicalizer {
+    private static final int DEFAULT_T_SIZE = 64;
+    protected static final int MAX_ENTRIES_FOR_REUSE = 6000;
+    private static final int MAX_T_SIZE = 65536;
+    private static final int MIN_HASH_SIZE = 16;
+    private static final int MULT = 33;
+    private static final int MULT2 = 65599;
+    private static final int MULT3 = 31;
+    protected int _count;
+    protected final boolean _failOnDoS;
+    protected int[] _hashArea;
+    protected boolean _hashShared;
+    protected int _hashSize;
+    protected final InternCache _interner;
+    protected int _longNameOffset;
+    protected String[] _names;
+    protected final ByteQuadsCanonicalizer _parent;
+    protected int _secondaryStart;
+    protected final int _seed;
+    protected int _spilloverEnd;
+    protected final AtomicReference<TableInfo> _tableInfo;
+    protected int _tertiaryShift;
+    protected int _tertiaryStart;
+
+    private ByteQuadsCanonicalizer(ByteQuadsCanonicalizer byteQuadsCanonicalizer, int i, TableInfo tableInfo, boolean z10, boolean z11) {
+        this._parent = byteQuadsCanonicalizer;
+        this._seed = i;
+        this._interner = z10 ? InternCache.instance : null;
+        this._failOnDoS = z11;
+        this._tableInfo = null;
+        this._count = tableInfo.count;
+        int i3 = tableInfo.size;
+        this._hashSize = i3;
+        int i10 = i3 << 2;
+        this._secondaryStart = i10;
+        this._tertiaryStart = i10 + (i10 >> 1);
+        this._tertiaryShift = tableInfo.tertiaryShift;
+        this._hashArea = tableInfo.mainHash;
+        this._names = tableInfo.names;
+        this._spilloverEnd = tableInfo.spilloverEnd;
+        this._longNameOffset = tableInfo.longNameOffset;
+        this._hashShared = true;
+    }
+
+    private int _appendLongName(int[] iArr, int i) {
+        int i3 = this._longNameOffset;
+        int i10 = i3 + i;
+        if (i10 < 0) {
+            f.e(b.i("Internal error: long name offset overflow; start=", i3, ", qlen=", i));
+            return 0;
+        }
+        int[] iArr2 = this._hashArea;
+        if (i10 > iArr2.length) {
+            int length = i10 - iArr2.length;
+            int iMin = Math.min(4096, this._hashSize);
+            this._hashArea = Arrays.copyOf(this._hashArea, Math.max(length, iMin) + this._hashArea.length);
+        }
+        System.arraycopy(iArr, 0, this._hashArea, i3, i);
+        this._longNameOffset = i10;
+        return i3;
+    }
+
+    private final int _calcOffset(int i) {
+        return ((this._hashSize - 1) & i) << 2;
+    }
+
+    public static int _calcTertiaryShift(int i) {
+        int i3 = i >> 2;
+        if (i3 < 64) {
+            return 4;
+        }
+        if (i3 <= 256) {
+            return 5;
+        }
+        return i3 <= 1024 ? 6 : 7;
+    }
+
+    private boolean _checkNeedForRehash() {
+        if (this._count <= (this._hashSize >> 1)) {
+            return false;
+        }
+        int i_spilloverStart = (this._spilloverEnd - _spilloverStart()) >> 2;
+        int i = this._count;
+        return i_spilloverStart > ((i + 1) >> 7) || i > multiplyByFourFifths(this._hashSize);
+    }
+
+    private int _findOffsetForAdd(int i) throws StreamConstraintsException {
+        int i_calcOffset = _calcOffset(i);
+        int[] iArr = this._hashArea;
+        if (iArr[i_calcOffset + 3] == 0) {
+            return i_calcOffset;
+        }
+        if (_checkNeedForRehash()) {
+            return _resizeAndFindOffsetForAdd(i);
+        }
+        int i3 = this._secondaryStart + ((i_calcOffset >> 3) << 2);
+        if (iArr[i3 + 3] == 0) {
+            return i3;
+        }
+        int i10 = this._tertiaryStart;
+        int i11 = this._tertiaryShift;
+        int i12 = i10 + ((i_calcOffset >> (i11 + 2)) << i11);
+        int i13 = (1 << i11) + i12;
+        while (i12 < i13) {
+            if (iArr[i12 + 3] == 0) {
+                return i12;
+            }
+            i12 += 4;
+        }
+        int i14 = this._spilloverEnd;
+        int i15 = i14 + 4;
+        this._spilloverEnd = i15;
+        if (i15 < (this._hashSize << 3)) {
+            return i14;
+        }
+        if (this._failOnDoS) {
+            _reportTooManyCollisions();
+        }
+        return _resizeAndFindOffsetForAdd(i);
+    }
+
+    private String _findSecondary(int i, int i3, int i10, int i11) {
+        int i12 = this._tertiaryStart;
+        int i13 = this._tertiaryShift;
+        int i14 = i12 + ((i >> (i13 + 2)) << i13);
+        int[] iArr = this._hashArea;
+        int i15 = (1 << i13) + i14;
+        while (i14 < i15) {
+            int i16 = iArr[i14 + 3];
+            if (i3 == iArr[i14] && i10 == iArr[i14 + 1] && i11 == iArr[i14 + 2] && 3 == i16) {
+                return this._names[i14 >> 2];
+            }
+            if (i16 == 0) {
+                return null;
+            }
+            i14 += 4;
+        }
+        for (int i_spilloverStart = _spilloverStart(); i_spilloverStart < this._spilloverEnd; i_spilloverStart += 4) {
+            if (i3 == iArr[i_spilloverStart] && i10 == iArr[i_spilloverStart + 1] && i11 == iArr[i_spilloverStart + 2] && 3 == iArr[i_spilloverStart + 3]) {
+                return this._names[i_spilloverStart >> 2];
+            }
+        }
+        return null;
+    }
+
+    private int _resizeAndFindOffsetForAdd(int i) throws StreamConstraintsException {
+        rehash();
+        int i_calcOffset = _calcOffset(i);
+        int[] iArr = this._hashArea;
+        if (iArr[i_calcOffset + 3] == 0) {
+            return i_calcOffset;
+        }
+        int i3 = this._secondaryStart + ((i_calcOffset >> 3) << 2);
+        if (iArr[i3 + 3] == 0) {
+            return i3;
+        }
+        int i10 = this._tertiaryStart;
+        int i11 = this._tertiaryShift;
+        int i12 = i10 + ((i_calcOffset >> (i11 + 2)) << i11);
+        int i13 = (1 << i11) + i12;
+        while (i12 < i13) {
+            if (iArr[i12 + 3] == 0) {
+                return i12;
+            }
+            i12 += 4;
+        }
+        int i14 = this._spilloverEnd;
+        this._spilloverEnd = i14 + 4;
+        return i14;
+    }
+
+    private final int _spilloverStart() {
+        int i = this._hashSize;
+        return (i << 3) - i;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:13:0x0023 A[RETURN] */
+    /* JADX WARN: Removed duplicated region for block: B:14:0x0024  */
+    /* JADX WARN: Removed duplicated region for block: B:18:0x0031 A[RETURN] */
+    /* JADX WARN: Removed duplicated region for block: B:19:0x0032  */
+    /* JADX WARN: Removed duplicated region for block: B:23:0x003f A[RETURN] */
+    /* JADX WARN: Removed duplicated region for block: B:24:0x0040  */
+    /* JADX WARN: Removed duplicated region for block: B:28:0x004d A[RETURN] */
+    /* JADX WARN: Removed duplicated region for block: B:29:0x004e  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    private boolean _verifyLongName(int[] r7, int r8, int r9) {
+        /*
+            r6 = this;
+            int[] r0 = r6._hashArea
+            r1 = 1
+            r2 = 0
+            switch(r8) {
+                case 4: goto L42;
+                case 5: goto L34;
+                case 6: goto L26;
+                case 7: goto L18;
+                case 8: goto Lc;
+                default: goto L7;
+            }
+        L7:
+            boolean r6 = r6._verifyLongName2(r7, r8, r9)
+            return r6
+        Lc:
+            r6 = r7[r2]
+            int r8 = r9 + 1
+            r9 = r0[r9]
+            if (r6 == r9) goto L15
+            return r2
+        L15:
+            r9 = r8
+            r6 = r1
+            goto L19
+        L18:
+            r6 = r2
+        L19:
+            int r8 = r6 + 1
+            r6 = r7[r6]
+            int r3 = r9 + 1
+            r9 = r0[r9]
+            if (r6 == r9) goto L24
+            return r2
+        L24:
+            r9 = r3
+            goto L27
+        L26:
+            r8 = r2
+        L27:
+            int r6 = r8 + 1
+            r8 = r7[r8]
+            int r3 = r9 + 1
+            r9 = r0[r9]
+            if (r8 == r9) goto L32
+            return r2
+        L32:
+            r9 = r3
+            goto L35
+        L34:
+            r6 = r2
+        L35:
+            int r8 = r6 + 1
+            r6 = r7[r6]
+            int r3 = r9 + 1
+            r9 = r0[r9]
+            if (r6 == r9) goto L40
+            return r2
+        L40:
+            r9 = r3
+            goto L43
+        L42:
+            r8 = r2
+        L43:
+            int r6 = r8 + 1
+            r3 = r7[r8]
+            int r4 = r9 + 1
+            r5 = r0[r9]
+            if (r3 == r5) goto L4e
+            return r2
+        L4e:
+            int r3 = r8 + 2
+            r6 = r7[r6]
+            int r5 = r9 + 2
+            r4 = r0[r4]
+            if (r6 == r4) goto L59
+            return r2
+        L59:
+            int r8 = r8 + 3
+            r6 = r7[r3]
+            int r9 = r9 + 3
+            r3 = r0[r5]
+            if (r6 == r3) goto L64
+            return r2
+        L64:
+            r6 = r7[r8]
+            r7 = r0[r9]
+            if (r6 == r7) goto L6b
+            return r2
+        L6b:
+            return r1
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.fasterxml.jackson.core.sym.ByteQuadsCanonicalizer._verifyLongName(int[], int, int):boolean");
+    }
+
+    private boolean _verifyLongName2(int[] iArr, int i, int i3) {
+        int i10 = 0;
+        while (true) {
+            int i11 = i10 + 1;
+            int i12 = i3 + 1;
+            if (iArr[i10] != this._hashArea[i3]) {
+                return false;
+            }
+            if (i11 >= i) {
+                return true;
+            }
+            i10 = i11;
+            i3 = i12;
+        }
+    }
+
+    private void _verifySharing() {
+        if (this._hashShared) {
+            if (this._parent == null) {
+                if (this._count == 0) {
+                    f.e("Internal error: Cannot add names to Root symbol table");
+                    return;
+                } else {
+                    f.e("Internal error: Cannot add names to Placeholder symbol table");
+                    return;
+                }
+            }
+            int[] iArr = this._hashArea;
+            this._hashArea = Arrays.copyOf(iArr, iArr.length);
+            String[] strArr = this._names;
+            this._names = (String[]) Arrays.copyOf(strArr, strArr.length);
+            this._hashShared = false;
+        }
+    }
+
+    public static ByteQuadsCanonicalizer createRoot() {
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        return createRoot((((int) jCurrentTimeMillis) + ((int) (jCurrentTimeMillis >>> 32))) | 1);
+    }
+
+    private void mergeChild(TableInfo tableInfo) {
+        int i = tableInfo.count;
+        TableInfo tableInfo2 = this._tableInfo.get();
+        if (i == tableInfo2.count) {
+            return;
+        }
+        if (i > MAX_ENTRIES_FOR_REUSE) {
+            tableInfo = TableInfo.createInitial(64);
+        }
+        this._tableInfo.compareAndSet(tableInfo2, tableInfo);
+    }
+
+    public static int multiplyByFourFifths(int i) {
+        return (int) ((i * 3435973837L) >>> 32);
+    }
+
+    private void nukeSymbols(boolean z10) {
+        this._count = 0;
+        this._spilloverEnd = _spilloverStart();
+        this._longNameOffset = this._hashSize << 3;
+        if (z10) {
+            Arrays.fill(this._hashArea, 0);
+            Arrays.fill(this._names, (Object) null);
+        }
+    }
+
+    private void rehash() throws StreamConstraintsException {
+        this._hashShared = false;
+        int[] iArr = this._hashArea;
+        String[] strArr = this._names;
+        int i = this._hashSize;
+        int i3 = this._count;
+        int i10 = i + i;
+        int i11 = this._spilloverEnd;
+        if (i10 > MAX_T_SIZE) {
+            nukeSymbols(true);
+            return;
+        }
+        this._hashArea = new int[iArr.length + (i << 3)];
+        this._hashSize = i10;
+        int i12 = i10 << 2;
+        this._secondaryStart = i12;
+        this._tertiaryStart = i12 + (i12 >> 1);
+        this._tertiaryShift = _calcTertiaryShift(i10);
+        this._names = new String[strArr.length << 1];
+        nukeSymbols(false);
+        int[] iArr2 = new int[16];
+        int i13 = 0;
+        for (int i14 = 0; i14 < i11; i14 += 4) {
+            int i15 = iArr[i14 + 3];
+            if (i15 != 0) {
+                i13++;
+                String str = strArr[i14 >> 2];
+                if (i15 == 1) {
+                    iArr2[0] = iArr[i14];
+                    addName(str, iArr2, 1);
+                } else if (i15 == 2) {
+                    iArr2[0] = iArr[i14];
+                    iArr2[1] = iArr[i14 + 1];
+                    addName(str, iArr2, 2);
+                } else if (i15 != 3) {
+                    if (i15 > iArr2.length) {
+                        iArr2 = new int[i15];
+                    }
+                    System.arraycopy(iArr, iArr[i14 + 1], iArr2, 0, i15);
+                    addName(str, iArr2, i15);
+                } else {
+                    iArr2[0] = iArr[i14];
+                    iArr2[1] = iArr[i14 + 1];
+                    iArr2[2] = iArr[i14 + 2];
+                    addName(str, iArr2, 3);
+                }
+            }
+        }
+        if (i13 == i3) {
+            return;
+        }
+        f.e(b.i("Internal error: Failed rehash(), old count=", i3, ", copyCount=", i13));
+    }
+
+    public void _reportTooManyCollisions() throws StreamConstraintsException {
+        if (this._hashSize <= 1024) {
+            return;
+        }
+        StringBuilder sb2 = new StringBuilder("Spill-over slots in symbol table with ");
+        sb2.append(this._count);
+        sb2.append(" entries, hash area of ");
+        sb2.append(this._hashSize);
+        sb2.append(" slots is now full (all ");
+        throw new StreamConstraintsException(a.r(sb2, this._hashSize >> 3, " slots -- suspect a DoS attack based on hash collisions. You can disable the check via `JsonFactory.Feature.FAIL_ON_SYMBOL_HASH_OVERFLOW`"));
+    }
+
+    public String addName(String str, int[] iArr, int i) throws StreamConstraintsException {
+        int i_findOffsetForAdd;
+        _verifySharing();
+        InternCache internCache = this._interner;
+        if (internCache != null) {
+            str = internCache.intern(str);
+        }
+        if (i == 1) {
+            i_findOffsetForAdd = _findOffsetForAdd(calcHash(iArr[0]));
+            int[] iArr2 = this._hashArea;
+            iArr2[i_findOffsetForAdd] = iArr[0];
+            iArr2[i_findOffsetForAdd + 3] = 1;
+        } else if (i == 2) {
+            i_findOffsetForAdd = _findOffsetForAdd(calcHash(iArr[0], iArr[1]));
+            int[] iArr3 = this._hashArea;
+            iArr3[i_findOffsetForAdd] = iArr[0];
+            iArr3[i_findOffsetForAdd + 1] = iArr[1];
+            iArr3[i_findOffsetForAdd + 3] = 2;
+        } else if (i != 3) {
+            int iCalcHash = calcHash(iArr, i);
+            i_findOffsetForAdd = _findOffsetForAdd(iCalcHash);
+            this._hashArea[i_findOffsetForAdd] = iCalcHash;
+            int i_appendLongName = _appendLongName(iArr, i);
+            int[] iArr4 = this._hashArea;
+            iArr4[i_findOffsetForAdd + 1] = i_appendLongName;
+            iArr4[i_findOffsetForAdd + 3] = i;
+        } else {
+            int i_findOffsetForAdd2 = _findOffsetForAdd(calcHash(iArr[0], iArr[1], iArr[2]));
+            int[] iArr5 = this._hashArea;
+            iArr5[i_findOffsetForAdd2] = iArr[0];
+            iArr5[i_findOffsetForAdd2 + 1] = iArr[1];
+            iArr5[i_findOffsetForAdd2 + 2] = iArr[2];
+            iArr5[i_findOffsetForAdd2 + 3] = 3;
+            i_findOffsetForAdd = i_findOffsetForAdd2;
+        }
+        this._names[i_findOffsetForAdd >> 2] = str;
+        this._count++;
+        return str;
+    }
+
+    public int bucketCount() {
+        return this._hashSize;
+    }
+
+    public int calcHash(int[] iArr, int i) {
+        if (i < 4) {
+            g5.f.s("qlen is too short, needs to be at least 4");
+            return 0;
+        }
+        int i3 = this._seed ^ iArr[0];
+        int i10 = i3 + (i3 >>> 9) + iArr[1];
+        int i11 = ((i10 + (i10 >>> 15)) * 33) ^ iArr[2];
+        int i12 = i11 + (i11 >>> 4);
+        for (int i13 = 3; i13 < i; i13++) {
+            int i14 = iArr[i13];
+            i12 += i14 ^ (i14 >> 21);
+        }
+        int i15 = i12 * MULT2;
+        int i16 = i15 + (i15 >>> 19);
+        return i16 ^ (i16 << 5);
+    }
+
+    public String findName(int[] iArr, int i) {
+        if (i < 4) {
+            return i != 1 ? i != 2 ? i != 3 ? "" : findName(iArr[0], iArr[1], iArr[2]) : findName(iArr[0], iArr[1]) : findName(iArr[0]);
+        }
+        int iCalcHash = calcHash(iArr, i);
+        int i_calcOffset = _calcOffset(iCalcHash);
+        int[] iArr2 = this._hashArea;
+        int i3 = iArr2[i_calcOffset + 3];
+        if (iCalcHash == iArr2[i_calcOffset] && i3 == i && _verifyLongName(iArr, i, iArr2[i_calcOffset + 1])) {
+            return this._names[i_calcOffset >> 2];
+        }
+        if (i3 == 0) {
+            return null;
+        }
+        int i10 = this._secondaryStart + ((i_calcOffset >> 3) << 2);
+        return (iCalcHash == iArr2[i10] && iArr2[i10 + 3] == i && _verifyLongName(iArr, i, iArr2[i10 + 1])) ? this._names[i10 >> 2] : _findSecondary(i_calcOffset, iCalcHash, iArr, i);
+    }
+
+    public int hashSeed() {
+        return this._seed;
+    }
+
+    public boolean isCanonicalizing() {
+        return this._parent != null;
+    }
+
+    public ByteQuadsCanonicalizer makeChild(int i) {
+        return new ByteQuadsCanonicalizer(this, this._seed, this._tableInfo.get(), JsonFactory.Feature.INTERN_FIELD_NAMES.enabledIn(i), JsonFactory.Feature.FAIL_ON_SYMBOL_HASH_OVERFLOW.enabledIn(i));
+    }
+
+    public ByteQuadsCanonicalizer makeChildOrPlaceholder(int i) {
+        return JsonFactory.Feature.CANONICALIZE_FIELD_NAMES.enabledIn(i) ? new ByteQuadsCanonicalizer(this, this._seed, this._tableInfo.get(), JsonFactory.Feature.INTERN_FIELD_NAMES.enabledIn(i), JsonFactory.Feature.FAIL_ON_SYMBOL_HASH_OVERFLOW.enabledIn(i)) : new ByteQuadsCanonicalizer(this._tableInfo.get());
+    }
+
+    public boolean maybeDirty() {
+        return !this._hashShared;
+    }
+
+    public int primaryCount() {
+        int i = this._secondaryStart;
+        int i3 = 0;
+        for (int i10 = 3; i10 < i; i10 += 4) {
+            if (this._hashArea[i10] != 0) {
+                i3++;
+            }
+        }
+        return i3;
+    }
+
+    public void release() {
+        if (this._parent == null || !maybeDirty()) {
+            return;
+        }
+        this._parent.mergeChild(new TableInfo(this));
+        this._hashShared = true;
+    }
+
+    public int secondaryCount() {
+        int i = this._tertiaryStart;
+        int i3 = 0;
+        for (int i10 = this._secondaryStart + 3; i10 < i; i10 += 4) {
+            if (this._hashArea[i10] != 0) {
+                i3++;
+            }
+        }
+        return i3;
+    }
+
+    public int size() {
+        AtomicReference<TableInfo> atomicReference = this._tableInfo;
+        return atomicReference != null ? atomicReference.get().count : this._count;
+    }
+
+    public int spilloverCount() {
+        return (this._spilloverEnd - _spilloverStart()) >> 2;
+    }
+
+    public int tertiaryCount() {
+        int i = this._tertiaryStart + 3;
+        int i3 = this._hashSize + i;
+        int i10 = 0;
+        while (i < i3) {
+            if (this._hashArea[i] != 0) {
+                i10++;
+            }
+            i += 4;
+        }
+        return i10;
+    }
+
+    public String toString() {
+        int iPrimaryCount = primaryCount();
+        int iSecondaryCount = secondaryCount();
+        int iTertiaryCount = tertiaryCount();
+        int iSpilloverCount = spilloverCount();
+        return String.format("[%s: size=%d, hashSize=%d, %d/%d/%d/%d pri/sec/ter/spill (=%s), total:%d]", ByteQuadsCanonicalizer.class.getName(), Integer.valueOf(this._count), Integer.valueOf(this._hashSize), Integer.valueOf(iPrimaryCount), Integer.valueOf(iSecondaryCount), Integer.valueOf(iTertiaryCount), Integer.valueOf(iSpilloverCount), Integer.valueOf(iPrimaryCount + iSecondaryCount + iTertiaryCount + iSpilloverCount), Integer.valueOf(totalCount()));
+    }
+
+    public int totalCount() {
+        int i = this._hashSize << 3;
+        int i3 = 0;
+        for (int i10 = 3; i10 < i; i10 += 4) {
+            if (this._hashArea[i10] != 0) {
+                i3++;
+            }
+        }
+        return i3;
+    }
+
+    public static ByteQuadsCanonicalizer createRoot(int i) {
+        return new ByteQuadsCanonicalizer(64, i);
+    }
+
+    /* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+    public static final class TableInfo {
+        public final int count;
+        public final int longNameOffset;
+        public final int[] mainHash;
+        public final String[] names;
+        public final int size;
+        public final int spilloverEnd;
+        public final int tertiaryShift;
+
+        public TableInfo(ByteQuadsCanonicalizer byteQuadsCanonicalizer) {
+            this.size = byteQuadsCanonicalizer._hashSize;
+            this.count = byteQuadsCanonicalizer._count;
+            this.tertiaryShift = byteQuadsCanonicalizer._tertiaryShift;
+            this.mainHash = byteQuadsCanonicalizer._hashArea;
+            this.names = byteQuadsCanonicalizer._names;
+            this.spilloverEnd = byteQuadsCanonicalizer._spilloverEnd;
+            this.longNameOffset = byteQuadsCanonicalizer._longNameOffset;
+        }
+
+        public static TableInfo createInitial(int i) {
+            int i3 = i << 3;
+            return new TableInfo(i, 0, ByteQuadsCanonicalizer._calcTertiaryShift(i), new int[i3], new String[i << 1], i3 - i, i3);
+        }
+
+        public TableInfo(int i, int i3, int i10, int[] iArr, String[] strArr, int i11, int i12) {
+            this.size = i;
+            this.count = i3;
+            this.tertiaryShift = i10;
+            this.mainHash = iArr;
+            this.names = strArr;
+            this.spilloverEnd = i11;
+            this.longNameOffset = i12;
+        }
+    }
+
+    public int calcHash(int i, int i3) {
+        int i10 = i + (i >>> 15);
+        int i11 = this._seed;
+        int i12 = i11 ^ ((i3 * 33) + (i10 ^ (i10 >>> 9)));
+        int i13 = i12 + (i12 >>> 16);
+        int i14 = i13 ^ (i13 >>> 4);
+        return i14 + (i14 << 3);
+    }
+
+    public int calcHash(int i, int i3, int i10) {
+        int i11 = this._seed ^ i;
+        int i12 = (((i11 + (i11 >>> 9)) * 31) + i3) * 33;
+        int i13 = (i12 + (i12 >>> 15)) ^ i10;
+        int i14 = i13 + (i13 >>> 4);
+        int i15 = i14 + (i14 >>> 15);
+        return i15 ^ (i15 << 9);
+    }
+
+    public int calcHash(int i) {
+        int i3 = this._seed ^ i;
+        int i10 = i3 + (i3 >>> 16);
+        int i11 = i10 ^ (i10 << 3);
+        return i11 + (i11 >>> 12);
+    }
+
+    private ByteQuadsCanonicalizer(int i, int i3) {
+        this._parent = null;
+        this._count = 0;
+        this._hashShared = true;
+        this._seed = i3;
+        this._interner = null;
+        this._failOnDoS = true;
+        int i10 = 16;
+        if (i < 16) {
+            i = i10;
+        } else if (((i - 1) & i) != 0) {
+            while (i10 < i) {
+                i10 += i10;
+            }
+            i = i10;
+        }
+        this._tableInfo = new AtomicReference<>(TableInfo.createInitial(i));
+    }
+
+    private ByteQuadsCanonicalizer(TableInfo tableInfo) {
+        this._parent = null;
+        this._seed = 0;
+        this._interner = null;
+        this._failOnDoS = true;
+        this._tableInfo = null;
+        this._count = -1;
+        int[] iArr = tableInfo.mainHash;
+        this._hashArea = iArr;
+        this._names = tableInfo.names;
+        this._hashSize = tableInfo.size;
+        int length = iArr.length;
+        this._secondaryStart = length;
+        this._tertiaryStart = length;
+        this._tertiaryShift = 1;
+        this._spilloverEnd = length;
+        this._longNameOffset = length;
+        this._hashShared = true;
+    }
+
+    private String _findSecondary(int i, int i3, int i10) {
+        int i11 = this._tertiaryStart;
+        int i12 = this._tertiaryShift;
+        int i13 = i11 + ((i >> (i12 + 2)) << i12);
+        int[] iArr = this._hashArea;
+        int i14 = (1 << i12) + i13;
+        while (i13 < i14) {
+            int i15 = iArr[i13 + 3];
+            if (i3 == iArr[i13] && i10 == iArr[i13 + 1] && 2 == i15) {
+                return this._names[i13 >> 2];
+            }
+            if (i15 == 0) {
+                return null;
+            }
+            i13 += 4;
+        }
+        for (int i_spilloverStart = _spilloverStart(); i_spilloverStart < this._spilloverEnd; i_spilloverStart += 4) {
+            if (i3 == iArr[i_spilloverStart] && i10 == iArr[i_spilloverStart + 1] && 2 == iArr[i_spilloverStart + 3]) {
+                return this._names[i_spilloverStart >> 2];
+            }
+        }
+        return null;
+    }
+
+    private String _findSecondary(int i, int i3) {
+        int i10 = this._tertiaryStart;
+        int i11 = this._tertiaryShift;
+        int i12 = i10 + ((i >> (i11 + 2)) << i11);
+        int[] iArr = this._hashArea;
+        int i13 = (1 << i11) + i12;
+        while (i12 < i13) {
+            int i14 = iArr[i12 + 3];
+            if (i3 == iArr[i12] && 1 == i14) {
+                return this._names[i12 >> 2];
+            }
+            if (i14 == 0) {
+                return null;
+            }
+            i12 += 4;
+        }
+        for (int i_spilloverStart = _spilloverStart(); i_spilloverStart < this._spilloverEnd; i_spilloverStart += 4) {
+            if (i3 == iArr[i_spilloverStart] && 1 == iArr[i_spilloverStart + 3]) {
+                return this._names[i_spilloverStart >> 2];
+            }
+        }
+        return null;
+    }
+
+    private String _findSecondary(int i, int i3, int[] iArr, int i10) {
+        int i11 = this._tertiaryStart;
+        int i12 = this._tertiaryShift;
+        int i13 = i11 + ((i >> (i12 + 2)) << i12);
+        int[] iArr2 = this._hashArea;
+        int i14 = (1 << i12) + i13;
+        while (i13 < i14) {
+            int i15 = iArr2[i13 + 3];
+            if (i3 == iArr2[i13] && i10 == i15 && _verifyLongName(iArr, i10, iArr2[i13 + 1])) {
+                return this._names[i13 >> 2];
+            }
+            if (i15 == 0) {
+                return null;
+            }
+            i13 += 4;
+        }
+        for (int i_spilloverStart = _spilloverStart(); i_spilloverStart < this._spilloverEnd; i_spilloverStart += 4) {
+            if (i3 == iArr2[i_spilloverStart] && i10 == iArr2[i_spilloverStart + 3] && _verifyLongName(iArr, i10, iArr2[i_spilloverStart + 1])) {
+                return this._names[i_spilloverStart >> 2];
+            }
+        }
+        return null;
+    }
+
+    public String findName(int i, int i3) {
+        int i_calcOffset = _calcOffset(calcHash(i, i3));
+        int[] iArr = this._hashArea;
+        int i10 = iArr[i_calcOffset + 3];
+        if (i10 == 2) {
+            if (i == iArr[i_calcOffset] && i3 == iArr[i_calcOffset + 1]) {
+                return this._names[i_calcOffset >> 2];
+            }
+        } else if (i10 == 0) {
+            return null;
+        }
+        int i11 = this._secondaryStart + ((i_calcOffset >> 3) << 2);
+        int i12 = iArr[i11 + 3];
+        if (i12 == 2) {
+            if (i == iArr[i11] && i3 == iArr[i11 + 1]) {
+                return this._names[i11 >> 2];
+            }
+        } else if (i12 == 0) {
+            return null;
+        }
+        return _findSecondary(i_calcOffset, i, i3);
+    }
+
+    public String findName(int i, int i3, int i10) {
+        int i_calcOffset = _calcOffset(calcHash(i, i3, i10));
+        int[] iArr = this._hashArea;
+        int i11 = iArr[i_calcOffset + 3];
+        if (i11 == 3) {
+            if (i == iArr[i_calcOffset] && iArr[i_calcOffset + 1] == i3 && iArr[i_calcOffset + 2] == i10) {
+                return this._names[i_calcOffset >> 2];
+            }
+        } else if (i11 == 0) {
+            return null;
+        }
+        int i12 = this._secondaryStart + ((i_calcOffset >> 3) << 2);
+        int i13 = iArr[i12 + 3];
+        if (i13 == 3) {
+            if (i == iArr[i12] && iArr[i12 + 1] == i3 && iArr[i12 + 2] == i10) {
+                return this._names[i12 >> 2];
+            }
+        } else if (i13 == 0) {
+            return null;
+        }
+        return _findSecondary(i_calcOffset, i, i3, i10);
+    }
+
+    public String findName(int i) {
+        int i_calcOffset = _calcOffset(calcHash(i));
+        int[] iArr = this._hashArea;
+        int i3 = iArr[i_calcOffset + 3];
+        if (i3 == 1) {
+            if (iArr[i_calcOffset] == i) {
+                return this._names[i_calcOffset >> 2];
+            }
+        } else if (i3 == 0) {
+            return null;
+        }
+        int i10 = this._secondaryStart + ((i_calcOffset >> 3) << 2);
+        int i11 = iArr[i10 + 3];
+        if (i11 == 1) {
+            if (iArr[i10] == i) {
+                return this._names[i10 >> 2];
+            }
+        } else if (i11 == 0) {
+            return null;
+        }
+        return _findSecondary(i_calcOffset, i);
+    }
+
+    public String addName(String str, int i, int i3) throws StreamConstraintsException {
+        _verifySharing();
+        InternCache internCache = this._interner;
+        if (internCache != null) {
+            str = internCache.intern(str);
+        }
+        int i_findOffsetForAdd = _findOffsetForAdd(calcHash(i, i3));
+        int[] iArr = this._hashArea;
+        iArr[i_findOffsetForAdd] = i;
+        iArr[i_findOffsetForAdd + 1] = i3;
+        iArr[i_findOffsetForAdd + 3] = 2;
+        this._names[i_findOffsetForAdd >> 2] = str;
+        this._count++;
+        return str;
+    }
+
+    public String addName(String str, int i, int i3, int i10) throws StreamConstraintsException {
+        _verifySharing();
+        InternCache internCache = this._interner;
+        if (internCache != null) {
+            str = internCache.intern(str);
+        }
+        int i_findOffsetForAdd = _findOffsetForAdd(calcHash(i, i3, i10));
+        int[] iArr = this._hashArea;
+        iArr[i_findOffsetForAdd] = i;
+        iArr[i_findOffsetForAdd + 1] = i3;
+        iArr[i_findOffsetForAdd + 2] = i10;
+        iArr[i_findOffsetForAdd + 3] = 3;
+        this._names[i_findOffsetForAdd >> 2] = str;
+        this._count++;
+        return str;
+    }
+
+    public String addName(String str, int i) throws StreamConstraintsException {
+        _verifySharing();
+        InternCache internCache = this._interner;
+        if (internCache != null) {
+            str = internCache.intern(str);
+        }
+        int i_findOffsetForAdd = _findOffsetForAdd(calcHash(i));
+        int[] iArr = this._hashArea;
+        iArr[i_findOffsetForAdd] = i;
+        iArr[i_findOffsetForAdd + 3] = 1;
+        this._names[i_findOffsetForAdd >> 2] = str;
+        this._count++;
+        return str;
+    }
+}

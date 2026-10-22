@@ -1,0 +1,103 @@
+package reactor.core.publisher;
+
+import java.util.Objects;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
+import java.util.function.Consumer;
+import reactor.core.Disposable;
+import reactor.core.Disposables;
+import reactor.util.annotation.Nullable;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes2.dex */
+final class OperatorDisposables {
+    static final Disposable DISPOSED = Disposables.disposed();
+
+    public static <T> boolean dispose(AtomicReferenceFieldUpdater<T, Disposable> atomicReferenceFieldUpdater, T t10) {
+        Disposable andSet;
+        Disposable disposable = atomicReferenceFieldUpdater.get(t10);
+        Disposable disposable2 = DISPOSED;
+        if (disposable == disposable2 || (andSet = atomicReferenceFieldUpdater.getAndSet(t10, disposable2)) == disposable2) {
+            return false;
+        }
+        if (andSet == null) {
+            return true;
+        }
+        andSet.dispose();
+        return true;
+    }
+
+    public static boolean isDisposed(Disposable disposable) {
+        return disposable == DISPOSED;
+    }
+
+    public static <T> boolean replace(AtomicReferenceFieldUpdater<T, Disposable> atomicReferenceFieldUpdater, T t10, @Nullable Disposable disposable) {
+        Disposable disposable2;
+        do {
+            disposable2 = atomicReferenceFieldUpdater.get(t10);
+            if (disposable2 == DISPOSED) {
+                if (disposable == null) {
+                    return false;
+                }
+                disposable.dispose();
+                return false;
+            }
+        } while (!atomicReferenceFieldUpdater.compareAndSet(t10, disposable2, disposable));
+        return true;
+    }
+
+    public static <T> boolean set(AtomicReferenceFieldUpdater<T, Disposable> atomicReferenceFieldUpdater, T t10, @Nullable Disposable disposable) {
+        Disposable disposable2;
+        do {
+            disposable2 = atomicReferenceFieldUpdater.get(t10);
+            if (disposable2 == DISPOSED) {
+                if (disposable == null) {
+                    return false;
+                }
+                disposable.dispose();
+                return false;
+            }
+        } while (!atomicReferenceFieldUpdater.compareAndSet(t10, disposable2, disposable));
+        if (disposable2 == null) {
+            return true;
+        }
+        disposable2.dispose();
+        return true;
+    }
+
+    public static <T> boolean setOnce(AtomicReferenceFieldUpdater<T, Disposable> atomicReferenceFieldUpdater, T t10, Disposable disposable, Consumer<RuntimeException> consumer) {
+        Objects.requireNonNull(disposable, "newValue is null");
+        if (atomicReferenceFieldUpdater.compareAndSet(t10, null, disposable)) {
+            return true;
+        }
+        disposable.dispose();
+        if (atomicReferenceFieldUpdater.get(t10) == DISPOSED) {
+            return false;
+        }
+        consumer.accept(new IllegalStateException("Disposable already pushed"));
+        return false;
+    }
+
+    public static <T> boolean trySet(AtomicReferenceFieldUpdater<T, Disposable> atomicReferenceFieldUpdater, T t10, Disposable disposable) {
+        if (atomicReferenceFieldUpdater.compareAndSet(t10, null, disposable)) {
+            return true;
+        }
+        if (atomicReferenceFieldUpdater.get(t10) != DISPOSED) {
+            return false;
+        }
+        disposable.dispose();
+        return false;
+    }
+
+    public static boolean validate(@Nullable Disposable disposable, Disposable disposable2, Consumer<RuntimeException> consumer) {
+        if (disposable2 == null) {
+            consumer.accept(new NullPointerException("next is null"));
+            return false;
+        }
+        if (disposable == null) {
+            return true;
+        }
+        disposable2.dispose();
+        consumer.accept(new IllegalStateException("Disposable already pushed"));
+        return false;
+    }
+}

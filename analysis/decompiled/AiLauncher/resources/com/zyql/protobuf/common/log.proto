@@ -1,0 +1,48 @@
+// Log types for communication debugging and lifecycle management
+// These types are used to track messages and control flow between
+// App, Runtime, and Agent layers
+
+syntax = "proto3";
+
+package cortex.adk.common;
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.common";
+option java_outer_classname = "AgentLog";
+
+// ====================
+// Log Message Types
+// ====================
+
+// LogSender defines the sender of a log message
+enum LogSender {
+  LOG_SENDER_UNSPECIFIED = 0;
+  LOG_SENDER_APP = 1;         // Message from application
+  LOG_SENDER_RUNTIME = 2;     // Message from runtime
+  LOG_SENDER_AGENT = 3;       // Message from agent
+}
+
+// LogLevel defines the severity/type of a log message
+enum LogLevel {
+  LOG_LEVEL_UNSPECIFIED = 0;
+  LOG_LEVEL_DEBUG = 1;        // Debug level
+  LOG_LEVEL_INFO = 2;         // Info level
+  LOG_LEVEL_WARN = 3;         // Warning level
+  LOG_LEVEL_ERROR = 4;        // Error level
+  LOG_LEVEL_OFF = 5;          // No logs
+}
+
+// LogMessage represents a log entry for communication debugging
+// Used to track messages exchanged between App <-> Runtime <-> Agent
+message LogMessage {
+  LogSender sender = 1;       // Who sent this log
+  LogLevel level = 2;         // Log severity level
+  string content = 3;         // Log content
+  int64 timestamp = 4;        // Unix timestamp in milliseconds
+}
+
+// LogNotification is sent for real-time log streaming
+message LogNotification {
+  string session_id = 1;      // Session ID this log belongs to
+  LogMessage log = 2;         // The log message
+}

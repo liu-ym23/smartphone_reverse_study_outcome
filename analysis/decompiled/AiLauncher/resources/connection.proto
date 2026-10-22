@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package zyql.cloud.connection;
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.connection";
+option java_outer_classname = "Connection";
+
+message Head {
+    // 包体数据类型，0=text, 1=pb
+    uint32 frame_type = 1;
+    // 0=上行req，1=上行req的回包rsp，2=下行的push，3=下行push的回包（ack），4=上行req异常回包
+    uint32 msg_type = 2;
+    // 消息id，用于确定上行req/rsp的对应关系，以及push的唯一消息id。基于uuid生成
+    string msg_id = 3;
+    // 模块名，用于上行请求分发路由
+    string module = 4;
+    // 方法名，与module组合确定唯一的RPC
+    string command = 5;
+    // 其他非预设字段
+    map<string, string> meta = 6;
+}
+
+// 消息体
+message StreamMsg {
+    Head head = 1;
+    bytes body = 2;
+
+}
+
+// ----------- 特殊消息（gateway 拦截，特殊处理，不直接往后转发） -----------
+// 长链接鉴权绑定消息，升级websocket后再校验登录态。
+// Module/Command：Stream/Auth
+message AuthBindReq {
+    string product = 1; // 业务id
+    string uid = 2; // 用户uid
+    string token = 3; // 校验的token
+    string token_type = 4; //校验的token类型
+    uint32 platform = 5; // 0=所有版本, 1=Web H5, 2=小程序, 3=Android, 4=iPhone，5=QQ 小程序
+    string device = 6; // 设备名称
+    string app_version = 7; // app版本
+    string channel = 8; // 渠道信息
+    string did = 9; // 设备id
+    map<string, string> reserved = 10;  // 保留字段, openid=只有在WX/QQ小程序登录时才传，不传则返回失败
+}
+
+// 校验失败，后台直接断开连接。
+message AuthBindResp {
+    int32 code = 1; // 0=成功
+    string error = 2; // 错误提示
+    string conn = 4; // 当前连接uuid
+    string uid = 5; // 用户uid，以后台返回为准
+    int32 logined = 6; // 0=匿名 1=登陆
+    bool new = 7; // true=当前登录是新用户, false=已注册用户，用于终端埋点汇报
+}
+
+// 个人中心退出登录，用于状态和信息解绑
+// Module/Command：Stream/Logout
+message LogoutReq {
+    map<string, string> reserved = 1;
+}
+
+// 长连接心跳包。上行请求直接是空包
+// Module/Command: Stream/Heartbeat
+message HeartbeatReq {
+}
+
+message HeartbeatResp {
+    uint32 interval = 1; // 下次心跳间隔，单位秒。间隔由后台来控制
+}
+
+// 上行req异常错误回包
+message ErrorResp {
+    int32 code = 1;     // 错误状态码
+    string reason = 2;  // 错误信息
+}

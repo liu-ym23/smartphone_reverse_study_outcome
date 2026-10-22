@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="us_widget_hour">
+        <item quantity="one">h</item>
+        <item quantity="other">h</item>
+    </plurals>
+    <plurals name="us_widget_minute">
+        <item quantity="one">min</item>
+        <item quantity="other">min</item>
+    </plurals>
+    <plurals name="us_widget_second">
+        <item quantity="one">s</item>
+        <item quantity="other">s</item>
+    </plurals>
+</resources>

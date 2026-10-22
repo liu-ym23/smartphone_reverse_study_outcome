@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure>
+    <cfg name="cpu" id="1001" value_path="/sys/class/monitor/cpu/value" enable_node="/sys/class/monitor/cpu/enable" enabled="false">
+        <item name="sample_time" node="/sys/class/monitor/cpu/sample_time" value="10"/>
+        <item name="threthold" node="/sys/class/monitor/cpu/threthold" value="20" />
+    </cfg>
+    <cfg name="mem" id="1002" value_path="/sys/class/monitor/mem/value" enable_node="/sys/class/monitor/mem/enable" enabled="false">
+        <item name="sample_time" node="/sys/class/monitor/mem/sample_time" value="10" />
+    </cfg>
+    <cfg name="io" id="1003" value_path="/sys/class/monitor/io/value" enable_node="/sys/class/monitor/io/enable" enabled="false">
+        <item name="sample_time" node="/sys/class/monitor/io/sample_time" value="10" />
+        <item name="threthold" node="/sys/class/monitor/io/threthold" value="100"/>
+    </cfg>
+</configure>

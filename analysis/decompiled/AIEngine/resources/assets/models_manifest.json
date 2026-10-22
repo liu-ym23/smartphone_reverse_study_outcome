@@ -1,0 +1,80 @@
+{
+  "version": "1",
+  "description": "AIEngine 能力注册清单（调试版）",
+  "abilities": [
+    {
+      "ability_id": "embedding",
+      "manifest_type": "model",
+      "ability_type": "embedding",
+      "description": "AIEngine 内部 Embedding 能力（llama.cpp）",
+      "model_id": "embedding",
+      "model_file": "bge-small-zh-v1.5.gguf",
+      "backend": "llama_cpp",
+      "tags": ["embedding"]
+    },
+    {
+      "ability_id": "stepos-embedding",
+      "manifest_type": "model",
+      "ability_type": "embedding",
+      "description": "StepOS SDK Embedding 能力（llama.cpp）",
+      "model_id": "embedding",
+      "model_file": "bge-small-zh-v1.5.gguf",
+      "backend": "llama_cpp",
+      "tags": ["embedding"]
+    },
+    {
+      "ability_id": "stepos-reranking",
+      "manifest_type": "model",
+      "ability_type": "reranking",
+      "description": "重排序能力（mock）",
+      "model_id": "reranking-mock",
+      "model_file": "reranking.gguf",
+      "backend": "none"
+    },
+    {
+      "ability_id": "stepos-image-matting",
+      "manifest_type": "model",
+      "ability_type": "image_matting",
+      "description": "图像抠图能力（mock）",
+      "model_id": "image-matting-mock",
+      "model_file": "image_matting.gguf",
+      "backend": "none"
+    },
+    {
+      "ability_id": "stepos-chinese-clip",
+      "manifest_type": "model",
+      "ability_type": "image_embedding",
+      "description": "Chinese CLIP 图文特征提取（mock）",
+      "model_id": "chinese-clip-mock",
+      "model_file": "chinese_clip.gguf",
+      "backend": "none"
+    },
+    {
+      "ability_id": "stepos-interactive-segment",
+      "manifest_type": "model",
+      "ability_type": "interactive_segment",
+      "description": "交互式图像分割（mock）",
+      "model_id": "interactive-segment-mock",
+      "model_file": "interactive_segment.gguf",
+      "backend": "none"
+    },
+    {
+      "ability_id": "stepos-image-inpaint",
+      "manifest_type": "model",
+      "ability_type": "image_inpaint",
+      "description": "图像修复（mock）",
+      "model_id": "image-inpaint-mock",
+      "model_file": "image_inpaint.gguf",
+      "backend": "none"
+    },
+    {
+      "ability_id": "stepos-asr",
+      "manifest_type": "model",
+      "ability_type": "asr",
+      "description": "语音识别（mock）",
+      "model_id": "asr-mock",
+      "model_file": "asr.gguf",
+      "backend": "none"
+    }
+  ]
+}

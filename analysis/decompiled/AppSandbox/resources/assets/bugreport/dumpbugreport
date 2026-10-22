@@ -1,0 +1,88 @@
+dumpbugreport(){
+
+    all_flag=false
+
+    for arg in "$@"; do
+        if [ "$arg" == "--all" ]; then
+            all_flag=true
+        fi
+    done
+
+
+    separator_line="========================================================"
+    separator_line_2="-------------------------------------------------------------------------------"
+
+    time=$(date "+%Y-%m-%d %H:%M:%S")
+    build=`getprop ro.build.description`
+    build_fingerprint=`getprop ro.build.fingerprint`
+    bootloader="unknown"
+    radio=`getprop gsm.version.baseband`
+    network="unknown"
+    module_metadata_version=`getprop ro.build.version.sdk`
+    sdk_extension_versions="[r=3 s=3]"
+    bugreport_format_version="2.0"
+
+    echo "${separator_line}"
+    echo "== dumpstate: ${time}"
+    echo "${separator_line}"
+    echo ""
+    echo "Build: ${build}"
+    echo "Build fingerprint: '${build_fingerprint}'"
+    echo "Bootloader: ${bootloader}"
+    echo "Radio: ${radio}"
+    echo "Network: ${network}"
+    echo "Module MetaData version: ${module_metadata_version}"
+    echo "SDK extension versions ${sdk_extension_versions}"
+    echo "Bugreport format version: ${bugreport_format_version}"
+    echo ""
+    echo "${separator_line}"
+    echo "== Checkins"
+    echo "${separator_line}"
+    echo "------ CHECKIN BATTERYSTATS (/system/bin/dumpsys batterystats -c) ------"
+    /system/bin/dumpsys batterystats -c
+    echo "${separator_line}"
+
+    echo "------ SYSTEM PROPERTIES (getprop) ------"
+    getprop
+    echo "== Android Framework Services"
+    echo "${separator_line}"
+    echo "------ DUMPSYS (/system/bin/dumpsys) ------"
+    echo "${separator_line_2}"
+    echo "DUMP OF SERVICE activity:"
+    /system/bin/dumpsys activity
+    echo "${separator_line_2}"
+    echo "DUMP OF SERVICE package:"
+    /system/bin/dumpsys package
+    echo "${separator_line_2}"
+
+    echo "------ EVENT LOG (logcat -b events -v threadtime -v printable -v uid -d *:v) ------"
+    logcat -b events -v threadtime -v printable -v uid -d *:v -T 5000
+    echo "------ SYSTEM LOG (logcat -b system -v threadtime -v printable -v uid -d *:v) ------"
+    logcat -b system -v threadtime -v printable -v uid -d *:v -T 10000
+    echo "------ MAIN LOG (logcat -b main -v threadtime -v printable -v uid -d *:v) ------"
+    logcat -b main -v threadtime -v printable -v uid -d *:v -T 10000
+    echo "${separator_line_2}"
+
+    if [ $all_flag == false ]; then
+        exit 1
+    fi
+    echo "------ DUMPSYS optional ------"
+    echo "DUMP OF SERVICE batterystats:"
+    /system/bin/dumpsys batterystats
+    echo "${separator_line_2}"
+    echo "DUMP OF SERVICE alarm:"
+    /system/bin/dumpsys alarm
+    echo "${separator_line_2}"
+    echo "DUMP OF SERVICE power:"
+    /system/bin/dumpsys power
+    echo "${separator_line_2}"
+    echo "DUMP OF SERVICE jobscheduler:"
+    /system/bin/dumpsys jobscheduler
+    echo "${separator_line_2}"
+    echo "DUMP OF SERVICE connectivity:"
+    /system/bin/dumpsys connectivity
+    echo "${separator_line_2}"
+    echo "------ KERNEL LOG (dmesg) ------"
+    /system/bin/dmesg
+    echo "${separator_line_2}"
+}

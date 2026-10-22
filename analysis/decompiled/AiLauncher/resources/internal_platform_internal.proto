@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package zyql.cloud.internetplatform;
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.internetplatform";
+option java_outer_classname = "InternetplatformInternal";
+
+service Internetplatform {
+  rpc CallBack(CallBackReq) returns(CallBackResp) {}
+}
+
+enum CallState {
+  OK = 0;
+  FAIL = 1;
+}
+
+message CallBackReq {
+    string requestId =1;
+    string body = 2;  //
+}
+
+message CallBackResp {
+
+    // 调用状态
+    CallState state = 1;
+}

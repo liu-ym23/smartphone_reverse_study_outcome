@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:textColor="#ffeeeeee"
+    android:gravity="center"
+    android:id="@+id/tv_toast_message"
+    android:background="@drawable/bg_repair_toast"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:singleLine="true"
+    android:elevation="8dp"
+    android:paddingHorizontal="36dp"
+    android:paddingVertical="12dp"/>

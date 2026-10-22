@@ -1,0 +1,31 @@
+package com.fasterxml.jackson.databind.util;
+
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.type.TypeFactory;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public interface Converter<IN, OUT> {
+
+    /* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+    public static abstract class None implements Converter<Object, Object> {
+        private None() {
+        }
+    }
+
+    default OUT convert(DeserializationContext deserializationContext, IN in) {
+        return convert(in);
+    }
+
+    OUT convert(IN in);
+
+    JavaType getInputType(TypeFactory typeFactory);
+
+    JavaType getOutputType(TypeFactory typeFactory);
+
+    default OUT convert(SerializerProvider serializerProvider, IN in) {
+        return convert(in);
+    }
+}

@@ -1,0 +1,36 @@
+package androidx.core.app;
+
+import android.app.Notification;
+import android.app.Service;
+import android.os.Binder;
+import android.os.RemoteException;
+import android.support.v4.app.INotificationSideChannel;
+
+/* loaded from: classes.dex */
+public abstract class NotificationCompatSideChannelService extends Service {
+
+    public class NotificationSideChannelStub extends INotificationSideChannel.Stub {
+        final /* synthetic */ NotificationCompatSideChannelService this$0;
+
+        public NotificationSideChannelStub(NotificationCompatSideChannelService notificationCompatSideChannelService) {
+        }
+
+        @Override // android.support.v4.app.INotificationSideChannel
+        public void cancel(String str, int i10, String str2) throws RemoteException {
+            Binder.getCallingUid();
+            throw null;
+        }
+
+        @Override // android.support.v4.app.INotificationSideChannel
+        public void cancelAll(String str) {
+            Binder.getCallingUid();
+            throw null;
+        }
+
+        @Override // android.support.v4.app.INotificationSideChannel
+        public void notify(String str, int i10, String str2, Notification notification) throws RemoteException {
+            Binder.getCallingUid();
+            throw null;
+        }
+    }
+}

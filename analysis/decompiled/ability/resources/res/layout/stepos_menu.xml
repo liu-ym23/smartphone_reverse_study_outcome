@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stepos_menu_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.stepos.widget.menu.StepOSMenuPanel
+        android:id="@+id/stepos_menu_panel"
+        android:background="@drawable/stepos_bg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/stepos_menu_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/stepos_menu_recycler"
+                android:paddingTop="@dimen/stepos_menu_padding_vertical"
+                android:paddingBottom="@dimen/stepos_menu_padding_vertical"
+                android:scrollbars="none"
+                android:clipToPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"/>
+            <View
+                android:layout_gravity="end|top"
+                android:id="@+id/stepos_menu_scrollbar"
+                android:background="@drawable/stepos_menu_scrollbar_thumb"
+                android:focusable="false"
+                android:visibility="gone"
+                android:clickable="false"
+                android:layout_width="@dimen/stepos_menu_scrollbar_thumb_width"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no"
+                android:layout_marginEnd="@dimen/stepos_menu_scrollbar_inset_end"/>
+        </FrameLayout>
+    </com.stepos.widget.menu.StepOSMenuPanel>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mc_search_content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/stepos_action_bar_search_layout_height"
+    android:transitionName="@string/mc_search_view_share_element_name"/>

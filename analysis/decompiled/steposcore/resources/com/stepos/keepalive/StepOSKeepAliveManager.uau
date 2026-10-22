@@ -1,0 +1,4 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lcom/stepos/keepalive/StepOSKeepAliveManager;->get()Lcom/stepos/keepalive/StepOSKeepAliveManager;,vendor/stepos/frameworks/base/steposbase/core/java/com/stepos/keepalive/StepOSKeepAliveManager.java,64,5,64,25,
+Lcom/stepos/keepalive/StepOSKeepAliveManager;->setProcessTempKeepAlive(Ljava/lang/String;II)Z,vendor/stepos/frameworks/base/steposbase/core/java/com/stepos/keepalive/StepOSKeepAliveManager.java,95,5,95,25,
+Lcom/stepos/keepalive/StepOSKeepAliveManager;->endProcessTempKeepAlive(Ljava/lang/String;I)Z,vendor/stepos/frameworks/base/steposbase/core/java/com/stepos/keepalive/StepOSKeepAliveManager.java,133,5,133,25,

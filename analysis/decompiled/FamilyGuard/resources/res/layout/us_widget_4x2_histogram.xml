@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stepos.familyguard.ui.widget.chart.histogram.HistogramView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/histogram_view"
+    android:layout_width="@dimen/us_4x2_widget_histogram_view_width"
+    android:layout_height="@dimen/us_4x2_widget_histogram_view_height"
+    android:layout_marginHorizontal="?attr/marginMedium"
+    app:dimensionAtStart="true"
+    app:histogramHeight="@dimen/us_4x2_widget_histogram_height"
+    app:histogramWidth="@dimen/us_4x2_widget_histogram_width"
+    app:hoverable="false"
+    app:needAverage="false"
+    app:selectable="false"
+    app:xDimensionAlignType="dimension_align_center"
+    app:xSegmentSize="4"
+    app:yDimensionAlignType="dimension_align_center"
+    app:ySegmentSize="2"
+    style="@style/Histogram"/>

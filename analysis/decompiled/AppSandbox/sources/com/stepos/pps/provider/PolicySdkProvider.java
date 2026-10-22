@@ -1,0 +1,45 @@
+package com.stepos.pps.provider;
+
+import android.content.ContentProvider;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.net.Uri;
+import android.util.Log;
+import java.util.Arrays;
+
+/* loaded from: classes.dex */
+public class PolicySdkProvider extends ContentProvider {
+    private static final int ERRCODE = -1000;
+    private static final String TAG = "PolicySdkProvider";
+
+    @Override // android.content.ContentProvider
+    public boolean onCreate() {
+        return false;
+    }
+
+    @Override // android.content.ContentProvider
+    public int delete(Uri uri, String str, String[] strArr) {
+        Log.d(TAG, "selection = " + str + ", selectionArgs = " + Arrays.toString(strArr));
+        return ERRCODE;
+    }
+
+    @Override // android.content.ContentProvider
+    public String getType(Uri uri) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    @Override // android.content.ContentProvider
+    public Uri insert(Uri uri, ContentValues contentValues) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    @Override // android.content.ContentProvider
+    public Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    @Override // android.content.ContentProvider
+    public int update(Uri uri, ContentValues contentValues, String str, String[] strArr) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+}

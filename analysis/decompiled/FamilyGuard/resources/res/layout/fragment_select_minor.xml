@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:background="?attr/colorSurface"
+    android:fitsSystemWindows="false"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="32sp"
+        android:id="@+id/txt_select_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/mm_title_select_minor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextAppearance.FG.HeadLine.17"/>
+    <com.stepos.familyguard.ui.widget.MyRecyclerView
+        android:id="@+id/recycler_view"
+        android:background="?attr/colorSurface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select_title"
+        app:layout_goneMarginTop="?attr/marginMedium"/>
+    <com.stepos.widget.button.StepOSButton
+        android:id="@+id/btn_turn_on"
+        android:layout_width="288dp"
+        android:layout_height="@dimen/stepos_button_height"
+        android:layout_marginBottom="@dimen/common_bottom_margin"
+        android:text="@string/mm_turn_on_minor_mode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/StepOSWidget.Button.Blue"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

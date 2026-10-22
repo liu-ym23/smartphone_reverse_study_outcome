@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="100004"
+    android:versionName="1.0.4_20260928_154957"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
+    package="com.stepos.agentpack"
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="36"/>
+    <application
+        android:label="AgentSprite Pack"
+        android:hasCode="false"
+        android:allowBackup="false"
+        android:extractNativeLibs="false"/>
+</manifest>

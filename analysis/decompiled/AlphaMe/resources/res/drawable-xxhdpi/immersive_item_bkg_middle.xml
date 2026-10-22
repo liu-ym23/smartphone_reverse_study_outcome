@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stepos.common.animator.ImmersiveListItemDrawable xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:immersiveItemPadding="16dp"
+    app:immersiveSolidColor="@color/fd_sys_color_surface_container_lowest_default"
+    app:immersiveType="?0x7f09000b"
+    app:pressAlphaTo="1"
+    app:tint="@color/fd_sys_color_state_pressed_default"/>

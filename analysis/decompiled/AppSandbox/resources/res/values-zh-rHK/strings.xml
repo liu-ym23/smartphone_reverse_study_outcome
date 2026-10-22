@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abnormal_report_reason_thermal_charge">可能由於充電導致裝置過熱</string>
+    <string name="abnormal_report_title_power">耗電異常</string>
+    <string name="abnormal_report_title_thermal">溫度異常</string>
+    <string name="app_name">性能優化服務</string>
+    <string name="battery_normal_charging">恢復正常充電</string>
+    <string name="battery_protection_charging">已開始優化充電</string>
+    <string name="battery_protection_sub_title">為減緩電池老化，計畫於%s完成充電</string>
+    <string name="change_optimize_tip_button_text">繼續充滿</string>
+    <string name="change_optimize_tip_message" formatted="false">充電時電量將維持在 90% 以延緩電池老化，直至高耗電狀態結束。點按「繼續充滿」可充至 100%。</string>
+    <string name="change_optimize_tip_title">智慧充電優化已開啟，暫緩充滿</string>
+    <string name="cpu_exception_notification_channel_name">耗電異常</string>
+    <string name="cpu_exception_notification_title">電量管理</string>
+    <string name="first_launch_low_power_by_control_center_message">低電量模式可以延長電池續航，同時降低部分視覺效果和性能</string>
+    <string name="first_launch_low_power_by_control_center_message_ring">省電模式將智能調節靈動光環、GPS、音效、觸覺反饋等功能狀態，並自動限制 5G 網絡使用與後台運行數量，以降低部分視覺效果與效能。手機電量高於 90% 時會自動退出此模式。可前往「設定 &gt; 電池 &gt; 省電模式」進行詳細設定。</string>
+    <string name="first_launch_low_power_by_control_center_title">啟用低電量模式</string>
+    <string name="high_performance_notify_channel_name">高性能模式</string>
+    <string name="high_performance_notify_content">可能造成較高功耗和發熱，點按以切換</string>
+    <string name="high_performance_notify_title">正處於高性能模式</string>
+    <string name="message_3c">您的裝置溫度過高，建議暫停使用，否則將導致下列問題：\n- 螢幕變暗；\n- 裝置變慢；\n- 關閉部分功能；\n移除充電器後，裝置可使用。</string>
+    <string name="notification_bypass_charge_battery">電池</string>
+    <string name="notification_bypass_charge_btn_close">關閉旁路供電</string>
+    <string name="notification_bypass_charge_btn_settings">前往設定</string>
+    <string name="notification_bypass_charge_close">旁路供電已關閉</string>
+    <string name="notification_bypass_charge_content">%1$s 生效 — 斷開充電線會自動關閉</string>
+    <string name="notification_bypass_charge_content_suspend">充電至 %1$s%% 時旁路供電即生效</string>
+    <string name="notification_bypass_charge_content_suspend_game">進入遊戲模式後旁路供電即生效</string>
+    <string name="notification_bypass_charge_mode_game">遊戲模式下</string>
+    <string name="notification_bypass_charge_mode_global">全系統</string>
+    <string name="notification_bypass_charge_title">旁路供電已生效</string>
+    <string name="ok_3c">知道了</string>
+    <string name="scheduled_dialog_cancel">取消</string>
+    <string name="scheduled_dialog_ok">立即啟用</string>
+    <string name="scheduled_dialog_ok2">啟用</string>
+    <string name="scheduled_supermode_on">定時開啟省電模式</string>
+    <string name="scheduled_time_dialog_message_standard">手機將於 %s 秒後啟用低電量模式（建議）</string>
+    <string name="scheduled_time_dialog_message_supper">手機將於 %s 秒後啟用極省電模式</string>
+    <string name="scheduled_time_dialog_message_userdefine">手機將於%s秒後啟用自訂省電模式</string>
+    <string name="thermal_level_warning_button_text">我知道了</string>
+    <string name="thermal_level_warning_message">持續升溫將會限制裝置使用，必要時可能會強制關機。</string>
+    <string name="thermal_level_warning_title">溫度較高，建議等待裝置冷卻後再使用</string>
+    <string name="tink_3c">高溫提示</string>
+    <string name="uninstall_pps">請刪除 性能優化服務 更新</string>
+    <string name="uninstall_pps_detail">當前 性能優化服務 版本不相容，會導致系統不穩定，請卸載更新</string>
+</resources>

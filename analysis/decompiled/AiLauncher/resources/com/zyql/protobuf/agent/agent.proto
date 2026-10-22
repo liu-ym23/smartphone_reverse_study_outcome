@@ -1,0 +1,357 @@
+// Agent to Runtime Protocol - Stateless Bidirectional Streaming
+//
+// This protocol defines stateless communication between Runtime and Agent:
+// - Agent is a stateless service, no persistent connection or state
+// - Runtime sends requests, Agent responds immediately
+// - Both sides can send unsolicited messages via the bidirectional stream
+// - No session/task state tracking at the protocol level
+//
+// Uses separate oneof fields for request and response to clarify message direction.
+//
+// Design Principles:
+// - Bidirectional streaming for flexible communication
+// - Dual oneof (request/response) for clear message direction
+// - Message pairing via id field for request-response correlation
+// - Stateless operations only (no complex task lifecycle)
+// - Proto3 native oneof for language-agnostic implementation
+
+syntax = "proto3";
+
+package cortex.adk.agent;
+
+import "com/zyql/protobuf/common/content.proto";
+import "com/zyql/protobuf/common/hook.proto";
+import "google/protobuf/struct.proto";
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.agent";
+option java_outer_classname = "Agent";
+
+// ====================
+// Agent Service - Bidirectional Streaming
+// ====================
+
+service AgentService {
+  // Bidirectional streaming: Both Runtime and Agent can send messages
+  // Runtime → Agent: requests to get info, execute tool, invoke hook
+  // Agent → Runtime: responses and agent-initiated queries
+  rpc Stream(stream RuntimeMessage) returns (stream AgentMessage);
+}
+
+// ====================
+// Agent Messages (Sent by Agent)
+// ====================
+
+// AgentMessage is the envelope for all messages sent by Agent
+// Can be responses to RuntimeMessage or agent-initiated queries to Runtime
+message AgentMessage {
+  string id = 1;              // Message ID (mirrors RuntimeMessage.id for responses, or unique for queries)
+  int64 timestamp = 2;        // Message timestamp in milliseconds
+
+  oneof response {
+    // === Responses to Runtime requests ===
+    GetAgentInfoResponse get_agent_info_response = 10;
+    ToolExecutionResult tool_execution_result = 30;
+    HookExecutionResult hook_execution_result = 31;
+
+    // Error response (for any request that fails)
+    Error error = 60;
+  }
+
+  oneof request {
+    // === Agent-initiated queries to Runtime ===
+    GetStoreRequest get_store_request = 50;  // Read configuration/data from Store
+  }
+}
+
+// ============================================
+// Agent-Initiated Queries (Agent → Runtime)
+// ============================================
+
+message GetStoreRequest {
+  string store_id = 1;
+  string key = 2;
+}
+
+// ============================================
+// Runtime Responses to Agent Queries
+// ============================================
+
+message GetStoreResponse {
+  bool success = 1;
+  string store_id = 2;
+  string key = 3;
+  bytes value = 4;
+  string error = 5;
+}
+
+// ====================
+// Generic Error Type
+// ====================
+
+enum ErrorCode {
+  ERROR_UNSPECIFIED = 0;
+  ERROR_TIMEOUT = 1;                    // Request/operation timeout
+  ERROR_NOT_FOUND = 2;                  // Resource not found
+  ERROR_INVALID_ARGUMENT = 3;           // Invalid argument
+  ERROR_PERMISSION_DENIED = 4;          // Permission denied
+  ERROR_INTERNAL = 5;                   // Internal error
+  ERROR_UNAVAILABLE = 6;                // Service unavailable
+  ERROR_CANCELLED = 7;                  // Request cancelled
+}
+
+message Error {
+  ErrorCode code = 1;
+  string message = 2;
+  map<string, string> details = 3;      // Additional context
+}
+
+// ============================================
+// Runtime Requests (Runtime → Agent)
+// ============================================
+
+// GetAgentInfoRequest / GetAgentInfoResponse
+// Runtime asks: "What tools/capabilities do you have?"
+message GetAgentInfoRequest {
+  string agent_id = 1;
+}
+
+message GetAgentInfoResponse {
+  bool success = 1;
+  AgentInfo agent_info = 2;
+  string error = 3;
+}
+
+// Agent Metadata
+
+message AgentInfo {
+  string agent_id = 1;          // Unique agent ID (UUID)
+  string name = 2;
+  string version = 3;
+  string description = 4;
+  ModelConfig model_config = 5; // Model configuration
+  string instructions = 6;
+  repeated AgentInfo sub_agents = 7;
+  repeated ToolDefinition tools = 8;
+  // repeated HandoffDefinition handoffs = 9;
+  repeated cortex.adk.common.HookDefinition hooks = 10;
+  repeated Skill skills = 11;  // Available skills from /skills directory
+}
+
+// Skill represents a skill (SOP) available for the agent
+message Skill {
+  oneof skill {
+    InlineSkill inline_skill = 1;
+    DirSkillLoader dir_skill_loader = 2;
+  }
+}
+
+message InlineSkill {
+  string name = 1;              // Skill name
+  string description = 2;       // Skill description
+  repeated FileContent files = 3;
+}
+
+message FileContent {
+  string path = 1;              // Virtual file path
+  bytes content = 2;           // File content (binary)
+}
+
+message DirSkillLoader {
+  string path = 1;              // Agent skill directory path
+  optional bool is_separate = 2;        // Whether the directory contains only one skill
+}
+
+message ToolDefinition {
+  oneof tool {
+    AgentTool agent_tool = 1;
+    ToolProvider tool_provider = 2;
+    McpTool mcp_tool = 3;
+  }
+}
+
+message AgentTool {
+  string name = 1;
+  string description = 2;
+  string parameters_schema = 3; // JSON Schema as string
+}
+
+message ToolProvider {
+  string type = 1;
+  optional string override_name = 2;
+  optional string override_description = 3;
+  optional string override_parameters_schema = 4;
+  google.protobuf.Struct metadata = 5;
+}
+
+message McpTool {
+}
+
+// message HandoffDefinition {
+//   string tool_name = 1;
+//   string description = 2;
+//   string target_agent = 3;
+// }
+
+// Model Configuration
+
+message ModelConfig {
+  string provider = 1; // "openai", "anthropic", "gemini", etc.
+  string model = 2;    // "gpt-4o-mini", "claude-3-5-sonnet", etc.
+  optional float temperature = 3;
+  optional int32 max_tokens = 4;
+  optional float top_p = 5;
+  repeated string stop = 6;
+  map<string, string> extra = 7; // Provider-specific params
+}
+
+message ChatMessage {
+  string role = 1;                      // Message role (e.g., "user", "assistant", "tool")
+  string content = 2;
+  optional string name = 3;             // Optional: function/tool name for tool messages
+}
+
+message CompletionRequest {
+  ModelConfig config = 1;
+  repeated ChatMessage messages = 2;
+  repeated ToolDefinition tools = 3; // Optional: available tools
+}
+
+message TokenUsage {
+  int32 prompt_tokens = 1;
+  int32 completion_tokens = 2;
+  int32 total_tokens = 3;
+}
+
+message CompletionResponse {
+  ChatMessage message = 1;
+  repeated cortex.adk.common.FunctionCall tool_calls = 2;
+  string finish_reason = 3; // "stop", "length", "tool_calls", etc.
+  TokenUsage token_usage = 4;
+  optional string provider_error = 5; // If provider returned an error
+}
+
+// ============================================
+// Tool Execution
+// ============================================
+
+// Runtime asks: "Execute this tool with these arguments"
+message ExecuteToolTask {
+  string task_id = 1;
+  string tool_call_id = 2;
+  string tool_name = 3;
+  string arguments_json = 4;
+  int32 timeout_seconds = 5;
+}
+
+message ToolExecutionResult {
+  string task_id = 1;
+  string tool_call_id = 2;
+  bool success = 3;
+  string output = 4;
+  string error = 5;
+  string content_type = 6; // "text", "json", "image", etc.
+  map<string, string> metadata = 7;
+}
+
+// ============================================
+// Hook Invocation
+// ============================================
+
+// Runtime asks: "Invoke this hook with this data"
+// Supports all hook types defined in hook.proto
+message InvokeHookTask {
+  string task_id = 1;
+
+  oneof hook_data {
+    // Session lifecycle hooks
+    cortex.adk.common.SessionStartHookData session_start = 10;
+    cortex.adk.common.SessionEndHookData session_end = 11;
+
+    // Tool call hooks
+    cortex.adk.common.ToolCallPreHookData tool_call_pre = 20;
+    cortex.adk.common.ToolCallPostHookData tool_call_post = 21;
+    cortex.adk.common.ToolCallErrorHookData tool_call_error = 22;
+
+    // Model call hooks
+    cortex.adk.common.ModelCallPreHookData model_call_pre = 30;
+    cortex.adk.common.ModelCallPostHookData model_call_post = 31;
+
+    // Agent lifecycle hooks
+    cortex.adk.common.AgentStartHookData agent_start = 40;
+    cortex.adk.common.AgentCompleteHookData agent_complete = 41;
+
+    // Handoff hooks
+    cortex.adk.common.HandoffPreHookData handoff_pre = 50;
+    cortex.adk.common.HandoffPostHookData handoff_post = 51;
+
+    // Message hooks
+    cortex.adk.common.MessagePreHookData message_pre = 60;
+    cortex.adk.common.MessagePostHookData message_post = 61;
+  }
+}
+
+// Hook execution result
+message HookExecutionResult {
+  string task_id = 1;
+  bool success = 2;
+  bool continue_execution = 3;  // Whether to continue after hook
+  string error = 4;
+
+  // Hook result data (serialized)
+  bytes modified_data = 5;      // Modified data if hook modified something
+  bool modified = 6;            // Whether data was modified
+
+  // Metadata
+  int64 duration_ms = 7;
+  map<string, string> metadata = 8;
+}
+
+// ====================
+// Runtime Message Envelope
+// ====================
+
+// RuntimeMessage is the envelope for all messages sent by Runtime
+// Can be requests to Agent or responses to Agent-initiated queries
+message RuntimeMessage {
+  string id = 1;                // Message ID for request-response pairing
+  int64 timestamp = 2;          // Message timestamp in milliseconds
+
+  oneof request {
+    // === Runtime requests to Agent (stateless operations only) ===
+    GetAgentInfoRequest get_agent_info_request = 10;
+    ExecuteToolTask execute_tool_task = 20;
+    InvokeHookTask invoke_hook_task = 21;
+  }
+
+  oneof response {
+    // === Runtime responses to Agent-initiated queries ===
+    GetStoreResponse get_store_response = 50;
+
+    // Error response (for any query that fails)
+    Error error = 60;
+  }
+}
+
+// ====================
+// Message Pairing Guide
+// ====================
+
+// AgentService uses bidirectional streaming with clear request/response separation:
+//
+// Message Direction:
+//   RuntimeMessage.request → AgentMessage.response (matched via id)
+//   AgentMessage.request → RuntimeMessage.response (matched via id)
+//
+// Request-Response Pairs:
+//
+// Runtime Requests (Runtime → Agent):
+//   GetAgentInfoRequest → GetAgentInfoResponse | Error
+//   ExecuteToolTask → ToolExecutionResult | Error
+//   InvokeHookTask → HookExecutionResult | Error
+//
+// Agent Queries (Agent → Runtime):
+//   GetStoreRequest → GetStoreResponse | Error
+//
+// All errors are returned via the Error message with specific ErrorCode
+

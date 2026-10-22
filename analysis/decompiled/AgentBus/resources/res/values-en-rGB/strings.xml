@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="context_is_null">Invalid parameter</string>
+    <string name="error_is_throwed">Failed to obtain permission. Please try again later.</string>
+    <string name="future_result_is_null">Failed to obtain permission. Please try again later.</string>
+    <string name="get_cancel">User cancelled</string>
+    <string name="get_token_failed">Failed to obtain permission. Please check the network or system time and try again</string>
+    <string name="in_progress">In progress</string>
+    <string name="indeterminate">Partially ticked</string>
+    <string name="not_selected">Not selected</string>
+    <string name="scope_null_token">Failed to obtain permission. No permission info corresponding to this %s</string>
+    <string name="selected">Selected</string>
+    <string name="state_empty">Empty</string>
+    <string name="sync_timeout">Request timeout. Please try again</string>
+    <string name="template_percent">%1$d per cent.</string>
+    <string name="uid_not_match">The uid doesn’t match the packet name</string>
+    <string name="unkown_error">Failed to obtain permission. Please try again later.</string>
+    <string name="unsupport_operation">Requests too frequent</string>
+</resources>

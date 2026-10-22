@@ -1,0 +1,59 @@
+// Common content types shared across protocols
+// These types represent content structures used in communication between
+// App, Runtime, and Agent layers
+
+syntax = "proto3";
+
+package cortex.adk.common;
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.common";
+option java_outer_classname = "AgentContent";
+
+import "google/protobuf/struct.proto";
+
+// Content represents a structured message with role and parts
+message Content {
+  string role = 1;
+  repeated Part parts = 2;
+}
+
+// Part represents a single part of a content message
+message Part {
+  oneof content {
+    string text = 1;
+    Blob inline_data = 2;
+    FunctionCall function_call = 3;
+    FunctionResponse function_response = 4;
+    FileData file_data = 5;
+  }
+  bool thought = 10;
+}
+
+// FunctionCall represents a function call request
+message FunctionCall {
+  string id = 1;
+  string name = 2;
+  google.protobuf.Struct args = 3;
+}
+
+// FunctionResponse represents a function call response
+message FunctionResponse {
+  string id = 1;
+  string name = 2;
+  google.protobuf.Struct response = 3;
+}
+
+// Blob represents binary data (image, audio, etc.)
+message Blob {
+  bytes data = 1;
+  string display_name = 2;
+  string mime_type = 3;
+}
+
+// FileData represents file metadata
+message FileData {
+  string uri = 1;
+  string display_name = 2;
+  string mime_type = 3;
+}

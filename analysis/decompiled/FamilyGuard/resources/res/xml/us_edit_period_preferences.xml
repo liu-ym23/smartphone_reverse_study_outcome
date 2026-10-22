@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:title="@string/us_start_time"
+        android:key="@string/us_edit_period_start_preference_key"
+        android:summary="11:00"/>
+    <Preference
+        android:title="@string/us_end_time"
+        android:key="@string/us_edit_period_end_preference_key"
+        android:summary="12:00"/>
+    <com.stepos.familyguard.ui.widget.ListPreference
+        android:entries="@array/us_weekday_type"
+        android:title="@string/us_period_repeat"
+        android:key="@string/us_week_day_type_key"
+        android:defaultValue="1"
+        android:entryValues="@array/us_weekday_value"/>
+    <Preference
+        android:layout="@layout/us_delete_period_layout"
+        android:title="@string/us_delete_period"
+        android:key="@string/us_delete_period_key"
+        android:widgetLayout="@null"/>
+</PreferenceScreen>

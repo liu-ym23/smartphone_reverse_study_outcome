@@ -1,0 +1,22 @@
+package k5;
+
+import android.content.ComponentName;
+import g5.j;
+import g5.u;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public final class b {
+
+    /* renamed from: d, reason: collision with root package name */
+    public static final String f7244d = u.f("SystemJobInfoConverter");
+
+    /* renamed from: a, reason: collision with root package name */
+    public ComponentName f7245a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public j f7246b;
+
+    /* renamed from: c, reason: collision with root package name */
+    public boolean f7247c;
+}

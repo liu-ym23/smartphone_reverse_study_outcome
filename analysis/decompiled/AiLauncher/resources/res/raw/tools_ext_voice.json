@@ -1,0 +1,15 @@
+[
+  {
+    "ext": {
+      "classification": "音色设置"
+    },
+    "toolName": "assistant_change_voice_id"
+  },
+  {
+    "ext": {
+      "classification": "风险提示",
+      "timeout": 600
+    },
+    "toolName": "assistant_show_risk_statement"
+  }
+]

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="abc_config_activityDefaultDur">220</integer>
+    <integer name="abc_config_activityShortDur">150</integer>
+    <integer name="abc_max_action_buttons">3</integer>
+    <integer name="app_bar_elevation_anim_duration">150</integer>
+    <integer name="m3_sys_motion_duration_medium3">350</integer>
+    <integer name="m3_sys_motion_duration_short1">50</integer>
+    <integer name="m3_sys_motion_duration_short3">150</integer>
+    <integer name="mtrl_btn_anim_delay_ms">100</integer>
+    <integer name="mtrl_btn_anim_duration_ms">100</integer>
+    <integer name="stepos_font_weight_medium">420</integer>
+    <integer name="stepos_font_weight_regular">340</integer>
+    <integer name="stepos_font_weight_semi_bold">580</integer>
+    <integer name="stepos_hotspot_ripple_enter_duration">400</integer>
+    <integer name="stepos_hotspot_ripple_exit_duration">500</integer>
+    <integer name="stepos_hotspot_ripple_fade_percent">100</integer>
+</resources>

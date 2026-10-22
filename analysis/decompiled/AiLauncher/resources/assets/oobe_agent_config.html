@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; media-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+    <style>
+        html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+        canvas { display: block; width: 100%; height: 100%; }
+        video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; background: transparent; opacity: 0; }
+    </style>
+</head>
+<body>
+    <canvas id="mascot" aria-hidden="true"></canvas>
+    <video id="configuring" src="video.webm" muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <video id="complete" src="complete.webm" muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <script>
+        // 始终使用同一透明画布输出，避免两个视频合成层切换时闪动。
+        const canvas = document.getElementById('mascot');
+        canvas.width = Math.max(1, Math.round(canvas.clientWidth * window.devicePixelRatio));
+        canvas.height = Math.max(1, Math.round(canvas.clientHeight * window.devicePixelRatio));
+        const output = canvas.getContext('2d');
+        const players = {};
+        for (const state of ['configuring', 'complete']) {
+            const frame = document.createElement('canvas');
+            frame.width = canvas.width;
+            frame.height = canvas.height;
+            players[state] = {
+                video: document.getElementById(state), frame,
+                context: frame.getContext('2d'), ready: false, cancel: null
+            };
+        }
+        let active = null;
+        let wanted = null;
+        let generation = 0;
+
+        function stop(player) {
+            if (!player) return;
+            if (player.cancel) player.cancel();
+            player.cancel = null;
+            player.video.pause();
+        }
+
+        function present(player) {
+            // 完整帧一次替换；不提前清空输出画布，也不叠加透明素材产生重影。
+            output.globalCompositeOperation = 'copy';
+            output.drawImage(player.frame, 0, 0);
+            if (active !== player) {
+                const previous = active;
+                active = player;
+                stop(previous);
+            }
+        }
+
+        function start(player) {
+            if (player.cancel) return;
+            const video = player.video;
+            let cancelled = false;
+            let frameId = null;
+            const useVideoFrames = 'requestVideoFrameCallback' in video;
+            const schedule = () => {
+                frameId = useVideoFrames
+                    ? video.requestVideoFrameCallback(onFrame)
+                    : requestAnimationFrame(onFrame);
+            };
+            const onFrame = () => {
+                if (cancelled) return;
+                if (video.readyState < 2 || !video.videoWidth || !video.videoHeight) {
+                    schedule();
+                    return;
+                }
+                try {
+                    const scale = Math.min(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
+                    const width = video.videoWidth * scale;
+                    const height = video.videoHeight * scale;
+                    // 后台解码并缓存完整透明帧，成功动画仅预解码首帧后暂停待播。
+                    player.ready = false;
+                    player.context.clearRect(0, 0, canvas.width, canvas.height);
+                    player.context.drawImage(video, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
+                    player.ready = true;
+                    if (player === wanted || player === active) {
+                        present(player);
+                        schedule();
+                    } else {
+                        stop(player);
+                    }
+                } catch (error) {
+                    onError();
+                }
+            };
+            const onError = () => {
+                if (cancelled) return;
+                stop(player);
+                if (player === wanted) MascotVideo.onError(generation);
+            };
+            player.cancel = () => {
+                cancelled = true;
+                if (frameId !== null) {
+                    if (useVideoFrames) video.cancelVideoFrameCallback(frameId);
+                    else cancelAnimationFrame(frameId);
+                }
+                video.removeEventListener('error', onError);
+            };
+            video.muted = true;
+            video.addEventListener('error', onError);
+            if (video.error) {
+                onError();
+                return;
+            }
+            schedule();
+            video.play().catch(onError);
+        }
+
+        window.setMascotState = (state, nextGeneration) => {
+            if (!players[state]) return;
+            wanted = players[state];
+            generation = nextGeneration;
+            // 缓存首帧可立即显示，无需等待解码器重新开始输出。
+            if (wanted.ready) present(wanted);
+            start(wanted);
+            if (state === 'configuring' && !players.complete.ready) {
+                start(players.complete);
+            }
+        };
+
+        window.pauseMascot = () => {
+            Object.values(players).forEach(stop);
+        };
+    </script>
+</body>
+</html>

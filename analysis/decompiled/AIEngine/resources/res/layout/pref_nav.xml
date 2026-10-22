@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="18dp">
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/mm_on_surface"
+        android:id="@+id/mm_nav_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-medium"/>
+    <ImageView
+        android:id="@+id/mm_nav_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/mm_ic_arrow_right"
+        android:contentDescription="@null"
+        android:layout_marginStart="12dp"/>
+</LinearLayout>

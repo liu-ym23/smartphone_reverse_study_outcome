@@ -1,0 +1,22 @@
+package kotlinx.serialization.internal;
+
+import com.stepos.stepclaw.SecurePrefs;
+import kotlin.Metadata;
+import kotlin.jvm.internal.p;
+import kotlinx.serialization.descriptors.SerialDescriptor;
+
+/* compiled from: r8-map-id-ca86e8b578419e4708a9a7ee3f056b062b20ba338a8b13e201aefe3710dbf238 */
+@Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\b\u0000\u0018\u00002\u00020\u0001B\u0011\bF\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0004\b\u0004\u0010\u0005R\u0015\u0010\u0006\u001a\u00020\u00078VX\u0096\u0084\b¢\u0006\u0006\u001a\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"Lkotlinx/serialization/internal/LinkedHashSetClassDesc;", "Lkotlinx/serialization/internal/ListLikeDescriptor;", "elementDesc", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "<init>", "(Lkotlinx/serialization/descriptors/SerialDescriptor;)V", "serialName", SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, "getSerialName", "()Ljava/lang/String;", "kotlinx-serialization-core"}, k = 1, mv = {2, 3, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class LinkedHashSetClassDesc extends ListLikeDescriptor {
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public LinkedHashSetClassDesc(SerialDescriptor elementDesc) {
+        super(elementDesc, null);
+        p.e(elementDesc, "elementDesc");
+    }
+
+    @Override // kotlinx.serialization.descriptors.SerialDescriptor
+    public String getSerialName() {
+        return CollectionDescriptorsKt.LINKED_HASH_SET_NAME;
+    }
+}

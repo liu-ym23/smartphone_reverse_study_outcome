@@ -1,0 +1,15 @@
+{
+  "version": 0,
+  "updatedAt": "2026-01-01T00:00:00Z",
+  "ttlSeconds": 3600,
+  "apps": [
+    { "appName": "快手",     "enabled": true,  "recommendations": [] },
+    { "appName": "B站",      "enabled": true,  "recommendations": [] },
+    { "appName": "微信",     "enabled": true,  "recommendations": [] },
+    { "appName": "高德地图", "enabled": true,  "recommendations": [] },
+    { "appName": "支付宝",   "enabled": true,  "recommendations": [] },
+    { "appName": "抖音",     "enabled": false, "recommendations": ["快手", "B站"] },
+    { "appName": "百度地图", "enabled": false, "recommendations": ["高德地图"] },
+    { "appName": "QQ",       "enabled": false, "recommendations": ["微信"] }
+  ]
+}

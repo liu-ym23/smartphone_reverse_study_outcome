@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_popup_copy"
+        android:id="@+id/menu_copy"
+        android:title="@string/chat_menu_copy"
+        android:iconTintMode="src_in"/>
+    <item
+        android:icon="@drawable/ic_popup_edit"
+        android:id="@+id/menu_edit"
+        android:title="@string/chat_menu_edit"/>
+    <item
+        android:icon="@drawable/ic_popup_select_text"
+        android:id="@+id/menu_select_txt"
+        android:title="@string/chat_menu_select_text"
+        android:iconTintMode="src_in"/>
+    <item
+        android:icon="@drawable/ic_popup_delete"
+        android:id="@+id/menu_delete"
+        android:title="@string/chat_menu_delete"
+        android:iconTintMode="src_in"/>
+</menu>

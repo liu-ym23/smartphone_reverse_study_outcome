@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="@color/stepos_dialog_icon_content_fill_unselected"/>
+    <stroke
+        android:width="@dimen/stepos_dialog_icon_content_ring_stroke"
+        android:color="@color/stepos_dialog_icon_content_ring"/>
+</shape>

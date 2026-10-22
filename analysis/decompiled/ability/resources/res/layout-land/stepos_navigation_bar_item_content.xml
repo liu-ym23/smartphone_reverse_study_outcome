@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stepos.common.widget.NavigationMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/stepos_action_bar_default_height_appcompat_split">
+    <com.stepos.common.widget.StepOSImageView
+        android:id="@+id/icon"
+        android:focusable="false"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="centerInside"/>
+    <TextView
+        android:textAppearance="?attr/steposBottomNavigationTextAppearance"
+        android:id="@+id/title"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        style="?attr/steposBottomNavigationTextStyle"/>
+</com.stepos.common.widget.NavigationMenuItemView>

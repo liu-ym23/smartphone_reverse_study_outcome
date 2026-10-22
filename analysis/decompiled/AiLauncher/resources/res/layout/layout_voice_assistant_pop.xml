@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voice_pop_root"
+    android:background="#cc000000"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.stepos.ailauncher.speech.view.VoiceTextView
+        android:gravity="center"
+        android:id="@+id/voice_pop_asr_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

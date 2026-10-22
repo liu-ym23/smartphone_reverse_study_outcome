@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package stepos.cloud.connection;
+
+option java_multiple_files = true;
+option java_package = "com.stepos.protobuf.connection";
+option java_outer_classname = "Connection";
+
+message Head {
+    // 包体数据类型，0=text, 1=pb
+    uint32 frame_type = 1;
+    // 0=上行req，1=上行req的回包rsp，2=下行的push，3=下行push的回包（ack），4=上行req异常回包
+    uint32 msg_type = 2;
+    // 消息id，用于确定上行req/rsp的对应关系，以及push的唯一消息id。基于uuid生成
+    string msg_id = 3;
+    // 模块名，用于上行请求分发路由
+    string module = 4;
+    // 方法名，与module组合确定唯一的RPC
+    string command = 5;
+    // 其他非预设字段
+    map<string, string> meta = 6;
+}
+
+// 消息体
+message StreamMsg {
+    Head head = 1;
+    bytes body = 2;
+
+}
+
+// Tool
+message Tool {
+    string id = 1; // UUID
+    string version = 2; // Version
+    string name = 3;
+    string description = 4;
+    map<string, string> parameters = 5; // Schema
+}
+
+message ToolCallParams {
+    string params = 1;
+}
+
+message ToolCallResult {
+    string result = 1;
+}
+
+message ToolCall {
+    string call_id = 1; // UUID
+    Tool tool = 2;
+    ToolCallParams params = 3;
+    ToolCallResult result = 4;
+}

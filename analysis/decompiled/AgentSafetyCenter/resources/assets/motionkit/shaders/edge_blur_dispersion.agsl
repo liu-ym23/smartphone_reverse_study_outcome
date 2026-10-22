@@ -1,0 +1,73 @@
+uniform shader sksl_background;
+uniform shader sksl_layer;
+uniform float2 iResolution;
+uniform float  iTime;
+uniform float  blurStrength;
+uniform float  dispersion;
+uniform float  edgeStart;
+uniform float  vignetteStrength;
+uniform float  progress;
+uniform float  scale;
+
+half4 sampleContent(float2 coord) {
+    half4 layer = sksl_layer.eval(coord);
+    half4 bg = sksl_background.eval(coord);
+    return half4((1.0 - layer.a) * bg.rgb + layer.rgb, 1.0);
+}
+
+float hash(float2 p) {
+    float h = dot(p, float2(127.1, 311.7));
+    return fract(sin(h) * 43758.5453);
+}
+
+half4 main(float2 fragCoord) {
+    float2 center = iResolution * 0.5;
+    float s = max(scale, 0.001);
+    float2 scaled = center + (fragCoord - center) / s;
+
+    float2 uv = scaled / iResolution;
+    float2 fromCenter = uv - 0.5;
+
+    float dist = length(fromCenter * 2.0);
+    float edgeFactor = smoothstep(edgeStart, 1.15, dist);
+
+    float t = iTime;
+    float breath = 1.0 + 0.06 * sin(t * 1.8) + 0.03 * sin(t * 2.9);
+    float intensity = progress * breath;
+
+    float baseAngle = atan(fromCenter.y, fromCenter.x);
+    float rotatedAngle = baseAngle + 0.02 * sin(t * 0.7 + dist * 4.0);
+    float len = length(fromCenter);
+    float2 dir = len > 0.001
+        ? float2(cos(rotatedAngle), sin(rotatedAngle))
+        : float2(0.0, 0.0);
+
+    float ca   = dispersion * edgeFactor * intensity;
+    float blur = blurStrength * edgeFactor * intensity;
+
+    half3 acc = half3(0.0);
+    float totalW = 0.0;
+
+    const int SAMPLES = 10;
+    const float GA = 2.399963;
+    float jitter = hash(scaled * 0.1 + float2(t * 7.0, t * 3.0)) * 6.2832;
+
+    for (int i = 0; i < SAMPLES; i++) {
+        float fi    = float(i);
+        float angle = fi * GA + jitter;
+        float rad   = sqrt((fi + 0.5) / float(SAMPLES)) * blur;
+        float2 off  = float2(cos(angle), sin(angle)) * rad;
+        float w = exp(-1.5 * fi / float(SAMPLES));
+
+        float2 p = scaled + off;
+        acc.r += sampleContent(p + dir * ca).r * w;
+        acc.g += sampleContent(p).g * w;
+        acc.b += sampleContent(p - dir * ca).b * w;
+        totalW += w;
+    }
+    acc /= totalW;
+
+    float vignette = 1.0 - edgeFactor * vignetteStrength * intensity;
+
+    return half4(half3(acc.r * vignette, acc.g * vignette, acc.b * vignette), 1.0);
+}

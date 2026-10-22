@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.stepos.familyguard.ui.widget.chart.histogram.BalloonHistogramView
+        android:id="@+id/histogram_view"
+        android:background="#ff000000"
+        android:layout_width="@dimen/us_4x4_widget_histogram_view_width"
+        android:layout_height="200dp"
+        app:averageColor="#ff00ffff"
+        app:averageFontSize="15sp"
+        app:averageStrokeWidth="1dp"
+        app:averageText="平均"
+        app:dimensionAtStart="false"
+        app:histogramHeight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:needAverage="true"
+        app:topspace="100dp"
+        style="@style/Histogram"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

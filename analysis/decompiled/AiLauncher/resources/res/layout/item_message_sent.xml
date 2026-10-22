@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="end|center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.stepos.agentframework.chatui.view.LoadingDotsView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/sendingDots"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:dotDiameter="3.3dp"
+        app:dotGap="2dp"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/ivSendFailed"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_send_failed"
+        android:contentDescription="@string/chat_send_failed_retry"
+        android:layout_marginEnd="8dp"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/ll_content"
+        android:background="@drawable/chat_send_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp">
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:id="@+id/tvSentMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="288dp"/>
+    </LinearLayout>
+</LinearLayout>

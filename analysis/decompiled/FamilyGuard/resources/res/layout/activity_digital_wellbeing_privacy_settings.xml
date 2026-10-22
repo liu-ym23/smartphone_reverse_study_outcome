@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/stepos_comp_background_primary"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.stepos.widget.toolbar.StepOSTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stepos_titlebar_compact_height"
+        app:steposTitle="@string/fg_privacy_settings_title"
+        app:steposTitleGravity="center"
+        style="@style/StepOSWidget.TitleBar.DigitalHealth"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.stepos.widget.list.StepOSListGroup
+            android:id="@+id/privacy_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/us_stepos_page_content_gap"
+            android:layout_marginHorizontal="@dimen/us_stepos_list_card_inset"
+            app:steposListGroupColor="@color/stepos_comp_background_list_card">
+            <com.stepos.widget.list.StepOSListItem
+                android:id="@+id/item_personal_info_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:steposListItemTitle="@string/fg_personal_information_collection_list_title"/>
+            <com.stepos.widget.list.StepOSListItem
+                android:id="@+id/item_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:steposListItemTitle="@string/fg_privacy_policy_title"/>
+            <com.stepos.widget.list.StepOSListItem
+                android:id="@+id/item_revoke_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:steposListItemTitle="@string/fg_revoke_privacy_settings_title"/>
+            <com.stepos.widget.list.StepOSListItem
+                android:id="@+id/item_child_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:steposListItemTitle="@string/fg_child_personal_information_collection_list_title"/>
+        </com.stepos.widget.list.StepOSListGroup>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

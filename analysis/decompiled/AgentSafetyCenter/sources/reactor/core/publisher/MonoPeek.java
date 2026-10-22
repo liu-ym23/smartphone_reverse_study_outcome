@@ -1,0 +1,79 @@
+package reactor.core.publisher;
+
+import java.util.function.Consumer;
+import java.util.function.LongConsumer;
+import reactor.core.CoreSubscriber;
+import reactor.core.Fuseable;
+import reactor.core.Scannable;
+import reactor.core.publisher.FluxPeek;
+import reactor.core.publisher.FluxPeekFuseable;
+import reactor.util.annotation.Nullable;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes2.dex */
+final class MonoPeek<T> extends InternalMonoOperator<T, T> implements SignalPeek<T> {
+    final Runnable onCancelCall;
+    final Consumer<? super T> onNextCall;
+    final LongConsumer onRequestCall;
+    final Consumer<? super qd.e> onSubscribeCall;
+
+    public MonoPeek(Mono<? extends T> mono, @Nullable Consumer<? super qd.e> consumer, @Nullable Consumer<? super T> consumer2, @Nullable LongConsumer longConsumer, @Nullable Runnable runnable) {
+        super(mono);
+        this.onSubscribeCall = consumer;
+        this.onNextCall = consumer2;
+        this.onRequestCall = longConsumer;
+        this.onCancelCall = runnable;
+    }
+
+    @Override // reactor.core.publisher.SignalPeek
+    @Nullable
+    public Runnable onAfterTerminateCall() {
+        return null;
+    }
+
+    @Override // reactor.core.publisher.SignalPeek
+    @Nullable
+    public Runnable onCancelCall() {
+        return this.onCancelCall;
+    }
+
+    @Override // reactor.core.publisher.SignalPeek
+    @Nullable
+    public Runnable onCompleteCall() {
+        return null;
+    }
+
+    @Override // reactor.core.publisher.SignalPeek
+    @Nullable
+    public Consumer<? super Throwable> onErrorCall() {
+        return null;
+    }
+
+    @Override // reactor.core.publisher.SignalPeek
+    @Nullable
+    public Consumer<? super T> onNextCall() {
+        return this.onNextCall;
+    }
+
+    @Override // reactor.core.publisher.SignalPeek
+    @Nullable
+    public LongConsumer onRequestCall() {
+        return this.onRequestCall;
+    }
+
+    @Override // reactor.core.publisher.SignalPeek
+    @Nullable
+    public Consumer<? super qd.e> onSubscribeCall() {
+        return this.onSubscribeCall;
+    }
+
+    @Override // reactor.core.publisher.InternalMonoOperator, reactor.core.publisher.MonoOperator, reactor.core.Scannable
+    public Object scanUnsafe(Scannable.Attr attr) {
+        return attr == Scannable.Attr.RUN_STYLE ? Scannable.Attr.RunStyle.SYNC : super.scanUnsafe(attr);
+    }
+
+    @Override // reactor.core.publisher.InternalMonoOperator, reactor.core.publisher.OptimizableOperator
+    public CoreSubscriber<? super T> subscribeOrReturn(CoreSubscriber<? super T> coreSubscriber) {
+        return coreSubscriber instanceof Fuseable.ConditionalSubscriber ? new FluxPeekFuseable.PeekConditionalSubscriber((Fuseable.ConditionalSubscriber) coreSubscriber, this) : new FluxPeek.PeekSubscriber(coreSubscriber, this);
+    }
+}

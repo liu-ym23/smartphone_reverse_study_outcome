@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_every_week"
+        android:title="@string/us_every_week"
+        android:contentDescription="@string/fg_settings"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/menu_usage_limit"
+        android:title="@string/us_usage_limit"
+        android:contentDescription="@string/us_usage_limit"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/menu_settings"
+        android:title="@string/fg_settings"
+        android:contentDescription="@string/fg_settings"
+        app:showAsAction="collapseActionView"/>
+</menu>

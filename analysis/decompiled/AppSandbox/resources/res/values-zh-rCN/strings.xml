@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abnormal_report_reason_thermal_charge">可能由于充电导致的设备过热</string>
+    <string name="abnormal_report_title_power">耗电异常</string>
+    <string name="abnormal_report_title_thermal">温度异常</string>
+    <string name="app_name">性能优化服务</string>
+    <string name="battery_normal_charging">恢复正常充电</string>
+    <string name="battery_protection_charging">已开始优化充电</string>
+    <string name="battery_protection_sub_title">为减缓电池老化，计划于%s完成充电</string>
+    <string name="change_optimize_tip_button_text">继续充满</string>
+    <string name="change_optimize_tip_message" formatted="false">充电时电量将维持在90%以延缓电池老化，直至结束高耗电状态。点击“继续充满”可充至100%</string>
+    <string name="change_optimize_tip_title">智能充电优化已开启暂缓充满</string>
+    <string name="cpu_exception_notification_channel_name">耗电异常</string>
+    <string name="cpu_exception_notification_title">电量管理</string>
+    <string name="first_launch_low_power_by_control_center_message">省电模式将智能调节GPS、音效、触摸反馈等功能状态并自动限制 5G 网络使用和后台运行数量，降低部分视觉效果和性能，手机电量高于 90% 时将自动退出此模式。可前往“设置 &gt; 电池 &gt; 省电模式”详细设置</string>
+    <string name="first_launch_low_power_by_control_center_message_ring">省电模式将智能调节灵动光环、GPS、音效、触摸反馈等功能状态并自动限制 5G 网络使用和后台运行数量，降低部分视觉效果和性能，手机电量高于 90% 时将自动退出此模式。可前往“设置 &gt; 电池 &gt; 省电模式”详细设置</string>
+    <string name="first_launch_low_power_by_control_center_title">启用省电模式</string>
+    <string name="high_performance_notify_channel_name">高性能模式</string>
+    <string name="high_performance_notify_content">可能造成较高功耗和发热，点击切换</string>
+    <string name="high_performance_notify_title">正处于高性能模式</string>
+    <string name="message_3c">您的设备温度过高，建议暂停使用，否则将导致以下问题：\n- 屏幕变暗；\n- 设备变慢；\n- 关闭部分功能；\n移除充电器后，设备可使用。</string>
+    <string name="notification_bypass_charge_battery">电池</string>
+    <string name="notification_bypass_charge_btn_close">关闭旁路充电</string>
+    <string name="notification_bypass_charge_btn_settings">去设置</string>
+    <string name="notification_bypass_charge_close">旁路供电已关闭</string>
+    <string name="notification_bypass_charge_content">%1$s生效，断开充电线自动关闭</string>
+    <string name="notification_bypass_charge_content_suspend">充电至 %1$s%% 时旁路供电即生效</string>
+    <string name="notification_bypass_charge_content_suspend_game">进入游戏模式后旁路供电即生效</string>
+    <string name="notification_bypass_charge_mode_game">游戏模式下</string>
+    <string name="notification_bypass_charge_mode_global">全系统</string>
+    <string name="notification_bypass_charge_title">旁路供电已生效</string>
+    <string name="ok_3c">知道了</string>
+    <string name="scheduled_dialog_cancel">取消</string>
+    <string name="scheduled_dialog_ok">立即启用</string>
+    <string name="scheduled_dialog_ok2">启用</string>
+    <string name="scheduled_supermode_on">定时开启省电模式</string>
+    <string name="scheduled_time_dialog_message_standard">手机将于%s秒后启用低电量模式（推荐）</string>
+    <string name="scheduled_time_dialog_message_supper">手机将于%s秒后启用极限省电模式</string>
+    <string name="scheduled_time_dialog_message_userdefine">手机将于%s秒后启用自定义省电模式</string>
+    <string name="thermal_level_warning_button_text">我知道了</string>
+    <string name="thermal_level_warning_message">持续升温将限制设备使用，必要时将强制关机</string>
+    <string name="thermal_level_warning_title">温度较高，建议等待设备冷却后使用</string>
+    <string name="tink_3c">高温提示</string>
+    <string name="uninstall_pps">请删除One mind 更新</string>
+    <string name="uninstall_pps_detail">当前性能优化服务版本不兼容，会导致系统不稳定，请卸载更新</string>
+</resources>

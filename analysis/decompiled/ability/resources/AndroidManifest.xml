@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="101002"
+    android:versionName="1.1.2_20261003_004257"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
+    package="com.stepos.ability"
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
+    <uses-sdk
+        android:minSdkVersion="33"
+        android:targetSdkVersion="36"/>
+    <permission
+        android:label="@string/mcp_permission_access_services_label"
+        android:name="com.stepos.mcp.sdk.permission.ACCESS_MCP_SERVICES"
+        android:protectionLevel="system|signature"
+        android:description="@string/mcp_permission_access_services_desc"/>
+    <permission
+        android:label="@string/agent_permission_access_service_label"
+        android:name="com.stepos.ability.permission.ACCESS_AGENT_SERVICE"
+        android:protectionLevel="knownSigner|system|signature"
+        android:description="@string/agent_permission_access_service_desc"
+        android:knownCerts="@array/agent_service_known_certs"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.MANAGE_MEDIA"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-permission android:name="com.stepos.mcp.sdk.permission.ACCESS_MCP_SERVICES"/>
+    <uses-permission android:name="com.stepos.ability.permission.ACCESS_AGENT_SERVICE"/>
+    <uses-permission android:name="com.stepos.xmscore.permission.ACCESS_LOCATION_SERVICE"/>
+    <uses-permission android:name="com.stepos.xmscore.permission.ACCESS_MAP_SERVICE"/>
+    <uses-permission android:name="com.stepos.xmscore.permission.ACCESS_MCP_SERVICE"/>
+    <uses-permission android:name="com.stepos.agentsafetycenter.permission.READ_AGENT_PERMISSIONS"/>
+    <uses-permission android:name="com.stepos.agentsafetycenter.permission.READ_AGENT_LEDGER"/>
+    <queries>
+        <intent>
+            <action android:name="com.stepos.mcp.sdk.TOOLS_SERVICE"/>
+        </intent>
+        <intent>
+            <action android:name="com.stepos.ability.AI_ACTIVITY"/>
+        </intent>
+        <package android:name="com.stepos.agentsafetycenter"/>
+        <package android:name="com.zyql.screenperception.api"/>
+        <provider android:authorities="com.stepos.ailauncher.state.provider"/>
+        <package android:name="com.stepos.ability"/>
+        <intent>
+            <action android:name="com.stepos.ability.BIND_AGENT_SERVICE"/>
+        </intent>
+        <package android:name="com.zyql.ability"/>
+        <intent>
+            <action android:name="com.zyql.ability.service.ACTION_ABILITY_SERVICE"/>
+        </intent>
+        <package android:name="stepai.android.mindx.sdk"/>
+        <package android:name="com.stepos.agentpack"/>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+        </intent>
+        <package android:name="com.zyql.agentfront"/>
+        <intent>
+            <action android:name="com.zyql.agentfront.BIND_INTENT_TASK_MANAGER"/>
+        </intent>
+        <intent>
+            <action android:name="com.zyql.agentfront.BIND_MESSAGE_BRIDGE"/>
+        </intent>
+        <package android:name="com.stepos.dataservice"/>
+        <package android:name="com.zeroclaw.android"/>
+    </queries>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.BIND_SCREEN_CAPTURE_SERVICE"/>
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT"/>
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
+    <uses-permission android:name="com.zyql.permission.BIND_SCREEN_SERVICE"/>
+    <uses-permission android:name="com.zyql.permission.BIND_VIEW_TREE_SERVICE"/>
+    <uses-permission android:name="com.zyql.permission.BIND_FUSION_SERVICE"/>
+    <uses-permission android:name="com.zyql.permission.BIND_CAPTURE_OCR_SERVICE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER"/>
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <permission
+        android:name="com.stepos.ability.permission.ACCESS_VOICE_CONSENT"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.stepos.ability.permission.CONTROL_VOICE_WAKEUP"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.stepos.ability.permission.CONTROL_VOICE_WAKEUP"/>
+    <protected-broadcast android:name="com.stepos.ability.voicewakeup.ACTION_WAKEUP"/>
+    <protected-broadcast android:name="com.stepos.ability.voicewakeup.ACTION_TRAINING_COMPLETE"/>
+    <protected-broadcast android:name="com.stepos.ability.voicewakeup.ACTION_STATE_CHANGED"/>
+    <uses-permission android:name="com.stepos.secureservice.permission.OPEN_DATA_PROVIDER"/>
+    <permission
+        android:name="com.stepos.taskrobot.permission.ACCESS_SETTINGS"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.stepos.ability.permission.SCREEN_OPS"
+        android:protectionLevel="signature"/>
+    <protected-broadcast android:name="com.screenops.action.SCREEN_OPS_EVENT"/>
+    <protected-broadcast android:name="com.screenops.action.SERVER_READY"/>
+    <permission
+        android:label="@string/vdbroadcast_permission_label"
+        android:name="com.stepos.taskrobot.vdbroadcast.permission.VD_TASK"
+        android:protectionLevel="signature"
+        android:description="@string/vdbroadcast_permission_desc"/>
+    <uses-permission android:name="com.stepos.taskrobot.vdbroadcast.permission.VD_TASK"/>
+    <protected-broadcast android:name="com.stepos.taskrobot.vdbroadcast.action.TASK_EVENT"/>
+    <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT"/>
+    <uses-feature
+        android:glEsVersion="0x30000"
+        android:required="false"/>
+    <permission
+        android:name="com.stepos.ability.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.stepos.ability.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.stepos.agentcache.permission.WRITE_AGENT_CACHE"/>
+    <uses-permission android:name="com.stepos.permission.DataService"/>
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
+    <uses-permission android:name="com.zeroclaw.android.permission.ZEROCLAW_IPC"/>
+    <uses-permission android:name="android.permission.ImageCaptureService"/>
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22"/>
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22"/>
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS"
+        android:maxSdkVersion="22"/>
+    <application
+        android:theme="@style/Theme.Ability"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.stepos.ability.App"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules">
+        <uses-library
+            android:name="steposcore-framework"
+            android:required="false"/>
+        <provider
+            android:name="com.stepos.probe.ProbeInitProvider"
+            android:exported="false"
+            android:authorities="com.stepos.ability.probe-init"
+            android:initOrder="100"/>
+        <service
+            android:name="com.stepos.taskrobot.service.TaskRobotService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.stepos.taskrobot.service.TaskRobotService"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/Theme.FullScreen.AppCompat"
+            android:name="com.stepos.taskrobot.llmapi.stepfun.FullScreenActivity"
+            android:exported="false"
+            android:taskAffinity=""
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:documentLaunchMode="intoExisting"
+            android:autoRemoveFromRecents="true"
+            android:relinquishTaskIdentity="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@android:style/Theme.NoDisplay"
+            android:name="com.stepos.taskrobot.llmapi.stepfun.RedirectTrampolineActivity"
+            android:exported="false"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:noHistory="true"/>
+        <activity
+            android:theme="@android:style/Theme.NoDisplay"
+            android:name="com.stepos.taskrobot.llmapi.stepfun.LiveNotificationLaunchActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:noHistory="true"/>
+        <provider
+            android:name="com.stepos.ability.voicewakeup.VoiceWakeupStateProvider"
+            android:permission="com.stepos.ability.permission.CONTROL_VOICE_WAKEUP"
+            android:exported="true"
+            android:authorities="com.stepos.ability.voicewakeup.state"/>
+        <provider
+            android:name="com.stepos.ability.voicewakeup.VoicePermissionProvider"
+            android:permission="com.stepos.ability.permission.ACCESS_VOICE_CONSENT"
+            android:exported="true"
+            android:authorities="com.stepos.ability.voicewakeup.permission"/>
+        <service
+            android:name="com.stepos.ability.voicewakeup.service.VoiceWakeupService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.stepos.ability.BIND_VOICE_WAKEUP"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/Theme.VoiceWakeup.Dark"
+            android:name="com.stepos.ability.voicewakeup.training.TrainingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.ability.action.VOICE_WAKEUP_TRAINING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.VoiceWakeup"
+            android:name="com.stepos.ability.voicewakeup.setting.VoiceWakeSettingActivity"
+            android:permission="com.stepos.ability.permission.ACCESS_VOICE_CONSENT"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.ability.action.VOICE_WAKEUP_SETTING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.VoiceWakeup.Dark"
+            android:name="com.stepos.ability.voicewakeup.setting.WakeupWordSelectionActivity"
+            android:permission="com.stepos.ability.permission.ACCESS_VOICE_CONSENT"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.stepos.ability.action.VOICE_WAKEUP_WORD_SELECTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Policy.AppTheme"
+            android:name="com.stepos.policy.sdk.activity.PolicyHtmlViewerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation"
+            android:inheritShowWhenLocked="true"/>
+        <activity
+            android:theme="@style/Policy.AppTheme"
+            android:name="com.stepos.policy.sdk.activity.PolicyPermissionDesActivity"
+            android:screenOrientation="portrait"
+            android:inheritShowWhenLocked="true"/>
+        <provider
+            android:name="com.stepos.policy.sdk.util.PolicySdkFileProvider"
+            android:exported="false"
+            android:authorities="com.stepos.ability.PolicySdk.FileProvider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/policy_sdk_file_paths"/>
+        </provider>
+        <provider
+            android:name="com.stepos.ability.mcpserver.handshake.McpHandshakeProvider"
+            android:exported="true"
+            android:authorities="com.stepos.ability.mcp"/>
+        <provider
+            android:name="com.stepos.taskrobot.settingsprovider.SettingsContentProvider"
+            android:permission="com.stepos.taskrobot.permission.ACCESS_SETTINGS"
+            android:exported="true"
+            android:authorities="com.stepos.taskrobot.settingsprovider"/>
+        <service
+            android:name="com.stepos.ability.service.AgentService"
+            android:permission="com.stepos.ability.permission.ACCESS_AGENT_SERVICE"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.stepos.ability.BIND_AGENT_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.stepos.ability.screenops.service.ScreenOpsServiceImpl"
+            android:permission="com.stepos.ability.permission.SCREEN_OPS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.screenops.BIND_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.stepos.ability.screenops.service.RegistrationReceiver"
+            android:permission="com.stepos.ability.permission.SCREEN_OPS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.screenops.action.REGISTER_RULE"/>
+                <action android:name="com.screenops.action.UNREGISTER_RULE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.stepos.taskrobot.vdbroadcast.VdTaskReceiver"
+            android:permission="com.stepos.taskrobot.vdbroadcast.permission.VD_TASK"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":mcp">
+            <intent-filter>
+                <action android:name="com.stepos.taskrobot.vdbroadcast.action.START_TASK"/>
+                <action android:name="com.stepos.taskrobot.vdbroadcast.action.CANCEL_TASK"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.stepos.taskrobot.vdbroadcast.VdTaskService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":mcp"/>
+        <service
+            android:name="com.stepos.taskrobot.ability.TaskRobotMCPService"
+            android:permission="com.stepos.mcp.sdk.permission.ACCESS_MCP_SERVICES"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":mcp">
+            <intent-filter>
+                <action android:name="com.stepos.mcp.sdk.TOOLS_SERVICE"/>
+            </intent-filter>
+            <meta-data
+                android:name="mcp.tools"
+                android:resource="@raw/mcp_tools"/>
+            <meta-data
+                android:name="tools.ext"
+                android:resource="@raw/tools_ext"/>
+        </service>
+        <activity
+            android:theme="@style/Theme.StepOS.AppCompat.Light.WebViewActivity"
+            android:name="stepos.support.v7.app.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/Theme.StepOS.AppCompat.Light.LitePopup.Color.Blue"
+            android:name="stepos.support.v7.app.palette.StepOSPalettePopupActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:finishOnCloseSystemDialogs="true"
+            android:documentLaunchMode="never"
+            android:relinquishTaskIdentity="true"
+            android:visibleToInstantApps="true"
+            android:showWhenLocked="true"/>
+        <provider
+            android:name="com.stepos.common.app.LibraryInitProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.stepos.ability.steposcommon"/>
+        <provider
+            android:name="com.stepos.common.app.PAGReporterPreventProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.stepos.ability.steposcommon.pag"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.stepos.ability.androidx-startup">
+            <meta-data
+                android:name="stepai.android.util.initializer.ContextUtilInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="stepai.android.util.initializer.ActivityMonitorInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="android.view.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <activity
+            android:theme="@style/ActivityTranslucent"
+            android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess"
+            android:exported="false"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:theme="@style/ActivityTranslucent"
+            android:name="com.blankj.utilcode.util.UtilsTransActivity"
+            android:exported="false"
+            android:multiprocess="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider
+            android:name="com.blankj.utilcode.util.UtilsFileProvider"
+            android:exported="false"
+            android:authorities="com.stepos.ability.utilcode.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/util_code_provider_paths"/>
+        </provider>
+        <service
+            android:name="com.blankj.utilcode.util.MessengerUtils$ServerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.stepos.ability.messenger"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.bytedance.frameworks.core.apm.contentprovider.MonitorContentProvider"
+            android:exported="false"
+            android:authorities="com.stepos.ability.apm"/>
+        <service
+            android:name="com.bytedance.apm6.traffic.TrafficTransportService"
+            android:enabled="true"
+            android:exported="false"/>
+        <uses-library
+            android:name="com.android.extensions.appfunctions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <receiver
+            android:name="com.zyql.agentfront.sdk.receiver.AgentFrontReconnectReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.zyql.agentfront.ACTION_PUSH_RECONNECT"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.stepos.agentframework.adapter.bff.DemoAct"
+            android:exported="true"/>
+    </application>
+</manifest>

@@ -1,0 +1,590 @@
+{
+  "enabled": true,
+  "model_list": [
+    {
+      "device_name": "m2381",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    },
+    {
+      "device_name": "m2391",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    },
+    {
+      "device_name": "m2431",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    },
+    {
+      "device_name": "m2461",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    },
+    {
+      "device_name": "m2481",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    },
+    {
+      "device_name": "m2468",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    },
+    {
+      "device_name": "m2521",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    },
+    {
+      "device_name": "m2531",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    },
+    {
+      "device_name": "m2582",
+      "rule_list": [
+        {
+          "packageName": "com.ss.android.ugc.aweme",
+          "containerNode": "MainBottomTabContainer",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "excludeNodes": "DuxBadgeView,ShapeDrawable",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.smile.gifmaker",
+          "containerNode": "BottomActionBar",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.kuaishou.nebula",
+          "containerNodes": "BottomActionBar,KCubeTabActionBar,TouchDelegateLinearLayout",
+          "containerNode": "BottomActionBar",
+          "excludeNodes": "ImageSwitchView,FitNavigationBarConstraintLayout",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.aweme.lite",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.ugc.live",
+          "containerNodes": "MainBottomTabContainer,MainTitleBarContainer,FeedRightScaleView",
+          "containerNode": "MainBottomTabContainer",
+          "excludeNodes": "DuxBadgeView",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        },
+        {
+          "packageName": "com.ss.android.article.video",
+          "containerNodes": "XGTabHost,XGCategoryTabStrip2,LongFeedLostStyleRightpart",
+          "containerNode": "XGTabHost",
+          "excludeNodes": "",
+          "minWidth": 0,
+          "maxWidth": 400,
+          "alphas": "0.6,0.8,0.8",
+          "alpha": 0.6
+        }
+      ]
+    }
+  ]
+}

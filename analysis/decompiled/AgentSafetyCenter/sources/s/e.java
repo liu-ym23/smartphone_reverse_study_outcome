@@ -1,0 +1,21 @@
+package s;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public interface e {
+    boolean a();
+
+    long b();
+
+    n6.a c();
+
+    n d(long j10);
+
+    default boolean e(long j10) {
+        return j10 >= b();
+    }
+
+    Object f(long j10);
+
+    Object g();
+}

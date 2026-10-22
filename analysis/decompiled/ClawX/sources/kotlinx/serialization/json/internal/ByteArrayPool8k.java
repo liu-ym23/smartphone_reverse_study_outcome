@@ -1,0 +1,24 @@
+package kotlinx.serialization.json.internal;
+
+import com.stepos.stepclaw.SecurePrefs;
+import kotlin.Metadata;
+import kotlin.jvm.internal.p;
+
+/* compiled from: r8-map-id-ca86e8b578419e4708a9a7ee3f056b062b20ba338a8b13e201aefe3710dbf238 */
+@Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\bÀ\u0002\u0018\u00002\u00020\u0001B\t\bB¢\u0006\u0004\b\u0002\u0010\u0003J\n\u0010\u0004\u001a\u00020\u0005H\u0086\u0080\u0004J\u0012\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\u0005H\u0086\u0080\u0004¨\u0006\t"}, d2 = {"Lkotlinx/serialization/json/internal/ByteArrayPool8k;", "Lkotlinx/serialization/json/internal/ByteArrayPoolBase;", "<init>", "()V", "take", SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, "release", SecurePrefs.DEFAULT_LAST_DISCOVERED_STABLE_ID, "array", "kotlinx-serialization-json"}, k = 1, mv = {2, 3, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class ByteArrayPool8k extends ByteArrayPoolBase {
+    public static final ByteArrayPool8k INSTANCE = new ByteArrayPool8k();
+
+    private ByteArrayPool8k() {
+    }
+
+    public final void release(byte[] array) {
+        p.e(array, "array");
+        releaseImpl(array);
+    }
+
+    public final byte[] take() {
+        return take(8196);
+    }
+}

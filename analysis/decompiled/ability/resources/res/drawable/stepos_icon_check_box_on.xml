@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/stepos_dialog_check_size"
+    android:width="@dimen/stepos_dialog_check_size"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/stepos_dialog_check_fill"
+        android:pathData="M8,2 L16,2 A6,6 0 0,1 22,8 L22,16 A6,6 0 0,1 16,22 L8,22 A6,6 0 0,1 2,16 L2,8 A6,6 0 0,1 8,2 Z"/>
+    <path
+        android:pathData="M17.5,8.75 L10.5,15.75 L6.5,11.75"
+        android:strokeColor="@color/stepos_dialog_check_mark_on_fill"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+</vector>

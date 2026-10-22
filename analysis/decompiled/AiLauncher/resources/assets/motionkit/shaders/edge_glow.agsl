@@ -1,0 +1,98 @@
+uniform float2 iResolution;
+uniform float iTime;
+uniform float glowIntensity;
+uniform float glowWidth;
+uniform float4 glowColor;
+
+float roundedBoxSDF(float2 p, float2 b, float r) {
+    float2 q = abs(p) - b + r;
+    return length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - r;
+}
+
+float perimeterArcLength(float2 p, float2 size, float r) {
+    float2 inner = size - r;
+    float2 ap = abs(p);
+
+    float straightH = inner.x * 2.0;
+    float straightV = inner.y * 2.0;
+    float arcLen = r * 1.5708;
+    float totalPerimeter = 2.0 * straightH + 2.0 * straightV + 4.0 * arcLen;
+
+    float dist = 0.0;
+
+    if (ap.x > inner.x && ap.y > inner.y) {
+        float2 center = float2(sign(p.x) * inner.x, sign(p.y) * inner.y);
+        float2 dir = p - center;
+        float angle = atan(dir.y, dir.x);
+
+        if (p.x > 0.0 && p.y > 0.0) {
+            dist = angle / 1.5708 * arcLen;
+        } else if (p.x < 0.0 && p.y > 0.0) {
+            dist = arcLen + straightH + (angle - 1.5708) / 1.5708 * arcLen;
+        } else if (p.x < 0.0 && p.y < 0.0) {
+            dist = 2.0 * arcLen + straightH + straightV + (angle + 3.14159) / 1.5708 * arcLen;
+        } else {
+            dist = 3.0 * arcLen + 2.0 * straightH + straightV + (angle + 1.5708) / 1.5708 * arcLen;
+        }
+    } else if (ap.y > inner.y) {
+        if (p.y > 0.0) {
+            dist = arcLen + (inner.x - p.x) / (2.0 * inner.x) * straightH;
+        } else {
+            dist = 3.0 * arcLen + straightH + straightV + (p.x + inner.x) / (2.0 * inner.x) * straightH;
+        }
+    } else {
+        if (p.x < 0.0) {
+            dist = 2.0 * arcLen + straightH + (inner.y - p.y) / (2.0 * inner.y) * straightV;
+        } else {
+            dist = 4.0 * arcLen + 2.0 * straightH + straightV + (p.y + inner.y) / (2.0 * inner.y) * straightV;
+        }
+    }
+
+    return dist / totalPerimeter;
+}
+
+// Vibrant cosine palette
+float3 borderColor(float t) {
+    float a = fract(t) * 6.2832;
+    float3 col = float3(
+        0.42 + 0.50 * cos(a - 4.71),
+        0.08 + 0.18 * cos(a - 4.71),
+        0.55 + 0.50 * cos(a - 1.57)
+    );
+    return clamp(col, 0.0, 1.0);
+}
+
+half4 main(float2 fragCoord) {
+    float2 uv = fragCoord / iResolution;
+    float aspect = iResolution.x / iResolution.y;
+
+    float intensity = glowIntensity;
+    float width = glowWidth;
+
+    float2 p = (uv - 0.5) * float2(aspect, 1.0);
+    float2 boxSize = float2(aspect * 0.5, 0.5);
+    float cornerRadius = min(boxSize.x, boxSize.y) * 0.24;
+
+    float d = roundedBoxSDF(p, boxSize, cornerRadius);
+
+    float outerGlow = exp(-max(0.0, d) / (width * 0.3));
+    float innerGlow = exp(-max(0.0, -d) / (width * 0.4));
+    float edgeCore = exp(-d * d / (width * width * 0.008));
+
+    float glow = mix(outerGlow, innerGlow, step(0.0, -d)) * 0.6 + edgeCore * 0.5;
+    glow *= intensity;
+
+    float arcPos = perimeterArcLength(p, boxSize, cornerRadius);
+    float colorT = arcPos + iTime * 0.015;
+    float3 color = borderColor(colorT);
+
+    float breath = 0.93 + 0.07 * sin(iTime * 0.6);
+    glow *= breath;
+
+    float finalAlpha = min(glow, 1.0);
+
+    float bloom = smoothstep(0.7, 1.0, finalAlpha) * 0.12;
+    color = mix(color, float3(1.0, 0.95, 0.9), bloom);
+
+    return half4(half3(color * finalAlpha), half(finalAlpha));
+}

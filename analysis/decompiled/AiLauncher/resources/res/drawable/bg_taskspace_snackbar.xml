@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/task_space_dialog_bg"/>
+    <corners android:radius="@dimen/task_space_snackbar_radius"/>
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/task_space_snackbar_stroke"/>
+</shape>

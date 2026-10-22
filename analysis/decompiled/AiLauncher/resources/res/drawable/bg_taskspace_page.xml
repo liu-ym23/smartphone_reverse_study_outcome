@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#ff050507"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/bg_taskspace_dot_pattern"/>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#6a7a3f22"
+                android:endColor="#00000000"
+                android:type="radial"
+                android:centerX="0.05"
+                android:centerY="0.88"
+                android:gradientRadius="360dp"
+                android:centerColor="#3a7a3f22"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#5a1d315c"
+                android:endColor="#00000000"
+                android:type="radial"
+                android:centerX="0.82"
+                android:centerY="0.2"
+                android:gradientRadius="340dp"
+                android:centerColor="#3a1d315c"/>
+        </shape>
+    </item>
+</layer-list>

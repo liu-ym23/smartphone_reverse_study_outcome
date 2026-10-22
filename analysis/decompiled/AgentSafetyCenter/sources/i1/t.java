@@ -1,0 +1,29 @@
+package i1;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public final class t extends b0 {
+
+    /* renamed from: c, reason: collision with root package name */
+    public final float f5760c;
+
+    public t(float f5) {
+        super(3);
+        this.f5760c = f5;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        return (obj instanceof t) && Float.compare(this.f5760c, ((t) obj).f5760c) == 0;
+    }
+
+    public final int hashCode() {
+        return Float.hashCode(this.f5760c);
+    }
+
+    public final String toString() {
+        return k0.a.q(new StringBuilder("RelativeHorizontalTo(dx="), this.f5760c, ')');
+    }
+}

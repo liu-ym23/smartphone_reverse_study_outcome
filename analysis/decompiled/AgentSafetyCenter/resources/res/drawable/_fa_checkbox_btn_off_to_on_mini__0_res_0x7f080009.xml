@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:name="vector"
+    android:height="16dp"
+    android:width="16dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:name="anim_alpha"
+        android:fillColor="@color/stepos_btn_check_checked_color_state"
+        android:pathData="M12,12m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
+        android:fillAlpha="0"
+        android:fillType="evenOdd"/>
+    <path
+        android:name="anim_path"
+        android:fillColor="#000000"
+        android:pathData="M7,12 L10.6,15.8 L18,8"
+        android:strokeColor="@color/stepos_btn_checkbox_inner_color_state"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="butt"
+        android:strokeLineJoin="round"
+        android:fillAlpha="0"/>
+</vector>

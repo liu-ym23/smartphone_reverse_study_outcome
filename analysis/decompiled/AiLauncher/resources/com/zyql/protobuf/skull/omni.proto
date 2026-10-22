@@ -1,0 +1,115 @@
+
+syntax = "proto3";
+package com.zyql.protobuf.omni;
+
+import "com/zyql/protobuf/skull/skull-task.proto";
+
+
+option java_multiple_files = true;
+option java_package = "com.zyql.protobuf.omni";
+option java_outer_classname = "Omni";
+
+
+message Audio {
+    bytes data = 1;  // 内容
+    bool is_end = 2;  // 流结束
+}
+
+
+message ChatRequest {
+    string chat_id = 1; // 对话id，表示一系列任务，如果当前没有，就不传，防止跟session id混淆，更名为chat id 
+    com.zyql.protobuf.skull.Message message = 2; // message定义参考agent protocol，如果是文字或图片输入，传message
+    Audio audio = 3; // 如果是语音输入，传audio
+    string task_id = 4; // 对于某个task的回复
+    // bool is_interrupted = 5; // 是否打断
+    // todo 看是否有其他需要补充的上下文
+
+    string event_id = 6; // 最近一次的事件id
+
+    bool isMock = 100;
+    bool needTts = 101;  // 是否需要tts输出
+    map<string, string> meta = 102;  // 透传字段
+}
+
+enum TaskStatus {
+    UNKNOWN = 0;
+    PROGRESS = 1;  // 运行中
+    COMPLETED = 2; // 结束
+    FAILED = 3;    // 失败
+    CANCELLED = 4; // 取消
+    PAUSED = 5;    // 暂停，包含下列两种情况
+    ASK_FOR_INPUT = 6; // 获取用户输入
+    AUTHENTICATION = 7; // 获取用户授权，暂无该事件下发
+}
+
+message Error {
+    int64 error_code = 1;
+    string error_msg = 2;
+}
+
+message MessageDelta {
+    string text = 1;
+    bool is_end = 2;
+    string role = 3; // user / assistant，如果是用户发言就是user，如果是模型回复就是assistant
+
+    string message_id = 4; // id
+}
+
+// push 下发
+message ChatDelta {
+    string chat_id = 1; 
+    string task_id = 2; // 当前的task id,回复用
+    TaskStatus status = 3;
+    com.zyql.protobuf.skull.Message message = 4; // 未经转化过的原始文字输出
+    Audio audio = 5; // tts得到的音频，供播放
+    MessageDelta message_delta = 6; // 流式结果
+
+    string message_id = 7; // message对应的id
+    string event_id = 8; // 事件id
+    
+    Error error = 100;
+}
+
+message AsrRequest {
+   Audio audio = 1; // 语音输入
+}
+
+message AsrResponse {
+   string text = 1;
+}
+
+message TtsRequest {
+    string text = 1;
+}
+
+message TtsResponse {
+    Audio audio = 1; // 语音输出
+}
+
+
+message SubscribeTaskRequest{
+    string task_id = 1; // task_id
+    string task_event_id = 2; // 任务的sequence id
+    bool need_tts = 3;  // 是否需要tts
+}
+
+message CancelTaskRequest {
+    string task_id = 1; // task_id
+}
+
+message CancelTaskResponse {
+}
+
+service AosService {
+  // 聊天，流式输入文字或音频，流式返回文字（和音频）
+  rpc Chat(stream ChatRequest)returns(stream ChatDelta);
+  // asr接口，流式输入音频，返回文字
+  rpc Asr(stream AsrRequest) returns(AsrResponse);
+  // tts接口，输入文字，流式返回音频
+  rpc Tts(TtsRequest) returns(stream TtsResponse);
+
+  // 订阅任务返回
+  rpc SubscribeTask(SubscribeTaskRequest) returns(stream ChatDelta);
+  // 取消任务
+  rpc CancelTask(CancelTaskRequest) returns(CancelTaskResponse);
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_timeline_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="7dp">
+    <TextView
+        android:textSize="11sp"
+        android:typeface="monospace"
+        android:textColor="#aaffffff"
+        android:gravity="end"
+        android:id="@+id/tv_step_index"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"/>
+    <TextView
+        android:textSize="13sp"
+        android:textColor="@android:color/white"
+        android:ellipsize="end"
+        android:id="@+id/tv_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_weight="1"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#77ffffff"
+        android:id="@+id/tv_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"/>
+</LinearLayout>

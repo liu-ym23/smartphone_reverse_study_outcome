@@ -1,0 +1,12 @@
+package n3;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes.dex */
+public class x0 extends w0 {
+    public x0() {
+    }
+
+    public x0(m1 m1Var) {
+        super(m1Var);
+    }
+}

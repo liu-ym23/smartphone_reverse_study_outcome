@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="22dp"
+    android:width="22dp"
+    android:viewportWidth="22"
+    android:viewportHeight="22">
+    <path
+        android:fillColor="@color/oobe_agreement_checkbox_checked"
+        android:pathData="M11,0 C4.93,0 0,4.93 0,11 C0,17.07 4.93,22 11,22 C17.07,22 22,17.07 22,11 C22,4.93 17.07,0 11,0 Z"/>
+    <path
+        android:pathData="M6.2,11.1 L9.5,14.4 L15.9,7.7"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+</vector>

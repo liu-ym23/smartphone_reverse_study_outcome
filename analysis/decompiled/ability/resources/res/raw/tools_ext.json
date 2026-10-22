@@ -1,0 +1,26 @@
+{
+  "serverExts": {
+    "versionCode": 1
+  },
+  "toolExts": [
+    { "toolName": "mdi_task_create", "ext": { "classification": "MDI/Task", "timeout": 60 } },
+    { "toolName": "mdi_task_finish", "ext": { "classification": "MDI/Task", "timeout": 60 } },
+    { "toolName": "mdi_open_app", "ext": { "classification": "MDI/App", "timeout": 60 } },
+    { "toolName": "mdi_move_app", "ext": { "classification": "MDI/App", "timeout": 60 } },
+    { "toolName": "mdi_top_app", "ext": { "classification": "MDI/App", "timeout": 60 } },
+    { "toolName": "mdi_click", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_tap", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_long_click", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_swipe", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_fling", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_scale", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_set_text", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_key_event", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_back", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_home", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_wait", "ext": { "classification": "MDI/Input", "timeout": 60 } },
+    { "toolName": "mdi_capture", "ext": { "classification": "MDI/Vision", "timeout": 60 } },
+    { "toolName": "mdi_snapshot", "ext": { "classification": "MDI/Vision", "timeout": 60 } },
+    { "toolName": "mdi_ime_enable", "ext": { "classification": "MDI/Sys", "timeout": 60 } }
+  ]
+}

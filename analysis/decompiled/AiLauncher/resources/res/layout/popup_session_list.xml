@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp">
+    <FrameLayout
+        android:background="@drawable/bg_popup_session_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="360dp"
+        android:minHeight="120dp"
+        android:elevation="8dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_session_list"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:paddingVertical="8dp"/>
+    </FrameLayout>
+</FrameLayout>

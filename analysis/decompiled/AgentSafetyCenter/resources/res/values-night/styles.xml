@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Policy.AppTheme" parent="@style/Theme.StepOS.AppCompat.Dark.Color.Blue">
+        <item name="android:windowBackground">@color/policy_sdk_html_viewer_bg</item>
+        <item name="android:windowAnimationStyle">@style/PolicySdkActivityAnimation</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:isLightTheme">false</item>
+        <item name="StepOSCommon.LabelTextViewStyle">@style/Widget.StepOSCommon.LabelTextView</item>
+    </style>
+    <style name="Theme.StepOS.AppCompat.Light.Dialog.Alert" parent="@style/Base.Theme.StepOS.AppCompat.Light.Dialog.Alert">
+    </style>
+</resources>

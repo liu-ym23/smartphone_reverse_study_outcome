@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="?attr/colorControlHighlight">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/policy_sdk_three_btn_tertiary_bg"/>
+            <corners android:radius="@dimen/policysdk_three_btn_corner_radius"/>
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/artifact_detail_snackbar_bg"/>
+    <corners android:radius="@dimen/artifact_detail_snackbar_radius"/>
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/artifact_detail_snackbar_stroke"/>
+</shape>

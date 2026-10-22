@@ -1,0 +1,64 @@
+package reactor.core.publisher;
+
+import java.util.Objects;
+import reactor.core.CoreSubscriber;
+import reactor.core.Scannable;
+import reactor.core.publisher.Operators;
+import reactor.util.annotation.Nullable;
+
+/* compiled from: r8-map-id-7da402fe3afa8905dc5f5798dd3e7dfb51c589193ca1bab44f52669f99b3ef87 */
+/* loaded from: classes2.dex */
+final class GroupedLift<K, I, O> extends GroupedFlux<K, O> implements Scannable {
+    final Operators.LiftFunction<I, O> liftFunction;
+    final GroupedFlux<K, I> source;
+
+    public GroupedLift(GroupedFlux<K, I> groupedFlux, Operators.LiftFunction<I, O> liftFunction) {
+        Objects.requireNonNull(groupedFlux, "source");
+        this.source = groupedFlux;
+        this.liftFunction = liftFunction;
+    }
+
+    @Override // reactor.core.publisher.Flux
+    public int getPrefetch() {
+        return this.source.getPrefetch();
+    }
+
+    @Override // reactor.core.publisher.GroupedFlux
+    public K key() {
+        return this.source.key();
+    }
+
+    @Override // reactor.core.Scannable
+    @Nullable
+    public Object scanUnsafe(Scannable.Attr attr) {
+        if (attr == Scannable.Attr.PARENT) {
+            return this.source;
+        }
+        if (attr == Scannable.Attr.PREFETCH) {
+            return Integer.valueOf(getPrefetch());
+        }
+        if (attr == Scannable.Attr.RUN_STYLE) {
+            return Scannable.from(this.source).scanUnsafe(attr);
+        }
+        if (attr == Scannable.Attr.LIFTER) {
+            return this.liftFunction.name;
+        }
+        if (attr == InternalProducerAttr.INSTANCE) {
+            return Boolean.TRUE;
+        }
+        return null;
+    }
+
+    @Override // reactor.core.Scannable
+    public String stepName() {
+        GroupedFlux<K, I> groupedFlux = this.source;
+        return groupedFlux instanceof Scannable ? Scannable.from(groupedFlux).stepName() : super.stepName();
+    }
+
+    @Override // reactor.core.publisher.Flux, reactor.core.CorePublisher
+    public void subscribe(CoreSubscriber<? super O> coreSubscriber) {
+        CoreSubscriber<? super I> coreSubscriberApply = this.liftFunction.lifter.apply(this.source, coreSubscriber);
+        Objects.requireNonNull(coreSubscriberApply, "Lifted subscriber MUST NOT be null");
+        this.source.subscribe((CoreSubscriber) coreSubscriberApply);
+    }
+}

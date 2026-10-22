@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bubble_agent_team">
+        <item>「队友们集合啦！」</item>
+        <item>「今天派谁上场？」</item>
+        <item>「正在召集最合适的朋友」</item>
+        <item>「人多力量大，AI多也一样！」</item>
+    </array>
+    <array name="bubble_fix_room">
+        <item>「调好了！」</item>
+        <item>「我自检一下」</item>
+        <item>「哪里不顺手？」</item>
+    </array>
+    <array name="bubble_gui_safe">
+        <item>正在安全操作手机</item>
+    </array>
+    <array name="bubble_idle_exercise">
+        <item>运动下，防止变成圆形</item>
+        <item>燃烧我的卡路里</item>
+        <item>锻炼带来肌肉</item>
+        <item>我也是有核心力量的</item>
+    </array>
+    <array name="bubble_idle_flying">
+        <item>我正在低空飞行</item>
+        <item>风有点大，但我很勇</item>
+        <item>不是飘了，是飘起来了</item>
+        <item>今天状态好到有点失重</item>
+    </array>
+    <array name="bubble_idle_loafing">
+        <item>我在低功耗运行</item>
+        <item>摸鱼等灵感出现</item>
+        <item>我在后台思考人生</item>
+        <item>我的脑袋在缓存智慧</item>
+    </array>
+    <array name="bubble_idle_music">
+        <item>我在跟节奏同步</item>
+        <item>这段旋律有点上头</item>
+        <item>耳机戴上，世界静音</item>
+        <item>音乐启动，烦恼消失</item>
+    </array>
+    <array name="bubble_idle_night">
+        <item>有点困，我先眯一会儿</item>
+        <item>zZZ…</item>
+        <item>睡觉也是一种充电</item>
+        <item>闭眼一下，脑子重启</item>
+    </array>
+    <array name="bubble_idle_safe">
+        <item>环境安全，放心交给我吧</item>
+    </array>
+    <array name="bubble_skill_browse">
+        <item>「看看今天学点啥？」</item>
+        <item>「好多新技能」</item>
+        <item>「这个好像有用！」</item>
+        <item>「挑一个装上试试？」</item>
+    </array>
+    <array name="bubble_skill_early_installing">
+        <item>「扫描安全性...」</item>
+    </array>
+    <array name="bubble_skill_install_success">
+        <item>「学到了！」</item>
+        <item>「又变聪明了！」</item>
+        <item>「已经装好啦！」</item>
+        <item>「大聪明+1！」</item>
+    </array>
+    <array name="bubble_skill_installing">
+        <item>「正在装进脑袋里」</item>
+        <item>「学习中.....」</item>
+        <item>「知识的洪流正在清洗大脑」</item>
+    </array>
+    <array name="bubble_task_fail">
+        <item>诶？好像搞砸了……</item>
+        <item>这次没跑通，抱歉</item>
+        <item>哎呀，我又扑街了</item>
+        <item>没成功，有点心虚</item>
+    </array>
+    <array name="bubble_task_interrupted">
+        <item>不安全操作已被拦截</item>
+    </array>
+    <array name="bubble_task_running">
+        <item>正在帮你做1个任务</item>
+        <item>我正在和任务斗智斗勇</item>
+        <item>正在努力，没有摸鱼</item>
+        <item>正在干活中，先别戳我</item>
+        <item>我在认真工作</item>
+    </array>
+    <array name="bubble_task_running_safe">
+        <item>正在做，一切正常</item>
+    </array>
+    <array name="bubble_task_success">
+        <item>报告，任务完成啦</item>
+        <item>搞定，我多少有点靠谱</item>
+        <item>完成！给自己鼓个小掌</item>
+        <item>要不要看看成果？</item>
+    </array>
+    <array name="bubble_task_waiting">
+        <item>有1个任务等你处理</item>
+        <item>这里需要你拍板一下</item>
+        <item>等你做决定</item>
+        <item>你拍板一下，我再继续</item>
+        <item>这个我不敢自作主张</item>
+    </array>
+    <array name="bubble_wake_up">
+        <item>唔……谁戳我？</item>
+        <item>醒了醒了，有什么事？</item>
+        <item>我在努力从被窝里启动</item>
+        <item>美梦暂停了…</item>
+    </array>
+    <array name="bubble_weather_cloudy">
+        <item>天空加载了很多云</item>
+        <item>云在排队，我在发呆</item>
+        <item>太阳摸鱼，云来代班</item>
+    </array>
+    <array name="bubble_weather_rainy">
+        <item>下雨要打伞</item>
+        <item>雨声像世界在小声说话</item>
+        <item>雨来了，先躲一躲</item>
+    </array>
+    <array name="bubble_weather_snowy">
+        <item>雪落的时候时间也变慢</item>
+        <item>下雪啦，世界变柔软啦</item>
+        <item>雪天慢慢走，别着急</item>
+    </array>
+    <array name="bubble_weather_sunny">
+        <item>阳光不错，出去走走</item>
+        <item>太阳出来了，能量回满</item>
+        <item>今天世界很亮堂，开心</item>
+    </array>
+    <array name="chat_dislike_reasons">
+        <item>与提问无关</item>
+        <item>记忆错乱</item>
+        <item>答案重复</item>
+        <item>虚假信息</item>
+        <item>内容有害/不安全</item>
+        <item>计算错误</item>
+        <item>格式乱码</item>
+        <item>内容生成慢</item>
+        <item>内容不完整</item>
+        <item>其他</item>
+    </array>
+    <array name="mc_custom_time_picker_lunar_day">
+        <item>初一</item>
+        <item>初二</item>
+        <item>初三</item>
+        <item>初四</item>
+        <item>初五</item>
+        <item>初六</item>
+        <item>初七</item>
+        <item>初八</item>
+        <item>初九</item>
+        <item>初十</item>
+        <item>十一</item>
+        <item>十二</item>
+        <item>十三</item>
+        <item>十四</item>
+        <item>十五</item>
+        <item>十六</item>
+        <item>十七</item>
+        <item>十八</item>
+        <item>十九</item>
+        <item>廿十</item>
+        <item>廿一</item>
+        <item>廿二</item>
+        <item>廿三</item>
+        <item>廿四</item>
+        <item>廿五</item>
+        <item>廿六</item>
+        <item>廿七</item>
+        <item>廿八</item>
+        <item>廿九</item>
+        <item>三十</item>
+    </array>
+    <array name="mc_custom_time_picker_lunar_month">
+        <item>正</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>七</item>
+        <item>八</item>
+        <item>九</item>
+        <item>十</item>
+        <item>冬</item>
+        <item>腊</item>
+    </array>
+    <array name="mc_custom_weekday">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </array>
+    <array name="oobe_links">
+        <item>@string/oobe_link_privacy_policy</item>
+        <item>@string/oobe_link_user_agreement</item>
+        <item>@string/oobe_link_voiceprint_auth</item>
+        <item>@string/oobe_link_improvement_plan</item>
+    </array>
+    <array name="oobe_sdk_init_user_hints">
+        <item>@string/oobe_sdk_init_user_hint_1</item>
+        <item>@string/oobe_sdk_init_user_hint_2</item>
+        <item>@string/oobe_sdk_init_user_hint_3</item>
+        <item>@string/oobe_sdk_init_user_hint_4</item>
+        <item>@string/oobe_sdk_init_user_hint_5</item>
+    </array>
+    <array name="week_labels_task">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </array>
+</resources>

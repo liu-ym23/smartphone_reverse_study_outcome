@@ -1,0 +1,10 @@
+package mc;
+
+import org.java_websocket.enums.Opcode;
+
+/* loaded from: classes5.dex */
+public class c extends e {
+    public c() {
+        super(Opcode.CONTINUOUS);
+    }
+}

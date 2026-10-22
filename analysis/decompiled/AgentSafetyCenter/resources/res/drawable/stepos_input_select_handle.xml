@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:autoMirrored="true">
+    <item>
+        <bitmap
+            android:src="@drawable/stepos_input_select_handle_color_blue"
+            android:antialias="true"
+            android:tint="?attr/colorPrimary"/>
+    </item>
+</layer-list>

@@ -1,0 +1,28 @@
+package reactor.core.publisher;
+
+import com.stepos.agentbus.generated.AgentBusWakeContract;
+import java.util.Objects;
+import java.util.function.Consumer;
+import reactor.core.CoreSubscriber;
+import reactor.core.Disposable;
+
+/* loaded from: classes4.dex */
+class ConnectableFluxRestoringThreadLocals<T> extends ConnectableFlux<T> {
+    private final ConnectableFlux<T> source;
+
+    public ConnectableFluxRestoringThreadLocals(ConnectableFlux<T> connectableFlux) {
+        Objects.requireNonNull(connectableFlux, AgentBusWakeContract.EXTRA_SOURCE);
+        this.source = connectableFlux;
+    }
+
+    @Override // reactor.core.publisher.ConnectableFlux
+    public void connect(Consumer<? super Disposable> consumer) {
+        this.source.connect(consumer);
+    }
+
+    @Override // reactor.core.publisher.Flux, reactor.core.CorePublisher
+    public void subscribe(CoreSubscriber<? super T> coreSubscriber) {
+        ConnectableFlux<T> connectableFlux = this.source;
+        connectableFlux.subscribe((CoreSubscriber) Operators.restoreContextOnSubscriber(connectableFlux, coreSubscriber));
+    }
+}

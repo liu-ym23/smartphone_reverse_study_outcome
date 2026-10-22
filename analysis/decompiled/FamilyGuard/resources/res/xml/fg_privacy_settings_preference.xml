@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.Preference
+        android:title="@string/fg_user_protocol_title"
+        android:key="@string/fg_user_protocol_key"
+        android:widgetLayout="@layout/arrow_widget_layout"/>
+    <androidx.preference.Preference
+        android:title="@string/fg_privacy_policy_title"
+        android:key="@string/fg_privacy_policy_key"
+        android:widgetLayout="@layout/arrow_widget_layout"/>
+    <androidx.preference.Preference
+        android:title="@string/fg_revoke_privacy_settings_title"
+        android:key="@string/fg_revoke_privacy_settings_key"/>
+    <androidx.preference.Preference
+        android:title="@string/fg_child_personal_information_collection_list_title"
+        android:key="@string/fg_child_personal_information_collection_list_key"
+        android:widgetLayout="@layout/arrow_widget_layout"/>
+</androidx.preference.PreferenceScreen>

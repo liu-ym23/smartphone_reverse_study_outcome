@@ -1,0 +1,31 @@
+#version 300 es
+precision highp float;
+
+in vec2 v_texCoord;
+
+uniform sampler2D u_blur_texture;
+uniform float u_weights[50];
+uniform float u_offsets[50];
+uniform int u_radius;
+uniform bool u_horizontal;
+uniform vec2 u_step;
+
+out vec4 fragColor;
+
+void main () {
+    vec3 sum;
+    for (int i = 0; i < u_radius; i++) {
+        if (i == 0) {
+            sum = texture(u_blur_texture, v_texCoord).rgb * u_weights[0];
+        } else {
+            if (u_horizontal) {
+                sum += texture(u_blur_texture, vec2(v_texCoord.x + u_offsets[i] * u_step.x, v_texCoord.y)).rgb * u_weights[i];
+                sum += texture(u_blur_texture, vec2(v_texCoord.x - u_offsets[i] * u_step.x, v_texCoord.y)).rgb * u_weights[i];
+            } else {
+                sum += texture(u_blur_texture, vec2(v_texCoord.x, v_texCoord.y + u_offsets[i] * u_step.y)).rgb * u_weights[i];
+                sum += texture(u_blur_texture, vec2(v_texCoord.x, v_texCoord.y - u_offsets[i] * u_step.y)).rgb * u_weights[i];
+            }
+        }
+    }
+    fragColor = vec4(sum, 1.0);
+}
